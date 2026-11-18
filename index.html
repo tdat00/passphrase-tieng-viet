@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Chặn mọi tài nguyên/kết nối bên ngoài: trang chỉ chạy CSS và JS nội tuyến bên dưới -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'">
+<title>Passphrase tiếng Việt</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: light-dark(#f1f4f9, #0d1117);
+    --card: light-dark(#fff, #161b22);
+    --line: light-dark(#dde3ec, #30363d);
+    --off: light-dark(#c4ccd8, #3d444d);
+    --muted: light-dark(#5b6675, #8d96a0);
+    --accent: #2563eb;
+    --num: light-dark(#1d4ed8, #79a8ff);
+    --sym: light-dark(#c2410c, #fb923c);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(48rem 24rem at 50% -8rem, light-dark(#dbe4ff, #1b2a4a), transparent) no-repeat var(--bg);
+  }
+  body { margin: 0; }
+  main { max-width: 34rem; margin: auto; padding: clamp(1rem, 6vw, 4rem) 1rem; display: grid; gap: 1rem; }
+  h1, h2, p { margin: 0; }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin-bottom: .5rem; }
+  h2 { font-size: 1.1rem; }
+  p, small { color: var(--muted); }
+  .card { display: grid; gap: 1rem; padding: 1.25rem; background: var(--card); border: 1px solid var(--line); border-radius: 1rem; box-shadow: 0 4px 16px #0000000d; }
+  #output { font: 600 1.4rem/1.6 ui-monospace, Menlo, Consolas, monospace; overflow-wrap: anywhere; min-height: 3.2em; align-content: center; padding: .75rem 1rem; background: var(--bg); border-radius: .75rem; }
+  .num { color: var(--num); }
+  .sym, #warning { color: var(--sym); }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+  button { padding: .75rem; font: inherit; font-weight: 600; color: inherit; background: none; border: 1px solid var(--line); border-radius: .75rem; cursor: pointer; }
+  .primary { color: #fff; background: var(--accent); border-color: var(--accent); }
+  meter { width: 100%; }
+  label, .field { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; }
+  input { margin: 0; font: inherit; color: inherit; accent-color: var(--accent); }
+  .stepper, .field small { flex-basis: 100%; }
+  .stepper { display: flex; align-items: center; gap: .75rem; }
+  .stepper input { flex: 1; min-width: 0; }
+  .stepper button { width: 2.75rem; padding: .4rem 0; font-size: 1.4rem; line-height: 1.2; }
+  button:disabled { opacity: .4; cursor: default; }
+  #wordSeparator { width: 3.5rem; padding: .3rem; font-size: 1.5rem; font-weight: 700; text-align: center; background: none; border: 1px solid var(--line); border-radius: .5rem; }
+  /* Công tắc bật/tắt: checkbox thuần, núm tròn vẽ bằng radial-gradient */
+  [type=checkbox] { appearance: none; width: 2.75rem; height: 1.5rem; border-radius: 1rem; cursor: pointer; transition: .2s;
+    background: var(--off) radial-gradient(circle, #fff .55rem, #0000 .6rem) 0 0 / 1.5rem 1.5rem no-repeat; }
+  [type=checkbox]:checked { background-color: var(--accent); background-position: 1.25rem 0; }
+  footer { text-align: center; }
+  /* Tooltip: hiện khi rê chuột, hoặc chạm/focus vào (?) */
+  header { position: relative; }
+  .help { color: var(--accent); font-weight: 600; cursor: help; }
+  .pop { display: none; position: absolute; z-index: 1; top: 100%; left: 0; right: 0; padding: .75rem 1rem; font-size: .9rem; background: var(--card); border: 1px solid var(--line); border-radius: .75rem; box-shadow: 0 8px 24px #00000026; }
+  .pop ul { margin: .5rem 0 0; padding-left: 1.25rem; }
+  header:has(.help:hover, .help:focus, .pop:hover) .pop { display: block; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Cụm mật khẩu tiếng Việt</h1>
+    <p>Tạo passphrase ngẫu nhiên dùng từ vựng tiếng Việt, dựa theo <a target="_blank" href="https://github.com/bitwarden/sdk-internal/blob/main/crates/bitwarden-generators/src/passphrase.rs">Bitwarden</a>.</p>
+    <p>Chạy hoàn toàn trên trình duyệt của bạn, không dùng thư viện ngoài. <span class="help" tabindex="0" role="button" aria-describedby="security">(?)</span></p>
+    <div class="pop" id="security" role="tooltip">
+      <b>Bảo mật của web app</b>
+      <ul>
+        <li>Số ngẫu nhiên lấy từ <code>crypto.getRandomValues</code> (CSPRNG) và dùng rejection sampling để phân phối đều.</li>
+        <li>Content-Security-Policy <code>default-src 'none'</code>: trang không thể tải hay gửi dữ liệu ra ngoài, chỉ chạy CSS/JS nội tuyến.</li>
+        <li>Không lưu gì (không cookie, không localStorage). Passphrase chỉ nằm trong bộ nhớ của trang.</li>
+        <li>Sau khi sao chép, passphrase nằm trong clipboard (và lịch sử clipboard của hệ điều hành hoặc bàn phím) cho đến khi bị ghi đè.</li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="card">
+    <output id="output"></output>
+    <div class="row">
+      <button id="regenerate" type="button">Tạo lại</button>
+      <button id="copy" type="button" class="primary">Sao chép</button>
+    </div>
+    <meter id="strength" min="0" max="100" low="50" high="77.5" optimum="100" aria-label="Độ mạnh"></meter>
+    <small id="entropy"></small>
+    <small id="warning">⚠ Danh sách từ thử nghiệm (chưa đủ 7.776 từ) — chưa an toàn để dùng thật.</small>
+  </section>
+
+  <section class="card" id="options">
+    <h2>Tùy chọn</h2>
+    <div class="field">
+      <span>Số từ</span> <b id="numWordsValue">6</b>
+      <div class="stepper">
+        <button id="decWords" type="button" aria-label="Giảm số từ">−</button>
+        <input id="numWords" type="range" min="3" max="20" value="6" aria-label="Số từ">
+        <button id="incWords" type="button" aria-label="Tăng số từ">+</button>
+      </div>
+      <small>Từ 3 đến 20. Nên dùng ít nhất 6 từ.</small>
+    </div>
+    <label>Dấu phân cách từ <input id="wordSeparator" type="text" maxlength="1" value="_" autocomplete="off"></label>
+    <label>Viết hoa <input id="capitalize" type="checkbox"></label>
+    <label>Bao gồm cả số <input id="includeNumber" type="checkbox"></label>
+  </section>
+
+  <footer><small>© 2026 Dat Le. Released under the MIT licence. Source code on <a target="_blank" href="https://github.com/tdat00/passphrase-tieng-viet">GitHub</a></small></footer>
+</main>
+
+<!-- type="module" chạy sau khi trang tải xong nên đọc được danh sách từ ở cuối file -->
+<script type="module">
+  // Các từ cách nhau bằng dấu "," hoặc xuống dòng (cho phép cả CRLF lẫn LF). Chuẩn hoá Unicode NFC,
+  // bỏ từ trùng; bỏ từ chứa "-" giống gen_words() của Bitwarden để tránh nhập nhằng với dấu phân cách.
+  const WORDS = [...new Set(document.getElementById("wordlist").textContent.split(/[,\r\n]/)
+    .map((w) => w.trim().normalize("NFC"))
+    .filter((w) => w && !w.includes("-")))];
+
+  // Số nguyên ngẫu nhiên phân phối đều trong [min, max] từ CSPRNG.
+  // Port hàm randomNumber() (TypeScript) của Bitwarden: lấy đủ số bit, cắt bằng mask,
+  // vượt khoảng thì lấy lại (rejection sampling) nên không bị lệch như khi dùng phép %.
+  function randomNumber(min, max) {
+    const range = max - min + 1;
+    const bitsNeeded = Math.ceil(Math.log2(range));
+    const bytes = crypto.getRandomValues(new Uint8Array(Math.ceil(bitsNeeded / 8)));
+    let rval = 0;
+    for (const b of bytes) rval = rval * 256 + b;
+    rval &= 2 ** bitsNeeded - 1;
+    return rval >= range ? randomNumber(min, max) : min + rval;
+  }
+
+  // Port passphrase_with_rng() của Bitwarden SDK (crates/bitwarden-generators/src/passphrase.rs)
+  function passphrase({ numWords, wordSeparator, capitalize, includeNumber }) {
+    const words = Array.from({ length: numWords }, () => WORDS[randomNumber(0, WORDS.length - 1)]);
+    if (includeNumber) words[randomNumber(0, numWords - 1)] += randomNumber(0, 9);
+    if (capitalize) words.forEach((w, i) => (words[i] = w.charAt(0).toUpperCase() + w.slice(1)));
+    return words.join(wordSeparator);
+  }
+
+  const $ = (id) => document.getElementById(id);
+  let current = "";
+
+  function generate() {
+    const options = {
+      numWords: Number($("numWords").value),
+      wordSeparator: $("wordSeparator").value,
+      capitalize: $("capitalize").checked,
+      includeNumber: $("includeNumber").checked,
+    };
+    current = passphrase(options);
+
+    // Tô màu chữ số và dấu phân cách cho dễ đọc
+    $("output").replaceChildren(...current.split(/(\d+|[^\p{L}\p{M}\d]+)/u).map((text, i) => {
+      const span = document.createElement("span");
+      span.textContent = text;
+      if (i % 2) span.className = /\d/.test(text) ? "num" : "sym";
+      return span;
+    }));
+
+    // Mỗi từ: log2(số từ trong danh sách) bit; thêm chữ số: log2(10 × số từ) bit
+    const bits = options.numWords * Math.log2(WORDS.length) + (options.includeNumber ? Math.log2(10 * options.numWords) : 0);
+    $("strength").value = bits;
+    $("entropy").textContent = `Entropy ≈ ${bits.toLocaleString("vi", { maximumFractionDigits: 1 })} bit · danh sách ${WORDS.length.toLocaleString("vi")} từ`;
+    $("numWordsValue").textContent = options.numWords;
+    $("decWords").disabled = options.numWords <= $("numWords").min;
+    $("incWords").disabled = options.numWords >= $("numWords").max;
+  }
+
+  $("decWords").addEventListener("click", () => { $("numWords").stepDown(); generate(); });
+  $("incWords").addEventListener("click", () => { $("numWords").stepUp(); generate(); });
+  $("options").addEventListener("input", generate);
+  $("regenerate").addEventListener("click", generate);
+  $("copy").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(current);
+      $("copy").textContent = "Đã sao chép ✓";
+      setTimeout(() => ($("copy").textContent = "Sao chép"), 1500);
+    } catch {
+      getSelection().selectAllChildren($("output")); // không được phép ghi clipboard: bôi đen để tự sao chép
+    }
+  });
+  $("warning").hidden = WORDS.length >= 7776;
+  generate();
+</script>
+
+<!-- Danh sách từ: mỗi dòng một từ, kết thúc bằng dấu "," (tạm 100 từ để thử nghiệm, bản chính thức: 7.776 từ) -->
+<script type="text/plain" id="wordlist">
+áo,
+bàn,
+bánh,
+biển,
+bò,
+bún,
+bút,
+bưởi,
+bướm,
+cá,
+cam,
+canh,
+cát,
+cây,
+chảo,
+chim,
+chó,
+chuối,
+chuông,
+cỏ,
+cọp,
+cơm,
+cua,
+dê,
+diều,
+dừa,
+đá,
+đàn,
+đảo,
+đất,
+đậu,
+đèn,
+đỏ,
+đồi,
+đường,
+gà,
+gạo,
+gấu,
+ghế,
+gió,
+giường,
+gừng,
+gương,
+hoa,
+hồ,
+hươu,
+kẹo,
+khăn,
+khỉ,
+kiến,
+lá,
+lửa,
+mây,
+mèo,
+mít,
+muối,
+mưa,
+nắng,
+nấm,
+nâu,
+ngựa,
+nhà,
+nho,
+nón,
+nồi,
+núi,
+ong,
+phở,
+rùa,
+rừng,
+sách,
+sao,
+sen,
+sông,
+suối,
+sữa,
+táo,
+tàu,
+thác,
+thỏ,
+thuyền,
+tím,
+tỏi,
+tôm,
+trà,
+trăng,
+trâu,
+tre,
+trống,
+trứng,
+túi,
+tuyết,
+vàng,
+vịt,
+voi,
+vở,
+xanh,
+xe,
+xoài,
+xôi,
+</script>
+</body>
+</html>
