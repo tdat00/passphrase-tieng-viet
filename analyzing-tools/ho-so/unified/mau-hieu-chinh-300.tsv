@@ -1,0 +1,301 @@
+id	khoa	tu
+1-001	cacbon	cacbon
+1-002	longvu	lông vũ
+1-003	songuyento	số nguyên tố
+1-004	sodo	số đo
+1-005	vuamieng	vừa miệng
+1-006	xaolang	xao lãng
+1-007	tieupha	tiêu pha
+1-008	khia	khía
+1-009	lela	lê la
+1-010	benh	bênh
+1-011	didang	dị dạng
+1-012	omai	ô mai
+1-013	lamnguoi	làm người
+1-014	khinhakinh	khí nhà kính
+1-015	phuong	phượng
+1-016	vannghiluan	văn nghị luận
+1-017	bongnem	bóng ném
+1-018	lach	lạch
+1-019	maimai	mãi mãi
+1-020	dieukhien	điều khiển
+1-021	noidat	nồi đất
+1-022	taitrong	tải trọng
+1-023	lanlon	lẫn lộn
+1-024	giado	giá đỗ
+1-025	sapdat	sắp đặt
+1-026	thuongthuc	thưởng thức
+1-027	dongvathoc	động vật học
+1-028	lixi	lì xì
+1-029	caycay	cày cấy
+1-030	chalua	chả lụa
+1-031	khituonghoc	khí tượng học
+1-032	nhamay	nhà may
+1-033	oanquan	ô ăn quan
+1-034	dadang	đa dạng
+1-035	sohuyet	sò huyết
+1-036	channan	chán nản
+1-037	caulacbo	câu lạc bộ
+1-038	thuthuat	thủ thuật
+1-039	banhduc	bánh đúc
+1-040	nghet	nghẹt
+1-041	xedo	xe đò
+1-042	maunuoc	màu nước
+1-043	dophangiai	độ phân giải
+1-044	homnay	hôm nay
+1-045	rauchanvit	rau chân vịt
+1-046	ditru	di trú
+1-047	dungdung	dửng dưng
+1-048	maymo	mày mò
+1-049	ghichep	ghi chép
+1-050	maumo	màu mỡ
+1-051	ongxa	ông xã
+1-052	noitheo	noi theo
+1-053	congty	công ty
+1-054	nhim	nhím
+1-055	gianhgiat	giành giật
+1-056	daylui	đẩy lui
+1-057	sodu	số dư
+1-058	coloi	có lợi
+1-059	phoibay	phơi bày
+1-060	chip	chíp
+1-061	ngai	ngại
+1-062	thoatvi	thoát vị
+1-063	khachkhua	khách khứa
+1-064	ngaongat	ngào ngạt
+1-065	matlong	mát lòng
+1-066	roinuoc	rối nước
+1-067	lambo	làm bộ
+1-068	thoigianbieu	thời gian biểu
+1-069	daquy	đá quý
+1-070	modem	modem
+1-071	caosan	cao sản
+1-072	tranhsondau	tranh sơn dầu
+1-073	thanghai	tháng hai
+1-074	taudienngam	tàu điện ngầm
+1-075	nieu	niêu
+1-076	gioan	giờ ăn
+1-077	dathang	đặt hàng
+1-078	khacnghiet	khắc nghiệt
+1-079	quydao	quỹ đạo
+1-080	lavabo	lavabo
+1-081	chat	chật
+1-082	duoitheo	đuổi theo
+1-083	nhot	nhốt
+1-084	tholo	thổ lộ
+1-085	bocap	bò cạp
+1-086	modau	mở đầu
+1-087	chegieu	chế giễu
+1-088	vivay	vì vậy
+1-089	tudung	tự dưng
+1-090	chatloc	chắt lọc
+1-091	tulip	tulip
+1-092	chansong	chấn song
+1-093	phat	phất
+1-094	thuathot	thưa thớt
+1-095	cheothuyen	chèo thuyền
+1-096	doam	độ ẩm
+1-097	danhca	danh ca
+1-098	album	album
+1-099	caphetrung	cà phê trứng
+1-100	muumeo	mưu mẹo
+1-101	sinhuc	sỉ nhục
+1-102	conngua	con ngựa
+1-103	truutuong	trừu tượng
+1-104	loidung	lợi dụng
+1-105	bohoang	bỏ hoang
+1-106	trotroi	trở trời
+1-107	ngonut	ngón út
+1-108	huongthien	hướng thiện
+1-109	loco	lò cò
+1-110	soat	soát
+1-111	choctuc	chọc tức
+1-112	maybanhang	máy bán hàng
+1-113	xuatsac	xuất sắc
+1-114	bangquo	bâng quơ
+1-115	xehoi	xe hơi
+1-116	didom	dí dỏm
+1-117	phangphiu	phẳng phiu
+1-118	quaylai	quay lại
+1-119	samtoi	sẩm tối
+1-120	thugian	thư giãn
+1-121	lavi	là vì
+1-122	xotxa	xót xa
+1-123	trech	trệch
+1-124	huongvi	hương vị
+1-125	buachinh	bữa chính
+1-126	songcon	sống còn
+1-127	mutat	mù tạt
+1-128	daugachngang	dấu gạch ngang
+1-129	nhiepanh	nhiếp ảnh
+1-130	tandu	tàn dư
+1-131	chieulong	chiều lòng
+1-132	giave	giá vẽ
+1-133	truongtho	trường thọ
+1-134	quyphai	quý phái
+1-135	batan	bát ăn
+1-136	daucove	đậu cô ve
+1-137	gium	giùm
+1-138	ramrap	răm rắp
+1-139	nhabao	nhà báo
+1-140	nambancau	nam bán cầu
+1-141	nhoti	nhỏ tí
+1-142	baychuot	bẫy chuột
+1-143	tocdo	tốc độ
+1-144	dangdi	dáng đi
+1-145	angten	ăngten
+1-146	codieu	có điều
+1-147	hoai	hoài
+1-148	dendo	đèn đỏ
+1-149	hoclai	học lại
+1-150	maybodam	máy bộ đàm
+1-151	loxo	lò xo
+1-152	nhinh	nhỉnh
+1-153	congthaihoc	công thái học
+1-154	trolen	trở lên
+1-155	momieng	mở miệng
+1-156	dieuhanh	điều hành
+1-157	thanhkhan	thành khẩn
+1-158	matcong	mất công
+1-159	bonchon	bồn chồn
+1-160	batre	bắt rễ
+1-161	botngo	bột ngô
+1-162	dongdao	đồng dao
+1-163	nghenghiep	nghề nghiệp
+1-164	dang	đắng
+1-165	bavai	bả vai
+1-166	longtutrong	lòng tự trọng
+1-167	phucvi	phục vị
+1-168	mualanh	mùa lạnh
+1-169	niukeo	níu kéo
+1-170	neon	neon
+1-171	lancan	lan can
+1-172	hoihop	hồi hộp
+1-173	long	lông
+1-174	bocanhcung	bọ cánh cứng
+1-175	trat	trát
+1-176	captoc	cặp tóc
+1-177	debao	dễ bảo
+1-178	thim	thím
+1-179	toanbo	toàn bộ
+1-180	mayphatdien	máy phát điện
+1-181	suachua	sữa chua
+1-182	choibo	chối bỏ
+1-183	tanh	tạnh
+1-184	khanlau	khăn lau
+1-185	hanlam	hàn lâm
+1-186	sese	se sẻ
+1-187	hoitham	hỏi thăm
+1-188	dongchi	đông chí
+1-189	xixam	xì xầm
+1-190	sanbongda	sân bóng đá
+1-191	danchung	dẫn chứng
+1-192	timi	tỉ mỉ
+1-193	suco	sự cố
+1-194	thuon	thuôn
+1-195	loinhuan	lợi nhuận
+1-196	khuyet	khuyết
+1-197	xuytnua	xuýt nữa
+1-198	cucvantho	cúc vạn thọ
+1-199	sachgiaokhoa	sách giáo khoa
+1-200	trongdai	trọng đại
+1-201	daychun	dây chun
+1-202	lungtung	lung tung
+1-203	daigiadinh	đại gia đình
+1-204	philao	phi lao
+1-205	quychuan	quy chuẩn
+1-206	vihanh	vi hành
+1-207	thenao	thế nào
+1-208	nghisi	nghị sĩ
+1-209	rieu	riêu
+1-210	chuanxac	chuẩn xác
+1-211	gaoluc	gạo lức
+1-212	khopxuong	khớp xương
+1-213	khom	khóm
+1-214	kimnen	kìm nén
+1-215	baymau	bay màu
+1-216	xinxo	xin xỏ
+1-217	donghocat	đồng hồ cát
+1-218	diudang	dịu dàng
+1-219	protein	protein
+1-220	leloi	lề lối
+1-221	hiepsi	hiệp sĩ
+1-222	colai	co lại
+1-223	benhvuc	bênh vực
+1-224	noinieu	nồi niêu
+1-225	boconganh	bồ công anh
+1-226	ghita	ghita
+1-227	butmuc	bút mực
+1-228	dieuphoivien	điều phối viên
+1-229	gangtay	găng tay
+1-230	thuocgap	thước gấp
+1-231	danhdan	đánh đàn
+1-232	dandung	dàn dựng
+1-233	thuoc	thước
+1-234	giempha	gièm pha
+1-235	bangtuanhoan	bảng tuần hoàn
+1-236	keng	kẻng
+1-237	vongquay	vòng quay
+1-238	omsom	om sòm
+1-239	thiet	thiệt
+1-240	nhaphatminh	nhà phát minh
+1-241	tuche	tủ chè
+1-242	thoiluong	thời lượng
+1-243	quyluat	quy luật
+1-244	lotlong	lót lòng
+1-245	yeuduong	yêu đương
+1-246	duongcaotoc	đường cao tốc
+1-247	boiech	bơi ếch
+1-248	duyet	duyệt
+1-249	laca	la cà
+1-250	banbac	bàn bạc
+1-251	bantru	bán trú
+1-252	vilai	vị lai
+1-253	daodong	dao động
+1-254	nhavesinh	nhà vệ sinh
+1-255	luon	lươn
+1-256	chieng	chiêng
+1-257	chem	chêm
+1-258	chungcat	chưng cất
+1-259	baotu	bao tử
+1-260	chuquan	chủ quan
+1-261	nico	ni cô
+1-262	vandongvien	vận động viên
+1-263	daume	dầu mè
+1-264	ongdan	ống dẫn
+1-265	nhuyeupham	nhu yếu phẩm
+1-266	uutu	ưu tú
+1-267	giaygiua	giãy giụa
+1-268	rinh	rình
+1-269	thamhiem	thám hiểm
+1-270	hanhtrang	hành trang
+1-271	camquyt	cam quýt
+1-272	hangquan	hàng quán
+1-273	bacha	bạc hà
+1-274	bangoai	bà ngoại
+1-275	ghim	ghim
+1-276	ampli	ampli
+1-277	nhaxuatban	nhà xuất bản
+1-278	lodo	lò dò
+1-279	meomo	méo mó
+1-280	ngongtroi	ngỗng trời
+1-281	ongnghe	ống nghe
+1-282	danda	đàn đá
+1-283	ditruyen	di truyền
+1-284	xaonhang	xao nhãng
+1-285	maime	mải mê
+1-286	dientrai	điển trai
+1-287	thangnam	tháng năm
+1-288	daydan	dây đàn
+1-289	thamdo	thảm đỏ
+1-290	omdom	ôm đồm
+1-291	thuocduoc	thược dược
+1-292	ynhurang	y như rằng
+1-293	giolua	giò lụa
+1-294	chegiau	che giấu
+1-295	bacon	bà con
+1-296	hinhchunhat	hình chữ nhật
+1-297	tamgiacvuong	tam giác vuông
+1-298	thanlan	thằn lằn
+1-299	dungthang	đứng thẳng
+1-300	suygam	suy gẫm

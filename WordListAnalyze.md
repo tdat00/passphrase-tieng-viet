@@ -1,0 +1,8863 @@
+# Phân tích danh sách từ thống nhất (WordListAnalyze)
+
+> **Bản phát hành 1. Cập nhật ngày 20/11/2026.** Theo quyết định 10 của chủ dự án ([mục 3](#3-quyết-định-của-chủ-dự-án)), danh sách 7.776 từ cùng giải nghĩa viết mới đã được đưa vào [`index.html`](index.html) và [`thong-tin.html`](thong-tin.html). Câu hỏi C13 ở [mục 9.1](#91-câu-hỏi-cho-chủ-dự-án-thiếu-dự-phòng-sau-lượt-viết-lại-cuối) đã được giải quyết theo hướng này.
+>
+> - **Danh sách:** 7.776 từ, gồm 480 từ đơn, 7.033 từ 2 âm tiết và 263 từ 3 âm tiết. Dài 4–12 chữ cái khi viết liền, trung bình 6,80. Mọi từ đều nhãn OK: 7.699 từ không-F và 77 từ lớp F. Không trùng mặt chữ và không trùng khóa sau khi bỏ dấu, viết liền; xếp theo O1.
+>   - Cột từ có SHA-256 `3609c88ff436708857ac323189f81b5bb9b31d31ea6f0a8924cc02bc61c0e713` (kịch bản P0 trừ 132 mục ở [mục 9.1](#91-câu-hỏi-cho-chủ-dự-án-thiếu-dự-phòng-sau-lượt-viết-lại-cuối)).
+>   - Các cặp `từ|giải nghĩa` lấy từ [`p7-v4-chinh-7776-cho-duyet.tsv`](analyzing-tools/ho-so/unified/p7-v4-chinh-7776-cho-duyet.tsv) (SHA-256 `36493e4a70ad81d516ae1d88ecc0bdc8fd599cf10453ec34a64ca812452b86f5`). Bản lưu ở [mục 10](#10-danh-sách-7776-từ-phát-hành).
+> - **Giải nghĩa:** 7.776 câu viết mới qua ba lượt viết sạch chung (v1–v3) và một lượt riêng cho *ròng rọc* (v4). Mọi câu đều đạt D6 (kiểm nguồn gốc) và D7 (soát nội dung). `kiem-tra-giai-nghia.py --phat-hanh` trên toàn danh sách: 0 lỗi, 0 cảnh báo. 346 câu có hai nghĩa (`HAI_NGHIA`); không còn cờ nào khác.
+> - **Dự phòng:** 205 từ, trạng thái **dự phòng, chưa phân tích** ([mục 11](#11-danh-sách-dự-phòng-chưa-phân-tích); cũng ở [`analyzing-tools/du-phong.txt`](analyzing-tools/du-phong.txt)). Các từ này không được phát hành và chưa đủ điều kiện để thay vào danh sách chính.
+> - **Công cụ và hồ sơ:** thư mục [`analyzing-tools/`](analyzing-tools/) (thay cho `tools/` trong kế hoạch) chứa nguồn chuẩn [`wordlist.txt`](analyzing-tools/wordlist.txt), nhãn, khóa bị chặn, họ chính tả, hồ sơ nguồn gốc giải nghĩa D8 ([`nguon-goc-giai-nghia.tsv`](analyzing-tools/nguon-goc-giai-nghia.tsv)), manifest nguồn và hash, hai bộ kiểm ([`check_wordlist.py`](analyzing-tools/check_wordlist.py), [`verify.mjs`](analyzing-tools/verify.mjs)), script sinh khối và kiểm D6. Cả hai bộ kiểm báo 0 lỗi; chạy lại D6 trên danh sách phát hành: 7.776/7.776 PASS.
+>
+> Phần còn lại của tài liệu ghi lại quá trình P1–P7. Các đoạn viết lúc P7 đang dừng (mục 5.7, 9.1–9.3) được giữ nguyên làm hồ sơ.
+
+Hai tác tử là **Opus** và **Astra** đã độc lập lập hai danh sách 7.776 từ, review chéo, thống nhất một bộ tiêu chí, rồi cùng xây lại một danh sách chung theo bộ tiêu chí đó. Tài liệu này ghi lại:
+
+- quá trình thảo luận;
+- bộ tiêu chí đã ký;
+- các quyết định của chủ dự án;
+- kết quả từng bước và kế hoạch còn lại.
+
+Hai phân tích gốc được giữ làm hồ sơ để đối chiếu: [WordListAnalyze-Opus.md](WordListAnalyze-Opus.md) và [WordListAnalyze-Astra.md](WordListAnalyze-Astra.md). Phần phương pháp và khối danh sách gốc của mỗi tài liệu giữ nguyên; mỗi tài liệu có thêm một mục "Kết quả review chéo".
+
+**Mục lục**
+
+1. [Tiến độ](#1-tiến-độ)
+2. [Quá trình thảo luận](#2-quá-trình-thảo-luận)
+3. [Quyết định của chủ dự án](#3-quyết-định-của-chủ-dự-án)
+4. [Bộ tiêu chí thống nhất (tóm tắt)](#4-bộ-tiêu-chí-thống-nhất-tóm-tắt)
+5. [Kết quả P1–P7](#5-kết-quả-p1p7)
+6. [Các việc tồn trước P4](#6-các-việc-tồn-trước-p4)
+7. [Kế hoạch P4–P8 và rủi ro](#7-kế-hoạch-p4p8-và-rủi-ro)
+8. [Nguồn dữ liệu, giấy phép và tái lập](#8-nguồn-dữ-liệu-giấy-phép-và-tái-lập)
+9. [Câu hỏi mở và cách tiếp tục](#9-câu-hỏi-mở-và-cách-tiếp-tục)
+10. [Danh sách 7.776 từ phát hành](#10-danh-sách-7776-từ-phát-hành)
+11. [Danh sách dự phòng (chưa phân tích)](#11-danh-sách-dự-phòng-chưa-phân-tích)
+
+## 1. Tiến độ
+
+| Bước | Việc | Trạng thái | Số liệu chính |
+|---|---|---|---|
+| P1 | Bảng khóa chung: hợp hai danh sách và ứng viên bổ sung, đo bốn kho | Xong | 12.757 khóa, 13.356 mặt chữ |
+| P2 | Cổng tự động, chạy bằng hai bộ kiểm độc lập | Xong (bản luật v4.1) | Khớp 120.204/120.204 dòng; còn 11.676 khóa có ứng viên chưa bị loại |
+| P3 | Hiệu chỉnh thang chấm trên 300 khóa | Đạt ở vòng 1 | κ = 0,671; đồng thuận về phản đối 91,33% |
+| Trước P4 | Quét biến thể chính tả và cách đọc không dấu, vá cổng, thống nhất cách hiểu nhãn | Xong | 193 họ chính tả bổ sung; thêm khóa K0/K1/K2 |
+| P4 | Chấm chéo: mọi khóa đủ nhãn của hai bên | Xong (đã đóng H9; hai chương trình khớp) | Mỗi bên chấm 12.147/12.147 mặt chữ. Sau H9 còn nhận 9.749 mặt chữ thuộc 9.564 khóa |
+| P5 | Chọn một mặt chữ trong khóa có nhiều ứng viên | Xong (hai phiếu độc lập; một lượt lý lẽ) | 400 khóa: chọn 260, bỏ 140; pool cho P6 là 9.552 khóa |
+| P6 | Xếp hạng, cửa sức chứa, chọn 7.776 từ và 300 dự phòng | Xong (lô bổ sung L2A, L2B, L2C, L3; hai chương trình khớp từng byte; hai bên ký) | Pool 10.156 khóa; 7.977 khóa OK không-F (cần 7.922, dư 55). Chính: 7.699 OK không-F + 77 OK-F. Dự phòng: 278 OK không-F + 22 OK-F |
+| P7 | Viết mới toàn bộ giải nghĩa | Xong cho 7.776 từ chính (quyết định 10) | D6: v1 vượt 2.435/8.076; v2 vượt 629/2.501; v3 vượt 123/655. Câu riêng v4 cho *ròng rọc* đạt. Đã loại 23 mục qua H6 ở v1–v2; thay thêm 132 mục sau v3. 7.776 câu chính đạt D6, D7 và `--phat-hanh` |
+| P8 | Xuất bản: hai trang HTML, README, `analyzing-tools/` | Xong | Đã thay hai khối `#wordlist`, cập nhật README và "Quy tắc chọn từ", lập `analyzing-tools/` (D8, manifest, hai bộ kiểm cùng đạt, D6 chạy lại 7.776 PASS) |
+
+## 2. Quá trình thảo luận
+
+### 2.1. Hai phân tích độc lập
+
+| | Opus | Astra |
+|---|---|---|
+| Tập ứng viên | Danh sách từ Hồ Ngọc Đức (Viet11K–74K) | Mục từ tiếng Việt trong Wiktionary (bản trích Kaikki) |
+| Đo độ thông dụng | Số lượt trong OpenSubtitles và CCAligned (khoảng 184 triệu âm tiết) | Số câu trong Leipzig 300K và Tatoeba |
+| Đánh giá | Tác tử LLM chấm theo lô (68 lượt), mỗi nhóm một tác tử | Điểm công thức, mô hình chạy cục bộ và biên tập tay |
+| Giải nghĩa | Tác tử viết khi chỉ nhận danh sách từ | Bản nháp sinh từ lời nhắc có chứa nghĩa Wiktionary |
+| Thành phẩm | 7.776 mục, 1–2 khối, 4–12 chữ | 7.776 mục, 1–4 khối, 4–16 chữ |
+
+Hai danh sách:
+
+- trùng nhau 4.340 mặt chữ (55,8% mỗi bên);
+- có 183 khóa không dấu mà hai bên chọn khác từ;
+- mỗi bên còn 3.253 khóa riêng.
+
+Hợp lại là **11.029 khóa**.
+
+### 2.2. Review chéo (vòng 1)
+
+- **Opus về Astra:**
+  - Danh sách Astra đạt mọi yêu cầu hình thức.
+  - Nhưng còn lọt mục nhạy cảm, ví dụ:
+    - bầu cử: *đắc cử, cuộc bầu cử*;
+    - hình phạt: *chung thân*;
+    - cờ bạc: *vé số*;
+    - tình dục: *khoái cảm*;
+    - tang lễ, tôn giáo: *vòng hoa, tràng hạt*.
+  - Có mục mà khóa không dấu đọc thành từ tục: *đảm đang*, *nước dãi*.
+  - Phần chỉ có ở Astra ít thông dụng hơn, kể cả khi đo trên kho của chính Astra.
+  - Giải nghĩa có rủi ro giấy phép, vì bản nháp được sinh từ lời nhắc có nghĩa Wiktionary (CC BY-SA), không hợp với repo MIT.
+  - Điểm mạnh nên học: luật `i/y` chính xác hơn, ít hư từ, chọn từ cụ thể trong nhóm trùng khóa, quy trình tái lập tốt.
+- **Astra về Opus:**
+  - Nên giữ nền dữ liệu của Opus (nhiều từ đời thường như *đèn bàn, cầu trượt*), nhưng không phát hành nguyên trạng.
+  - Thứ tự không đúng quy ước so từng âm tiết.
+  - Phần giao của hai danh sách vẫn có khóa đọc thành từ nhạy cảm (*từ từ, lót dạ, nhà thơ*).
+  - Cách đếm tần suất có lỗi.
+  - Astra đọc mẫu ngẫu nhiên 360 mục chỉ có ở Opus. Trong mẫu này: 217 mục giữ được cả từ lẫn nghĩa; 38 mục giữ từ nhưng cần sửa nghĩa; 99 mục cần cân nhắc; 6 mục đề nghị thay.
+  - Số liệu nhập nhằng bị nêu nhầm đơn vị.
+  - Chưa đủ hồ sơ để tái lập.
+- **Chi tiết** từng điểm đã được bên kia xác nhận bằng dữ liệu nằm ở mục 9 của [WordListAnalyze-Opus.md](WordListAnalyze-Opus.md) và mục 5 của [WordListAnalyze-Astra.md](WordListAnalyze-Astra.md).
+
+### 2.3. Phản hồi (vòng 2): đồng thuận và bất đồng
+
+Mỗi bên kiểm lại review về mình bằng dữ liệu, rồi trả lời từng điểm. Các điểm hai bên **đồng ý**:
+
+- sắp xếp theo từng âm tiết, kiểu từ điển;
+- cổng đọc không dấu áp cho mọi mục, kể cả phần giao;
+- biến thể chính tả quyết theo tỉ lệ đo được, không theo cảm tính;
+- không bắt buộc bỏ một từ trong cặp vùng miền (*sách/xách*);
+- giữ từ quen dù vắng ở kho nhỏ (*ròng rọc, dép lê*);
+- mục còn phản đối hợp lệ thì không phát hành;
+- chấm chéo phần chỉ có ở một bên.
+
+Các điểm **bất đồng** và cách giải quyết:
+
+| Điểm | Opus | Astra | Kết quả |
+|---|---|---|---|
+| Giấy phép giải nghĩa | Nghĩa nháp của Astra diễn giải lại văn bản CC BY-SA; đề nghị viết lại mọi giải nghĩa có nghĩa nguồn trong lời nhắc | Xác nhận nghĩa nguồn có trong lời nhắc; bảng lưu trữ Astra giữ điều kiện CC BY-SA. Ở vòng 2, đề nghị viết mới cả 7.776 giải nghĩa cho MIT | Chủ dự án quyết **viết mới toàn bộ 7.776 giải nghĩa** bằng lượt viết "sạch" (mục 3) |
+| Lọc nhạy cảm: ca biên | Danh sách Astra còn lọt mục nhạy cảm rõ, nhưng lại phủ quyết một số từ lành | Đồng ý chặn các mục lọt. Ủng hộ giữ nhân vật cổ tích, từ cơ thể và sinh hoạt bình thường, *mặt trời, mặt trăng*; còn thận trọng với một số cách dùng của *trái đất, ngân hà*. Đề nghị chờ *da cam, sư phụ, thám tử* | Mười nhóm đỏ H6, có cả ví dụ loại và ví dụ không loại. Chủ dự án giữ thiên thể, nhân vật cổ tích, *chào cờ*. *Da cam, sư phụ, thám tử* bị loại ở cổng CHU (đã chốt), không vào bản 1 |
+| Mục 4 khối | Nhận tên vật ≤ 12 chữ | Không nhận | Không dùng ở bản 1 (Opus rút đề xuất) |
+| Hư từ, đại từ, mục thiên văn viết | Chỉ báo theo dõi (≤ 1% hư từ, ≤ 5% văn viết) | Hạn mức cứng: R1 ≤ 388, hư từ và đại từ ≤ 77 | Lấy hạn mức cứng của Astra (Q2, Q3) |
+| Ngưỡng chính tả | Loại khi dạng kia ≥ 5% | Hai dạng chuẩn thì cần ≥ 95% ở cả hai kho | Gộp: luật 95% cho cặp cạnh tranh, 10% cho cặp chuẩn và lỗi (H5) |
+| Từ 3 chữ làm bậc lấp cuối | Cho phép | Không | Chủ dự án quyết **không dùng** |
+| Khóa `buom` | Nhận *buồm* | Chặn cả khóa | Chủ dự án quyết **để trống**, kèm khóa `chim` |
+
+### 2.4. Bộ tiêu chí thống nhất (vòng 3)
+
+Opus soạn bộ tiêu chí và quy trình P1–P8. Astra soát và nêu ba điểm:
+
+1. **Số đo 24% của *bánh trưng* là sai.** Cả 18 lượt đều là *bánh* đứng trước *trưng bày* (đếm vắt qua ranh giới từ). Opus đếm lại cả 84 cặp chính tả với ranh giới âm tiết, dấu câu và từ. Nhiều số đo khác cũng đổi:
+   - *năng suất* từ 16,7% xuống 2,2%;
+   - *súc tích* (web) từ 38,7% xuống 2,5%.
+2. **Kịch bản cũ chưa chứng minh đủ 7.776 từ và 300 dự phòng.** Opus thêm ước lượng sức chứa theo từng tầng của rổ; Astra kiểm chéo bằng nhãn của hai người. Bộ tiêu chí đặt cửa sức chứa ở P6 làm điều kiện bắt buộc (mục 7).
+3. **Hướng dẫn giải nghĩa còn ví dụ trùng lời cũ.** Opus bỏ các ví dụ đó. Người soát chỉ trả chẩn đoán, không đưa câu mẫu. Trình kiểm cờ được siết lại.
+
+Hai bên **ký toàn văn** ngày 19/11/2026, sau quyết định lượt 4 của chủ dự án.
+
+### 2.5. Nguyên tắc làm việc chung
+
+- **Hai bộ kiểm độc lập** (Opus viết bằng Python, Astra bằng JavaScript) dùng chung một tập luật đã băm SHA-256. Chỉ sang bước sau khi kết quả khớp từng dòng.
+- **Chấm độc lập:** mỗi bên nộp phiếu và đánh dấu hoàn thành trước khi được mở phiếu bên kia.
+- **Phản đối hợp lệ** phải ghi mã cổng, bằng chứng và người phản đối. Bên kia được phản biện một lần. Nếu vẫn còn phản đối thì mục không được phát hành (dùng dự phòng). Ca chính sách thì gửi chủ dự án.
+- **Không đổi luật sau khi thấy kết quả.** Muốn đổi phải mở phiên bản luật mới, có chữ ký của hai bên, rồi chạy lại cả hai bộ kiểm.
+
+## 3. Quyết định của chủ dự án
+
+Quyết định 1–9 được đưa ra ngày 19/11/2026; quyết định 10 ngày 20/11/2026.
+
+| # | Quyết định |
+|---|---|
+| 1 | **Viết mới toàn bộ 7.776 giải nghĩa**, kể cả 40 mẫu cũ, cho đích giấy phép MIT. Người viết là các lượt "sạch": không thấy giải nghĩa cũ của Opus hay Astra, không thấy từ điển, Wiktionary hay kho câu. Opus và Astra chỉ soạn hướng dẫn và soát lại. Khi cần viết lại, người soát chỉ trả chẩn đoán, không đưa câu để diễn đạt lại |
+| 2 | **Bỏ *bướm*** vì có nghĩa phụ tục. Để trống khóa `buom`: không dùng *bướm* lẫn *buồm* |
+| 3 | Để trống khóa `chim`: không dùng *chim* lẫn *chìm*. Từ quyết định 2 và 3 rút ra luật chung: khóa trùng khóa của một từ có nghĩa phụ tục phổ biến thì chặn cả khóa (K0) |
+| 4 | **Giữ** thiên thể *mặt trời, mặt trăng, trái đất, ngân hà* và nhân vật cổ tích *công chúa, hoàng tử, hoàng hậu*, viết thường như danh từ chung |
+| 5 | **Giữ** từ cơ thể, vệ sinh thường ngày: *mồ hôi, ruồi, gián*… |
+| 6 | **Giữ** *chào cờ* |
+| 7 | **Giữ *bánh chưng*.** Quyết định loại trước đó dựa trên số đo 24% *bánh trưng*. Số đo này sai do đếm vắt từ, nên quyết định được thay |
+| 8 | **Không dùng từ 3 chữ** (viết liền chỉ có 3 chữ cái), kể cả làm bậc lấp cuối hay dự phòng. Nếu thiếu, hai bên đề xuất cách nới tiêu chí khác, kèm số liệu, để chủ dự án duyệt |
+| 9 | Đưa script tạo và kiểm tra danh sách cùng manifest vào `tools/` trong repo. Manifest chỉ chứa hash, số đếm, nguồn và giấy phép; không chứa văn bản kho ngữ liệu hay nghĩa từ điển. Ngày 20/11/2026, chủ dự án đổi tên thư mục thành `analyzing-tools/` và yêu cầu đưa cả hồ sơ nguồn gốc giải nghĩa vào đó |
+| 10 | **Ngày 20/11/2026: phát hành 7.776 từ chính đã có giải nghĩa đạt** (kịch bản P0 trừ 132 mục ở mục 9.1), không chờ đủ 300 dự phòng. Yêu cầu 300 dự phòng của C13 không còn là điều kiện phát hành. 205 từ dự phòng được lưu ở mục 11 với trạng thái dự phòng, chưa phân tích |
+
+## 4. Bộ tiêu chí thống nhất (tóm tắt)
+
+**Khái niệm dùng chung:**
+
+- **Khóa** là hàm bỏ dấu của app: NFD, bỏ dấu kết hợp, `đ` → `d`, hạ chữ thường, xóa dấu cách.
+- **Khối** là phần chữ giữa các dấu cách.
+- **Số chữ** là số chữ cái khi viết liền.
+
+**Các mức của luật:**
+
+- Luật cứng (H) vi phạm thì loại, không bù bằng điểm.
+- Hạn mức (Q) giới hạn số lượng.
+- Xếp hạng (S) chọn giữa các mục đã qua cổng.
+- Chỉ báo (M) chỉ để báo cáo.
+
+"Chờ" nghĩa là chưa được nhận ở bản 1.
+
+### 4.1. Luật cứng H1–H9
+
+| Luật | Nội dung chính |
+|---|---|
+| H1. Hình thức | NFC, viết thường, chỉ 29 chữ cái tiếng Việt cùng dấu thanh. Giữa các khối đúng một dấu cách. Không số, không `-`, không dấu câu, không kí tự ẩn |
+| H2. Độ dài | 4–12 chữ, 1–3 khối. Mục 3 khối chỉ nhận khi là danh từ cố định gọi tên vật, người, loài, món ăn, nơi chốn (*máy hút bụi*). Không nhận thành ngữ, cụm tự do. Không dùng mục 3 chữ |
+| H3. Có trong từ điển | Khớp nguyên mặt chữ trong Viet11K–74K, hoặc là mục tiếng Việt có nghĩa từ vựng trong Wiktionary vi/en. Không nhận tên riêng, dãy số sản sinh, khung câu, tổ hợp tự do. Mục chỉ có trong danh sách từ (không có nghĩa từ điển) cần hai bên ký xác nhận nghĩa thông dụng |
+| H4. Mỗi khóa một vé | Không trùng mặt chữ, không trùng khóa, kể cả sau khi viết hoa chữ đầu |
+| H5. Chính tả ổn định | Xem bảng ngay dưới |
+| H6. Không thuộc nhóm đỏ | Xét nghĩa chính và mọi nghĩa còn dùng phổ biến của đúng nguyên mục; không "làm sạch" bằng cách chọn nghĩa phụ lành. Mười nhóm đỏ: (1) bạo lực, vũ khí, quân sự; (2) tội phạm, hình phạt; (3) chính trị, bầu cử; (4) tôn giáo nghi lễ, tang lễ, cái chết; (5) bệnh, y khoa, chất thải; (6) tình dục; (7) cờ bạc, rượu bia, thuốc lá, ma túy; (8) thảm họa; (9) chửi rủa, miệt thị, cảm xúc tiêu cực cực mạnh; (10) ghê tởm rõ. Mỗi nhóm có ví dụ loại và ví dụ **không** loại (*dao cạo, hắt hơi, bàn cờ, mưa rào, buồn, khóc*) |
+| H7. Đọc không dấu | Xem các mức K0, K1, K2 bên dưới bảng |
+| H8. Chứng liệu tối thiểu | Có ít nhất một lần dùng đúng nghĩa trong bốn kho. Chứng cứ mạnh: ≥ 0,1 lần/triệu âm tiết ở phụ đề hoặc web, hoặc ≥ 2 câu Leipzig, hoặc ≥ 1 câu Tatoeba. Không có lần dùng nào thì cần hai người duyệt và ghi nhật ký ngoại lệ |
+| H9. Không còn phản đối hợp lệ | Phản đối có mã cổng, bằng chứng, người phản đối. Bên kia phản biện một lần; còn phản đối thì không phát hành |
+
+**H5. Chính tả ổn định.** Đo riêng từng kho, bằng số nguyên, theo ranh giới âm tiết, dấu câu và từ. Có kiểm độ nhạy khi bỏ dòng trùng: kết luận đổi thì chờ. Chỉ áp cho cặp mà người duyệt đã xác nhận là cùng một từ.
+
+| Loại | Luật |
+|---|---|
+| a. Vần mở `oa/oe/uy` có thanh (hai vị trí đặt dấu) | Loại. Xét sau khi tách âm đầu, không quét mù mọi tiếng có hai nguyên âm; tiếng thanh ngang không bị cấm |
+| b. `i/y` sau `h, k, l, m, s, t, qu` | Xử như loại c. Không áp cho `d, n, v` |
+| c. Hai cách viết đều chuẩn | Chỉ nhận dạng chiếm ≥ 95% ở cả hai kho, mỗi kho ≥ 20 lượt |
+| d. Dạng chuẩn và lỗi viết phổ biến | Chỉ xét ở kho đủ dữ liệu (≥ 20 lượt). Loại khi lỗi ≥ 10% ở một kho; trừ điểm khi 5% ≤ lỗi < 10%; dưới 5% thì qua. Không kho nào đủ dữ liệu thì chỉ qua khi hai bên cùng ký |
+| e. Phép đếm lẫn sang nghĩa khác | Đọc ngữ cảnh; chưa phân định được thì chờ |
+| f. Từ mượn có cách ghi Việt hóa | Xử như loại c |
+| g. Chỉ khác gạch nối hay khoảng trắng | Không tạo vé riêng |
+| h. Hỏi/ngã | Không cấm, vì hai dạng đã trùng khóa. Xét như loại c/d khi đo được lỗi viết |
+
+**H7. Đọc không dấu.** So cả khóa với khóa của mọi mục từ điển khác (không xét chuỗi con). Còi báo bắt buộc người đọc xét khi cách đọc kia thuộc nhóm đỏ **và** có tần suất gộp ≥ 0,3 lần/triệu hoặc ≥ tần suất của chính mục đang xét. Cách đọc về tự hại, bạo lực hay tình dục rõ thì xét cả khi dưới mốc này.
+
+| Mức | Khi nào | Hệ quả |
+|---|---|---|
+| K0, đỏ | Khóa trùng khóa của một từ hoặc cụm có thật mà nghĩa là tục, tình dục hay chất thải, có nguồn chứng thực toàn mục; hoặc trùng khóa của một từ có nghĩa phụ tục phổ biến | Chặn cả khóa, bất kể tần suất |
+| K1, đỏ | Cách đọc kia tự nhiên, thông dụng, thuộc nhóm đỏ (*từ từ* ↔ *tự tử*, *lót dạ* ↔ *lột da*) | Chặn cả khóa; không đổi sang từ lành cùng khóa để né |
+| K2, vàng | Cách đọc kia hiếm, phải tách ép, hoặc nghĩa đỏ không chắc | Không vào bản 1, trừ khi cả hai bên ký "không tự động chặn" |
+
+### 4.2. Hạn mức và chỉ báo
+
+| # | Hạn mức trên 7.776 mục |
+|---|---|
+| Q1 | R2 (hiếm, cổ, hẹp): 0 |
+| Q2 | R1 (dùng được nhưng thiên văn viết, chuyên môn): ≤ 388 (5%), chỉ lấy khi đã hết ứng viên OK |
+| Q3 | Hư từ, khung câu, đại từ ghép: ≤ 77 (1%); không lấy dãy sinh theo mẫu (*chúng/bọn* + đại từ) |
+| Q4 | Mục vàng K2 chưa đủ hai chữ ký: 0 |
+
+**Chỉ báo** (chỉ báo cáo, không dùng để chỉnh trọng số):
+
+- M1: tỉ lệ C+H trên mẫu chung, mục tiêu ≥ 60%;
+- M2: mục 3 khối, mục tiêu ≤ 4%;
+- M3: độ dài trung bình, mục tiêu ≤ 7,0 chữ;
+- M4: ngoại lệ H8, mục tiêu ≤ 1%;
+- M5: số mục nhiều nhất có cùng âm tiết đầu.
+
+### 4.3. Xếp hạng
+
+- **S1. Chọn trong một khóa:**
+  - ưu tiên mục cụ thể, dễ hình dung (lớp C > H > K > F), rồi mục thông dụng hơn, rồi mục dễ gõ đúng hơn;
+  - nếu mục được ưu tiên kém thông dụng hơn quá 10 lần thì phải có hai bên ký;
+  - được phép bỏ cả khóa.
+- **S2. Điểm thông dụng F (0–100):** trung bình bách phân vị của bốn kho (phụ đề, web, Leipzig, Tatoeba). Tính riêng theo số khối. F chỉ dùng để xếp hạng; khi sinh passphrase, mọi từ được bốc đều.
+- **S3. Điểm tổng.** Mọi mục OK đứng trước mọi mục R1. Trong cùng bậc, điểm = `F + G − T`:
+  - G theo lớp: C +15, H +5, K 0, F −20;
+  - T là khoản trừ: rủi ro viết sai theo vùng (mỗi loại `s/x, ch/tr, d/gi/r, l/n, -c/-t, -n/-ng` +1, tối đa +4); lỗi viết 5% ≤ p < 10% (H5d) +5; dài trên 10 chữ +5; ba khối +3; mục thứ hai của cặp đảo thứ tự (*an bình/bình an*) +5.
+
+  Trọng số giữ nguyên sau P3.
+- **S4. Thứ tự tất định:** sắp theo bậc độ quen, rồi điểm giảm dần (làm tròn 2 chữ số), rồi số chữ tăng dần, rồi thứ tự O1.
+- **S5.** Không chia suất theo nguồn; không cộng điểm cho tác giả của mục.
+
+### 4.4. Giải nghĩa
+
+- **Quy trình sạch (D1):** mỗi lượt viết là một tác tử mới. Tác tử chỉ nhận lô từ, hướng dẫn văn phong và script tự kiểm.
+- **Hình thức (D2):** đúng một câu, khoảng 5–15 tiếng, ≤ 110 kí tự; chữ hoa đầu, dấu chấm cuối; không chữ số.
+- **Nội dung (D3):**
+  - nêu nghĩa phổ biến nhất, đúng từ loại;
+  - nghĩa thứ hai chỉ thêm khi cũng rất phổ biến và lành;
+  - không vòng vo, không câu ví dụ, không số liệu dễ đổi, không nhắc nghĩa tục.
+- **Không làm sạch nghĩa (D4):** nếu nghĩa phổ biến thuộc nhóm đỏ thì gắn cờ, và mục quay lại cổng H6/H7.
+- **Không trùng (D5):** hai mục khác nhau không được có giải nghĩa giống hệt nhau.
+- **Kiểm nguồn gốc (D6):** người soát kiểm tự động mỗi câu với các tập tham chiếu: giải nghĩa cũ của hai bên, nghĩa Wiktionary vi, câu trong hướng dẫn. Câu vi phạm thì bị trả lại để viết lại, không sửa tay. Vi phạm là một trong ba trường hợp:
+  - trùng nguyên câu với bất kỳ mục tham chiếu nào;
+  - có dải ≥ 6 token liên tiếp trùng với bất kỳ mục tham chiếu nào;
+  - với câu ≥ 5 token: tỉ số giống ≥ 0,78 so với tham chiếu của **cùng đầu mục hoặc cùng họ chính tả**.
+
+  Thiếu tập tham chiếu thì kết quả là `CHUA_KIEM`, không phải PASS.
+- **Soát nội dung (D7):** người soát chỉ ghi mã lỗi và mô tả bằng lời của mình. Tối đa hai lượt viết lại; còn lỗi thì thay từ bằng dự phòng. Riêng đầu mục chủ dự án buộc giữ thì không xóa: giao một lượt viết sạch mới hoặc trình chủ dự án.
+- **Lưu nguồn gốc (D8):** ghi lượt viết, người soát và kết quả kiểm cho từng mục.
+
+### 4.5. Thứ tự
+
+- **O1. So từng âm tiết từ trái sang phải.** Trong một âm tiết:
+  1. so dãy chữ chưa mang thanh theo `a ă â b c d đ e ê g h i k l m n o ô ơ p q r s t u ư v x y`;
+  2. rồi so thanh: ngang < huyền < hỏi < ngã < sắc < nặng.
+
+  Mục ngắn hơn (là tiền tố) đứng trước. Ví dụ *anh rể* đứng trước *ánh mắt*.
+- **O2.** [`thong-tin.html`](thong-tin.html) không tự sắp xếp. Trang chỉ nhóm theo chữ cái đầu đã bỏ dấu, nên dữ liệu phải được xếp sẵn theo O1.
+
+### 4.6. Kiểm tra tự động bắt buộc
+
+Kiểm tra chạy trên đầu ra thật, bằng hai bộ kiểm độc lập.
+
+| # | Kiểm tra |
+|---|---|
+| C1–C3 | UTF-8, NFC, đúng 7.776 dòng; H1, H2; duy nhất về mặt chữ và khóa, kể cả sau khi viết hoa chữ đầu |
+| C4 | Đúng thứ tự O1; các nhóm chữ cái liền mạch |
+| C5 | Không còn khóa K0/K1, không còn mục vàng chưa ký, không còn họ chính tả bị cấm hay đang chờ |
+| C6 | Hạn mức Q1–Q4; báo cáo M1–M5 |
+| C7 | Giải nghĩa đạt D2, D5, D6 trên toàn danh sách |
+| C8 | Đồng bộ với nguồn chuẩn: cột từ khớp khối của [`index.html`](index.html); đủ cặp `từ\|giải nghĩa` khớp khối của [`thong-tin.html`](thong-tin.html) và bản lưu trong tài liệu, từng dòng, cùng thứ tự |
+| C9 | Đo nhập nhằng khi dùng phân cách từ ghép, xét mọi vị trí cắt |
+| C10 | Thử trên trình duyệt: 7.776 từ, 6 từ ≈ 77,5 bit; trang thông tin đủ 7.776 dòng |
+| C11–C13 | Hai bộ kiểm cùng đạt; công bố SHA-256 và manifest; cửa sức chứa đạt trên danh sách xuất ra |
+
+**Phiếu chấm** (P3, P4) gồm nhãn và lớp.
+
+- **Nhãn:**
+  - **OK**: dùng tốt;
+  - **R1**: thiên văn viết, chuyên môn;
+  - **R2**: hiếm, cổ, hẹp;
+  - **S**: nhóm đỏ H6;
+  - **K**: vướng cổng đọc không dấu;
+  - **V**: vướng chính tả H5;
+  - **X**: không phải đơn vị từ vựng (cụm tự do, khung câu, thành ngữ).
+- **Lớp:**
+  - **C**: người, vật, loài, nơi chốn;
+  - **H**: hành động, tính chất quan sát được;
+  - **K**: trừu tượng;
+  - **F**: hư từ, đại từ.
+
+## 5. Kết quả P1–P7
+
+### 5.1. P1: bảng khóa chung
+
+- **12.757 khóa** với **13.356 mặt chữ**:
+
+  | Nguồn | Số mặt chữ |
+  |---|---:|
+  | Chung hai bên | 4.340 |
+  | Chỉ Astra | 3.436 |
+  | Chỉ Opus | 3.436 |
+  | Ứng viên bổ sung | 2.144 |
+
+  Có 503 khóa nhiều mặt chữ, nhiều nhất 7.
+- **Ứng viên bổ sung** chủ yếu là các mục mà quy trình cũ của Opus đã loại vì luật `i/y` quá rộng hay vì chính tả. Các mục này được xét lại theo H5 mới. Ngoài ra có 68 đồ vật quen có nguồn và vài mục nêu trong thảo luận.
+- **Mỗi mặt chữ có số đo của bốn kho:**
+  - số lượt ở phụ đề và web (Opus đếm lại theo ranh giới âm tiết, dấu câu và từ);
+  - số câu Leipzig và Tatoeba (Astra đo).
+- **Cờ tự động:** từ điển, chính tả, đọc không dấu.
+
+### 5.2. P2: cổng tự động
+
+Hai bộ kiểm độc lập chạy H1, H2, H3 (phần đo được), H4, H5, H7 (K0/K1/K2 đã ký), H8 (phần đo được) và các quyết định của chủ dự án. Mỗi mặt chữ có 9 dòng kết quả, tổng **120.204 dòng**.
+
+| Bản luật | Khớp hai bộ kiểm | PASS | CẢNH BÁO | CHỜ | FAIL | Khóa còn ứng viên chưa bị loại |
+|---|---|---:|---:|---:|---:|---:|
+| v3 (dùng cho P3) | 120.204/120.204 | 9.235 | 1.639 | 1.424 | 1.058 | 11.804 |
+| v4.1 (dùng cho P4) | 120.204/120.204 | 9.054 | 1.646 | 1.447 | 1.209 | 11.676 |
+
+- Hai bộ kiểm khớp từng dòng về khóa, mặt chữ, cổng, mức và tập mã lý do.
+- "PASS" chỉ có nghĩa là chưa vướng luật cứng đo được tự động. Mọi mục vẫn phải qua chấm chéo ở P4.
+- "CẢNH BÁO" phần lớn (1.325/1.646) là mục chỉ có trong danh sách từ Hồ Ngọc Đức (H3), cần hai bên ký xác nhận nghĩa.
+
+Kết quả v4.1 theo nguồn của mặt chữ:
+
+| Nguồn | PASS | CẢNH BÁO | CHỜ | FAIL | Tổng |
+|---|---:|---:|---:|---:|---:|
+| Chung hai bên | 4.239 | 16 | 42 | 43 | 4.340 |
+| Chỉ Opus | 1.929 | 1.215 | 204 | 88 | 3.436 |
+| Chỉ Astra | 2.666 | 255 | 277 | 238 | 3.436 |
+| Bổ sung | 220 | 160 | 924 | 840 | 2.144 |
+
+### 5.3. P3: hiệu chỉnh thang chấm
+
+- **Mẫu:**
+  - 300 khóa mới, chưa từng dùng để chấm hay dự báo;
+  - phân tầng theo nguồn, tần suất, số khối, nhãn vùng và cờ;
+  - che nguồn khi chấm.
+- Hai bên chấm độc lập theo phiếu chung.
+- Quy tắc dừng được ghi trước: κ ≥ 0,60 và đồng thuận về "có phản đối hay không" ≥ 90%.
+- **Kết quả, đạt ở vòng 1:**
+
+  | Chỉ số | Kết quả |
+  |---|---|
+  | κ Cohen trên bảy nhãn | 1429/2129 ≈ **0,671** |
+  | Trùng nhãn chính | 258/300 (86,0%) |
+  | Đồng thuận về phản đối | **274/300 (91,33%)** |
+  | Trùng lớp C/H/K/F | 253/300 (84,33%) |
+
+  Phép thử độ nhạy (bỏ 2 khóa từng lọt vào một lượt đọc trước) không đổi kết luận.
+- **Trọng số:** giữ nguyên S2–S4.
+- **So với vòng 2:** 640 phiếu chấm ở vòng 2 có κ ≈ 0,58 và đồng thuận 86,7%, tức chưa đạt. Ở P3, κ quan sát được cao hơn. Hai mẫu khác nhau về tập mục và cơ cấu, nên không quy toàn bộ khác biệt cho thang chấm.
+
+### 5.4. P4: chấm chéo
+
+*Đã xong. Hai chương trình độc lập (Opus [`sau_h9.py`](analyzing-tools/ho-so/opus/p4/sau_h9.py), Astra) cho cùng tập được nhận: SHA-256 `eae24642…`.*
+
+- **Phạm vi:**
+  - mỗi bên chấm đủ 12.147 mặt chữ của 11.676 khóa (rổ sau P2 v4.1), mỗi mục đọc riêng;
+  - phiếu được khóa bằng SHA-256 trước khi mở phiếu bên kia.
+- **Hiệu chỉnh giữa chừng (phía Opus):**
+  - Opus phát hiện thang của mình bị trôi so với P3: nhiều từ đời thường bị xếp R1. Opus rà lại toàn bộ 1.561 nhãn R1/R2 đã chấm theo thước đo neo vào phiếu P3 và sửa 706 dòng.
+  - Opus đồng bộ lớp theo S3: tính chất quan sát được xếp lớp H (331 dòng, không đổi nhãn).
+- **Nhãn của từng bên:**
+
+  | Nhãn | Opus | Astra |
+  |---|---:|---:|
+  | OK | 8.910 | 8.835 |
+  | R1 | 1.416 | 1.340 |
+  | R2 | 612 | 749 |
+  | S (nhóm đỏ H6) | 142 | 654 |
+  | K (cổng đọc không dấu) | 24 | 66 |
+  | V (chính tả H5) | 590 | 270 |
+  | X (không phải đơn vị từ, H2/H3) | 453 | 233 |
+
+- **Ghép theo luật gộp** (OK + OK → OK; có một bên R1 → R1; một bên phản đối → tranh chấp, xử ở H9):
+
+  | Kết quả | Số mặt chữ |
+  |---|---:|
+  | Hai bên cùng OK | 8.134 |
+  | R1 | 1.568 |
+  | Cả hai bên loại | 1.348 |
+  | Tranh chấp: Astra phản đối | 624 |
+  | Tranh chấp: Opus phản đối | 473 |
+
+- **Phản biện H9** (mỗi bên một lượt):
+  - Opus chấp nhận 605/624 phản đối của Astra và phản biện 19 mục. Astra rút 15 phản đối, như *nước bọt* (theo tiền lệ *mồ hôi*), *hộ chiếu, huyện, cung điện, giấy phép* và khóa *thầy/thấy* (K2 đủ hai chữ ký). Astra giữ 4: *mạng xã hội, nói dối, vương quốc, nóng sốt*.
+  - Astra chấp nhận 407/473 phản đối của Opus và phản biện 66 mục. Opus rút 58 phản đối (13 mục thành OK, 45 thành R1) và giữ 8.
+  - Astra nêu thêm 15 phản đối H2/H6 trên mục ba khối; Opus đồng ý cả 15.
+  - Đọc lại ngữ cảnh sau H9:
+    - Khóa *didong* hạ từ K1 xuống K2 và có hai chữ ký, nên *di động* được nhận.
+    - *Calo* bị rút chữ ký K2.
+    - Khóa *danhca* giữ K1.
+    - Bốn họ *chỏng gọng, sắc lẹm, mức nước, thả rông* bị để ngoài.
+  - Mặt chữ chung khóa với một mặt bị gắn S/K phải có K2 hai chữ ký. Opus ký 4 mục và không ký 3 mục (*hầm hầm, hằm hằm, quắt queo*).
+  - Không có ca chính sách nào phải gửi chủ dự án.
+  - Hồ sơ: [`chu-ky.tsv`](analyzing-tools/ho-so/unified/chu-ky.tsv), [`phan-bien.tsv`](analyzing-tools/ho-so/unified/phan-bien.tsv), [`tranh-chap-con-lai.tsv`](analyzing-tools/ho-so/unified/tranh-chap-con-lai.tsv).
+- **Kết quả sau H9:** **9.749 mặt chữ thuộc 9.564 khóa**, đủ chữ ký; hai chương trình khớp từng dòng trên 7 trường.
+- **Sức chứa:** xem [mục 5.6](#56-p6-xếp-hạng-sức-chứa-và-các-lô-bổ-sung). Bản tính nháp trước P5 (theo phiếu P5 của Opus) đã được thay bằng số chính thức sau P5.
+- **Lớp tác nghiệp:**
+  - 1.933 mặt chữ lệch lớp được đọc lại;
+  - Astra đề xuất một lớp cho mỗi mục, và hai bên lấy lớp đó;
+  - riêng 4 mục mà Opus giữ F (*theo, thông qua, thưa, chắc*), lấy F;
+  - mục phục hồi ở H9 lấy lớp theo đề xuất 052 của Astra;
+  - hai mã gốc được giữ để tính khoảng cho chỉ báo M1.
+
+### 5.5. P5: chọn trong khóa nhiều mặt chữ
+
+*Đã xong. Bảng chung [`ket-qua-chon.tsv`](analyzing-tools/ho-so/unified/ket-qua-chon.tsv) (400 dòng) và tập vào P6 [`p6-dau-vao.tsv`](analyzing-tools/ho-so/unified/p6-dau-vao.tsv) (9.552 khóa, mỗi khóa một mặt chữ) được hai bên băm đối chiếu.*
+
+- **Phạm vi:** 400 khóa có ≥ 2 mặt chữ qua P2; 183 khóa còn ≥ 2 mặt chữ được nhận sau H9. Mỗi bên khóa phiếu bằng SHA-256 trước khi mở phiếu của bên kia.
+- **Đối chiếu:** 390/400 khóa trùng ý ngay từ phiếu độc lập.
+  - Bảy ngoại lệ "chọn mục cụ thể dù thưa hơn quá 10 lần" được cả hai ký với lý do riêng: *cờ lê, riềng, thềm, ve sầu, thầy* (đều là ví dụ đã ghi trong S1), *nhàu* (thay *nhau*), *phai* (thay *phải*).
+- **10 khóa lệch, một lượt lý lẽ:** Opus nhận cả 10 lựa chọn của Astra.
+  - Ba khóa *đông đặc, phu nhân, tinh thể*: phiếu Opus đã xếp "nhãn OK trước" rồi mới xét lớp. S1 đã ký chỉ có ba bước: lớp C > H > K > F, rồi độ thông dụng, rồi dễ gõ lại; bậc OK/R1 thuộc xếp hạng toàn cục S3/S4. Đây là lỗi phương pháp phía Opus.
+  - Năm khóa bỏ: *bò cạp/bọ cạp, cót két/cọt kẹt, cứng đơ/cứng đờ, mong manh/mỏng manh, sạch bong/sạch bóng*. Hai mặt cùng nghĩa, dùng thay cho nhau, và không dạng nào đạt 95% ở cả hai kho; đây là tinh thần của H5c. Cổng P2 không bắt được vì cặp nằm trong cùng một khóa.
+  - *Tận tình* (thay *tán tỉnh*, tránh ngượng khi đọc passphrase) và *tẩy trang* (thay *tay trắng*, chủ yếu dùng nghĩa bóng) được chọn theo S1.
+- **Rà nhất quán sau đó:** Opus rà cả 183 khóa, đọc mẫu ngữ cảnh trong hai kho, và đề xuất áp cùng lý do. Hai bên thống nhất bỏ thêm 7 khóa:
+  - cùng một từ: *đẩy lui/đẩy lùi*; *ô kìa/ơ kìa*, *ô hay/ơ hay* (thán từ); *la đà/là đà* (mọi lượt *là đà* trong kho là vắt từ, như "là Đà Lạt");
+  - chồng nghĩa ở cụm thường gặp, dễ gõ nhầm: *gian khó/gian khổ, long lanh/lóng lánh, hết mức/hết mực*.
+  - Giữ *đúng mực* và *trước mặt*: nghĩa chính tách khỏi *đúng mức*, *trước mắt*.
+- **Kết quả:** chọn 260, bỏ 140; không có ca nào phải gửi chủ dự án.
+
+### 5.6. P6: xếp hạng, sức chứa và các lô bổ sung
+
+*Đã xong; hai bên đã ký (`_done\P6-opus.flag`, `_done\P6-astra.flag`). Mỗi lần tính, hai chương trình độc lập (Opus [`p6_opus.py`](analyzing-tools/ho-so/opus/p4/p6_opus.py), Astra [`p6-tinh-doc-lap-astra.py`](analyzing-tools/ho-so/unified/p6-tinh-doc-lap-astra.py)) cho cùng số ngăn, cùng chỉ báo M1–M5 và cùng SHA-256 của danh sách.*
+
+- **Luật dự phòng (đã ký):** cần 300 khóa khác làm dự phòng, mỗi khóa có một suất thay hợp ngăn; dự phòng R1 chỉ thay được mục R1. Danh sách chính lấy OK trước R1, nên khi OK không-F đủ lấp, danh sách chính không còn mục R1 và dự phòng R1 không dùng được. Từ đó: cần **≥ 7.922 khóa OK không-F**; chỉ khóa OK không-F mới bù được chỗ thiếu.
+- **L1** (rổ P1 sau P2, chấm hết ở P4):
+
+  | Ngăn | Pool | Danh sách chính | Dự phòng |
+  |---|---:|---:|---:|
+  | OK không-F | 7.674 | 7.674 | 0 |
+  | OK-F | 318 | 77 | 77 |
+  | R1 không-F | 1.538 | 25 | 25 |
+  | R1-F | 22 | 0 | 0 |
+  | **Tổng** | **9.552** | **7.776** | **102** |
+
+  C13 chưa đạt, đã được hai bên xác minh. Theo quy tắc lấp đã ký, mở bậc L2; không nới Q1–Q4 hay luật cứng.
+- **L2A** (400 ứng viên đời thường do Astra đề cử: đồ vật 3 khối, đồ dùng, cây, con, món ăn, cộng các mục mà lượt chọn cũ của Opus đã loại cả nhóm):
+  - Opus tự đếm bốn kho (khớp số của Astra 400/400) và chạy cổng bằng bộ kiểm riêng. Hai bộ kiểm khớp 3.600/3.600 dòng; 18 mặt trượt cổng.
+  - Các ca do người xét (25 họ chính tả, 15 khóa đọc không dấu) được cả hai ký.
+  - Chấm đôi 382 mặt, mỗi bên khóa phiếu trước khi mở phiếu bên kia. Kết quả: 167 OK + OK, 147 R1, 50 tranh chấp, 18 cả hai loại.
+  - H9: Opus chấp nhận 26/27 phản đối của Astra (giữ *gác chuông*, Astra rút sau khi đối chiếu tiền lệ *tháp chuông*). Astra chấp nhận 16/23 phản đối của Opus; Opus rút 7 (trong đó *băng vệ sinh* thành OK, nhất quán với *giấy vệ sinh*).
+  - Được nhận: **321 khóa (167 OK, 154 R1)**, hai chương trình khớp từng byte.
+- **Sau L1 + L2A:** OK không-F 7.841. Danh sách chính 7.699 OK không-F + 77 OK-F. Dự phòng **219** (142 OK không-F + 77 OK-F), **thiếu 81**.
+  - Chỉ báo tạm: M1 C + H 78,3% (235/300); M2 205 mục ba khối; M3 trung bình 6,78 chữ; M4 0 ngoại lệ H8; M5 âm tiết đầu nhiều nhất *bánh* (60).
+- **L2B** (200 ứng viên: thực thể ba khối, đồ dùng, từ đời thường bổ sung):
+  - Hai bộ kiểm khớp 1.800/1.800 dòng.
+  - Chấm đôi 198 mặt: 50 OK + OK, 96 R1, 28 tranh chấp. Sau H9 nhận **148 khóa (51 OK, 97 R1)**.
+  - Sau L2B còn thiếu 30.
+- **L2C** (98 ứng viên có chứng cứ thông dụng mạnh, nhiều từ một âm tiết khẩu ngữ):
+  - Hai bộ kiểm khớp 882/882 dòng.
+  - Sau H9 nhận **51 khóa (8 OK, 43 R1)**: phần lớn là từ ít dùng hoặc vướng chính tả, đọc không dấu. Còn thiếu 22.
+- **L3** (nguồn khác, theo quy tắc lấp đã ký):
+  - Opus trích từ Wiktionary (en, vi) 18.196 mặt chữ, thuộc 16.903 khóa chưa có trong rổ. Phần đầu bảng tần suất gần như toàn mục bị loại có chủ ý (nhóm đỏ, cụm, từ tiếng Anh). Nhưng trong đó có nhiều từ đời thường hiện đại mà bộ HND cũ không có, như *thú cưng, gấu bông, kẹt xe, đèn giao thông, mũ bảo hiểm, kem chống nắng*.
+  - Opus đọc thủ công khoảng 1.300 khóa mạnh nhất và đề cử 126 mục. Cả 126 mục đều có mục từ trong Wiktionary; 111 mục nằm ngoài cả bốn bộ HND, 15 mục có trong HND nhưng chưa có trong rổ P1. Astra nhận nguyên danh sách như một mẫu ưu tiên có chủ đích, không suy rộng cho cả rổ.
+  - Hai bộ kiểm khớp 1.134/1.134 dòng. Các ca do người xét bắt thêm: *chất tẩy* (đọc thành *chặt tay*), *sắc màu* (*sặc máu*), *vết bẩn* (*vết bắn*); *quán cà phê* (*quán cafe*), *giày cao gót* (*giầy*) trượt H5.
+  - Chấm đôi 116 mặt: 102 OK + OK, 9 R1, 3 tranh chấp. Sau H9 nhận **111 khóa (102 OK, 9 R1)**.
+- **Sau L1 + L2A + L2B + L2C + L3:** pool 10.183 khóa; OK không-F 8.002. Danh sách chính 7.699 OK không-F + 77 OK-F; **dự phòng 300 (đều OK không-F): C13 đạt.**
+  - Chỉ báo tạm: M1 C + H 78,7% (236/300); M2 268 mục ba khối; M3 trung bình 6,80 chữ; M4 0; M5 *bánh* (60).
+  - Biên là 8.002 − 7.922 = **80 khóa**. Bản trạng thái lúc 18:40 ghi nhầm "biên chỉ còn 3", do coi cả 300 dự phòng phải là OK không-F; Astra đã chỉ ra chỗ sai. Thực ra mỗi suất F trong danh sách chính có thể do một dự phòng OK-F thay.
+  - Hai lô dự bị chỉ được chuẩn bị, **không chấm và không đưa vào pool**: L3b (48 ứng viên do Opus đề cử, sau đó Opus rút đề nghị) và L2D (99 ứng viên H8 yếu do Astra đo và lập sổ).
+- **Khấu trừ có biên bản (27 mục)** trong [`p6-khau-tru-cuoi.tsv`](analyzing-tools/ho-so/unified/p6-khau-tru-cuoi.tsv), có chữ ký hai bên. Khấu trừ chỉ áp ở đầu vào P6 cuối; các bản L1, L2, L3 lịch sử giữ nguyên SHA.
+  - **H5 liên tầng (8 mục).** Bằng chứng mới thu ở L3 được áp ngược cho các mục đã nhận từ trước, đúng theo H5f đã ký:
+    - Họ *cà phê / cafe, café*: *cà phê, cà phê đen, cà phê sữa, cà phê trứng, thìa cà phê*. Chỉ tính khung tiếng Việt rõ (uống, ly, tách, quán…). Ở phụ đề, dạng *cafe/café* vẫn chiếm ít nhất 10,01% (cận bảo thủ, có gộp dạng gạch nối và viết liền), nên dạng *cà phê* không đạt mốc 95%.
+    - Họ *buýt / bus*: *buýt, xe buýt, ô tô buýt*.
+    - Hai tên giống cây *cà phê chè, cà phê vối* vẫn là R1, không vào danh sách chính.
+  - **Sau lượt đọc toàn bộ (19 mục).** Astra đọc trọn 7.776 + 300 dòng và đề nghị trừ 19 mục, kèm mẫu ngữ cảnh. Opus lấy mẫu riêng và đồng ý cả 19:
+    - nghĩa còn dùng phổ biến thuộc nhóm đỏ H6:
+      - *bánh bèo* (lóng chê người);
+      - *nóng bỏng, thèm muốn, vuốt ve* (tình dục);
+      - *tin mừng, thần tượng, tạ ơn* (tôn giáo);
+      - *giáp, chinh phục* (vũ khí, chinh chiếm);
+      - *cườm, gây sốt, nghẹt* (bệnh, triệu chứng);
+      - *tước* (tước vị, tước quyền);
+      - *rình rập* (theo dõi người);
+    - đề tài giới, theo đoạn "Danh tính" của H6: *nam tính, nữ tính*;
+    - nhất quán H5 với các họ đã xử ở L2C: *quần soóc, tập dượt, xe goòng*.
+- **Kết quả cuối:** pool **10.156 khóa**, mỗi khóa một mặt chữ.
+
+  | Ngăn | Pool | Danh sách chính | Dự phòng |
+  |---|---:|---:|---:|
+  | OK không-F | 7.977 | 7.699 | 278 |
+  | OK-F | 318 | 77 | 22 |
+  | R1 không-F | 1.839 | 0 | 0 |
+  | R1-F | 22 | 0 | 0 |
+  | **Tổng** | **10.156** | **7.776** | **300** |
+
+  - **C13 đạt:** 7.977 khóa OK không-F, cần 7.922, **dư 55**.
+    - 300 dự phòng là 300 khóa khác nhau, mỗi khóa có một suất thay hợp ngăn: 278 OK không-F thay mục OK không-F, 22 OK-F thay 22 trong 77 suất F.
+    - Danh sách chính không có mục R1, nên không dùng dự phòng R1.
+    - Astra lập bảng sự kiện thay thế cho thấy 300 dự phòng thay được 300 ghế khác nhau, không đụng 14 mục chủ dự án giữ.
+  - **Hạn mức:** Q1 (R2) = 0; Q2 (R1) = 0, ngưỡng ≤ 388; Q3 (lớp F) = 77, ngưỡng ≤ 77; Q4 (K2 chưa đủ hai chữ ký) = 0.
+  - **Chỉ báo:**
+
+    | # | Chỉ báo | Mục tiêu | Giá trị |
+    |---|---|---|---|
+    | M1 | Tỉ lệ C + H trên mẫu thẩm định 300 mục | ≥ 60% | 78,7% (236/300); khoảng 221–274 theo hai mã gốc |
+    | M2 | Số mục ba khối | ≤ 4% | 264 (3,40%) |
+    | M3 | Độ dài trung bình khi viết liền | ≤ 7,0 chữ | 6,80 |
+    | M4 | Ngoại lệ H8 | ≤ 1% | 0 |
+    | M5 | Âm tiết đầu nhiều nhất | báo cáo | *bánh* (59), không âm tiết nào vượt 0,8% |
+
+  - **Phân bố danh sách chính:**
+    - lớp: C 2.988, H 3.101, K 1.610, F 77;
+    - số khối: 1 khối 486, 2 khối 7.026, 3 khối 264;
+    - nguồn: L1 7.455, L2A 164, L2B 51, L2C 4, L3 102. Dự phòng: L1 296, L2C 4.
+  - Có đủ 14 mục chủ dự án giữ (*mặt trời, mặt trăng, trái đất, ngân hà, công chúa, hoàng tử, hoàng hậu, mồ hôi, ruồi, gián, chào cờ, ròng rọc, dép lê, bánh chưng*). Không có *bướm, buồm, chim, chìm*.
+  - Kiểm tự động trên hai danh sách đều đạt:
+    - đúng số dòng; NFC, chữ thường, không `-`, một dấu cách giữa các khối;
+    - không trùng mặt chữ, không trùng khóa; khóa ≥ 4 chữ;
+    - không BOM, không CR;
+    - danh sách chính và dự phòng không giao nhau.
+  - **Đầu ra** (trong hồ sơ làm việc, chưa đưa vào repo). Hai bên khớp từng byte; Astra còn khớp điểm và hạng của mọi dòng trong bảng xếp hạng.
+
+    | Tệp | Nội dung | SHA-256 |
+    |---|---|---|
+    | [`danh-sach-chon.txt`](analyzing-tools/ho-so/unified/danh-sach-chon.txt) | 7.776 từ theo thứ tự O1 | `dfcf4ba63624b0a4cfc92945e22568b0b878e0caf3da4ed83e388fa25a73d4ee` |
+    | [`du-phong.txt`](analyzing-tools/du-phong.txt) | 300 dự phòng theo O1 | `31647c0b3d984bda3d7f430914bea37ae14ed46cac447128006b9e026fc82496` |
+    | [`xep-hang.tsv`](analyzing-tools/ho-so/unified/xep-hang.tsv) | 10.156 mục kèm điểm và nơi vào (chính, dự phòng, ngoài) | `c357aa0523a2527ba5cb118e796146d22ea7e491064c84e969bd0d8dece0aba3` |
+
+    Hai báo cáo đi kèm là [`bao-cao-suc-chua.md`](analyzing-tools/ho-so/unified/bao-cao-suc-chua.md) và [`bao-cao-chi-bao.md`](analyzing-tools/ho-so/unified/bao-cao-chi-bao.md).
+  - Không có ca nào phải gửi chủ dự án.
+
+### 5.7. P7: viết mới giải nghĩa
+
+**Cách làm.**
+
+- Người điều phối tạo các lượt viết sạch. Người viết chỉ nhận danh sách từ, hướng dẫn văn phong và script tự kiểm. Họ không thấy giải nghĩa cũ, từ điển, Wiktionary hay kho câu.
+- Hai bên soát theo D6–D8:
+  - **D6, kiểm nguồn gốc** (Astra chạy [`d6-kiem.py`](analyzing-tools/d6-kiem.py)).
+    - Tập tham chiếu: giải nghĩa cũ của Opus và của Astra, 57.017 nghĩa trong Wiktionary tiếng Việt, và các câu của hướng dẫn. Log ghi hash từng tập.
+    - Chuẩn hóa: NFC, chữ thường, tách token theo chữ cái (giữ dấu), bỏ dấu câu.
+    - D6A, trùng nguyên câu; D6B, trùng một dải ≥ 6 token liên tiếp. Hai phép này so với **toàn bộ** tập tham chiếu, không phân biệt đầu mục.
+    - D6C, chỉ xét câu mới có ≥ 5 token: tỉ số `difflib.SequenceMatcher` trên token (`autojunk=False`) ≥ 0,78 so với tham chiếu của **cùng đầu mục hoặc cùng họ chính tả**. Phép này không so với mọi mục có cùng khóa bỏ dấu.
+  - **D7, soát nội dung.** Mỗi bên làm chính nửa số lô, xen kẽ; thêm một mẫu chồng chéo khoảng 10% để đo đồng thuận. Mục có cờ, trùng D5 hay vướng D6 thì cả hai cùng xem. Phiếu chỉ ghi mã lỗi và chẩn đoán bằng lời người soát, không viết câu thay thế.
+  - Mục có cờ `NHAY_CAM`/`TUC_PHU` quay lại cổng H6/H7. Nếu loại thì thay bằng dự phòng và chạy lại P6.
+- Lượt viết lại chỉ nhận đầu mục và chẩn đoán. Chẩn đoán được kiểm để không lộ dải ≥ 4 token của câu cũ.
+
+**Ba lượt chung và một lượt riêng cho mục bắt buộc:**
+
+| Lượt | Số câu | D6 vượt ngưỡng | Mục có CHAN nội dung D7 (trong đó không vướng D6) | Đồng thuận trên mẫu mù | Loại qua H6 |
+|---|---:|---:|---:|---|---|
+| v1 | 8.076 (21 lô) | 2.435 (30%) | 101 (54) | 780/781, κ = 0,666 | 22 mục |
+| v2 (viết lại lần 1) | 2.501 (gồm 22 dự phòng mới) | 629 (25%) | 28 (25), sau hòa | 247/250, κ suy biến (một bên không có CHAN nào) | *đi lại* |
+| v3 (viết lại lần 2, lượt cuối) | 655 (gồm 1 dự phòng mới) | 123 (19%) | 10 (10), sau hòa | 63/64, κ suy biến | — |
+| v4 (lượt sạch riêng cho *ròng rọc*) | 1 | 0 | 0 | Soát trực tiếp, không tính κ một mục | — |
+
+- **Cổng hình thức `--phat-hanh`** (kiểm cờ, câu trống, trùng nguyên văn D5):
+  - v1, trên các lô thô: 167 lỗi, 0 cảnh báo. Gồm 164 cờ chưa đóng và 3 cặp câu trùng nhau.
+  - v2, trên bản gộp (giữ câu v1 đã đóng cờ): 10 lỗi, đều do cờ chưa đóng; 0 cảnh báo.
+  - v3, trên bản gộp: 0 lỗi, 0 cảnh báo.
+  - v4 riêng, thay đúng một câu trong bản gộp 8.076 mục: 0 lỗi, 0 cảnh báo, không trùng nguyên văn với 8.075 mục khác.
+
+  Hình thức đạt từ v3, nhưng không đồng nghĩa D6, D7 hay C13 đã đạt cho toàn bộ bản gộp. Sau v4, dưới P0 còn 122 câu không bắt buộc trượt D6 và 10 câu khác trượt D7; chưa có bản phát hành cuối hay D8 hoàn chỉnh.
+
+**D6: phân tích và cách xử lý.**
+
+- Nguyên nhân chính **không** phải cụm khuôn trùng với Wiktionary.
+  - Ở v1, 88% câu vướng có trùng giải nghĩa cũ của Opus; 75% chỉ trùng với bộ này. Chỉ 14% có dính Wiktionary.
+  - Nếu miễn các dải 6 token phổ biến, D6B chỉ giảm từ 2.124 xuống 1.918.
+- So trên 3.911 đầu mục có ở cả ba bộ, xét cùng đầu mục:
+  - câu mới gần câu cũ của Opus ở 30,4% số mục;
+  - câu mới gần câu cũ của Astra chỉ 3,8%;
+  - mốc giữa hai người viết độc lập (hai bộ cũ với nhau) là 4,7%.
+
+  Tỉ lệ với Opus cũ đều ở cả 21 lô (20–35%). Số liệu phù hợp với hội tụ văn phong của cùng họ mô hình; không thấy bằng chứng rò nguồn.
+- Kiểm tay 60 câu: các câu trùng Wiktionary ở **cùng đầu mục** (ví dụ *thi công, gia cầm, lề đường, độc nhất*) đúng là loại D6 cần chặn. Phần lớn trùng **khác đầu mục** là cụm thông dụng.
+- **Quyết định của hai bên:** áp đúng luật đã ký (P0). Mọi câu vướng D6 đều phải viết lại; không miễn cụm khuôn, không nới tham chiếu giải nghĩa cũ của Opus. Mỗi lượt viết lại có tỉ lệ vướng giảm dần (30% → 25% → 19%).
+
+**Khấu trừ H6 trong P7** (biên bản hai chữ ký: [`p7-khau-tru.tsv`](analyzing-tools/ho-so/unified/p7-khau-tru.tsv), [`p7-khau-tru-v2.tsv`](analyzing-tools/ho-so/unified/p7-khau-tru-v2.tsv)):
+
+- v1, 22 mục:
+  - *áo mưa, ăn vụng, âu yếm* (H9), *bóng, bôi trơn, thịt, trong trắng, yên giấc*;
+  - *chợ búa, rình mò, rình, cục cằn* (dự phòng), *giám thị, hương, nhắm*;
+  - *nôn nao, tiền sử, nội trú, thanh toán, bù nhìn, con rối, trúng giải*.
+- v2: *đi lại* (H9: Opus phản biện một lần, Astra giữ phản đối).
+- Hai khóa `huong` và `nham` bị bỏ cả khóa, không đổi sang *hướng*, *nhẩm*. Lý do (H7/K1): cách đọc *hương*, *nhắm* vừa được xác nhận thuộc nhóm đỏ.
+- Được giữ sau khi xét: *đụng chạm, thân mật, qua lại, ba chấm, bươm bướm, đường cong, mát mẻ, máy trợ thính, thầm kín, trốn thoát, kinh đô, đèn đỏ, phũ phàng, tươi mát, bạch dương, cá chiên*.
+- Với *bóng, thịt, nhắm*, mẫu ngẫu nhiên của Opus đều dưới mốc 20%. Opus vẫn nhận loại, theo tiền lệ *bướm*, *chim* của chủ dự án và bảng ví dụ H6.
+
+**Trạng thái khi dừng:**
+
+- Danh sách hiện hành (sau khấu trừ H6 của v1, v2) là chính 7.776 và dự phòng 300. Hai chương trình cho cùng SHA. Chưa áp phần thay dự phòng của v3.
+- *Ròng rọc* là mục bắt buộc. Câu v3 vướng D6B; người điều phối đã giao một lượt sạch riêng, **không nới tiêu chí**. Câu v4 đạt D6 (14 token, không chạm A, B hoặc C). **Astra và Opus cùng chấm D7: OK** — câu nêu đúng vai trò của bánh xe và dây khi nâng vật, không coi vị trí lắp là bắt buộc. Dùng câu v4 thay câu v3 cho đúng mục này. Xem hồ sơ và băm ở [§9.5](#95-hồ-sơ-làm-việc).
+- Thay 122 mục vướng D6 còn lại (cùng các mục CHAN của D7) bằng dự phòng thì C13 không đạt. Xem [mục 9](#9-câu-hỏi-mở-và-cách-tiếp-tục).
+
+## 6. Các việc tồn trước P4
+
+### 6.1. Quét biến thể chính tả toàn rổ
+
+**Sinh cặp.** Với 12.298 mặt chữ chưa bị loại ở P2 v3, sinh mọi biến thể đổi một chỗ. Các phép đổi gồm:
+
+- âm đầu: `s/x, ch/tr, d/gi/r, l/n, v/d, g/ng`;
+- âm cuối: `-c/-t, -ch/-t, -n/-ng, -nh/-n`;
+- thanh hỏi/ngã.
+
+Kết quả là 28.760 cặp. Mỗi cặp được đếm ở hai kho.
+
+**Lọc.** Có **950 cặp** mà dạng kia có ít nhất 3 lượt và dạng đang xét chiếm dưới 95% ở một kho.
+
+**Đọc.** Hai bên đọc cả 950 cặp, độc lập với nhau:
+
+- Opus đọc mẫu ngữ cảnh;
+- Astra đối chiếu liên kết từ điển.
+
+Phần lớn tỉ lệ cao là do hai từ khác nhau tình cờ đứng liền nhau, không phải lỗi viết. Cặp nào xác nhận là **cùng một từ** thì được đăng ký vào sổ họ chính tả bổ sung, rồi áp đúng ngưỡng H5.
+
+**Kết quả: 193 họ.**
+
+| Kết luận | Số họ |
+|---|---:|
+| Loại: lỗi viết ≥ 10% | 42 |
+| Loại: hai dạng cạnh tranh | 36 |
+| Loại: cả hai cách hiểu loại đều trượt | 12 |
+| Loại: thiếu dữ liệu (cặp cạnh tranh) | 11 |
+| Qua nhưng trừ điểm (lỗi 5–10%) | 51 |
+| Qua riêng H5 | 11 |
+| Chờ: sát ngưỡng | 14 |
+| Chờ: lẫn nghĩa, cần đọc thêm | 11 |
+| Chờ: chưa xác định loại | 3 |
+| Chờ: thiếu dữ liệu, cần hai chữ ký | 2 |
+
+Hai bên thống nhất thêm các điểm:
+
+- H5h chỉ áp cho cặp khác nhau ở hỏi/ngã.
+- Kiểm độ nhạy theo đúng văn bản đã ký: hễ kết luận đổi khi bỏ dòng trùng thì chờ.
+- Cặp đã xác nhận nhưng không kho nào đủ dữ liệu thì cần hai chữ ký.
+- Từ mượn khác chữ cái xử như loại f, theo tiền lệ *micrô/micro*.
+
+### 6.2. Rà cổng đọc không dấu
+
+- **Quét cụm ngoài từ điển.** Có 15.492 cụm có ít nhất 20 lượt ở một kho, ứng với 5.637 khóa. Hai bên đọc các cụm có tín hiệu đỏ. Opus đọc 1.774 dòng; Astra đọc 536 cụm và 22 mục từ điển có nghĩa đỏ.
+- **Khóa thêm vào cổng** (so với bản luật v3):
+  - **K0:** từ 37 lên 39 khóa. Hai khóa mới có nguồn chứng thực toàn mục, ví dụ `phanbo`.
+  - **K1:** từ 27 lên 47 khóa, tức thêm 20 khóa, không khóa nào bị rút. Trong đó có các khóa đọc thành từ một âm tiết thông dụng thuộc nhóm đỏ, ví dụ `benh`, `dang`, `chem`, `thuoc`, `danh`. Số lượt của các từ đỏ này cùng bậc với nhau.
+  - **K2 chờ hai chữ ký:** từ 13 lên 47 khóa, tức thêm 34 khóa. Đó là các khóa mà cách đọc kia là tổ hợp tự do (động từ + đại từ) hoặc hiếm. Khóa `thay` cũng ở đây: hai bên đồng ý xếp K2 và chưa có hai chữ ký cho đi tiếp. Đây không phải ca cần chủ dự án quyết.
+  - **Cụm tục không có mục từ cho cả cụm:** xếp K1, không xếp K0, vì K0 đòi nguồn chứng thực toàn mục.
+- **Vá cổng:**
+  - Còi báo **theo cả khóa**: một khóa đã có mặt chữ bị chặn vì đọc thành từ đỏ thì mọi mặt chữ khác cùng khóa đều phải được đọc lại.
+  - Họ chính tả bổ sung khớp **nguyên mặt chữ**, để họ một âm tiết không lan sang từ ghép.
+  - Dạng thuộc họ lẫn nghĩa thì chờ, không bị loại thẳng.
+
+### 6.3. Thống nhất cách hiểu nhãn cho P4
+
+Các cách hiểu dưới đây làm rõ định nghĩa đã ký, không đổi luật:
+
+- **R2** phải có căn cứ cụ thể (cổ, hẹp, ít người biết); số lượt thấp ở một kho không tự biến thành R2.
+- **X** áp cho tổ hợp sinh từ khung tự do, kể cả khi có mục từ. Mục ba khối phải là tên cố định của một đối tượng cụ thể.
+- **S** xét cả nghĩa phụ còn dùng phổ biến. Khi phân xử, mốc chứng cứ là nghĩa phụ chiếm ≥ 20% số lượt đọc được ở một kho. Đọc mẫu ít nhất 30 lượt, hoặc đọc hết nếu kho có dưới 30 lượt. Mốc này dùng để phân xử, không tự động gán S.
+- **K** chỉ xét cách đọc của trọn khóa. Cụm ngoài từ điển chỉ tính khi đã xác minh nghĩa tự hại, bạo lực hay tình dục, với ≥ 20 lượt ở một kho; không cấm mọi cụm phổ biến. Tổ hợp tự do tối đa là K2.
+- **V** chỉ dùng khi có số đo và căn cứ từ điển cho cả hai dạng.
+- **Gộp nhãn:** một bên R1 thì gộp là R1.
+
+## 7. Kế hoạch P4–P8 và rủi ro
+
+- **P4. Chấm chéo:**
+  - Cả hai bên gắn nhãn và lớp cho **mọi** mặt chữ còn lại sau P2 v4.1: 12.147 mặt chữ thuộc 11.676 khóa.
+  - Thứ tự ưu tiên: khóa tranh chấp, ứng viên bổ sung, danh sách ưu tiên, rồi phần còn lại.
+  - Phiếu được ghi liên tục theo lô.
+  - Chữ ký riêng cho: xác nhận H3, ngoại lệ H8, K2 "không tự động chặn".
+  - Phản đối được phản biện một lần; ca chính sách gửi chủ dự án.
+- **P5. Chọn trong khóa nhiều ứng viên:** mỗi bên chọn độc lập theo S1. Trùng ý thì chốt; khác ý thì có một lượt lý lẽ kèm số đo; còn lệch thì bỏ khóa.
+- **P6. Xếp hạng và cửa sức chứa:** Opus tính, Astra tính lại độc lập.
+  - **Mốc phát hành:** cần khoảng **7.311 khóa OK không thuộc lớp F**, và khoảng **7.611 khóa** nếu cả 300 dự phòng đều là OK không-F. Hai mốc này giả định hai ngăn hạn mức R1 (Q2) và hư từ (Q3) được lấp đầy; chúng không phải số ô đếm được ở P2.
+    - *Cập nhật sau P5:* vì danh sách chính lấy OK trước R1 và dự phòng R1 chỉ thay được mục R1, mốc thực tế để đủ 300 dự phòng là **7.922 khóa OK không-F** (xem [mục 5.6](#56-p6-xếp-hạng-sức-chứa-và-các-lô-bổ-sung)).
+  - **Dự báo trước P4** (cả hai đều tính trên rổ P1, trước bản luật v4.1; không phải số liệu P4):
+    - Opus, dùng nhãn một người cho tầng lõi và tầng bổ sung: khoảng 7.338 khóa. Cộng các cận Wilson của từng tầng được [6.723; 7.874]; đây không phải khoảng tin cậy 95% đồng thời cho tổng.
+    - Astra kiểm chéo, chỉ tính các mục cả hai người cùng xếp OK không-F: khoảng 7.126 khóa; khoảng 7.417 nếu thêm lô L2 theo giả định.
+
+    Như vậy rổ hiện tại **sát hoặc dưới mốc phát hành**, chưa đủ cho dự phòng.
+  - Các việc trước P4 đã loại thêm 128 khóa có vấn đề chính tả hoặc đọc không dấu.
+  - **Nếu thiếu:** lấp theo bậc.
+    - L1: chấm hết rổ.
+    - L2: lô đời thường mới.
+    - L3: nguồn khác.
+  - **Nếu vẫn thiếu:** không dùng từ 3 chữ. Hai bên trình chủ dự án các phương án nới tiêu chí khác, kèm số liệu.
+  - **Kết quả:** đã lấp bằng L2A, L2B, L2C và L3. C13 đạt với dư 55, không phải nới tiêu chí (xem [mục 5.6](#56-p6-xếp-hạng-sức-chứa-và-các-lô-bổ-sung)).
+- **P7. Giải nghĩa sạch:** người điều phối tạo các lượt viết theo lô ≤ 400 từ. Opus và Astra soát theo D6–D7; mục cần viết lại chỉ kèm chẩn đoán.
+  - **Kết quả:** xong ba lượt chung và lượt riêng cho *ròng rọc*. Dừng chờ chủ dự án chọn cách lấp dự phòng (xem [mục 5.7](#57-p7-viết-mới-giải-nghĩa) và [mục 9](#9-câu-hỏi-mở-và-cách-tiếp-tục)).
+- **P8. Xuất bản** (chưa bắt đầu; các bước chi tiết ở [mục 9.4](#94-p8-chưa-bắt-đầu)):
+  - Nguồn chuẩn là [`analyzing-tools/wordlist.txt`](analyzing-tools/wordlist.txt). Từ đó sinh lại hai khối `#wordlist` của HTML và bản lưu trong tài liệu này.
+  - Chạy C1–C13 bằng cả hai bộ kiểm.
+  - Cập nhật README §4–5 và mục "Quy tắc chọn từ" trong [`thong-tin.html`](thong-tin.html).
+  - Đưa `tools/` vào repo sau khi chủ dự án duyệt.
+
+## 8. Nguồn dữ liệu, giấy phép và tái lập
+
+| Nguồn | Dùng để | Giấy phép, ghi công |
+|---|---|---|
+| Danh sách từ Hồ Ngọc Đức Viet11K–74K, qua [duyet/vietnamese-wordlist](https://github.com/duyet/vietnamese-wordlist/tree/688b0953c8cdb21ee090ce80b83cefdb052fe2cd) (bản `688b095`) | Kiểm mục có trong từ điển (H3), sinh ứng viên | GNU GPL v2. Chỉ dùng để tra, không lấy nghĩa |
+| Wiktionary vi/en, bản trích [Kaikki/Wiktextract](https://kaikki.org/viwiktionary/rawdata.html) | Kiểm mục từ (H3), tra loại cặp chính tả và nghĩa đỏ khi soát | Chủ yếu CC BY-SA 4.0. Không đưa nghĩa vào repo; không dùng làm nguồn cho giải nghĩa |
+| [OPUS](https://opus.nlpl.eu/) OpenSubtitles v2018, tiếng Việt | Đếm lượt (khoảng 34,3 triệu âm tiết) | Ghi công [OpenSubtitles.org](https://www.opensubtitles.org/) và Lison & Tiedemann (LREC 2016). Chỉ dùng số đếm |
+| OPUS CCAligned v1, tiếng Việt | Đếm lượt trên dòng khác nhau (khoảng 150 triệu âm tiết) | El-Kishky và cộng sự. Văn bản gốc không phải CC0. Chỉ dùng số đếm |
+| [Leipzig Corpora Collection](https://wortschatz.uni-leipzig.de/en/usage), Vietnamese Mixed 2014 300K | Đếm số câu | CC BY cho gói văn bản tải về. Chỉ dùng số đếm |
+| [Tatoeba](https://tatoeba.org/en/terms_of_use), câu tiếng Việt | Đếm số câu | Mặc định CC BY 2.0 FR. Chỉ dùng số đếm |
+
+**Giới hạn về nội dung:**
+
+- Repo không phân phối văn bản của các kho ngữ liệu hay bản dump từ điển.
+- Giải nghĩa cũ hiện vẫn có trong hai trang HTML và trong hai bản lưu trữ. Bản lưu trữ của Astra có điều kiện CC BY-SA riêng (xem tài liệu của Astra).
+- Ở bước P8, nguồn chuẩn [`analyzing-tools/wordlist.txt`](analyzing-tools/wordlist.txt) chỉ chứa giải nghĩa viết mới theo MIT. Công cụ phát hành không nhập lại giải nghĩa cũ.
+
+Manifest trong `tools/` chứa nguồn, phiên bản, SHA-256 của file tải về, số đếm và hash của tập luật.
+
+**Hồ sơ làm việc** gồm bảng khóa, phiếu chấm, tập luật đã băm và kết quả của hai bộ kiểm. Hồ sơ này hiện nằm ngoài repo. Script tạo, kiểm và manifest sẽ được đưa vào `tools/` ở bước P8.
+
+## 9. Câu hỏi mở và cách tiếp tục
+
+### 9.1. Câu hỏi cho chủ dự án: thiếu dự phòng sau lượt viết lại cuối
+
+**Bối cảnh.**
+
+- Theo D7, mục còn lỗi sau lượt viết lại thứ hai thì thay bằng dự phòng.
+- C13 đòi 300 dự phòng là 300 khóa khác nhau, đếm theo từng ngăn hạn mức:
+  - dự phòng lớp F chỉ thay được mục F, nên có tối đa 77 dự phòng F;
+  - dự phòng R1 không thay được mục OK.
+- Muốn đủ thì phải có **7.922 khóa OK không-F**: 7.699 cho danh sách chính và 223 cho dự phòng.
+
+**Số liệu.** Đây là số sau khi hòa D7 v3: 10 mục CHAN nội dung ngoài D6. Hai bên tính độc lập; các danh sách này chưa phát hành.
+
+| Kịch bản trừ (giữ *ròng rọc* với câu v4 đã đạt) | Số mục trừ | OK không-F còn | Dự phòng tối đa | Thiếu so với 300 |
+|---|---:|---:|---:|---:|
+| Chỉ trừ các mục vướng D6 ở v3 | 122 (117 chính + 5 dự phòng) | 7.837 | 215 (138 + 77 F) | 85 |
+| **Trừ D6 và 10 mục CHAN D7 (đã hòa)** | **132 (127 chính + 5 dự phòng)** | **7.827** | **205 (128 + 77 F), trong đó 168 có giải nghĩa sạch, 37 mới có khóa** | **95** |
+
+Hai bộ xếp hạng đã cho **cùng số đếm và cùng SHA** trên kịch bản giữ P0, trừ 132 mục: [`p7-v3-c13-hoa-astra.json`](analyzing-tools/ho-so/unified/p7-v3-c13-hoa-astra.json) và [`p7-v3-c13-opus-verifie-par-astra.json`](analyzing-tools/ho-so/unified/p7-v3-c13-opus-verifie-par-astra.json). Rổ còn 10.001 khóa. Có 127 mục chính và 5 mục dự phòng bị trừ; cả 127 suất chính được thay từ dự phòng cũ, đúng ngăn. SHA thân danh sách từ: chính `3609c88ff436708857ac323189f81b5bb9b31d31ea6f0a8924cc02bc61c0e713`; 205 dự phòng `f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b`. Đây là kết quả chạy thử, **không ghi đè** hai tệp chính thức sau v2.
+
+Lượt v4 chỉ đổi lời giải cho *ròng rọc*, không đổi hai SHA trên. Như vậy đã có **7.776 nghĩa chính đạt** (7.699 không-F + 77 F) và **168 nghĩa dự phòng đạt**. Cổng hình thức và trùng nguyên văn kiểm chung trên 7.944 cặp này đạt 0 lỗi, 0 cảnh báo. **37 khóa** trong số 205 chưa từng có lượt viết; **95 khóa khác** còn thiếu để đủ 300. Không được lấy 7.944 cặp đã đạt hay 7.776 + 205 khóa để tuyên bố P7 hoàn tất.
+
+**Câu hỏi cần chủ dự án quyết:** giữ P0 và đủ 300 dự phòng bằng cách mở thêm ứng viên (A), hay duyệt thay đổi cụ thể về số lượt viết, D6, Q3 hoặc C13 (B–E)? Có thể kết hợp các phương án. Không phương án nào đã được áp dụng.
+
+| | Phương án | Có đổi luật đã ký? | Việc thêm | Dự kiến |
+|---|---|---|---|---|
+| A | Giữ nguyên luật, mở thêm ứng viên: L2D (99) và L3b (48), tổng 147 khóa đã chuẩn bị. Chấm đôi theo P4, qua H9 và P6, rồi viết giải nghĩa sạch cho mục mới | Không. Hai lô này thuộc chính các bậc L2/L3 nhưng chưa được mở và chấm, không phải bậc mới | Chấm 147 mục; viết và soát ít nhất 132 câu mới (95 không-F + 37 F) | Cần ít nhất 95/147 (64,6%) ứng viên được nhận OK không-F; không bảo đảm. Nếu hụt phải mở thêm nguồn |
+| B | Duyệt thêm một lượt sạch cho 117 mục chính còn trượt D6 (114 OK không-F + 3 F); có thể thêm 3 dự phòng OK không-F | Có: ngoại lệ giới hạn hai lượt viết lại của D7 | Viết và soát 117–120 câu, rồi tính lại | Nếu chỉ viết cho 117 mục chính, cần ít nhất 95/114 OK không-F qua (83,3%; không bảo đảm). Nếu cứu đúng 95 mục thì vẫn thiếu 37 câu hợp lệ; nếu cứu đủ 117 thì vẫn thiếu 15 câu. Có thể ghép A hoặc E |
+| C | Với riêng lời giải cũ của Opus, D6 chỉ chặn trùng nguyên câu; ba nguồn khác và D7 giữ nguyên | Có: đổi D6 | Lập phiên bản tiêu chí mới và kiểm lại mọi câu còn hiệu lực | Trong 123 câu v3, 94 chỉ trượt so với Opus cũ. Không cộng lại *ròng rọc* đã đạt v4. Lợi tối đa là 93 mục khác, trong đó 89 OK không-F: còn thiếu ít nhất 6 khóa OK không-F và 39 câu đạt mới |
+| D | Tăng Q3 từ 77 lên tối thiểu 125, không đổi D6 | Có: đổi tỷ lệ lớp F | Viết và soát ít nhất 132 câu mới | Mô phỏng khớp 7.651 không-F + 125 F chính; 176 không-F + 124 F dự phòng. Đủ khóa nhưng danh sách chính dùng nhiều hư từ hơn |
+| E | Duyệt cửa dự phòng mới là 168 hoặc 205, giữ nguyên P0 và Q3 | Có: giảm C13 từ 300 | 168: không viết thêm. 205: viết và soát 37 mục chưa có nghĩa | Sau khi duyệt mức cụ thể, kiểm lại ngăn, lập D8 và kiểm phát hành toàn bộ tập đã chọn. Ít chỗ thay nếu phát hiện thêm lỗi |
+
+**Ý kiến hai bên:**
+
+- **Opus** đề nghị B, với E làm phương án dự trù nếu B còn thiếu. Lý do: có cơ hội giữ các từ xếp hạng cao mà không cần tìm lại từng ấy đầu mục. Opus xem C là cách giảm các trường hợp trùng có thể do hội tụ văn phong; một mình C vẫn chưa đủ. E = 168 cần ít công nhất nhưng đổi mục tiêu dự phòng.
+- **Astra** ưu tiên giữ P0, giữ các luật H/Q và cửa 300 dự phòng; mở thêm nguồn ứng viên L2/L3 cho hai bên chấm (A), rồi xin các lượt viết sạch cho các đầu mục mới. Nếu chủ dự án muốn nhanh, Astra đồng ý trình B như một ngoại lệ của D7.
+  - Astra không đề nghị mặc nhiên nới so sánh với giải nghĩa cũ của Opus (C).
+  - Với mọi phương án, Astra lưu ý: 300 dự phòng phải **có giải nghĩa**; không tính khóa chưa có nghĩa, không dùng R1 hay thêm F để bù.
+  - Tỉ lệ khoảng 19% câu vướng ở v3 chỉ là quan sát; không bảo đảm lượt sau có tỉ lệ như vậy.
+
+### 9.2. Các việc không cần làm lại
+
+- **Đã giữ được *ròng rọc*.** Tệp giao lượt sạch riêng là [`luot-rieng-rong-roc-v3.tsv`](analyzing-tools/ho-so/unified/luot-rieng-rong-roc-v3.tsv), SHA `a83d439407ec2c4f8b46d11cea284234d47e8a2075154c1ce194e03047747002`. Lượt v4 đã nộp, qua D6A/B/C trên cùng tập tham chiếu P0 và đạt D7. Dùng [`giai-nghia-v4-rieng/lo-01/lo-01.tsv`](analyzing-tools/ho-so/unified/giai-nghia-v4-rieng/lo-01/lo-01.tsv), không dùng câu v3. Lý do dừng hiện tại là **C13**, không phải từ bắt buộc này.
+- **Hòa D7 v3 đã xong.** Còn 10 mục CHAN:
+  - 4 mục hai bên cùng nhận: *chữ hoa, côn trùng, lục địa, vuông*;
+  - 6 mục Astra giữ sau một lượt phản biện: *bánh ngọt, châu lục, mùa đông, tục ngữ, việc làm, xe điện*.
+
+  7 mục được hạ xuống NHE: *bất động, bến xe, di chuyển, điền kinh, độ cao, hội thoại, hơi nước*. Xem tin [119](analyzing-tools/ho-so/unified/trao-doi/119-astra-den-opus.md), [120](analyzing-tools/ho-so/unified/trao-doi/120-astra-den-opus.md), [121](analyzing-tools/ho-so/unified/trao-doi/121-astra-den-opus.md).
+
+### 9.3. Các bước còn lại của P7 (sau khi chủ dự án chọn phương án)
+
+Trước hết lưu quyết định của chủ dự án cùng ngưỡng, phạm vi và mã phiên bản áp dụng. Khi chưa có quyết định, giữ nguyên danh sách chính thức sau v2, không vào P8. Khi được duyệt:
+
+- **A:** phổ biến hai bảng [`l2d-ung-vien.tsv`](analyzing-tools/ho-so/unified/l2d-ung-vien.tsv) và [`l3b-de-cu-opus.tsv`](analyzing-tools/ho-so/unified/l3b-de-cu-opus.tsv) cho hai người soát; hoàn tất P2, chấm độc lập P4/H9, xử lý họ chính tả và khóa xung đột ở P5. 99 khóa L2D đều có chứng liệu H8 yếu; không tự nhận cả 147 ứng viên. Nếu chưa đủ 95 OK không-F mới, tiếp tục tuyển trong các nguồn được phép. Chạy P6, rồi giao sạch từng đầu mục cần nghĩa.
+- **B:** chỉ mở lại đúng các đầu mục và số lượt được chủ cho phép; người viết không thấy bất kỳ câu cũ nào. Áp D6 theo P0 và D7 cho từng bản, chỉ khôi phục những mục đạt. Đếm lại số OK không-F đủ ghế và số dự phòng thật có nghĩa; nếu vẫn thiếu, quay về quyết định A/E hoặc phương án kết hợp được duyệt, không tự gia hạn tiếp.
+- **C:** ghi riêng luật D6 mới và chạy bộ kiểm nhất quán trên mọi câu còn hiệu lực. Ước tính ở §9.1 dùng phiên bản mới nhất của mỗi câu, không lựa lại giữa các bản v1–v3 từng bị trả. Không sửa hay xóa các log P0 lịch sử. Chỉ khôi phục mục qua cả luật mới lẫn D7; giữ câu v4 đã đạt P0 cho *ròng rọc*. Bổ sung khóa/nghĩa còn thiếu bằng phương án được chủ duyệt.
+- **D:** cập nhật Q3 đồng bộ ở cả hai bộ xếp hạng và bộ kiểm hạn mức, vẫn giữ H, D6 và cửa 300. Xếp lại toàn rổ, đối số từng ngăn, lập ánh xạ 300 ghế khác nhau; viết sạch cho mọi khóa mới còn thiếu nghĩa.
+- **E:** ghi rõ mức dự phòng mới là 168 hay 205. Với 168, dùng đúng danh sách dự phòng **đã có nghĩa** ở §9.5, không cắt lấy 168 dòng đầu từ danh sách 205. Với 205, giao 37 tên trong [`p7-v3-c13-hoa-astra-tu-chua-viet.tsv`](analyzing-tools/ho-so/unified/p7-v3-c13-hoa-astra-tu-chua-viet.tsv) cho lượt sạch và soát trước khi tính đủ. Nếu các câu mới vướng và chưa đạt mức đã duyệt, báo lại, không tính tên trống thay nghĩa.
+
+**Kiểm chung cho mọi phương án:**
+
+1. Từ [`p7-v3-khau-tru-132-theo-P0-astra.tsv`](analyzing-tools/ho-so/unified/p7-v3-khau-tru-132-theo-P0-astra.tsv) (kịch bản, tập 132 mục), lập biên bản cuối `p7-khau-tru-v3.tsv` (chưa lập, vì quyết định 10 đã thay bước này) theo đúng phương án đã duyệt, có hai chữ ký. Hai bên chạy lại P6/C13 bằng hai chương trình, đối SHA.
+   - **Chạy thử, không ghi**, trong thư mục [`analyzing-tools/ho-so/unified/`](analyzing-tools/ho-so/unified/). Lệnh sau tái hiện kịch bản P0 đã đối soát; khi có biên bản cuối, thay đối số cuối cùng bằng tệp đã ký, bổ sung các đầu vào mới nếu chọn A:
+
+     ```
+     python ../opus/p4/p6_opus.py --du-phong chat --them l2-nhan-sau-H9-opus.tsv l2b-nhan-sau-H9-opus.tsv l2c-nhan-sau-H9-opus.tsv l3-nhan-sau-H9-opus.tsv --dem-them l2-ung-vien.tsv l2b-ung-vien.tsv l2c-ung-vien.tsv l3-ung-vien.tsv --loai p6-khau-tru-cuoi.tsv p7-khau-tru.tsv p7-khau-tru-v2.tsv p7-v3-khau-tru-132-theo-P0-astra.tsv
+     ```
+
+   - **Chỉ thêm `--ghi`** sau khi chủ dự án đã chốt phương án, C13 đạt, đủ dự phòng có giải nghĩa, và hai bên đã đối hash. Tham số `--ghi` chép đè [`danh-sach-chon.txt`](analyzing-tools/ho-so/unified/danh-sach-chon.txt), [`du-phong.txt`](analyzing-tools/du-phong.txt) và [`xep-hang.tsv`](analyzing-tools/ho-so/unified/xep-hang.tsv). Bản [`p6_opus.py`](analyzing-tools/ho-so/opus/p4/p6_opus.py) hiện tại từ chối ghi khi C13 trượt, trừ khi thêm `--cho-ghi-khi-truot`.
+2. Điều phối giao lượt viết sạch riêng biệt cho mọi đầu mục được chọn mà chưa có câu đạt. Astra chạy D6, hai bên soát D7, khép cờ và kiểm lại H6/H7 khi có căn cứ. Mục mới không thừa kế kết quả kiểm hoặc số lượt của từ nó thay.
+3. Gộp bản cuối ở một thư mục giải nghĩa cuối, gồm toàn bộ mục chính và số dự phòng đã duyệt, **mỗi mục đúng một câu đã đạt**. Khớp cột từ với hai danh sách O1; bỏ các cờ đã đóng, giữ `HAI_NGHIA`. Chạy `kiem-tra-giai-nghia.py --phat-hanh` chung cho mọi cặp lô để bắt cả trùng chéo; yêu cầu 0 lỗi và không còn cảnh báo chưa xử lý.
+4. Lập D8 [`nguon-goc-giai-nghia.tsv`](analyzing-tools/nguon-goc-giai-nghia.tsv). Mỗi từ ghi:
+   - lượt viết (v1, v2, v3 hay lượt riêng);
+   - người soát nội dung, người soát quyền;
+   - kết quả D6 kèm hash tham chiếu;
+   - cờ, người và ngày đóng cờ.
+
+   Ghi cả các mục đã bị loại hay bị thay. Kiểm D8 từng mục với **hash của đúng câu và đúng lượt**: không lấy log v1 làm kết luận cho câu v2/v3/v4. Xuất log D6 tổng hợp cuối ở đường dẫn có phiên bản riêng, giữ [`d6-log-v1.tsv`](analyzing-tools/ho-so/unified/d6-log-v1.tsv) đến [`d6-log-v4-rieng.tsv`](analyzing-tools/ho-so/unified/d6-log-v4-rieng.tsv) làm bằng chứng. Chỉ đóng P7 khi hai bên xác nhận tập xuất, D8 và C13; sau đó mới thực hiện §9.4 nếu không còn câu hỏi cho chủ.
+
+### 9.4. P8
+
+**Trạng thái ngày 20/11/2026:** đã làm bước 2 (hai khối `#wordlist`) và phần lớn bước 4 (README, "Quy tắc chọn từ", tài liệu này kèm bản lưu ở mục 10). Kiểm đã chạy trên đầu ra: NFC, 7.776 dòng, khóa duy nhất, 4–12 chữ, thứ tự O1, nhóm chữ cái liền mạch, giải nghĩa `--phat-hanh` 0 lỗi, hai khối HTML khớp từng dòng với nguồn. Sau đó đã làm bước 1, 3 và 5 trong thư mục `analyzing-tools/` thay cho `tools/`: nguồn chuẩn, D8, manifest, [`check_wordlist.py`](analyzing-tools/check_wordlist.py) (C1–C8) và [`verify.mjs`](analyzing-tools/verify.mjs) (C1–C5, C8) cùng 0 lỗi, `kiem-tra-giai-nghia.py --phat-hanh` 0 lỗi, D6 chạy lại 7.776 PASS, Edge headless hiện 7.776 từ (C10). Chưa đo lại C9 (nhập nhằng khi dùng phân cách từ ghép) trên danh sách mới. Quy trình gốc bên dưới giữ nguyên để tham chiếu.
+
+Theo bảng 8.1 và mục 8.3 của bộ tiêu chí đã ký:
+
+1. **Opus** lập [`analyzing-tools/wordlist.txt`](analyzing-tools/wordlist.txt): nguồn chuẩn `từ|giải nghĩa`, chỉ chứa giải nghĩa viết mới, xếp theo O1.
+2. **Opus** sinh lại hai khối `#wordlist` từ nguồn chuẩn:
+   - [`index.html`](index.html): mỗi dòng `từ,`, CRLF như hiện tại;
+   - [`thong-tin.html`](thong-tin.html): mỗi dòng `từ|giải nghĩa`, theo O1.
+3. **Opus** đưa `tools/` vào repo. Gồm: [`README.md`](analyzing-tools/README.md), [`wordlist.txt`](analyzing-tools/wordlist.txt), [`labels.tsv`](analyzing-tools/labels.tsv), [`blocked_keys.tsv`](analyzing-tools/blocked_keys.tsv), [`spelling_families.tsv`](analyzing-tools/spelling_families.tsv), [`manifest.json`](analyzing-tools/manifest.json), [`check_wordlist.py`](analyzing-tools/check_wordlist.py), [`kiem-tra-giai-nghia.py`](analyzing-tools/kiem-tra-giai-nghia.py), [`build_wordlist.py`](analyzing-tools/build_wordlist.py), [`count_corpus.py`](analyzing-tools/count_corpus.py), [`verify.mjs`](analyzing-tools/verify.mjs). Không đưa văn bản kho, dump từ điển hay giải nghĩa cũ.
+4. **Opus** cập nhật tài liệu:
+   - README §4 (thứ tự O1, chính tả) và §5 (cách cập nhật danh sách, nguồn, giấy phép);
+   - đổi các chỗ nhắc [`WordListAnalyze-Opus.md`](WordListAnalyze-Opus.md) thành [`WordListAnalyze.md`](WordListAnalyze.md);
+   - mục "Quy tắc chọn từ" trong [`thong-tin.html`](thong-tin.html);
+   - hoàn thiện tài liệu này thành bản cuối, có bản lưu `từ|giải nghĩa`.
+5. **Astra** kiểm độc lập C1–C13 theo [§4.6](#46-kiểm-tra-tự-động-bắt-buộc) và bảng chi tiết §7 của [`analyzing-tools/tieu-chi-thong-nhat.md`](analyzing-tools/tieu-chi-thong-nhat.md): định dạng/NFC, khóa, O1, hạn mức, nghĩa, đồng bộ cả hai trang, nhập nhằng khi nối, trình duyệt, hai bộ kiểm, SHA và cửa dự phòng. Riêng C10: mở trang bằng trình duyệt headless hoặc chạy JS của trang bằng Node. **Opus** sửa đến khi Astra ký.
+6. Chỉ sửa working tree: không commit, không push, không xóa [`WordListAnalyze-Opus.md`](WordListAnalyze-Opus.md) và [`WordListAnalyze-Astra.md`](WordListAnalyze-Astra.md).
+
+### 9.5. Hồ sơ làm việc
+
+**Thư mục gốc:** [`analyzing-tools/ho-so/`](analyzing-tools/ho-so/) (bản lưu trong repo của hồ sơ làm việc; xem [README của hồ sơ](analyzing-tools/ho-so/README.md) về các tệp không lưu hoặc đã lược).
+
+- [`discussion/`](analyzing-tools/ho-so/discussion/): các phản hồi và soát xét giữa hai bên. Bộ tiêu chí đã ký và hướng dẫn giải nghĩa nằm ở [`analyzing-tools/tieu-chi-thong-nhat.md`](analyzing-tools/tieu-chi-thong-nhat.md) và [`analyzing-tools/huong-dan-giai-nghia.md`](analyzing-tools/huong-dan-giai-nghia.md).
+- [`unified/`](analyzing-tools/ho-so/unified/): bảng khóa, phiếu chấm, danh sách, log D6, bài nộp lượt riêng [`giai-nghia-v4-rieng/`](analyzing-tools/ho-so/unified/giai-nghia-v4-rieng/), tin nhắn giữa hai bên [`trao-doi/`](analyzing-tools/ho-so/unified/trao-doi/). Bài nộp các lượt v1–v3 không lưu vào repo vì có các câu không đạt D6; hash từng câu phát hành nằm ở [`analyzing-tools/nguon-goc-giai-nghia.tsv`](analyzing-tools/nguon-goc-giai-nghia.tsv).
+- [`opus/`](analyzing-tools/ho-so/opus/), [`astra/`](analyzing-tools/ho-so/astra/): script và chứng cứ riêng của từng bên được nhắc tới trong tài liệu.
+
+**Tệp chốt và SHA-256.** Manifest [`p7-ho-so-sha-opus.tsv`](analyzing-tools/ho-so/unified/p7-ho-so-sha-opus.tsv) (SHA `4929fe901eaaee6d4b1efce537966091d9456492a2bb8e3872ad2d950d925601`) khớp 68/68 tệp, gồm cả 35 bài nộp v1–v3. Manifest bổ sung [`p7-ho-so-sha-v4-astra.tsv`](analyzing-tools/ho-so/unified/p7-ho-so-sha-v4-astra.tsv) (SHA `eafd2c70d8e9c94cbaccc9410a346dc8ef52896248236b2cd814582ced529c80`) khớp 26/26 tệp cho lượt riêng và kịch bản C13. Dưới đây là các tệp cần mở trước, đều nằm trong [`analyzing-tools/ho-so/unified/`](analyzing-tools/ho-so/unified/). SHA-256 trong bảng là của tệp gốc; các bản lưu đã lược hoặc sửa đường dẫn có SHA khác, liệt kê ở [README của hồ sơ](analyzing-tools/ho-so/README.md).
+
+| Tệp | Nội dung | SHA-256 |
+|---|---|---|
+| [`danh-sach-chon.txt`](analyzing-tools/ho-so/unified/danh-sach-chon.txt) | 7.776 từ chính hiện hành (sau khấu trừ H6 của P7 v1, v2; chưa áp thay dự phòng v3), theo O1 | `a8ba9820ecb0166bd98bc17ea8ae322eecf41acea020748baf358ba6fc95261d` |
+| [`du-phong.txt`](analyzing-tools/du-phong.txt) | 300 dự phòng hiện hành | `05c856412a289692b0f437fca6137aef79c94c479a5b570da06fe359046a4cdf` |
+| [`xep-hang.tsv`](analyzing-tools/ho-so/unified/xep-hang.tsv) | Bảng xếp hạng của lần chạy P6 gần nhất | `74191a1f1ef4ce01158478219d41fa1c94622e13d95646b475b49ce9ef14168c` |
+| [`p6-khau-tru-cuoi.tsv`](analyzing-tools/ho-so/unified/p6-khau-tru-cuoi.tsv) | Khấu trừ ở P6 (27 mục) | `0b76fd020cf000f78b421c159b6548b3024862988f57d03ea90f9fdd00f9cb21` |
+| [`p7-khau-tru.tsv`](analyzing-tools/ho-so/unified/p7-khau-tru.tsv) | Khấu trừ H6 ở P7 v1 (22 mục) | `24cc4ff26975a108cafaabf876463e8297ee6ebe21e04819558fe12ca67cae37` |
+| [`p7-khau-tru-v2.tsv`](analyzing-tools/ho-so/unified/p7-khau-tru-v2.tsv) | Khấu trừ H6 ở P7 v2 (*đi lại*) | `ece259b4f5940bca35927ffd46a14909676a89e17ebd733c2dbe595d7e5dd209` |
+| [`d6-tham-chieu.json`](analyzing-tools/d6-tham-chieu.json) | Hash các tập tham chiếu D6 | `9cfa4ba6dbe49820651f6ad048c7c18ba1fd5593bde12788467be1c6277bd7c7` |
+| [`d6-log-v1.tsv`](analyzing-tools/ho-so/unified/d6-log-v1.tsv) | Log D6 lượt v1 | `1e915dd4de9a9330976e5716e7fcdeab8e1b26b87f50ac4f311d38d6093c955f` |
+| [`d6-log-v2.tsv`](analyzing-tools/ho-so/unified/d6-log-v2.tsv) | Log D6 lượt v2 | `b171975d4c18b1f0ee53b485fbfdcd3ecc7a720db6637cae2bb56df0ff3eade8` |
+| [`d6-log-v3.tsv`](analyzing-tools/ho-so/unified/d6-log-v3.tsv) | Log D6 lượt v3 | `c943f6d554ef32e9144cec00121ae84825bafe423fae5d11ff3c3d7276b7e59a` |
+| [`viet-lai-v1.tsv`](analyzing-tools/ho-so/unified/viet-lai-v1.tsv) | Giao viết lại lần 1 (2.479 mục) | `3637594fc916e2a539d8f0d3b2a6bf2dd148f8d5ec2b7154a379a164215f3d0a` |
+| [`viet-lai-v2.tsv`](analyzing-tools/ho-so/unified/viet-lai-v2.tsv) | Giao viết lại lần 2 (654 mục) | `0bb30e6d7f2d26b64857711d8b3986eb53db1cd96c4f701fd3c52500e28aee9e` |
+| [`p7-v3-hien-hanh-astra.tsv`](analyzing-tools/ho-so/unified/p7-v3-hien-hanh-astra.tsv) | Bản gộp lịch sử trước lượt riêng (8.076 mục, chưa phát hành) | `a8f55b2fb0a2a23401d00fccecfb69545366096f52468c1baa89f3fc971a2a8c` |
+| [`giai-nghia-v4-rieng/lo-01/lo-01.tsv`](analyzing-tools/ho-so/unified/giai-nghia-v4-rieng/lo-01/lo-01.tsv) | Bài nộp sạch *ròng rọc*, một mục | `3e09fe55e76730b8df6401e1e563fdccaf819d530542491d73b900665cfd390c` |
+| [`d6-log-v4-rieng.tsv`](analyzing-tools/ho-so/unified/d6-log-v4-rieng.tsv) | D6: 1 PASS, 0 VIET_LAI, 0 CHUA_KIEM | `097682351f992eaf3e2c11e261ca78c52608b3c6ef5b6cc35f509b6a313cd6ba` |
+| [`d6-run-v4-rieng.json`](analyzing-tools/ho-so/unified/d6-run-v4-rieng.json) | Phiên bản script, bốn nguồn, bộ họ chính tả, hash đầu vào và log | `b470cf76f86cf7a2fa80f1976ddc6ef62415074b0bfe85f2a64114a29871565e` |
+| [`soat-nghia-v4-rieng-astra.tsv`](analyzing-tools/ho-so/unified/soat-nghia-v4-rieng-astra.tsv) | Phiếu nội dung riêng: OK | `b6c838d599cf9b81b4c25f4c5f7a6280378828288ca63ffd06439466f401eee5` |
+| [`soat-nghia-v4-rieng-opus.tsv`](analyzing-tools/ho-so/unified/soat-nghia-v4-rieng-opus.tsv) | Phiếu nội dung của người soát còn lại: OK | `487bab45c4c245287c2717aee6ea398e51effe061e0b8806cc0505a41d26c5f6` |
+| [`p7-v4-rieng-hien-hanh-astra.tsv`](analyzing-tools/ho-so/unified/p7-v4-rieng-hien-hanh-astra.tsv) | Bản gộp 8.076 câu sau v4; có cả 132 câu chưa dùng được | `f028b8dbd203a02047c14e3ac8f6e4cab8f933a3c26a852b19c248ee7f865a09` |
+| [`p7-v3-khau-tru-132-theo-P0-astra.tsv`](analyzing-tools/ho-so/unified/p7-v3-khau-tru-132-theo-P0-astra.tsv) | Chứng từ mô phỏng P0: không chứa *ròng rọc*, chưa áp lên tệp chính thức | `9c746d973ecf68ce3927fcfe075528e611e19f57306af3b3b4399507c066a42b` |
+| [`p7-v3-c13-hoa-astra.json`](analyzing-tools/ho-so/unified/p7-v3-c13-hoa-astra.json) | Kết quả C13 độc lập, 7.776 + 205 (lập trước v4; v4 không đổi khóa) | `4cddc3228bc45437e917ae7d30a0566f395215a1420265680e0384319e85cf4d` |
+| [`p7-v3-c13-opus-verifie-par-astra.json`](analyzing-tools/ho-so/unified/p7-v3-c13-opus-verifie-par-astra.json) | Bản tính bằng chương trình Opus, đối đúng hai SHA | `1724120c11ce4d0d757a6504beec89d226b7d55d79a67626f34b97b222f4f919` |
+| [`p7-v4-chinh-7776-cho-duyet.tsv`](analyzing-tools/ho-so/unified/p7-v4-chinh-7776-cho-duyet.tsv) | Kịch bản P0: đủ 7.776 cặp chính đã qua D6/D7, chưa phát hành | `36493e4a70ad81d516ae1d88ecc0bdc8fd599cf10453ec34a64ca812452b86f5` |
+| [`p7-v4-du-phong-168-co-nghia-cho-duyet.tsv`](analyzing-tools/ho-so/unified/p7-v4-du-phong-168-co-nghia-cho-duyet.tsv) | 168 cặp dự phòng đã qua D6/D7, không tính 37 khóa chưa viết | `cfb71e703ba12b7f07164a1ff320503d270d649c64c1db0c0c546990c021de65` |
+| [`p7-v4-kiem-ke-D8-chua-chot-astra.tsv`](analyzing-tools/ho-so/unified/p7-v4-kiem-ke-D8-chua-chot-astra.tsv) | Đối chiếu 8.113 đầu mục: 7.944 có câu đạt, 132 bị loại theo kịch bản P0, 37 chưa viết. **Không phải D8 phát hành** | `9cfd931aa6a144ca1d3ef8423e6a803b7b43b6465c64241a3c69d615d339dfbd` |
+
+Phiếu D7 của hai bên là `soat-nghia-*.tsv` và `dong-co-*.tsv` theo từng lượt; xem cả [`soat-nghia-v3-opus-bo-sung.tsv`](analyzing-tools/ho-so/unified/soat-nghia-v3-opus-bo-sung.tsv) cho 37 mục ở lô chẵn. **Chưa có** thư mục giải nghĩa phát hành cuối và D8 hoàn chỉnh tại thời điểm viết đoạn này; sau quyết định 10, D8 đã được lập ở [`analyzing-tools/nguon-goc-giai-nghia.tsv`](analyzing-tools/nguon-goc-giai-nghia.tsv).
+
+**Câu hỏi đã chốt, không cần hỏi lại:**
+
+- D6 áp đúng luật đã ký (P0).
+- *Ròng rọc* được giữ nguyên từ; dùng câu riêng v4 đã đạt, không dùng câu v3 và không mở lại hồ sơ này để lấp phần thiếu C13.
+- Hai khóa `huong`, `nham` bị bỏ cả khóa.
+- *qua lại* được giữ.
+- Mục dự phòng chưa có giải nghĩa không phát hành.
+
+## 10. Danh sách 7.776 từ phát hành
+
+Bản lưu của khối `#wordlist` trong [`thong-tin.html`](thong-tin.html), mỗi dòng `từ|giải nghĩa`, xếp theo O1. Khối trong [`index.html`](index.html) là cột từ của bản này. Nguồn chuẩn là [`analyzing-tools/wordlist.txt`](analyzing-tools/wordlist.txt); khi đổi danh sách, sửa tệp đó rồi chạy `analyzing-tools/build_wordlist.py` để sinh lại cả ba khối.
+
+```text
+á hậu|Ngôi vị của thí sinh xếp ngay sau hoa hậu trong cuộc thi sắc đẹp.
+á quân|Người hoặc đội xếp thứ hai, chỉ đứng sau nhà vô địch trong cuộc thi.
+ách tắc|Bị nghẽn lại, không lưu thông được, thường nói về giao thông hay công việc.
+ái ngại|Cảm thấy ngại ngùng, không yên lòng, thường vì thương hoặc lo cho người khác.
+album|Tập bài hát phát hành cùng lúc; cũng chỉ cuốn sổ để cất giữ ảnh.
+am hiểu|Biết tường tận một chuyện hay một lĩnh vực nhờ từng học hỏi, trải qua.
+ảm đạm|U tối, buồn bã, thiếu sức sống, thường nói về bầu trời hay khung cảnh.
+ám chỉ|Nói bóng gió, không nêu thẳng ra, để người nghe tự hiểu đối tượng.
+an bình|Hòa bình và yên ổn, cuộc sống không có loạn lạc hay xáo trộn.
+an khang|Yên ổn và khỏe mạnh, hay gặp trong lời chúc đầu năm.
+an lành|Yên ổn, không gặp điều xấu hay tai họa nào.
+an nhàn|Sống thong thả, không phải lo toan hay làm lụng vất vả.
+an tâm|Thấy lòng yên, không còn lo lắng vì tin mọi việc sẽ ổn.
+an toàn|Không gặp nguy hiểm, không có gì đe dọa tới người hay tài sản.
+an ủi|Nói hoặc làm điều gì để người đang buồn đau thấy nhẹ lòng hơn.
+anh cả|Con trai lớn nhất trong một gia đình, cách gọi ở miền Bắc.
+anh chàng|Người đàn ông còn trẻ, cách gọi thân mật hoặc hơi bông đùa.
+anh chị em|Những người con cùng cha mẹ trong một nhà, gồm cả trai lẫn gái.
+anh đào|Cây nở hoa hồng nhạt hoặc trắng phủ kín cành, cho quả nhỏ đỏ mọng.
+anh em|Người cùng cha mẹ sinh ra; cũng chỉ bạn bè thân thiết như ruột thịt.
+anh họ|Con trai của bác, chú, cô hay dì, đứng vai anh so với mình.
+anh hùng|Người dũng cảm lập nên công lao lớn, được nhiều người kính phục.
+anh rể|Người đàn ông lấy chị gái của mình, trong nhà gọi bằng anh.
+anh ruột|Người anh trai do chính cha mẹ mình sinh ra, không phải anh họ.
+anh trai|Người con trai lớn tuổi hơn mình trong cùng gia đình.
+ảnh hưởng|Tác động khiến người hoặc sự việc khác thay đổi theo.
+ánh đèn|Luồng sáng phát ra từ ngọn đèn.
+ánh mắt|Cái nhìn của một người, qua đó lộ ra cảm xúc hay ý nghĩ.
+ánh nắng|Tia sáng và hơi ấm của mặt trời chiếu xuống mặt đất.
+ánh sáng|Thứ tỏa ra từ mặt trời hay ngọn đèn, giúp mắt nhìn rõ mọi vật.
+ánh trăng|Thứ ánh sáng dịu nhẹ của mặt trăng chiếu xuống vào ban đêm.
+ao hồ|Các chỗ trũng chứa nước đứng như ao và hồ, nói chung.
+ao ước|Mong muốn tha thiết một điều khó đạt được.
+ào ào|Tiếng mạnh, dồn dập liên tục, như tiếng mưa to hay gió thổi mạnh.
+ào ạt|Dồn dập, mạnh và nhiều cùng lúc, thường nói về nước chảy, đám đông.
+ảo ảnh|Hình ảnh không có thật mà mắt tưởng như nhìn thấy.
+ảo thuật|Trò biểu diễn dùng mẹo khéo léo tạo ra những điều tưởng như phép lạ.
+ảo thuật gia|Nghệ sĩ chuyên biểu diễn các trò ảo thuật trước khán giả.
+áo ấm|Áo dày giữ ấm cho cơ thể, mặc khi trời lạnh.
+áo ba lỗ|Áo không tay, khoét rộng ở cổ và nách, thường mặc trong hay ở nhà.
+áo bà ba|Áo truyền thống của Nam Bộ, cổ tròn, thân ngắn, hai túi phía trước.
+áo bông|Áo dày có nhồi bông giữa hai lớp vải, mặc chống rét mùa đông.
+áo choàng|Áo rộng và dài khoác bên ngoài, thường phủ cả vai và lưng.
+áo cổ lọ|Áo có cổ cao ôm sát quanh cổ, thường bằng len, mặc khi trời lạnh.
+áo cưới|Trang phục cô dâu diện trong ngày cưới, thường là váy trắng dài.
+áo dài|Trang phục ôm dáng, tà trước tà sau buông dài, thường mặc với quần rộng.
+áo gi lê|Áo ngắn không có tay, cài khuy phía trước, mặc ngoài áo sơ mi.
+áo gió|Áo khoác mỏng bằng vải dù, dùng để chắn gió và mưa nhẹ.
+áo gối|Vỏ vải bọc ngoài chiếc gối để giữ gối sạch.
+áo khoác|Áo mặc bên ngoài các lớp áo khác, để giữ ấm hoặc che nắng, gió.
+áo lạnh|Áo dày dùng để chống rét, cách gọi thường nghe ở miền Nam.
+áo len|Áo đan hoặc dệt từ sợi len, mặc giữ ấm vào mùa lạnh.
+áo lông|Áo khoác may từ lông thú hoặc nhồi lông vũ, mặc ấm khi trời rét.
+áo ngủ|Đồ mặc mỏng nhẹ, rộng rãi, dùng khi đi ngủ.
+áo phao|Áo giúp người nổi trên nước; cũng chỉ áo khoác dày chần bông chống rét.
+áo phông|Áo vải bông cộc tay, cổ tròn, mặc thường ngày, cách gọi ở miền Bắc.
+áo quần|Đồ may để mặc trên người, nói gộp cả áo lẫn quần.
+áo sơ mi|Áo có cổ bẻ, cài cúc phía trước, hay mặc đi làm, đi học.
+áo tắm|Trang phục bó sát người, mặc khi bơi hoặc tắm biển.
+áo thun|Áo vải co giãn cổ tròn, mặc thường ngày, cách gọi ở miền Nam.
+áo tứ thân|Áo truyền thống của phụ nữ Bắc Bộ xưa, ghép từ bốn vạt vải.
+áo vét|Áo khoác ngoài có ve cổ, cài khuy, thường mặc trong dịp trang trọng.
+áp chảo|Rán nhanh thức ăn trên chảo nóng với ít dầu cho xém mặt ngoài.
+áp đảo|Vượt trội hẳn về số lượng hoặc sức mạnh, lấn át đối phương.
+áp lực|Sức ép lên tinh thần, thường do công việc, học hành hay người khác.
+áp suất|Đại lượng chỉ lực ép lên một đơn vị diện tích bề mặt.
+áp thấp|Vùng khí quyển áp suất thấp gây mưa gió, có khi mạnh lên thành bão.
+áy náy|Không yên lòng vì cảm thấy mình có lỗi hay chưa làm tròn việc.
+ăn ảnh|Trông xinh đẹp khi được chụp ảnh, quay phim, có khi hơn ngoài đời.
+ăn chay|Chỉ ăn đồ thực vật, kiêng thịt cá, thường vì tín ngưỡng hay sức khỏe.
+ăn chắc|Chắc chắn giành được phần thắng hay cái lợi, không chịu mạo hiểm.
+ăn cỏ|Lấy cây cỏ làm thức ăn chính, nói về các loài như trâu, bò, dê.
+ăn cơm|Dùng bữa chính trong ngày, thường có cơm và các món ăn kèm.
+ăn diện|Chú trọng việc ăn mặc, trang điểm cho đẹp, thường hơi cầu kì.
+ăn đứt|Hơn hẳn, vượt trội rõ ràng so với người hay vật khác.
+ăn học|Được nuôi dạy và cho đi học hành trong nhiều năm.
+ăn hỏi|Lễ nhà trai mang lễ vật sang nhà gái để chính thức xin cưới.
+ăn khách|Thu hút nhiều người mua hoặc xem, thường nói về hàng hóa, phim ảnh.
+ăn khớp|Khớp vào nhau vừa khít, hoặc phù hợp, thống nhất với nhau.
+ăn kiêng|Kiêng bớt một số món, thường để giảm cân hoặc giữ sức khỏe.
+ăn liền|Nói về đồ ăn làm sẵn, chỉ cần pha hay bóc ra là dùng ngay.
+ăn lương|Làm việc và hưởng tiền công cố định theo tháng.
+ăn may|Nhờ gặp may mà được việc, không phải do tài hay công sức.
+ăn mặc|Việc chọn và mặc quần áo, trang phục hằng ngày.
+ăn mặn|Ăn đồ nêm nhiều muối; cũng chỉ việc ăn thịt cá, không ăn chay.
+ăn mòn|Làm kim loại hay vật liệu mục, mỏng dần do hóa chất hoặc hơi ẩm.
+ăn mừng|Tổ chức vui chơi, ăn uống để mừng một sự kiện vui.
+ăn năn|Hối hận và day dứt về lỗi lầm mình đã gây ra.
+ăn nhẹ|Ăn một chút cho đỡ đói, không phải bữa chính.
+ăn nói|Cách nói năng, trò chuyện với người khác.
+ăn sáng|Dùng bữa đầu ngày, thường trước giờ đi học hay đi làm.
+ăn sống|Ăn đồ còn tươi, không qua nấu nướng, như rau sống hay gỏi.
+ăn tạp|Ăn đủ mọi thứ, cả thực vật lẫn thịt, nói về người hoặc con vật.
+ăn tết|Đón và vui chơi, sum họp gia đình trong dịp Tết Nguyên đán.
+ăn theo|Dựa vào cái đã thành công của người khác để kiếm lợi cho mình.
+ăn thịt|Dùng thịt làm thức ăn, như người ăn món thịt hay thú dữ bắt mồi.
+ăn tiệc|Dự bữa tiệc, ăn uống cùng nhiều người trong một dịp vui.
+ăn tối|Dùng bữa cuối cùng trong ngày, vào buổi chiều tối.
+ăn trưa|Dùng bữa vào khoảng giữa ngày.
+ăn uống|Việc ăn và uống nói chung để nuôi sống cơ thể.
+ăn vặt|Ăn những món nhỏ lặt vặt ngoài các bữa chính.
+âm điệu|Sự lên xuống, trầm bổng của âm thanh trong lời nói hay bản nhạc.
+âm lịch|Lịch tính ngày tháng theo chu kì tròn khuyết của mặt trăng.
+âm lượng|Độ to nhỏ của tiếng phát ra, như từ loa, ti vi hay điện thoại.
+âm nhạc|Tiếng hát, tiếng đàn kết thành giai điệu và nhịp để người nghe thưởng thức.
+âm thanh|Những gì tai nghe được, do vật rung động phát ra.
+âm thầm|Kín đáo và lặng lẽ, làm mà không phô ra cho người khác biết.
+ầm ầm|Tiếng to, rền và kéo dài, như tiếng sấm hay máy móc lớn.
+ẩm mốc|Bị hơi nước thấm lâu ngày nên lên mốc, thường có mùi hôi.
+ẩm thấp|Nhiều hơi nước và thiếu ánh nắng, thường nói về nhà cửa, vùng đất trũng.
+ẩm thực|Việc ăn uống và các món ăn riêng của một vùng, một dân tộc.
+ẩm ướt|Chứa nhiều hơi nước, không khô ráo, nói về không khí, quần áo, đồ vật.
+ấm áp|Ấm vừa đủ và dễ chịu, nói về thời tiết hay tình cảm.
+ấm chén|Bộ đồ gồm bình pha và các chén nhỏ, dùng để uống trà.
+ấm cúng|Ấm áp và thân mật, gần gũi, thường nói về căn nhà, bữa cơm.
+ấm lòng|Thấy dễ chịu, được an ủi trong lòng nhờ sự quan tâm của người khác.
+ấm no|Đủ ăn đủ mặc, không phải chịu đói rét.
+ấm trà|Ấm nhỏ có vòi, quai và nắp, dùng để hãm trà rồi rót ra chén.
+ân cần|Quan tâm chu đáo, nói năng dịu dàng khi chăm sóc hay tiếp đón ai.
+ân hận|Day dứt, tiếc nuối vì đã làm điều sai hoặc bỏ lỡ điều gì.
+ẩn danh|Giấu đi tên thật, không cho biết ai là người làm, viết hay gửi.
+ẩn hiện|Lúc hiện ra lúc khuất đi, nhìn không rõ.
+ẩn náu|Lánh vào chỗ kín đáo để được an toàn, tránh bị tìm thấy.
+ẩn nấp|Trốn vào chỗ kín để không bị người khác phát hiện.
+ẩn núp|Giấu mình ở chỗ khuất, thường để rình hoặc tránh đối phương.
+ẩn số|Giá trị chưa biết trong một phương trình, phải giải mới tìm ra.
+ấn phẩm|Sản phẩm được in ra như sách, báo, tạp chí.
+ấn tượng|Cảm nhận còn đọng lại sau khi gặp một người hay chứng kiến việc gì.
+ấp úng|Nói ngập ngừng, không trôi chảy, vì lúng túng hay sợ hãi.
+ấu thơ|Quãng đời còn bé dại của mỗi người, thời thơ ấu.
+ấu trùng|Dạng con non mới nở của côn trùng, ếch nhái, khác hẳn con trưởng thành.
+ba chấm|Dấu câu gồm ba dấu chấm nhỏ liền nhau, biểu thị ý bỏ lửng.
+ba chỉ|Thịt phần bụng lợn có nạc và mỡ xen kẽ thành lớp, hay luộc, nướng.
+ba gác|Xe ba bánh chở hàng, có thùng phía sau, đạp hoặc chạy máy.
+ba lô|Túi có hai quai để đeo sau lưng, đựng sách vở hay đồ đi đường.
+ba má|Cách gọi cha và mẹ, quen dùng ở miền Nam.
+bà chủ|Người phụ nữ đứng đầu, làm chủ một cửa hàng, cơ sở hay ngôi nhà.
+bà con|Những người có họ hàng; cũng dùng gọi thân mật người dân trong vùng.
+bà lão|Người phụ nữ tuổi đã cao, đã già yếu.
+bà mối|Người phụ nữ làm mối, giới thiệu cho trai gái lấy nhau.
+bà ngoại|Người mẹ đã sinh ra mẹ mình.
+bà nội|Người mẹ đã sinh ra cha mình.
+bà xã|Tiếng gọi thân mật để chỉ vợ mình, hay dùng trong lời nói hằng ngày.
+bả vai|Phần trên của lưng ngay sát vai, nơi có xương dẹt hình tam giác.
+bác bỏ|Gạt đi, không chấp nhận ý kiến hay lời buộc tội vì cho là sai.
+bạc đạn|Ổ bi có viên bi nhỏ giúp trục quay trơn, cách gọi ở miền Nam.
+bạc hà|Cây nhỏ lá thơm the mát, dùng làm rau gia vị, trà hay kẹo.
+bạc màu|Mất dần màu sắc ban đầu do nắng, giặt nhiều hay dùng lâu ngày.
+bạch dương|Cây gỗ thân thẳng, vỏ màu trắng bạc, mọc nhiều ở vùng ôn đới lạnh.
+bạch đàn|Cây gỗ thân thẳng, lá dài có mùi dầu thơm, thường trồng lấy gỗ.
+bạch tuộc|Động vật biển thân mềm, tám tua có giác bám, gặp nguy thì phun mực.
+bài bản|Làm theo phương pháp, trình tự chặt chẽ, có hệ thống rõ ràng.
+bài ca|Bài hát, thường dùng trong văn viết với ý ngợi ca hay trang trọng.
+bài giải|Phần viết ra các bước làm một bài tập cho tới đáp số.
+bài giảng|Phần kiến thức người dạy trình bày trong một tiết học hay buổi học.
+bài hát|Tác phẩm âm nhạc có lời và giai điệu để hát.
+bài học|Phần kiến thức dạy trong một buổi; cũng chỉ điều rút ra từ trải nghiệm.
+bài làm|Phần học sinh tự làm để nộp, nhất là trong giờ kiểm tra.
+bài tập|Việc giao cho người học tự làm để luyện kiến thức hay kĩ năng.
+bài thi|Phần làm trong một kì thi, được chấm điểm để đánh giá.
+bài thơ|Tác phẩm viết bằng thơ, có vần điệu và nhịp điệu.
+bài toán|Đề toán đưa ra cần giải; cũng chỉ vấn đề khó cần giải quyết.
+bài văn|Bài viết bằng văn xuôi, thường làm trong môn ngữ văn ở trường.
+bài viết|Bài được viết ra để đăng báo, trang mạng hay trình bày một vấn đề.
+bài vở|Bài học, bài tập học sinh phải làm, phải học nói chung.
+bãi biển|Dải cát dọc bờ biển, nơi người ta tắm và nghỉ ngơi.
+bãi cỏ|Khoảng đất rộng phủ kín cỏ, để ngồi chơi hay chăn thả trâu bò.
+bãi lầy|Vùng đất ngập bùn nhão, dẫm chân vào dễ bị lún.
+bãi tắm|Khu bờ biển hay bờ sông được dành cho mọi người xuống tắm.
+bám riết|Đi theo sát không rời, nhất định không chịu buông.
+bám sát|Theo thật sát để nắm tình hình, không để lệch khỏi mục tiêu.
+ban công|Sàn nhỏ có lan can chìa ra ở tầng trên, để hóng gió, đặt cây.
+ban đầu|Thời điểm lúc mới khởi sự, trước khi mọi việc diễn ra hay đổi khác.
+ban đêm|Quãng thời gian trời tối, từ khi mặt trời lặn tới lúc rạng sáng.
+ban giám hiệu|Những người đứng đầu một trường học, gồm hiệu trưởng và các hiệu phó.
+ban giám khảo|Nhóm người chấm điểm và quyết định kết quả một cuộc thi.
+ban mai|Khoảng sáng sớm tinh mơ, lúc trời vừa hửng nắng.
+ban nãy|Lúc vừa qua, cách đây chưa lâu, trong cùng một ngày.
+bàn ăn|Chiếc bàn để bày đồ ăn, cả nhà ngồi quanh dùng bữa.
+bàn bạc|Ngồi lại với nhau nói qua nói lại cho tới khi chọn được cách làm.
+bàn cãi|Tranh luận, cãi qua cãi lại về điều chưa thống nhất.
+bàn chải|Dụng cụ có cán, đầu cắm nhiều lông cứng, để chà rửa hay đánh răng.
+bàn chân|Phần dưới cùng của chân, chạm mặt đất khi đứng và đi.
+bàn đạp|Miếng gác chân trên xe đạp hay máy khâu, đạp xuống cho bánh quay.
+bàn ghế|Bàn và ghế nói chung, đồ dùng để ngồi và làm việc.
+bàn giao|Giao lại việc đang phụ trách cùng đồ đạc, giấy tờ cho người kế tiếp.
+bàn giấy|Bàn làm việc ở văn phòng, nơi xử lí giấy tờ, sổ sách.
+bàn là|Dụng cụ có đế phẳng nung nóng để là quần áo, gọi ở miền Bắc.
+bàn là hơi|Loại bàn là có phun hơi nước nóng để vải phẳng nhanh hơn.
+bàn luận|Cùng nêu ý kiến, phân tích qua lại về một vấn đề.
+bàn phím|Bộ phận gồm nhiều phím để gõ chữ vào máy tính hoặc để chơi đàn.
+bàn tán|Nói ra nói vào với nhau về chuyện người khác hay việc mới xảy ra.
+bàn tay|Phần có năm ngón ở cuối cánh tay, dùng để cầm, nắm, viết.
+bàn tròn|Bàn có mặt hình tròn; cũng chỉ cuộc trao đổi mà mọi người ngang hàng.
+bàn ủi|Tên miền Nam của bàn là, có đế nóng để làm phẳng quần áo.
+bản chất|Tính chất cốt lõi bên trong, quyết định sự vật là gì.
+bản dịch|Văn bản đã được chuyển ngữ từ một thứ tiếng sang thứ tiếng khác.
+bản địa|Thuộc về chính vùng đất ấy, sinh ra và sống lâu đời tại đó.
+bản đồ|Hình vẽ thu nhỏ bề mặt một vùng đất, có đường đi, sông núi.
+bản gốc|Bản đầu tiên, chưa qua sao chép hay sửa đổi.
+bản in|Tài liệu, sách báo được in ra trên giấy.
+bản làng|Làng của đồng bào các dân tộc ở vùng núi nói chung.
+bản lề|Bộ phận nối cánh cửa với khung để cửa mở, đóng được.
+bản lĩnh|Khí chất vững vàng, dám tự quyết và không nao núng trước khó khăn.
+bản năng|Khả năng tự có từ lúc sinh ra, như con vịt biết bơi.
+bản nhạc|Một tác phẩm âm nhạc trọn vẹn, có lời hoặc chỉ có tiếng đàn.
+bản nháp|Bản viết thử, chưa hoàn chỉnh, để sửa trước khi viết chính thức.
+bản phác thảo|Bản vẽ hoặc bản viết sơ lược, nêu những nét chính trước khi hoàn thiện.
+bản quyền|Quyền sở hữu với tác phẩm, người khác muốn sao chép phải được cho phép.
+bản sao|Bản chép lại hay chụp lại đúng như bản gốc.
+bản sắc|Nét đặc trưng tạo nên vẻ riêng của một dân tộc hay cộng đồng.
+bản thảo|Bản viết của sách hay bài báo trước khi đem in, còn có thể sửa.
+bản thiết kế|Bản vẽ kĩ thuật thể hiện chi tiết công trình hay sản phẩm sắp làm.
+bản tin|Bài thông báo tin tức ngắn trên báo, đài, truyền hình.
+bản vẽ|Tờ giấy có hình vẽ thể hiện hình dạng, kích thước của vật, công trình.
+bán buôn|Bán hàng từng lô lớn cho người khác đem bán lại, không bán lẻ.
+bán chạy|Được nhiều người mua, hàng ra tới đâu hết tới đó.
+bán đảo|Phần đất liền nhô ra biển, ba mặt giáp nước.
+bán hàng|Đưa hàng hóa cho khách và nhận tiền, thường làm ở cửa hàng, chợ.
+bán kết|Vòng đấu sát trước chung kết, bên thắng sẽ giành vé vào trận cuối.
+bán kính|Đoạn thẳng nối tâm hình tròn với một điểm trên đường viền của nó.
+bạn bè|Những người quen thân, hay chơi với nhau nói chung.
+bạn đọc|Người đọc sách, báo, cách gọi gần gũi mà tòa soạn dùng cho độc giả.
+bạn đời|Người chồng hoặc vợ cùng sống trọn đời với mình.
+bạn gái|Người yêu là nữ; cũng chỉ người bạn là con gái.
+bạn già|Bạn bè cùng tuổi già với nhau, hoặc vợ chồng già gọi nhau.
+bạn học|Ai đó từng ngồi chung lớp hoặc học cùng trường với mình.
+bạn thân|Người bạn gần gũi, hiểu và tin cậy nhau.
+bạn trai|Người yêu là nam; cũng chỉ người bạn là con trai.
+bảng|Tấm phẳng treo trên tường để viết hay dán thông tin.
+bảng chữ cái|Danh sách các chữ cái của một ngôn ngữ xếp theo thứ tự.
+bảng đen|Tấm bảng sẫm màu trong lớp học, viết lên bằng phấn.
+bảng điện|Tấm gắn cầu dao, công tắc, ổ cắm để điều khiển điện.
+bảng hiệu|Tấm biển ghi tên treo trước cửa tiệm hay cơ quan để dễ nhận ra.
+bảng màu|Tấm phẳng họa sĩ dùng pha màu; cũng chỉ bộ màu được chọn để phối.
+bảng tin|Tấm bảng dán thông báo, tin tức cho mọi người cùng xem.
+bánh|Món làm từ bột gạo hay bột mì, có nhiều cách hấp, nướng, rán.
+bánh bao|Bánh bột mì hấp trắng xốp, hình tròn, thường có nhân thịt.
+bánh bò|Bánh bột gạo ủ men, ngọt xốp, ruột nhiều sợi rỗ, thường hấp hoặc nướng.
+bánh bông lan|Bánh nướng mềm xốp từ trứng, bột mì và đường, cách gọi ở miền Nam.
+bánh bột lọc|Bánh làm từ bột năng dẻo trong, nhân tôm thịt, hấp hoặc luộc.
+bánh canh|Món sợi to dai làm từ bột gạo hay bột năng, ăn với nước dùng.
+bánh căn|Bánh nhỏ đổ bằng bột gạo trong khuôn đất, ăn kèm nước chấm.
+bánh chay|Bánh viên nếp nhân đậu xanh, chan nước đường sánh, hay làm dịp Hàn thực.
+bánh chưng|Bánh hình vuông gói lá dong, nhân gạo nếp, đậu xanh, thịt, ăn ngày Tết.
+bánh cốm|Bánh dẻo màu xanh làm từ cốm non, nhân đậu xanh và dừa.
+bánh cuốn|Lá bột gạo hấp mỏng cuộn lại, thường có nhân, ăn với nước mắm.
+bánh da lợn|Bánh hấp nhiều lớp dẻo mịn từ bột năng, nước cốt dừa, lá dứa.
+bánh dẻo|Bánh trung thu vỏ bột nếp trắng mềm dẻo, không nướng, nhân ngọt.
+bánh dừa|Các loại bánh có dừa nạo hoặc nước cốt dừa làm nguyên liệu chính.
+bánh đa|Bánh mỏng tròn bằng bột gạo, phơi khô rồi nướng giòn, gọi ở miền Bắc.
+bánh đa nem|Lá bánh mỏng phơi khô dùng để cuộn nem rán, cách gọi ở miền Bắc.
+bánh đậu|Bánh làm từ bột đậu, thường là đậu xanh, có vị ngọt bùi.
+bánh đậu xanh|Bánh khối nhỏ ép từ đậu xanh nghiền, đường và mỡ, tan trong miệng.
+bánh đúc|Bánh từ bột gạo khuấy chín với nước vôi trong, đặc lại thành tảng mềm.
+bánh gai|Bánh nếp màu đen nhờ lá gai, nhân đậu xanh, gói trong lá chuối khô.
+bánh giò|Bánh bột gạo mềm gói lá chuối hình chóp, nhân thịt băm, mộc nhĩ.
+bánh gối|Bánh vỏ bột mì gập hình chiếc gối, thường nhân thịt, miến, chiên giòn.
+bánh hỏi|Sợi bột gạo rất mảnh đan thành tấm nhỏ, ăn kèm thịt nướng, rau sống.
+bánh ít|Bánh nếp nhỏ gói lá chuối thành hình chóp, có nhân ngọt hoặc mặn.
+bánh kem|Bánh xốp phủ lớp kem ngọt trang trí, thường để cắt mừng sinh nhật.
+bánh kẹo|Các thứ bánh và kẹo nói chung, thường để ăn chơi hay biếu.
+bánh kếp|Bánh mỏng tráng từ bột mì, trứng, sữa trên chảo, có thể cuộn nhân.
+bánh khoai|Bánh làm từ khoai, thường là khoai lang hay khoai môn, rán hoặc hấp.
+bánh khọt|Bánh bột gạo nhỏ chiên giòn trong khuôn, trên có tôm, ăn kèm rau sống.
+bánh khúc|Bánh nếp trộn rau khúc, nhân đậu xanh và thịt mỡ, đồ chín.
+bánh lái|Bộ phận ở đuôi tàu, thuyền hay máy bay, xoay để đổi hướng đi.
+bánh mật|Bánh bột nếp nấu với mật mía nên có màu nâu, nhân đậu, gói lá.
+bánh nậm|Bánh bột gạo mỏng dẹt gói lá dong hay lá chuối, nhân tôm thịt.
+bánh nếp|Bánh bột nếp dẻo gói lá chuối, nhân thịt hoặc đậu xanh, luộc hay hấp.
+bánh nướng|Bánh trung thu vỏ vàng nâu do nướng trong lò, nhân thập cẩm hay đậu.
+bánh phồng tôm|Bánh khô từ tinh bột trộn tôm, rán trong dầu nóng thì nở xốp giòn.
+bánh phở|Sợi dẹt làm từ bột gạo tráng mỏng, dùng nấu phở hoặc xào.
+bánh pía|Bánh vỏ nhiều lớp mỏng, nhân đậu xanh, sầu riêng và trứng muối.
+bánh quẩy|Thanh bột mì rán phồng giòn, thường ăn kèm phở, cháo.
+bánh quế|Bánh mỏng giòn cuộn thành ống, nướng từ bột, trứng, đường.
+bánh rán|Viên bột nếp nhân đậu xanh rán vàng, lăn vừng hoặc phủ đường.
+bánh răng|Bánh xe có khía răng quanh vành, cài vào nhau để máy móc quay theo.
+bánh sữa|Kẹo bánh làm từ sữa cô đặc, ép thành viên nhỏ ngọt béo.
+bánh sừng bò|Bánh nướng nhiều lớp bơ xốp giòn, cuộn cong hình chiếc sừng.
+bánh tẻ|Bánh bột gạo tẻ nhân thịt, gói lá thành thỏi dài nhỏ rồi nấu chín.
+bánh tét|Bánh nếp gói lá chuối thành đòn dài, thường nhân đậu thịt, ăn dịp Tết.
+bánh tiêu|Bánh bột mì chiên phồng rỗng ruột, vỏ có rắc mè, vị ngọt nhẹ.
+bánh tôm|Món tôm phủ bột trộn khoai lang thái sợi, rán giòn, chấm nước mắm.
+bánh trái|Các thứ bánh nói chung, thường làm để biếu, cúng hay ăn dịp lễ Tết.
+bánh tráng|Lá bột gạo mỏng phơi khô, dùng để cuốn hay nướng, gọi ở miền Nam.
+bánh trôi|Viên nếp nhỏ bọc đường phên, luộc tới khi nổi lên, làm dịp Hàn thực.
+bánh trung thu|Bánh ăn trong dịp Tết Trung thu, gồm hai loại nướng và dẻo.
+bánh ú|Bánh nếp nhỏ gói lá thành hình chóp, thường ăn dịp Tết Đoan ngọ.
+bánh ướt|Lớp bột gạo hấp mỏng mềm, không nhân, ăn kèm chả lụa, nước mắm.
+bánh xe|Vật tròn quay quanh trục, lắp dưới xe để xe lăn đi.
+bánh xèo|Bánh bột gạo đổ chảo mỏng giòn, nhân tôm thịt và giá, gập đôi.
+bánh xốp|Bánh nhiều lớp mỏng giòn xốp, có kem ngọt xen giữa.
+bao bì|Vỏ bọc bên ngoài để đựng và bảo vệ hàng hóa.
+bao bọc|Phủ kín bên ngoài để che chở, giữ gìn cho người hay vật bên trong.
+bao bố|Bao to dệt bằng sợi đay thô, dùng đựng gạo, nông sản.
+bao dung|Có tấm lòng rộng, sẵn sàng bỏ qua lỗi lầm của người khác.
+bao giờ|Lời hỏi về thời gian, dùng khi muốn biết việc gì xảy ra lúc nào.
+bao gồm|Có chứa, gồm những phần nào đó ở bên trong.
+bao la|Rộng mênh mông không thấy giới hạn, thường nói về trời biển, tình thương.
+bao lâu|Từ để hỏi một việc kéo dài trong quãng thời gian dài ngắn ra sao.
+bao nhiêu|Từ dùng để hỏi về số lượng hay giá cả.
+bao phủ|Phủ kín khắp bề mặt một vùng rộng.
+bao quanh|Nằm vây quanh ở mọi phía của một vật hay một vùng.
+bao quát|Nhìn hay nắm được toàn bộ, đủ mọi mặt của sự việc.
+bao tải|Bao lớn đan bằng sợi nhựa hay đay, dùng để chứa và chở hàng.
+bao tay|Đồ may vừa bàn tay, đeo để giữ ấm hay tránh bẩn, trầy xước.
+bao trùm|Lan tỏa và phủ khắp một nơi, thường nói về không khí, cảm xúc.
+bào mòn|Làm mòn dần từng lớp do cọ xát hay nước chảy.
+bào ngư|Loài ốc biển vỏ dẹt hình tai, thịt dai ngọt, là món ăn đắt tiền.
+bảo ban|Nhắc nhở, chỉ dạy nhau điều nên làm, thường trong gia đình.
+bảo bối|Vật quý được giữ gìn cẩn thận, trong truyện thường có phép lạ.
+bảo dưỡng|Chăm sóc, kiểm tra định kì máy móc, xe cộ để chạy tốt.
+bảo hành|Cam kết sửa, đổi miễn phí nếu hàng đã bán bị hỏng trong thời hạn.
+bảo hộ|Che chở, giữ an toàn cho người hoặc quyền lợi trước nguy hiểm.
+bảo mật|Giữ kín thông tin, ngăn người không có phận sự xem hay lấy cắp.
+bảo mẫu|Người làm nghề trông nom trẻ nhỏ ở nhà trẻ hay tại gia đình.
+bảo quản|Cất giữ đồ đạc, thực phẩm đúng cách để không bị hỏng hay hao hụt.
+bảo tàng|Nơi cất giữ, trưng bày hiện vật lịch sử, văn hóa cho khách xem.
+bảo tồn|Giữ gìn để không bị mất đi, như di sản hay loài vật quý.
+bảo trì|Kiểm tra, sửa chữa thường xuyên để thiết bị, công trình hoạt động tốt.
+bảo vật|Món đồ quý hiếm được cất giữ cẩn thận qua nhiều đời.
+bảo vệ|Giữ gìn, che chở cho khỏi bị xâm hại; cũng chỉ người canh gác.
+báo cáo|Trình bày lại tình hình, kết quả công việc cho cấp trên.
+báo chí|Các loại báo, tạp chí và giới những người làm nghề viết tin.
+báo danh|Ghi tên và nhận số để dự thi hay tham gia một việc.
+báo điện tử|Báo phát hành trên mạng, đọc bằng máy tính hay điện thoại.
+báo động|Phát tín hiệu cảnh giác khi có nguy hiểm, như cháy hay trộm.
+báo giá|Gửi cho khách bảng giá dự kiến của hàng hóa hay dịch vụ.
+báo hiệu|Cho biết trước bằng dấu hiệu một điều sắp xảy ra.
+báo thức|Phát ra tiếng chuông để gọi người ngủ dậy đúng giờ đã hẹn.
+báo tin|Đưa một tin cho người khác biết, có thể vui hoặc buồn.
+báo trước|Cho người khác biết từ trước khi việc xảy ra.
+bát đĩa|Đồ dùng đựng thức ăn trên mâm cơm, gồm bát, đĩa nói chung.
+bát ngát|Rộng mênh mông, trải dài tít tắp, thường nói về cánh đồng.
+bát nháo|Lộn xộn, hỗn loạn, không có trật tự.
+bạt ngàn|Nhiều và trải rộng khắp nơi, thường nói về rừng cây.
+báu vật|Vật quý hiếm, được trân trọng như của báu.
+bay bổng|Nhẹ tênh như lướt lên cao, thường nói về giọng hát, tâm hồn, ước mơ.
+bay hơi|Chuyển từ thể lỏng thành hơi rồi tan vào không khí.
+bay lượn|Bay vòng qua lại nhẹ nhàng trên không.
+bay màu|Màu nhạt đi nhanh do giặt, phơi nắng, nói về vải, ảnh, mực.
+bay nhảy|Tự do đi đây đi đó, làm điều mình muốn, thường nói về tuổi trẻ.
+bày biện|Sắp xếp đồ vật cho gọn gàng, đẹp mắt.
+bày đặt|Làm ra vẻ hoặc đặt điều ra, thường bị chê là không cần thiết.
+bày trò|Nghĩ ra trò chơi hoặc việc làm, thường để vui hay gây rắc rối.
+bày vẽ|Bày ra những việc rườm rà, tốn kém không cần thiết.
+băn khoăn|Lo nghĩ không yên vì còn phân vân, chưa quyết được.
+băng chuyền|Dải băng chạy vòng liên tục trên con lăn, để chuyển hàng hay hành lý.
+băng dính|Cuộn dải mỏng có lớp keo một mặt, dùng để dán, gọi ở miền Bắc.
+băng đô|Vòng hoặc dải vải đeo trên đầu để giữ tóc gọn hay làm duyên.
+băng ghế|Ghế dài cho nhiều người cùng ngồi.
+băng giá|Lạnh đến mức nước đóng thành băng, thường nói về mùa đông xứ lạnh.
+băng keo|Dải mỏng có keo dính, dùng để dán, đóng thùng, cách gọi ở miền Nam.
+băng nhạc|Cuộn băng từ ghi các bài hát để phát lại.
+băng rôn|Dải vải căng dài ghi khẩu hiệu hay thông báo.
+băng tuyết|Băng và tuyết nói chung ở xứ lạnh.
+băng vệ sinh|Miếng thấm phụ nữ dùng trong những ngày có kinh nguyệt.
+bằng cấp|Giấy tờ do trường cấp, xác nhận người học đã xong một bậc đào tạo.
+bằng chứng|Vật, lời khai hay sự việc cho thấy một điều là có thật.
+bằng khen|Giấy khen của cấp có thẩm quyền ghi nhận thành tích.
+bằng lái|Giấy phép cho người lái xe được điều khiển phương tiện.
+bằng lăng|Cây bóng mát hay trồng ven đường, ra từng chùm hoa tím vào đầu hè.
+bằng lòng|Đồng ý, chấp nhận vì thấy vừa ý.
+bằng nhau|Có cùng số lượng, độ lớn hay mức độ, không bên nào hơn.
+bằng phẳng|Phẳng, không gồ ghề, không lồi lõm.
+bắp cải|Rau gồm nhiều lớp lá dày cuộn chặt thành khối tròn, thường luộc hay xào.
+bắp chân|Phần thịt phía sau cẳng chân, dưới đầu gối.
+bắp chuối|Hoa chuối hình búp màu tím đỏ, thường thái mỏng làm nộm.
+bắp đùi|Khối cơ nằm ở phần đùi, giữa háng và đầu gối.
+bắp ngô|Phần cây ngô gồm lõi dài mang nhiều hàng hạt, ngoài bọc lớp vỏ lá.
+bắp tay|Khối cơ ở phần cánh tay trên, nổi lên khi gập tay dùng sức.
+bắp thịt|Khối cơ trong cơ thể, co giãn để tạo ra cử động.
+bắt buộc|Buộc phải làm theo, không được tùy ý lựa chọn hay bỏ qua.
+bắt chuyện|Chủ động mở lời để nói chuyện với ai, thường là người chưa quen.
+bắt chước|Làm theo đúng giọng nói, cử chỉ hay cách làm của người khác.
+bắt đầu|Khởi sự làm một việc, hoặc để một việc bước sang giai đoạn đầu tiên.
+bắt gặp|Tình cờ nhìn thấy hay gặp người, việc gì.
+bắt kịp|Đuổi theo hay cố gắng cho tới ngang bằng với người hoặc cái đi trước.
+bắt mắt|Có màu sắc, kiểu dáng nổi bật, dễ thu hút cái nhìn.
+bắt mồi|Săn và tóm con vật nhỏ hơn để ăn, nói về thú, chim hay cá.
+bắt nguồn|Có điểm khởi đầu từ một nơi hay một nguyên nhân nào đó.
+bắt nhịp|Ra nhịp cho mọi người cùng hát; cũng chỉ việc hòa nhập với cái mới.
+bắt rễ|Đâm rễ bám vào đất; cũng chỉ điều đã hình thành và ăn sâu.
+bắt tay|Nắm tay người khác để chào; cũng có nghĩa cùng nhau hợp tác.
+bậc cửa|Bậc thấp ở ngưỡng cửa ra vào, chỗ bước qua khi vào nhà.
+bậc tam cấp|Dãy bậc thấp, thường có ba bậc, xây trước lối vào nhà.
+bậc thang|Mỗi nấc của cầu thang, để đặt chân khi lên xuống.
+bậc thầy|Người có tài nghệ vượt trội trong một lĩnh vực, đáng để học theo.
+bậc thềm|Bậc thấp ở mép hiên hay thềm nhà, dùng để bước từ sân lên.
+bẩm sinh|Có sẵn từ lúc lọt lòng, không do học hay rèn mà thành.
+bấm giờ|Dùng đồng hồ đo xem một việc mất bao lâu, như trong cuộc thi chạy.
+bận bịu|Vướng víu nhiều việc nhỏ phải lo liên tục, không có lúc rảnh tay.
+bận rộn|Có nhiều việc phải làm cùng lúc, luôn tay luôn chân không ngơi.
+bận tâm|Để ý, lo nghĩ về một điều gì đó khiến lòng không yên.
+bâng khuâng|Có cảm giác buồn nhớ man mác, lẫn lộn, khó gọi tên rõ ràng.
+bập bẹ|Nói chưa rõ, từng tiếng một, như trẻ mới tập nói.
+bập bênh|Đồ chơi gồm tấm ván gác ở giữa, hai đầu lên xuống luân phiên.
+bập bùng|Tả ngọn lửa cháy lúc bùng to lúc lụi nhỏ, ánh sáng chập chờn.
+bất an|Thấy lo lắng, bồn chồn, trong lòng không yên.
+bất bình|Không vừa lòng và tức giận trước việc mình cho là sai trái.
+bất cẩn|Thiếu cẩn thận, không chú ý nên dễ gây ra sai sót hay tai nạn.
+bất công|Không công bằng, khiến có người bị thiệt thòi hơn người khác.
+bất cứ|Từ dùng để chỉ người, vật hay lúc nào cũng được, không loại trừ.
+bất lợi|Gây khó khăn, thiệt thòi hoặc đặt ai vào thế yếu.
+bất ngờ|Xảy ra đột ngột, không lường trước, khiến người ta ngạc nhiên.
+bất ổn|Ở tình trạng không vững vàng, dễ sinh rối loạn hay trục trặc.
+bất thường|Khác với lẽ thường hay khác với mọi ngày, có điều gì đó lạ.
+bất tiện|Gây phiền phức, không thuận lợi cho việc sử dụng hay sinh hoạt.
+bật cười|Không nén được mà cười thành tiếng một cách bất chợt.
+bật dậy|Ngồi hay đứng lên thật nhanh và đột ngột, thường khi giật mình.
+bật khóc|Bỗng òa lên khóc vì không kìm được xúc động.
+bật lửa|Dụng cụ nhỏ cầm tay, thường chứa ga, bấm là có lửa để châm.
+bật mí|Tiết lộ một điều còn giữ kín, thường dùng trong lời nói thân mật.
+bầu bạn|Ở bên trò chuyện, chia sẻ để ai đó đỡ cô đơn.
+bầu bĩnh|Tròn trịa, đầy đặn dễ thương, thường nói về má trẻ em.
+bầu dục|Hình tròn thuôn dài, giống hình quả trứng nhìn nghiêng.
+bầu trời|Khoảng không bao la phía trên mặt đất, nhìn lên thấy như một vòm cong.
+bây giờ|Thời điểm đang diễn ra ngay lúc người ta nói.
+bẫy chuột|Dụng cụ có lẫy hoặc lồng sập, đặt mồi bên trong để bắt chuột.
+bấy lâu|Suốt một quãng thời gian khá dài đã trôi qua cho tới lúc này.
+be bé|Hơi nhỏ, nhỏ vừa phải, thường mang sắc thái dễ thương.
+bẻ gãy|Dùng sức làm cho vật cứng gập lại rồi đứt rời ra.
+bẻ lái|Xoay tay lái đổi hướng xe; cũng chỉ việc đột ngột đổi hướng câu chuyện.
+bé bỏng|Nhỏ dại, non nớt, gợi cảm giác cần được yêu thương che chở.
+bé con|Đứa trẻ còn nhỏ, thường dùng để gọi một cách trìu mến.
+bé gái|Đứa trẻ nhỏ thuộc giới nữ.
+bé nhỏ|Nhỏ nhắn, trông yếu ớt hoặc không đáng kể so với xung quanh.
+bẽn lẽn|Rụt rè, e thẹn, ngượng ngập trong dáng điệu, thường khi gặp người lạ.
+bén rễ|Rễ bắt đầu ăn vào đất sau khi trồng, cho thấy cây đã sống.
+béo bở|Mang lại nhiều lợi lộc mà ít tốn công, thường nói về việc làm.
+béo ngậy|Có vị béo đậm, nhiều mỡ hay nước cốt, thường nói về món ăn.
+béo tốt|Mập mạp và khỏe mạnh, da dẻ hồng hào.
+bê bết|Bị dính bẩn nhiều chỗ, nhem nhuốc khắp người hay quần áo.
+bê tông|Xi măng, cát, đá trộn nước, đông kết lại thành khối rắn trong xây dựng.
+bề bộn|Có nhiều thứ ngổn ngang, chồng chất cùng lúc, cả đồ đạc lẫn công việc.
+bề mặt|Mặt phía ngoài của một vật, phần có thể nhìn thấy hay chạm vào.
+bề ngang|Chiều rộng tính theo phương nằm ngang của một vật hay một khoảng đất.
+bề ngoài|Vẻ ngoài nhìn thấy được, như dung mạo, cách ăn mặc, chưa phải bản chất.
+bể bơi|Hồ xây có thành, chứa nước sạch, dùng để bơi lội và tập bơi.
+bể cá|Hộp kính hay bể nhỏ chứa nước, dùng để nuôi cá cảnh trong nhà.
+bế giảng|Kết thúc một năm học hay khóa học, thường bằng một buổi lễ.
+bế tắc|Bị dồn vào thế không có lối thoát, không tìm ra cách giải quyết.
+bên cạnh|Ở vị trí sát ngay một bên, gần kề người hay vật nào đó.
+bên lề|Ở ngoài rìa, không thuộc phần chính của một sự việc.
+bên ngoài|Phần hoặc phía nằm ngoài một vật, một nơi hay một nhóm.
+bên nội|Họ hàng thuộc dòng bên bố, gồm ông bà nội và cô chú bác.
+bên trong|Phía nằm khuất ở trong lòng một vật hay một nơi chốn.
+bền bỉ|Dẻo dai, kiên trì lâu dài, không nản lòng trước khó khăn.
+bền chặt|Gắn bó chặt chẽ và lâu dài, thường nói về tình cảm, quan hệ.
+bền lâu|Kéo dài được lâu, không mau hỏng hay phai nhạt theo thời gian.
+bền vững|Vững chắc, ổn định lâu dài, khó bị lay chuyển hay phá vỡ.
+bến cảng|Nơi tàu thuyền neo đậu để bốc dỡ hàng, đón trả khách.
+bến đò|Chỗ ven sông nơi đò ghé vào để chở người qua lại hai bờ.
+bến phà|Chỗ ven sông nơi phà cập vào, chở người và xe sang bờ kia.
+bến sông|Chỗ ven sông có lối xuống nước, dùng để tắm giặt hay neo thuyền.
+bến tàu|Nơi tàu thủy ghé vào để đón trả khách và bốc dỡ hàng.
+bến xe|Bãi rộng có quầy vé, nơi xe khách đỗ đón trả khách đi các tỉnh.
+bênh vực|Đứng về phía ai để che chở khi người đó bị chê trách, chèn ép.
+bếp ga|Loại bếp đun nấu dùng khí đốt từ bình chứa, vặn núm là có lửa.
+bếp lò|Bếp đun có thành bao quanh để giữ lửa, thường đốt bằng củi hay than.
+bếp núc|Chuyện nấu nướng, dọn dẹp trong gian bếp nói chung.
+bi bô|Tiếng trẻ nhỏ tập nói, líu lo liên tục mà chưa thành lời rõ ràng.
+bi quan|Có cách nhìn tiêu cực, chỉ thấy mặt xấu, không tin vào điều tốt.
+bì bõm|Tiếng lội nước hay khua nước liên tục, như khi lội qua ruộng ngập.
+bí ẩn|Còn giấu kín, chưa ai hiểu hay giải thích được, khiến người ta tò mò.
+bí đao|Quả dài, vỏ xanh phủ phấn trắng, ruột trắng, hay nấu canh hoặc nước uống.
+bí đỏ|Tên gọi khác của bí ngô, theo màu ruột vàng cam, ăn ngọt bùi.
+bí hiểm|Khó đoán, khó hiểu, như ẩn giấu điều gì không để lộ.
+bí ngô|Quả to tròn của một loài cây dây bò, ruột vàng, thường nấu canh.
+bí quyết|Cách làm riêng, khéo léo giúp đạt kết quả tốt mà ít người biết.
+bị động|Ở thế phải chịu tác động hay làm theo người khác, không tự chủ được.
+bìa cứng|Loại giấy dày và cứng, dùng làm bìa sách, hộp hay vỏ bao.
+bịch|Tiếng vật nặng rơi xuống, trầm và gọn; cũng chỉ túi nhỏ đựng đồ.
+biên bản|Văn bản ghi lại diễn biến của một cuộc họp hay một sự việc.
+biên lai|Giấy ghi nhận đã nhận tiền hay hàng, đưa cho người nộp giữ làm bằng.
+biển báo|Tấm có hình, kí hiệu dựng bên đường để chỉ dẫn hay cấm đoán.
+biển cả|Biển rộng mênh mông nói chung, thường dùng trong lời văn chương.
+biển hiệu|Tấm ghi tên cửa hàng, cơ quan treo phía trước để mọi người nhận biết.
+biển khơi|Vùng biển rộng lớn ở xa bờ, ngoài tầm nhìn từ đất liền.
+biển lặng|Mặt biển êm, ít sóng gió, tàu thuyền đi lại thuận lợi.
+biến chuyển|Thay đổi dần sang một trạng thái hay tình hình khác.
+biến cố|Chuyện lớn xảy đến bất ngờ, làm đảo lộn cuộc sống bình thường.
+biến dạng|Bị thay đổi hình dạng ban đầu, méo mó đi.
+biến đổi|Trở nên khác trước hoặc làm cho khác trước về tính chất, hình thức.
+biến động|Thay đổi lớn và thất thường, như giá cả hay tình hình xã hội.
+biến hình|Đổi sang một hình dạng khác hẳn, thường gặp trong truyện hay đồ chơi.
+biến mất|Không còn thấy đâu nữa, mất hút một cách đột ngột.
+biện minh|Đưa ra lí lẽ để bào chữa cho việc mình đã làm.
+biện pháp|Cách làm cụ thể đưa ra để xử lý hay ngăn ngừa một vấn đề.
+biếng|Lười, không thiết làm việc gì, thường nói về ăn uống, học hành.
+biết|Hiểu hoặc nắm được điều gì nhờ đã học, đã thấy hay đã nghe.
+biết điều|Hiểu lẽ phải, cư xử phải chăng, không đòi hỏi quá đáng.
+biết ơn|Ghi nhớ trong lòng sự giúp đỡ người khác đã dành cho mình.
+biết ý|Tự hiểu người khác muốn gì mà không cần họ nói ra.
+biệt danh|Tên gọi riêng đặt thêm cho ai, thường dựa vào đặc điểm hay tính cách.
+biệt tài|Tài năng riêng, đặc biệt mà ít người có.
+biệt thự|Ngôi nhà rộng đứng riêng, thường có vườn và tường rào bao quanh.
+biểu diễn|Trình bày một tiết mục ca múa, nhạc, xiếc hay võ trước người xem.
+biểu đồ|Hình vẽ bằng cột, đường hay hình quạt giúp nhìn số liệu dễ so sánh.
+biểu hiện|Dấu hiệu bên ngoài cho thấy một trạng thái, tính chất bên trong.
+biểu lộ|Để người khác thấy cảm xúc, suy nghĩ qua thái độ, lời nói.
+biểu mẫu|Tờ khai in sẵn các mục để điền thông tin theo khuôn nhất định.
+biểu tượng|Hình ảnh hay vật dùng để tượng trưng cho một ý nghĩa, một sự vật.
+biếu|Đưa tặng quà cho người trên hoặc người mình kính trọng.
+bình|Đồ đựng thường có thân phình, miệng nhỏ, để chứa nước hay cắm hoa.
+bình an|Yên ổn, không gặp tai họa hay điều gì xấu.
+bình chọn|Cân nhắc rồi bỏ phiếu chọn ra người hay cái được cho là xứng đáng.
+bình chữa cháy|Bình kim loại chứa bột hoặc khí nén, xịt ra để dập đám cháy nhỏ.
+bình dân|Giản dị, giá phải chăng, hợp với số đông người lao động.
+bình dị|Giản dị, mộc mạc, gần gũi, không cầu kì.
+bình đẳng|Ngang hàng nhau về quyền và nghĩa vụ, không ai bị coi thấp hơn.
+bình lặng|Yên ả, êm đềm, không có gì xáo trộn, thường nói về cuộc sống.
+bình luận|Nói hoặc viết nhận xét về một sự việc, trận đấu hay bài đăng.
+bình minh|Lúc mặt trời mới mọc, trời bắt đầu sáng.
+bình nóng lạnh|Thiết bị chứa nước, đun nóng bằng điện để dùng khi tắm rửa.
+bình phong|Tấm chắn dựng trước lối vào hoặc trong phòng để che khuất tầm nhìn.
+bình tâm|Giữ lòng yên ổn, không lo âu hay xao động.
+bình thản|Giữ vẻ điềm tĩnh, không hốt hoảng hay xao động trước chuyện xảy ra.
+bình thường|Giống mọi khi, không có gì khác lạ hay đặc biệt.
+bình tĩnh|Giữ được đầu óc sáng suốt, không hốt hoảng khi gặp chuyện.
+bình trà|Dụng cụ có quai, vòi và nắp để ủ trà rồi rót ra chén uống.
+bình tưới|Bình có quai và vòi để rót nước tưới cho cây, hoa.
+bình xăng|Thùng chứa xăng gắn trên xe để cấp nhiên liệu cho máy.
+bình xịt|Bình nhỏ có nén khí, ấn nút là phun ra thành tia hay sương.
+bình yên|Yên ổn, không gặp chuyện gì đáng lo, hay dùng trong lời hỏi thăm, chúc.
+bít tất|Đồ dệt bằng sợi mềm, mang vào bàn chân trước khi đi giày.
+bít tết|Món thịt bò cắt lát dày, áp chảo hoặc nướng, thường ăn với khoai tây.
+bịt kín|Che hay lấp hết mọi chỗ hở, không để lọt gì vào hay ra.
+bịt mắt|Che kín hai mắt bằng khăn hay bàn tay để không nhìn thấy gì.
+bịt mũi|Lấy tay che kín mũi, thường vì mùi hôi hoặc khi lặn xuống nước.
+bĩu môi|Trề môi ra phía trước để tỏ ý chê hoặc không tin.
+bò bía|Món bánh tráng cuốn củ đậu, lạp xưởng, trứng và rau, thường chấm tương.
+bò sát|Lớp động vật da có vảy, thường đẻ trứng, gồm rắn, thằn lằn, rùa.
+bò sữa|Giống bò được nuôi để vắt sữa, nhiều con có lông loang trắng đen.
+bò tót|Loài bò rừng to khỏe, lông màu sẫm, sừng cong, sống ở rừng nhiệt đới.
+bò tơ|Con bò còn non, mới lớn, chưa tới tuổi trưởng thành.
+bỏ bê|Lơ là, không chăm lo tới việc hay người mà mình có trách nhiệm.
+bỏ chạy|Vội vàng chạy đi để tránh né hay thoát thân.
+bỏ cuộc|Thôi không tiếp tục làm hay thi đấu nữa khi đang giữa chừng.
+bỏ đi|Rời khỏi một nơi hay một người, không ở lại nữa.
+bỏ hoang|Để ruộng đất, nhà cửa không dùng tới, mặc cho cỏ mọc, xuống cấp.
+bỏ học|Thôi đi học giữa chừng, hoặc vắng mặt buổi học không có lí do.
+bỏ lỡ|Để vuột mất dịp may, cơ hội vì không kịp nắm lấy.
+bỏ mặc|Không ngó ngàng, để ai đó hay việc gì tự xoay xở một mình.
+bỏ phí|Để lãng phí, không dùng tới cái có giá trị.
+bỏ qua|Không để tâm tới, cho qua một điều hay một lỗi lầm.
+bỏ quên|Đi mà quên mang theo đồ, để nó lại chỗ cũ.
+bỏ sót|Vô ý để thiếu, không làm hay không tính tới một phần nào đó.
+bỏ trống|Để chỗ ngồi, ô điền hay vị trí không có người, không có gì.
+bỏ túi|Nhỏ gọn, có thể mang theo trong túi; cũng chỉ việc thu về, kiếm được.
+bó buộc|Ràng buộc, gò bó làm mất tự do.
+bó hoa|Nhiều cành hoa gom lại buộc thành chùm, thường để tặng.
+bó tay|Đành chịu thua vì không còn cách nào xoay xở được.
+bọ cánh cứng|Nhóm côn trùng có đôi cánh trước cứng như vỏ, che cánh mỏng bên dưới.
+bọ chét|Côn trùng rất nhỏ, không cánh, nhảy giỏi, sống bám hút máu chó mèo.
+bọ hung|Côn trùng cánh cứng màu đen bóng, hay vo tròn và lăn phân.
+bọ ngựa|Côn trùng đầu tam giác, hai chân trước gập như lưỡi hái để vồ mồi.
+bọ rùa|Con bọ nhỏ lưng tròn như cái mai rùa, thường màu đỏ có chấm đen.
+bọ xít|Côn trùng thân dẹt, chích hút nhựa cây, tiết mùi hôi khi bị động vào.
+bói cá|Chim nhỏ lông xanh biếc, mỏ dài, lao xuống nước bắt cá.
+bon chen|Chen lấn, giành giật để kiếm lợi hay địa vị trong cuộc sống.
+bong bóng|Bọt khí tròn có màng mỏng, như khi thổi xà phòng; cũng chỉ bóng bay.
+bỏng ngô|Hạt ngô rang nóng nổ bung thành miếng trắng xốp, hay ăn khi xem phim.
+bóng bàn|Môn thể thao cầm vợt nhỏ đánh bóng nhựa nảy qua lại trên bàn.
+bóng bay|Túi cao su mỏng bơm hơi căng tròn, dùng làm đồ chơi hay trang trí.
+bóng cây|Vùng râm mát dưới tán cây do lá che ánh nắng.
+bóng chày|Môn thể thao hai đội, đánh bóng bằng gậy rồi chạy quanh các góc sân.
+bóng chuyền|Môn thể thao hai đội đập bóng bằng tay qua tấm lưới căng cao.
+bóng dáng|Dáng người hay vật chỉ thoáng thấy từ xa hoặc còn lại trong trí nhớ.
+bóng đá|Trò chơi trên sân cỏ, hai đội tranh nhau sút bóng vào khung thành.
+bóng đèn|Bộ phận phát sáng của đèn điện, thường có vỏ thủy tinh.
+bóng điện|Bóng phát sáng nhờ dòng điện, lắp vào đui để thắp sáng phòng.
+bóng gió|Nói vòng vo, ám chỉ chứ không gọi thẳng điều mình muốn nói.
+bóng láng|Nhẵn bóng và phẳng mịn, phản chiếu ánh sáng.
+bóng loáng|Bóng sáng lên rất rõ, giống như vừa được đánh hay lau kĩ.
+bóng mát|Chỗ có bóng che nắng, tạo cảm giác mát mẻ, dễ chịu.
+bóng ném|Môn hai đội chuyền bóng bằng tay rồi ném vào khung thành đối phương.
+bóng râm|Chỗ mát được tán cây hay mái nhà che khuất nắng.
+bóng rổ|Môn thể thao hai đội tranh bóng, ném vào một vòng rổ treo cao.
+bóng tối|Tình trạng thiếu ánh sáng, không nhìn rõ mọi vật.
+boong|Sàn lộ thiên phía trên của tàu thuyền, nơi người đi lại ngoài trời.
+bóp còi|Ấn còi xe cho kêu lên để báo hiệu hay xin đường.
+bóp méo|Làm cho vật méo đi; cũng chỉ việc cố ý làm sai lệch sự thật.
+bọt biển|Miếng xốp nhiều lỗ, thấm nước tốt, dùng để rửa chén, lau chùi.
+bồ cào|Nông cụ có cán dài, đầu có hàng răng, dùng để cào cỏ, san đất.
+bồ câu|Loài chim hiền, lông thường xám hoặc trắng, là biểu tượng hòa bình.
+bồ công anh|Cây hoa dại vàng, khi già thành quả cầu lông trắng bay theo gió.
+bồ hóng|Bụi đen do khói bám lâu ngày trên bếp hay mái nhà.
+bồ kết|Cây có quả dẹt màu nâu đen, quả thường dùng nấu nước gội đầu.
+bồ nông|Chim nước lớn mỏ dài, dưới mỏ có túi da để xúc và đựng cá.
+bổ dưỡng|Có nhiều chất nuôi cơ thể, tốt cho sức khỏe.
+bổ ích|Mang lại điều có lợi, giúp hiểu biết thêm hay khỏe hơn.
+bố chồng|Bố của người chồng, xét về phía người vợ.
+bố cục|Cách sắp đặt các phần trong bài văn, bức tranh hay trang trình bày.
+bố mẹ|Cha và mẹ của một người, những người sinh thành và nuôi dạy.
+bố nuôi|Người đàn ông nhận nuôi một đứa trẻ không do mình sinh ra.
+bố trí|Sắp xếp người hay đồ vật vào chỗ phù hợp.
+bố vợ|Bố của người vợ, xét về phía người chồng.
+bộ ba|Nhóm gồm ba người hay ba thứ thường đi chung với nhau.
+bộ cánh|Bộ quần áo đẹp diện khi đi chơi hay dự tiệc, cách nói vui.
+bộ dạng|Hình dáng, cử chỉ bên ngoài thể hiện trạng thái của một người.
+bộ đàm|Máy liên lạc vô tuyến cầm tay để nói chuyện trong phạm vi gần.
+bộ đồ|Một bộ quần áo gồm áo và quần hoặc váy đi kèm nhau.
+bộ giảm xóc|Bộ phận gồm lò xo và ống dầu, giúp xe chạy êm trên đường xóc.
+bộ lông|Toàn bộ lớp lông phủ trên thân con vật.
+bộ mặt|Vẻ ngoài chung của một người hay một nơi chốn khi nhìn vào.
+bộ não|Khối mềm nhiều nếp gấp trong hộp sọ, nơi suy nghĩ và ghi nhớ.
+bộ nhớ|Bộ phận của máy tính hay điện thoại dùng để lưu dữ liệu.
+bộ óc|Khả năng suy nghĩ và trí khôn của một người, thường nói với ý khen.
+bộ ổn áp|Thiết bị giữ điện áp cấp cho máy móc ở mức đều, không chập chờn.
+bộ phận|Phần nhỏ hợp thành cái lớn hơn, như chi tiết máy hay phòng ban.
+bộ xương|Toàn bộ các xương nối với nhau làm khung nâng đỡ cơ thể.
+bốc đồng|Làm theo cảm hứng nhất thời, không cân nhắc hậu quả.
+bốc hơi|Chuyển từ thể lỏng thành hơi; cũng chỉ việc biến mất không dấu vết.
+bốc xếp|Khuân vác, đưa hàng lên xuống xe, tàu và sắp xếp lại.
+bộc lộ|Để lộ rõ ra những điều vốn ẩn bên trong như tính cách, năng lực.
+bộc phát|Phát ra đột ngột, mạnh mẽ, không kìm được.
+bôi đen|Phủ màu đen lên; cũng chỉ việc cố tình nói xấu để hạ uy tín.
+bồi bàn|Người ở quán ăn, nhà hàng, lo ghi món, bưng đồ và dọn bàn.
+bồi bổ|Ăn uống chất bổ để tăng cường sức khỏe.
+bồi dưỡng|Nâng cao kiến thức hay tay nghề; cũng chỉ việc tẩm bổ cho khỏe.
+bồi đắp|Đắp thêm đất cát cho dày; cũng có nghĩa vun thêm tình cảm, hiểu biết.
+bồi hồi|Xao xuyến, xúc động trong lòng khi nhớ lại hay chờ đợi điều gì.
+bối cảnh|Hoàn cảnh chung, khung cảnh xung quanh nơi sự việc xảy ra.
+bối rối|Lúng túng, không biết xử trí thế nào.
+bội thu|Thu được nhiều hơn hẳn mọi năm, thường nói về mùa màng.
+bồn cầu|Thiết bị vệ sinh bằng sứ để đi đại tiểu tiện, có nước dội.
+bồn chồn|Không yên trong lòng, nôn nao lo lắng chờ đợi.
+bồn tắm|Bồn lớn đủ cho một người nằm ngâm mình khi tắm.
+bổn phận|Phần việc mà mỗi người phải làm theo đạo lí, trách nhiệm.
+bốn mùa|Xuân, hạ, thu, đông trong một năm; cũng chỉ suốt cả năm không ngơi.
+bốn phương|Khắp mọi nơi, mọi hướng.
+bộn bề|Nhiều và chồng chất tới mức lo không xuể, thường nói về công việc.
+bông cải|Tên miền Nam của súp lơ, rau có nụ hoa non kết thành khối.
+bông đùa|Nói đùa cho vui, không nghiêm túc.
+bông gòn|Khối sợi trắng mềm xốp, dùng thấm thuốc, lau chùi hay nhồi gối.
+bông tai|Món trang sức nhỏ xỏ hoặc kẹp ở dái tai.
+bông tuyết|Hạt băng nhỏ nhẹ, thường hình ngôi sao sáu cánh, rơi khi trời giá rét.
+bồng bềnh|Trôi nổi nhẹ nhàng, lên xuống theo sóng nước hay gió.
+bồng bột|Sôi nổi nhưng thiếu chín chắn, dễ hành động vội, thường nói về tuổi trẻ.
+bột bắp|Tên miền Nam của tinh bột ngô, mịn trắng, dùng làm sánh nước sốt, súp.
+bột chiên|Món bột gạo cắt miếng chiên giòn với trứng, ăn kèm đu đủ bào.
+bột gạo|Bột xay từ gạo tẻ, dùng làm các loại bánh như bánh cuốn, bánh xèo.
+bột giặt|Bột khô hòa nước thì sủi bọt, đổ vào máy hay chậu để giặt đồ.
+bột giấy|Hỗn hợp xơ gỗ hay tre nghiền nhão, nguyên liệu để làm giấy.
+bột lọc|Tinh bột làm từ củ sắn, khi chín thì trong và dai, dùng làm bánh.
+bột năng|Tinh bột lọc từ củ sắn, nấu lên trong và dẻo, hay làm bánh, chè.
+bột nếp|Bột xay từ gạo nếp, nhào lên dẻo dính, dùng nặn bánh viên, nấu chè.
+bột ngọt|Gia vị hạt trắng, còn gọi mì chính, cho món đậm vị chứ không ngọt.
+bột ngô|Hạt ngô khô xay mịn; cũng chỉ tinh bột trắng chiết từ ngô.
+bột nở|Chất bột trắng trộn vào bột làm bánh để bánh phồng lên, xốp mềm.
+bột sắn|Bột chế từ củ sắn phơi khô xay mịn, dùng làm bánh hoặc nấu ăn.
+bột sắn dây|Bột trắng lọc từ củ sắn dây, thường pha nước uống cho mát.
+bơ phờ|Mệt mỏi, xơ xác, đầu tóc rối do làm lụng vất vả hay thức khuya.
+bơ thực vật|Chất béo dạng sệt làm từ dầu thực vật, dùng thay bơ sữa.
+bờ biển|Dải đất giáp với biển, nơi sóng vỗ vào.
+bờ đê|Phần đất đắp cao của con đê, chạy dọc sông để ngăn lũ.
+bờ sông|Dải đất chạy dọc hai bên dòng sông.
+bờ tường|Bức tường thấp xây làm ranh giới hay bao quanh khu đất.
+bờ vai|Phần vai của con người; cũng chỉ chỗ dựa để nương tựa về tinh thần.
+bỡ ngỡ|Còn lạ lẫm, lúng túng vì mới gặp hay mới làm lần đầu.
+bơi ếch|Kiểu bơi sấp, hai tay đẩy nước, hai chân co duỗi giống con ếch.
+bơi lội|Hoạt động bơi dưới nước nói chung, cả để rèn luyện lẫn vui chơi.
+bơi ngửa|Kiểu bơi nằm ngửa, hai tay lần lượt vung ra sau, chân đập nước.
+bơi thuyền|Chèo thuyền trên mặt nước để dạo chơi hay thi đấu.
+bởi vì|Từ nối dùng để dẫn ra nguyên nhân của một việc.
+bù đắp|Bổ sung vào chỗ thiếu hụt hay mất mát để cân bằng lại.
+bù lại|Đem cái khác đắp vào chỗ thiếu hụt hay thiệt thòi cho cân bằng.
+bù xù|Rối bời, xõa ra lộn xộn, thường nói về tóc hay lông.
+bụ bẫm|Mập mạp, da thịt căng tròn, thường nói về trẻ nhỏ.
+búa tạ|Búa rất nặng có cán dài, vung hai tay để đập đá, phá tường.
+bugi|Bộ phận phát tia lửa điện để đốt nhiên liệu trong máy nổ của xe.
+búi tóc|Tóc dài được vấn gọn thành một khối tròn sau gáy hay trên đỉnh đầu.
+bụi bặm|Bám nhiều bụi bẩn; cũng tả vẻ ngoài phong trần, bất cần.
+bụi rậm|Đám cây thấp mọc dày, cành lá chằng chịt.
+bùn lầy|Đất bùn nhão, lún, khó đi lại.
+bún bò|Món bún sợi to với nước dùng hầm xương bò, thơm sả, cay ớt.
+bún chả|Món bún ăn cùng thịt lợn nướng than, chan nước mắm pha chua ngọt.
+bún riêu|Món bún nước có riêu cua đồng giã nhỏ, nước dùng chua nhẹ.
+bún thang|Món bún nước dùng gà, bày trứng tráng, giò, thịt gà thái sợi.
+bún thịt nướng|Món bún trộn với thịt heo nướng, rau sống và nước mắm chua ngọt.
+bùng cháy|Bốc lửa dữ dội lên đột ngột; cũng chỉ cảm xúc, nhiệt huyết dâng trào.
+bụng|Phần trước thân người từ dưới ngực tới hông, bên trong có dạ dày, ruột.
+buộc lòng|Đành phải làm điều mình không muốn vì không còn cách khác.
+buổi chiều|Quãng thời gian từ sau bữa trưa tới khi mặt trời lặn.
+buổi sáng|Phần đầu ngày, từ lúc trời rạng tới gần trưa.
+buổi sớm|Khoảng thời gian rất sớm khi trời vừa rạng sáng.
+buổi tối|Quãng thời gian từ khi trời sẩm tối tới giờ đi ngủ.
+buổi trưa|Khoảng giữa ngày khi nắng gắt, thường là giờ ăn và nghỉ ngơi.
+buôn bán|Mua vào rồi bán ra để kiếm lời.
+buồn|Có cảm giác không vui, ủ rũ khi gặp điều không như ý.
+buồn bã|Buồn rõ rệt và kéo dài, thể hiện ra nét mặt và dáng vẻ.
+buồn buồn|Hơi buồn một chút, cảm giác nhẹ thoáng qua mà không rõ lí do.
+buồn bực|Vừa buồn vừa bực, khó chịu trong lòng.
+buồn cười|Có điều hài hước khiến người ta muốn bật cười.
+buồn lòng|Phiền muộn, không vui vì việc làm hay lời nói của người khác.
+buồn ngủ|Cảm thấy mệt, mí mắt nặng, muốn được ngủ.
+buồn phiền|Buồn và lo nghĩ vì có điều phiền muộn trong lòng.
+buồn rầu|Buồn sâu nặng, ủ ê kéo dài.
+buồn tẻ|Đơn điệu, nhạt nhẽo, chẳng có gì vui hay mới lạ.
+buông lỏng|Không giữ chặt nữa; cũng chỉ việc lơ là trong quản lí, kiểm soát.
+buông tay|Thả tay đang nắm ra; cũng chỉ việc từ bỏ, không níu giữ nữa.
+buông tha|Thả ra, không quấy nhiễu hay giữ lại nữa.
+buông thõng|Để rủ thẳng xuống một cách tự nhiên, không gồng giữ.
+buồng|Gian nhỏ ngăn kín trong nhà; cũng chỉ cả chùm quả chuối hay cau.
+buồng lái|Khoang dành cho người lái ngồi điều khiển máy bay, tàu thủy hay ô tô.
+buốt|Đau hay lạnh thấm sâu, tựa như bị châm vào da thịt.
+búp bê|Đồ chơi hình người, thường là bé gái, làm bằng nhựa hoặc vải.
+bút bi|Cây bút đầu có hòn bi nhỏ xíu lăn ra mực khi viết.
+bút chì|Bút có ruột than chì bọc gỗ hoặc nhựa, nét viết tẩy xóa được.
+bút dạ|Bút có đầu bằng dạ thấm mực, nét đậm, thường để viết bảng.
+bút danh|Tên riêng người viết dùng khi đăng tác phẩm, thay cho tên thật.
+bút lông|Bút có đầu bằng chùm lông mềm, dùng để vẽ hay viết thư pháp.
+bút máy|Bút có ngòi kim loại và ống chứa mực bên trong, nét thanh nét đậm.
+bút mực|Bút viết bằng mực nước, thường chỉ bút máy có ngòi và ống mực.
+bút thử điện|Dụng cụ hình chiếc bút, có đèn sáng lên khi chạm vào chỗ có điện.
+bút vẽ|Bút dùng để vẽ tranh, thường có đầu cọ mềm để chấm màu.
+bừa bãi|Lộn xộn, vương vãi khắp nơi, không có trật tự hay chừng mực.
+bừa bộn|Đồ đạc vứt lung tung khắp nơi, chưa được dọn dẹp.
+bữa ăn|Lần ăn trong ngày vào giờ nhất định.
+bữa cơm|Bữa ăn có cơm, thường là lúc cả gia đình quây quần cùng ăn.
+bữa tiệc|Bữa ăn lớn nhiều món, mời nhiều người tới dự để mừng một dịp.
+bức tranh|Tác phẩm vẽ màu trên giấy, vải hay tường, thường lồng khung để treo.
+bức xúc|Bực tức, khó chịu dồn nén trước điều cho là bất công, vô lí.
+bực bội|Khó chịu, cáu kỉnh trong người vì điều không vừa ý hay vì nóng nực.
+bực dọc|Khó chịu và cáu gắt, thể hiện ra lời nói, thái độ.
+bực mình|Khó chịu, không vừa lòng vì việc gì trái ý.
+bực tức|Tức giận dồn nén vì bị xúc phạm hay bị làm trái ý.
+bước|Đưa chân tới chỗ khác để di chuyển; cũng chỉ một giai đoạn công việc.
+bước chân|Mỗi lần nhấc và đặt chân khi đi, cùng tiếng hay dấu vết để lại.
+bước đầu|Giai đoạn mở đầu của một quá trình hay công việc.
+bước đi|Cách đặt chân di chuyển; cũng chỉ một quyết định có tính toán.
+bước ngoặt|Thời điểm thay đổi lớn, làm sự việc chuyển hẳn sang hướng khác.
+bước tiến|Một lần tiến lên phía trước, thường nói về sự tiến bộ rõ rệt.
+bươm bướm|Côn trùng có cánh rộng nhiều màu sắc, bay chập chờn hút mật hoa.
+bươn chải|Vất vả xoay xở làm ăn để kiếm sống.
+bứt phá|Vượt lên mạnh mẽ, thoát khỏi giới hạn cũ.
+bứt rứt|Khó chịu, không yên trong người hay trong lòng.
+bưu cục|Điểm giao dịch nhỏ của ngành bưu chính, nhận gửi thư và hàng hóa.
+bưu điện|Ngành hoặc nơi nhận chuyển thư từ, gói hàng và các dịch vụ liên lạc.
+bưu kiện|Gói hàng được gửi đi qua bưu điện hoặc dịch vụ chuyển phát.
+bưu tá|Người làm ở bưu điện, đi đưa thư và hàng đến tận nhà.
+bưu thiếp|Tấm thiếp có in hình, viết lời nhắn ngắn để gửi qua bưu điện.
+ca cao|Bột từ hạt một loại cây nhiệt đới, dùng pha đồ uống, làm bánh kẹo.
+ca hát|Cất giọng hát nói chung, để giải trí hoặc biểu diễn.
+ca khúc|Một bài hát trọn vẹn gồm phần lời và giai điệu.
+ca múa|Hát và múa kết hợp, thường trong các buổi biểu diễn văn nghệ.
+ca ngợi|Nói hoặc viết lời khen, đề cao người hay việc tốt đẹp.
+ca nhạc|Tiết mục hát kèm nhạc đệm, thường nói về chương trình biểu diễn giải trí.
+ca nô|Xuồng nhỏ gắn máy, chạy nhanh trên sông, hồ hoặc ven biển.
+ca từ|Phần lời trong một bài hát, tách khỏi phần nhạc.
+cà chua|Quả mọng màu đỏ khi chín, vị chua nhẹ, dùng nấu ăn hoặc ăn sống.
+cà cuống|Bọ sống dưới nước, con đực có tinh dầu thơm dùng làm gia vị.
+cà kheo|Đôi cây sào có chỗ gác chân, đứng lên để bước đi trên cao.
+cà pháo|Loại cà quả nhỏ tròn, màu trắng xanh, thường muối để ăn.
+cà rốt|Củ màu cam thuôn dài, giòn ngọt, thường đem xào, nấu canh hay ép nước.
+cà tím|Quả vỏ tím bóng, ruột trắng xốp, thường đem nướng mỡ hành, xào hay om.
+cà vạt|Dải vải dài thắt nút ở cổ áo sơ mi, buông xuống trước ngực.
+cả tin|Quá dễ tin lời người khác, thường vì thế mà bị lừa.
+cá biển|Các loài cá sống ở vùng nước mặn ngoài biển khơi.
+cá bống|Cá nhỏ thân tròn dài, đầu to, sống ở đáy sông, ao hoặc ven biển.
+cá bơn|Cá thân dẹt, hai mắt nằm cùng một bên, sống sát đáy biển.
+cá chạch|Cá nhỏ thân tròn dài, da trơn nhớt, sống trong bùn ao ruộng.
+cá chép|Cá nước ngọt vảy to ánh vàng, miệng có râu, thường nuôi trong ao.
+cá chỉ vàng|Cá biển nhỏ thân dẹt có sọc vàng dọc thân, thường phơi làm khô.
+cá chiên|Món cá được rán trong dầu nóng đến khi vàng giòn.
+cá chim|Cá biển mình dẹt hình thoi, thịt trắng chắc, hay đem rán hoặc hấp.
+cá chình|Cá thân dài trơn như rắn, da nhớt, sống ở sông hoặc biển, thịt béo.
+cá cơm|Cá biển nhỏ xíu đi thành đàn, thường dùng làm nước mắm hay kho rim.
+cá đối|Cá thân thon dài, lưng xám, sống ở cửa sông và ven biển.
+cá đồng|Các loại cá nhỏ sống ở ruộng, ao, mương ngoài đồng.
+cá đuối|Cá biển mình dẹt xòe rộng như cánh diều, đuôi dài mảnh như roi.
+cá heo|Thú biển thông minh, mõm dài, sống theo đàn, thở bằng phổi.
+cá hồi|Cá thịt màu cam hồng, sống ở biển và bơi ngược sông để đẻ trứng.
+cá hồng|Cá biển có thân và vảy màu đỏ hồng, thịt trắng.
+cá hộp|Cá nấu sẵn đóng kín trong lon, giữ được lâu, mở ra ăn ngay.
+cá kho|Món cá rim nhỏ lửa với nước mắm, đường cho thấm, nước sánh mặn ngọt.
+cá kiếm|Cá biển lớn có mỏ trên dài và nhọn như lưỡi gươm.
+cá lăng|Cá sông cỡ lớn, da trơn không vảy, đầu dẹt, có râu.
+cá lóc|Cách gọi miền Nam của cá quả, loài cá đồng mình tròn, đầu dẹp.
+cá mập|Cá biển lớn, răng sắc, vây lưng nhô cao, săn mồi dữ.
+cá mè|Cá nước ngọt mình dẹp, vảy trắng bạc, nhiều xương dăm, hay nuôi trong ao.
+cá mòi|Cá biển nhỏ thân dẹt, nhiều mỡ, thường được đóng hộp.
+cá mú|Cá biển thân to, miệng rộng, sống quanh rạn đá, thịt chắc.
+cá ngừ|Cá biển lớn thân thon chắc, bơi nhanh, thịt đỏ sẫm.
+cá ngựa|Cá biển nhỏ bơi thẳng đứng, đầu cong giống đầu ngựa, đuôi cuộn để bám.
+cá nhà táng|Loài cá voi lớn có đầu to vuông, săn mực dưới biển sâu.
+cá nhân|Từng người riêng lẻ, đặt trong quan hệ với tập thể và xã hội.
+cá nheo|Cá nước ngọt da trơn, miệng rộng, có hai râu dài trên mép.
+cá nóc|Cá có thể phình bụng tròn khi gặp nguy, nội tạng chứa chất độc.
+cá nục|Cá biển nhỏ thân tròn thon, lưng xanh, thường kho hoặc chiên.
+cá quả|Cá nước ngọt thân tròn dài, đầu dẹt như rắn, sống ở ao hồ, ruộng.
+cá rô|Cá nước ngọt nhỏ, vảy cứng, vây có gai, sống ở ao ruộng.
+cá rô phi|Cá nước ngọt thân dẹt, lớn nhanh, thường được nuôi trong ao hồ.
+cá sấu|Bò sát lớn mõm dài, da sần, sống ở sông đầm, rất dữ.
+cá tai tượng|Cá nước ngọt thân dẹt, tròn rộng như tai voi, vảy to.
+cá tầm|Cá nước lạnh mõm nhọn, mình có hàng vảy cứng, được nuôi lấy thịt, trứng.
+cá thu|Cá biển thân thon dài, da trơn có vằn, thịt chắc ít xương.
+cá tính|Nét riêng trong tính cách làm người này khác người kia.
+cá tra|Cá da trơn nước ngọt, thân dài, thường nuôi bè ở miền Tây Nam Bộ.
+cá trắm|Cá nước ngọt thân dài tròn, vảy to, thường nuôi ở ao hồ.
+cá trắm cỏ|Loại cá trắm ăn cỏ, lưng màu xanh nâu, thường nuôi trong ao.
+cá trê|Cá da trơn nước ngọt, đầu dẹt, có râu, sống trong bùn.
+cá trích|Cá biển nhỏ thân dẹt, sống thành đàn lớn, thường ướp muối hoặc đóng hộp.
+cá tuyết|Cá biển vùng nước lạnh, thịt trắng, gan dùng làm dầu bổ.
+cá vàng|Cá cảnh họ hàng với cá chép, thân thường ánh cam, vàng hay đỏ.
+cá voi|Thú biển khổng lồ thở bằng phổi, nổi lên lấy hơi qua lỗ trên đầu.
+cá vược|Cá thân dài, miệng rộng, sống ở vùng nước lợ cửa sông.
+các tông|Giấy dày cứng, thường có lớp gợn sóng, dùng làm thùng hộp.
+cách|Lối hoặc phương thức làm một việc; còn có nghĩa ở xa nhau một khoảng.
+cách âm|Ngăn không cho tiếng ồn truyền qua tường, cửa.
+cách biệt|Tách rời hẳn nhau về khoảng cách hay hoàn cảnh sống.
+cách điện|Ngăn dòng điện đi qua, thường nhờ lớp vật liệu như nhựa, sứ.
+cách nhiệt|Ngăn hoặc làm giảm sự truyền nóng lạnh qua vật.
+cách thức|Trình tự và phương pháp cụ thể để tiến hành một việc.
+cách xa|Ở xa nhau một khoảng lớn về không gian.
+cài đặt|Đưa phần mềm vào máy và thiết lập để dùng được.
+cải bắp|Rau có lá cuộn chặt thành bắp tròn, thường luộc, xào hoặc muối.
+cải củ|Rau có củ trắng dài, vị hơi cay, thường nấu canh hoặc muối.
+cải cúc|Rau lá xẻ, mùi thơm hắc, thường nấu canh hoặc ăn lẩu.
+cải lương|Lối kịch hát dân tộc ra đời ở miền Nam, thường có bài vọng cổ.
+cải thảo|Rau bẹ trắng dài, lá xếp lớp thành bắp thuôn, thường nấu canh, muối chua.
+cải thìa|Rau nhỏ có cuống bẹ trắng dày, lá xanh đậm, thường xào hoặc luộc.
+cải thiện|Làm cho tình hình, đời sống trở nên tốt hơn trước.
+cải tiến|Sửa đổi cách làm hay công cụ để đạt hiệu quả cao hơn.
+cải xoong|Rau thân mềm mọng nước, lá tròn nhỏ, mọc nơi ẩm, thường nấu canh.
+cãi cọ|Cãi nhau qua lại, thường vì chuyện vặt.
+cãi nhau|Đôi co qua lại vì bất đồng, bên nào cũng khăng khăng giữ ý mình.
+cãi vã|Cãi nhau gay gắt, kéo dài, lời lẽ nặng nề.
+cái gì|Lời hỏi dùng khi chưa rõ đó là vật hay việc nào.
+cái tôi|Ý thức về bản thân mình, thường gắn với lòng tự trọng hay tự cao.
+cam đoan|Khẳng định chắc nịch, nhận phần trách nhiệm nếu lời mình nói ra không đúng.
+cam kết|Hứa một cách chính thức sẽ làm đúng điều đã thỏa thuận.
+cam quýt|Gọi chung các loại quả có múi, vỏ thơm tinh dầu như cam, chanh, bưởi.
+cam sành|Giống cam vỏ dày sần, màu xanh vàng, ruột cam đậm, vị ngọt chua.
+cam thảo|Cây có rễ vị ngọt đậm, phơi khô dùng làm thuốc hay pha nước uống.
+cảm biến|Bộ phận nhận biết nhiệt, ánh sáng hay chuyển động rồi chuyển thành tín hiệu.
+cảm động|Xúc động trong lòng trước việc làm hay tình cảm tốt đẹp.
+cảm giác|Điều cơ thể hoặc tâm trí nhận thấy, như nóng, lạnh, vui, buồn.
+cảm hứng|Trạng thái hứng khởi thúc đẩy sáng tác hay làm việc.
+cảm kích|Biết ơn sâu sắc trước sự giúp đỡ hay tấm lòng của người khác.
+cảm mến|Thấy quý và muốn gần gũi ai đó vì nết người hay việc họ làm.
+cảm nghĩ|Điều cảm thấy và suy nghĩ về một sự việc, thường được nói ra.
+cảm nhận|Nhận biết bằng giác quan hoặc bằng cảm xúc trong lòng.
+cảm phục|Kính trọng và khâm phục vì tài năng hay đức độ của ai.
+cảm thấy|Nhận ra trong người hay trong lòng một trạng thái nào đó.
+cảm thông|Đặt mình vào chỗ người khác để hiểu nỗi khó của họ mà không trách.
+cảm tình|Mối thiện ý, ưa thích nhẹ nhàng dành cho ai hay điều gì.
+cảm tưởng|Ấn tượng ban đầu còn lại sau khi xem, nghe hay trải qua việc gì.
+cảm ứng|Nhận biết và đáp lại khi được chạm vào, thường nói về màn hình.
+cảm xúc|Những rung động bên trong như vui, buồn, giận, sợ trước một việc.
+cám dỗ|Lôi kéo, khêu gợi ham muốn khiến người ta làm điều không nên.
+camera|Thiết bị ghi hình bằng ống kính, dùng quay phim, chụp ảnh hoặc giám sát.
+can đảm|Dám đối mặt với nguy hiểm, khó khăn mà không sợ hãi.
+can ngăn|Khuyên và cản không cho người khác làm điều không hay.
+can thiệp|Xen vào việc của người khác hay một sự việc để tác động.
+cản trở|Chắn ngang hay gây vướng víu khiến người khác hoặc công việc khó đi tiếp.
+cạn kiệt|Hết sạch, không còn gì, thường nói về tài nguyên, sức lực.
+càng cua|Đôi chân trước to khỏe có kẹp của con cua.
+cảng|Khu bến lớn cho tàu thuyền cập vào bốc dỡ hàng và đón trả khách.
+cáng đáng|Nhận lấy và gánh vác một phần việc hay trách nhiệm.
+canh cải|Món canh nấu từ rau cải, thường với tôm hoặc thịt băm.
+canh giữ|Trông chừng một nơi hay vật để ngăn kẻ lạ lọt vào hay lấy mất.
+canh tác|Làm đất, gieo trồng và chăm sóc cây trên đồng ruộng.
+cành lá|Những cành và lá của cây, nói chung.
+cảnh báo|Báo trước cho biết có nguy hiểm để đề phòng.
+cảnh giác|Để ý dè chừng, sẵn sàng phát hiện điều bất thường hay mưu gian.
+cảnh quan|Toàn bộ phong cảnh của một vùng, gồm thiên nhiên và công trình.
+cảnh tượng|Quang cảnh hay sự việc diễn ra trước mắt, gây ấn tượng mạnh.
+cảnh vật|Cảnh và sự vật xung quanh mà mắt nhìn thấy.
+cánh|Bộ phận giúp chim, côn trùng hay máy bay bay được trên không.
+cánh buồm|Tấm vải hay tấm bạt căng trên cột thuyền, đón gió để đẩy thuyền đi.
+cánh cửa|Tấm ván hoặc khung đóng mở được để che lối ra vào.
+cánh diều|Chiếc diều bay trên trời, thường làm bằng giấy và nan tre.
+cánh đồng|Khoảng đất rộng lớn để trồng trọt, thường là ruộng lúa.
+cánh gà|Phần cánh chặt từ con gà, nhiều da, thường được chiên giòn hoặc nướng.
+cánh hoa|Từng mảnh mỏng, thường có màu, xếp quanh nhụy để làm nên bông hoa.
+cánh quạt|Các lá quay của quạt hay máy để tạo gió hoặc lực đẩy.
+cánh rừng|Một khoảng rừng rộng lớn, cây cối mọc dày.
+cánh tay|Phần tay chạy từ bả vai xuống tới cổ tay, gập được ở khuỷu.
+cạnh tranh|Đua tranh với bên khác để giành khách, thị trường hay phần thắng.
+canxi|Chất khoáng có nhiều trong xương và sữa, giúp xương răng chắc khỏe.
+cao bồi|Người cưỡi ngựa chăn bò trên đồng cỏ Bắc Mỹ, thường đội mũ rộng vành.
+cao cả|Lớn lao và đáng kính về tinh thần, đạo đức.
+cao cấp|Ở bậc cao, chất lượng tốt và thường đắt tiền.
+cao đẳng|Bậc học sau phổ thông, thấp hơn đại học.
+cao điểm|Khoảng thời gian hoạt động dồn dập nhất, như giờ đi làm, tan tầm.
+cao giá|Có giá bán cao hơn mức thường, đắt tiền.
+cao hứng|Đang lúc hứng khởi dâng cao, thường làm điều ngẫu hứng.
+cao kều|Cao vổng lên quá khổ, dáng mảnh khảnh, chân tay dài lòng khòng.
+cao lớn|Cao và to khỏe về thân hình.
+cao ngất|Cao vượt lên rất cao, nhìn như chạm trời.
+cao nguyên|Vùng đất rộng, nằm cao và tương đối bằng phẳng.
+cao ốc|Tòa nhà nhiều tầng ở thành phố, dùng làm văn phòng hay căn hộ.
+cao quý|Đáng nể trọng vì mang giá trị tinh thần lớn, như tấm lòng, việc làm.
+cao ráo|Có dáng người cao, thon gọn và ưa nhìn.
+cao siêu|Sâu xa, vượt ngoài tầm hiểu biết thông thường.
+cao su|Cây thân gỗ trồng lấy mủ, chế thành chất dẻo đàn hồi.
+cao tay|Giỏi, khéo léo trong cách xử lý hơn người.
+cao tầng|Gồm nhiều tầng xếp chồng lên, thường nói về nhà ở hay khối văn phòng.
+cao thủ|Người có tài nghệ, kỹ năng vượt trội trong một lĩnh vực.
+cao thượng|Có lòng rộng lượng, vượt lên trên sự hơn thua nhỏ nhen.
+cao tốc|Chạy với tốc độ cao, thường nói về loại đường lớn dành cho ô tô.
+cao trào|Đoạn căng thẳng, dồn dập lên đỉnh của câu chuyện, trận đấu hay phong trào.
+cao tuổi|Đã sống nhiều năm, ở tuổi già.
+cao vút|Cao vươn thẳng lên, thường nói về cây cối hay giọng hát.
+cào cào|Côn trùng giống châu chấu, thân thon dài, nhảy giỏi, sống ở bãi cỏ.
+cạo đầu|Dùng dao cạo hết tóc trên đầu cho sát da.
+cạo trọc|Cạo sạch không còn sợi tóc nào, để đầu nhẵn bóng.
+cáp điện|Dây dẫn điện lớn gồm nhiều sợi, bọc vỏ cách điện.
+cáp quang|Dây dẫn chứa sợi thủy tinh mảnh, truyền dữ liệu bằng xung ánh sáng.
+cáp treo|Buồng nhỏ treo trên dây cáp, chở người lên núi hoặc vượt sông.
+cát bụi|Cát và bụi bay trong không khí; cũng chỉ kiếp người nhỏ nhoi, phù du.
+cát vàng|Cát có màu vàng, thường dùng trong xây dựng.
+cau có|Mặt nhăn lại, mày chau, lời lẽ gắt gỏng vì bực bội.
+cau mày|Nhíu hai lông mày lại, tỏ vẻ không vui hoặc đang suy nghĩ.
+càu nhàu|Nói lầm bầm, phàn nàn mãi không dứt vì điều trái ý.
+cáu gắt|Nổi nóng, nói năng gay gắt với người khác.
+cáu kỉnh|Hay bực bội, dễ nổi cáu, khó chịu với mọi người.
+cay mắt|Mắt bị xót, chảy nước như khi gặp khói hay hành.
+cày bừa|Cày và bừa đất cho tơi để chuẩn bị gieo trồng.
+cày cấy|Làm việc đồng áng như lật đất, cấy mạ để trồng lúa.
+cày cuốc|Làm đất bằng cày, cuốc; cũng chỉ việc làm lụng cật lực để kiếm sống.
+cắm đầu|Cúi gằm mà làm hay mà đi, chẳng màng gì khác xung quanh.
+cắm trại|Dựng lều ở ngoài trời để vui chơi, nghỉ lại.
+cặm cụi|Chăm chú làm việc một cách cần mẫn, lặng lẽ.
+căn bản|Thuộc phần gốc rễ, cốt lõi làm nền cho mọi thứ khác.
+căn chỉnh|Điều chỉnh cho đúng vị trí, cân đối, thẳng hàng.
+căn cước|Thẻ ghi thông tin nhận dạng của công dân, do nhà nước cấp.
+căn dặn|Dặn dò kỹ lưỡng, nhắc đi nhắc lại nhiều lần.
+căn hộ|Phần nhà ở riêng biệt trong một tòa nhà chung cư.
+cằn cỗi|Khô xấu, nghèo chất, cây cối khó mọc, thường nói về đất.
+cằn nhằn|Nói đi nói lại mãi để trách móc, tỏ ý không vừa lòng.
+cắn môi|Lấy răng cắn vào môi, thường khi cố kìm nén cảm xúc.
+cắn rứt|Day dứt, ân hận không yên trong lòng.
+căng buồm|Giương cánh buồm cho no gió để con thuyền ra khơi.
+căng mọng|Đầy nước, tròn căng, thường nói về quả chín hay đôi môi.
+căng thẳng|Ở trạng thái lo âu, áp lực, tinh thần bị dồn ép.
+cẳng chân|Đoạn chân nằm giữa đầu gối và mắt cá, mặt trước là ống quyển.
+cẳng tay|Phần tay từ khuỷu tay xuống đến cổ tay.
+cặp đôi|Hai người đi đôi với nhau, thường là một đôi đang yêu nhau.
+cắt bỏ|Cắt đi và loại hẳn phần không cần hay bị hỏng.
+cắt bớt|Cắt đi một phần cho ít đi hoặc ngắn đi.
+cắt đứt|Chấm dứt hẳn quan hệ hay liên lạc; còn có nghĩa làm rời hẳn ra.
+cắt giảm|Giảm bớt số lượng, chi phí hay nhân sự.
+cắt lời|Chen ngang làm dừng lời khi người khác đang nói.
+cắt ngang|Làm gián đoạn đột ngột một việc hay câu chuyện đang diễn ra.
+cắt ngắn|Cắt cho ngắn lại, thường nói về tóc, quần áo hay thời gian.
+cắt nghĩa|Giải thích cho rõ ý nghĩa hay lý do của điều gì.
+cắt tỉa|Cắt bớt cành lá hay lông tóc cho gọn và đẹp.
+cắt tóc|Cắt ngắn và tạo kiểu cho mái tóc.
+cắt xén|Cắt bớt một cách tùy tiện làm thiếu hụt đi.
+cầm chắc|Biết chắc chắn sẽ được, nắm phần thắng trong tay.
+cầm chân|Giữ lại, kìm không cho đi hoặc tiến lên.
+cầm lái|Điều khiển tay lái của xe hay tàu thuyền.
+cầm lòng|Nén được xúc động, thường dùng với ý không thể kìm được.
+cầm tay|Nắm lấy bàn tay của người khác, thường để tỏ tình cảm.
+cẩm chướng|Loài hoa cánh xếp dày, mép cánh có khía như răng cưa, hay cắm bình.
+cẩm nang|Sách nhỏ tóm tắt những điều cần biết về một việc.
+cẩm thạch|Đá có vân hoa, mặt bóng, dùng lát nền hay tạc tượng.
+cân bằng|Ở thế ngang nhau, không lệch về bên nào.
+cân đo|Xác định cân nặng, kích cỡ; cũng có nghĩa tính kĩ hơn thiệt.
+cân đối|Hài hòa về tỉ lệ giữa các phần, không bên nào lệch hay thừa thiếu.
+cân nặng|Số đo cho biết một người hay vật nặng bao nhiêu khi đặt lên cân.
+cân nhắc|Đắn đo lợi và hại của từng hướng trước khi chọn hay nói ra.
+cân xứng|Tương xứng về kích thước hay mức độ giữa hai bên.
+cần câu|Thanh dài dẻo, đầu buộc sợi cước có lưỡi móc mồi để bắt cá.
+cần cù|Chịu khó làm việc đều đặn, bền bỉ không ngại vất vả.
+cần tây|Rau có cuống dài, mùi thơm nồng, thường xào hoặc ép nước.
+cần thiết|Không thể thiếu, phải có để làm được việc gì.
+cần trục|Máy có cánh tay dài dùng để nâng hạ vật nặng.
+cẩn thận|Chú ý kỹ để tránh sai sót hay nguy hiểm.
+cẩn trọng|Làm và nói đều dè dặt, xem xét kỹ từng bước để khỏi sơ suất.
+cận cảnh|Cảnh quay hay ảnh chụp ở khoảng gần, thấy rõ chi tiết.
+cận kề|Ở sát ngay bên cạnh, rất gần về chỗ hoặc thời gian.
+cấp bách|Gấp gáp, cần giải quyết ngay không thể chậm trễ.
+cấp cao|Ở bậc cao trong hệ thống tổ chức hay trình độ.
+cấp dưới|Người hay bộ phận ở bậc thấp hơn, chịu sự chỉ đạo.
+cấp độ|Mức, bậc được phân chia theo cao thấp.
+cấp nước|Đưa nước đến cho người dùng hoặc nơi cần.
+cấp thiết|Rất cần và phải làm sớm vì đáp ứng nhu cầu thiết yếu.
+cấp tốc|Rất nhanh, gấp, làm trong thời gian ngắn.
+cấp trên|Người hay cơ quan ở bậc cao hơn, có quyền giao việc, chỉ đạo.
+cập nhật|Bổ sung thông tin, dữ liệu mới để không bị lạc hậu.
+cất cánh|Rời mặt đất bay lên, thường nói về máy bay.
+cất công|Bỏ công sức, thời gian ra để làm việc gì.
+cất giấu|Đưa vật vào nơi khuất, kín để không ai thấy hay tìm được.
+cất giữ|Để đồ vào chỗ an toàn và bảo quản lâu dài cho khỏi hư, mất.
+cất tiếng|Bắt đầu nói hay hát thành tiếng.
+cất trữ|Để dành lại một lượng lớn để dùng về sau.
+câu cá|Dùng cần, dây và lưỡi có mồi để bắt cá.
+câu chuyện|Chuyện được kể lại, có đầu có cuối.
+câu đố|Lời tả bóng gió một vật hay sự việc, đưa ra để người khác đoán.
+câu đối|Cặp câu cân xứng về ý và lời, thường viết treo vào dịp Tết.
+câu hát|Một đoạn lời ngắn được hát lên trong bài hát.
+câu hỏi|Câu nói để hỏi, cần người khác trả lời.
+câu lạc bộ|Nhóm người cùng sở thích tụ họp sinh hoạt với nhau.
+câu thơ|Một dòng của bài thơ, nhịp và số chữ theo thể thơ hoặc tự do.
+câu văn|Một câu trong bài văn, diễn đạt trọn một ý.
+cầu cạn|Cầu xây trên đất liền, vượt qua đường hay khu dân cư.
+cầu cảng|Bến chìa ra mặt nước cho tàu áp mạn neo buộc, xếp dỡ hàng.
+cầu chì|Bộ phận có dây chì tự đứt khi quá tải để bảo vệ mạch điện.
+cầu cống|Cầu và cống nói chung, các công trình giao thông, thủy lợi.
+cầu cứu|Kêu xin người khác giúp đỡ khi gặp nạn.
+cầu dao|Công tắc lớn có lưỡi gạt, dùng đóng ngắt điện cho cả nhà.
+cầu hôn|Ngỏ lời xin cưới ai đó làm vợ hay chồng.
+cầu khỉ|Cầu bắc tạm bằng một thân tre hay thân cây, thường thấy ở miền Nam.
+cầu lông|Môn chơi dùng vợt nhẹ đánh qua lưới một quả cầu có chùm lông.
+cầu mong|Thầm ước, khấn nguyện cho điều mình mong sẽ thành sự thật.
+cầu nối|Ai hoặc cái gì đứng giữa giúp hai bên liên lạc, gần gũi nhau.
+cầu phao|Cầu tạm làm bằng phao nổi ghép lại trên sông.
+cầu tàu|Phần sàn bắc từ bờ ra để tàu thuyền đậu và đón khách.
+cầu thang|Dãy bậc nối các tầng, thường có tay vịn, để đi lên xuống trong nhà.
+cầu thang máy|Buồng tự động chạy lên xuống chở người giữa các tầng.
+cầu thủ|Người chơi trong các môn bóng, thường là bóng đá.
+cầu toàn|Đòi hỏi mọi việc phải hoàn hảo, không sai sót.
+cầu treo|Cây cầu có sàn móc vào các dây cáp lớn căng giữa hai trụ.
+cầu trượt|Đồ chơi có cầu thang leo lên và một máng nghiêng để trẻ trượt xuống.
+cầu xin|Van nài xin người khác giúp hay tha thứ.
+cấu tạo|Cách các bộ phận được sắp đặt và ghép lại để làm nên một vật.
+cấu trúc|Kiểu sắp xếp, liên kết các phần trong một tổng thể như câu, bài văn.
+cậu bé|Đứa trẻ trai còn nhỏ, thường chưa tới tuổi dậy thì.
+cây bông|Cây lấy xơ trắng trong quả làm sợi; cũng là cây hoa ở miền Nam.
+cây bụi|Cây thấp, nhiều cành mọc từ gốc, không có thân chính rõ.
+cây cảnh|Cây trồng để làm đẹp, thường trong chậu.
+cây cỏ|Thực vật nói chung, gồm cả cây lớn lẫn cỏ nhỏ.
+cây con|Cây còn non, mới mọc hay mới ươm.
+cây cổ thụ|Cây sống lâu năm, thân to, tán rộng.
+cây cối|Các loài cây mọc ở một vùng, nói chung.
+cây điều|Cây ăn quả có hạt hình quả thận mọc ngoài quả, rang lên ăn.
+cây gỗ|Cây thân to cứng, trồng hay khai thác để lấy gỗ.
+cây leo|Loài cây thân mảnh, quấn hay bám tua vào giàn, tường để vươn lên cao.
+cây rơm|Đống rơm lớn chất cao quanh một cây cột ở nông thôn.
+cây số|Cách gọi quen của một nghìn mét đường; cũng chỉ cột mốc ghi quãng đường.
+cây trồng|Các loài cây người ta gieo và chăm bón để thu hoạch, như lúa, ngô.
+cây xanh|Cây có lá xanh, trồng để lấy bóng mát và làm đẹp.
+cây xăng|Trạm bán xăng dầu ven đường, có cột bơm để đổ nhiên liệu cho xe.
+cha mẹ|Bố và mẹ nói chung, những người sinh ra hay nuôi dạy con.
+cha nuôi|Người đàn ông nhận nuôi con của người khác như con mình.
+chà bông|Món thịt rim khô rồi đánh tơi thành sợi xốp, hay ăn với cháo, xôi.
+chà là|Quả nhỏ thuôn màu nâu, ngọt lịm, của một loài cọ vùng sa mạc.
+chà xát|Cọ đi cọ lại mạnh trên bề mặt.
+chả cá|Món thịt cá giã nhuyễn trộn gia vị, nặn thành miếng rồi chiên hay nướng.
+chả giò|Món cuốn nhân thịt băm, miến trong bánh tráng rồi chiên giòn, tức nem rán.
+chả lụa|Món thịt heo giã nhuyễn gói lá chuối luộc, miền Bắc gọi là giò lụa.
+chai|Đồ đựng chất lỏng cổ hẹp, bằng thủy tinh, nhựa; cũng chỉ chỗ da cứng.
+chải chuốt|Chăm chút kỹ vẻ ngoài, ăn mặc cầu kỳ.
+chạm khắc|Dùng dụng cụ khắc hình, hoa văn lên gỗ, đá.
+chạm mặt|Tình cờ gặp mặt nhau.
+chạm trán|Đối đầu trực diện với đối phương.
+chạm trổ|Khắc tỉa hình hoa văn tinh xảo, thường có chỗ khoét thủng.
+chán nản|Mất hết hứng thú, không còn muốn cố gắng.
+chán ngán|Chán và mệt mỏi, ngao ngán trước một tình cảnh kéo dài.
+chán ngắt|Tẻ nhạt, đơn điệu, không có gì gây hứng thú.
+chán ngấy|Chán vì đã gặp hay phải chịu quá nhiều lần.
+chang chang|Nắng gay gắt và chói, trải đều khắp nơi.
+chàng|Từ chỉ người đàn ông trẻ, thường dùng với ý thân mật.
+chàng rể|Người đàn ông là chồng của con gái trong nhà.
+chàng trai|Người con trai trẻ tuổi, đã lớn.
+chanh|Quả nhỏ vỏ xanh, rất chua, dùng vắt lấy nước pha uống hay nêm.
+chao đảo|Nghiêng ngả lắc lư, không đứng vững.
+chào cờ|Đứng nghiêm nhìn lá quốc kỳ và hát quốc ca trong một buổi lễ.
+chào đón|Đón tiếp ai với thái độ vui mừng.
+chào đời|Ra khỏi bụng mẹ, cất tiếng khóc đầu tiên, tức là được sinh ra.
+chào hàng|Giới thiệu và mời khách mua hàng.
+chào hỏi|Chào và hỏi han nhau khi gặp mặt.
+chào mào|Chim nhỏ đầu có chỏm lông nhọn dựng đứng, má đỏ, giọng hót trong.
+chào mời|Mời khách ghé mua hoặc dùng thử, thường thấy ở người bán hàng.
+chào mừng|Bày tỏ niềm vui khi đón một người hay sự kiện.
+chảo|Dụng cụ nấu ăn lòng nông, miệng rộng, dùng để rán, xào.
+cháo hoa|Món cháo trắng nấu từ gạo, nhừ hạt, không có thức ăn kèm.
+chạo tôm|Món tôm giã nhuyễn quấn quanh khúc mía rồi nướng.
+cháu chắt|Con cháu các đời sau nói chung.
+cháu họ|Cháu trong họ hàng, không phải cháu ruột.
+cháu ngoại|Con của con gái mình.
+cháu nội|Con của con trai mình.
+chảy xiết|Chảy mạnh và nhanh, thường nói về dòng nước.
+chạy|Bước thật nhanh, nhanh tới mức có lúc hai chân cùng rời mặt đất.
+chạy bàn|Người phục vụ bưng bê ở quán ăn, nhà hàng.
+chạy đua|Ganh đua quyết liệt để vượt lên trước, thường giữa các bên ngang sức.
+chạy nhảy|Chạy và nhảy nô đùa, thường nói về trẻ em.
+chạy thi|Thi xem ai chạy nhanh hơn để về đích trước.
+chắc ăn|Chắc chắn sẽ thành công, không có rủi ro.
+chắc chắn|Không thể sai hay thay đổi được; cũng nói về vật vững vàng, khó lay.
+chắc nịch|Rắn chắc, căng đầy, thường nói về thân hình.
+chăm chỉ|Bền bỉ, siêng năng làm việc hay học hành, không lười biếng.
+chăm chút|Săn sóc tỉ mỉ từng chút một.
+chăm học|Ham học, tự giác ngồi vào bàn ôn bài và làm bài tập.
+chăm lo|Để tâm lo liệu mọi mặt cho người thân hay một việc chung.
+chăm nom|Trông nom, săn sóc người hay vật.
+chăm sóc|Lo lắng, giúp đỡ cho người hay vật được khỏe mạnh, đầy đủ.
+chằm chằm|Nhìn thẳng một chỗ không rời mắt, không chớp.
+chăn nuôi|Nuôi vật như lợn, bò, gà, vịt để lấy thịt, trứng, sữa hay sức kéo.
+chăn thả|Thả gia súc ra đồng cho ăn cỏ và trông giữ.
+chằng chịt|Đan xen dày đặc, rối vào nhau.
+chặng đường|Một đoạn đường hay một giai đoạn đã đi qua.
+chắp tay|Áp hai bàn tay vào nhau trước ngực để vái hay cầu nguyện.
+chắp vá|Ghép nối tạm bợ, không liền lạc.
+chắt chiu|Dành dụm từng chút một cách tiết kiệm.
+chắt lọc|Chọn lấy những phần tinh túy, bỏ phần không cần.
+chặt|Dùng dao, rìu bổ mạnh làm đứt rời; còn có nghĩa khít, không lỏng.
+chặt chẽ|Liên kết kỹ, khít khao, không lỏng lẻo hay sơ hở.
+châm ngôn|Câu nói ngắn gọn đúc kết lẽ sống, dùng để răn mình.
+chấm bài|Đọc và cho điểm bài làm của học sinh.
+chấm câu|Đặt dấu câu vào chỗ thích hợp trong văn viết.
+chấm công|Ghi lại ngày giờ, số buổi đi làm của mỗi người để tính lương.
+chấm dứt|Kết thúc, làm cho ngừng hẳn.
+chấm điểm|Đánh giá và cho điểm một bài thi hay phần thi.
+chấm hết|Kết thúc hẳn, không còn gì tiếp theo, như dấu chấm cuối bài.
+chấm hỏi|Dấu cong có chấm ở dưới, đặt cuối câu hỏi.
+chấm than|Dấu câu hình gạch đứng trên một chấm, đặt cuối câu cảm, câu cầu khiến.
+chấm thi|Chấm các bài trong một kỳ thi, thường theo đáp án chung.
+chậm|Có tốc độ thấp, cần nhiều thời gian hơn mức bình thường.
+chậm chạp|Có cử động hoặc phản ứng rất lâu, thiếu nhanh nhẹn.
+chậm rãi|Thong thả, từ tốn, không vội vàng trong lời nói hay việc làm.
+chậm trễ|Không kịp đúng thời hạn, để việc bị muộn so với dự định.
+chân|Phần cơ thể từ hông trở xuống, đỡ thân mình khi đứng và bước đi.
+chân chống|Thanh sắt gắn ở xe đạp, xe máy, gạt xuống để dựng xe.
+chân dung|Tranh vẽ hoặc ảnh chụp tập trung thể hiện khuôn mặt, dáng vẻ một người.
+chân đất|Đi lại mà không mang giày dép, để bàn chân chạm thẳng xuống đất.
+chân gà|Phần bàn chân của con gà, thường luộc, nướng hay ngâm làm món ăn.
+chân giò|Phần chân của con lợn, nhiều da và gân, thường dùng để hầm hay luộc.
+chân lông|Chỗ gốc sợi lông cắm vào da, nơi lông mọc ra.
+chân mày|Dải lông mọc thành vệt cong ngay phía trên hốc mắt.
+chân núi|Vùng đất dưới cùng quanh ngọn núi, nơi sườn dốc bắt đầu vươn lên.
+chân tay|Cả tay lẫn chân nói chung, bộ phận để cử động, làm lụng.
+chân thành|Thật lòng, xuất phát từ tình cảm thật, không giả dối.
+chân thật|Ngay thẳng, thật thà, không giả tạo hay dối trá trong tính cách.
+chân thực|Đúng với thực tế, không thêm thắt, thường nói về lời kể, hình ảnh.
+chân tình|Có tình cảm thật lòng, đằm thắm và gần gũi với người khác.
+chân tóc|Đoạn sợi tóc nằm sát da đầu, nơi tóc mới mọc ra.
+chân trời|Đường xa tít nơi mặt đất hay mặt biển như chạm vào bầu trời.
+chân váy|Váy mặc từ eo trở xuống, may rời, không liền với phần áo.
+chân vịt|Bộ cánh quạt quay dưới nước ở đuôi tàu, thuyền máy, đẩy tàu tiến lên.
+chần chờ|Kéo dài thời gian, cứ để đó chưa chịu bắt tay vào làm ngay.
+chần chừ|Do dự, ngần ngại nên chưa quyết định hay chưa hành động.
+chấn động|Gây xôn xao, bàng hoàng lớn trong dư luận; còn có nghĩa rung chuyển mạnh.
+chấp|Nhường trước đối thủ một lợi thế; cũng chỉ việc để bụng lỗi người khác.
+chấp nhận|Đồng ý nhận hoặc coi một điều là được, dù có thể chưa vừa ý.
+chấp thuận|Đồng ý cho phép một đề nghị, thường là từ người có thẩm quyền.
+chập choạng|Lúc trời nhá nhem sắp tối; cũng tả dáng đi không vững.
+chập chờn|Lúc có lúc không, không đều, thường nói về giấc ngủ hay ánh sáng.
+chập chững|Tả dáng đi chưa vững, bước ngắn, dễ ngã, như trẻ mới tập đi.
+chập tối|Lúc trời vừa nhá nhem tối, đèn bắt đầu được bật lên.
+chất béo|Thành phần ngậy trong mỡ, dầu ăn, bơ, cho cơ thể nhiều năng lượng.
+chất bổ|Chất có trong thức ăn giúp nuôi dưỡng và tăng cường sức khỏe.
+chất dẻo|Vật liệu nhân tạo dễ đúc thành hình, thường gọi là nhựa.
+chất đạm|Nhóm chất bổ cơ thể cần để lớn lên, tạo cơ và lành vết thương.
+chất đống|Dồn nhiều thứ đè lên nhau thành đống lớn, thường lộn xộn.
+chất đốt|Vật liệu đem đốt để lấy nhiệt, như củi, than, dầu hay khí đốt.
+chất khí|Dạng vật chất không có hình dạng riêng, dễ lan tỏa, như không khí.
+chất liệu|Vật liệu làm nên một sản phẩm, như vải, gỗ, da hay kim loại.
+chất lỏng|Thứ chảy được, mang hình của vật đựng nó, như nước, dầu, sữa.
+chất lượng|Mức tốt xấu, hơn kém của một sản phẩm, dịch vụ hay công việc.
+chất phác|Mộc mạc, thật thà, giản dị, không màu mè bề ngoài.
+chất rắn|Thứ giữ nguyên hình dạng, cầm nắm được, không chảy, như đá, gỗ, sắt.
+chất tẩy rửa|Sản phẩm như xà phòng, bột giặt, dùng để làm sạch vết bẩn.
+chất xám|Trí tuệ, sức suy nghĩ sáng tạo của con người, nói theo lối hình ảnh.
+chất xơ|Thành phần có trong rau, củ, quả và ngũ cốc, giúp tiêu hóa tốt hơn.
+chật chội|Có không gian hẹp, không đủ chỗ để đi lại hay sinh hoạt thoải mái.
+chật cứng|Đầy kín đến mức không còn chỗ trống nào, thường nói về người hay xe.
+chật hẹp|Có diện tích nhỏ, không rộng rãi, thường nói về nhà cửa, đường đi.
+chật vật|Vất vả, khó khăn, phải cố gắng nhiều mới làm được hay sống được.
+châu báu|Vàng bạc, ngọc ngà và các vật quý có giá trị lớn.
+châu chấu|Côn trùng xanh hay nâu, chân sau dài khỏe để bật nhảy, hay phá lúa.
+châu thổ|Vùng đất thấp bằng phẳng nơi sông đổ ra biển, do phù sa bồi nên.
+chầu chực|Chờ đợi lâu và mệt mỏi để được gặp ai hoặc được việc gì.
+chậu|Vật đựng miệng loe rộng, đáy nông, dùng rửa mặt, ngâm đồ hay trồng cây.
+chậu cảnh|Chậu để trồng cây, hoa làm cảnh, thường bằng sứ, đất nung.
+chậu hoa|Chậu nhỏ chứa đất để trồng hoa, thường đặt ở ban công hay sân nhà.
+che chắn|Đặt vật gì phía trước để ngăn gió, nắng, bụi hay sự va đập.
+che chở|Bảo vệ, đùm bọc người yếu hơn khỏi nguy hiểm hay khó khăn.
+che đậy|Giấu kín điều không hay, không để người khác biết.
+che khuất|Chắn phía trước làm cho vật khác không còn nhìn thấy được.
+che kín|Phủ hoặc chắn kín toàn bộ, không để hở chỗ nào.
+che phủ|Trải lên trên một bề mặt rộng, như mây phủ trời hay rừng phủ đồi.
+chè xanh|Lá chè tươi nấu nước uống, nước màu xanh vàng, vị chát.
+chen chân|Cố len vào được một chỗ đông người hay một lĩnh vực nhiều cạnh tranh.
+chen chúc|Đông nghịt, người với người sát rạt vào nhau trong chỗ chật hẹp.
+chen lấn|Xô đẩy người khác ở chỗ đông để giành chỗ hay lên trước.
+chén|Cốc nhỏ không quai để uống trà; ở miền Nam cũng chỉ cái bát.
+cheo leo|Ở nơi cao, chênh vênh và hiểm trở, dễ rơi ngã.
+chèo|Gạt nước cho thuyền đi; cũng chỉ một loại kịch hát dân gian miền Bắc.
+chèo thuyền|Điều khiển thuyền đi trên mặt nước bằng sức người qua mái chèo.
+chép|Viết lại đúng theo nội dung đã có hoặc theo lời người khác đọc.
+chế biến|Biến nguyên liệu thô như thịt, rau, gỗ thành món ăn hay hàng hóa.
+chếch|Hơi lệch về một phía, không thẳng hướng.
+chênh|Cao thấp hay nhiều ít không ngang nhau, có khoảng cách giữa hai bên.
+chênh lệch|Có khoảng cách, hơn kém nhau giữa hai mức như giá, tuổi, độ cao.
+chênh vênh|Ở thế không vững, như treo lơ lửng trên cao, dễ nghiêng ngã.
+chi chít|Dày đặc, nhiều và sát nhau, như chữ viết hay vết đánh dấu.
+chi nhánh|Đơn vị trực thuộc một công ty, đặt ở nơi khác trụ sở chính.
+chi phí|Số tiền tiêu tốn cho một việc, như đi lại, ăn ở hay sản xuất.
+chi phối|Có tác động quyết định đến hoạt động hay suy nghĩ của người, vật khác.
+chi tiết|Điểm nhỏ trong một vật hay câu chuyện; còn có nghĩa tỉ mỉ từng phần.
+chi tiêu|Dùng tiền để mua sắm, trả cho các nhu cầu hằng ngày.
+chi trả|Đưa tiền thanh toán cho một khoản phải trả, như lương hay bảo hiểm.
+chỉ bảo|Dạy cho người khác cách làm và điều nên tránh, thường từ người từng trải.
+chỉ dẫn|Nói hay ghi rõ cho người khác biết đường đi, cách làm từng bước.
+chỉ đường|Nói hoặc vạch lối đi cho người khác đến được nơi cần tới.
+chị dâu|Người vợ của anh trai mình, trong nhà thường gọi là chị.
+chị em|Người chị cùng em trai hay em gái; cũng chỉ phụ nữ nói chung.
+chị gái|Người phụ nữ sinh trước mình trong số anh chị em, mình gọi bằng chị.
+chia cắt|Tách rời một vùng, một khối liền thành các phần riêng biệt.
+chia chác|Chia nhau phần lợi, thường là của cải không chính đáng.
+chia đều|Phân thành các phần bằng nhau, không ai nhiều ai ít.
+chia hết|Chia được mà không còn số dư, như mười chia cho hai.
+chia phần|Phân ra từng suất cho mỗi người hưởng, như chia bánh, chia lãi.
+chia sẻ|Cùng hưởng, cùng gánh với ai; cũng chỉ việc kể ra cho người khác.
+chia tay|Rời xa nhau, tạm biệt; cũng chỉ việc chấm dứt quan hệ yêu đương.
+chiếc|Từ đặt trước tên đồ vật hay xe cộ để chỉ từng cái riêng lẻ.
+chiêm ngưỡng|Ngắm nhìn với lòng thán phục và say mê.
+chiên|Làm chín món ăn trong chảo dầu mỡ nóng, miền Bắc gọi là rán.
+chiền chiện|Chim nhỏ lông nâu ở đồng cỏ, hay vừa bay vút lên vừa hót.
+chiến thắng|Giành phần thắng trong trận đánh hay cuộc thi đấu.
+chiêng|Nhạc cụ đồng hình đĩa tròn, gõ ngân vang, thường dùng trong lễ hội.
+chiêu thức|Đòn thế trong võ thuật; cũng chỉ mánh khóe, cách làm khôn khéo.
+chiều cao|Độ dài đo từ chân lên tới đỉnh của người hay một vật.
+chiều chuộng|Làm theo ý thích, nuông chiều và quan tâm hết mực đến ai.
+chiều dài|Kích thước theo cạnh dài nhất hay theo hướng dọc của vật.
+chiều dọc|Hướng đi từ trên xuống dưới hoặc từ đầu đến cuối của một vật.
+chiều hướng|Xu thế biến đổi của sự việc, tốt lên hay xấu đi.
+chiều lòng|Làm theo ý thích của ai đó cho họ được vừa lòng.
+chiều ngang|Hướng nằm ngang, từ bên trái sang bên phải, vuông góc với chiều dọc.
+chiều sâu|Độ dài tính từ miệng hay mặt nước xuống tận đáy, như của giếng, ao.
+chiều tà|Lúc buổi chiều sắp hết, mặt trời sắp lặn.
+chiều tối|Khoảng thời gian giao giữa cuối buổi chiều và đầu buổi tối.
+chiếu|Tấm đan bằng cói hay nhựa để trải nằm; cũng chỉ việc rọi sáng.
+chiếu phim|Đưa phim lên màn ảnh cho mọi người cùng xem.
+chiếu sáng|Rọi ánh sáng vào làm cho một nơi sáng rõ.
+chim cánh cụt|Chim không bay được, lông đen trắng, bơi giỏi, sống ở vùng lạnh giá.
+chim cắt|Chim săn mồi cỡ nhỏ, cánh nhọn, bay rất nhanh, bổ nhào bắt chim khác.
+chim chóc|Từ gọi chung các loài chim lớn nhỏ.
+chim cút|Chim nhỏ mình tròn, đuôi ngắn, thường nuôi lấy thịt và trứng nhỏ có đốm.
+chim di cư|Loài chim bay đi nơi khác theo mùa để tránh rét và kiếm ăn.
+chim gáy|Chim giống bồ câu, cổ có vòng chấm trắng như hạt cườm, kêu cúc cu.
+chim gõ kiến|Chim có mỏ thẳng cứng, bám thân cây gõ lấy sâu kiến trong vỏ cây.
+chim ruồi|Chim tí hon, vỗ cánh rất nhanh để lơ lửng một chỗ hút mật hoa.
+chim sâu|Chim rất nhỏ, nhanh nhẹn, hay chuyền cành bắt sâu trên cây.
+chim sẻ|Chim nhỏ lông nâu xám, mỏ ngắn khỏe, hay sống quanh nhà, nhặt hạt thóc.
+chim ưng|Chim săn mồi bay nhanh, mắt tinh, mỏ quặp, móng vuốt sắc để bắt mồi.
+chìm đắm|Bị cuốn hoàn toàn vào một cảm xúc hay thú vui, quên hết xung quanh.
+chìm nghỉm|Chìm hẳn xuống, mất hút không còn thấy dấu vết.
+chín|Số liền sau tám; cũng tả quả đã mềm ngọt hay món đã nấu xong.
+chín muồi|Đã đủ điều kiện, đến đúng lúc để làm hay để xảy ra.
+chín vàng|Đã chín và ngả sang màu vàng, như lúa ngoài đồng hay đồ rán.
+chỉnh|Sửa lại cho đúng, cho ngay ngắn hoặc cho vừa.
+chỉnh sửa|Sửa những chỗ chưa đúng, chưa hợp để hoàn thiện, như bài viết, ảnh.
+chỉnh tề|Ăn mặc gọn gàng, ngay ngắn, đúng kiểu cách.
+chính đáng|Hợp lẽ phải, đúng đắn và được thừa nhận.
+chính hiệu|Đúng của nơi sản xuất gốc, không phải hàng nhái hay hàng giả.
+chính tả|Quy tắc viết đúng chữ, đúng dấu theo chuẩn chung của một ngôn ngữ.
+chính thức|Được công nhận theo đúng thủ tục, quy định.
+chính xác|Đúng hoàn toàn với thực tế, không sai lệch chút nào.
+chịu|Gánh nhận điều nặng nhọc, thiệt thòi; cũng nói khi đành bó tay, bất lực.
+chịu chơi|Dám bỏ tiền và công sức cho thú vui, không tính toán.
+chịu đựng|Cố chấp nhận khó khăn, đau đớn mà không than phiền hay bỏ cuộc.
+chịu khó|Siêng năng, cần cù, không ngại vất vả.
+chịu nhiệt|Không nứt, chảy hay méo khi gặp nóng, thường nói về vật liệu, đồ dùng.
+chịu thua|Nhận là mình thua, không tiếp tục tranh đấu nữa.
+cho dù|Từ nối nêu một điều mà dù xảy ra vẫn không đổi được kết quả.
+cho điểm|Chấm và ghi điểm đánh giá bài làm, phần thi hay màn trình diễn.
+cho mượn|Để người khác dùng tạm đồ của mình, hẹn sau sẽ trả lại.
+cho phép|Đồng ý để người khác được làm một việc.
+cho thuê|Để người khác dùng nhà, đồ vật của mình một thời gian và lấy tiền.
+cho vay|Đưa tiền cho người khác dùng, hẹn ngày trả lại, có khi kèm lãi.
+chó bông|Thú nhồi bông hình con chó; cũng chỉ chó nhỏ lông dài xù như bông.
+chó cảnh|Chó nuôi để chơi và làm bạn, thường nhỏ và được chải chuốt.
+chó mực|Con chó lông đen tuyền từ đầu tới đuôi, tên gọi theo màu mực.
+chó rừng|Thú hoang họ chó sống trong rừng, thường kiếm ăn theo bầy.
+chó sói|Thú dữ họ chó, sống thành bầy, săn mồi, hay tru vào ban đêm.
+chó xù|Chó lông dài và xoăn rậm, thường được cắt tỉa tạo kiểu, nuôi làm cảnh.
+choán|Chiếm hết hoặc chiếm phần lớn chỗ, không gian hay thời gian.
+choàng|Khoác áo hay khăn lên vai; cũng chỉ việc vòng tay ôm lấy ai.
+choáng ngợp|Sững sờ, bị lấn át trước cảnh hay điều gì quá lớn, quá đẹp.
+chọc ghẹo|Trêu đùa, nói hay làm để người khác bực hoặc ngượng.
+chọc thủng|Đâm làm thủng; cũng chỉ việc phá vỡ hàng phòng thủ đối phương.
+chọc trời|Rất cao, như vươn tới tận trời, thường nói về nhà cao tầng.
+chói chang|Nắng gắt và sáng rực, làm khó mở mắt.
+chói lọi|Sáng rực rỡ, tỏa khắp nơi, thường nói về ánh sáng hay vinh quang.
+chói mắt|Sáng quá mạnh làm mắt khó chịu, không nhìn thẳng được.
+chói tai|Có âm thanh quá to hoặc the thé, nghe rất khó chịu.
+chòm sao|Nhóm ngôi sao trên trời hợp thành một hình nhất định, có tên gọi riêng.
+chòm xóm|Những người, những nhà sống gần nhau trong cùng một xóm.
+chỏm|Phần nhô cao trên cùng của một vật, như đỉnh núi hay đỉnh đầu.
+chọn lọc|Lựa kỹ, giữ lại những cái tốt và loại bỏ cái kém.
+chọn lựa|Cân nhắc để lấy ra một hay vài thứ theo ý mình trong nhiều thứ.
+chong chóng|Đồ chơi có cánh mỏng gắn trên que, quay tròn khi gặp gió.
+chòng chành|Nghiêng ngả, lắc lư không vững, thường khi thuyền gặp sóng.
+chóng vánh|Nhanh gọn, xong trong thời gian rất ngắn.
+chót vót|Cao vượt hẳn lên giữa khoảng không, thường nói về đỉnh núi, ngọn cây.
+chỗ dựa|Người hay điều mình có thể dựa vào để được giúp đỡ và yên tâm.
+chỗ đứng|Vị trí, vai trò được thừa nhận trong một tập thể hay lĩnh vực.
+chỗ ở|Nơi một người sống, ăn ngủ hằng ngày.
+chỗ trống|Phần không gian hay vị trí còn bỏ không, chưa có ai hay vật gì.
+chốc lát|Quãng thời gian ngắn ngủi, vừa đủ chớp mắt vài cái.
+chổi|Đồ dùng có cán, đầu bó sợi hay lông, dùng để quét bụi rác.
+chổi lông|Chổi làm bằng lông gà hay sợi mềm, dùng để phủi bụi đồ đạc.
+chổi tre|Chổi làm bằng cành tre nhỏ bó lại, dùng để quét sân, quét đường.
+chối bỏ|Không chịu nhận, gạt bỏ trách nhiệm hay sự thật.
+chôm chôm|Quả vỏ thường đỏ, mọc đầy râu mềm, cùi trắng trong ngọt dịu, bám hạt.
+chôn chân|Đứng yên tại chỗ, không nhúc nhích hay đi đâu được.
+chồn|Thú nhỏ mình dài, chân ngắn, đuôi rậm, hay lẻn vào bắt gà.
+chông gai|Những khó khăn, gian khổ phải vượt qua trên đường tới mục tiêu.
+chồng|Bạn đời nam trong cuộc hôn nhân; còn có nghĩa xếp đè lên nhau.
+chồng chất|Dồn lại lớp lớp, ngày càng nhiều, thường nói về khó khăn, công việc.
+chồng chéo|Đan xen, trùng lặp lên nhau, gây rối và khó phân biệt.
+chồng con|Người chồng và các con, tức gia đình riêng của một phụ nữ.
+chống ẩm|Ngăn hơi nước, độ ẩm làm hư hỏng đồ vật.
+chống chọi|Cố gắng đương đầu, chịu đựng trước khó khăn hay thiên tai.
+chống lại|Đối đầu, phản đối hoặc ngăn cản lại một người hay việc gì.
+chốt|Thanh nhỏ cài ngang để giữ cửa; cũng chỉ việc quyết định dứt điểm.
+chột dạ|Bỗng lo sợ, giật mình vì thấy có điều liên quan đến mình.
+chơ vơ|Trơ trọi một mình giữa khoảng rộng, không nơi nương tựa.
+chờ đợi|Ở yên hoặc để thời gian trôi cho tới khi người hay việc gì đến.
+chờ mong|Trông ngóng, mong mỏi điều mình hy vọng sẽ đến.
+chợ cóc|Chợ nhỏ tự phát họp ven đường, bán chủ yếu đồ ăn hằng ngày.
+chợ nổi|Chợ họp ngay trên sông, kẻ bán người mua đều đứng trên ghe thuyền.
+chợ trời|Chợ ngoài trời, bán đồ cũ, đồ linh tinh, không có quầy sạp cố định.
+chơi chữ|Dùng từ đồng âm, nhiều nghĩa hay nói lái để câu nói vui, ý ngầm.
+chơi đùa|Vui chơi, nô đùa với nhau, thường nói về trẻ con.
+chơi trội|Cố làm khác người để nổi bật, gây chú ý.
+chớm nở|Vừa mới bắt đầu nở hay nảy sinh, như nụ hoa hay tình cảm.
+chớp|Vệt sáng lóe trên trời lúc dông; còn có nghĩa nhắm mở mắt thật nhanh.
+chớp mắt|Khép hai mi lại rồi mở ra ngay; cũng chỉ khoảnh khắc ngắn ngủi.
+chớp nhoáng|Nhanh như ánh chớp, xảy ra và kết thúc trong thoáng chốc.
+chu đáo|Cẩn thận, tận tình, lo liệu đầy đủ mọi việc.
+chu vi|Tổng độ dài đường bao quanh một hình.
+chủ chốt|Giữ phần then chốt, thiếu đi thì cả bộ máy khó vận hành.
+chủ đề|Vấn đề chính mà một bài viết, cuộc trò chuyện hay tác phẩm xoay quanh.
+chủ động|Tự mình làm, tự quyết định, không chờ người khác thúc giục.
+chủ nhà|Người làm chủ ngôi nhà, đứng ra tiếp đón khách hay cho thuê.
+chủ nhân|Người làm chủ, có quyền sở hữu một vật hay một nơi.
+chủ nhật|Ngày cuối trong tuần lễ, sau thứ bảy, thường được nghỉ làm.
+chủ quán|Người đứng ra mở và trông coi một quán ăn, quán nước.
+chủ yếu|Chính, chiếm phần lớn và quan trọng hơn cả.
+chú bé|Cậu bé trai còn nhỏ tuổi, cách gọi thân mật.
+chú họ|Người đàn ông họ hàng bên nội, ngang vai em của cha.
+chú rể|Người đàn ông đang làm lễ cưới, sắp thành chồng.
+chú tâm|Tập trung hết sự chú ý và suy nghĩ vào một việc.
+chú thích|Dòng ghi thêm dưới trang hay cạnh hình để làm rõ một chữ, chi tiết.
+chú trọng|Đặc biệt quan tâm, coi trọng một mặt nào đó.
+chú ý|Để tâm theo dõi, nhìn hay nghe kỹ một điều gì.
+chua cay|Mỉa mai, gay gắt làm người nghe đau lòng; cũng chỉ vị chua và cay.
+chua ngọt|Có vị chua lẫn ngọt hòa quyện, như món sườn xào hay nước chấm.
+chuẩn|Đúng với quy định hay mẫu mực, không sai lệch.
+chuẩn bị|Sắp xếp, lo liệu trước những gì cần cho một việc sắp làm.
+chuẩn mực|Điều được coi là mẫu, là thước đo để mọi người làm theo.
+chuẩn xác|Đúng và chặt chẽ, không sai sót, thường nói về lời lẽ, số liệu.
+chúc|Gửi lời mong điều tốt đẹp tới người khác, nhất là dịp lễ, Tết.
+chúc mừng|Vui lây và nói lời khen tặng khi người khác có tin vui, thành công.
+chúc phúc|Cầu mong hạnh phúc, điều lành cho ai, thường trong đám cưới.
+chúc thọ|Mừng người cao tuổi và mong họ sống lâu, khỏe mạnh.
+chúc tụng|Nói nhiều lời chúc và ca ngợi, thường trong lễ hay tiệc.
+chùm|Nhiều quả, hoa hay vật nhỏ mọc chung một cuống hoặc kết lại với nhau.
+chun|Dây cao su co giãn để buộc tóc, luồn cạp quần, cách gọi miền Bắc.
+chung|Thuộc về hay dùng cho nhiều người, không riêng của ai.
+chung chung|Không cụ thể, không rõ ràng, chỉ nói một cách đại khái.
+chung cư|Tòa nhà nhiều tầng chia thành nhiều căn hộ cho nhiều gia đình ở.
+chung kết|Vòng đấu cuối cùng của giải, nơi phân định ai giành ngôi nhất.
+chung sống|Cùng sống với nhau dưới một mái nhà hay trong một nơi.
+chuối xanh|Quả chuối chưa chín, vỏ xanh, vị chát, thường dùng để nấu món ăn.
+chuồn|Lẳng lặng bỏ đi để trốn tránh, không cho ai biết.
+chuồn chuồn|Côn trùng mình mảnh, bốn cánh mỏng trong, mắt to, hay lượn sát mặt nước.
+chuông|Vật kim loại rỗng hình chén úp, gõ hay lắc kêu vang để báo hiệu.
+chuông gió|Vật trang trí gồm nhiều ống nhỏ treo, kêu leng keng khi có gió.
+chuồng trại|Nơi xây dựng để nuôi nhốt gia súc, gia cầm.
+chuột|Loài gặm nhấm đuôi dài; cũng chỉ vật cầm tay để điều khiển máy tính.
+chuột bạch|Chuột nhỏ lông trắng, mắt đỏ, thường nuôi làm thí nghiệm hay làm cảnh.
+chuột chù|Thú nhỏ mõm dài nhọn, có mùi hôi, hay chạy dọc chân tường.
+chuột chũi|Thú nhỏ sống dưới đất, chân trước to như xẻng để đào hang, mắt kém.
+chuột cống|Chuột to sống ở cống rãnh, nơi ẩm thấp và bẩn.
+chuột đồng|Chuột sống ngoài đồng ruộng, ăn lúa, thường được bắt về làm thịt.
+chuột lang|Thú gặm nhấm nhỏ mình tròn, không đuôi, nuôi làm cảnh hay thí nghiệm.
+chuột nhà|Chuột sống trong nhà ở, hay cắn phá đồ đạc và lương thực.
+chuột nhắt|Loài chuột rất nhỏ, hay chạy luồn lách trong nhà.
+chuột túi|Thú có túi ở bụng để nuôi con, chân sau khỏe, đi bằng cách nhảy.
+chụp|Bấm máy ghi lại hình ảnh; còn có nghĩa vồ nhanh để bắt lấy.
+chụp ảnh|Dùng máy ảnh hay điện thoại để lưu lại hình người, cảnh vật.
+chụp đèn|Vật che quanh bóng đèn, làm dịu ánh sáng và hướng ánh sáng xuống.
+chụp hình|Ghi lại hình ảnh người hay cảnh vật, cách nói quen dùng ở miền Nam.
+chuyên cần|Chăm chỉ, đều đặn, không bỏ buổi, thường nói về việc học.
+chuyên chở|Dùng xe, tàu, thuyền đưa hàng hóa hay hành khách đi tới nơi khác.
+chuyên gia|Người am hiểu sâu, có trình độ cao về một lĩnh vực.
+chuyên môn|Kiến thức và kỹ năng riêng của một ngành nghề.
+chuyên mục|Phần riêng trên báo, đài, trang mạng dành cho một đề tài nhất định.
+chuyên nghiệp|Làm việc như một nghề chính, thành thạo và bài bản.
+chuyền bóng|Đưa bóng cho đồng đội trong khi thi đấu.
+chuyển|Dời người hay vật sang một chỗ, một trạng thái khác.
+chuyển biến|Đổi dần sang một trạng thái mới, tốt lên hay xấu đi.
+chuyển động|Thay đổi vị trí liên tục theo thời gian, không đứng yên.
+chuyển giao|Trao lại quyền, trách nhiệm hay công nghệ cho người khác tiếp nhận.
+chuyển hướng|Đổi hướng đi hay hướng làm, rẽ sang một ngả khác.
+chuyển khoản|Chuyển tiền từ tài khoản ngân hàng này sang tài khoản khác.
+chuyển nhà|Dời chỗ ở cùng đồ đạc sang một ngôi nhà khác.
+chuyển tiếp|Gửi tiếp tin nhắn cho người khác; cũng chỉ giai đoạn nối hai thời kỳ.
+chuyến bay|Một lượt máy bay đi từ nơi cất cánh tới nơi hạ cánh.
+chuyện phiếm|Những câu chuyện vu vơ, nói cho vui, không bàn việc gì quan trọng.
+chuyện trò|Hỏi han, kể chuyện qua lại với nhau cho vui, không cần chủ đề rõ.
+chữ cái|Kí hiệu cơ bản trong bảng chữ, dùng để ghép thành vần và từ.
+chữ nghĩa|Kiến thức sách vở, sự hiểu biết có được do học hành.
+chữ nổi|Hệ chữ gồm các chấm nổi để người khiếm thị đọc bằng cách sờ.
+chữ số|Kí hiệu dùng để viết các số, từ không đến chín.
+chữ thập|Hình gồm hai vạch thẳng cắt ngang nhau ở giữa, giống dấu cộng.
+chữ tín|Sự giữ lời hứa, đáng tin cậy trong quan hệ và làm ăn.
+chữ viết|Kí hiệu ghi lại lời nói; cũng chỉ nét chữ tay của một người.
+chưa từng|Chưa một lần nào làm hay xảy ra trước đó.
+chữa cháy|Dập tắt đám cháy; cũng chỉ việc xử lý tạm thời một việc gấp.
+chứa đựng|Bao hàm, có ở bên trong, thường nói về nội dung hay ý nghĩa.
+chức năng|Công việc, vai trò riêng mà một bộ phận hay một người đảm nhận.
+chưng cất|Đun cho chất lỏng bay hơi rồi làm lạnh để thu lại phần tinh khiết.
+chưng diện|Ăn mặc, trang điểm thật đẹp để khoe với người khác.
+chừng mực|Vừa phải, có giới hạn, không quá đà.
+chững chạc|Đứng đắn, điềm tĩnh, ra dáng người trưởng thành.
+chứng chỉ|Giấy chứng nhận đã học xong một khóa hay đạt một trình độ nào đó.
+chứng kiến|Tận mắt thấy một sự việc lúc nó đang diễn ra.
+chứng minh|Đưa ra lý lẽ, bằng chứng để chỉ ra điều gì là đúng.
+chứng minh thư|Thẻ tùy thân có ảnh, họ tên, ngày sinh, để chứng thực mình là ai.
+chứng nhận|Đứng ra xác nhận trên giấy tờ có dấu rằng điều gì đó là đúng.
+chứng tỏ|Cho thấy rõ, làm bằng chứng cho một điều.
+chứng từ|Giấy tờ như hóa đơn, phiếu thu chi làm bằng chứng cho một khoản tiền.
+chương trình|Toàn bộ nội dung sắp sẵn cho một buổi diễn, buổi phát sóng, khóa học.
+chướng mắt|Trông khó chịu, không vừa mắt, khiến người nhìn bực bội.
+chướng ngại|Vật cản hay khó khăn gây trở ngại trên đường đi.
+co ro|Thu người nhỏ lại, ngồi hay nằm cuộn tròn vì rét.
+co rúm|Co rút người hoặc mặt mũi lại vì sợ hãi hay đau đớn.
+cò trắng|Chim chân cao, cổ dài, lông trắng, hay lội ruộng bắt tôm cá.
+cỏ ba lá|Loài cỏ nhỏ, mỗi cuống mang ba lá chét tròn xếp quanh nhau.
+cỏ cây|Cỏ và cây nói chung, chỉ thế giới thực vật quanh ta.
+cỏ dại|Cỏ tự mọc hoang, không ai trồng, thường mọc lẫn với cây trồng.
+cỏ khô|Cỏ phơi khô, chất đống để dành cho trâu bò ăn lúc thiếu cỏ tươi.
+có duyên|Có nét đáng yêu, dễ gây thiện cảm khi nói, khi cười.
+có hạn|Chỉ đến một mức nhất định, không nhiều hay không kéo dài mãi.
+có hậu|Kết thúc tốt đẹp, người hiền được đền đáp, thường nói về truyện, phim.
+có hiếu|Hết lòng quan tâm, phụng dưỡng và kính trọng cha mẹ, ông bà.
+có ích|Mang lại điều tốt, giúp được việc cho người khác hay cho xã hội.
+có lợi|Đem lại phần hơn, điều thuận lợi cho bản thân hay cho một việc.
+có mặt|Đang ở tại một nơi nào đó, như trong buổi học, cuộc họp.
+có tài|Có khả năng giỏi giang hơn người về một mặt nào đó.
+có tiếng|Được nhiều người biết đến nhờ tài năng hay chất lượng.
+có tuổi|Đã bước sang tuổi già hoặc gần già, lối nói nhẹ nhàng lịch sự.
+có vẻ|Trông như là, dường như vậy khi nhìn bề ngoài.
+cọ rửa|Kỳ cọ và rửa sạch, như nồi niêu hay nhà tắm.
+cọc cạch|Cũ, xộc xệch, chạy ì ạch hay trục trặc, thường nói về xe cộ.
+coi nhẹ|Không coi là quan trọng, ít để ý đến.
+coi trọng|Đánh giá cao, quan tâm đặc biệt đến.
+compa|Dụng cụ có hai chân, một chân nhọn làm tâm, dùng để vẽ đường tròn.
+con bé|Đứa con gái còn nhỏ tuổi, cách gọi thân mật.
+con cả|Đứa con sinh đầu lòng, lớn tuổi nhất trong số anh chị em.
+con cái|Những đứa con trong nhà nói gộp, đặt trong mối quan hệ với cha mẹ.
+con cháu|Lớp con, lớp cháu và những đời nối tiếp sau trong một dòng họ.
+con cưng|Đứa con được bố mẹ thương yêu, nuông chiều đặc biệt.
+con đực|Con vật thuộc giống đực.
+con đường|Lối đi được làm ra để người và xe cộ đi lại.
+con gái|Người con là nữ của cha mẹ; cũng chỉ người nữ còn trẻ.
+con giáp|Một trong mười hai con vật tượng trưng cho các năm theo âm lịch.
+con lăn|Vật hình trụ quay quanh trục, dùng để lăn sơn hay đẩy vật nặng.
+con mắt|Mắt, có tròng đen và tròng trắng; cũng chỉ cách nhìn nhận sự việc.
+con một|Đứa con duy nhất trong nhà, không có anh chị em ruột.
+con người|Sinh vật biết suy nghĩ và lao động, cách gọi chung loài người.
+con nít|Trẻ nhỏ chưa lớn, cách gọi ở miền Nam.
+con nuôi|Con không do mình sinh ra nhưng được nhận về nuôi như con đẻ.
+con quay|Đồ chơi hình nón có trục, quay tít trên mặt phẳng.
+con rể|Chồng của con gái mình.
+con số|Số biểu thị lượng cụ thể, thường là kết quả tính đếm.
+con tim|Trái tim, thường nói về tình cảm, tình yêu của con người.
+con trai|Người con là nam của cha mẹ; cũng chỉ người nam còn trẻ.
+con trẻ|Trẻ em nói chung, cách gọi trìu mến.
+con trỏ|Mũi tên hay vạch nhấp nháy trên màn hình, chỉ chỗ đang thao tác.
+con út|Người con sinh sau cùng trong nhà, nhỏ tuổi hơn mọi anh chị.
+còn lại|Phần chưa dùng hết, chưa đi hết, vẫn còn đó.
+cỏn con|Rất nhỏ, ít ỏi, không đáng kể.
+cô dâu|Người phụ nữ đang làm lễ cưới, sắp thành vợ.
+cô đơn|Trạng thái một mình, thiếu người gần gũi để chia sẻ.
+cô gái|Người nữ trẻ tuổi, đã qua tuổi bé gái nhưng chưa đứng tuổi.
+cô lập|Tách riêng ra, không để tiếp xúc hay liên hệ với bên ngoài.
+cô nàng|Cách gọi thân mật, đôi khi hơi đùa, một người con gái trẻ.
+cổ áo|Phần của chiếc áo ôm quanh cổ người mặc.
+cổ chân|Chỗ nối bàn chân với ống chân, dễ bị trẹo khi ngã.
+cổ điển|Theo lối xưa đã thành mẫu mực, như nhạc, văn chương hay kiểu dáng.
+cổ đông|Cá nhân hay tổ chức có cổ phần, hưởng lời chịu lỗ theo công ty.
+cổ động viên|Người đến xem và hò reo ủng hộ đội hay vận động viên mình thích.
+cổ họng|Phần trong cổ, nối từ miệng xuống, nơi thức ăn và hơi thở đi qua.
+cổ tay|Chỗ nối bàn tay với cánh tay, nơi hay đeo đồng hồ, vòng tay.
+cổ thụ|Cây sống lâu năm, thân to, tán rộng, như cây đa đầu làng.
+cổ tích|Truyện kể dân gian có yếu tố kì ảo, thường truyền miệng từ xưa.
+cổ truyền|Có từ xưa và được giữ gìn, truyền lại qua nhiều đời.
+cổ vật|Đồ vật có từ thời xưa, được quý vì giá trị lịch sử, nghệ thuật.
+cổ vũ|Hò reo, động viên để tiếp thêm tinh thần cho người khác.
+cổ xưa|Thuộc về thời rất lâu về trước.
+cố chấp|Khăng khăng giữ ý mình, không chịu nghe hay thay đổi.
+cố công|Bỏ nhiều sức lực và thời gian để làm cho bằng được một việc.
+cố định|Giữ nguyên một chỗ hay một mức, không xê dịch, không thay đổi.
+cố đô|Thành phố từng làm kinh đô thời trước, nay còn cung điện, lăng tẩm cũ.
+cố gắng|Bỏ thêm sức lực, tâm trí để vượt khó và làm cho xong việc.
+cố tình|Có ý làm như vậy dù biết rõ, không phải do vô tình.
+cộc lốc|Nói năng ngắn cụt, thiếu mềm mỏng và lễ độ.
+cối xay|Hai thớt nặng chồng lên nhau, quay vòng để xát thóc hay nghiền hạt.
+công bằng|Đối xử đúng mực, ngang nhau với mọi người, không thiên vị.
+công bố|Chính thức thông báo rộng rãi một tin, kết quả hay quyết định.
+công chiếu|Chiếu phim cho công chúng xem, thường là lần ra mắt đầu tiên.
+công chúa|Con gái của nhà vua, hình ảnh quen thuộc trong truyện cổ tích.
+công chúng|Đông đảo người trong xã hội, như khán giả, độc giả của một tác phẩm.
+công chuyện|Việc cần làm hay cần lo liệu, cách nói thường ngày.
+công cốc|Bỏ sức ra làm mà rốt cuộc chẳng thu được gì.
+công cộng|Dành chung cho mọi người sử dụng, như công viên, nhà vệ sinh, thư viện.
+công cụ|Thứ trong tay giúp làm việc nhanh gọn hơn, như búa, kìm hay phần mềm.
+công dụng|Điều mà một vật hay một chất làm được khi đem ra dùng.
+công đoạn|Mỗi bước trong một quy trình làm ra sản phẩm, như cắt, may, đóng gói.
+công khai|Cho mọi người cùng thấy, cùng biết, không che giấu hay làm lén.
+công lao|Sức lực, đóng góp mà một người bỏ ra cho việc chung, đáng ghi nhận.
+công nghệ|Phương pháp, kĩ thuật và máy móc dùng để sản xuất, xử lý công việc.
+công nghiệp|Ngành dùng máy móc trong nhà máy để làm ra hàng hóa hàng loạt.
+công nhân|Người làm việc ở nhà máy hay công trường, thường làm theo ca, nhận lương.
+công phu|Được làm kỹ lưỡng, mất nhiều thời gian và sự tỉ mỉ.
+công sở|Chỗ làm việc văn phòng của cơ quan hay công ty, theo giờ hành chính.
+công suất|Khả năng làm việc của máy hay nhà máy trong mỗi đơn vị thời gian.
+công tắc|Bộ phận dùng để đóng ngắt dòng điện, bật tắt đèn hay máy.
+công thức|Dãy kí hiệu toán học nêu một quy tắc; cũng chỉ cách làm món ăn.
+công trình|Cái được xây nên như nhà, cầu, đường; cũng chỉ một kết quả nghiên cứu.
+công trường|Khu đất đang thi công, có công nhân và máy móc xây dựng làm việc.
+công ty|Tổ chức kinh doanh do người góp vốn lập ra để làm ăn sinh lợi.
+công việc|Việc phải làm, thường là việc làm để kiếm sống.
+công viên|Khu vườn chung có cây xanh, lối đi, ghế đá để người dân thư giãn.
+công viên nước|Khu vui chơi có hồ bơi, máng trượt và các trò chơi dưới nước.
+cồng chiêng|Nhạc cụ bằng đồng hình đĩa tròn, gõ bằng dùi, thường gặp ở Tây Nguyên.
+cồng kềnh|To, choán chỗ và khó mang vác, thường nói về đồ đạc.
+cổng|Lối ra vào ở hàng rào hay tường bao, thường có cánh đóng mở.
+cổng chào|Cổng dựng ở lối vào làng, phố hay khu sự kiện để chào đón.
+cống hiến|Đóng góp sức lực, tài năng cho việc chung mà không tính toán.
+cộng đồng|Tập hợp người cùng sống chung hoặc có chung đặc điểm, quyền lợi.
+cộng sự|Người cùng làm chung một việc, thường sát cánh lâu dài với mình.
+cộng tác viên|Người làm việc cho một tổ chức theo từng đầu việc, không thuộc biên chế.
+cốt lõi|Phần chính yếu, làm nền tảng cho cả một vấn đề hay sự việc.
+cốt thép|Thanh thép đan thành khung rồi đổ bê tông lên để công trình chịu lực.
+cốt truyện|Chuỗi sự việc chính tạo nên nội dung của một câu chuyện hay bộ phim.
+cột cây số|Cột mốc nhỏ bên đường ghi khoảng cách tới các nơi.
+cột cờ|Cột cao dựng lên dùng để treo cờ.
+cột đèn|Cột dựng ven đường để mắc đèn chiếu sáng hoặc đèn giao thông.
+cột điện|Cột cao dựng dọc đường, thường bằng bê tông, để đỡ dây điện.
+cột gôn|Hai cột đứng hai bên khung thành, cùng xà ngang giữ lưới trên sân bóng.
+cột mốc|Cột đánh dấu ranh giới hay khoảng cách; cũng chỉ sự kiện đáng nhớ.
+cột thu lôi|Cột kim loại đặt trên cao để dẫn sét xuống đất, bảo vệ nhà cửa.
+cột trụ|Cột lớn đỡ mái nhà; cũng chỉ người làm chỗ dựa chính của tập thể.
+cơ bắp|Phần thịt chắc dưới da, co duỗi để cơ thể cử động và mang vác.
+cơ hội|Dịp thuận lợi đến đúng lúc để làm được một việc mong muốn.
+cơ ngơi|Nhà cửa, đất đai và tài sản gây dựng được của một gia đình.
+cơ sở|Cái làm nền tảng cho việc khác; cũng chỉ một điểm kinh doanh, làm việc.
+cơ thể|Toàn bộ thân thể của người hay con vật.
+cờ lê|Dụng cụ bằng thép có miệng ngàm, dùng để vặn chặt hay nới ốc.
+cờ tướng|Môn cờ hai người dùng quân tròn ghi chữ, bàn có sông ở giữa.
+cờ vua|Môn cờ trên bàn ô vuông đen trắng, thắng khi chiếu hết vua bên kia.
+cơi nới|Xây thêm, mở rộng nhà cửa ra ngoài phần đã có.
+cởi bỏ|Tháo ra và bỏ đi, thường nói về quần áo hay điều ràng buộc.
+cơm bình dân|Cơm bán theo suất với giá rẻ, có nhiều món cho khách chọn.
+cơm bữa|Thường xuyên xảy ra, lặp đi lặp lại như bữa ăn hằng ngày.
+cơm cháo|Cái ăn hằng bữa; cũng chỉ kết quả ra hồn, thường dùng khi chê.
+cơm cháy|Lớp cơm vàng giòn bám đáy nồi, thường đem chiên làm món ăn.
+cơm chiên|Món cơm đảo chảo với dầu, trứng, thịt, cách gọi ở miền Nam.
+cơm dừa|Phần thịt trắng béo bám bên trong vỏ quả dừa.
+cơm hộp|Suất cơm kèm thức ăn đựng sẵn trong hộp để mang đi.
+cơm lam|Món gạo nếp cho vào ống tre nướng trên lửa, thường có ở vùng núi.
+cơm nắm|Món cơm dẻo được nén chặt thành khối, thường chấm muối vừng.
+cơm nếp|Gạo nếp nấu chín như cơm, có vị dẻo và thơm.
+cơm nguội|Cơm nấu từ trước, đã để lâu nên nguội lạnh.
+cơm nước|Việc nấu nướng và ăn uống hằng ngày trong nhà.
+cơm rang|Món cơm nguội rang trên chảo với mỡ, trứng, cách gọi ở miền Bắc.
+cơm tấm|Cơm nấu từ gạo vỡ, thường ăn kèm sườn nướng, quen thuộc ở miền Nam.
+cù lao|Dải đất nổi giữa sông hoặc ven biển, cách gọi thường dùng ở miền Nam.
+củ ấu|Quả cây ấu mọc dưới nước, vỏ đen có hai sừng, luộc ăn bùi.
+củ cải|Loại củ thường màu trắng, thân dài, dùng nấu canh hay làm dưa muối.
+củ cải đường|Loại củ chứa nhiều đường, trồng ở xứ lạnh để chế biến đường ăn.
+củ hành|Phần gốc phình tròn của cây hành, dùng phi thơm hay nấu ăn.
+cũ mèm|Rất cũ, đã quá quen hay dùng lâu đến mức nhàm và sờn.
+cũ nát|Cũ lâu đến mức hư hỏng, rách hoặc mục nát.
+cũ rích|Quá cũ và nhàm, thường nói về chuyện hay ý tưởng đã nghe nhiều lần.
+cú mèo|Loài cú nhỏ có mặt tròn giống mèo, mắt to, săn mồi về đêm.
+cú sút|Một lần đá bóng mạnh, thường hướng về phía khung thành.
+cụ bà|Người phụ nữ cao tuổi, cách gọi với ý kính trọng.
+cụ già|Người đã già, nhiều tuổi, gọi với ý tôn trọng.
+cụ nội|Ông hoặc bà của cha mình, tức bậc trên ông bà nội.
+cua biển|Loài cua lớn sống ở biển hoặc nước lợ, vỏ cứng, càng to, thịt chắc.
+cua đồng|Loài cua nhỏ sống ở ruộng, thường giã lấy nước nấu canh.
+của cải|Tiền bạc, nhà đất và các thứ có giá trị mà một người sở hữu.
+của hồi môn|Tài sản cha mẹ cho con gái mang theo khi về nhà chồng.
+cúc vạn thọ|Loài hoa cánh xếp dày màu vàng hay cam, thường trưng vào dịp Tết.
+cục cưng|Cách gọi âu yếm người được yêu thương, chiều chuộng, thường là con nhỏ.
+cục tác|Tiếng kêu liên hồi của gà mái, thường sau khi đẻ trứng.
+cục tẩy|Miếng cao su mềm dùng để chà xóa vết bút chì trên giấy.
+cúi đầu|Hạ đầu xuống để chào, tỏ ý kính trọng hay vì xấu hổ.
+cụm từ|Vài từ ghép lại thành một nhóm có nghĩa nhưng chưa thành câu.
+cung cấp|Đưa đến, đáp ứng cho người khác những thứ họ cần.
+cung điện|Khu nhà lộng lẫy, rộng lớn dành cho vua và hoàng tộc ở.
+cung kính|Hết sức lễ phép và tôn trọng, thường với người trên hay thần thánh.
+cung trăng|Mặt trăng theo cách gọi thơ mộng, gắn với truyện chú Cuội, chị Hằng.
+cùng chung|Cùng nhau có, dùng hay chia sẻ một thứ.
+cùng nhau|Từ chỉ việc nhiều người làm một việc với nhau, không tách lẻ.
+củng cố|Làm cho vững chắc và bền hơn.
+cũng như|Từ dùng để so sánh ngang bằng hoặc nối thêm một ý tương tự.
+cuốc|Nông cụ có lưỡi sắt tra vào cán dài, bổ xuống để xới đất.
+cuộc đời|Toàn bộ quãng sống của một người từ lúc sinh ra tới khi mất.
+cuộc đua|Cuộc thi tốc độ xem ai về đích trước, hay sự tranh giành phần hơn.
+cuộc họp|Buổi nhiều người ngồi lại với nhau để bàn bạc và quyết định công việc.
+cuộc sống|Việc sống hằng ngày với mọi sinh hoạt, công việc và quan hệ.
+cuộc thi|Dịp tổ chức để nhiều người tranh tài, so xem ai giỏi hơn.
+cuộc vui|Dịp vui chơi, tụ tập, ăn uống cùng nhau.
+cuối cùng|Ở vị trí sau hết, không còn gì tiếp theo.
+cuối tuần|Những ngày thứ bảy, chủ nhật, lúc nhiều người được nghỉ làm, nghỉ học.
+cuồn cuộn|Dâng lên, chảy mạnh từng lớp nối tiếp, như nước lũ hay khói.
+cuốn hút|Có sức lôi kéo, làm người khác chú ý và thích thú.
+cuộn|Quấn tròn một vật dài, mỏng thành nhiều vòng chồng lên nhau.
+cuộn phim|Dải phim dùng cho máy ảnh hay máy chiếu, được quấn tròn lại.
+cuộn tròn|Co mình hoặc quấn lại thành hình tròn, như khi nằm ngủ trong chăn.
+cuồng nhiệt|Hăng say, sôi nổi, đam mê đến mức mãnh liệt.
+cuống|Phần nối hoa, lá, quả với cành; cũng chỉ trạng thái rối lên vì vội.
+cuống cuồng|Vội vã rối rít, mất bình tĩnh vì lo sợ hay quá gấp.
+cuống họng|Ống dẫn bên trong cổ, chỗ nối từ miệng xuống, cách nói dân dã.
+cúp điện|Bị ngắt nguồn điện trong một thời gian, cách nói thường dùng ở miền Nam.
+cụp đuôi|Quặp đuôi xuống vì sợ, như chó; cũng chỉ người sợ sệt rút lui.
+cư dân|Người sống lâu dài ở một vùng, một khu phố hay tòa chung cư.
+cư xử|Đối xử, ăn nói với người khác theo một cách nào đó.
+cử chỉ|Động tác của tay, mặt hay thân người, biểu lộ thái độ.
+cử động|Làm cho thân thể hay một bộ phận của nó chuyển động.
+cử nhân|Học vị đại học của người tốt nghiệp các ngành như luật, kinh tế.
+cử tạ|Môn thể thao nâng quả tạ nặng lên cao.
+cưa máy|Cưa chạy bằng động cơ, thường có xích răng, dùng hạ cây, xẻ gỗ.
+cưa tay|Loại cưa có lưỡi răng, cầm tay kéo đẩy để xẻ gỗ bằng sức người.
+cửa chớp|Cửa có nhiều thanh nan xếp nghiêng, giúp thoáng gió mà vẫn che nắng.
+cửa cuốn|Cửa bằng các thanh kim loại nối nhau, cuộn lên hạ xuống để đóng mở.
+cửa hàng|Nơi bày hàng hóa để bán lẻ cho khách đến mua.
+cửa hiệu|Gian hàng có tên hiệu riêng, thường bán một loại mặt hàng.
+cửa lùa|Cửa đóng mở bằng cách đẩy trượt sang ngang theo đường ray.
+cửa ngõ|Lối ra vào chính của một vùng hay một thành phố.
+cửa sổ|Ô cửa trổ trên tường để đón gió, ánh sáng và nhìn ra ngoài.
+cửa sông|Nơi dòng sông chảy ra biển hoặc đổ vào hồ.
+cửa tiệm|Gian nhà mặt phố dùng để buôn bán hay làm dịch vụ.
+cửa xoay|Cửa có các cánh quay quanh một trục giữa, thường thấy ở tòa nhà lớn.
+cựa quậy|Cử động, xoay trở người nhẹ, không nằm yên.
+cực độ|Ở mức cao đến tột cùng, không thể hơn.
+cực nhọc|Vất vả, tốn nhiều sức mà khó khăn, thường nói về việc tay chân.
+cực quang|Dải sáng nhiều màu, thường xanh lục, uốn lượn trên trời đêm gần hai cực.
+cưng chiều|Yêu thương và chiều theo ý, thường nói về con cái.
+cứng cỏi|Vững vàng, không dễ khuất phục trước khó khăn.
+cứng nhắc|Máy móc, không linh hoạt, không biết thay đổi cho hợp hoàn cảnh.
+cứng rắn|Kiên quyết, không dễ dao động hay nhượng bộ.
+cười|Nở môi, có khi bật thành tiếng, để tỏ vui vẻ hay thích thú.
+cười duyên|Cười khẽ một cách e ấp, dễ thương và có sức hút.
+cười thầm|Cười trong bụng hoặc cười kín đáo, không để ai biết.
+cười trừ|Cười cho qua chuyện khi không biết nói gì hay muốn tránh trả lời.
+cười vang|Cười to thành tiếng, âm thanh vọng khắp xung quanh.
+cưới hỏi|Chuyện lễ ăn hỏi và đám cưới, nói gộp lại.
+cưới xin|Chuyện dựng vợ gả chồng, cách nói chung về việc cưới.
+cương quyết|Giữ vững ý định, nhất định làm theo, không lùi bước.
+cưu mang|Đùm bọc, nuôi giúp người gặp khó khăn.
+cứu giúp|Giúp đỡ người đang gặp nạn hay lâm vào cảnh khó khăn.
+cứu hộ|Cứu người, xe cộ hay tài sản gặp nạn trong tai nạn, thiên tai.
+cứu trợ|Giúp lương thực, tiền bạc cho người bị thiên tai, hoạn nạn.
+cứu vãn|Cố gắng giữ lại, cứu lấy một tình thế sắp hỏng.
+cựu học sinh|Người đã từng học ở một trường phổ thông.
+cựu sinh viên|Người từng học ở một trường đại học, nay đã ra trường.
+da bò|Lớp da con bò đem thuộc, dày dai, thường làm giày, túi, thắt lưng.
+da dẻ|Làn da nói chung, xét về vẻ ngoài và màu sắc.
+da diết|Day dứt, thấm thía, kéo dài không nguôi, thường nói về nỗi nhớ.
+da đầu|Lớp da phủ đỉnh đầu, nơi tóc mọc lên.
+da gà|Da bọc thịt gà; cũng chỉ nốt sần nổi trên da khi rét hay sợ.
+da thuộc|Da động vật đã được xử lý cho bền, mềm, dùng làm đồ dùng.
+da trời|Màu xanh nhạt như màu bầu trời trong.
+dã ngoại|Đi chơi, cắm trại ở vùng thiên nhiên ngoài trời.
+dạ dày|Túi cơ trong bụng, chứa thức ăn vừa nuốt và co bóp để tiêu hóa.
+dạ hội|Buổi tiệc lớn vào ban đêm, mọi người ăn mặc trang trọng.
+dạ quang|Có thể phát sáng trong bóng tối, thường nói về kim đồng hồ hay sơn.
+dai dẳng|Kéo dài mãi không dứt, thường nói về bệnh, mưa hay nỗi lo.
+dài dòng|Nói hay viết dài, nhiều chữ thừa, không gọn.
+dài hạn|Kéo dài lâu, thường nói về kế hoạch, hợp đồng hay khoản vay.
+dải phân cách|Dải bê tông, rào hay bồn cây giữa đường, chia các làn xe ngược chiều.
+dại dột|Thiếu suy nghĩ, làm điều ngốc nghếch dễ chuốc hậu quả xấu.
+dại khờ|Ngây ngô, khờ khạo, thiếu hiểu biết về đời.
+dàn dựng|Sắp đặt cho vở diễn ra mắt; cũng chỉ việc bày đặt giả như thật.
+dàn nhạc|Nhóm đông nhạc công cùng chơi nhiều loại nhạc cụ.
+dàn xếp|Thu xếp, điều đình cho ổn thỏa giữa các bên.
+dàn ý|Bản ghi các ý chính theo thứ tự trước khi viết bài.
+dán mắt|Nhìn chăm chăm không rời vào một thứ, như màn hình hay trang sách.
+dạn dĩ|Bạo dạn, không rụt rè hay sợ sệt.
+dang dở|Làm chưa xong, bỏ lửng giữa chừng.
+dáng dấp|Vóc dáng bề ngoài nhìn thoáng qua, cho thấy nét riêng của người hay vật.
+dáng đi|Cách bước đi riêng của một người.
+dáng vẻ|Vẻ bề ngoài qua dáng người, cử chỉ và nét mặt.
+danh bạ|Danh sách tên kèm số điện thoại, địa chỉ để tra cứu liên lạc.
+danh dự|Sự tôn trọng mà xã hội dành cho một người nhờ phẩm giá của họ.
+danh hài|Nghệ sĩ hài có tên tuổi, được nhiều người biết.
+danh hiệu|Tên gọi vinh dự trao cho người hay tập thể có thành tích.
+danh mục|Bảng kê tên các thứ, các mục theo trình tự.
+danh nghĩa|Tư cách, tên gọi mà một người dùng để đứng ra làm việc.
+danh ngôn|Câu nói hay, súc tích của người có tiếng, được nhiều người trích lại.
+danh sách|Bản ghi tên lần lượt từng người hay từng vật thành một cột.
+danh thiếp|Tấm thẻ giấy nhỏ in tên, chức vụ, số liên lạc, trao khi làm quen.
+danh tiếng|Tiếng tăm tốt được nhiều người biết đến.
+danh tính|Họ tên và các thông tin cho biết một người là ai.
+danh từ|Loại từ gọi tên người, vật hay khái niệm, như bàn, mèo, niềm vui.
+danh vọng|Tiếng tăm và địa vị được xã hội biết đến, kính nể.
+dành dụm|Để dành tiền bạc từng chút một để dùng về sau.
+dao cạo|Dao có lưỡi rất sắc, dùng để cạo râu hay lông.
+dao gọt|Dao nhỏ lưỡi mỏng, cầm vừa tay để gọt vỏ trái cây.
+dao rọc giấy|Dao nhỏ có lưỡi mỏng kéo ra thụt vào được, dùng để cắt giấy, bìa.
+dạo bước|Bước đi thong thả, vừa đi vừa ngắm cảnh.
+dạo chơi|Đi đây đó thong thả để ngắm cảnh và vui chơi, không có việc gấp.
+dạo mát|Đi thong thả ngoài trời để hóng gió cho mát.
+dạo trước|Khoảng thời gian trước đây, cách không xa lắm.
+dạt dào|Tràn đầy và trào lên liên tục, nói về cảm xúc hay sóng nước.
+dãy số|Các số xếp nối tiếp nhau theo một thứ tự hay quy luật.
+dạy bảo|Chỉ dẫn, khuyên răn cho người dưới biết điều hay lẽ phải.
+dạy dỗ|Dạy và nuôi nấng cho nên người, thường nói về cha mẹ, thầy cô.
+dạy học|Đứng lớp giảng bài cho học sinh, việc thường ngày của thầy cô giáo.
+dặn dò|Nhắc nhở kĩ lưỡng những điều cần nhớ, cần làm.
+dắt tay|Nắm tay người khác dẫn đi, như cha mẹ dẫn con nhỏ qua đường.
+dân chài|Người sống bằng nghề đánh bắt cá, thường ở làng ven biển hay ven sông.
+dân cư|Những người sống trong một vùng, xét về số lượng và cách phân bố.
+dân dã|Mộc mạc, giản dị theo kiểu người dân thường ở thôn quê.
+dân gian|Thuộc về đời sống người dân thường, được truyền miệng qua nhiều thế hệ.
+dân làng|Mọi người cùng ở một làng, quen mặt nhau.
+dân quê|Người sống ở nông thôn, thường làm ruộng.
+dân số|Số người đang sống ở một nơi, như một tỉnh hay một nước.
+dân thường|Thường dân không giữ chức vụ, không mang quân hàm.
+dẫn dắt|Đưa đường, chỉ lối cho người khác đi theo hoặc điều khiển một chương trình.
+dẫn đầu|Đi trước cả đoàn, hay giữ vị trí số một trong cuộc thi.
+dẫn điện|Để dòng điện truyền qua được, thường nói về kim loại hay vật liệu.
+dẫn đường|Đi trước chỉ lối cho người khác đi theo.
+dẫn nhiệt|Để nhiệt truyền qua được, nhanh hay chậm tùy vật liệu.
+dập tắt|Làm cho lửa tắt hẳn; cũng chỉ việc chặn đứng một điều đang nổi lên.
+dâu tây|Quả đỏ mọng hình gần như trái tim, mặt ngoài lấm tấm hạt nhỏ.
+dầu ăn|Chất béo lỏng dùng để chiên, xào, trộn khi nấu ăn.
+dầu bạc hà|Tinh dầu cay mát từ cây bạc hà, thường dùng xoa khi nhức đầu.
+dầu cá|Chất dầu lấy từ mỡ cá, thường đóng viên để bồi bổ cơ thể.
+dầu dừa|Dầu ép từ cùi dừa, thơm nhẹ, dùng nấu ăn hay dưỡng da, dưỡng tóc.
+dầu gội đầu|Chất lỏng tạo bọt dùng để gội sạch tóc và da đầu.
+dầu hào|Nước sốt sánh đặc màu nâu làm từ hàu, dùng nêm khi xào nấu.
+dầu khí|Dầu mỏ và khí đốt khai thác dưới lòng đất, lòng biển nói chung.
+dầu lạc|Dầu vàng nhạt ép từ hạt lạc, có mùi thơm, hay dùng chiên xào.
+dầu lửa|Chất dầu dễ cháy dùng thắp đèn hay đun bếp, còn gọi là dầu hỏa.
+dầu mè|Dầu ép từ hạt mè rang, dùng tạo mùi thơm, cách gọi ở miền Nam.
+dầu mỡ|Các chất béo như dầu và mỡ nói chung, trong nấu ăn hay máy móc.
+dầu nhờn|Chất dầu đặc, trơn dùng bôi vào máy móc để giảm ma sát.
+dầu nhớt|Dầu bôi trơn đổ vào động cơ xe, cần thay sau một thời gian chạy.
+dầu thô|Dầu mỏ mới khai thác lên, chưa qua lọc tinh chế.
+dầu thơm|Chất lỏng có hương thơm để xịt lên người, cách gọi ở miền Nam.
+dầu thực vật|Dầu lấy từ hạt hay quả của cây, không phải từ mỡ động vật.
+dầu vừng|Dầu ép từ hạt vừng, mùi thơm đậm, thường rưới vào món trộn, món xào.
+dấu câu|Kí hiệu như dấu chấm, dấu phẩy, dùng để ngắt câu và làm rõ nghĩa.
+dấu chấm|Kí hiệu hình chấm nhỏ đặt ở cuối câu kể để kết thúc câu.
+dấu chấm hỏi|Kí hiệu đặt ở cuối câu để cho biết đó là câu hỏi.
+dấu chấm phẩy|Dấu ngắt lâu hơn dấu phẩy, ngắn hơn dấu chấm, hay dùng khi liệt kê.
+dấu chấm than|Kí hiệu đặt cuối câu cảm thán hoặc câu cầu khiến.
+dấu cộng|Kí hiệu hình chữ thập chỉ phép cộng trong toán.
+dấu gạch ngang|Nét gạch ngang dài, dùng mở đầu lời thoại hay tách phần chú thích.
+dấu gạch nối|Nét gạch ngắn nối các phần của tên phiên âm hay một liên danh.
+dấu hai chấm|Kí hiệu gồm hai chấm xếp dọc, đặt trước phần giải thích hay liệt kê.
+dấu hiệu|Điều dễ nhận ra, cho biết một việc đang hay sắp xảy ra.
+dấu hoa thị|Kí hiệu hình ngôi sao nhỏ, dùng để đánh dấu chú thích.
+dấu hỏi|Dấu thanh hình móc câu ghi thanh hỏi; cũng chỉ dấu chấm hỏi.
+dấu nặng|Kí hiệu chấm nhỏ đặt bên dưới nguyên âm, đọc giọng thấp, dứt khoát.
+dấu ngoặc đơn|Cặp kí hiệu hình vòng cung mở và đóng, bao quanh phần ghi chú thêm.
+dấu ngoặc kép|Cặp dấu đặt quanh lời dẫn trực tiếp hay từ ngữ cần nhấn mạnh.
+dấu nhân|Kí hiệu chỉ phép nhân, thường viết như chữ thập xoay chéo.
+dấu phẩy|Kí hiệu nhỏ hình móc dưới dòng, dùng ngắt các bộ phận trong câu.
+dấu sắc|Dấu thanh là nét xiên lên từ trái sang phải, ghi thanh sắc.
+dấu vết|Những gì còn để lại sau khi người, vật hay sự việc đi qua.
+dây an toàn|Dây đai trên xe, máy bay giữ người ngồi không bị văng khi va chạm.
+dây buộc|Sợi dây để thắt, cột đồ vật cho chặt, như dây giày hay dây túi.
+dây cáp|Dây lớn nhiều sợi xoắn, dùng kéo vật nặng hay truyền điện, tín hiệu.
+dây câu|Sợi dây mảnh nối cần câu với lưỡi câu để câu cá.
+dây chun|Vòng cao su nhỏ co giãn để buộc đồ, cách gọi ở miền Bắc.
+dây chuyền|Chuỗi trang sức đeo cổ; cũng chỉ hệ thống máy sản xuất nối tiếp nhau.
+dây cót|Lá thép cuộn tròn trong đồng hồ, đồ chơi, lên dây để tạo lực chạy.
+dây cương|Dây nối với hàm thiếc trong miệng ngựa, người cưỡi cầm để lái ngựa.
+dây dẫn|Sợi kim loại cho dòng điện chạy qua, nối các bộ phận trong mạch điện.
+dây dưa|Kéo dài mãi không dứt, hay dính líu lằng nhằng vào chuyện không hay.
+dây đeo|Dải dây gắn vào túi, đồng hồ hay thẻ để đeo lên người.
+dây điện|Sợi kim loại dẫn điện, thường bọc lớp nhựa, nối nguồn tới thiết bị.
+dây kẽm|Dây kim loại mảnh và mềm, dùng để buộc, cột hay làm rào.
+dây leo|Cây thân mềm, bám vào cây khác hay giàn để vươn lên.
+dây lưng|Đai thắt quanh eo để giữ quần, cách gọi ở miền Bắc.
+dây nhảy|Sợi dây dài có tay cầm, quay vòng để nhảy qua khi tập thể dục.
+dây nhợ|Các thứ dây chằng chịt nói chung, trông lộn xộn, vướng víu.
+dây phơi|Dây căng ngang để vắt, treo quần áo phơi cho khô.
+dây thép|Sợi thép cứng và bền, dùng trong xây dựng hay làm rào.
+dây thun|Sợi hay vòng cao su co giãn để buộc đồ, cách gọi ở miền Nam.
+dây tóc|Sợi kim loại rất mảnh trong bóng đèn, nóng lên thì phát sáng.
+dây xích|Chuỗi vòng sắt móc vào nhau, thường để khóa, buộc hoặc truyền lực.
+dè chừng|Đề phòng, cẩn thận với điều có thể gây hại.
+dè dặt|Thận trọng, giữ ý, không dám nói hay làm mạnh tay.
+dẻo dai|Bền bỉ, chịu được lâu, không dễ mệt mỏi.
+dép cao su|Dép đúc bằng cao su, bền chắc, quai thường đan chéo.
+dép lê|Dép quai ngang không có quai hậu, thường đi trong nhà.
+dê rừng|Loài dê hoang, thường sống ở vùng núi đá dốc, leo trèo rất khéo.
+dễ bảo|Ngoan, chịu nghe theo lời người khác dạy.
+dễ chịu|Mang lại cảm giác thoải mái, êm ái cho thân thể hay tâm trạng.
+dễ coi|Trông ưa nhìn, khá hài hòa, thường nói về ngoại hình.
+dễ dàng|Không tốn nhiều sức hay gặp trở ngại khi làm.
+dễ hiểu|Có thể hiểu ngay mà không cần nghĩ nhiều.
+dễ nghe|Êm tai, nghe thấy thuận tai, thường nói về giọng hát hay lời nói.
+dễ thở|Bớt căng thẳng, bớt gò bó, khiến người ta thấy nhẹ nhõm hơn.
+dễ thương|Đáng yêu, gây cảm tình nhờ vẻ ngoài hay tính nết.
+dễ tiêu|Ăn vào nhanh tiêu hóa, không gây đầy bụng hay nặng bụng.
+dễ tính|Không khó khăn, ít đòi hỏi, dễ hài lòng với người và việc.
+dế mèn|Loài dế nhỏ màu nâu đen, sống trong hang đất, con đực hay gáy đêm.
+di chuyển|Rời chỗ này để tới chỗ khác, bằng chân hoặc xe cộ.
+di dời|Chuyển nhà cửa, công trình hay cơ sở sang một nơi khác.
+di động|Có thể di chuyển, không cố định một chỗ; cũng chỉ điện thoại cầm tay.
+di sản|Tài sản, giá trị mà đời trước để lại cho đời sau.
+di tích|Dấu vết, công trình của thời xưa còn sót lại, có giá trị lịch sử.
+di truyền|Truyền đặc điểm từ cha mẹ sang con cái qua sinh sản.
+dì ghẻ|Vợ sau của cha, đối với các con của vợ trước.
+dí dỏm|Có cách nói, cử chỉ hóm hỉnh, gây cười nhẹ nhàng.
+dị thường|Khác hẳn mức bình thường, lạ lùng và ít gặp.
+dịch chuyển|Làm thay đổi vị trí, xê dịch một khoảng, thường nói về vật lớn.
+dịch vụ|Việc phục vụ nhu cầu người khác để lấy tiền, không làm ra hàng hóa.
+diễn biến|Quá trình sự việc thay đổi và tiếp diễn từng bước theo thời gian.
+diễn cảm|Thể hiện được cảm xúc khi đọc, nói hay hát.
+diễn đàn|Chỗ nhiều người vào nêu ý kiến, bàn một chủ đề, thường trên mạng.
+diễn đạt|Dùng lời nói, chữ viết để trình bày ý nghĩ.
+diễn kịch|Đóng vai nhân vật trên sân khấu; cũng chỉ việc giả vờ để lừa người.
+diễn ra|Xảy ra, được tiến hành vào một lúc nào đó.
+diễn tả|Nói hay vẽ lại để người khác hình dung được cảm xúc, cảnh vật.
+diễn văn|Bài nói trang trọng đọc trước đông người trong buổi lễ.
+diễn viên|Nghệ sĩ nhập vai nhân vật cho khán giả xem trên phim hay sân khấu.
+diễn xuất|Cách diễn viên thể hiện nhân vật qua lời nói, cử chỉ.
+diện mạo|Vẻ mặt, hình dáng bên ngoài của người hay sự vật.
+diện tích|Độ rộng của mảnh đất, căn phòng hay hình vẽ, thường đo bằng mét vuông.
+diều|Đồ chơi khung nhẹ căng giấy hay vải, nối dây dài để thả lên trời.
+diều hâu|Chim săn mồi cỡ vừa, mỏ quặp, móng sắc, hay bắt gà con.
+dinh dưỡng|Quá trình nuôi cơ thể bằng các chất lấy từ thức ăn.
+dinh thự|Tòa nhà to, sang, sân vườn rộng, thường thuộc về người giàu hoặc quan chức.
+dìu dắt|Kèm cặp, giúp đỡ người còn non kinh nghiệm từng bước tiến lên.
+dìu dịu|Hơi dịu, nhẹ nhàng dễ chịu, thường nói về nắng, gió hay mùi hương.
+dịu dàng|Nhẹ nhàng, êm ái trong lời nói và cử chỉ, dễ gây cảm tình.
+dịu ngọt|Ngọt nhẹ và êm, thường nói về vị đồ ăn hoặc lời nói.
+do dự|Chần chừ, chưa quyết được vì còn phân vân giữa các lựa chọn.
+do đó|Từ nối, nghĩa là vì điều vừa nói ấy, dẫn sang kết quả theo sau.
+dò hỏi|Hỏi khéo, hỏi dần để tìm hiểu điều người khác chưa nói ra.
+dò la|Lặng lẽ tìm hiểu, thu nhặt tin tức về người hay việc gì.
+dò xét|Kín đáo quan sát, tìm hiểu kĩ để đánh giá hay phát hiện điều gì.
+doanh nghiệp|Tổ chức kinh doanh có tên và tài sản riêng, làm ăn để kiếm lời.
+doanh nhân|Người làm nghề kinh doanh, thường đứng đầu hay góp vốn vào công ty.
+doanh thu|Tổng tiền thu được từ bán hàng, dịch vụ trong một kì.
+dọc đường|Trên quãng đường đang đi, trong lúc đi từ nơi này tới nơi khác.
+dõi theo|Chăm chú nhìn hay quan tâm liên tục tới bước đi của ai, việc gì.
+domino|Trò chơi ghép các quân chữ nhật có chấm sao cho số chấm khớp nhau.
+dọn bàn|Thu chén bát, lau mặt bàn sau bữa ăn, hoặc bày sẵn trước bữa.
+dọn dẹp|Sắp xếp, lau chùi cho nơi ở hay chỗ làm việc gọn gàng, sạch sẽ.
+dọn đường|Làm thông lối đi; cũng chỉ việc tạo sẵn điều kiện cho việc khác.
+dọn nhà|Lau chùi, sắp xếp cho nhà gọn sạch; cũng chỉ việc chuyển chỗ ở.
+dòng chảy|Nước sông suối trôi liền mạch về một phía, cuốn theo lá cây, phù sa.
+dỗ dành|Vỗ về, nói ngọt cho trẻ nín khóc hoặc chịu nghe theo.
+dốc đứng|Đoạn dốc rất cao và gần như thẳng đứng, khó leo.
+dốc sức|Dồn hết sức lực, tâm trí vào một việc.
+dồi dào|Có nhiều, đầy đủ đến mức dư dật, thường nói về sức khỏe, của cải.
+dội lại|Bật ngược trở lại sau khi chạm vào vật cản, thường nói về âm thanh.
+dồn dập|Liên tiếp, nhanh và mạnh, cái này nối cái kia không ngớt.
+dở dang|Còn làm nửa chừng, chưa hoàn thành.
+du dương|Êm ái, trầm bổng và dễ nghe, thường nói về tiếng nhạc.
+du hành|Đi một chặng đường xa, thường nói về chuyến bay vào vũ trụ.
+du học|Đi ra nước ngoài để học tập.
+du học sinh|Học sinh, sinh viên sang nước ngoài để học.
+du khách|Người đi tham quan, nghỉ ngơi ở nơi khác.
+du lịch|Đi tới nơi xa nhà để tham quan, nghỉ ngơi hay khám phá.
+du thuyền|Tàu thuyền dùng để đi chơi, nghỉ dưỡng trên sông, biển.
+du xuân|Đi chơi, viếng chùa, ngắm cảnh vào dịp đầu xuân.
+dung dịch|Hỗn hợp đồng đều của chất tan trong chất khác, thường là trong nước.
+dung lượng|Lượng tối đa mà bộ nhớ chứa được hay pin tích được.
+dung nham|Đá nóng chảy đỏ rực tuôn từ miệng núi lửa, nguội lại thì hóa đá.
+dung tích|Lượng thể tích mà một vật rỗng có thể chứa được.
+dũng cảm|Không sợ nguy hiểm, dám đương đầu với khó khăn.
+dụng cụ|Đồ dùng để làm một việc cụ thể, như kéo, búa, thước.
+duy nhất|Chỉ có một, ngoài nó ra không còn cái nào khác.
+duy trì|Giữ cho một việc, trạng thái tiếp tục tồn tại, không bị gián đoạn.
+duyên|Nét dễ mến, cuốn hút ở người; cũng chỉ mối gắn bó như trời định.
+duyên dáng|Có vẻ đẹp mềm mại, ưa nhìn và dễ mến trong dáng điệu, cử chỉ.
+duyên nợ|Mối gắn bó khó dứt, tưởng như định sẵn, giữa người với người hay việc.
+duyệt|Xét kỹ rồi cho phép thông qua, như với hồ sơ hay kế hoạch.
+dư âm|Âm thanh hay cảm xúc còn đọng lại sau khi sự việc đã qua.
+dư luận|Ý kiến, cách nhìn chung của số đông người về một việc.
+dư thừa|Nhiều hơn mức cần, còn lại không dùng tới.
+dư vị|Vị còn đọng sau khi ăn; cũng chỉ cảm xúc lắng lại sau sự việc.
+dữ dội|Rất mạnh và ác liệt, thường nói về gió bão, trận đánh hay cơn đau.
+dữ liệu|Con số, thông tin được thu thập và lưu lại để xử lý, phân tích.
+dữ tợn|Có vẻ hung ác, đáng sợ, thường nói về nét mặt hay con vật.
+dự án|Kế hoạch cho một việc lớn, có mục tiêu, thời hạn và kinh phí.
+dự báo|Đoán trước điều sắp xảy ra dựa vào số liệu, như thời tiết.
+dự định|Tính sẵn trong đầu sẽ làm việc gì vào thời gian tới.
+dự đoán|Đoán trước điều sẽ xảy ra dựa vào hiểu biết hay dấu hiệu.
+dự kiến|Liệu tính trước về thời gian, con số hay diễn biến của một việc.
+dự phòng|Để sẵn thêm tiền hay đồ thay thế, phòng khi có sự cố.
+dự thi|Tham gia vào một kì thi hay cuộc thi.
+dự tính|Tính toán trước những việc định làm và cách làm.
+dự trữ|Cất giữ sẵn một lượng hàng, tiền hay của để dùng khi cần.
+dưa cải|Món làm từ cải bẹ phơi héo rồi muối chua, ăn kèm hay nấu canh.
+dưa chua|Món rau, thường là cải bẹ, muối lên men cho chua, ăn kèm cơm.
+dưa chuột|Cách gọi ở miền Bắc của quả dài vỏ xanh, giòn, thường ăn sống.
+dưa gang|Loại dưa quả to, dài, vỏ xanh sọc, ruột nhạt, thường ăn với đường.
+dưa hấu|Quả vỏ xanh, bổ ra thường thấy ruột đỏ ngọt lịm nhiều nước, hạt đen.
+dưa lê|Quả dưa nhỏ vỏ trắng ngà, ruột giòn thơm ngọt.
+dưa lưới|Loại dưa có vỏ vằn như lưới, ruột cam hay xanh, thơm ngọt.
+dưa muối|Món cải hoặc rau củ ngâm nước muối trong vại cho lên men.
+dừa xiêm|Giống dừa quả nhỏ, nước rất ngọt, thường dùng để uống.
+dừng bước|Đứng lại, thôi không đi tiếp; còn có nghĩa bị loại khỏi một giải đấu.
+dừng chân|Tạm nghỉ lại một nơi trong chuyến đi.
+dừng lại|Ngừng di chuyển hay ngừng làm việc đang làm.
+dừng tay|Thôi, ngừng việc đang làm, thường nói để can ngăn hay nghỉ ngơi.
+dựng đứng|Đặt thẳng lên theo chiều đứng; cũng chỉ việc bịa ra chuyện không có thật.
+dương lịch|Lịch tính theo vòng quay của trái đất quanh mặt trời.
+dương xỉ|Cây không ra hoa, lá xẻ nhỏ như lông chim, hay mọc chỗ râm ẩm.
+dường như|Từ dùng để nói điều có vẻ đúng nhưng chưa chắc chắn.
+dứt điểm|Giải quyết xong hẳn, không kéo dài; cũng chỉ cú sút nhằm ghi bàn.
+dứt khoát|Rõ ràng, quả quyết, không do dự hay lưỡng lự.
+đa dạng|Có nhiều kiểu, nhiều loại khác nhau.
+đa năng|Làm được nhiều việc, có nhiều công dụng khác nhau.
+đa nghi|Hay ngờ vực, khó tin người khác.
+đa số|Phần đông, chiếm quá nửa, thường quyết định kết quả khi biểu quyết.
+đa tài|Có tài ở nhiều lĩnh vực khác nhau, như vừa ca hát vừa vẽ.
+đà điểu|Loài chim rất lớn, cổ dài, chân khỏe, không bay được nhưng chạy nhanh.
+đã đời|Thỏa thích cho đến lúc thấy đủ, không còn muốn nữa.
+đá banh|Chơi bóng bằng chân, sút vào khung thành đối phương, cách nói ở miền Nam.
+đá bóng|Chơi môn thể thao hai đội tranh nhau đưa bóng vào khung thành bằng chân.
+đá cầu|Trò chơi dùng chân tâng, chuyền quả cầu có gắn lông.
+đá cuội|Đá nhỏ tròn nhẵn do nước bào mòn, thường thấy ở lòng suối.
+đá hoa cương|Loại đá cứng có vân lấm tấm, thường mài bóng để lát nền, ốp tường.
+đá lửa|Loại đá cứng, đánh vào nhau tóe ra tia lửa, xưa dùng để nhóm lửa.
+đá mài|Khối đá ráp dùng để mài sắc dao, kéo.
+đá ngầm|Đá nằm khuất dưới mặt nước, dễ gây nguy hiểm cho tàu thuyền.
+đá quý|Loại đá hiếm, đẹp và có giá trị cao, dùng làm đồ trang sức.
+đá tảng|Khối đá lớn, nặng, nguyên khối.
+đá vôi|Loại đá màu trắng hoặc xám, dùng nung vôi và làm xi măng.
+đài phát thanh|Nơi làm và phát các chương trình nghe qua sóng vô tuyến.
+đài phun nước|Công trình có vòi phun nước lên cao để trang trí, thường ở công viên.
+đài thiên văn|Nơi đặt kính thiên văn để quan sát bầu trời, các vì sao.
+đãi khách|Bày tiệc, mời ăn uống để tiếp người đến nhà chơi hay dự lễ.
+đại bàng|Chim to sải cánh rộng, mắt tinh, móng quắp, lượn cao rình bắt thú nhỏ.
+đại diện|Thay mặt cho người khác hay một tập thể để làm việc, phát biểu.
+đại dương|Vùng biển rộng mênh mông bao quanh các châu lục.
+đại gia|Người rất giàu có, lắm tiền.
+đại gia đình|Ông bà, cha mẹ, con cháu, nhiều thế hệ gộp thành một nhà đông đúc.
+đại học|Bậc học trên phổ thông, nơi sinh viên học một ngành nghề chuyên sâu.
+đại lộ|Con đường lớn, rộng, nhiều làn xe, thường có hàng cây hai bên.
+đại thụ|Cây cổ thụ to lớn; cũng chỉ bậc thầy có uy tín trong một ngành.
+đại ý|Ý chính, nội dung khái quát của một bài, một đoạn.
+đam mê|Say mê, ham thích một việc đến mức khó rời bỏ.
+đảm bảo|Cam đoan hoặc làm cho chắc chắn được thực hiện đầy đủ.
+đảm đương|Nhận lấy và gánh vác một việc, một trách nhiệm.
+đảm nhận|Nhận về mình một công việc, chức vụ để làm.
+đám cưới|Lễ cưới, tiệc mừng hôn nhân của cô dâu chú rể.
+đám đông|Nhiều người tụ tập đông đúc ở một chỗ.
+đám hỏi|Lễ nhà trai mang lễ vật sang nhà gái xin cưới, trước đám cưới.
+đám mây|Khối giọt nước li ti trôi lơ lửng trên trời, có khi kéo mưa về.
+đạm bạc|Đơn sơ, giản dị, ít món ngon, thường nói về bữa ăn, cuộc sống.
+đan lát|Đan tre, mây, cói thành rổ rá, thúng mủng và đồ dùng.
+đan xen|Xen kẽ, lồng vào nhau giữa nhiều thứ khác nhau.
+đàn anh|Người đi trước, lớn tuổi hay giỏi nghề hơn, được người sau nể trọng.
+đàn bà|Người thuộc giới nữ đã lớn, cách gọi bình dân.
+đàn bầu|Nhạc cụ dân tộc một dây, gảy và nhấn cần để tạo tiếng ngân.
+đàn em|Người ít tuổi hay vào nghề sau, thường đi theo hoặc nghe lời người trước.
+đàn hạc|Cây đàn khung cao, nhiều dây căng song song, tựa vào vai mà gảy.
+đàn hát|Vừa chơi đàn vừa hát, thường để vui chơi cùng nhau.
+đàn hồi|Bị kéo, nén rồi thả ra thì trở lại hình dạng cũ, như dây chun.
+đàn ông|Người thuộc giới nam đã trưởng thành.
+đàn tranh|Đàn dân tộc thân dài đặt nằm, dây gác trên con nhạn, gảy bằng móng.
+đàng hoàng|Đứng đắn, tử tế, đầy đủ, không có gì phải xấu hổ.
+đãng trí|Hay quên, không nhớ những việc vừa làm, vừa nói.
+đáng buồn|Gây cảm giác buồn, khiến người ta phải tiếc nuối.
+đáng giá|Bõ công bỏ ra, dù đó là tiền bạc, thời gian hay sức lực.
+đáng gờm|Đáng phải dè chừng vì mạnh, giỏi, thường nói về đối thủ.
+đáng kể|Khá lớn, đủ để được chú ý tới.
+đáng khen|Xứng đáng được khen ngợi vì làm tốt.
+đáng ngờ|Có điều không bình thường, khiến người ta nghi ngờ.
+đáng thương|Khiến người khác thấy tội nghiệp, muốn giúp đỡ.
+đáng tiếc|Khiến người ta tiếc vì lẽ ra có thể tốt hơn.
+đáng tiền|Tốt tương xứng với số tiền phải trả, mua về không thấy hớ.
+đáng tin|Có thể tin cậy được vì thật thà, giữ lời.
+đáng yêu|Dễ thương, khiến người ta muốn âu yếm, như trẻ nhỏ hay con vật.
+đành chịu|Buông xuôi chấp nhận điều không muốn vì đã hết cách xoay xở.
+đành lòng|Cam lòng chấp nhận điều trái ý mình, thường dùng với nghĩa không nỡ.
+đánh bại|Làm cho đối thủ thua trong trận đấu, cuộc thi.
+đánh bắt|Bắt cá, tôm và hải sản bằng lưới, câu hay các ngư cụ.
+đánh bóng|Chà cho bề mặt bóng láng; cũng chỉ việc tô vẽ để nổi tiếng hơn.
+đánh chữ|Gõ chữ trên bàn phím hoặc máy chữ.
+đánh dấu|Ghi kí hiệu lên chỗ nào để dễ nhận ra, dễ nhớ.
+đánh đàn|Chơi nhạc cụ có phím hoặc dây bằng tay.
+đánh đố|Đưa ra câu hỏi khó, câu đố để thử người khác.
+đánh đổi|Chịu mất một thứ để đổi lấy thứ khác mình cần hơn.
+đánh đồng|Coi những thứ khác nhau như là một, không phân biệt.
+đánh giá|Nhận xét, định ra giá trị hay mức độ tốt xấu của người, vật, việc.
+đánh hơi|Dùng mũi ngửi mùi để dò ra dấu vết, như chó săn.
+đánh liều|Nhắm mắt làm thử dù chưa chắc thành, chấp nhận mọi rủi ro.
+đánh mất|Để mất vật, cơ hội hay điều quý giá do sơ ý.
+đánh phấn|Thoa phấn lên mặt để da trông mịn và sáng hơn.
+đánh rơi|Vô ý làm vật đang cầm rơi xuống hoặc để rơi mất.
+đánh số|Ghi số thứ tự lên từng thứ để dễ phân biệt và tìm.
+đánh thức|Gọi hay lay người đang ngủ cho tỉnh dậy.
+đánh trống|Gõ dùi lên mặt da trống cho kêu vang, như lúc báo giờ vào lớp.
+đánh trứng|Khuấy nhanh, mạnh trứng cho tan đều hay bông xốp lên.
+đánh vần|Đọc ghép từng chữ cái, từng âm để thành tiếng.
+đào bới|Đào đất lên để tìm; cũng chỉ việc moi móc chuyện cũ của người khác.
+đào hoa|Có duyên với người khác giới, dễ được nhiều người theo đuổi.
+đào sâu|Tìm hiểu thật kĩ một vấn đề; cũng chỉ việc đào xuống sâu hơn.
+đào tạo|Dạy dỗ, huấn luyện người để có kiến thức, tay nghề.
+đào tiên|Quả đào trong truyện thần thoại, ăn vào được sống lâu.
+đào xới|Lật, xới đất lên cho tơi, thường để trồng trọt hay tìm vật.
+đảo lộn|Làm xáo trộn, mất hết trật tự vốn có.
+đảo ngược|Làm cho theo chiều hay thứ tự ngược lại.
+đạo diễn|Người chỉ đạo dàn dựng một bộ phim hay vở diễn, hướng dẫn diễn viên.
+đạo đức|Những chuẩn mực về lẽ phải, cách cư xử tốt giữa người với người.
+đáp án|Lời giải đúng được đưa ra để đối chiếu với bài làm, câu đố.
+đáp lại|Trả lời hay đối xử lại người khác tương xứng với điều họ đã làm.
+đáp ứng|Đáp lại đầy đủ yêu cầu hay nhu cầu đặt ra.
+đạp xe|Dùng chân đạp bàn đạp cho xe đạp chạy.
+đặc biệt|Khác thường, khác hẳn những cái cùng loại.
+đặc điểm|Nét riêng giúp nhận ra người, vật hay sự việc.
+đặc sản|Sản vật, món ăn nổi bật riêng của một vùng.
+đặc sắc|Nổi bật, có nét riêng đẹp và hấp dẫn.
+đặc sệt|Rất đặc, sánh lại, khó chảy, thường nói về chất lỏng.
+đặc tính|Tính chất riêng vốn có của một vật hay một chất.
+đặc trưng|Nét tiêu biểu, riêng có để phân biệt với cái khác.
+đăm chiêu|Có vẻ mặt nghĩ ngợi, lo lắng, trầm tư.
+đằm thắm|Sâu sắc, dịu dàng và đậm đà, thường nói về tình cảm.
+đắm mình|Thả mình hòa vào, chìm vào một không gian, cảm xúc hay dòng nước.
+đăng cai|Nhận làm chủ nhà tổ chức một sự kiện, như giải đấu hay hội nghị.
+đăng nhập|Nhập tên và mật khẩu để vào một tài khoản trên mạng.
+đăng tải|Cho bài, ảnh hay đoạn phim lên báo hoặc lên mạng để công chúng xem.
+đăng xuất|Thoát ra khỏi tài khoản đang dùng trên mạng hay ứng dụng.
+đằng sau|Phía sau lưng, phía ngược với mặt trước.
+đằng trước|Phía trước mặt, phía mặt hướng tới.
+đắt đỏ|Giá cả cao, thường nói về chi phí sinh hoạt ở một nơi.
+đắt giá|Có giá trị lớn, thường nói về bài học, cơ hội hay bàn thắng.
+đắt tiền|Giá cao, muốn sở hữu phải chi khoản lớn, như trang sức hay xe sang.
+đặt chân|Đi tới và có mặt tại một nơi, như một vùng đất hay thành phố.
+đặt cọc|Trả trước một khoản làm tin để bên bán giữ hàng hay giữ phòng.
+đặt hàng|Yêu cầu người bán chuẩn bị, giao hàng theo số lượng mình cần.
+đặt lưng|Nằm xuống nghỉ ngơi, thường chỉ trong chốc lát.
+đặt tên|Chọn và gọi một cái tên cho người, vật hay sự việc.
+đâm chồi|Mọc ra mầm non, chồi non từ cành hay hạt.
+đầm ấm|Êm vui, thân mật và ấm cúng, thường nói về không khí gia đình.
+đầm đìa|Ướt sũng, chảy ròng ròng khắp, thường nói về nước mắt, mồ hôi.
+đầm lầy|Vùng đất trũng, ẩm, thường ngập nước và bùn, cây cỏ mọc dày.
+đấm bóp|Dùng tay đấm nhẹ, nắn bóp các bắp thịt cho đỡ mỏi.
+đấm lưng|Nắm tay gõ nhẹ khắp lưng cho người khác đỡ mỏi.
+đậm đà|Có vị đậm vừa miệng, ăn thấy ngon; cũng nói về tình cảm sâu nặng.
+đậm đặc|Có nồng độ cao, chứa nhiều chất trong ít nước hay dung môi.
+đập cánh|Vẫy hai cánh lên xuống nhịp nhàng để bay, như chim, bướm.
+đập lúa|Tách hạt thóc khỏi bông lúa sau khi gặt, bằng tay hoặc bằng máy.
+đập vỡ|Đập mạnh làm cho vật bị vỡ ra từng mảnh.
+đất bùn|Đất nhão lẫn nhiều nước, thường ở ao, ruộng.
+đất cát|Đất có nhiều cát, tơi xốp, khó giữ nước.
+đất đai|Đất nói chung, xét về diện tích, quyền sở hữu hay việc canh tác.
+đất khách|Vùng đất xa lạ, không phải quê nhà, nơi mình tha hương.
+đất liền|Dải đất rộng nối liền, nơi tàu thuyền từ đảo hay ngoài khơi trở về.
+đất nung|Đất dẻo nặn thành hình rồi nung chín cho cứng, như gạch, chum hay tượng.
+đất nước|Lãnh thổ cùng người dân một quốc gia, thường nói với tình cảm gắn bó.
+đất sét|Đất mịn, gặp nước thì dẻo quánh, thợ gốm nặn rồi nung thành bình chén.
+đầu bài|Toàn bộ yêu cầu của bài tập hay bài thi giao cho người làm.
+đầu bảng|Vị trí đứng đầu trong một bảng xếp hạng.
+đầu bếp|Người làm nghề nấu ăn, chế biến món cho thực khách hay gia chủ.
+đầu đề|Dòng chữ ngắn đặt trên cùng, nêu tên bài viết hay chủ đề.
+đầu đuôi|Mọi diễn biến của một chuyện, từ lúc mới nảy ra tới khi xong xuôi.
+đầu giường|Phần giường phía kê gối, nơi hay đặt đèn ngủ, điện thoại.
+đầu gối|Phần nhô tròn giữa đùi và cẳng chân, chạm đất khi ta quỳ xuống.
+đầu lưỡi|Chóp phía trước của lưỡi, chạm vào răng khi ta nói hay nếm thử.
+đầu máy|Toa có động cơ đi đầu đoàn tàu, kéo các toa phía sau.
+đầu mối|Chỗ nắm được để lần ra sự việc; cũng chỉ nơi gom, phân phối hàng.
+đầu mùa|Khoảng thời gian bắt đầu một mùa.
+đầu óc|Khả năng suy nghĩ, trí óc của con người.
+đầu ra|Kết quả, sản phẩm tạo ra hoặc chỗ tiêu thụ hàng hóa.
+đầu tàu|Đầu máy kéo đoàn tàu; cũng chỉ người hay đơn vị dẫn dắt số đông.
+đầu tiên|Trước hết theo thứ tự thời gian hay vị trí, không có gì trước nó.
+đầu tóc|Tóc trên đầu, xét về kiểu dáng và sự gọn gàng.
+đầu tư|Rót tiền hay công sức vào một việc, mong ngày sau sinh lời.
+đầu vào|Nguyên liệu, dữ liệu hay con người nạp vào lúc khởi đầu một quá trình.
+đấu giá|Bán công khai, người mua trả giá lần lượt, ai trả cao nhất được mua.
+đấu loại|Thi đấu để chọn ra người, đội đi tiếp và loại người thua.
+đấu trí|Đọ sức bằng mưu mẹo, suy tính chứ không bằng sức lực.
+đậu bắp|Loại rau quả dài có cạnh, ruột nhiều nhớt, thường luộc hay xào.
+đậu cô ve|Loại đậu quả dài, mảnh, ăn cả vỏ khi còn non, thường xào.
+đậu đen|Hạt đậu nhỏ vỏ đen bóng, ruột trắng, hay nấu chè hoặc rang pha nước.
+đậu đỏ|Hạt đậu màu đỏ nâu, thường nấu chè hay xôi, bở và bùi.
+đậu gà|Hạt đậu tròn to màu vàng nhạt, có chóp nhọn, ăn bùi, hay đem hầm.
+đậu lăng|Loại đậu hạt nhỏ dẹt như thấu kính, thường nấu súp, cháo.
+đậu nành|Hạt đậu tròn vàng nhạt, đem xay làm sữa, làm đậu phụ hay nước tương.
+đậu phụ|Món làm từ sữa đậu nành đông lại thành bánh mềm, màu trắng.
+đậu trắng|Hạt đậu màu trắng ngà, thường nấu chè, hầm xương hay nấu xôi.
+đậu tương|Cách gọi ở miền Bắc của đậu nành, hạt vàng nhiều đạm, dùng làm tương.
+đậu xanh|Hạt đậu nhỏ vỏ xanh, ruột vàng, nấu chè, đồ xôi, làm nhân bánh.
+đầy ắp|Đầy tràn đến miệng, không còn chỗ chứa thêm.
+đầy đủ|Có đủ mọi thứ cần thiết, không thiếu phần nào.
+đẩy mạnh|Làm cho một việc phát triển nhanh và mạnh hơn.
+đẩy nhanh|Làm cho tiến độ một việc diễn ra nhanh hơn.
+đẩy tạ|Môn điền kinh đẩy quả cầu sắt nặng từ vai đi xa.
+đè bẹp|Đè mạnh làm cho bẹp; cũng chỉ việc áp đảo hoàn toàn đối phương.
+đẻ trứng|Sinh ra trứng, như ở gà, vịt, cá, rùa.
+đen đủi|Hay gặp chuyện xui, liên tiếp không được may mắn.
+đen kịt|Đen dày đặc, che kín, thường nói về mây trời.
+đen ngòm|Đen sâu hun hút, trông đáng sợ, như hang hay nước sâu.
+đen nhánh|Đen bóng mượt, thường nói về tóc hay răng nhuộm.
+đen thui|Đen đều toàn bộ, thường do bị cháy, bị nắng.
+đèn bàn|Đèn nhỏ đặt trên bàn, chiếu sáng để đọc sách, làm việc.
+đèn cảm ứng|Đèn tự bật khi có người đến gần hoặc khi chạm tay.
+đèn cao áp|Đèn công suất lớn, rất sáng, thường dùng chiếu sáng đường phố.
+đèn cầy|Thỏi sáp có sợi bấc, châm lửa để thắp sáng, miền Bắc gọi là nến.
+đèn chiếu|Thiết bị rọi ánh sáng hay hình ảnh lên màn, lên sân khấu.
+đèn chớp|Đèn lóe sáng rồi tắt rất nhanh, như đèn máy ảnh.
+đèn chùm|Đèn trang trí gồm nhiều bóng kết thành chùm, treo ở trần.
+đèn dầu|Đèn có bấc đốt bằng dầu hỏa, có bóng thủy tinh chắn gió.
+đèn điện|Đèn sáng nhờ dòng điện, khác với đèn dầu hay nến.
+đèn đỏ|Tín hiệu giao thông màu đỏ, báo xe cộ phải dừng lại.
+đèn đóm|Đèn, lửa thắp sáng nói chung, cách nói dân dã.
+đèn đuốc|Đèn lửa thắp lên nói chung, thường để tả cảnh sáng trưng.
+đèn đường|Đèn đặt trên cột dọc đường phố để chiếu sáng ban đêm.
+đèn giao thông|Hệ thống đèn xanh, vàng, đỏ ở ngã tư để điều khiển xe cộ.
+đèn hiệu|Đèn dùng để phát tín hiệu, báo hiệu cho tàu thuyền, xe cộ.
+đèn kéo quân|Đèn lồng có hình người ngựa xoay vòng nhờ hơi nóng, chơi dịp Trung thu.
+đèn lồng|Đèn có khung bọc giấy hay vải, thường treo để trang trí.
+đèn ngủ|Đèn nhỏ ánh sáng dịu, bật khi đi ngủ.
+đèn nháy|Chuỗi bóng đèn nhỏ chớp tắt liên tục, hay treo trang trí dịp lễ, Tết.
+đèn ông sao|Lồng đèn năm cánh khung tre dán giấy màu, trẻ con rước đêm Trung thu.
+đèn ống|Đèn có bóng hình ống dài, phát ánh sáng trắng.
+đèn pha|Đèn rọi luồng sáng mạnh đi xa, thường lắp ở đầu ô tô, xe máy.
+đèn pin|Đèn cầm tay nhỏ gọn, chạy bằng pin.
+đèn trần|Đèn gắn ở trần nhà để chiếu sáng cả phòng.
+đèn treo|Đèn được treo lủng lẳng từ trần hay mái xuống.
+đèn trời|Đèn giấy có lửa bên trong, hơi nóng làm nó bay lên trời.
+đèn vàng|Đèn màu vàng giữa cột tín hiệu giao thông, thường báo sắp đổi sang đỏ.
+đèn xanh|Tín hiệu giao thông cho xe đi; cũng chỉ sự cho phép làm việc gì.
+đeo đuổi|Kiên trì theo một mục tiêu hay theo đuổi một người trong thời gian dài.
+đẹp đẽ|Có vẻ đẹp, ưa nhìn, thường nói về cảnh vật hay việc làm tốt.
+đẹp đôi|Rất xứng nhau, thường nói về một cặp vợ chồng hay người yêu.
+đẹp mã|Có vẻ ngoài ưa nhìn, thường hàm ý chỉ đẹp bề ngoài.
+đẹp mắt|Trông đẹp, hài hòa, gây cảm giác dễ chịu khi nhìn.
+đẹp trai|Có khuôn mặt, vóc dáng ưa nhìn, nói về đàn ông.
+đẹp trời|Thời tiết tốt, nắng ráo, dễ chịu.
+đề bài|Nội dung yêu cầu của bài tập hay bài thi mà người làm phải giải.
+đề cao|Coi trọng, nêu bật giá trị của điều gì.
+đề cử|Giới thiệu người hay tác phẩm vào danh sách để bầu chọn.
+đề cương|Bản tóm tắt các ý chính, dàn ý của một bài, một môn học.
+đề nghị|Ngỏ lời nêu một ý, mong bên kia cân nhắc rồi đồng ý làm theo.
+đề phòng|Lo sẵn cho chuyện xấu có thể ập tới, như mang theo áo mưa.
+đề tài|Chuyện được chọn làm trọng tâm cho bài văn, bức tranh hay cuộc nghiên cứu.
+đề xuất|Đưa ra ý kiến, giải pháp để mọi người cân nhắc.
+để bụng|Giữ trong lòng điều không vui mà không nói ra, nhớ mãi.
+để đời|Còn lưu lại lâu dài, được nhớ mãi về sau.
+để lại|Giữ nguyên ở chỗ cũ hoặc truyền lại cho người sau.
+để lộ|Vô ý làm cho điều cần giấu bị người khác thấy, biết.
+để mặc|Bỏ mặc, không quan tâm, không can thiệp.
+để mắt|Chú ý nhìn, trông chừng một người hay vật.
+để phần|Chừa lại cơm canh hay quà bánh cho người đi vắng, về muộn.
+để tâm|Chú ý, quan tâm và nghĩ ngợi về một việc.
+để trống|Bỏ không, không lấp đầy hay sử dụng chỗ nào.
+để yên|Không đụng tới, không làm phiền hay can thiệp vào.
+đêm hôm|Thời gian ban đêm nói chung, thường hàm ý muộn.
+đêm khuya|Lúc đêm đã muộn, phố xá vắng lặng, phần đông người đã đi ngủ.
+đêm ngày|Cả ngày lẫn đêm, liên tục không ngừng.
+đêm tối|Ban đêm không trăng, trời tối mịt, không có ánh sáng.
+đền bù|Trả tiền hay vật để bù lại phần thiệt hại người khác phải chịu.
+đền đáp|Báo đáp lại ơn nghĩa mà người khác đã dành cho mình.
+đến tuổi|Tới độ tuổi hợp để đi học, lập gia đình hay về hưu.
+đều đặn|Diễn ra liên tục, theo nhịp như nhau, không bỏ quãng.
+đều đều|Giữ một nhịp, một mức không đổi, kéo dài tới mức đơn điệu.
+đều nhau|Bằng nhau, giống nhau về mức độ hay kích thước.
+đi bộ|Tự bước bằng đôi chân, không nhờ xe cộ, có khi để rèn sức khỏe.
+đi buôn|Mua hàng nơi này đem bán nơi khác để kiếm lời.
+đi chợ|Đến chợ để mua thức ăn và đồ dùng hằng ngày.
+đi chơi|Ra ngoài để vui chơi, giải trí.
+đi dạo|Bước chậm rãi quanh quẩn đâu đó để thư giãn, hít thở khí trời.
+đi đầu|Đi trước dẫn đầu, làm gương cho người khác theo.
+đi đứng|Cách đi lại, dáng đi và cử chỉ khi di chuyển.
+đi học|Đến trường hay lớp để học tập.
+đi kèm|Theo cùng, gắn liền với một thứ khác.
+đi làm|Đến nơi làm việc hoặc có việc làm để kiếm sống.
+đi vắng|Ra khỏi nhà, không có mặt ở nhà lúc đó.
+đi vòng|Đi theo lối vòng, không đi thẳng.
+đĩa bay|Vật lạ dẹt tròn như cái đĩa, đồn là tàu của người ngoài Trái Đất.
+đĩa cứng|Bộ lưu trữ của máy tính gồm các đĩa từ quay nhanh trong hộp kín.
+địa bàn|Vùng thuộc phạm vi quản lý hay hoạt động của một đơn vị, tổ chức.
+địa cầu|Hành tinh nơi loài người sinh sống, hình gần như quả cầu.
+địa chỉ|Thông tin ghi nơi ở hay nơi làm việc, gồm số nhà, đường, phố.
+địa danh|Tên gọi của một vùng đất, một nơi chốn.
+địa điểm|Nơi chốn cụ thể diễn ra một việc.
+địa hình|Mặt đất một vùng lồi lõm ra sao: núi, đồi, thung lũng hay bằng phẳng.
+địa phương|Từng tỉnh, huyện hay làng xã cụ thể, đối lại với trung ương.
+đích|Vạch cuối đường đua, ai chạm trước thì thắng; cũng chỉ mục tiêu nhắm tới.
+đích thực|Thật sự đúng là như vậy, không giả.
+điềm đạm|Từ tốn, chín chắn, không nóng vội trong cách nói năng.
+điềm tĩnh|Bình tĩnh, giữ được vẻ ung dung trước khó khăn.
+điểm danh|Đọc tên lần lượt, ai có mặt thì dạ, như thầy cô làm đầu giờ.
+điểm hẹn|Nơi đã hẹn trước để gặp nhau.
+điểm mù|Vùng xung quanh xe mà người lái không nhìn thấy qua gương.
+điểm nhấn|Chi tiết nổi bật thu hút sự chú ý trong một tổng thể.
+điểm số|Con số chấm cho bài làm hay phần thi để đánh giá kết quả.
+điểm tâm|Bữa ăn nhẹ buổi sáng, ăn trước khi đi làm, đi học.
+điểm tựa|Chỗ dựa vững chắc về vật chất hay tinh thần.
+điểm yếu|Chỗ kém, chỗ dễ bị tổn thương của người hay vật.
+điên đảo|Rối loạn, đảo lộn hết cả, khiến người ta khốn đốn.
+điền kinh|Các môn chạy, nhảy xa, nhảy cao, ném tạ diễn ra trên sân vận động.
+điển hình|Tiêu biểu, mang nét chung rõ nhất của một loại.
+điển trai|Có vẻ đẹp nam tính, lịch lãm.
+điện ảnh|Ngành nghệ thuật làm và chiếu phim.
+điện máy|Các thiết bị dùng điện trong nhà như tủ lạnh, máy giặt, quạt.
+điện thoại|Thiết bị dùng để nói chuyện với người ở xa qua đường dây hay sóng.
+điện tử|Thuộc kĩ thuật dùng vi mạch xử lý tín hiệu, như máy tính, điện thoại.
+điệp khúc|Đoạn hát quay lại sau mỗi lời, dễ thuộc, khán giả hay hát theo.
+điêu khắc|Nghệ thuật tạc, đẽo, nặn thành tượng hay hình khối.
+điều chỉnh|Sửa đổi lại cho phù hợp, cho đúng mức.
+điều độ|Có chừng mực, vừa phải trong ăn uống, làm việc và nghỉ ngơi.
+điều hành|Nắm việc chung của công ty, cơ quan, phân công và theo dõi hằng ngày.
+điều khiển|Bấm nút hay cầm lái cho máy móc, xe cộ chạy theo ý mình.
+điều kiện|Điều phải có trước thì việc khác mới xảy ra hay làm được.
+điều ước|Mong muốn được nói ra hay nghĩ thầm, mong sẽ thành sự thật.
+điệu bộ|Dáng vẻ, cử chỉ của người, thường làm ra để biểu lộ cảm xúc.
+đinh|Que kim loại nhọn có mũ, đóng vào gỗ để gắn hay treo đồ vật.
+đinh ghim|Đinh nhỏ có mũ to, ấn bằng tay để ghim giấy lên bảng hay tường.
+đinh ninh|Tin chắc và nghĩ mãi trong đầu rằng điều gì đó là đúng.
+đinh ốc|Chi tiết kim loại có ren xoắn, vặn vào đai ốc để siết chặt.
+đinh vít|Đinh có ren xoắn, đầu xẻ rãnh, vặn bằng tua vít vào gỗ, tường.
+đình đám|Rầm rộ, gây được nhiều chú ý và bàn tán, thường nói về sự kiện.
+đỉnh cao|Mức cao nhất mà một người hay một việc đạt tới.
+đỉnh đầu|Chỗ cao nhất trên đầu, ngay giữa phía trên hộp sọ.
+đỉnh điểm|Lúc một sự việc lên tới mức căng thẳng hay mạnh mẽ nhất.
+đĩnh đạc|Điềm tĩnh, chững chạc và đường hoàng trong cử chỉ, lời nói.
+đính hôn|Chính thức hứa hôn với nhau trước khi tổ chức đám cưới.
+đính kèm|Gửi hoặc gắn thêm tài liệu, tệp đi cùng thư hay văn bản chính.
+định cư|Dọn tới một vùng đất hay đất nước khác, lập nghiệp, ở lại lâu dài.
+định dạng|Cách trình bày hay kiểu lưu của văn bản, tệp dữ liệu trên máy tính.
+định giá|Ước tính giá trị bằng tiền của một món hàng hay tài sản.
+định hình|Bắt đầu có hình dạng, tính chất rõ ràng và ổn định.
+định hướng|Xác định phương hướng, mục tiêu cần nhắm tới cho bản thân hay công việc.
+định kiến|Ý nghĩ có sẵn, thường thiên lệch, về người hay nhóm người, khó thay đổi.
+định nghĩa|Lời nói rõ một khái niệm là gì, khác với cái khác ra sao.
+định vị|Tìm ra chính xác vị trí của một người hay vật.
+đo lường|Dùng thước, cân hay đồng hồ để biết vật dài, nặng hay nhiều bao nhiêu.
+đỏ au|Đỏ đậm và tươi rói, như má trẻ con hay hòn than đang cháy.
+đỏ bừng|Đỏ lên rất nhanh và rõ, thường nói về mặt khi nóng hay ngượng.
+đỏ hoe|Hơi đỏ và ướt, thường nói về mắt khi khóc hay mệt.
+đỏ mặt|Mặt ửng đỏ lên vì xấu hổ, ngượng ngùng hay tức giận.
+đỏ rực|Đỏ chói và sáng rực, thường nói về lửa hay nắng chiều.
+đỏ thắm|Đỏ đậm và tươi tắn, thường nói về hoa, đôi môi hay tình cảm.
+đỏ ửng|Hơi đỏ lên một cách nhẹ nhàng, thường nói về đôi má hay bầu trời.
+đọ sức|So tài, tranh đua với nhau để xem bên nào mạnh hơn.
+đoàn kết|Gắn bó, chung sức với nhau để cùng làm việc hay vượt khó.
+đoàn tụ|Được quây quần bên người thân trở lại sau quãng dài cách xa.
+đoán mò|Đoán bừa khi không có căn cứ hay hiểu biết gì.
+đoạn thẳng|Phần của đường thẳng nằm giữa hai điểm, có độ dài xác định.
+đoạt|Giành lấy về mình, bằng sức hay qua thi đấu, như giành giải thưởng.
+đọc hiểu|Đọc một văn bản và nắm được nội dung, ý nghĩa của nó.
+đòi hỏi|Yêu cầu phải có, phải được đáp ứng điều gì đó.
+đói bụng|Thấy cồn cào, thèm ăn vì đã lâu chưa có gì vào bụng.
+đói lả|Đói tới mức người rã rời, chân tay bủn rủn không còn sức.
+đói meo|Đói lâu đến mức bụng lép kẹp, cồn cào.
+đom đóm|Côn trùng nhỏ có bụng phát sáng, thường bay lập lòe ban đêm.
+đỏm dáng|Chăm chút làm đẹp, ăn mặc chải chuốt để được để ý.
+đòn bẩy|Thanh cứng tựa trên một điểm, ấn một đầu để nhấc vật nặng đầu kia.
+đòn gánh|Thanh tre dài, dẹt, đặt lên vai để gánh hai thúng ở hai đầu.
+đón chào|Vui vẻ chào đón người hay sự kiện mới đến.
+đón nhận|Tiếp nhận điều gì với thái độ nhất định, như vui mừng hay dè dặt.
+đón tiếp|Ra gặp và tiếp đãi khách đến thăm.
+đong đưa|Lắc lư qua lại nhẹ nhàng, thường nói về cành lá trước gió.
+đóng chai|Rót nước uống hay nước mắm vào chai rồi đậy kín, chuẩn bị đem bán.
+đóng cửa|Khép cánh cửa lại; cũng nói cửa hàng hay công ty ngừng hoạt động.
+đóng dấu|Ấn con dấu thấm mực lên giấy tờ để chứng thực, thường kèm chữ kí.
+đóng gói|Cho hàng vào hộp, túi rồi bọc kín để cất giữ hay vận chuyển.
+đóng góp|Bỏ ra tiền bạc, sức lực hay ý tưởng của mình cho một việc chung.
+đóng khung|Lắp tranh, ảnh hay bằng khen vào một khung viền để treo lên tường.
+đóng kịch|Diễn trên sân khấu; còn có nghĩa giả vờ, làm bộ cho người khác tin.
+đóng phim|Tham gia diễn xuất, nhận thủ một nhân vật trong một bộ phim.
+đóng thùng|Xếp hàng hóa vào thùng rồi niêm kín để chuyên chở.
+đóng vai|Nhận làm một nhân vật khi diễn hay khi chơi trò giả làm người khác.
+đô thị|Vùng dân cư đông, nhiều nhà cửa, đường sá và dịch vụ, như thành phố.
+đồ ăn|Những thứ dùng để ăn, như cơm, thức ăn, bánh trái.
+đồ ăn nhanh|Món làm sẵn hay làm rất nhanh, như bánh mì kẹp thịt, gà rán.
+đồ bạc|Đồ dùng hay trang sức làm bằng bạc, như thìa, nhẫn, vòng.
+đồ bơi|Quần áo bó sát, may bằng vải co giãn, mặc khi đi bơi.
+đồ chơi|Vật làm ra để trẻ em chơi đùa, như búp bê, xe nhỏ.
+đồ cổ|Vật làm từ thời xa xưa, được sưu tầm và quý vì tuổi đời.
+đồ da|Hàng làm bằng da thuộc, như ví, thắt lưng, giày, túi xách.
+đồ dùng|Vật dụng dùng hằng ngày trong sinh hoạt hay học tập.
+đồ đạc|Đủ thứ đồ trong nhà hoặc mang theo người, như bàn ghế, chăn màn.
+đồ giả|Hàng làm nhái theo hàng thật, thường kém hơn về chất lượng.
+đồ gốm|Đồ nặn từ đất rồi nung cứng, như chén bát, chum vại, bình hoa.
+đồ hàng|Đồ chơi nhỏ mô phỏng nồi niêu, quầy hàng để trẻ chơi bán hàng.
+đồ hộp|Thức ăn nấu sẵn, đóng kín trong hộp, thường bằng kim loại, để lâu được.
+đồ nghề|Dụng cụ cần dùng cho công việc của một nghề, như búa, kìm.
+đồ sộ|To lớn và nặng nề, gây cảm giác choáng ngợp, thường nói về công trình.
+đồ sứ|Đồ làm bằng sứ trắng mịn, nung ở nhiệt độ cao, như bát đĩa, bình.
+đồ thừa|Thức ăn còn lại sau bữa ăn, chưa ăn hết.
+đồ uống|Thứ để uống như nước lọc, trà, cà phê, nước ngọt.
+đổ mưa|Trời bắt đầu mưa xuống, thường là mưa to và bất chợt.
+đổ xô|Nhiều người cùng kéo nhau đến một nơi hay làm cùng một việc.
+đố chữ|Trò chơi đưa ra gợi ý để người khác đoán ra một chữ.
+độ ẩm|Mức nước chứa trong không khí hoặc thấm trong vật như đất, gỗ, thóc.
+độ bền|Mức chịu đựng được lâu, khó hư hỏng của một vật.
+độ cao|Số đo cho biết núi hay máy bay cao bao nhiêu so với mặt biển.
+độ dài|Khoảng đo từ đầu này tới đầu kia của một vật, một đoạn đường.
+độ dốc|Mức nghiêng của mặt đường hay sườn đồi so với mặt phẳng ngang.
+độ này|Khoảng thời gian quanh lúc đang nói, dạo này.
+độ nét|Mức rõ của ảnh hay hình trên màn, chi tiết sắc gọn hay bị nhòe.
+độc đáo|Riêng biệt, mới lạ, không giống với những cái khác.
+độc giả|Người đọc sách, báo hay một tác phẩm nào đó.
+độc hại|Có chất gây hại cho sức khỏe con người hay môi trường.
+độc lập|Tự chủ, không phụ thuộc ai; cũng chỉ một nước có chủ quyền riêng.
+độc nhất|Riêng có một, không thể tìm thấy cái thứ hai giống như vậy.
+độc thân|Đang không có vợ hay chồng, dù chưa từng cưới hay đã chia tay.
+đôi bên|Cả hai phía trong một mối quan hệ hay một việc.
+đôi khi|Thỉnh thoảng, có lúc, không thường xuyên.
+đôi mươi|Khoảng tuổi hai mươi, lúc tuổi trẻ đang tràn sức sống.
+đồi núi|Vùng đất có nhiều đồi và núi cao thấp nối nhau.
+đổi chác|Đem thứ mình có trao lấy thứ của người khác, không dùng tiền.
+đổi đời|Thoát cảnh khó khăn, sống hẳn sang một cuộc đời khác, thường sung túc hơn.
+đổi gió|Thay đổi không khí, nếp sống hay món ăn quen thuộc cho mới lạ.
+đổi giọng|Thay đổi cách nói hay thái độ, thường cho hợp với lợi ích của mình.
+đổi hướng|Chuyển sang đi theo một hướng khác.
+đổi khác|Không còn giữ dáng vẻ, tính tình như trước kia.
+đổi mới|Thay cái cũ bằng cái mới, tiến bộ hơn.
+đổi thay|Biến chuyển dần qua thời gian, thường nói về cảnh vật, cuộc sống.
+đổi tiền|Đem tiền đổi lấy loại tiền khác, như tiền lẻ hay ngoại tệ.
+đổi ý|Không giữ dự định cũ nữa mà chuyển sang quyết định khác.
+đối chiếu|Đặt hai thứ cạnh nhau để so xem khớp hay lệch ở chỗ nào.
+đối diện|Ở phía trước mặt, quay mặt vào nhau.
+đối đáp|Trả lời lại lời nói hay câu hỏi của người khác.
+đối đầu|Chống lại nhau, đứng ở hai phía đối địch.
+đối mặt|Đứng trước khó khăn, hiểm nguy hay đối thủ mà không quay lưng né tránh.
+đối phó|Tìm cách ứng phó với tình huống khó khăn hay đối thủ.
+đối phương|Người hay bên ở phía đối lập trong một cuộc tranh đấu.
+đối tác|Người hay tổ chức cùng làm ăn, bắt tay với mình theo một thỏa thuận.
+đối thoại|Trò chuyện qua lại giữa các bên, thường để hiểu nhau hay bàn việc.
+đối thủ|Bên đấu với mình trong trận thi đấu hay cuộc giành phần thắng.
+đối tượng|Người hay vật mà một hành động, nghiên cứu nhắm tới.
+đối với|Từ dùng để nêu người hay sự việc mà câu nói hướng tới.
+đối xử|Có cách cư xử, thái độ nhất định với người khác.
+đối xứng|Có các phần khớp nhau qua một đường hay một điểm, như hai cánh bướm.
+đội bóng|Nhóm cầu thủ cùng ra sân dưới một màu áo, thường là bóng đá.
+đội hình|Cách xếp người vào từng vị trí của một đội khi ra sân, xếp hàng.
+đội ngũ|Tập thể người cùng làm một nghề, như các thầy cô của một trường.
+đội trưởng|Người đứng đầu và chỉ huy một đội.
+đội tuyển|Đội gồm người được chọn kĩ để thi đấu thay mặt trường, tỉnh hay nước.
+đốm lửa|Điểm lửa nhỏ, cháy le lói hay bắn ra từ đám cháy.
+đồn đoán|Truyền tai nhau và phỏng đoán khi chưa có tin chắc chắn.
+đông bắc|Hướng nằm giữa hướng đông và hướng bắc.
+đông dân|Có số người sinh sống lớn, thường nói về một vùng hay một nước.
+đông đảo|Có số lượng người rất nhiều, thường cùng tham gia một việc chung.
+đông đủ|Có mặt khá nhiều và không vắng ai trong số người cần tới.
+đông đúc|Chật kín người và xe cộ, thường nói về phố xá.
+đông lạnh|Làm lạnh cứng dưới mức đóng băng để giữ lâu, thường là thịt, cá.
+đông nam|Hướng nằm giữa hướng đông và hướng nam.
+đông tây|Hướng mặt trời mọc và lặn; cũng chỉ hai miền văn hóa Á và Âu.
+đồng|Khoảng đất rộng để trồng lúa, hoa màu; cũng chỉ kim loại màu đỏ nâu.
+đồng áng|Việc cày cấy, làm ruộng ngoài đồng nói chung.
+đồng bằng|Vùng đất thấp phẳng, trải rộng, thường do phù sa sông bồi, hợp cấy lúa.
+đồng bộ|Ăn khớp và đi cùng nhịp với nhau giữa các phần, các bộ phận.
+đồng ca|Lối hát mà nhiều giọng cùng cất lên chung một bài.
+đồng cảm|Thấu và cùng rung động với nỗi buồn, niềm vui của người khác.
+đồng cỏ|Bãi rộng mênh mông toàn cỏ, ít cây cao, bò ngựa thường được thả gặm.
+đồng đều|Đều nhau, không chênh lệch giữa các phần hay các người.
+đồng đội|Người cùng đội, sát cánh với mình khi thi đấu hay làm nhiệm vụ.
+đồng giá|Có cùng một mức giá cho mọi món hàng.
+đồng hành|Cùng đi hay cùng làm việc gì đó với ai trong một thời gian.
+đồng hồ|Dụng cụ đo và chỉ giờ, có kim quay hay màn hình hiện số.
+đồng hồ cát|Dụng cụ đo giờ bằng cát chảy giữa hai bầu thủy tinh nối nhau.
+đồng hương|Người cùng quê với mình, thường nói khi cả hai sống xa quê.
+đồng loại|Những cá thể cùng loài với nhau, thường nói về người hay vật.
+đồng loạt|Tất cả cùng làm hay cùng diễn ra một lượt, không trước sau.
+đồng lương|Khoản tiền công được trả đều đặn cho người làm việc.
+đồng nát|Đồ cũ, hỏng như sắt vụn, giấy vụn, được thu mua để bán lại.
+đồng nghĩa|Có nghĩa giống hay gần như nhau, thường nói về hai từ khác âm.
+đồng nghiệp|Người cùng làm việc ở một nơi hay cùng một nghề.
+đồng nhất|Giống nhau từ đầu tới cuối, không có phần nào khác biệt.
+đồng phục|Quần áo may cùng một kiểu, mặc chung cho một tập thể như trường học.
+đồng quê|Vùng nông thôn có ruộng đồng, cảnh vật yên bình.
+đồng ruộng|Các thửa ruộng cày cấy liền nhau ở vùng nông thôn.
+đồng thanh|Nhiều người cất tiếng cùng lúc, chung một lời, như cả lớp đọc bài.
+đồng thau|Kim loại vàng óng pha từ đồng với kẽm, làm ổ khóa, kèn, đồ thờ.
+đồng tiền|Tiền bạc, thứ trao tay khi mua bán, kể cả tờ giấy hay miếng xu.
+đồng tình|Cùng chung ý kiến, ủng hộ ý kiến của người khác.
+đồng xu|Miếng kim loại tròn, dẹt, dùng làm tiền có mệnh giá nhỏ.
+đồng ý|Bằng lòng, chấp nhận điều người khác đề nghị.
+động cơ điện|Máy biến điện năng thành chuyển động quay để chạy các thiết bị.
+động đậy|Cựa quậy nhẹ, chuyển động khẽ một chút.
+động lòng|Bỗng thấy thương, mềm lòng trước cảnh khổ hay lời nài nỉ của người khác.
+động lực|Điều thôi thúc, tạo sức mạnh để người ta hành động hay cố gắng.
+động não|Vận dụng trí óc, suy nghĩ để tìm ra ý tưởng hay lời giải.
+động tác|Cử động của cơ thể theo một cách nhất định, như trong thể dục, múa.
+động từ|Loại từ gọi tên việc làm hay trạng thái, như chạy, đọc, ngủ.
+động vật|Sinh vật biết cử động, sống nhờ ăn thức ăn có sẵn, như chim, cá.
+động viên|Khích lệ, nói lời giúp người khác thêm tinh thần cố gắng.
+đốt cháy|Dùng lửa làm cho vật bắt lửa và cháy đi.
+đốt ngón tay|Mỗi đoạn xương nhỏ của ngón tay, nối với nhau bằng khớp.
+đột ngột|Xảy tới thình lình, không có dấu hiệu gì trước, làm người ta giật mình.
+đột phá|Vượt qua lối mòn cũ, tạo một bước tiến lớn và mới mẻ.
+đột xuất|Xảy ra ngoài kế hoạch, không định trước.
+đỡ đầu|Nhận chăm lo và nâng đỡ lâu dài cho một người, như cha mẹ nuôi.
+đời người|Quãng sống của một con người, từ tiếng khóc chào đời tới ngày nhắm mắt.
+đời sống|Toàn bộ sinh hoạt, cách sống hằng ngày của con người.
+đời thường|Cuộc sống giản dị hằng ngày, khác với lúc làm việc hay biểu diễn.
+đơn ca|Một người hát riêng một mình.
+đơn điệu|Lặp đi lặp lại một kiểu, thiếu thay đổi nên dễ gây chán.
+đơn độc|Chỉ có một mình, không ai kề bên hay giúp sức.
+đơn giá|Giá tiền tính cho một đơn vị hàng hay việc, như một cân, một mét.
+đơn giản|Không phức tạp, dễ hiểu, dễ làm.
+đơn hàng|Yêu cầu đặt mua hàng của khách, ghi rõ món hàng và số lượng.
+đơn lẻ|Riêng rẽ từng cái một, không thành bộ hay nhóm.
+đơn phương|Chỉ do một bên, không có sự đáp lại hay đồng ý của bên kia.
+đơn sơ|Giản dị, ít đồ đạc, không có gì cầu kỳ.
+đơn thuần|Chỉ gồm đúng một mặt, không xen thêm điều gì khác.
+đơn vị|Đại lượng chuẩn để đo, như mét, lít; cũng chỉ một tổ chức, bộ phận.
+đu đủ|Cây ăn quả thân thẳng, quả to thuôn dài, ruột vàng cam, ăn ngọt.
+đu đưa|Đưa qua đưa lại khi treo hay ngồi trên vật treo, như đu dây, võng.
+đu quay|Trò chơi có vòng hay ghế treo quay tròn, thường ở công viên.
+đua ngựa|Cuộc thi cưỡi ngựa chạy xem con nào về đích trước.
+đua thuyền|Cuộc thi chèo thuyền trên sông, hồ để giành về đích trước.
+đùa cợt|Nói hay làm cho vui, thiếu nghiêm túc, có khi trêu người khác.
+đùa dai|Trêu chọc kéo dài quá mức, khiến người bị trêu khó chịu.
+đùa giỡn|Chơi đùa, nô giỡn vui vẻ với nhau.
+đùa nghịch|Chạy nhảy, trêu chọc nhau ầm ĩ cho vui, thường thấy ở trẻ nhỏ.
+đúc kết|Tổng hợp lại để rút ra điều cốt lõi, bài học từ kinh nghiệm.
+đục ngầu|Đục và có màu sẫm, thường nói về nước có nhiều bùn.
+đùm bọc|Che chở, giúp đỡ nhau lúc khó khăn.
+đun nấu|Nấu nướng, làm chín thức ăn trên bếp nói chung.
+đun sôi|Đun nóng chất lỏng cho tới khi sôi lên.
+đung đưa|Chuyển động qua lại đều đều khi treo lơ lửng, như chiếc võng, quả lắc.
+đúng giờ|Đến hay làm việc đúng vào thời điểm đã định.
+đúng hạn|Xong việc hoặc trả, nộp vào đúng ngày giờ đã hẹn, không trễ.
+đúng hẹn|Giữ đúng lời hẹn, đến hay làm đúng như đã hứa.
+đúng lúc|Vào đúng thời điểm thích hợp, cần thiết.
+đúng mực|Đúng chừng mực, hợp lẽ phải, không quá đà, thường nói về cách cư xử.
+đụng chạm|Chạm, va vào người hay vật; cũng chỉ việc động đến quyền lợi người khác.
+đuốc|Bó vật dễ cháy buộc vào đầu cây, đốt lên để soi sáng.
+đuôi|Phần mọc ở cuối thân con vật; cũng chỉ phần cuối của một vật.
+đuôi gà|Kiểu tóc buộc túm ở sau đầu, thả thõng xuống như đuôi con gà.
+đuôi sam|Mái tóc chia ba lọn bện chéo thành một dải dài thả sau gáy.
+đuổi kịp|Chạy theo cho đến khi bắt kịp người hay vật ở phía trước.
+đuổi theo|Chạy theo sau để bắt hay để giữ lại ai đó.
+đưa đón|Đưa đi và đón về, thường nói về trẻ đi học hay khách.
+đưa tin|Truyền tin tức, thông báo sự việc cho nhiều người biết.
+đứng|Giữ thân mình thẳng, tựa trên hai bàn chân, không ngồi hay nằm.
+đứng dậy|Rời tư thế ngồi hay nằm để đứng thẳng người lên.
+đứng đầu|Ở vị trí cao nhất hay dẫn đầu một tổ chức, danh sách.
+đứng lên|Rời chỗ ngồi hay chỗ nằm, chống chân dựng người thẳng dậy.
+đứng lớp|Trực tiếp giảng dạy một lớp học.
+đứng ra|Tự nhận làm người lo liệu hay chịu trách nhiệm một việc.
+đứng tuổi|Đã qua tuổi trẻ, ở độ tuổi trung niên.
+đứng vững|Trụ chắc trên hai chân, không lảo đảo; cũng chỉ không gục trước khó khăn.
+đứng yên|Không cử động, ở yên một chỗ.
+được lòng|Được người khác yêu mến, ưa thích.
+được mùa|Thu hoạch được nhiều nông sản trong một vụ.
+được việc|Làm việc có kết quả, giúp ích được, thường nói về người.
+đười ươi|Vượn người to, lông hung đỏ, tay dài quá gối, đu cành trong rừng rậm.
+đượm|Thấm đều và đậm, thường nói về hương vị, màu sắc hay tình cảm.
+đương đầu|Dám đối mặt, chống chọi với khó khăn hay đối thủ.
+đường|Lối đi cho người và xe; cũng chỉ chất ngọt kết tinh làm từ mía.
+đường bay|Tuyến bay cố định của máy bay nối hai sân bay.
+đường băng|Dải đường thẳng tắp trong sân bay để máy bay lấy đà và đáp xuống.
+đường biển|Lối đi lại bằng tàu thuyền trên mặt biển, nối các cảng với nhau.
+đường bộ|Đường đi lại trên mặt đất, phân biệt với đường thủy, đường không.
+đường cái|Con đường lớn, xe cộ qua lại nhiều, nối các làng, thị trấn.
+đường cao tốc|Đường rộng, nhiều làn, dành cho xe chạy nhanh, không có ngã tư cắt ngang.
+đường cát|Đường dạng hạt nhỏ li ti như cát, thường dùng nấu ăn, pha nước.
+đường chéo|Đoạn thẳng nối hai góc không kề nhau của một hình.
+đường cong|Nét vẽ uốn lượn, không thẳng, như vành trăng khuyết hay khúc sông quanh co.
+đường dây|Dây dẫn kéo dài để truyền điện hay tín hiệu điện thoại tới nơi dùng.
+đường đi|Lối đi, hướng đi để từ nơi này tới nơi khác.
+đường hầm|Đường đi xuyên qua lòng núi hay đào dưới mặt đất.
+đường hẻm|Lối đi nhỏ hẹp giữa các dãy nhà, cách gọi ở miền Nam.
+đường hoàng|Đàng hoàng, công khai, ngay thẳng, không lén lút.
+đường kính|Đoạn thẳng xuyên qua tâm, chạm vành tròn hai đầu, dài gấp đôi bán kính.
+đường làng|Con đường nhỏ chạy trong làng hay nối các làng với nhau.
+đường mòn|Lối đi nhỏ do người hay thú đi lại nhiều mà thành.
+đường nâu|Đường mía chưa tinh luyện kỹ, màu nâu, vị đậm.
+đường nét|Những nét tạo nên dáng vẻ của một hình vẽ, khuôn mặt hay công trình.
+đường nhựa|Đường có mặt trải nhựa đen trộn đá dăm, phẳng và êm cho xe chạy.
+đường ống|Hệ thống ống dài nối nhau để dẫn nước, khí hay dầu.
+đường phèn|Đường kết thành tảng trong, vàng nhạt, ngọt dịu, hay dùng nấu chè.
+đường phố|Lối đi trong thành phố, hai bên san sát nhà cửa, xe cộ qua lại.
+đường quốc lộ|Tuyến đường lớn chạy xuyên qua nhiều tỉnh, do nhà nước xây và quản lí.
+đường ray|Hai thanh thép song song đặt trên tà vẹt để tàu hỏa chạy.
+đường sắt|Ngành và hệ thống giao thông dùng tàu chạy trên ray.
+đường tàu|Lối chạy của tàu hỏa, gồm ray và tà vẹt nằm trên nền đá.
+đường tắt|Lối ngắn hơn đường chính cho mau tới; cũng chỉ cách làm bỏ bớt bước.
+đường thẳng|Đường không cong, không gãy, kéo dài mãi về hai phía.
+đường trắng|Đường đã tinh luyện có màu trắng, làm từ mía hay củ cải đường.
+đường vành đai|Đường lớn chạy vòng quanh thành phố để giảm tải giao thông trung tâm.
+đường viền|Đường chạy dọc theo mép ngoài của vật, như mép áo hay khung tranh.
+đường vòng|Lối đi vòng ra xa hơn lối thẳng, thường để tránh chỗ tắc.
+đường xe lửa|Tuyến đường có đặt ray để xe lửa chạy, nối các ga với nhau.
+đứt đoạn|Bị cắt ngang thành từng đoạn, không liền mạch.
+đứt quãng|Bị ngắt từng quãng, lúc có lúc mất, như tiếng nói hay tín hiệu.
+e ngại|Rụt rè, lo lắng nên ngần ngừ, không dám làm.
+em bé|Đứa trẻ còn nhỏ tuổi, thường còn phải bế ẵm.
+em chồng|Cách người vợ gọi người em ruột, trai hoặc gái, của chồng.
+em dâu|Người vợ của em trai mình trong gia đình.
+em gái|Người con gái nhỏ tuổi hơn mình trong cùng gia đình.
+em họ|Người họ hàng cùng thế hệ, vai em so với mình, như con của chú.
+em rể|Chồng cô em gái, người vào làm rể trong nhà mình.
+em ruột|Em do cùng cha mẹ sinh ra, không phải em họ hay em nuôi.
+em trai|Người con trai nhỏ tuổi hơn mình trong cùng gia đình.
+em út|Người con sinh sau cùng trong một nhà.
+em vợ|Em ruột bên vợ, trai hay gái đều được gọi như thế.
+eo biển|Dải nước biển hẹp kẹp giữa hai khối đất liền, thông hai vùng biển.
+eo hẹp|Chật vật, không dư dả, thường nói về tiền bạc hay thời gian.
+eo lưng|Phần thắt nhỏ của thân người, nằm giữa ngực và hông.
+ếch nhái|Các loài lưỡng cư như ếch, nhái, cóc nói chung, sống ở nơi ẩm ướt.
+êm ấm|Hòa thuận và yên vui, thường nói về gia đình.
+êm dịu|Nhẹ nhàng, dịu dàng, thường nói về giọng nói, ánh sáng hay làn gió.
+êm đẹp|Kết thúc tốt, không xảy ra xích mích hay rắc rối gì.
+êm đềm|Yên tĩnh, êm ả và thanh bình, thường nói về cuộc sống, dòng sông.
+êm tai|Nghe dịu và thuận tai, không chói hay ồn, nói về tiếng nhạc, giọng nói.
+êm xuôi|Diễn ra trôi chảy, xong xuôi mà không gặp trở ngại.
+gà ác|Giống gà nhỏ, lông thường trắng, da và thịt đen, hay được hầm thuốc bắc.
+gà con|Gà mới nở chưa lâu, mình phủ lông tơ, kêu chiêm chiếp theo mẹ.
+gà công nghiệp|Giống gà nuôi nhốt số lượng lớn bằng thức ăn chế biến, lớn rất nhanh.
+gà gáy|Tiếng gà trống cất lên vang xa, thường lúc trời tờ mờ sáng.
+gà lôi|Loài chim rừng giống gà, đuôi dài, lông nhiều màu sặc sỡ.
+gà mái|Gà giống cái, đẻ trứng và ấp con.
+gà quay|Món gà nguyên con tẩm gia vị rồi quay chín, da giòn vàng.
+gà rừng|Loài gà hoang sống trong rừng, con trống lông sặc sỡ, bay khá xa.
+gà sao|Giống gà lông xám có nhiều chấm trắng nhỏ như sao, đầu nhỏ.
+gà tây|Gia cầm to lớn, đầu có mảng da đỏ, thường quay nướng vào dịp lễ.
+gà trống|Gà giống đực, có mào đỏ to, biết gáy.
+gà vịt|Đàn gà, đàn vịt và gia cầm nuôi trong nhà nói chung.
+gác bếp|Giàn treo phía trên bếp lửa để gác củi, hong khô thịt cá.
+gác lửng|Tầng gác thấp nằm lửng giữa sàn và mái, dùng để đồ hay ở.
+gác xép|Gian gác nhỏ chật hẹp sát mái nhà, thường để chứa đồ hay ngủ.
+gạch|Viên vật liệu xây hình hộp, thường bằng đất nung, xếp chồng để dựng tường.
+gạch bỏ|Kẻ một đường lên chữ hay mục để xóa, loại ra.
+gạch bông|Gạch lát nền có hoa văn màu sắc trên mặt, kiểu xưa.
+gạch chân|Kẻ một đường dưới chữ để làm nổi bật.
+gạch dưới|Vạch một nét bên dưới từ ngữ để nhấn mạnh hay đánh dấu.
+gạch lát|Tấm gạch mỏng, mặt phẳng nhẵn, dùng phủ lên nền nhà hay sân.
+gạch men|Gạch có lớp men bóng phủ mặt, dùng lát nền hay ốp tường.
+gạch ngang|Dấu nét ngang dài hơn gạch nối, dùng để tách ý trong câu.
+gạch nối|Dấu nét ngắn đặt giữa hai từ hay hai số để nối liền chúng.
+gạch ốp lát|Các loại gạch dùng để ốp tường và lát sàn nói chung.
+gạch sứ|Gạch làm từ đất sét trắng nung rất nóng, cứng, ít thấm nước.
+gai góc|Nhiều khó khăn, trắc trở, như con đường đầy gai.
+gãi ngứa|Lấy móng tay cào nhẹ chỗ da đang ngứa cho đỡ khó chịu.
+gan dạ|Vững lòng, không run sợ khi gặp nguy hiểm hay thử thách.
+gan gà|Lá gan của con gà, dùng làm món ăn như xào, nướng.
+gán ghép|Gượng ép đặt hai người hay hai việc vào với nhau, thường không đúng.
+ganh đua|Đua tranh với nhau để hơn người khác.
+gánh|Mang đồ bằng đòn đặt trên vai, treo hai bên đầu đòn.
+gánh chịu|Phải chịu đựng hậu quả hay trách nhiệm nặng nề.
+gánh hàng|Hai thúng hàng treo ở hai đầu đòn gánh, thường của người bán rong.
+gánh nặng|Trách nhiệm hay khó khăn đè nặng lên ai đó.
+gào thét|Kêu la thật to và dữ dội, như người đau đớn hay gió bão.
+gáo dừa|Vỏ cứng của quả dừa, làm thành cái gáo để múc nước.
+gạo cội|Lâu năm, giỏi và có uy tín trong nghề.
+gạo nếp|Hạt gạo trắng đục, nấu chín dẻo dính, hay đồ xôi, gói bánh chưng.
+gạo tẻ|Gạo thường dùng nấu cơm hằng ngày, hạt trong, ít dẻo.
+gara|Chỗ để ô tô trong nhà; cũng chỉ xưởng sửa chữa ô tô.
+gạt bỏ|Loại ra, không để tâm hay không chấp nhận nữa.
+gay gắt|Mạnh mẽ, quyết liệt và căng thẳng, thường nói về lời lẽ, tranh cãi.
+gặm nhấm|Cắn nhỏ từng chút một bằng răng, như chuột gặm đồ vật.
+gắn bó|Gần gũi, có quan hệ thân thiết lâu dài, khó rời xa.
+gắn kết|Kéo mọi người hay các phần lại gần nhau thành một khối bền chặt.
+gắn liền|Đi kèm, không tách rời khỏi nhau.
+găng|Căng thẳng, dễ xảy ra xung đột; cũng chỉ đồ đeo bao lấy bàn tay.
+găng tay|Đồ bằng vải, len hay da đeo vào tay để giữ ấm, bảo vệ.
+gắng gượng|Cố sức làm dù đã mệt mỏi, yếu sức.
+gắng sức|Dồn thêm sức lực, cố hơn mức bình thường để kịp xong việc khó.
+gặp gỡ|Gặp nhau, tiếp xúc trò chuyện.
+gặp may|Được hưởng điều tốt lành do tình cờ.
+gặp mặt|Gặp nhau trực tiếp, thường có hẹn trước.
+gặp phải|Bất ngờ gặp điều không mong muốn.
+gắt gao|Nghiêm ngặt, chặt chẽ, quyết liệt.
+gặt hái|Thu về kết quả, thành quả sau thời gian làm việc.
+gầm cầu|Khoảng trống phía dưới mặt cầu.
+gầm gừ|Tiếng trầm đục rít trong họng, như tiếng chó khi giận muốn dọa.
+gầm rú|Tiếng gầm to và kéo dài, như động cơ xe hay thú dữ.
+gần đây|Trong quãng thời gian mới qua, chưa lâu; cũng chỉ chỗ ở cách không xa.
+gần gũi|Thân thiết, dễ gần, gắn bó với nhau.
+gần như|Hầu hết, chỉ còn kém một chút nữa là trọn vẹn.
+gần xa|Khắp nơi, cả nơi gần và nơi xa.
+gấp bội|Nhiều hơn hẳn, tăng lên nhiều lần.
+gấp đôi|Bằng hai lần số lượng hay kích thước ban đầu.
+gấp gáp|Vội vã, hấp tấp vì thời gian ngắn.
+gấp rút|Khẩn trương, nhanh chóng để kịp thời hạn.
+gấp rưỡi|Bằng một lần rưỡi số lượng ban đầu.
+gập ghềnh|Lồi lõm, chỗ cao chỗ trũng, đi xe bị xóc nảy, như đường núi.
+gật đầu|Khẽ hạ cằm xuống rồi nâng lên, ra dấu ưng thuận mà không cần nói.
+gật gù|Khẽ gật đầu nhiều lần, ra vẻ tán thành hay đắc ý.
+gâu gâu|Tiếng chó sủa liên tiếp, to và ngắn từng hồi.
+gấu bông|Đồ chơi nhồi bông mềm hình con gấu, thường để ôm hoặc trang trí.
+gấu chó|Loài gấu nhỏ con, lông đen ngắn, ngực có mảng lông vàng, sống ở rừng.
+gấu đen|Loài gấu lông đen tuyền, thân to khỏe, sống ở rừng núi.
+gấu mèo|Thú nhỏ lông xám, quanh mắt có mảng lông đen, đuôi có khoang.
+gấu trúc|Loài gấu lông trắng đen, quanh mắt có mảng đen, chủ yếu ăn tre trúc.
+gầy còm|Rất gầy, người nhỏ và còm cõi, trông thiếu sức sống.
+gầy gò|Có thân hình ít thịt, lộ xương, trông khô và mảnh.
+gầy nhom|Gầy trơ xương, nhìn thấy rõ, thường nói về người hoặc vật nuôi.
+gầy yếu|Vừa gầy vừa yếu sức, thường do ốm hoặc thiếu ăn.
+ghen|Cảm thấy khó chịu, bực tức khi người mình yêu quan tâm tới người khác.
+ghép|Gắn hoặc nối các phần rời lại với nhau thành một khối.
+ghép cặp|Xếp từng hai người hay hai thứ thành một đôi, như chia bạn cùng bàn.
+ghép đôi|Kết hai người thành một cặp, thường là cặp yêu nhau hoặc vợ chồng.
+ghê gớm|Ở mức rất mạnh, đáng sợ hoặc đáng nể, vượt hẳn bình thường.
+ghế bành|Ghế to, rộng, có tay vịn và đệm êm, dùng để ngồi thư giãn.
+ghế băng|Ghế dài cho nhiều người ngồi, thường đặt ở công viên hay nhà chờ.
+ghế dài|Ghế có mặt ngồi kéo dài, đủ cho vài người ngồi cạnh nhau.
+ghế dựa|Ghế có lưng dựa phía sau, ngồi thoải mái hơn ghế đẩu.
+ghế đẩu|Ghế nhỏ, thấp, không có lưng tựa, thường có bốn chân.
+ghế tựa|Ghế có lưng cao để tựa, thường kê quanh bàn ăn hay bàn làm việc.
+ghế vải|Ghế có khung căng một tấm vải làm mặt ngồi, thường gấp gọn được.
+ghế xếp|Ghế gấp lại được cho gọn, dễ mang theo và cất đi.
+ghế xích đu|Ghế treo hoặc đặt trên khung, đung đưa qua lại khi ngồi.
+ghế xoay|Ghế có trục ở chân để mặt ngồi xoay được, thường dùng ở văn phòng.
+ghềnh|Chỗ lòng sông hay suối có đá lởm chởm, nước chảy xiết.
+ghi âm|Thu giọng nói hay tiếng nhạc vào máy, điện thoại để phát lại sau.
+ghi bàn|Đưa được bóng vào khung thành bên kia để có thêm điểm.
+ghi chép|Viết lại những điều nghe hay thấy để giữ làm tư liệu, khỏi quên.
+ghi chú|Lời viết thêm ngắn gọn bên cạnh để giải thích hoặc nhắc nhở.
+ghi đông|Tay lái của xe đạp hoặc xe máy, hai đầu có tay nắm.
+ghi hình|Dùng máy quay thu lại hình ảnh động của người, cảnh hay sự kiện.
+ghi nhận|Thừa nhận và đánh giá đúng công sức hay thành tích của ai.
+ghi nhớ|Giữ kĩ trong trí óc để không quên.
+ghi tên|Đăng kí tên của mình vào danh sách để tham gia việc gì.
+ghim|Vật nhỏ bằng kim loại, đầu nhọn, dùng để cài hoặc giữ giấy, vải.
+gia cảnh|Hoàn cảnh sống, tình hình kinh tế của một gia đình.
+gia cầm|Các loài chim nuôi lấy thịt, trứng, như gà, vịt, ngan, ngỗng.
+gia cố|Làm cho công trình, đê điều hay nền móng chắc chắn thêm.
+gia công|Làm ra hoặc chế biến hàng theo đơn đặt và nguyên liệu của bên khác.
+gia dụng|Dùng cho việc nhà hằng ngày, nói về đồ dùng, máy móc như nồi, quạt.
+gia đình|Nhóm người gắn bó như cha mẹ, con cái, vợ chồng, kể cả con nuôi.
+gia giảm|Thêm bớt cho vừa, thường nói về gia vị hay liều lượng.
+gia hạn|Lùi hạn chót ra sau, cho thêm thời gian để dùng hay hoàn tất.
+gia nhập|Trở thành thành viên mới của một nhóm, câu lạc bộ hay tổ chức.
+gia phả|Sổ ghi lại các đời, các thế hệ trong một dòng họ.
+gia súc|Các loài thú bốn chân nuôi ở nhà, như trâu, bò, lợn, dê.
+gia sư|Người đến tận nhà dạy kèm riêng cho một hay vài học trò.
+gia tài|Tất cả của cải, đất đai, tiền bạc mà một người hay một nhà có.
+gia tăng|Tăng thêm lên về số lượng hoặc mức độ.
+gia tộc|Dòng họ gồm nhiều gia đình cùng chung tổ tiên.
+gia truyền|Do ông cha để lại cho con cháu, như bí quyết nấu món, bài thuốc.
+gia vị|Thứ nêm vào món ăn cho dậy mùi, đậm vị, như muối, tiêu, hành, ớt.
+già dặn|Chín chắn, từng trải hơn tuổi, thường nói về cách nghĩ hay cách làm.
+già nua|Già lắm, trông yếu ớt và cằn cỗi.
+già yếu|Đã già và sức khỏe suy giảm nhiều.
+giả bộ|Làm ra vẻ một điều không thật, thường để trêu hoặc che giấu.
+giả dạng|Ăn mặc, làm bộ như người khác để giấu thân phận thật.
+giả tưởng|Do trí tưởng tượng dựng nên, không có thật, thường nói về truyện, phim.
+giả vờ|Cố tình làm bộ như thật, chẳng hạn nhắm mắt làm như đang ngủ.
+giá bán|Số tiền người mua phải trả để có một món hàng.
+giá cả|Mức tiền của các thứ hàng hóa, dịch vụ trên thị trường nói chung.
+giá đỗ|Mầm đậu xanh ủ cho nảy dài, thân trắng, dùng làm rau ăn.
+giá lạnh|Lạnh buốt như băng, thường nói về không khí hay đồ vật.
+giá rét|Lạnh buốt thấu xương, thường nói về những đợt rét mùa đông.
+giá sách|Kệ có nhiều ngăn, dùng để xếp và cất sách.
+giá trị|Mức quý, lợi ích hoặc ý nghĩa mà một vật hay việc mang lại.
+giá vẽ|Khung đứng có chân, dùng để đỡ tranh khi vẽ.
+giác quan|Khả năng nhận biết thế giới qua mắt, tai, mũi, lưỡi và da.
+giai điệu|Chuỗi nốt nhạc nối nhau thành câu, tạo nên phần dễ nhớ của bài hát.
+giai đoạn|Khoảng thời gian trong một quá trình, có đặc điểm riêng.
+giải|Phần thưởng dành cho người thắng; còn có nghĩa tìm lời đáp bài toán.
+giải cứu|Cứu người hoặc vật thoát khỏi tình thế nguy hiểm.
+giải đáp|Trả lời, làm rõ những câu hỏi hoặc thắc mắc.
+giải khát|Uống thứ gì mát cho đỡ khát, nhất là lúc trời nóng.
+giải lao|Nghỉ một chút giữa buổi học hay buổi làm cho lại sức.
+giải mã|Tìm ra ý nghĩa thật của tin hoặc kí hiệu đã được mã hóa.
+giải nghệ|Thôi hẳn nghề, thường nói về vận động viên hay nghệ sĩ.
+giải nghĩa|Nói cho rõ một từ hay câu có nghĩa gì để người khác hiểu.
+giải nhiệt|Làm cho cơ thể hay máy móc bớt nóng.
+giải pháp|Cách làm được đưa ra để gỡ một vấn đề hay khó khăn.
+giải quyết|Xử lý cho xong một việc, một vấn đề còn vướng mắc.
+giải tán|Cho đám đông, nhóm hay tổ chức tan ra, không tụ họp nữa.
+giải thích|Trình bày lí do hay cách hiểu để người khác nắm rõ một điều.
+giải thoát|Đưa ra khỏi cảnh bị giam giữ, ràng buộc hay khổ sở.
+giải thưởng|Phần thưởng chính thức trao cho người hoặc tác phẩm xuất sắc trong cuộc thi.
+giải trí|Làm việc nhẹ nhàng, vui vẻ để nghỉ ngơi sau lúc làm việc.
+giảm|Làm cho ít đi, thấp đi hoặc nhẹ đi so với trước.
+giảm bớt|Bớt đi một phần cho nhẹ hoặc ít hơn.
+giảm giá|Bớt tiền so với giá gốc khi bán hàng, thường trong đợt khuyến mãi.
+giảm nhẹ|Làm cho bớt nặng nề, thường nói về triệu chứng, hình phạt hay hậu quả.
+giảm sút|Kém đi, sa sút dần, thường nói về sức khỏe, chất lượng hay kết quả.
+giảm tốc|Đi chậm lại, hạ bớt tốc độ của xe hay máy.
+giám đốc|Người đứng đầu, điều hành mọi việc của một công ty hay đơn vị.
+giám khảo|Người chấm điểm, nhận xét bài thi hay phần thi để chọn người thắng.
+giám sát|Theo dõi sát việc người khác làm để xem có đúng yêu cầu không.
+gian hàng|Khu nhỏ được ngăn riêng để bày và bán hàng trong chợ hay hội chợ.
+gian nan|Nhiều khó khăn, vất vả, phải cố gắng lắm mới vượt qua.
+giản dị|Đơn giản, mộc mạc, không cầu kì trong cách sống hay ăn mặc.
+gián|Côn trùng thân dẹt màu nâu, râu dài, hay sống ở xó bếp ẩm bẩn.
+gián đoạn|Đứt quãng giữa chừng, như mạng mất sóng hay buổi họp phải tạm dừng.
+gián tiếp|Không trực tiếp, phải qua một người hay một khâu trung gian.
+giảng|Trình bày, giải thích bài học cho người khác hiểu.
+giảng dạy|Đứng lớp truyền kiến thức cho người học, thường ở trường.
+giảng đường|Phòng học rộng ở trường đại học, đủ chỗ cho đông sinh viên nghe giảng.
+giảng giải|Giải thích cặn kẽ, tỉ mỉ cho người khác hiểu rõ.
+giành|Cố lấy về cho mình một thứ mà người khác cũng muốn có.
+giành giật|Tranh nhau quyết liệt, kéo giật để chiếm lấy.
+giao|Đưa cho người khác nhận hoặc lo liệu một vật hay một việc.
+giao bóng|Đánh quả bóng đầu tiên để bắt đầu một lượt chơi, như trong quần vợt.
+giao dịch|Việc mua bán, chuyển tiền hay trao đổi giữa các bên, như ở ngân hàng.
+giao diện|Chỗ người dùng và máy giao tiếp, qua nút bấm, dòng lệnh hay màn hình.
+giao hàng|Mang hàng hóa đến tận tay người mua.
+giao hưởng|Bản nhạc dài, nhiều chương, do cả dàn nhạc lớn cùng chơi.
+giao hữu|Thi đấu để làm quen, thắt chặt tình thân, không tính vào giải.
+giao kèo|Lời hứa hẹn hoặc thỏa thuận giữa hai bên, buộc phải làm theo.
+giao lộ|Chỗ hai hay nhiều con đường cắt nhau.
+giao lưu|Gặp gỡ, trao đổi qua lại giữa người hoặc nhóm để hiểu nhau hơn.
+giao nhận|Việc chuyển hàng tới tay người nhận và kí nhận giữa hai bên.
+giao thông|Sự đi lại của người và xe cộ trên đường.
+giao thừa|Thời khắc năm cũ chuyển sang năm mới, nhất là đêm cuối năm âm lịch.
+giao tiếp|Trao đổi qua lời nói, cử chỉ để hiểu và làm việc với nhau.
+giáo án|Bản soạn trước nội dung và cách dạy cho một tiết học.
+giáo dục|Việc dạy dỗ, rèn luyện con người về kiến thức và nhân cách.
+giáo sư|Chức danh cao dành cho nhà khoa học dạy đại học có nhiều thành tựu.
+giáo trình|Sách soạn theo chương trình, dùng để dạy một môn học.
+giáo viên|Người dạy học ở trường mầm non hay phổ thông.
+giáp mặt|Gặp nhau tận mặt, đối diện trực tiếp.
+giàu|Có nhiều tiền bạc, của cải hơn mức bình thường.
+giàu có|Có của cải dồi dào, sống sung túc.
+giàu sang|Nhiều của cải lại có địa vị, sống sung túc.
+giàu sụ|Giàu lắm, có rất nhiều tiền của, cách nói thân mật.
+giằng co|Kéo qua kéo lại, không bên nào chịu nhường bên nào.
+giặt|Vò, xả quần áo, chăn màn trong nước với xà phòng cho sạch.
+giặt giũ|Việc giặt quần áo nói chung, thường làm trong nhà hằng ngày.
+giặt khô|Làm sạch quần áo bằng dung môi thay cho nước, thường ở tiệm.
+giặt là|Giặt sạch rồi là phẳng quần áo, cách nói ở miền Bắc.
+giặt ủi|Giặt sạch rồi dùng bàn là làm phẳng quần áo.
+giấc|Lần ngủ, tính từ lúc thiếp đi tới khi tỉnh dậy.
+giấc mộng|Hình ảnh thấy khi ngủ, lối nói văn chương; cũng chỉ ước vọng lớn.
+giấc mơ|Hình ảnh hiện ra trong đầu khi ngủ; cũng chỉ điều mong ước tha thiết.
+giấc ngủ|Trạng thái ngủ của cơ thể, xét về độ sâu và thời gian.
+giận dỗi|Giận và tỏ ra hờn, không nói năng để người khác phải dỗ.
+giận dữ|Giận lắm, nổi nóng và lộ rõ ra mặt.
+giận hờn|Giận và hờn trong lòng vì bị phật ý, thường giữa người thân.
+giật gân|Gây sốc, kích thích sự tò mò, thường nói về tin tức hay tiêu đề.
+giật lùi|Đi hoặc lùi về phía sau, ngược với hướng tiến lên.
+giật mình|Thoáng hoảng hốt, người khẽ nảy lên vì sợ hay vì việc đến đột ngột.
+giấu kín|Cất giấu kĩ, không để ai thấy hay biết.
+giấu tên|Không để lộ tên thật của mình ra.
+giây lát|Một chốc rất ngắn, chỉ trong khoảnh khắc.
+giây phút|Khoảnh khắc ngắn, thường gắn với một sự việc đáng nhớ.
+giấy|Vật liệu dạng tờ mỏng, thường làm từ bột gỗ, dùng viết, in, gói đồ.
+giấy ảnh|Giấy có lớp phủ đặc biệt, dùng để in hoặc rửa ảnh.
+giấy bạc|Lá nhôm mỏng màu bạc để bọc thức ăn; cũng chỉ tờ tiền giấy.
+giấy báo|Giấy in báo, báo cũ; cũng chỉ tờ thông báo như báo nhập học.
+giấy bọc|Giấy dày hoặc tấm nhựa mỏng dùng bọc ngoài sách vở cho khỏi bẩn.
+giấy bóng kính|Tấm mỏng trong suốt như kính, dùng để bọc hoa, quà hay sách.
+giấy các tông|Giấy dày, cứng, nhiều lớp, dùng làm hộp, thùng đựng hàng.
+giấy dán tường|Giấy in hoa văn, dán lên tường để trang trí phòng.
+giấy gói|Giấy dùng bọc ngoài quà tặng hay hàng hóa cho gọn và đẹp.
+giấy in|Giấy trắng khổ chuẩn, dùng cho máy in hoặc máy sao chụp.
+giấy khai sinh|Giấy tờ chính thức ghi tên, ngày sinh, cha mẹ của một người.
+giấy kính|Tấm mỏng trong suốt, thường dùng để bọc sách vở hay gói đồ.
+giấy lộn|Giấy đã dùng rồi, bỏ đi, thường để bán đồng nát.
+giấy mời|Tấm thiệp hoặc văn bản mời người khác tới dự họp, tiệc hay sự kiện.
+giấy nến|Giấy chịu nhiệt có lớp chống dính, lót khay khi nướng bánh.
+giấy nhám|Giấy phủ hạt cát nhỏ để chà nhẵn đồ vật, cách gọi ở miền Nam.
+giấy nháp|Giấy dùng để viết tạm, tính thử trước khi chép vào bài chính.
+giấy phép|Giấy tờ chính thức phải có mới được mở quán, xây nhà hay lái xe.
+giấy ráp|Giấy mặt nhám, dùng để mài nhẵn đồ vật, cách gọi ở miền Bắc.
+giấy sáp|Giấy thấm sáp, không thấm nước, thường dùng gói bánh hay đồ ăn.
+giấy than|Giấy mỏng phủ mực một mặt, lót giữa hai tờ để tạo bản sao.
+giấy thấm|Giấy xốp, hút nước tốt, dùng để thấm mực hoặc thấm dầu.
+giấy thiếc|Lá kim loại mỏng sáng bóng, thường dùng gói kẹo hoặc bọc đồ nướng.
+giấy tờ|Các loại văn bản, chứng từ dùng để chứng minh hay làm thủ tục.
+giấy vẽ|Giấy dày, mặt hơi nhám, dùng để vẽ tranh.
+giấy vệ sinh|Giấy mềm, mỏng, thường cuộn tròn, dùng để lau chùi khi đi vệ sinh.
+giấy vụn|Những mảnh giấy nhỏ bị xé hoặc cắt vụn ra.
+giẻ lau|Mảnh vải, thường là vải cũ, dùng chùi bụi bẩn trên bàn, sàn.
+gieo|Vãi từng nắm hạt giống lên luống đất ẩm, chờ chúng nảy mầm.
+gieo cấy|Gieo mạ rồi cấy lúa, nói chung về việc trồng lúa.
+gieo trồng|Làm công việc gieo hạt, trồng cây trên đồng ruộng.
+giếng|Hố sâu đào thẳng xuống đất, thường thành tròn, để múc nước ngầm.
+giếng khoan|Giếng có lỗ nhỏ khoan sâu, lấy nước bằng máy bơm hay cần bơm tay.
+giếng trời|Khoảng trống thông tầng trong nhà để đón nắng, gió từ trên cao xuống.
+gìn giữ|Bảo vệ, giữ lâu dài những thứ quý giá như truyền thống, hòa bình.
+giò chả|Các món làm từ thịt giã nhuyễn, gói lá rồi luộc hoặc rán, nói chung.
+giò heo|Chân lợn, thường dùng để hầm hay nấu canh, cách gọi ở miền Nam.
+giò lụa|Món thịt lợn nạc giã nhuyễn, bó chặt trong lá chuối rồi luộc chín.
+gió đông|Luồng gió thổi tới từ phía đông.
+gió giật|Gió mạnh lên bất chợt từng cơn ngắn, thường có khi giông bão.
+gió mùa|Gió đổi hướng theo mùa trong năm, như gió lạnh thổi về mỗi mùa đông.
+gió nồm|Gió mát hướng đông nam thổi từ biển vào, thường mang hơi ẩm.
+gió xoáy|Gió cuộn tròn quanh một tâm, hút bụi và vật nhẹ lên cao.
+giỏi|Có năng lực cao, làm tốt một việc hay một môn nào đó.
+giỏi giang|Giỏi và tháo vát trong công việc, cách nói khen ngợi.
+giòn rụm|Giòn đến mức cắn vào nghe vỡ ra, thường nói về đồ chiên.
+giọng|Âm thanh phát ra từ cổ họng khi nói hay hát, mỗi người một vẻ.
+giọng điệu|Cách nói, lên xuống giọng thể hiện thái độ của người nói.
+giọng hát|Chất giọng khi cất tiếng hát của một người.
+giọng nói|Âm thanh của người khi nói, giúp nhận ra người đó.
+giọt|Lượng chất lỏng nhỏ, tròn, rơi ra hoặc đọng lại.
+giọt sương|Hạt nước nhỏ đọng trên lá cỏ vào sáng sớm hay ban đêm.
+giống hệt|Giống y nhau, không khác chút nào.
+giờ đây|Ở lúc này, khi mọi việc đã khác so với trước kia.
+giờ giấc|Thời gian biểu làm việc và nghỉ ngơi theo nề nếp.
+giờ phút|Thời điểm cụ thể đang diễn ra, thường mang tính quan trọng.
+giới hạn|Mức hay phạm vi tối đa không được vượt qua.
+giới thiệu|Cho biết về người hay vật để người khác làm quen.
+giới trẻ|Những người trẻ tuổi trong xã hội nói chung.
+giỡn|Đùa nghịch, nói hoặc làm cho vui, cách nói ở miền Nam.
+giục giã|Thúc giục liên tục, bắt làm cho nhanh.
+giun|Con vật thân dài trơn, không chân, rúc trong đất ẩm, hay làm mồi câu.
+giun đất|Loài giun màu nâu hồng sống trong đất ẩm, đào hang làm đất tơi xốp.
+giúp|Làm hộ hoặc góp sức để người khác bớt khó khăn.
+giúp đỡ|Giúp người khác về vật chất hay tinh thần khi họ gặp khó.
+giúp ích|Đem lại điều có lợi, làm cho người khác hay việc chung tốt hơn.
+giúp sức|Bỏ thêm sức lực để cùng làm với người khác.
+giúp việc|Làm thuê việc nhà như nấu ăn, dọn dẹp, trông nom cho một gia đình.
+giữ chân|Níu người khác ở lại, không để họ rời đi, như nhân viên hay khách.
+giữ gìn|Trông nom cẩn thận đồ vật hay sức khỏe để khỏi hư hỏng.
+giữ lại|Không cho đi hoặc không bỏ đi, để lại bên mình.
+giữ lời|Làm đúng điều mình đã hứa, không nuốt lời.
+giữ miệng|Cẩn thận lời nói, không nói bừa hay nói lộ chuyện.
+giữ mình|Cẩn thận để bản thân tránh khỏi nguy hiểm hay cám dỗ.
+giữ nguyên|Để y như cũ, không sửa, không thêm bớt gì.
+giữ nhiệt|Giữ nóng hoặc lạnh được lâu, thường nói về bình nước hay áo.
+giữ trẻ|Trông nom, cho ăn và chơi cùng trẻ nhỏ khi cha mẹ vắng.
+giữ vững|Giữ chắc, không để lung lay hay mất đi.
+giữa|Ở chỗ cách đều hai bên, hoặc nằm trong khoảng hai vật, hai mốc.
+giữa chừng|Đang ở khoảng giữa, việc chưa làm xong.
+giương cao|Nâng lên cao cho mọi người thấy, thường nói về cờ hay biểu ngữ.
+giường|Khung kê cao khỏi sàn, thường bằng gỗ, trải nệm hay chiếu để nằm ngủ.
+giường nằm|Chỗ nằm dạng giường trên tàu hỏa hoặc xe khách đường dài.
+gò bó|Bị bó buộc, không được thoải mái hay tự do làm theo ý mình.
+gõ cửa|Đập nhẹ vào cửa để báo có người muốn vào.
+gõ kiến|Chim mỏ thẳng như cái đục, mổ cộc cộc vào thân cây tìm sâu bọ.
+góc cạnh|Có nhiều đường nét rõ, sắc, thường nói về khuôn mặt hay đồ vật.
+góc độ|Phương diện, khía cạnh được chọn để xét một vấn đề.
+góc học tập|Chỗ kê bàn ghế, sách vở riêng để học trong nhà.
+góc nhà|Chỗ hai bức tường trong nhà gặp nhau.
+góc nhìn|Vị trí đứng để nhìn; cũng chỉ quan điểm riêng về một việc.
+góc nhọn|Góc có độ mở nhỏ hơn góc vuông.
+góc phố|Chỗ ngã rẽ hay một đoạn nhỏ của con phố.
+góc quay|Hướng và vị trí đặt máy quay khi ghi một cảnh phim hay ảnh.
+góc vuông|Góc tạo bởi hai đường vuông góc nhau, bằng chín mươi độ.
+gói ghém|Gói gọn, xếp lại cẩn thận đồ đạc.
+gom góp|Thu gom dần từng ít cho thành nhiều.
+gọn gàng|Ngăn nắp, sắp xếp đâu ra đấy, không lộn xộn.
+gọn ghẽ|Gọn và khéo, làm việc nhanh nhẹn, không rườm rà.
+gọn nhẹ|Nhỏ gọn và nhẹ, dễ mang theo bên người.
+gọng|Khung cứng làm sườn cho đồ vật, như ở kính đeo mắt hay cái ô.
+góp mặt|Có mặt và tham dự vào một sự kiện, cuộc thi hay chương trình.
+góp nhặt|Nhặt nhạnh từng chút một ở nhiều nơi rồi gộp lại.
+góp phần|Đóng góp một phần vào kết quả chung.
+góp sức|Bỏ công, bỏ sức cùng người khác để làm một việc chung.
+góp vui|Tham gia cho thêm vui, như hát một bài trong buổi tiệc.
+góp ý|Nêu ý kiến để người khác sửa chữa hoặc làm tốt hơn.
+gót chân|Phần sau cùng của bàn chân, chỗ tiếp đất khi bước.
+gồ ghề|Có nhiều chỗ u nổi lên, sờ hay nhìn thấy không phẳng, như mặt đá.
+gỗ lim|Gỗ của cây lim, màu nâu sẫm, rất cứng và bền.
+gỗ ván|Gỗ xẻ thành tấm mỏng, phẳng, dùng đóng đồ hay lát sàn.
+gỗ xẻ|Gỗ đã được cưa xẻ thành thanh hoặc tấm.
+gốc cây|Đoạn thân sát đất nối với rễ, phần còn trơ lại khi cây bị đốn.
+gốc gác|Nơi quê cha đất tổ và xuất thân của một người hay một dòng họ.
+gốc rễ|Nguyên nhân sâu xa, cội nguồn của một sự việc.
+gối đầu|Kê đầu lên gối, lên tay hay vật gì khác khi nằm.
+gối ôm|Chiếc gối dài, mềm, để ôm hay gác chân lúc ngủ.
+gối tựa|Gối kê sau lưng để ngồi tựa cho êm.
+gột rửa|Rửa cho sạch hết vết bẩn, thường dùng bóng chỉ xóa bỏ điều xấu.
+gỡ rối|Giúp giải quyết việc rắc rối, vướng mắc, vốn là tháo chỗ dây bị rối.
+gợi ý|Đưa ra ý kiến gợi mở để người khác tự nghĩ ra.
+gợn sóng|Có những làn sóng nhỏ lăn tăn trên mặt nước.
+guốc|Dép đế cao, thường làm bằng gỗ, có quai ngang hoặc quai hậu.
+gửi gắm|Trao gửi điều quan trọng cho người tin cậy, nhờ chăm lo.
+gửi lời|Nhờ chuyển lời hỏi thăm, chào hỏi tới ai.
+gừng|Cây có củ màu vàng nhạt, vị cay nồng, dùng làm gia vị.
+gương|Tấm kính tráng bạc phía sau, dùng để soi bóng.
+gương mặt|Khuôn mặt của một người, nhìn ở dáng vẻ và nét riêng.
+gương mẫu|Có lối sống, cách làm tốt đến mức người khác nhìn vào học theo.
+gương sáng|Người hoặc việc tốt đáng để mọi người học theo.
+gượng ép|Miễn cưỡng, không tự nhiên, như bị ép phải làm.
+gượng gạo|Thiếu tự nhiên, trông ngượng ngùng, khó khăn.
+hà mã|Thú to nặng, da dày, miệng rộng, ngâm mình dưới sông hồ ở châu Phi.
+hả hê|Thỏa mãn, vui sướng vì được như ý.
+há hốc|Há rộng miệng ra vì ngạc nhiên hay sửng sốt.
+há miệng|Mở to khuôn miệng, như khi ngáp, khi khám họng hay lúc ngạc nhiên.
+hạ cánh|Sà thấp dần rồi đáp xuống mặt đất, thường nói về máy bay cuối chuyến.
+hạ giá|Bán rẻ hơn trước, thường để đẩy hàng tồn.
+hạ giọng|Nói nhỏ lại, giảm âm lượng của giọng.
+hạ màn|Kéo màn xuống khi vở diễn hết; cũng chỉ sự kết thúc một sự kiện.
+hạ mình|Tự hạ thấp địa vị, chịu nhún nhường người khác.
+hạ tầng|Hệ thống công trình cơ sở như đường sá, điện nước của một vùng.
+hạ thấp|Làm cho thấp xuống; cũng chỉ làm giảm uy tín, giá trị của ai.
+hai chấm|Dấu câu có hai dấu chấm xếp dọc, mở đầu phần giải thích, liệt kê.
+hài hước|Gây cười một cách thông minh, dí dỏm.
+hài kịch|Thể loại kịch gây cười, thường phê phán thói xấu.
+hài lòng|Thấy vừa ý vì điều mình muốn đã được đáp ứng.
+hải âu|Chim biển cánh dài và hẹp, lông trắng xám, hay lượn trên sóng.
+hải đảo|Vùng đất nổi giữa biển, có nước bao quanh.
+hải đăng|Tháp cao ven biển có đèn sáng, chỉ đường cho tàu thuyền ban đêm.
+hải sản|Các loại tôm, cá, mực, cua sống ở biển dùng làm thức ăn.
+hải sâm|Động vật biển thân dài, mềm, da sần, dùng làm món ăn quý.
+ham mê|Say sưa với một thú vui hay công việc, khó dứt ra được.
+hàm răng|Toàn bộ răng mọc trên hai hàm.
+hạn chế|Giới hạn lại, không để vượt quá mức.
+hạn hẹp|Ít ỏi, không rộng rãi, thường nói về tiền bạc hay thời gian.
+hang|Lỗ sâu trong đất hay núi đá, có thể là chỗ ở của thú.
+hang động|Khoảng rỗng lớn ăn sâu vào lòng núi, thường có nhũ đá và ngóc ngách.
+hàng ăn|Quán bán đồ ăn bình dân, thường nhỏ.
+hàng đầu|Thuộc nhóm đứng trên hết, dẫn đầu về chất lượng hay tầm quan trọng.
+hàng không|Ngành chở người, hàng hóa bằng máy bay.
+hàng nước|Quán nhỏ bán nước chè, nước uống ven đường.
+hàng quán|Các quán ăn uống, buôn bán nói chung.
+hàng rào|Tường hoặc dãy cây, cọc bao quanh để ngăn chia khu đất.
+hàng rong|Hàng hóa bán dạo đi khắp các ngõ phố.
+hàng thịt|Quầy hoặc sạp bán thịt tươi ở chợ.
+hàng xóm|Người ở nhà sát vách hay gần nhà mình trong cùng xóm.
+hạng nặng|Thuộc loại có trọng lượng hay sức mạnh lớn, như xe tải hay võ sĩ.
+hạng nhất|Xếp ở thứ bậc đầu tiên, cao hơn các hạng khác.
+hanh khô|Khô, ít hơi ẩm, thường nói về thời tiết cuối thu sang đông.
+hành|Cây rau gia vị lá xanh hình ống, củ trắng, mùi hăng, dùng nêm món.
+hành động|Việc làm cụ thể nhằm một mục đích.
+hành hoa|Loại hành lá nhỏ, xanh thơm, thường thái nhỏ rắc lên món ăn.
+hành khách|Người đi chuyến xe, tàu hay máy bay, không thuộc tổ lái hay nhân viên.
+hành lang|Lối đi có mái dọc theo các phòng trong nhà.
+hành nghề|Làm một nghề để kiếm sống, nhất là nghề cần giấy phép.
+hành phi|Hành củ thái mỏng phi giòn trong dầu, dùng rắc lên món ăn.
+hành tây|Loại hành củ to, tròn, nhiều lớp, vị ngọt hăng.
+hành tinh|Khối cầu khổng lồ không tự phát sáng, chạy vòng quanh một ngôi sao.
+hành tỏi|Hành và tỏi nói chung, gia vị cơ bản trong bếp.
+hành trang|Đồ đạc gói ghém khi lên đường; cũng chỉ vốn liếng để bước vào đời.
+hành trình|Chuyến đi xa, quãng đường đi qua.
+hành vi|Cách cư xử, việc làm của một người.
+hành xử|Cư xử, đối đáp với người khác hay xử lý tình huống.
+hãnh diện|Thấy tự hào, nở mày nở mặt vì điều tốt của mình hay người thân.
+hạnh kiểm|Tư cách, đạo đức của học sinh được nhà trường đánh giá.
+hạnh nhân|Hạt dẹt hình giọt nước, vỏ nâu, vị béo bùi, dùng ăn hay làm bánh.
+hạnh phúc|Trạng thái vui vẻ, đủ đầy, thấy cuộc sống trọn vẹn như mong muốn.
+hao hụt|Mất mát, thiếu đi so với số lượng ban đầu.
+hao mòn|Mòn dần, kém đi qua thời gian sử dụng.
+hào hứng|Hăng hái, phấn khởi, thích thú với việc gì.
+hào nhoáng|Bóng bẩy bề ngoài nhưng không có thực chất.
+hào phóng|Rộng tay, sẵn lòng cho đi tiền của mà không tính toán chi li.
+hào quang|Vầng sáng tỏa quanh một vật; cũng chỉ vẻ vang, danh tiếng của ai.
+hảo hạng|Thuộc loại tốt hơn hẳn hàng thường, thường nói về hàng hóa.
+hão huyền|Không có thực, không thể thành hiện thực.
+háo hức|Nóng lòng mong chờ điều vui sắp đến.
+hát hò|Hát nói chung, thường để vui chơi.
+hát ru|Hát nhẹ nhàng để ru trẻ ngủ.
+hạt cơm|Từng hạt gạo đã được nấu chín.
+hạt cườm|Hạt nhỏ có lỗ, dùng xâu chuỗi trang trí.
+hạt dẻ|Hạt vỏ nâu bóng, nhân vàng bùi, thường rang hay luộc ăn vào mùa lạnh.
+hạt điều|Hạt hình quả thận, béo bùi, dính ở đầu quả điều.
+hạt giống|Hạt được chọn để gieo trồng.
+hạt lựu|Hạt nhỏ đỏ mọng trong quả lựu; cũng chỉ kiểu thái miếng vuông nhỏ.
+hạt mưa|Giọt nước rơi từ mây xuống khi trời mưa.
+hạt ngọc|Viên đá quý nhỏ, sáng lấp lánh.
+hạt tiêu|Hạt tròn nhỏ cay nồng, thường xay ra rắc lên bát cháo hay món xào.
+hay hay|Khá hay, có chút thú vị.
+hay ho|Thú vị, đáng xem đáng nghe, hay dùng kèm lời phủ định để chê.
+hay quên|Thường không nhớ được việc đã định hay đồ đã để.
+hăm hở|Hăng hái, vội vàng muốn bắt tay vào việc.
+hẳn hoi|Đàng hoàng, đầy đủ, đúng như cần có.
+hăng hái|Nhiệt tình, sôi nổi, sẵn lòng bắt tay vào việc.
+hăng say|Say mê, miệt mài làm việc không mệt.
+hắng giọng|Đằng hắng, phát tiếng khẽ trong cổ họng cho thông giọng trước khi nói.
+hắt hơi|Bật hơi mạnh qua mũi miệng do bị kích thích.
+hâm mộ|Yêu thích, ngưỡng mộ, thường với nghệ sĩ hay đội bóng.
+hâm nóng|Đun cho nóng lại thức ăn đã nguội.
+hầm chui|Đường hầm đi xuyên dưới đường lớn hoặc sông.
+hầm ngầm|Công trình đào sâu dưới mặt đất, dùng làm lối đi hoặc nơi trú ẩn.
+hầm tàu|Khoang dưới boong tàu thủy, dùng để chứa hàng hóa hoặc đặt máy móc.
+hân hạnh|Lấy làm vui và thấy vinh dự, thường dùng trong lời chào hỏi lịch sự.
+hân hoan|Vui mừng rộn ràng, hớn hở trong lòng và lộ ra ngoài mặt.
+hấp dẫn|Có sức lôi cuốn, khiến người ta muốn xem, nghe hoặc tìm đến.
+hấp tấp|Vội vàng, thiếu bình tĩnh nên dễ làm sai hoặc vấp váp.
+hầu hết|Gần như toàn bộ, chỉ trừ ra một phần rất nhỏ.
+hầu như|Từ dùng để nói một điều gần đúng hoàn toàn, chỉ thiếu chút ít.
+hậu hĩnh|Rộng tay, nhiều hơn mong đợi, nói về tiền công, quà biếu hay tiền thưởng.
+hậu mãi|Các việc người bán lo cho khách sau khi mua, như bảo hành, sửa chữa.
+hậu quả|Kết quả không hay xảy ra sau một việc làm hay một sự kiện.
+hậu trường|Khu sau sân khấu hay phim trường, nơi chuẩn bị khuất mắt khán giả.
+hậu vệ|Cầu thủ đá tuyến sau, lo chặn bóng, ngăn bên kia áp sát khung thành.
+hé mở|Mở ra một chút, cũng dùng khi tiết lộ dần một điều còn giấu kín.
+hẹn hò|Hẹn gặp nhau, thường nói về hai người đang tìm hiểu hoặc yêu nhau.
+hẻo lánh|Xa xôi, vắng người, ít ai lui tới, nói về nơi chốn.
+héo úa|Khô héo và ngả màu vàng, thường nói về lá, hoa hay cây cỏ.
+hệ thống|Nhiều bộ phận liên kết, vận hành cùng nhau thành một khối, như mạng điện.
+hếch|Hơi ngửa và chếch lên phía trên, thường nói về mũi.
+hết cách|Không còn cách nào khác để giải quyết hay xoay xở.
+hết hơi|Mệt đến mức không thở nổi nữa, thường sau khi chạy hoặc la hét nhiều.
+hết lòng|Dồn hết tình cảm và tâm sức cho một người hay một việc.
+hết mình|Dốc toàn bộ sức lực và nhiệt tình, không giữ lại chút nào.
+hết sạch|Không còn sót lại chút nào, đã dùng hoặc mất toàn bộ.
+hết sức|Ở mức độ rất cao; còn có nghĩa là dùng toàn bộ sức lực.
+hết ý|Hay hoặc đẹp đến mức khó tả, cách nói thân mật khi khen.
+hì hục|Cặm cụi làm việc gì một cách vất vả và miệt mài.
+hỉ mũi|Đẩy mạnh hơi qua mũi để tống nước mũi ra ngoài.
+hí hoáy|Chăm chú làm gì đó bằng tay một cách tỉ mỉ, thường là viết, vẽ.
+hí hửng|Mừng rỡ lộ ra mặt vì tin rằng mình sắp được điều gì đó.
+hiểm trở|Có nhiều dốc cao, vực sâu, khó đi lại, thường nói về đường núi.
+hiếm|Ít có, khó tìm thấy hoặc ít khi xảy ra.
+hiếm có|Rất ít gặp, đáng quý vì không phải ở đâu cũng có.
+hiếm hoi|Rất ít ỏi, chỉ có một vài lần hay một vài cái.
+hiên|Phần mái chìa ra phía trước nhà, che khoảng sân ngay sát cửa.
+hiên ngang|Đứng thẳng ngẩng cao đầu, dáng vẻ vững vàng không chịu cúi mình.
+hiền dịu|Hiền và dịu dàng, nhẹ nhàng trong lời nói và cử chỉ.
+hiền hậu|Hiền lành và phúc hậu, thường thấy rõ qua nét mặt, ánh mắt.
+hiền lành|Tính tình tốt, không hay gây gổ hay làm hại ai.
+hiền từ|Hiền và giàu lòng thương người, thường nói về người lớn tuổi.
+hiển nhiên|Rõ ràng đến mức không cần chứng minh hay bàn cãi.
+hiển thị|Hiện lên cho người xem thấy, thường nói về chữ, hình trên màn hình.
+hiện đại|Thuộc về thời nay, mới và tiên tiến, theo kịp sự phát triển.
+hiện giờ|Thời điểm ngay lúc đang nói, chính lúc này.
+hiện nay|Khoảng thời gian chúng ta đang sống, tính rộng hơn lúc này.
+hiện tại|Thời gian đang diễn ra, phân biệt với quá khứ và tương lai.
+hiện thực|Những gì đang thật sự có và diễn ra, không phải mơ tưởng.
+hiện tượng|Sự việc hay biến đổi xảy ra mà ta nhìn thấy hoặc nhận biết được.
+hiện vật|Đồ vật có thật, thường được giữ làm bằng chứng hay trưng bày.
+hiệp hội|Tổ chức tập hợp những người hay đơn vị cùng ngành nghề, cùng mục đích.
+hiệp phụ|Khoảng thời gian thi đấu thêm sau hai hiệp chính khi tỉ số còn hòa.
+hiệp sĩ|Người có võ nghệ, dũng cảm, hay ra tay giúp đỡ người yếu thế.
+hiểu|Nắm được ý nghĩa, lẽ phải trái hay nguyên do của một điều.
+hiểu biết|Những điều đã biết và nắm vững nhờ học hỏi, trải nghiệm.
+hiểu chuyện|Biết thông cảm, cư xử đúng mực, thường nói về trẻ em.
+hiểu lầm|Hiểu sai ý người khác hay sai sự việc so với thực tế.
+hiểu thấu|Nắm rõ tới tận cùng, thấy được cả những điều sâu kín bên trong.
+hiếu động|Thích chạy nhảy, hoạt động liên tục, khó ngồi yên, thường nói về trẻ nhỏ.
+hiếu học|Ham học, thích tìm tòi và chăm chỉ học hỏi.
+hiếu khách|Thích đón tiếp khách, tiếp đãi khách niềm nở và chu đáo.
+hiếu thảo|Hết lòng kính yêu, chăm sóc và vâng lời ông bà, cha mẹ.
+hiệu phó|Cấp phó trong ban giám hiệu, đỡ việc cho hiệu trưởng ở trường học.
+hiệu quả|Đạt kết quả như mong muốn mà không tốn quá nhiều công sức, tiền của.
+hiệu sách|Cửa hàng bày bán sách, đôi khi kèm báo, văn phòng phẩm.
+hiệu trưởng|Người đứng đầu, quản lí mọi mặt của một trường học.
+hiệu ứng|Tác động hay phản ứng dây chuyền do một sự việc gây ra.
+hình|Ảnh chụp hay bức vẽ của người, vật; cũng chỉ dáng bề ngoài của vật.
+hình ảnh|Cái được nhìn thấy hoặc lưu lại qua tranh, ảnh, phim hay trong trí nhớ.
+hình bóng|Dáng người còn lưu lại trong tâm trí, thường là người mình thương nhớ.
+hình cầu|Khối tròn đều mọi phía, lăn hướng nào cũng như nhau, giống hòn bi.
+hình dạng|Đường viền bên ngoài cho biết vật tròn, vuông, dài hay méo.
+hình dung|Gợi lên trong đầu hình ảnh cảnh, người hay vật, dù đã gặp hay chưa.
+hình mẫu|Tấm gương hay cách làm tiêu biểu được nhiều người lấy làm chuẩn noi theo.
+hình nền|Ảnh đặt làm phông nền trên màn hình máy tính hay điện thoại.
+hình nón|Khối có đáy tròn, thu nhỏ dần lên một đỉnh nhọn, giống chiếc nón lá.
+hình thang|Hình bốn cạnh, có hai đáy song song nhau, giống mặt chiếc xô nhìn ngang.
+hình thành|Dần dần tạo nên hoặc xuất hiện thành một cái có hình hài rõ ràng.
+hình thể|Dáng vóc bên ngoài của cơ thể người, gồm tầm vóc và đường nét.
+hình thoi|Hình bốn cạnh dài bằng nhau, thường có hai góc nhọn và hai góc tù.
+hình thù|Cái dáng nhìn thấy của vật, hay dùng khi trông kì dị, khó gọi tên.
+hình thức|Vẻ bề ngoài hay cách thể hiện, phân biệt với nội dung bên trong.
+hình tròn|Cả phần mặt phẳng nằm gọn bên trong một đường tròn.
+hình trụ|Khối có hai đáy là hai hình tròn bằng nhau, thân thẳng như cái ống.
+hình tượng|Hình ảnh nghệ thuật tiêu biểu được dựng nên để gửi gắm ý tưởng.
+hình vẽ|Hình được tạo ra bằng bút trên giấy hay một bề mặt nào đó.
+hình vuông|Hình có bốn cạnh dài như nhau, bốn góc vuông, giống mặt viên xúc xắc.
+hít hà|Hít mạnh, xuýt xoa, thường khi ăn cay hay ngửi mùi thơm.
+hít thở|Đưa không khí vào và đẩy ra khỏi phổi qua mũi hoặc miệng.
+hò hẹn|Hẹn gặp riêng nhau, thường nói về đôi trai gái đang yêu.
+hò hét|La to và gọi ầm ĩ, thường để ra lệnh hay cổ vũ.
+hò reo|Cùng nhau kêu to vang dội để mừng rỡ hay cổ vũ.
+họ hàng|Những người cùng dòng họ hay có quan hệ thân thích bên nội, bên ngoại.
+họ ngoại|Những người họ hàng thuộc bên phía mẹ.
+họ nội|Những người họ hàng thuộc bên phía cha.
+hoa chuối|Bắp hoa màu tím đỏ ở cuối buồng chuối, thường thái mỏng làm gỏi.
+hoa cúc|Loài hoa có nhiều cánh nhỏ xếp quanh nhụy, thường có màu vàng hoặc trắng.
+hoa đào|Hoa của cây đào, màu hồng, nở vào dịp Tết ở miền Bắc.
+hoa đăng|Đèn nhỏ thường hình hoa sen, thắp nến thả trôi trên sông đêm lễ hội.
+hoa đồng tiền|Hoa có cánh dài xếp tròn quanh nhụy, nhiều màu, hay dùng cắm bình.
+hoa giấy|Cây leo gai, lá bắc mỏng như giấy nhiều màu, dễ lầm là cánh hoa.
+hoa hậu|Cô gái đội vương miện sau khi đứng đầu một cuộc thi sắc đẹp.
+hoa hồng|Hoa có gai, cánh xếp nhiều lớp; cũng chỉ tiền công cho người môi giới.
+hoa huệ|Hoa trắng mọc thành chùm trên cành dài, thơm, thường cắm bàn thờ.
+hoa khôi|Danh hiệu cho cô gái được chọn là người đẹp của một trường, một vùng.
+hoa lá|Hoa và lá nói chung, thường chỉ cây cỏ hay hình trang trí.
+hoa lài|Hoa trắng nhỏ, thơm ngát về đêm, hay ướp trà, miền Bắc gọi hoa nhài.
+hoa lan|Loài hoa nhiều giống, cánh đẹp và lạ, thường trồng treo trong chậu.
+hoa loa kèn|Hoa trắng dài hình chiếc loa, nở vào khoảng tháng tư ở miền Bắc.
+hoa mai|Bông năm cánh thường vàng rực, nở dịp Tết, hay chưng ở miền Nam.
+hoa mười giờ|Loài hoa nhỏ nhiều màu, thân mọng nước, thường nở rộ vào giữa buổi sáng.
+hoa nhài|Hoa nhỏ màu trắng, mùi thơm ngát, thường dùng để ướp trà.
+hoa quả|Trái cây nói chung, thường ăn tươi hoặc dùng để tráng miệng.
+hoa sen|Hoa lớn mọc từ đầm ao, cánh hồng hay trắng, hương thanh, hay ướp trà.
+hoa sứ|Hoa năm cánh trắng hoặc hồng, nhụy vàng, thơm, hay trồng ở sân chùa.
+hoa sữa|Hoa nhỏ mọc thành chùm, màu trắng xanh, mùi hắc nồng, nở vào mùa thu.
+hoa tai|Đồ trang sức nhỏ xỏ hay kẹp vào dái tai.
+hoa tay|Năng khiếu khéo tay, nhất là trong viết chữ, vẽ hoặc làm đồ thủ công.
+hoa trà|Hoa của cây trà, cánh dày, thường có màu trắng, hồng hoặc đỏ.
+hoa văn|Hình trang trí lặp lại theo mẫu trên vải, gốm, đồ gỗ hay tường nhà.
+hoài bão|Ước mơ, dự định lớn lao mà người ta ấp ủ cho tương lai.
+hoài cổ|Hay nhớ tiếc và yêu thích những gì thuộc về thời xưa.
+hoan hô|Reo hò hoặc vỗ tay để tỏ ý tán thành, khen ngợi.
+hoan nghênh|Tỏ ý vui mừng đón nhận hoặc đồng tình với một người hay việc gì.
+hoàn cảnh|Những điều kiện xung quanh ảnh hưởng tới cuộc sống của ai đó.
+hoàn chỉnh|Có đầy đủ mọi phần cần thiết, không còn thiếu sót.
+hoàn hảo|Tốt trọn vẹn, không có chút khuyết điểm nào.
+hoàn lại|Đưa trả lại cho người khác thứ đã nhận, đã mượn hay đã thu.
+hoàn tất|Làm xong hết mọi phần việc còn lại.
+hoàn thành|Làm xong trọn vẹn việc được giao hay đã đặt ra.
+hoàn thiện|Làm cho tốt hơn, đầy đủ hơn đến mức không còn thiếu sót.
+hoàn toàn|Trọn vẹn, đầy đủ trong mọi phần, không có ngoại lệ.
+hoàn trả|Trả lại đầy đủ tiền hay vật đã vay mượn, cách nói trang trọng.
+hoang|Bị bỏ mặc, không người ở hay chăm sóc, như nhà cửa, ruộng đất.
+hoang dã|Sống hoặc mọc tự nhiên ngoài tầm tay con người, chưa được thuần hóa.
+hoang dại|Mọc hoặc sống tự nhiên, không do người trồng hay nuôi.
+hoang đảo|Hòn đảo không có người ở, cây cỏ mọc tự nhiên.
+hoang đường|Vô lý, không có thật, chỉ có trong tưởng tượng.
+hoang mạc|Vùng đất khô, ít mưa, cây cỏ thưa thớt, thường phủ cát hoặc sỏi đá.
+hoang mang|Rối trí, không biết nên tin gì, làm gì vì thiếu thông tin chắc chắn.
+hoang sơ|Còn nguyên vẻ tự nhiên, ít dấu vết con người, thường nói về rừng, biển.
+hoang vắng|Vắng vẻ, không có người qua lại, gợi cảm giác trống trải.
+hoang vu|Rộng lớn và bỏ hoang, không có dấu vết con người.
+hoàng hậu|Người vợ được vua lập làm chính thất, đứng trên các phi tần.
+hoàng hôn|Khoảng thời gian mặt trời lặn, bầu trời chuyển dần sang tối.
+hoàng tử|Con trai của vua, nhân vật thường gặp trong truyện cổ tích.
+hoành thánh|Món bánh vỏ bột mỏng gói thịt băm, nấu nước dùng hay đem chiên giòn.
+hoành tráng|Quy mô lớn, bày biện rình rang, khiến người xem choáng ngợp.
+hoạt bát|Nhanh nhẹn, linh hoạt, nói năng lưu loát.
+hoạt động|Làm việc, vận hành hoặc tham gia vào các công việc có mục đích.
+hoạt hình|Phim làm cho hình vẽ, mô hình hay đồ họa máy tính cử động.
+hoặc|Từ dùng để nối các khả năng có thể chọn thay cho nhau.
+hóc búa|Khó giải quyết, đòi hỏi phải suy nghĩ rất nhiều, thường nói về câu hỏi.
+học bạ|Sổ ghi điểm và nhận xét của thầy cô về học sinh qua từng năm.
+học bổng|Khoản tiền cấp cho người học có thành tích tốt hoặc hoàn cảnh khó khăn.
+học đường|Chốn trường lớp nói chung, cùng đời sống của thầy trò trong đó.
+học hành|Việc học nói chung, gồm cả sự chăm học và kết quả học.
+học hỏi|Tìm tòi, học từ người khác hay từ thực tế để mở mang hiểu biết.
+học lực|Mức học giỏi hay kém của người học, thường xếp loại theo điểm số.
+học phí|Khoản tiền người học đóng cho trường hay lớp để được theo học.
+học sinh|Tên gọi chung những ai đang theo học ở trường tiểu học hoặc trung học.
+học tập|Học và rèn luyện để có thêm kiến thức, kỹ năng.
+học thêm|Đi học ngoài giờ chính khóa, thường ở các lớp riêng có thầy cô kèm.
+học trò|Người được thầy cô dạy dỗ, cách gọi gần gũi, mộc mạc hơn học sinh.
+học vấn|Vốn kiến thức có được qua quá trình học tập ở trường lớp.
+học việc|Theo người thạo nghề để làm và học dần một nghề.
+học viên|Người theo một khóa học, lớp đào tạo hay học viện, thường là người lớn.
+hỏi han|Quan tâm hỏi chuyện ân cần, hỏi nhiều điều về cuộc sống của ai.
+hỏi thăm|Hỏi tin tức, sức khỏe của ai; cũng chỉ việc hỏi đường đi.
+hòm thư|Thùng hay hộp có khe nhỏ để bỏ thư cần gửi hoặc nhận thư.
+hóm hỉnh|Có lối nói vui, ý nhị, khiến người nghe bật cười.
+hòn ngọc|Viên đá quý sáng đẹp, cũng dùng để ví vùng đất đẹp và giàu có.
+hỏng bét|Hỏng hoàn toàn, không còn cứu vãn được, cách nói thân mật.
+hỏng hóc|Hư ở vài bộ phận, không chạy bình thường, thường nói về máy móc.
+hóng mát|Ra chỗ thoáng ngồi hay đi dạo để đón gió mát.
+họp báo|Buổi gặp để thông báo tin tức và trả lời câu hỏi của nhà báo.
+họp hành|Ngồi họp nói chung, hay hàm ý họp nhiều, kéo dài tốn thời gian.
+họp mặt|Gặp gỡ đông đủ để thăm hỏi, ôn chuyện, thường là bạn bè cũ.
+hồ bơi|Bể chứa nước sạch được xây để bơi lội, cách gọi ở miền Nam.
+hồ cá|Bể kính hay ao nhỏ dùng để nuôi cá cảnh.
+hồ chứa nước|Hồ lớn đắp đập để trữ nước, phục vụ tưới tiêu hay thủy điện.
+hồ đồ|Thiếu suy xét, kết luận hay làm việc một cách vội vàng, không rõ ràng.
+hồ hởi|Vui vẻ, phấn chấn và cởi mở khi đón nhận điều gì.
+hồ lô|Quả bầu khô thắt eo ở giữa, xưa dùng làm bình đựng rượu hay thuốc.
+hồ sơ|Tập giấy tờ ghi thông tin về một người hay một việc để xem xét.
+hồ tiêu|Cây leo cho quả nhỏ, phơi khô xay ra làm gia vị cay nồng.
+hổ mang|Rắn độc, khi bị chọc thì ngóc đầu, bạnh rộng phần cổ dẹt ra.
+hổ phách|Nhựa cây cổ hóa đá, màu vàng nâu, dùng làm đồ trang sức.
+hổ thẹn|Thấy ngượng và cắn rứt vì biết mình đã làm điều không phải.
+hỗ trợ|Giúp đỡ thêm cho người khác để công việc thuận lợi hơn.
+hố ga|Hố có nắp đậy trên đường, dùng để gom nước thải đổ vào cống.
+hộ chiếu|Cuốn sổ nhỏ có ảnh và thông tin cá nhân, dùng khi ra nước ngoài.
+hồi đáp|Trả lời lại thư, tin nhắn hay yêu cầu của người khác.
+hồi đầu|Lúc ban đầu, khoảng thời gian khi mới bắt đầu một việc.
+hồi nãy|Khoảng thời gian vừa qua chưa lâu, cách nói thường dùng ở miền Nam.
+hồi phục|Lấy lại sức khỏe hay trạng thái cũ sau khi ốm đau, suy yếu.
+hồi trước|Thời gian trước kia, đã qua khá lâu.
+hồi tưởng|Nhớ lại và sống lại trong ý nghĩ những chuyện đã qua.
+hối hả|Vội vã, tất bật như đang bị ai thúc giục.
+hối lỗi|Ăn năn, nhận ra và tiếc vì lỗi mình đã gây ra.
+hối thúc|Giục người khác làm nhanh lên, thường nhắc đi nhắc lại nhiều lần.
+hối tiếc|Tiếc nuối vì đã làm hoặc không làm một việc gì trong quá khứ.
+hội chợ|Nơi nhiều gian hàng tập trung bày bán, giới thiệu hàng hóa trong vài ngày.
+hội diễn|Dịp nhiều đội văn nghệ cùng lên sân khấu trình diễn, thường có chấm giải.
+hội họp|Tụ tập lại để bàn bạc, trao đổi công việc chung.
+hội nghị|Cuộc họp trang trọng của nhiều đại biểu để bàn việc quan trọng.
+hội thảo|Cuộc họp để các chuyên gia trình bày, trao đổi về một chủ đề.
+hội thi|Cuộc thi có nhiều người hay nhiều đội tham gia, thường kèm biểu diễn.
+hội thoại|Lượt hỏi đáp qua lại giữa hai người trở lên, như trong sách ngoại ngữ.
+hội trường|Phòng lớn có nhiều ghế, dùng để họp hành hay tổ chức sự kiện.
+hội tụ|Tụ lại một chỗ từ nhiều hướng khác nhau.
+hội viên|Người đã ghi tên tham gia, sinh hoạt trong một hội hay câu lạc bộ.
+hôm kia|Ngày liền trước hôm qua, lùi hai ngày tính từ hôm nay.
+hôm nay|Ngày đang diễn ra lúc người ta nói tới.
+hôm nọ|Một ngày nào đó cách đây không lâu, không nói rõ ngày nào.
+hôm qua|Ngày ngay trước hôm nay, vừa mới trôi qua.
+hôn lễ|Lễ cưới, nghi thức chính thức để hai người thành vợ chồng.
+hôn nhân|Quan hệ vợ chồng được công nhận về mặt pháp lý và xã hội.
+hồn nhiên|Tự nhiên, ngây thơ, không giả tạo hay tính toán.
+hổn hển|Thở gấp và mạnh, đứt quãng vì mệt.
+hỗn độn|Đủ thứ trộn lẫn ngổn ngang, rối tung, khó phân biệt ra cái gì.
+hỗn hợp|Nhiều chất hay thành phần trộn lẫn với nhau.
+hỗn loạn|Rối loạn, mất trật tự, không kiểm soát được, thường nói về đám đông.
+hồng|Màu đỏ nhạt như cánh hoa đào; cũng chỉ loại quả chín đỏ cam, ngọt.
+hồng hạc|Chim cao cẳng, cổ dài, lông hồng, hay đứng một chân ở vùng nước nông.
+hồng hào|Có làn da ửng hồng tươi tắn, trông khỏe khoắn.
+hồng ngọc|Đá quý màu đỏ, trong suốt, dùng làm đồ trang sức.
+hồng nhung|Giống hoa hồng có cánh màu đỏ thẫm, mịn như nhung.
+hồng xiêm|Quả vỏ nâu sần, thịt mềm ngọt, hạt đen bóng, cách gọi ở miền Bắc.
+hộp quẹt|Vật nhỏ bỏ túi, bấm hay quẹt là ra lửa, cách gọi ở miền Nam.
+hộp số|Bộ bánh răng trong xe máy, ô tô, dùng để đổi tốc độ.
+hộp thoại|Khung nhỏ bật lên trên màn hình để báo tin hay hỏi người dùng.
+hộp thư|Hộp để nhận thư gửi tới nhà; cũng chỉ nơi nhận thư điện tử.
+hờ hững|Thờ ơ, lạnh nhạt, không quan tâm tới người hay việc gì.
+hơi nước|Nước đã hóa thành khí, như làn hơi bốc lên từ nồi canh sôi.
+hơi thở|Luồng không khí ra vào qua mũi, miệng mỗi lần hít vào thở ra.
+hơn nữa|Từ nối dùng để đưa thêm một ý, làm điều vừa nói thêm chắc chắn.
+hơn thua|So đo, tranh giành để mình hơn người khác.
+hờn dỗi|Giận nhẹ, tỏ ra lạnh nhạt, làm mình làm mẩy chờ người khác dỗ.
+hớn hở|Vui mừng lộ rõ ra nét mặt, tươi tỉnh.
+hớp hồn|Cuốn hút mạnh đến mức làm người khác say mê, mất tập trung.
+hợp ca|Lối hát nhiều người cùng cất giọng một bài, có khi chia bè.
+hợp lệ|Đúng theo quy định, thủ tục đã đặt ra.
+hợp nhất|Gộp hai hay nhiều tổ chức, đơn vị lại thành một khối duy nhất.
+hợp tác|Chung tay làm việc với người khác, mỗi bên góp phần cho mục tiêu chung.
+hớt tóc|Cắt tóc cho gọn, cách nói thường dùng ở miền Nam.
+huấn luyện|Dạy và rèn luyện kỹ năng một cách bài bản cho người hay con vật.
+hun khói|Để thực phẩm trong khói lửa nhỏ cho khô, thơm và giữ được lâu.
+hùng mạnh|To lớn và có sức mạnh lớn, thường nói về quốc gia hay quân đội.
+hùng vĩ|To lớn, sừng sững, khiến người nhìn thấy mình nhỏ bé, như núi non.
+húng|Loại rau thơm lá nhỏ, mùi the, hay ăn sống kèm các món.
+húng quế|Rau thơm thân tím, lá xanh, mùi hắc dịu, thường ăn kèm phở.
+hút bụi|Dùng máy có luồng gió hút để gom bụi bẩn trên sàn, thảm, ghế.
+hút mật|Hút lấy mật hoa, thường nói về ong hay bướm.
+hụt hẫng|Chới với, thất vọng vì mất đi hay không được điều mình chờ đợi.
+hụt hơi|Thiếu hơi, không đủ sức thở hay nói, hát tiếp, thường khi gắng sức.
+huy chương|Vật bằng kim loại có dây đeo, trao cho người đạt giải hay có công.
+huy động|Tập hợp người, tiền bạc hay phương tiện lại để làm một việc chung.
+huy hiệu|Vật nhỏ, thường bằng kim loại, mang biểu tượng một tổ chức, để cài áo.
+huy hoàng|Rực rỡ, lộng lẫy và vẻ vang.
+huyền bí|Bí ẩn, khó hiểu, gợi cảm giác thần bí.
+huyền thoại|Chuyện truyền đời có yếu tố kỳ lạ; cũng chỉ người lừng danh.
+huyện|Đơn vị hành chính nằm dưới cấp tỉnh và trên cấp xã.
+huýt|Chúm môi thổi mạnh thành tiếng kêu cao, sắc để gọi hay ra hiệu.
+huýt sáo|Tròn môi đẩy hơi ra thành tiếng réo trong trẻo, có khi thành bài nhạc.
+hư cấu|Tưởng tượng và dựng nên những chuyện không có thật, thường trong văn chương.
+hư hại|Bị hỏng hóc, sứt mẻ, không còn nguyên vẹn sau va chạm hay thiên tai.
+hư hỏng|Không còn dùng tốt, nói về đồ vật; cũng chỉ người sa vào thói xấu.
+hứa hẹn|Nói chắc sẽ làm điều gì cho ai; cũng chỉ việc có triển vọng tốt.
+hừng hực|Nóng rực và bốc lên mạnh, thường tả lửa hay khí thế sôi nổi.
+hững hờ|Không mặn mà, lơ là và thiếu nhiệt tình, nhất là trong tình cảm.
+hứng khởi|Phấn chấn, đầy hứng thú, muốn bắt tay ngay vào việc.
+hương sen|Mùi thơm nhẹ và thanh của hoa sen, thường dùng để ướp trà.
+hương thơm|Làn thơm dịu lan tỏa từ hoa cỏ hay nước hoa, cách nói trang nhã.
+hương vị|Mùi và vị của món ăn, thức uống, cũng ví nét riêng của điều gì.
+hưởng thụ|Tận hưởng những thứ sung sướng, tiện nghi mà mình có.
+hưởng ứng|Đáp lại và tham gia vào một lời kêu gọi hay phong trào.
+hướng dẫn|Chỉ bảo, giải thích cho người khác cách làm một việc.
+hướng dẫn viên|Người dẫn đường và giới thiệu thông tin cho khách du lịch.
+hướng dương|Cây thân cao, hoa to cánh vàng, giữa hoa có nhiều hạt ăn được.
+hướng ngoại|Có tính cởi mở, thích giao tiếp và hoạt động cùng nhiều người.
+hướng nội|Có tính trầm, thích suy nghĩ một mình hơn là giao tiếp đông người.
+hươu|Loài thú ăn cỏ, chân cao, con đực có sừng phân nhánh, sống ở rừng.
+hươu cao cổ|Thú có cổ và chân dài, da vàng loang nâu, vươn ăn lá trên cao.
+hươu nai|Các loài thú có sừng thuộc họ hươu nói chung, sống trong rừng.
+hữu dụng|Dùng được vào việc, có ích trong thực tế.
+hữu ích|Có lợi, mang lại giá trị và giúp ích cho người dùng.
+ích lợi|Điều có lợi, phần tốt mà một việc hay vật mang lại cho ta.
+im ắng|Không nghe tiếng động nào, gợi vẻ vắng vẻ, thường nói về nơi chốn.
+im bặt|Đột ngột thôi không nói hay ngừng hẳn tiếng động.
+im ỉm|Lặng thinh kín bưng, không hé lời hay đóng kín không mở.
+im lặng|Không nói năng, không phát ra tiếng động.
+im lìm|Yên lặng và bất động kéo dài, như không có sự sống.
+in ấn|Việc in chữ, hình lên giấy hay vật liệu khác, thường với số lượng lớn.
+inh ỏi|Tiếng kêu to, chói tai và liên tục, như tiếng còi xe hay loa.
+ít nhất|Không thấp hơn mức được nêu, dù có thể nhiều hơn.
+ít nói|Có tính kiệm lời, ít khi trò chuyện.
+ít ỏi|Rất ít, không đáng kể về số lượng.
+kaki|Vải dày dệt chéo, bền và cứng, thường dùng may quần áo hay đồng phục.
+karaoke|Hình thức hát theo nhạc nền phát sẵn, lời bài hát chạy trên màn hình.
+kẽ nứt|Đường nứt hẹp trên bề mặt tường, đất hay đá.
+kem chống nắng|Kem bôi lên da để ngăn tác hại của ánh nắng mặt trời.
+kem cốc|Món kem lạnh múc sẵn vào cốc giấy hay ly nhỏ, ăn bằng thìa.
+kem đánh răng|Chất dạng sệt bóp lên bàn chải để chải và làm sạch răng.
+kem que|Món kem đóng thành thỏi có cắm que để cầm, ăn bằng cách mút, cắn.
+kem sữa|Món kem đông lạnh làm chủ yếu từ sữa, vị béo và ngọt.
+kèm theo|Đi cùng, gắn liền với một thứ chính.
+kém cạnh|Thua sút người khác, thường dùng phủ định để nói không thua ai.
+kén chọn|Lựa chọn kỹ, khó tính, không dễ hài lòng.
+kẻng|Thanh sắt hay đoạn đường ray treo lên, gõ vào để báo hiệu.
+kéo căng|Kéo cho thẳng ra, không còn chùng.
+kéo co|Trò chơi hai đội nắm dây thừng kéo về hai phía để giành phần thắng.
+kéo dài|Làm cho dài thêm hoặc diễn ra lâu hơn.
+kéo lê|Kéo vật sát mặt đất, để nó cọ quệt theo.
+kéo theo|Dẫn đến, gây ra một kết quả tiếp sau.
+kẹo cao su|Kẹo dẻo dùng để nhai lâu, không nuốt.
+kẹo chanh|Kẹo cứng có vị chua ngọt của chanh.
+kẹo dừa|Kẹo làm từ cơm dừa và đường, dẻo và béo, thường cắt thành thanh nhỏ.
+kẹo kéo|Kẹo làm từ mạch nha kéo thành sợi trắng, thường bán rong cho trẻ con.
+kẹo mút|Kẹo cứng gắn trên que để ngậm mút.
+kẹp tóc|Đồ dùng nhỏ có lò xo hoặc khớp kẹp, dùng để giữ tóc gọn.
+kẹt cứng|Mắc chặt không nhích nổi, như dòng xe giờ tan tầm hay chiếc ngăn kéo.
+kẹt xe|Cảnh xe cộ dồn ứ, chỉ nhích từng chút, cách nói quen ở miền Nam.
+kể cả|Tính luôn cả, không loại trừ.
+kể chuyện|Thuật lại một câu chuyện cho người khác nghe.
+kể lể|Nói dài dòng, kể đi kể lại chuyện của mình, thường để than thở.
+kể từ|Tính bắt đầu từ một mốc thời gian nào đó.
+kế hoạch|Những việc định làm được sắp xếp trước, kèm cách làm và thời hạn.
+kế tiếp|Nối liền ngay sau, theo thứ tự.
+kế toán|Việc theo dõi, ghi chép các khoản thu chi; cũng chỉ người làm việc ấy.
+kế toán viên|Người làm nghề giữ sổ sách, lập chứng từ và báo cáo thu chi.
+kền kền|Loài chim lớn, đầu trọc, chuyên ăn xác động vật chết.
+kênh|Đường nước đào để tưới tiêu, đi thuyền; cũng chỉ luồng chương trình truyền hình.
+kênh đào|Con kênh lớn được đào để tàu thuyền đi qua, nối hai vùng nước.
+kênh rạch|Các dòng kênh và rạch nhỏ chằng chịt, thường ở vùng sông nước.
+kết bạn|Làm quen rồi trở thành bạn của nhau, ngoài đời hay trên mạng.
+kết cục|Điều xảy ra sau chót của một chuỗi sự việc, khi mọi chuyện ngã ngũ.
+kết dính|Gắn chặt các vật lại với nhau.
+kết đôi|Ghép lại thành một cặp, thường nói về hai người nên duyên với nhau.
+kết hôn|Chính thức thành vợ chồng, thường có đăng ký và tổ chức cưới.
+kết hợp|Gắn hay phối nhiều thứ lại với nhau để cùng tác động.
+kết luận|Ý chốt lại rút ra sau khi xem xét, bàn bạc một vấn đề.
+kết nối|Nối các thiết bị hay con người lại với nhau để liên lạc.
+kết quả|Cái thu được sau một việc làm hay quá trình, như điểm thi, số liệu.
+kết thúc|Chấm dứt, đi đến hồi cuối.
+kết trái|Ra quả, thường nói về cây, cũng ví việc đạt được thành quả.
+kêu ca|Than phiền, phàn nàn về điều mình không hài lòng.
+kêu cứu|Gọi to để xin người khác đến giúp khi gặp nguy hiểm.
+kêu gào|Kêu to, khản giọng và kéo dài, thường vì đau đớn hay đòi hỏi.
+kêu gọi|Lên tiếng thúc giục đông người cùng tham gia, ủng hộ một việc.
+kêu la|La hét to, ầm ĩ, thường vì sợ hay đau.
+kha khá|Ở mức hơi khá, tương đối được.
+khả năng|Tầm sức làm nổi một việc; cũng chỉ chuyện có thể sẽ xảy ra.
+khả quan|Có chiều hướng tốt, đáng hi vọng.
+khá giả|Sống dư dả, tiền của hơn mức bình thường nhưng chưa tới giàu có.
+khác|Không giống, có điểm riêng so với cái kia.
+khác biệt|Có điểm không giống, dễ nhận ra khi đặt cạnh cái khác.
+khác nhau|Không giống nhau, mỗi bên một kiểu.
+khác thường|Không giống như bình thường, có vẻ lạ.
+khác xa|Khác nhiều, cách biệt rõ rệt.
+khách|Người đến thăm nhà hay đến mua hàng, dùng dịch vụ.
+khách khứa|Khách nói chung, thường đông người.
+khách mời|Người được chủ nhà hay ban tổ chức mời tới dự lễ, dự tiệc.
+khách quan|Không thiên vị, dựa trên sự thật chứ không theo ý riêng.
+khách sạn|Nơi kinh doanh phòng nghỉ cho khách thuê qua đêm.
+khách sáo|Giữ phép lịch sự quá mức, làm mất vẻ thân mật.
+khai giảng|Bắt đầu một năm học hay khóa học mới, thường có tổ chức lễ.
+khai mạc|Mở đầu chính thức một hội nghị, lễ hội hay giải đấu.
+khai phá|Mở mang vùng đất mới hay lĩnh vực chưa ai làm.
+khai sinh|Đăng ký chính thức sự ra đời của một đứa trẻ với chính quyền.
+khai thác|Lấy ra và sử dụng tài nguyên hay nguồn lợi có sẵn.
+khai trương|Mở cửa đón khách lần đầu, nói về cửa hàng, quán xá, thường làm lễ.
+khai vị|Món ăn nhẹ dọn đầu bữa để ăn ngon miệng hơn.
+khái niệm|Ý nghĩ khái quát về đặc điểm chung của một loại sự vật.
+khảm|Gắn mảnh xà cừ hay vật liệu khác vào mặt gỗ để trang trí.
+khám phá|Tìm ra điều mới chưa ai biết hoặc chưa được biết rõ.
+khan hiếm|Ít ỏi, khó tìm, không đủ cho người cần, như hàng hóa hay nguồn nước.
+khán đài|Khu ghế ngồi xếp bậc cho người xem quanh sân vận động hay sân khấu.
+khán giả|Người xem biểu diễn, thi đấu hay chương trình truyền hình.
+khán phòng|Phòng lớn nhiều hàng ghế, nơi khán giả xem biểu diễn hay nghe nói chuyện.
+khang trang|Rộng rãi, sạch đẹp và chỉnh tề, thường nói về nhà cửa, trường lớp.
+khánh thành|Làm lễ mừng một cây cầu, tòa nhà vừa xây xong để bắt đầu dùng.
+khao|Bỏ tiền mời mọi người ăn uống, thường để ăn mừng một chuyện vui.
+khao khát|Mong muốn rất mạnh mẽ và tha thiết một điều gì đó.
+khảo sát|Thu thập thông tin về vấn đề qua xem xét tận nơi hay phiếu hỏi.
+khát|Thấy cần được uống nước; còn có nghĩa mong mỏi rất mạnh một điều gì.
+khát nước|Ở trạng thái họng khô, cơ thể thiếu nước và muốn uống ngay.
+khát vọng|Điều mong ước lớn lao và tha thiết, thường hướng tới tương lai tốt đẹp.
+khay|Đồ dùng phẳng, có gờ thấp quanh mép, dùng để bưng chén bát, đồ ăn.
+khắc nghiệt|Gay gắt khó chịu nổi, như nắng sa mạc hay luật lệ quá nghiêm.
+khắc phục|Tìm cách vượt qua hoặc sửa chữa khó khăn, hư hỏng, thiếu sót.
+khắc sâu|Ghi nhớ thật kỹ, in đậm trong tâm trí để không quên.
+khăn|Miếng vải dùng để lau, hoặc để quấn, đội, choàng trên người.
+khăn ăn|Khăn nhỏ bằng vải hoặc giấy, dùng để lau miệng và tay trong bữa ăn.
+khăn bàn|Tấm vải phủ mặt bàn, giữ bàn sạch và làm bữa ăn thêm tươm tất.
+khăn choàng|Khăn rộng và dài, khoác quanh vai hoặc cổ để giữ ấm, làm đẹp.
+khăn giấy|Giấy mỏng mềm, thấm nước tốt, dùng để lau tay, lau miệng rồi bỏ đi.
+khăn gói|Gói đồ đạc tùy thân buộc gọn trong tấm khăn, mang theo khi đi xa.
+khăn lau|Miếng vải thấm nước dùng để chùi bụi bẩn trên bàn ghế, chén bát.
+khăn mặt|Chiếc khăn bông nhỏ, mềm, nhúng nước lau mặt lúc rửa ráy sáng tối.
+khăn quàng|Dải vải hay len vắt quanh cổ cho ấm hoặc để làm duyên.
+khăn quàng cổ|Khăn dài quấn vòng quanh cổ, thường dùng giữ ấm khi trời lạnh.
+khăn rằn|Khăn vải kẻ ô vuông đen trắng, quen thuộc ở miền Nam, thường quàng cổ.
+khăn tay|Khăn vải nhỏ hình vuông, bỏ túi mang theo để lau tay, lau mồ hôi.
+khăn tắm|Tấm khăn bông khổ lớn đủ quấn quanh người, lau khô sau khi tắm.
+khăn xếp|Vật đội đầu bằng vải quấn sẵn thành nếp tròn, thường đi cùng áo dài.
+khăng khăng|Cứ giữ chặt ý mình dù người khác can ngăn hay đưa lý lẽ.
+khăng khít|Gắn bó chặt chẽ, không rời nhau, thường nói về tình cảm, quan hệ.
+khẳng định|Nói chắc nịch rằng điều gì là thật, không chút do dự.
+khẳng khiu|Gầy và dài, trơ xương hoặc trơ cành, thường tả cây cối, chân tay.
+khắp nơi|Ở mọi chỗ, mọi vùng, không trừ nơi nào.
+khâm phục|Thán phục và tôn trọng trước tài năng hay việc làm đáng nể của ai.
+khấm khá|Đời sống khá lên so với trước, đủ ăn và có dư chút ít.
+khẩn cấp|Rất gấp, cần xử lý ngay, không thể chậm trễ.
+khẩn trương|Nhanh chóng, gấp rút, bắt tay làm ngay không để chậm.
+khâu|Dùng kim chỉ nối các mép vải; cũng chỉ một công đoạn trong quá trình.
+khâu vá|Làm việc may lại, vá chỗ rách trên quần áo bằng kim chỉ.
+khẩu phần|Lượng thức ăn chia sẵn cho mỗi người hay con vật, theo bữa hoặc ngày.
+khẩu trang|Miếng vải hay giấy che mũi và miệng, dùng để chắn bụi và mầm bệnh.
+khẩu vị|Sở thích riêng về mùi vị món ăn, như thích ngọt, mặn hay cay.
+khen|Nói lời tốt đẹp về ai hay việc gì để tỏ ý hài lòng.
+khen ngợi|Bày tỏ sự đánh giá cao, ca tụng điều tốt của người khác.
+khen thưởng|Tuyên dương kèm tặng quà, giấy khen hay tiền cho người làm tốt.
+khéo|Biết làm việc gọn gàng, tinh tế, hoặc biết ăn nói vừa lòng người.
+khéo léo|Tinh tế, giỏi xử lý, làm việc hay ăn nói đều mềm mỏng, hiệu quả.
+khéo tay|Có đôi tay làm giỏi việc tỉ mỉ, như may vá, thêu thùa.
+khép|Đưa hai cánh hoặc hai phần lại sát nhau, như cửa hay mi mắt.
+khép kín|Tách biệt, tự đủ với bên ngoài; cũng chỉ người ít cởi mở.
+khép lại|Đóng sát lại, như cửa hay mắt; cũng chỉ việc kết thúc một giai đoạn.
+khét|Có mùi cháy khó chịu, như mùi đồ ăn bị cháy hay vải bị sém.
+khệ nệ|Dáng mang vác vật nặng, bước đi chậm chạp và nặng nhọc.
+khi ấy|Từ dùng để chỉ lúc đã được nói tới trước đó.
+khi nào|Từ để hỏi về lúc một việc đã hay sẽ xảy ra.
+khi nãy|Lúc trước đó không lâu, cách đây một chốc trong cùng ngày.
+khi xưa|Từ chỉ thời đã qua từ lâu, ngày trước.
+khí đốt|Chất khí cháy được, dùng làm nhiên liệu nấu ăn, sưởi hay chạy máy.
+khí hậu|Tình hình thời tiết chung, lặp lại qua nhiều năm ở một vùng.
+khí thế|Tinh thần hăng hái, sôi nổi của người hay tập thể khi làm việc gì.
+khía|Rạch những đường nông trên bề mặt, như khứa thân cá trước khi nấu.
+khía cạnh|Một mặt riêng của vấn đề, nhìn từ một góc nào đó.
+khích lệ|Động viên, cổ vũ để người khác thêm tự tin và cố gắng.
+khiêm nhường|Tự hạ mình, nhún nhường, không giành phần hơn cho mình.
+khiêm tốn|Không tự đề cao, khoe khoang về mình; cũng chỉ mức độ nhỏ, ít ỏi.
+khiến|Gây ra, làm cho ai rơi vào một trạng thái hay làm việc gì.
+khiêng|Hai hay nhiều người cùng nâng và mang vật nặng đi.
+khiêu vũ|Nhảy theo điệu nhạc với các bước bài bản, thường từng đôi nam nữ.
+khiếu|Khả năng bẩm sinh về một lĩnh vực, như ca hát hay vẽ tranh.
+khít|Sát vào nhau, không để hở chút nào.
+kho báu|Nơi cất giữ vàng bạc, của quý, thường được giấu kín.
+kho tàng|Của cải quý báu tích lũy lâu đời, thường nói về văn hóa, tri thức.
+khò khò|Tiếng thở hay ngáy đều đều trong cổ họng, như tiếng người đang ngủ say.
+khó bảo|Không chịu nghe lời, khó dạy dỗ, thường nói về trẻ con.
+khó chịu|Cảm thấy bực bội hoặc không thoải mái trong người.
+khó chơi|Khó gần, khó kết thân hoặc khó đối phó, thường nói về người.
+khó coi|Trông xấu, chướng mắt, không đẹp hoặc không đúng mực.
+khó hiểu|Không dễ nắm được nghĩa hay lý do của sự việc.
+khó khăn|Tình trạng gặp nhiều trở ngại, thiếu thốn, không thuận lợi.
+khó nhằn|Khó giải quyết, khó vượt qua, như bài toán khó hay đối thủ mạnh.
+khó nhọc|Nặng nề, đổ nhiều mồ hôi công sức, như gánh lúa leo dốc.
+khó nói|Không dễ nói ra vì ngại ngùng hoặc vì chuyện tế nhị.
+khó tả|Không thể diễn đạt bằng lời cho đúng, thường nói về cảm xúc.
+khó tin|Lạ đến mức người nghe ngờ là không thật.
+khó tính|Hay đòi hỏi, dễ bắt bẻ, khó làm vừa lòng.
+khó xử|Rơi vào tình thế khó chọn cách giải quyết cho ổn thỏa.
+khoa|Đơn vị trong trường đại học hay bệnh viện, phụ trách một ngành riêng.
+khoa học|Kho hiểu biết về thế giới, đúc kết qua quan sát, thí nghiệm, lập luận.
+khoác|Choàng áo lên vai hoặc mặc thêm áo ngoài.
+khoác tay|Vòng tay mình qua tay người khác để đi sát cạnh nhau.
+khoai lang|Cây dây bò có củ ngọt, vỏ đỏ hoặc tím, thường luộc hay nướng ăn.
+khoai môn|Cây lá to hình tim, củ lớn, thịt bùi, thường nấu chè hay canh.
+khoai mỡ|Cây dây leo có củ to, thịt tím hoặc trắng, nhớt, thường nấu canh.
+khoai sọ|Cây có nhiều củ nhỏ quanh củ cái, thịt dẻo nhớt, thường nấu canh.
+khoai tây|Cây có củ tròn, vỏ mỏng màu vàng nâu, thường chiên, xào hay nấu canh.
+khoái chí|Thấy thích thú và hả hê trong lòng vì được như ý.
+khoái khẩu|Rất hợp khẩu vị, thường nói về món ăn ưa thích.
+khoan|Dùng mũi nhọn xoay tròn để tạo lỗ trên tường, gỗ hay đất.
+khoan dung|Sẵn lòng bỏ qua cho người có lỗi, không chấp nhặt hay trách phạt nặng.
+khoan khoái|Cảm thấy dễ chịu, nhẹ nhõm và thư thái trong người.
+khoang|Phần không gian rỗng được ngăn riêng trong tàu, thuyền, máy bay hay xe.
+khoảng cách|Độ xa giữa hai chỗ, hai vật hay hai thời điểm.
+khoảng không|Vùng trống rộng không có vật gì, thường nói về bầu trời, vũ trụ.
+khoảng trống|Chỗ để không, chưa có gì chiếm, giữa các vật hay trong một không gian.
+khoáng chất|Chất vô cơ như sắt, kẽm, có trong thức ăn và cần cho cơ thể.
+khoáng sản|Tài nguyên trong lòng đất như than, quặng, dầu mỏ, được khai thác để dùng.
+khoanh|Vẽ vòng bao quanh để đánh dấu; cũng chỉ một lát tròn cắt ngang.
+khoanh tròn|Vẽ vòng tròn quanh chữ hay hình để đánh dấu, như khi làm trắc nghiệm.
+khoanh vùng|Giới hạn một khu vực hay phạm vi để theo dõi, xử lý riêng.
+khoảnh khắc|Một lúc rất ngắn, thường là thời điểm đáng nhớ.
+khóc|Chảy nước mắt vì buồn đau hay xúc động, có khi kèm tiếng nức nở.
+khóc lóc|Khóc nhiều và kể lể, than vãn kéo dài.
+khóc nhè|Khóc dai, mè nheo để đòi hỏi, thường nói về trẻ nhỏ.
+khóc thầm|Rơi nước mắt lặng lẽ, giấu nỗi buồn không cho ai biết.
+khoe|Cho người khác thấy hay biết điều mình có để được khen.
+khoét|Dùng dao hay mũi nhọn xoáy vào để tạo lỗ hay chỗ lõm.
+khói|Đám hơi và bụi mịn màu xám bốc lên khi vật bị đốt cháy.
+khóm|Cụm cây mọc sát thành bụi; cũng là tên gọi quả dứa ở miền Nam.
+khô cằn|Khô, thiếu nước và màu mỡ, cây cối khó mọc, thường nói về đất đai.
+khô cứng|Mất nước nên cứng lại; cũng chỉ lối nói, lối làm thiếu mềm mại.
+khô héo|Mất nước và rũ xuống, úa tàn, thường nói về cây lá.
+khô khốc|Khô kiệt, không chút ẩm; cũng tả giọng nói, tiếng động cộc lốc, lạnh lùng.
+khô ráo|Không ẩm ướt, không đọng nước, sạch và khô.
+khổ qua|Quả sần sùi, vị đắng, hay nhồi thịt nấu canh, miền Bắc gọi mướp đắng.
+khổ sở|Rất khổ, chịu nhiều vất vả và đau đớn.
+khổ tâm|Lòng nặng trĩu, day dứt vì một chuyện khó nói hay khó xử.
+khôi hài|Có tính chất gây cười, hài hước.
+khôi ngô|Có nét mặt sáng sủa, thông minh, thường nói về con trai.
+khôi phục|Đưa cái đã mất hay hỏng về lại trạng thái trước đó.
+khối lượng|Lượng vật chất trong một vật, thường đo bằng cân; cũng chỉ lượng công việc.
+khôn khéo|Biết cư xử khéo léo, được việc mà không mất lòng ai.
+khôn lớn|Lớn lên và trở nên hiểu biết, trưởng thành.
+khôn lường|Không thể đoán trước hết được, thường nói về hậu quả hay biến đổi.
+khôn ngoan|Sáng suốt, biết tính toán, xử sự đúng lúc đúng chỗ.
+không|Từ dùng để phủ định, nói rằng điều gì chẳng có hay chẳng xảy ra.
+không chuyên|Không làm việc đó như nghề chính, chỉ tham gia vì yêu thích.
+không gian|Khoảng rộng bao quanh mọi vật, có chiều dài, chiều rộng và chiều cao.
+không hề|Từ dùng để nhấn mạnh rằng hoàn toàn chẳng có hay chẳng xảy ra.
+không khí|Khí vô hình ta hít thở; cũng chỉ cảm giác chung bao trùm một nơi.
+không trung|Bầu trời phía trên mặt đất, nơi chim bay, diều bay.
+không tưởng|Quá xa vời, chỉ có trong trí tưởng tượng, khó thành sự thật.
+khổng lồ|To lớn khác thường, vượt xa kích thước bình thường.
+khơi dậy|Làm cho tình cảm, ý chí hay khả năng vốn có bừng lên.
+khởi công|Bắt tay vào xây một công trình, thường mở đầu bằng lễ động thổ.
+khởi đầu|Bắt đầu tiến hành một việc hay một giai đoạn mới.
+khởi điểm|Điểm xuất phát hay mức tính đầu tiên của một việc.
+khởi động|Cho máy, xe bắt đầu chạy; cũng chỉ vươn vai, xoay khớp trước khi tập.
+khởi hành|Bắt đầu lên đường đi xa.
+khởi xướng|Đề ra và đi đầu thực hiện một ý tưởng, phong trào.
+khớp|Chỗ nối giữa hai xương; cũng chỉ việc hai thứ vừa vặn, trùng nhau.
+khớp xương|Chỗ các đầu xương tiếp giáp nhau, giúp cơ thể co duỗi, cử động.
+khu dân cư|Vùng tập trung nhà ở của nhiều hộ gia đình.
+khu phố|Một vùng gồm nhiều dãy phố, thường là đơn vị dân cư dưới phường.
+khu tập thể|Cụm nhà nhiều tầng cho nhiều hộ ở chung, thường do cơ quan phân.
+khu vực|Một vùng đất được xác định, có giới hạn riêng.
+khuân|Ôm hoặc vác đồ nặng bằng sức mình để chuyển đi chỗ khác.
+khuân vác|Làm công việc mang vác hàng nặng, thường để kiếm sống.
+khuất|Bị che mất hoặc đi xa khỏi tầm mắt nên không còn thấy.
+khuất phục|Chịu thua và nghe theo vì bị sức mạnh hay áp lực ép buộc.
+khuấy|Đưa thìa hay đũa xoay vòng trong chất lỏng để trộn đều.
+khuấy đảo|Làm náo động hay xáo trộn mạnh, thường nói về sân khấu, thị trường.
+khuấy động|Khiến chỗ đang lặng thành sôi nổi, như ca sĩ kéo khán giả hát theo.
+khúc|Đoạn ngắn được cắt ra từ một vật dài, như cây gỗ hay con cá.
+khúc cua|Đoạn đường cong gấp, xe phải rẽ hướng.
+khúc khích|Tiếng cười nhỏ, nén lại, bật ra liên tiếp, như trẻ con cười đùa.
+khúc mắc|Điều vướng mắc, chưa thông trong lòng hay trong quan hệ.
+khui|Mở nắp chai, lon hay hộp đã đóng kín.
+khung cảnh|Mọi thứ bày ra trong tầm mắt: núi đồi, nhà cửa, trời mây một vùng.
+khung cửa|Bộ khung bằng gỗ hay kim loại quanh ô cửa để lắp cánh cửa.
+khung thành|Khung cầu môn có lưới, nơi thủ môn đứng giữ trong bóng đá.
+khủng long|Nhóm bò sát tiền sử đã tuyệt chủng, có loài to, loài nhỏ.
+khuôn|Vật có lòng rỗng theo hình định sẵn, để đổ vật liệu vào tạo hình.
+khuôn mặt|Toàn bộ phần mặt người, với hình dáng và đường nét riêng.
+khuôn mẫu|Mẫu chuẩn được đặt ra để làm theo, có khi cứng nhắc.
+khuôn viên|Khoảng đất có ranh giới bao quanh một công trình, như trường học, chùa.
+khuy|Vật nhỏ, thường tròn, đính trên quần áo để cài vào lỗ cho kín.
+khuy áo|Hạt cài trên áo, lồng qua lỗ khuyết để khép hai vạt áo lại.
+khuya|Lúc đã về đêm muộn, khi mọi người thường đã ngủ.
+khuyên|Nói để người khác nên làm hay tránh điều gì; cũng chỉ vòng đeo tai.
+khuyên bảo|Chỉ bảo, nhắc nhở ân cần điều nên làm, thường với người dưới.
+khuyên nhủ|Nói nhẹ nhàng, tha thiết để người khác nghe theo điều phải.
+khuyên răn|Nhắc nhở nghiêm khắc để người khác tránh điều sai trái.
+khuyến khích|Tiếp động lực, thường bằng lời khen hay quà, cho ai đó hăng hái làm.
+khuyết điểm|Chỗ còn thiếu sót, chưa tốt trong tính cách hay việc làm.
+khuỷu|Chỗ khớp gập ở quãng giữa tay hoặc chân.
+khuỷu tay|Chỗ gập giữa cánh tay trên và cẳng tay, nhô ra khi co tay.
+khư khư|Giữ chặt không buông, hay một mực bám lấy ý mình.
+khử mùi|Làm mất hay át mùi hôi trong phòng, tủ lạnh, giày dép hay cơ thể.
+kích cỡ|Độ lớn nhỏ của một vật, thường nói về quần áo, giày dép.
+kích hoạt|Làm cho thiết bị, chức năng hay tài khoản bắt đầu hoạt động.
+kích thước|Các số đo dài, rộng, cao cho biết một vật to hay nhỏ.
+kịch bản|Bản viết sẵn lời thoại và diễn biến cho phim hay vở diễn.
+kịch câm|Lối diễn kịch không dùng lời, chỉ bằng cử chỉ và nét mặt.
+kịch liệt|Rất mạnh mẽ, quyết liệt, thường nói về phản đối hay tranh cãi.
+kịch tính|Có nhiều căng thẳng, bất ngờ, gây hồi hộp.
+kiềm chế|Giữ mình không để cảm xúc hay hành động vượt quá mức.
+kiểm đếm|Đếm từng cái để biết đúng số lượng.
+kiểm soát|Theo dõi và giữ cho mọi việc trong tầm quản lý, không vượt quy định.
+kiểm tra|Rà soát một vật hay việc để biết có đúng, có đủ hay không.
+kiếm ăn|Đi tìm thức ăn, hoặc tìm cách có cái ăn để sống.
+kiếm cớ|Tìm lý do để làm hay để tránh một việc gì.
+kiếm lời|Mua bán hay làm việc để thu về tiền lãi.
+kiếm sống|Làm việc để có tiền nuôi bản thân và gia đình.
+kiên cố|Vững chắc, bền chặt, khó phá hỏng, thường nói về nhà cửa, công trình.
+kiên cường|Gan góc chịu đựng, không gục ngã dù gặp gian khổ hay hiểm nguy.
+kiên định|Giữ vững lập trường, không thay đổi dù bị tác động.
+kiên nhẫn|Bền bỉ chờ đợi hay làm việc, không nóng vội, không nản.
+kiên quyết|Dứt khoát, nhất định làm theo, không lùi bước.
+kiên trì|Bền bỉ theo đuổi việc đến cùng dù gặp khó khăn.
+kiến|Côn trùng bé tí sống bầy đàn, nối đuôi nhau tha mồi về tổ.
+kiến đen|Tên chung các loại kiến màu đen, thường bò vào nhà tìm đồ ngọt.
+kiến đỏ|Kiến thân đỏ hoặc nâu đỏ, gồm nhiều loại, thường cắn hay đốt khá đau.
+kiến lửa|Loài kiến nhỏ màu đỏ, đốt rát như bị bỏng, hay làm tổ dưới đất.
+kiến thức|Vốn hiểu biết tích góp qua sách vở, trường lớp và trải nghiệm sống.
+kiến trúc|Ngành vẽ kiểu dáng, bố cục nhà cửa và công trình trước khi đem xây.
+kiến trúc sư|Người thiết kế nhà cửa và các công trình xây dựng.
+kiện hàng|Hàng hóa được đóng gói thành khối để gửi hoặc vận chuyển.
+kiêng|Tránh ăn, làm hay nói điều gì vì sức khỏe hoặc sợ điều không may.
+kiêng cữ|Tránh ăn uống hay làm một số việc, thường sau khi sinh con hoặc ốm.
+kiêng khem|Hạn chế ăn uống nhiều thứ để giữ sức khỏe hay giảm cân.
+kiệt sức|Mệt tới mức cạn hết hơi, chân tay rã rời không gượng nổi nữa.
+kiệt tác|Tác phẩm được xem là đỉnh cao, hiếm có trong văn chương hay nghệ thuật.
+kiểu|Hình dạng hay cách thức riêng của sự vật, như tóc, áo, nhà.
+kiểu cách|Cầu kỳ, làm dáng quá mức trong lời nói, cử chỉ, thiếu tự nhiên.
+kiểu dáng|Hình thức bên ngoài của một sản phẩm, như quần áo, xe cộ.
+kiểu mẫu|Đạt chuẩn để nơi khác noi theo, thường nói về gia đình, làng, trường học.
+kim băng|Kim gài gập đôi có nắp che mũi nhọn, dùng để cài, ghim vải.
+kim chi|Món cải thảo muối chua cay với ớt bột, tỏi, gừng, gốc ở Hàn Quốc.
+kim cương|Đá quý rất cứng, thường trong suốt lấp lánh, làm trang sức hay mũi cắt.
+kim giây|Kim dài, mảnh trên mặt đồng hồ, chạy một vòng mỗi phút.
+kim loại|Chất thường rắn, sáng bóng, dẫn điện và nhiệt tốt, như sắt, đồng, nhôm.
+kim tuyến|Sợi hoặc dải mỏng lấp lánh, dùng để trang trí, nhất là dịp lễ.
+kim tự tháp|Công trình lớn, thường đáy vuông, các mặt thu nhỏ dần lên tới đỉnh.
+kìm chân|Giữ lại, cản bước không cho đi tiếp hoặc tiến lên.
+kìm hãm|Làm cho chậm lại, không phát triển được.
+kìm nén|Cố giữ không để cảm xúc bộc lộ ra ngoài.
+kín đáo|Không phô bày, ý tứ, không để lộ ra ngoài.
+kín miệng|Biết giữ bí mật, không nói ra chuyện của người khác.
+kín mít|Bịt chặt mọi phía, không lọt chút gió hay ánh sáng nào.
+kín tiếng|Ít nói về mình, giữ kín chuyện riêng.
+kinh doanh|Mua bán, sản xuất hoặc làm dịch vụ để kiếm lời.
+kinh đô|Nơi nhà vua đóng triều đình, trung tâm của cả nước thời xưa.
+kinh giới|Loại rau thơm có lá nhỏ, mùi hắc dịu, thường ăn sống kèm bún, bánh.
+kinh khủng|Ghê gớm, đáng sợ, hoặc vượt quá mức bình thường.
+kinh ngạc|Rất ngạc nhiên vì điều bất ngờ, lạ thường.
+kinh nghiệm|Hiểu biết, kỹ năng tích lũy được qua việc đã làm, đã trải.
+kinh tế|Toàn bộ việc sản xuất, trao đổi và tiêu dùng của cải trong xã hội.
+kính|Đồ đeo để nhìn rõ hay che nắng; cũng chỉ tấm thủy tinh trong suốt.
+kính áp tròng|Tròng kính nhỏ, mỏng, đặt sát vào mắt để nhìn rõ hơn.
+kính cận|Kính tròng lõm, đeo vào thì mắt cận nhìn rõ được vật ở xa.
+kính chắn gió|Tấm kính lớn phía trước xe, che gió và bụi cho người lái.
+kính đen|Kính tròng màu tối để che nắng, cũng hay đeo để làm đẹp.
+kính đeo mắt|Đồ gồm gọng và hai tròng, đeo để nhìn rõ hay bảo vệ mắt.
+kính hiển vi|Dụng cụ phóng to nhiều lần, dùng để xem vật rất nhỏ như vi khuẩn.
+kính lão|Kính có tròng lồi giúp người có tuổi đọc chữ, nhìn rõ vật ở gần.
+kính lúp|Thấu kính cầm tay có cán, dùng để phóng to chữ hay vật nhỏ.
+kính mắt|Đồ đeo trên sống mũi, có hai tròng, giúp mắt nhìn rõ hơn.
+kính mến|Kính trọng và yêu mến, thường dùng với thầy cô, người lớn.
+kính nể|Tôn trọng và có phần e dè trước người có uy tín, tài năng.
+kính phục|Vừa tôn kính vừa phục tài năng, đức độ của người khác.
+kính râm|Kính đeo mắt có tròng sẫm, giúp giảm chói khi trời nắng.
+kính thiên văn|Dụng cụ quang học phóng to vật ở xa, dùng quan sát sao, trăng.
+kính trọng|Tôn trọng, đề cao người đáng kính, thường là người lớn tuổi hay có công.
+kính vạn hoa|Ống đồ chơi có gương và mảnh màu, xoay thì thấy hoa văn đổi khác.
+kính viễn vọng|Ống kính dài để nhìn rõ vật ở rất xa, như tàu thuyền hay sao.
+kính yêu|Tôn kính và yêu thương sâu nặng, thường dành cho ông bà, cha mẹ.
+kịp thời|Đúng lúc đang cần, không chậm trễ đến mức hết tác dụng.
+la bàn|Dụng cụ có kim nhiễm từ luôn chỉ hướng bắc nam, dùng để định hướng.
+la cà|Đi hết chỗ này sang chỗ khác, dừng lại lâu, không vội.
+la hét|Kêu gào, hét to ầm ĩ.
+la liệt|Bày ra nhiều và tràn khắp nơi, chỗ nào cũng thấy.
+là lạ|Hơi lạ, có chút khác thường.
+lả tả|Rơi nhẹ và lác đác từng cái, như lá hay hoa rụng.
+lá cây|Bộ phận mỏng, thường màu xanh, mọc ra từ cành, giúp cây quang hợp.
+lá dong|Lá to, dài, xanh đậm, dùng để gói bánh chưng.
+lá dứa|Lá dài, hẹp, thơm, dùng để tạo màu xanh và mùi thơm cho bánh, chè.
+lá lốt|Lá cây hình tim, thơm hắc, thường dùng cuốn thịt nướng.
+lá sen|Lá tròn to của cây sen, mặt chống thấm nước, thường dùng gói xôi, cơm.
+lạ hoắc|Lạ đến mức không nhận ra chút gì, chưa từng thấy bao giờ.
+lạ lẫm|Cảm thấy xa lạ, bỡ ngỡ vì chưa quen.
+lạ lùng|Khác hẳn thường ngày, khiến người ta ngạc nhiên, khó giải thích.
+lạ mặt|Chưa từng gặp, không quen biết, thường nói về người.
+lạ miệng|Có vị mới, khác món quen nên ăn thấy ngon.
+lạ thường|Khác hẳn mức thông thường, hay dùng để nhấn mạnh một tính chất.
+lác đác|Thưa thớt mỗi nơi một ít, như vài chiếc lá rụng giữa sân rộng.
+lạc đà|Thú chân cao, lưng có bướu, chịu khát giỏi, dùng chở hàng qua sa mạc.
+lạc đề|Viết hay nói không đúng vấn đề được đặt ra.
+lạc đường|Đi sai đường, không biết lối về hay lối đến.
+lạc hậu|Kém phát triển, tụt lại phía sau so với thời đại.
+lạc hướng|Đi chệch khỏi hướng đúng, cả khi đi lại lẫn trong suy nghĩ.
+lạc loài|Bị tách khỏi đồng loại, sống lẻ loi một mình.
+lạc lõng|Cảm thấy trơ trọi, không hợp với nơi chốn hay người chung quanh.
+lạc lối|Đi sai đường, không tìm được lối về; cũng chỉ sa ngã, sống sai trái.
+lạc quan|Tin vào điều tốt đẹp, nhìn sự việc theo hướng tích cực.
+lách cách|Tiếng va chạm nhỏ, giòn, liên tiếp, như tiếng bát đũa hay chìa khóa.
+lách tách|Tiếng nổ nhỏ, đều, liên tiếp, như tiếng củi cháy hay mưa nhẹ.
+lạch|Dòng nước nhỏ, hẹp chảy giữa đồng hay đổ ra sông.
+lạch bạch|Tả bước đi chậm, nặng nề, người lắc qua lắc lại như đàn vịt.
+lãi suất|Tỉ lệ tiền lãi tính trên số tiền vay hay gửi trong một kỳ hạn.
+lái đò|Người chèo chống con đò đưa khách qua sông.
+lái xe|Cầm lái điều khiển ô tô, xe tải cho chạy trên đường.
+làm ăn|Làm việc, buôn bán để kiếm sống.
+làm ẩu|Làm qua loa, cẩu thả, không cẩn thận.
+làm bài|Thực hiện bài tập hay bài thi được giao.
+làm bạn|Kết thân và chơi với nhau như bạn bè.
+làm bếp|Nấu nướng, lo việc nấu ăn trong nhà hay nhà hàng.
+làm bộ|Cố ý tỏ ra một vẻ không thật, như vờ không biết hay làm cao.
+làm chủ|Nắm quyền quyết định, điều khiển được bản thân, công việc hay tài sản.
+làm công|Làm việc cho chủ để nhận tiền công, thường theo ngày hay tháng.
+làm cơm|Nấu bữa cơm, thường là bữa có nhiều món để đãi khách.
+làm dáng|Chăm chút ăn mặc, điệu bộ để trông đẹp hơn.
+làm đồng|Làm việc ngoài đồng ruộng, như cày cấy, gặt hái.
+làm giàu|Làm ăn để có nhiều của cải.
+làm gương|Cư xử đúng đắn để người khác, nhất là người nhỏ hơn, noi theo.
+làm khách|Ngại ngùng, giữ ý như người khách, không tự nhiên.
+làm khó|Gây khó dễ, cố ý làm cho người khác gặp trở ngại.
+làm lạnh|Hạ nhiệt độ của vật hay không khí xuống.
+làm liều|Làm bừa, bất chấp nguy hiểm hay hậu quả.
+làm lụng|Cần cù lao động chân tay hằng ngày để lo cái ăn cái mặc.
+làm mẫu|Làm trước để người khác theo; cũng chỉ việc đứng cho người ta chụp, vẽ.
+làm mối|Giới thiệu hai người để họ tìm hiểu, đi tới hôn nhân.
+làm nên|Tạo dựng được thành quả hay sự nghiệp.
+làm ngơ|Cố ý không để ý, bỏ mặc việc đáng lẽ phải quan tâm.
+làm người|Sống và cư xử sao cho đúng đạo lý ở đời.
+làm nũng|Nhõng nhẽo, đòi được chiều chuộng, thường với người thân.
+làm phiền|Gây phiền hà, quấy rầy người khác.
+làm quen|Bắt chuyện để quen biết; cũng chỉ việc tập cho quen với cái mới.
+làm ruộng|Cày cấy, trồng lúa trên ruộng để sinh sống.
+làm thinh|Lặng im, không nói gì, không trả lời.
+làm thuê|Bán sức lao động theo yêu cầu của người thuê, thường không ổn định.
+làm tiệc|Chuẩn bị đồ ăn uống để đãi khách trong một buổi tiệc.
+làm tổ|Kết cành, rơm thành chỗ ở và đẻ trứng, thường nói về chim.
+làm trò|Bày trò để mua vui, gây cười cho người khác.
+làm tròn|Đổi một số thành số tròn gần nó, có khi tăng chữ số giữ lại.
+làm việc|Dùng sức hay trí óc để hoàn thành nhiệm vụ, công việc thường ngày.
+lan can|Hàng rào thấp chắn ở mép ban công, cầu thang hay cầu cho an toàn.
+lan man|Nói hay nghĩ dàn trải, không tập trung vào ý chính.
+lan tràn|Lan ra rộng khắp, khó ngăn được, thường nói về điều xấu.
+lan truyền|Loang ra khắp nơi, tới ngày càng nhiều người, như tin đồn hay dịch bệnh.
+làn sóng|Một đợt sóng trên mặt nước; cũng chỉ trào lưu lan nhanh trong xã hội.
+lang thang|Bước đi vẩn vơ khắp phố phường mà không biết sẽ dừng ở đâu.
+làng|Khu dân cư nông thôn, nhiều nhà quây quần, thường có lũy tre, đình.
+làng mạc|Cảnh các làng quê nối nhau, nói chung về vùng nông thôn.
+làng xã|Cộng đồng dân cư ở nông thôn xét như một đơn vị tổ chức.
+làng xóm|Những người cùng làng, cùng xóm sống gần nhau.
+lảng tránh|Cố tình tránh né, không đối diện hay trả lời.
+lảng vảng|Đi đi lại lại quanh một chỗ, không rõ mục đích.
+lãng mạn|Giàu mơ mộng, đầy cảm xúc, thường nói về tình yêu.
+lãng phí|Dùng tiền của, thời gian một cách phí phạm, không đem lại ích lợi.
+lãng quên|Quên đi, không còn nhớ tới.
+láng giềng|Người ở sát bên nhà, hàng xóm của mình.
+lanh lẹ|Nhanh nhẹn, hoạt bát trong cử chỉ.
+lanh lợi|Nhanh trí, thông minh, ứng xử nhanh.
+lành lặn|Nguyên vẹn, không bị rách hỏng hay thương tật.
+lành mạnh|Tốt cho thân thể, tinh thần, không dính thói xấu, như lối sống, trò chơi.
+lành nghề|Thành thạo, giỏi tay nghề.
+lạnh|Buốt da, làm người co ro muốn khoác thêm áo, như chạm vào nước đá.
+lạnh buốt|Lạnh đến mức thấy buốt, như kim châm vào da.
+lạnh cóng|Lạnh đến tê cứng tay chân.
+lạnh giá|Rất lạnh, như vào giữa mùa đông.
+lạnh lẽo|Lạnh và vắng vẻ, gây cảm giác hiu quạnh.
+lạnh lùng|Thờ ơ, không biểu lộ tình cảm.
+lạnh ngắt|Lạnh hẳn, không còn chút hơi ấm.
+lạnh nhạt|Không còn mặn mà, thờ ơ trong quan hệ.
+lạnh tanh|Nguội lạnh và vắng vẻ, thường tả bếp núc hay căn nhà không người.
+lao công|Nhân viên quét dọn, đổ rác, lau chùi ở trường học, bệnh viện, văn phòng.
+lao động|Bỏ sức lực, trí óc làm việc để tạo ra của cải.
+lao xao|Tiếng ồn nhỏ lẫn lộn, như tiếng gió lay lá hay tiếng người xì xào.
+lảo đảo|Đi đứng nghiêng ngả, chực ngã, như khi chóng mặt hay say.
+lão làng|Người có nhiều kinh nghiệm, thâm niên trong một lĩnh vực.
+lạp xưởng|Món thịt lợn và mỡ xay nhồi vào ruột, phơi khô, vị ngọt, thường chiên.
+lau chùi|Dùng khăn cọ sạch bụi bẩn trên đồ vật.
+làu bàu|Nói nhỏ trong miệng, càu nhàu tỏ ý không bằng lòng.
+lay động|Rung rinh, chuyển động nhẹ; cũng chỉ việc làm xúc động lòng người.
+lay ơn|Cây hoa lá dài nhọn, bông mọc thành chùm dọc cành cao, thường cắm bình.
+lắc đầu|Đưa đầu sang trái sang phải, cử chỉ thay cho lời không hoặc chán ngán.
+lắc lư|Đung đưa nghiêng qua nghiêng lại liên tục, như người ngồi trên xe đang chạy.
+lăn bánh|Bắt đầu chuyển bánh chạy đi, nói về xe, tàu hay máy bay.
+lăn lóc|Nằm vương vãi, không ai ngó tới; cũng chỉ việc bươn chải vất vả.
+lăn tăn|Có nhiều gợn nhỏ, thường nói về mặt nước; cũng chỉ lòng còn băn khoăn.
+lặn lội|Đi đường xa, vượt qua nhiều vất vả khó khăn để làm một việc.
+lăng xăng|Chạy tới chạy lui, tỏ ra bận rộn nhưng không được việc gì nhiều.
+lằng nhằng|Rối rắm, dây dưa, không dứt khoát và khó giải quyết cho xong.
+lắng đọng|Còn đọng lại lâu trong lòng, nói về cảm xúc hay ấn tượng sâu sắc.
+lắng nghe|Tập trung chú ý để nghe cho rõ và hiểu điều người khác nói.
+lặng im|Không nói gì, giữ yên lặng, thường vì suy nghĩ hay xúc động.
+lặng lẽ|Âm thầm, ít nói, không gây tiếng động hay sự chú ý.
+lắp bắp|Nói không trôi chảy, các tiếng vấp váp lặp lại vì run hay vội.
+lắp đặt|Đưa máy móc, thiết bị vào đúng chỗ và nối lại để dùng được.
+lắp ghép|Ghép các mảnh rời khớp vào nhau thành một vật, như đồ chơi xếp hình.
+lắp ráp|Gắn các linh kiện, bộ phận lại thành máy móc hay xe cộ hoàn chỉnh.
+lắt léo|Quanh co, nhiều khúc ngoặt; còn có nghĩa rắc rối, nhiều điểm khó hiểu.
+lặt vặt|Nhỏ nhặt, lẻ tẻ và không quan trọng, nói về đồ vật hay công việc.
+lầm lẫn|Nhận sai cái này thành cái kia, hiểu hay làm không đúng.
+lẩm bẩm|Nói nhỏ trong miệng, không rõ tiếng, như đang nói một mình.
+lấm lem|Bị dính bẩn loang lổ nhiều chỗ, thường là bùn đất hay mực.
+lấm tấm|Lốm đốm chấm nhỏ, như mồ hôi rịn trên trán hay mưa bụi trên kính.
+lân la|Tìm cách đến gần dần dần để làm quen hay dò hỏi chuyện.
+lần mò|Dò dẫm tìm đường hay tìm đồ một cách chậm chạp, thường trong bóng tối.
+lẩn tránh|Né đi, tìm cách không gặp mặt hoặc không đối diện với một việc.
+lẩn trốn|Nấp vào chỗ kín, né mọi ánh mắt để khỏi bị tìm thấy.
+lẫn lộn|Trộn vào nhau, khó phân biệt rõ cái này với cái kia.
+lấn át|Chèn ép, vượt trội đến mức làm cái khác bị lu mờ hay yếu thế.
+lấn sân|Làm sang việc thuộc lĩnh vực khác, như ca sĩ đi đóng phim.
+lâng lâng|Thấy nhẹ bẫng, bồng bềnh dễ chịu trong người, như khi vui hay hơi say.
+lấp lánh|Phát ánh sáng nhỏ chớp tắt liên tục, như sao đêm hay mặt nước.
+lấp ló|Lúc hiện lúc khuất, chỉ để lộ ra một phần sau vật che.
+lập công|Làm được việc có thành tích, có đóng góp lớn và được ghi nhận.
+lập nghiệp|Gây dựng sự nghiệp, tạo cơ ngơi để sinh sống lâu dài ở một nơi.
+lập trình viên|Người viết các câu lệnh cho máy tính để tạo phần mềm và ứng dụng.
+lập tức|Ngay khi đó, không để chậm trễ một chút nào.
+lật ngửa|Lật cho mặt trước hoặc phần bụng quay lên phía trên.
+lật ngược|Trở cho mặt dưới quay lên trên, như cái bàn bị lật chổng bốn chân.
+lật úp|Lật cho mặt trên hay miệng vật quay úp xuống dưới.
+lâu bền|Dùng được lâu, bền vững, không dễ hư hỏng hay mất đi.
+lâu đài|Tòa nhà lớn đồ sộ, thường có tường cao và tháp, nơi vua chúa ở.
+lâu đời|Có từ rất xa xưa và còn kéo dài tới nay, như truyền thống, nghề.
+lâu nay|Suốt một khoảng thời gian dài cho tới lúc đang nói.
+lâu năm|Đã tồn tại hay gắn bó qua nhiều năm, như cây trồng hay tay nghề.
+lâu ngày|Trải qua một quãng thời gian khá dài, tính bằng nhiều ngày tháng.
+lầy lội|Nhiều bùn nước nhão nhoét, đi lại khó khăn, nói về đường sá.
+lấy chồng|Kết hôn và về làm vợ một người đàn ông, nói về người phụ nữ.
+lấy cớ|Mượn một lý do nghe xuôi tai để che đi ý định thật của mình.
+lấy lại|Nhận về hoặc giành lại cái vốn của mình đã mất hay đã đưa đi.
+lấy lòng|Chiều chuộng, nói ngọt hay làm vừa ý ai để được người đó quý.
+lấy nhau|Hai người nên vợ nên chồng, về chung một nhà.
+lấy vợ|Cưới một người phụ nữ về làm bạn đời, nói về phía người đàn ông.
+lẻ loi|Chỉ có một mình, trơ trọi, không có ai bên cạnh.
+lẻ tẻ|Rời rạc, ít ỏi, rải rác chỗ này chỗ kia, không tập trung.
+lẽ phải|Điều đúng đắn, hợp tình hợp lý, cần được bênh vực.
+lẽ thường|Điều vẫn thường xảy ra, hợp với lẽ tự nhiên của cuộc sống.
+lem nhem|Nhòe bẩn loang lổ, trông không sạch, như mặt dính lọ hay chữ bị nhòe.
+lém lỉnh|Nhanh nhảu, hóm hỉnh, có chút tinh nghịch trong lời nói, ánh mắt.
+lén lút|Làm việc gì giấu giếm, vụng trộm vì sợ người khác biết.
+leng keng|Tiếng kim loại va nhẹ vào nhau trong trẻo, như tiếng chuông xe đạp.
+leo núi|Trèo lên núi cao, thường để rèn luyện sức khỏe hoặc khám phá.
+leo thang|Tăng dần từng nấc, như giá cả hay xung đột; cũng chỉ việc trèo thang.
+leo trèo|Bám tay chân để đi lên chỗ cao như cây, tường hay vách đá.
+lẽo đẽo|Đi theo sát sau lưng ai đó một cách dai dẳng, không rời.
+lép vế|Bị lấn át, ở thế yếu hơn nên đành nhún nhường bên kia.
+lê la|Ngồi hết chỗ này chỗ khác, la cà tán gẫu cho qua thời gian.
+lê lết|Kéo lê thân mình đi một cách khó nhọc, chậm chạp vì mệt hay đau.
+lề đường|Mép ngoài hai bên con đường, chỗ người đi bộ hay xe dừng tạm.
+lễ cưới|Buổi lễ chính thức kết hôn của cô dâu chú rể, thường có tiệc.
+lễ độ|Có thái độ, cử chỉ kính trọng và đúng mực với người khác.
+lễ hội|Dịp sinh hoạt chung của cộng đồng, gồm phần nghi lễ và các trò vui.
+lễ phép|Biết chào hỏi, thưa gửi kính trọng với người trên, thường nói về trẻ nhỏ.
+lễ tân|Người làm ở quầy tiếp đón, hướng dẫn khách tại khách sạn hay cơ quan.
+lễ tết|Các dịp lễ và Tết trong năm nói chung, lúc nghỉ ngơi, thăm hỏi.
+lệ phí|Khoản tiền nộp khi làm giấy tờ, thủ tục, thường ở cơ quan nhà nước.
+lệch|Không ngay, không thẳng hàng, nghiêng về một phía so với chuẩn.
+lên cân|Tăng thêm trọng lượng cơ thể, trở nên béo hơn trước.
+lên dây|Vặn cho dây đàn căng đúng âm, hoặc vặn cót cho đồng hồ chạy.
+lên đường|Bắt đầu rời đi cho một chuyến đi xa.
+lên giá|Có giá bán tăng cao hơn trước, nói về hàng hóa.
+lên lớp|Được học tiếp lớp trên sau năm học; cũng chỉ việc giáo viên giảng bài.
+lên mặt|Tỏ vẻ kiêu căng, coi mình hơn người khác.
+lên mây|Vui sướng, phấn chấn tột độ, có cảm giác như bay bổng.
+lên men|Biến đổi nhờ men hay vi khuẩn, như khi muối dưa, ủ sữa chua.
+lên tiếng|Nói ra ý kiến công khai, thường để bảo vệ hay phản đối điều gì.
+lênh đênh|Trôi nổi lâu ngày trên sông biển, không biết dừng ở đâu.
+lềnh bềnh|Nổi lơ lửng và trôi dập dềnh trên mặt nước, như bèo hay rác.
+lệnh|Lời yêu cầu bắt buộc của cấp trên mà người dưới phải làm theo.
+lì xì|Tiền mừng tuổi đựng trong bao đỏ, thường cho trẻ em dịp Tết.
+lia lịa|Liên tiếp rất nhanh, dồn dập không ngớt, như gật đầu hay khen.
+lịch|Tờ hoặc cuốn ghi các ngày tháng trong năm, treo tường hay để bàn.
+lịch lãm|Có phong thái chững chạc, trang nhã và từng trải trong ăn mặc, giao tiếp.
+lịch sự|Cư xử nhã nhặn, biết chào hỏi, nhường nhịn và giữ ý với mọi người.
+lịch trình|Bản sắp xếp các việc và điểm đến theo thời gian, thường cho chuyến đi.
+liếc|Đưa mắt nhìn nhanh sang bên mà không quay đầu.
+liếc mắt|Đưa mắt nhìn thoáng qua một cái, thường để nhìn trộm hay ra hiệu.
+liềm|Dụng cụ lưỡi thép cong hình bán nguyệt có răng, dùng để cắt lúa, cỏ.
+liên đoàn|Tổ chức gồm nhiều hội, nhóm cùng ngành hợp lại, như trong thể thao.
+liên hệ|Tìm cách gặp hoặc trao đổi với ai đó để bàn một việc.
+liên hoan|Bữa ăn uống, vui chơi chung để mừng một dịp nào đó.
+liên kết|Gắn bó, hợp lại với nhau thành một khối để cùng hoạt động.
+liên lạc|Giữ mối trao đổi tin tức với nhau qua thư, điện thoại hay gặp mặt.
+liên miên|Nối đuôi nhau không ngớt, như những cơn mưa dầm dề cả tuần liền.
+liên quan|Có dây mơ rễ má, dính dáng tới nhau ở một mặt nào đó.
+liên tiếp|Xảy ra nối nhau lần lượt, cái này vừa xong cái kia đã đến.
+liên tục|Kéo dài không ngắt quãng, không bị dừng lại giữa chừng.
+liên tưởng|Từ việc này mà nghĩ sang việc khác có liên quan.
+liền kề|Nằm sát cạnh nhau, không có gì ngăn cách ở giữa.
+liệng|Bay lượn chao nghiêng nhẹ trên không; ở miền Nam còn có nghĩa ném đi.
+liệt kê|Kể lần lượt từng thứ, từng điều, như ghi danh sách đồ cần mua.
+liều lĩnh|Dám làm việc nguy hiểm mà không tính đến hậu quả.
+liễu|Cây thân mềm, cành rủ xuống, lá dài hẹp, thường trồng ven hồ.
+lim dim|Mắt khép hờ, chưa nhắm hẳn, như lúc buồn ngủ.
+linh cảm|Tiếng mách bảo mơ hồ trong lòng về chuyện sắp tới, chẳng cần bằng chứng.
+linh cẩu|Thú ăn thịt lông đốm ở châu Phi, tiếng kêu như cười, hay ăn xác.
+linh chi|Loại nấm gỗ cứng, mũ bóng màu nâu đỏ, dùng làm thuốc bổ.
+linh dương|Thú ăn cỏ có sừng, chân dài, chạy rất nhanh, sống ở đồng cỏ.
+linh đình|Được bày biện to tát, rình rang, nhiều cỗ bàn, nói về tiệc tùng.
+linh động|Biết thay đổi cách làm cho hợp hoàn cảnh, không cứng nhắc.
+linh hoạt|Nhanh nhạy và dễ thích ứng, cử động hay xử lý việc không gò bó.
+linh kiện|Bộ phận nhỏ để lắp vào máy móc, nhất là đồ điện tử.
+linh tinh|Lặt vặt, không quan trọng; cũng chỉ nói, làm không đâu vào đâu.
+lỉnh kỉnh|Nhiều đồ đạc lớn nhỏ cồng kềnh, mang theo vướng víu.
+lĩnh vực|Phạm vi của một ngành, một mảng hoạt động hay hiểu biết.
+líu lo|Tiếng trong trẻo, vang lên liên tục và vui tai, như chim hót buổi sáng.
+lo âu|Trạng thái bồn chồn, thấp thỏm kéo dài vì sợ điều không hay.
+lo lắng|Không yên lòng vì bận tâm về một việc hay một người.
+lo liệu|Tính toán, sắp đặt và tự làm để công việc được xong.
+lo ngại|Băn khoăn, e rằng sẽ có chuyện không hay xảy ra.
+lo nghĩ|Suy nghĩ nhiều, trăn trở không yên về công việc hay cuộc sống.
+lo sợ|Vừa lo vừa sợ trước một điều nguy hiểm hay xấu sắp đến.
+lo xa|Tính trước và chuẩn bị cho những việc còn lâu mới tới.
+lò cò|Co một chân, nhảy tới bằng chân kia, kiểu trẻ con chơi nhảy ô.
+lò nướng|Thiết bị có buồng kín tỏa nhiệt, dùng để nướng bánh hay thịt.
+lò rèn|Nơi có bếp lửa than lớn để nung và đập sắt thành dụng cụ.
+lò sưởi|Chỗ đốt lửa hay máy tỏa hơi ấm cho căn phòng ngày giá rét.
+lò vi sóng|Thiết bị nhà bếp dùng sóng điện từ để hâm nóng, nấu chín nhanh.
+lò xo|Vật bằng dây kim loại cuộn xoắn, có tính đàn hồi, co giãn được.
+loài người|Toàn bộ con người trên trái đất, phân biệt với các loài vật khác.
+loại|Nhóm gồm những thứ có chung đặc điểm, được xếp cùng một hạng.
+loại bỏ|Vứt đi, gạt sang bên những thứ thừa, hỏng hay không đạt yêu cầu.
+loại hình|Dạng, kiểu riêng trong một lĩnh vực, như nghệ thuật hay dịch vụ.
+loại trừ|Không tính tới một khả năng hay đối tượng khi xét một vấn đề.
+loạn xạ|Lung tung, hỗn loạn theo mọi hướng, không theo trật tự nào.
+loãng|Có nhiều nước, ít chất cái, không đặc, như cháo hay nước pha.
+loạng choạng|Bước đi không vững, chao đảo như sắp ngã.
+loanh quanh|Đi quanh quẩn một chỗ; cũng chỉ việc nói vòng vo, không vào vấn đề.
+loạt|Nhiều cái cùng loại đi liền nhau trong cùng một đợt.
+loay hoay|Xoay xở mãi với một việc mà chưa xong, chưa tìm ra cách.
+lon ton|Dáng chạy bước ngắn và nhanh nhảu, thường nói về trẻ nhỏ.
+lòng bàn chân|Mặt dưới của bàn chân, phần chạm đất khi đứng.
+lòng bàn tay|Mặt trong của bàn tay, phía các ngón co lại.
+lòng chảo|Vùng đất trũng thấp, xung quanh có núi đồi bao bọc.
+lòng đào|Độ chín vừa của trứng, khi lòng đỏ còn mềm sệt chưa đông.
+lòng đất|Phần sâu nằm dưới bề mặt trái đất, nơi có khoáng sản.
+lòng đỏ|Khối tròn màu vàng cam nằm giữa quả trứng, béo và bùi khi luộc chín.
+lòng đường|Phần mặt đường ở giữa, dành cho xe chạy, khác với vỉa hè.
+lòng sông|Phần đáy và khoảng chứa nước nằm giữa hai bờ sông.
+lòng thành|Tấm lòng chân thật, thành tâm, nhất là khi cúng lễ hay biếu tặng.
+lòng thòng|Buông dài thõng xuống một cách lôi thôi, như dây hay vạt áo.
+lòng tin|Niềm tin tưởng đặt vào một người hay một điều gì đó.
+lòng trắng|Chất nhớt trong veo của quả trứng, gặp nóng thì đặc lại, hóa trắng.
+lòng vòng|Đi hay nói vòng vèo, không theo đường thẳng, mất thời gian.
+lỏng lẻo|Không chặt, dễ tuột hay dễ rời, cả về vật lẫn sự quản lý.
+lóng ngóng|Vụng về, lúng túng tay chân khi làm việc chưa quen.
+lọt lòng|Vừa được sinh ra, vừa ra khỏi bụng mẹ.
+lỗ chân lông|Lỗ li ti trên da, chỗ sợi lông nhỏ mọc ra và dầu tiết lên.
+lỗ chỗ|Thủng hoặc lõm nhiều chỗ nhỏ không đều trên bề mặt, như mặt đường xấu.
+lỗ hổng|Chỗ thủng trống trên một vật; cũng chỉ chỗ thiếu sót trong hiểu biết.
+lỗ mũi|Hai lỗ ở đầu mũi để hít thở không khí.
+lỗ rốn|Chỗ lõm nhỏ giữa bụng, vết tích còn lại sau khi cắt dây rốn.
+lỗ tai|Lỗ dẫn âm thanh vào bên trong tai.
+lỗ thông hơi|Lỗ chừa ra để không khí lưu thông, thoát hơi nóng hay hơi ẩm.
+lỗ thủng|Chỗ bị đâm xuyên, rách thủng trên bề mặt một vật.
+lỗ vốn|Làm ăn thu về không đủ bù số tiền đã bỏ ra lúc đầu.
+lộ diện|Xuất hiện công khai, để lộ mặt ra sau thời gian ẩn giấu.
+lộ trình|Tuyến đường đi đã định trước từ điểm xuất phát tới nơi đến.
+lôi cuốn|Có sức hút làm người khác chú ý và ham thích theo.
+lôi kéo|Dùng lời lẽ hay lợi ích để kéo người khác theo mình.
+lồi lõm|Không bằng phẳng, chỗ nhô lên chỗ trũng xuống.
+lỗi lầm|Việc làm sai trái, điều sai mà mình đã gây ra.
+lỗi thời|Cũ kỹ, không còn hợp với cách sống và nhu cầu của thời nay.
+lối đi|Đường nhỏ hay khoảng trống để người đi qua lại.
+lối ra|Chỗ dẫn ra ngoài của một tòa nhà hay khu vực.
+lối sống|Thói quen ăn, ngủ, làm việc và đối xử làm nên nếp sống mỗi người.
+lối thoát|Lối ra khi gặp nạn; cũng chỉ cách gỡ khỏi cảnh bế tắc.
+lối vào|Chỗ dẫn vào bên trong của một tòa nhà hay khu vực.
+lốm đốm|Có nhiều đốm nhỏ khác màu rải rác trên bề mặt.
+lộn ngược|Quay đầu xuống dưới, chân lên trên, phía trên thành phía dưới.
+lộn nhào|Lộn người một vòng, đầu chúi xuống rồi cả thân lật qua.
+lộn xộn|Bừa bộn, không có thứ tự, không ngăn nắp.
+lông|Những sợi mảnh mọc ra từ da người, thú, hay phủ khắp mình chim.
+lông lá|Có nhiều lông mọc rậm trên da, trông xồm xoàm.
+lông mày|Vệt lông cong phía trên mắt, nhướng lên hay chau lại theo cảm xúc.
+lông mi|Hàng lông ngắn mọc ở mép mí mắt.
+lông nách|Lông mọc ở vùng nách, thường xuất hiện từ tuổi dậy thì.
+lông tơ|Lông rất mảnh, mềm và ngắn, như trên da trẻ nhỏ hay vỏ quả đào.
+lông vũ|Lông của chim, có cuống ở giữa và các sợi mảnh hai bên.
+lồng đèn|Đèn thường làm bằng khung tre bọc giấy, trẻ em rước đêm Trung thu.
+lồng ngực|Khoang ngực được các xương sườn bao quanh, chứa tim và phổi.
+lồng tiếng|Ghép giọng đọc thu sẵn vào phim, như khi phim nước ngoài nói tiếng Việt.
+lộng lẫy|Đẹp rực rỡ, sang trọng, thu hút ánh nhìn.
+lột xác|Thay lớp vỏ cũ như ve, rắn; cũng chỉ việc đổi khác hẳn diện mạo.
+lơ đễnh|Không chú ý, tâm trí để đâu đâu.
+lơ là|Thiếu quan tâm, không chú ý đúng mức tới việc cần làm.
+lơ lửng|Ở giữa khoảng không, không chạm đất, không bám vào đâu, như mây.
+lờ đờ|Chậm chạp, thiếu tỉnh táo, mắt mở mà không có thần.
+lỡ hẹn|Không đến kịp buổi hẹn vì trở ngại ngoài ý muốn.
+lỡ lời|Sơ ý nói ra một câu không đúng mực, khiến người nghe phật ý.
+lỡ miệng|Buột ra một câu không nên nói, nói xong mới thấy hối.
+lời chào|Câu nói hay cử chỉ chào hỏi khi gặp mặt hay chia tay.
+lời chúc|Câu nói mong điều tốt lành đến với người khác.
+lời hứa|Câu nói cam kết với người khác rằng sẽ làm một việc.
+lời khen|Câu nói tỏ ý đánh giá tốt về người hay việc.
+lời khuyên|Câu nói chỉ cho người khác nên làm gì hay tránh điều gì.
+lời lẽ|Cách dùng từ ngữ, cách diễn đạt khi nói hay viết.
+lời nói|Điều được nói ra thành tiếng để bày tỏ ý nghĩ.
+lời văn|Cách dùng chữ, đặt câu trong một bài viết.
+lợi hại|Giỏi giang đáng gờm, có sức mạnh khiến người khác phải dè chừng.
+lợi ích|Điều có ích, cái được lợi đem lại cho ai đó.
+lợi lộc|Phần lợi được hưởng, thường là tiền của, vật chất.
+lợi nhuận|Phần tiền lãi còn lại sau khi trừ hết chi phí làm ăn.
+lợi thế|Điều kiện hơn người, giúp dễ thắng hay dễ thành công hơn.
+lởm chởm|Nhiều mũi nhọn nhô lên không đều, như đá núi hay râu mới mọc.
+lớn lao|To lớn, có tầm vóc và ý nghĩa sâu xa.
+lớn lên|Trưởng thành dần, cao lớn hơn theo thời gian.
+lớn mạnh|Ngày càng phát triển về quy mô, sức mạnh, như một tổ chức, phong trào.
+lớn tiếng|Nói to, gay gắt, thường khi cãi cọ hay quát nạt.
+lớn tuổi|Đã nhiều tuổi, không còn trẻ, cách nói tế nhị về người già.
+lợn rừng|Lợn sống hoang trong rừng, lông cứng sẫm màu, mõm dài, con đực có nanh.
+lớp học|Phòng có bảng và bàn ghế, nơi một nhóm người cùng nghe giảng bài.
+lu mờ|Bị mờ nhạt đi, kém nổi bật so với cái khác.
+lũ lượt|Đông đảo, nối nhau đi thành từng đoàn.
+lúa mạch|Cây lương thực hạt có râu, trồng ở xứ lạnh, dùng làm bột, nấu bia.
+lúa nếp|Giống lúa cho gạo trắng đục, nấu dẻo dính, dùng đồ xôi hay gói bánh.
+luật chơi|Các quy định phải theo trong một trò chơi hay cuộc thi.
+lúc nhúc|Rất nhiều con nhỏ chen chúc, bò lổn ngổn, như kiến hay cá con.
+lục lạc|Quả chuông nhỏ hình cầu có hạt bên trong, rung lên kêu vui tai.
+lục lọi|Bới tìm kỹ khắp nơi, thường làm xáo trộn đồ đạc.
+lui lại|Đi ngược ra phía sau, rút về sau.
+lui tới|Thường xuyên qua lại một nơi hay nhà ai.
+lùi bước|Chịu nhượng bộ hoặc bỏ dở trước khó khăn, không tiến tới nữa.
+lủi thủi|Một mình lặng lẽ, buồn bã, không ai bầu bạn.
+lúm đồng tiền|Vết lõm nhỏ hiện trên má khi cười.
+lung lay|Không còn chắc chắn, rung rinh như răng sắp rụng hay lòng tin dao động.
+lung linh|Sáng lay động chập chờn, gợi vẻ huyền ảo, như ánh nến hay đèn hoa.
+lung tung|Bừa bãi, mỗi thứ vứt một nơi, chẳng theo thứ tự nào.
+lủng lẳng|Treo đung đưa trên cao, không chạm đất.
+luộm thuộm|Ăn mặc hay làm việc cẩu thả, thiếu gọn gàng.
+luôn luôn|Lúc nào cũng vậy, không có lúc nào khác.
+luống cuống|Rối trí, mất bình tĩnh nên làm việc vụng về.
+lụp xụp|Thấp bé, tạm bợ và cũ nát, nói về nhà cửa.
+luyến tiếc|Nhớ nhung, tiếc nuối điều đã qua hay sắp phải rời xa.
+luyện tập|Rèn tập thường xuyên để nâng cao sức khỏe hay tay nghề.
+lửa trại|Đống củi đốt giữa sân trại ban đêm để mọi người quây quần ca hát.
+lứa tuổi|Nhóm người có tuổi tác gần nhau.
+lựa chọn|Cân nhắc rồi lấy ra cái hợp ý nhất trong nhiều cái.
+lưng|Mặt sau thân người từ vai xuống hông, ở con vật là phần trên thân.
+lưng chừng|Ở khoảng giữa, nửa vời, chưa tới đâu.
+lừng danh|Có tiếng tăm vang dội khắp nơi.
+lững thững|Đi chậm rãi, thong thả từng bước.
+lược|Đồ dùng có hàng răng thưa đều, dùng để chải tóc.
+lưỡi câu|Móc kim loại nhỏ có ngạnh, buộc ở đầu dây để móc mồi câu cá.
+lưỡi dao cạo|Mảnh thép mỏng rất sắc, lắp vào dao cạo để cạo râu.
+lưỡi liềm|Phần lưỡi thép cong có răng của cái liềm; cũng chỉ hình trăng khuyết mảnh.
+lưới|Tấm đan từ dây hay sợi, nhiều ô hở, dùng đánh cá hoặc quây chắn.
+lưới điện|Hệ thống dây, cột và trạm nối với nhau để đưa điện tới nơi dùng.
+lưới sắt|Tấm đan bằng dây sắt thành mắt, dùng làm rào hay che chắn.
+lượm|Cúi nhặt vật rơi hay vật bị bỏ dưới đất lên.
+lươn|Cá thân dài trơn như rắn, không vảy, sống trong bùn ruộng.
+lượn lờ|Đi qua đi lại chậm rãi quanh một chỗ, như dạo chơi hay rình xem.
+lượn sóng|Có dạng uốn cong nhấp nhô liên tiếp như mặt nước gợn sóng.
+lương|Khoản tiền người làm công nhận đều đặn, thường theo tháng.
+lương bổng|Chỉ chung tiền lương và các khoản được trả thêm khi đi làm.
+lương hưu|Khoản tiền trả hằng tháng cho người đã nghỉ hưu.
+lương khô|Bánh khô ép chặt, để được lâu, dùng khi đi xa hay cứu trợ.
+lương tâm|Ý thức đúng sai bên trong, khiến người ta day dứt khi làm điều xấu.
+lương thiện|Hiền lành, tử tế, không làm điều gian dối.
+lương thực|Gạo, ngô, khoai và các thứ ăn chính giúp nuôi sống con người.
+lưỡng lự|Chần chừ mãi chưa quyết, vì còn phân vân giữa các lựa chọn.
+lượng mưa|Mưa nhiều hay ít ở một vùng, đo bằng độ cao lớp nước rơi xuống.
+lướt|Di chuyển nhanh và nhẹ sát trên bề mặt, không dừng lại.
+lướt sóng|Đứng thăng bằng trên tấm ván dài, cưỡi theo ngọn sóng biển đang dâng.
+lướt ván|Môn đứng trên tấm ván trượt nhanh trên mặt nước, có khi nhờ gió.
+lưu bút|Sổ ghi lời lưu niệm học trò viết cho nhau trước khi chia tay.
+lưu động|Không đóng cố định mà di chuyển đến nhiều nơi, như xe bán hàng dạo.
+lưu giữ|Giữ lại cẩn thận để còn mãi về sau.
+lưu huỳnh|Nguyên tố màu vàng, cháy cho mùi hắc, có trong diêm và thuốc súng.
+lưu loát|Nói hay viết trôi chảy, không vấp váp hay ngập ngừng.
+lưu luyến|Không nỡ rời xa người hay nơi chốn mình đã gắn bó.
+lưu niệm|Giữ lại để làm kỷ niệm về một người hay một dịp.
+lưu thông|Chảy hay đi lại suôn sẻ, như xe trên phố hay máu trong mạch.
+lưu trữ|Cất giữ giấy tờ, tài liệu hay dữ liệu để sau này còn tra lại.
+lưu ý|Để tâm, chú ý đặc biệt tới điều gì.
+ma mút|Con voi lông rậm thời băng giá, ngà cong dài, nay chỉ còn hóa thạch.
+mã số|Dãy số hay kí hiệu riêng dùng để phân biệt từng người, từng vật.
+mã vạch|Hàng vạch đen dày mỏng in trên bao bì, máy quét đọc để tính tiền.
+má hồng|Gò má ửng hồng tươi; cũng chỉ phấn màu đánh lên má khi trang điểm.
+má phanh|Bộ phận ép vào bánh xe hay đĩa để hãm xe lại.
+mạch|Nhịp máu đập sờ thấy ở cổ tay; cũng chỉ đường dẫn điện hay nước.
+mạch điện|Đường nối các dây dẫn, linh kiện để dòng điện chạy qua.
+mạch lạc|Rõ ràng, có thứ tự hợp lý, nói về cách nói hay viết.
+mạch nước|Dòng nước ngầm chảy trong lòng đất, đào giếng trúng thì có nước dùng.
+mai sau|Những năm tháng còn ở phía trước, về lâu về dài.
+mai vàng|Cây hoa cánh vàng, thường nở dịp Tết, được chưng nhiều ở miền Nam.
+mài mòn|Làm hao mỏng dần qua cọ xát lâu ngày, như đá bị nước bào nhẵn.
+mải miết|Chăm chú làm liên tục, không để ý gì khác.
+mãi mãi|Kéo dài không bao giờ hết.
+mái ấm|Gia đình, nơi ở có tình thương yêu, sum họp.
+mái bằng|Kiểu mái nhà phẳng, thường đổ bê tông, có thể đi lại trên đó.
+mái che|Tấm che phía trên, thường bằng tôn hay vải bạt, để tránh nắng mưa.
+mái chèo|Dụng cụ cán dài, đầu bản dẹt, dùng để khua nước đẩy thuyền đi.
+mái hiên|Phần mái nhô ra trước cửa, chỗ đứng trú mưa hay hóng mát.
+mái ngói|Mái lợp những viên đất nung xếp gối mép lên nhau, thường màu đỏ nâu.
+mái nhà|Lớp che phủ trên đỉnh ngôi nhà, đỡ nắng mưa cho người ở trong.
+mái tóc|Cả phần tóc trên đầu, thường nói khi tả dáng dài ngắn hay màu sắc.
+mái tôn|Mái lợp bằng tấm tôn kim loại mỏng, thường gợn sóng.
+mái vòm|Mái cong hình vòm cung, như nửa quả cầu.
+màn ảnh|Tấm màn trắng để chiếu phim; cũng chỉ thế giới phim ảnh nói chung.
+màn cửa|Tấm vải treo che cửa sổ hay cửa ra vào.
+màn đêm|Bóng tối bao trùm lúc ban đêm.
+màn hình|Bộ phận phẳng hiện hình ảnh và chữ trên tivi, điện thoại, máy tính.
+mãn nguyện|Thỏa lòng vì điều mong muốn đã đạt được.
+mạn phép|Xin phép trước một cách khiêm tốn khi làm điều có thể làm phiền.
+mang lại|Đem đến một kết quả hay điều gì cho ai.
+mang ơn|Chịu ơn người khác và ghi nhớ trong lòng.
+mãng cầu|Quả vỏ xanh nhiều mắt, cùi trắng lẫn hạt đen, miền Bắc gọi là na.
+mãng cầu xiêm|Quả to vỏ xanh có gai mềm, cơm trắng chua ngọt, hay xay sinh tố.
+máng xối|Ống hay rãnh hứng nước mưa từ mái nhà rồi dẫn xuống.
+mạng lưới|Các điểm, tuyến nối nhau phủ khắp một vùng, như đường sá hay chi nhánh.
+mạng nhện|Lưới tơ nhện giăng ở góc nhà, bụi cây, sâu bọ bay vào là dính.
+manh mối|Dấu vết nhỏ giúp lần ra sự thật hay đáp án của một vụ việc.
+mảnh dẻ|Có thân hình nhỏ, thon gọn và nhẹ nhõm.
+mảnh đất|Một khoảnh đất có ranh giới; cũng chỉ một vùng quê, xứ sở.
+mảnh ghép|Miếng nhỏ có hình riêng, ráp với các miếng khác thành bức tranh hoàn chỉnh.
+mảnh khảnh|Gầy và cao, trông có vẻ yếu ớt.
+mảnh mai|Thon thả và mềm mại, trông thanh thoát dễ thương.
+mảnh vỡ|Miếng nhỏ văng ra khi chén bát hay tấm kính rơi vỡ.
+mảnh vụn|Mẩu rất nhỏ rơi ra khi cắt, xé hay đập vật gì.
+mãnh liệt|Rất mạnh mẽ, dữ dội, thường nói về cảm xúc.
+mãnh thú|Thú dữ to lớn, ăn thịt, như hổ hay báo.
+mạnh|Có sức lực lớn, khỏe.
+mạnh bạo|Dám làm, dám nói, không rụt rè.
+mạnh mẽ|Có sức mạnh, ý chí vững vàng, thể hiện rõ.
+mạnh tay|Làm việc dứt khoát, quyết liệt, không nương tay.
+mạo hiểm|Dám lao vào việc nhiều rủi ro dù biết có thể gặp nguy.
+mát dịu|Mát và êm nhẹ, dễ chịu.
+mát lành|Mát dịu dễ chịu và tốt cho người, như gió sớm hay nước giếng.
+mát mẻ|Mát, dễ chịu, nói về thời tiết hay không khí.
+mát rượi|Mát lạnh thấm vào người rất dễ chịu.
+mát tay|Có tay khéo, làm gì cũng hay thành công, như chữa bệnh hay nuôi trồng.
+mạt cưa|Vụn gỗ nhỏ rơi ra khi cưa, thường dùng lót chuồng hay làm củi ép.
+mau chóng|Xảy ra nhanh, chẳng tốn bao nhiêu thời gian.
+mau lẹ|Nhanh nhẹn, lẹ làng trong động tác.
+màu nước|Loại màu vẽ pha với nước, tạo nét trong và loang nhẹ trên giấy.
+màu sắc|Các màu nói chung của sự vật mà mắt nhìn thấy.
+may mặc|Ngành may quần áo và việc ăn mặc nói chung.
+may mắn|Gặp điều tốt lành do tình cờ.
+may rủi|Chuyện tốt xấu do tình cờ, không lường trước.
+may sẵn|Quần áo đã được may hàng loạt, mua về mặc ngay.
+may vá|Công việc khâu vá, may quần áo.
+máy ảnh|Thiết bị cầm tay có ống kính, bấm nút để chụp lại hình ảnh.
+máy bán hàng|Tủ máy đặt nơi công cộng, tự đưa đồ ra khi khách trả tiền.
+máy bay|Phương tiện có cánh và động cơ, chở người và hàng hóa bay trên không.
+máy bộ đàm|Thiết bị cầm tay dùng sóng vô tuyến để nói chuyện ở khoảng cách gần.
+máy bơm|Máy dùng để hút và đẩy nước hay chất lỏng đi theo đường ống.
+máy cày|Cỗ máy có bánh lớn kéo lưỡi cày, dùng làm đất trên ruộng.
+máy cắt|Máy có lưỡi sắc hoặc đĩa quay, dùng để cắt gỗ, sắt, cỏ.
+máy chạy bộ|Máy tập có băng chuyền quay để người tập đi hoặc chạy tại chỗ.
+máy chiếu|Thiết bị rọi hình ảnh từ máy tính lên tường hay tấm màn lớn.
+máy chiếu phim|Thiết bị phóng hình ảnh động lên màn ảnh lớn, như trong rạp chiếu bóng.
+máy chủ|Máy tính chạy liên tục, lưu dữ liệu và phục vụ máy khác qua mạng.
+máy dệt|Máy đan các sợi ngang và sợi dọc vào nhau để làm thành vải.
+máy dò|Thiết bị dùng để phát hiện vật bị giấu hay nằm khuất, như kim loại.
+máy đào|Máy công trình có cánh tay và gầu, dùng để đào hố, khơi mương.
+máy gặt|Máy dùng để cắt lúa chín ngoài đồng thay cho liềm.
+máy ghi âm|Thiết bị dùng để thu lại giọng nói, âm thanh và phát lại khi cần.
+máy ghi hình|Thiết bị dùng để thu và lưu lại hình ảnh động kèm âm thanh.
+máy giặt|Máy điện có lồng quay, dùng để giặt sạch quần áo.
+máy hàn|Máy dùng nhiệt, thường từ hồ quang điện, để nối các miếng kim loại.
+máy hơi nước|Động cơ chạy nhờ sức đẩy của hơi nước, từng dùng cho tàu hỏa.
+máy hút bụi|Đồ điện có ống hút, gom bụi và rác vụn trên sàn vào túi chứa.
+máy in|Thiết bị nối với máy tính, dùng để in chữ và hình lên giấy.
+máy kéo|Xe có động cơ mạnh, bánh lớn, dùng để kéo toa hàng hoặc nông cụ.
+máy khâu|Máy có kim lên xuống để khâu vải, cách gọi ở miền Bắc.
+máy khoan|Dụng cụ có mũi xoay nhanh, dùng để khoan lỗ trên tường, gỗ, sắt.
+máy lạnh|Máy thổi hơi mát làm dịu phòng ngày nóng, miền Bắc hay gọi điều hòa.
+máy may|Máy có kim lên xuống liên tục để khâu vải thành quần áo.
+máy móc|Các thứ máy nói chung; cũng chỉ lối làm rập khuôn, thiếu linh hoạt.
+máy nhắn tin|Thiết bị nhỏ bỏ túi, chỉ dùng để nhận những tin nhắn ngắn.
+máy nổ|Động cơ chạy bằng xăng hoặc dầu, thường dùng để phát điện hay bơm nước.
+máy phát điện|Máy biến sức quay thành dòng điện, thường dùng khi mất điện lưới.
+máy quay|Thiết bị thu hình ảnh chuyển động kèm tiếng, dùng để quay phim.
+máy quét|Thiết bị chụp tài liệu, ảnh giấy để chuyển thành tệp trong máy tính.
+máy rửa chén|Máy tự phun nước và chất tẩy để rửa sạch chén bát, đũa thìa.
+máy sấy|Máy dùng hơi nóng để làm khô quần áo, nông sản hay đồ vật.
+máy sấy tóc|Dụng cụ cầm tay thổi ra gió nóng để làm khô tóc.
+máy sưởi|Thiết bị tỏa hơi ấm để làm ấm phòng vào mùa lạnh.
+máy tính|Thiết bị điện tử chạy chương trình để làm việc, học, giải trí.
+máy tính bảng|Thiết bị điện tử dạng tấm phẳng, màn hình cảm ứng, lớn hơn điện thoại.
+máy trợ thính|Dụng cụ nhỏ đeo ở tai, làm to âm thanh cho người nghe kém.
+máy ủi|Máy công trình có lưỡi thép rộng phía trước, dùng để đẩy, san đất.
+máy vi tính|Máy tính cá nhân, thường gồm màn hình, bàn phím và chuột.
+máy xay|Máy có lưỡi dao quay nhanh, dùng để xay nhỏ thực phẩm hoặc hạt.
+máy xúc|Máy có gầu lớn để xúc đất đá, cát sỏi rồi đổ lên xe.
+mắc áo|Cái móc hay thanh treo để phơi hoặc treo quần áo.
+mắc bẫy|Bị sa vào bẫy hoặc vào mưu kế người khác giăng sẵn.
+mắc cạn|Kẹt lại chỗ nước nông, đáy chạm đất nên tàu thuyền không nhúc nhích được.
+mắc cỡ|Thấy ngượng ngùng, xấu hổ, cách nói thường dùng ở miền Nam.
+mắc kẹt|Bị giữ lại ở một chỗ hay một tình thế, không thoát ra được.
+mắc lỗi|Phạm phải điều sai sót khi làm, nói hay viết.
+mắc lừa|Bị người khác lừa gạt vì tưởng điều giả là thật.
+mắc nợ|Đang nợ tiền hay nợ ơn của người khác mà chưa trả.
+mắc phải|Vướng vào điều không mong muốn, như lỗi sai, bệnh tật hay khó khăn.
+mặc dù|Từ dùng để nối, nêu điều trái ngược mà việc chính vẫn xảy ra.
+mặc định|Cài đặt có sẵn từ đầu, áp dụng khi người dùng chưa chọn khác.
+mặc kệ|Bỏ đó không để tâm, không can thiệp, cho muốn ra sao thì ra.
+mắm muối|Gia vị mặn như mắm và muối nói chung, dùng nêm nếm món ăn.
+mắm ruốc|Mắm đặc làm từ con ruốc, loài tép biển rất nhỏ, ủ với muối.
+mắm tôm|Mắm sệt màu tím xám làm từ tôm nhỏ ủ muối, mùi nồng.
+mằn mặn|Có vị hơi mặn một chút, thường nói về món ăn.
+mặn mà|Đằm thắm, nồng hậu, nói về tình cảm, lời ăn tiếng nói hay vẻ duyên.
+mặn mòi|Có vị mặn đậm như hơi biển; cũng chỉ vẻ duyên dáng, đậm đà.
+măng|Mầm tre non mới nhú khỏi đất, ăn được, thường luộc, xào hay muối chua.
+măng cụt|Quả tròn vỏ dày màu tím sẫm, bên trong có múi trắng ngọt thanh.
+măng khô|Măng tre đã luộc rồi phơi hoặc sấy khô, thường dùng nấu canh hay hầm.
+măng tây|Cây rau có chồi non thẳng như đũa, màu xanh, thường xào hoặc luộc.
+mắt cá|Cục xương lồi tròn hai bên cổ chân, ngay trên bàn chân.
+mắt kính|Kính đeo để nhìn rõ hay che nắng, cách gọi thường dùng ở miền Nam.
+mặt bằng|Đất hay sàn nhà dùng để xây dựng, buôn bán; cũng chỉ mức chung.
+mặt chữ|Hình dạng của các chữ cái khi viết hay in ra.
+mặt đất|Lớp đất bề ngoài nơi người đứng, cây mọc và nhà cửa dựng lên.
+mặt đường|Bề mặt con đường, chỗ bánh xe lăn và người bước qua.
+mặt hàng|Từng thứ hàng hóa được buôn bán, như gạo, vải hay đồ điện tử.
+mặt mày|Khuôn mặt cùng nét biểu cảm, thường nói khi tả vẻ vui buồn.
+mặt mũi|Gương mặt nói chung; còn có nghĩa thể diện trước người khác.
+mặt nạ|Vật che kín khuôn mặt, đeo để hóa trang, bảo vệ hay giấu danh tính.
+mặt nước|Bề trên của sông hồ hay biển, chỗ gợn sóng và in bóng cây.
+mặt phẳng|Mặt trơn không lồi lõm, đặt thước thẳng lên chỗ nào cũng khít.
+mặt phố|Phần nhà đất giáp với đường phố, thuận tiện cho buôn bán.
+mặt tiền|Mặt phía trước của ngôi nhà, quay ra đường.
+mặt trái|Mặt sau, không phô ra ngoài của vải, đồ vật; cũng chỉ mặt tiêu cực.
+mặt trái xoan|Khuôn mặt hình bầu dục thon, trán rộng, cằm hơi nhọn.
+mặt trăng|Vật thể sáng trên trời đêm, quay quanh Trái Đất, có lúc tròn lúc khuyết.
+mặt trời|Ngôi sao mọc ở phương đông mỗi sáng, sưởi ấm và chiếu sáng Trái Đất.
+mâm xôi|Loại quả nhỏ màu đỏ, do nhiều quả con mọng nước kết thành, chua ngọt.
+mầm non|Mầm cây mới nhú; cũng chỉ bậc học dành cho trẻ nhỏ trước tiểu học.
+mấp máy|Khẽ động đậy môi như muốn nói mà không thành tiếng.
+mấp mô|Lồi lõm không đều, thường nói về mặt đường hay mặt đất.
+mập mạp|Béo tốt, chắc khỏe, thân hình đầy đặn.
+mất công|Phí sức lực và thời gian, thường cho việc không đáng hay không thành.
+mất giá|Bị sụt giá trị so với trước, như tiền mua được ít hàng hơn.
+mất hồn|Ngẩn ngơ như không còn tâm trí, thường vì sợ hãi hay say mê.
+mất hút|Đi khuất hẳn, không còn thấy bóng dáng đâu.
+mất lòng|Khiến người khác phật ý, giận hoặc buồn.
+mất sức|Hao nhiều sức lực, người yếu hẳn đi sau khi làm nặng hay ốm.
+mất vui|Làm cho cuộc vui bị giảm hứng thú, không còn vui nữa.
+mật hoa|Chất nước ngọt tiết ra trong lòng hoa, thu hút ong bướm tới hút.
+mật khẩu|Chuỗi kí tự bí mật phải nhập để mở khóa tài khoản hay thiết bị.
+mật mã|Kí hiệu bí mật để viết tin, chỉ người biết quy ước mới đọc được.
+mật ong|Thứ nước vàng sánh ngọt lịm lấy từ tổ ong, hay pha chanh uống.
+mâu thuẫn|Tình trạng trái ngược, xung đột giữa hai bên, hai ý kiến hay hai điều.
+mẫu đơn|Loài hoa bông to, nhiều lớp cánh; cũng chỉ tờ đơn soạn sẵn để điền.
+mẫu giáo|Bậc học dành cho trẻ nhỏ trước khi vào lớp một.
+mẫu mã|Vẻ ngoài và kiểu dáng của hàng hóa, như bao bì, màu sắc.
+mẫu mực|Chuẩn mực đến mức người khác có thể noi theo, như một tấm gương.
+mẫu vật|Vật thật thu về để nghiên cứu hay trưng bày, như đá, xác côn trùng.
+mấu chốt|Chỗ quan trọng quyết định cả vấn đề, cần nắm để giải quyết.
+mây mù|Mây và sương dày đặc làm cảnh vật mờ mịt, khó nhìn.
+mây tre|Sợi mây và tre dùng để đan đồ thủ công như rổ, giỏ, bàn ghế.
+mây xanh|Khoảng trời cao vời vợi, nơi mây bay giữa nền trời xanh.
+mẹ chồng|Mẹ của người chồng, xét trong quan hệ với người vợ.
+mẹ kế|Vợ mới của bố, xét trong quan hệ với các con riêng của bố.
+mẹ nuôi|Người phụ nữ nhận nuôi một đứa trẻ không do mình sinh ra.
+mẹ vợ|Mẹ của người vợ, xét trong quan hệ với người chồng.
+meo meo|Tiếng kêu cao, kéo dài của con mèo.
+mèo hoang|Mèo không có chủ, sống lang thang ngoài đường, tự kiếm ăn.
+mèo mun|Mèo có bộ lông đen tuyền từ đầu tới chân.
+mèo rừng|Loài thú họ mèo sống hoang trong rừng, lông có vằn đốm, nhanh nhẹn.
+méo mó|Bị biến dạng, cong vẹo không còn tròn trịa hay ngay ngắn.
+mét vuông|Đơn vị tính diện tích nhà đất, bằng diện tích hình vuông cạnh một mét.
+mê cung|Lối đi ngoằn ngoèo chằng chịt, vào thì dễ, tìm đường ra thì khó.
+mê đắm|Say mê đến mức chìm đắm, quên cả mọi thứ xung quanh.
+mê hoặc|Làm người khác say mê, mất tỉnh táo bởi sức cuốn hút.
+mê mẩn|Say mê đến mức ngẩn ngơ, không rời mắt hay rời tâm trí được.
+mê mệt|Ham thích đến cuồng nhiệt, không dứt ra được.
+mê tít|Thích thú ra mặt, cách nói vui thân mật.
+mề gà|Phần dạ dày dày và dai của gà, thường được xào, nướng hay luộc.
+mềm dẻo|Uốn được mà không gãy, nói về vật hay cách ứng xử linh hoạt.
+mềm lòng|Dễ xiêu lòng, bớt cứng rắn vì thương cảm hay được năn nỉ.
+mềm mại|Mềm và êm khi chạm vào, hay uyển chuyển nhẹ nhàng trong dáng điệu.
+mềm mỏng|Ăn nói nhẹ nhàng khéo léo, chọn lời êm để người nghe dễ chịu.
+mềm nhũn|Mềm quá mức, bóp vào là lún, như quả chín nẫu hay người rã rời.
+mềm yếu|Yếu đuối, thiếu cứng rắn về tinh thần hay ý chí.
+mến yêu|Thương quý tha thiết, hay gặp trong thư từ, lời ca về người, quê hương.
+mênh mông|Rộng bao la, nhìn mãi không thấy bờ, như cánh đồng hay biển cả.
+mệt lử|Mệt rũ cả người, chân tay rời rã không nhấc nổi.
+mệt mỏi|Cảm thấy cơ thể hoặc tinh thần uể oải, thiếu sức.
+mệt nhoài|Mệt rã rời sau một quãng dài vất vả, chỉ muốn nằm vật xuống.
+mệt nhọc|Uể oải, nặng nề vì đã gắng sức làm lụng vất vả.
+mi mắt|Lớp da mỏng che con mắt, cử động khi nhắm hay mở mắt.
+mica|Tấm nhựa trong suốt, cứng và nhẹ, dùng làm biển hiệu, hộp hay bọc bìa.
+miền quê|Vùng nông thôn với làng xóm, ruộng đồng.
+miễn cưỡng|Làm điều gì mà lòng không muốn, chỉ vì bị ép hay bất đắc dĩ.
+miễn phí|Không phải trả tiền khi sử dụng hay nhận.
+miến|Sợi khô làm từ tinh bột củ dong hay đậu, khi nấu trong và dai.
+miếng ăn|Thức ăn để nuôi sống, thường gợi tới chuyện kiếm sống vất vả.
+miệng|Chỗ mở dưới mũi, có môi, răng, lưỡi, để ăn uống và nói năng.
+miết|Ấn và kéo mạnh tay trên bề mặt; cũng chỉ làm liên tục không ngừng.
+miệt mài|Chăm chú làm một việc liên tục, quên cả mệt.
+miêu tả|Dùng lời văn vẽ lại hình ảnh của người, cảnh, vật, thường trong văn chương.
+mỉm cười|Khẽ cong khóe môi cười, không thành tiếng, gương mặt dịu lại.
+mịn màng|Trơn nhẵn, sờ vào thấy êm tay, như làn da trẻ nhỏ.
+minh bạch|Rõ ràng, công khai, không mờ ám, thường nói về tiền bạc hay thông tin.
+minh mẫn|Đầu óc sáng suốt, nhớ tốt và suy nghĩ rõ ràng.
+mini|Có cỡ nhỏ gọn hơn bình thường, thường nói về đồ vật.
+mò mẫm|Dò tìm bằng tay trong bóng tối; cũng chỉ tự tìm tòi cách làm.
+mỏ lết|Dụng cụ bằng thép có miệng kẹp chỉnh được, dùng để vặn đai ốc.
+mỏ than|Nơi có than đá nằm dưới đất, được đào lên để khai thác.
+móc câu|Lưỡi kim loại nhỏ, cong, có ngạnh, buộc ở dây câu để bắt cá.
+mọc răng|Răng nhú dần lên khỏi lợi, như ở trẻ nhỏ vài tháng tuổi.
+mỏi mắt|Mắt mệt và căng sau khi nhìn lâu; cũng chỉ chờ đợi rất lâu.
+món ăn|Thứ được nấu nướng, bày ra đĩa bát trong bữa, như canh, cá kho.
+món hàng|Một vật cụ thể được mua bán, đổi chác hay đem tặng.
+mong chờ|Mong mỏi và chờ đợi điều gì đó sẽ đến.
+mong đợi|Chờ đợi và hy vọng điều mình muốn sẽ xảy ra.
+mong mỏi|Mong muốn một cách tha thiết và lâu dài.
+mong muốn|Muốn và hy vọng có được điều gì hoặc điều gì sẽ xảy ra.
+mong ngóng|Ngóng trông, nóng lòng chờ người hay tin tức sớm tới.
+mong ước|Điều ấp ủ trong lòng và mong có ngày thành hiện thực.
+mỏng tang|Rất mỏng và nhẹ, gần như nhìn xuyên qua được, như giấy, lụa.
+móng chân|Lớp sừng cứng mọc ở đầu các ngón chân.
+móng ngựa|Miếng sắt cong hình vòng cung đóng dưới chân ngựa để bảo vệ móng.
+móng tay|Mảnh sừng mỏng che đầu mỗi ngón tay, mọc dài dần nên phải cắt.
+móng vuốt|Móng nhọn và cong ở chân thú hay chim săn mồi, dùng để cào, quắp.
+mọng nước|Căng đầy nước bên trong, thường nói về quả chín hay lá cây.
+mọt sách|Cách gọi đùa người suốt ngày cắm cúi đọc sách, ít để tâm việc khác.
+mô hình|Vật làm theo hình dạng vật thật, thường thu nhỏ, để trưng bày.
+mô phỏng|Bắt chước lại hình dáng hay hoạt động của một vật, sự việc thật.
+mô tả|Nêu lại đặc điểm của sự vật bằng lời để người khác hình dung.
+mô tô|Xe hai bánh chạy bằng động cơ, thường to và mạnh hơn xe gắn máy.
+mồ hôi|Nước mặn rịn ra trên da khi trời nóng, vận động hay hồi hộp.
+mốc meo|Bị mốc nhiều, phủ đầy lớp mốc xanh trắng do để lâu nơi ẩm.
+mộc mạc|Giản dị, chân chất, không trau chuốt hay cầu kỳ.
+mộc nhĩ|Nấm mỏng nâu sẫm hình vành tai, thường thái sợi cho vào nem, món xào.
+môi trường|Mọi thứ xung quanh nơi người và sinh vật sống, như không khí, nước, đất.
+môn học|Một phần kiến thức riêng được dạy ở trường, như toán, văn, sử.
+mông lung|Mơ hồ, không rõ ràng, suy nghĩ lan man không định hướng.
+mộng mơ|Có tâm hồn hay mơ tưởng, lãng mạn, thường nói về tuổi trẻ.
+một chiều|Chỉ đi theo một hướng, không có chiều ngược lại, như đường hay dòng điện.
+một chút|Rất ít, chẳng đáng là bao, về lượng hay thời gian.
+một hơi|Liền một mạch không dừng, như uống hay chạy luôn tới cuối.
+một ít|Một phần nhỏ về số lượng, không nhiều lắm.
+một lát|Khoảng chờ ngắn ngủi, chừng ít phút, như khi dặn ai đợi chút.
+một lòng|Trung thành, chỉ hướng về một người hay một mục tiêu, không đổi ý.
+một số|Một phần trong cả nhóm, không nêu rõ bao nhiêu và không phải tất cả.
+một vài|Số ít, chừng hai ba, không nói rõ bao nhiêu.
+mơ hồ|Không rõ ràng, lờ mờ, khó nắm bắt.
+mơ mộng|Thả trí tưởng tượng theo những điều đẹp đẽ, xa rời thực tế.
+mơ tưởng|Nghĩ ngợi, mong mỏi tới điều khó có được.
+mơ ước|Ước mong tha thiết về một điều lớn lao, thường còn xa trong tương lai.
+mờ ám|Khuất tất, có vẻ giấu giếm điều không minh bạch, đáng ngờ.
+mờ ảo|Mờ nhạt và huyền ảo, như ẩn hiện trong sương hay ánh sáng yếu.
+mờ mịt|Mù mịt không thấy rõ phía trước, nói về cảnh vật hay tương lai.
+mờ nhạt|Nhạt nhòa, thiếu rõ nét, khiến người ta khó nhận ra hay khó nhớ.
+mờ sáng|Lúc trời vừa hửng sáng, ánh sáng còn yếu.
+mở cửa|Đẩy hay kéo cánh cửa ra; cũng chỉ việc cửa hàng bắt đầu đón khách.
+mở đầu|Phần đầu tiên của bài viết hay câu chuyện, dùng để dẫn vào nội dung.
+mở đường|Làm một con đường mới; cũng chỉ việc đi tiên phong để người sau theo.
+mở hàng|Mua hoặc bán món hàng đầu tiên trong ngày, nhiều người coi là lấy may.
+mở màn|Bắt đầu một buổi diễn, một sự kiện hay một giai đoạn.
+mở mang|Làm cho rộng lớn, phát triển thêm, thường nói về hiểu biết hay đất đai.
+mở máy|Bấm nút hay vặn khóa cho điện thoại, xe cộ bắt đầu hoạt động.
+mở mắt|Nâng mi lên để nhìn; cũng chỉ việc tỉnh ngộ, nhận ra sự thật.
+mở miệng|Hé môi bắt đầu nói ra điều gì đó.
+mở rộng|Làm cho rộng ra hoặc lớn thêm về phạm vi, quy mô.
+mở tiệc|Tổ chức bữa ăn lớn mời nhiều người tới chung vui.
+mở toang|Mở ra hết cỡ, để trống hoác, thường nói về cửa ra vào.
+mở tung|Bật mở mạnh và đột ngột, như cửa bị gió đẩy.
+mời chào|Chào hỏi, mời mọc để lôi kéo khách mua hàng.
+mời mọc|Mời người khác nhiều lần một cách ân cần, nài nỉ.
+mới cứng|Còn mới tinh, vừa mua hay vừa làm xong, chưa qua sử dụng.
+mới đầu|Lúc khởi đầu, trước khi sự việc thay đổi về sau.
+mới đây|Cách đây không lâu, vừa xảy ra chưa được bao lâu.
+mới lạ|Mới và lạ, chưa từng thấy nên gây tò mò.
+mới mẻ|Còn mới, chưa quen thuộc, mang cảm giác tươi mới.
+mới nguyên|Còn nguyên như lúc mới, chưa bị dùng hay sứt mẻ gì.
+mới tinh|Hoàn toàn mới, sạch sẽ, chưa có dấu vết sử dụng.
+mới toanh|Rất mới, vừa mua hay vừa làm ra, cách nói thân mật.
+mơn mởn|Non tươi, mỡ màng và đầy sức sống, như lá non hay da thịt trẻ.
+mu bàn tay|Mặt trên của bàn tay, phía ngược với lòng bàn tay.
+mù mịt|Đặc kín khói bụi hay bóng tối, không nhìn thấy gì.
+mù mờ|Lơ mơ, hiểu không đến nơi đến chốn hay nhìn không rõ.
+mù tịt|Hoàn toàn không biết gì về một chuyện.
+mũ bảo hiểm|Mũ cứng có lớp đệm, đội để bảo vệ đầu khi đi xe.
+mũ len|Mũ đan bằng sợi len, đội cho ấm đầu khi trời lạnh.
+mũ lưỡi trai|Mũ vải có vành cứng chìa ra phía trước để che nắng.
+mũ nồi|Mũ tròn dẹt, mềm, không vành, thường làm bằng nỉ.
+mua bán|Việc mua vào và bán ra hàng hóa để trao đổi, kiếm lời.
+mua lẻ|Mua từng ít một với số lượng nhỏ, không mua cả lô.
+mua sắm|Mua các thứ đồ dùng, thường đi dạo nhiều nơi để chọn.
+mua sỉ|Mua số lượng lớn với giá rẻ hơn, thường để bán lại.
+mua vui|Tìm thú tiêu khiển cho khuây khỏa, như nghe hát hay xem trò.
+mùa gặt|Thời gian lúa chín, nông dân ra đồng gặt hái.
+mùa hạ|Mùa nóng nằm giữa xuân và thu, cách gọi văn chương của mùa hè.
+mùa hè|Mùa nóng trong năm, sau mùa xuân, ngày dài và học sinh được nghỉ học.
+mùa khô|Thời kì trong năm ít mưa, trời hanh và đất dễ nứt nẻ.
+mùa lạnh|Khoảng thời gian trong năm trời rét, nhiệt độ xuống thấp.
+mùa màng|Cây lúa, hoa màu ngoài đồng và kết quả thu hoạch của chúng nói chung.
+mùa mưa|Thời kỳ trong năm mưa nhiều, thường kéo dài vài tháng.
+mùa thi|Quãng thời gian diễn ra các kì thi lớn trong năm học.
+mùa thu|Mùa sau hè, trước đông, trời mát, lá cây thường vàng và rụng.
+mùa vụ|Quãng từ lúc xuống giống tới khi gặt hái một lứa cây trồng.
+mùa xuân|Mùa đầu năm, trời ấm, cây đâm chồi nảy lộc, có dịp Tết.
+múa rối|Môn diễn điều khiển hình nộm bằng gỗ hay vải để kể chuyện.
+mục đích|Lý do, điều mong đạt được khiến người ta làm một việc.
+mục lục|Bảng liệt kê các phần, các chương của cuốn sách kèm số trang.
+mục nát|Hư mục và mủn ra do để lâu nơi ẩm, thường nói về gỗ.
+mục tiêu|Đích cụ thể đặt ra để nhắm tới và cố đạt được.
+mùi khét|Mùi hăng khó chịu khi đồ ăn, vải hay nhựa bị cháy.
+mùi thơm|Mùi dễ chịu bay lên từ nồi cơm chín, bông hoa hay áo mới giặt.
+mùi vị|Hương và vị của thức ăn, đồ uống, cảm nhận bằng mũi và lưỡi.
+mủi lòng|Động lòng thương xót, chạnh lòng muốn khóc.
+mũi khoan|Đầu kim loại xoắn lắp vào máy khoan, xoáy vào để tạo lỗ.
+mũi nhọn|Đầu nhọn của một vật; cũng chỉ ngành hay bộ phận chủ chốt, đi đầu.
+múi giờ|Vùng trên Trái Đất cùng dùng một giờ chung, khác giờ ở vùng lân cận.
+mũm mĩm|Béo tròn trông dễ thương, thường nói về trẻ nhỏ hay má, tay.
+mùn cưa|Bột gỗ mịn rơi xuống khi xẻ gỗ, hay dùng để trồng nấm, nhóm bếp.
+muối|Hạt trắng vị mặn, dùng nêm món ăn và ướp cho thực phẩm lâu hỏng.
+muối ăn|Muối tinh dùng để nêm nếm trong nấu nướng hằng ngày.
+muối biển|Muối làm ra bằng cách phơi nước biển cho bay hơi.
+muối tiêu|Muối trộn tiêu xay, thường vắt chanh chấm; cũng chỉ mái tóc đen lẫn bạc.
+muối vừng|Vừng rang giã nhỏ trộn với muối, thường ăn cùng cơm hay xôi.
+muôn đời|Mãi mãi, qua rất nhiều thế hệ không thay đổi.
+muộn màng|Đến quá muộn, không còn đúng lúc.
+muỗng canh|Chiếc muỗng to để húp canh, cũng hay làm chuẩn đong gia vị khi nấu.
+mưa đá|Mưa có lẫn những cục nước đá nhỏ rơi xuống.
+mưa gió|Trời mưa kèm theo gió, thời tiết xấu.
+mưa nắng|Thời tiết khi mưa khi nắng, thường gợi sự vất vả dãi dầu.
+mưa phùn|Mưa hạt rất nhỏ, lâm thâm kéo dài, thường vào cuối đông đầu xuân.
+mưa rào|Mưa to, đến nhanh và tạnh nhanh, thường vào mùa hè.
+mưa tuyết|Những bông băng nhỏ màu trắng rơi từ trời xuống khi trời rất lạnh.
+mức độ|Mức cao thấp, nhiều ít của một sự việc hay tính chất.
+mức lương|Số tiền lương được trả cho một người trong một khoảng thời gian.
+mức sống|Mức độ đầy đủ về ăn, ở, đi lại, học hành của người dân.
+mực nang|Loài mực thân dày, dẹt, bên trong có mai cứng màu trắng, thịt giòn ngọt.
+mực ống|Loài mực thân thon dài như cái ống, thường dùng nhồi thịt hay nướng.
+mừng|Vui vì có điều như ý xảy ra; cũng chỉ việc tặng quà dịp vui.
+mừng rỡ|Vui mừng lộ rõ ra ngoài, thường vì điều bất ngờ.
+mừng tuổi|Tặng tiền kèm lời chúc vào dịp Tết, nhất là cho trẻ nhỏ.
+mượn|Lấy tạm đồ của người khác về dùng, xong việc thì đem trả.
+mương|Đường dẫn nước nhỏ đào trên đồng ruộng để tưới tiêu.
+mướp|Cây leo giàn, quả dài vỏ xanh, nấu canh ngọt mát.
+mướp đắng|Quả dài, vỏ sần sùi màu xanh, vị đắng, dùng để nấu ăn.
+mượt|Trơn, mềm và bóng, sờ không vướng, thường nói về tóc hay lông.
+mượt mà|Mềm mại và trôi chảy, thường nói về giọng hát, câu văn hay mái tóc.
+mứt kẹo|Đồ ngọt gồm mứt và kẹo, thường bày mời khách dịp Tết.
+mưu mẹo|Cách tính toán khôn khéo để lừa hoặc thắng người khác.
+mưu sinh|Kiếm sống, lo cái ăn cái mặc hằng ngày.
+na ná|Gần giống, hơi giống nhau nhưng không hẳn như nhau.
+nách|Chỗ lõm phía dưới, nơi cánh tay nối với vai.
+nài nỉ|Xin đi xin lại tha thiết để người khác chịu đồng ý.
+nam châm|Vật hút được sắt, thép, hay dùng gắn giấy lên tủ lạnh.
+nam sinh|Người học là con trai, ở bậc phổ thông hay đại học.
+nan giải|Khó giải quyết, khó tìm ra cách gỡ.
+nản chí|Mất ý chí, không muốn cố gắng nữa vì gặp khó khăn.
+nản lòng|Chùn bước, thấy chán vì việc mãi không thành.
+nàng dâu|Người con gái về làm vợ của con trai trong một gia đình.
+nàng thơ|Bóng hồng gợi cảm hứng cho người sáng tác, hiện lên trong thơ, nhạc, tranh.
+nàng tiên cá|Nhân vật truyện cổ, nửa trên là người con gái, nửa dưới là đuôi cá.
+nanh|Chiếc răng nhọn hoắt ở góc hàm, chìa rõ ở hổ, chó hay lợn rừng.
+não bộ|Khối mềm nhiều nếp nhăn trong hộp sọ, giúp ta suy nghĩ và ghi nhớ.
+náo động|Ồn ào xôn xao làm mất cảnh yên tĩnh.
+náo loạn|Rối loạn ồn ào, mọi người chạy tán loạn, mất trật tự.
+náo nhiệt|Đông vui, ồn ào và sôi nổi.
+nạo vét|Đào, múc bùn đất ở đáy kênh, sông, cống cho thông thoáng.
+nạp điện|Đưa dòng điện vào pin hay bình điện để tích lại mà dùng.
+nảy lộc|Cây đâm ra chồi non mới, thường vào mùa xuân.
+nảy lửa|Rất gay gắt, quyết liệt, thường nói về trận đấu hay cuộc cãi vã.
+nảy mầm|Hạt bắt đầu nứt vỏ, nhú ra mầm non.
+nảy nở|Sinh sôi, lớn dần và phát triển thêm, như cây cối hay tình cảm.
+nảy sinh|Bắt đầu xuất hiện, phát sinh ra, thường nói về vấn đề hay ý nghĩ.
+nãy giờ|Tính từ lúc nãy đến ngay lúc này, như khi than đã đợi lâu.
+năm học|Khoảng thời gian học trong một năm ở trường, thường kéo dài chín tháng.
+năm mới|Năm vừa bắt đầu, thường gắn với dịp chúc mừng đầu năm.
+năm ngoái|Năm liền trước năm đang nói tới.
+năm nhuận|Năm lịch được chèn thêm ngày hay tháng để lịch không lệch khỏi mùa.
+năm tháng|Thời gian dài trôi qua, quãng đời đã qua.
+năm xưa|Những năm đã qua từ lâu, thời trước kia.
+nằm dài|Nằm duỗi thẳng người ra, thường là nằm không, chẳng làm gì.
+nằm mơ|Thấy những hình ảnh, sự việc trong lúc ngủ.
+nằm ngang|Trải dài song song với mặt đất, như mặt bàn hay đường chân trời.
+nằm nghiêng|Nằm quay người sang một bên.
+nằm ngửa|Nằm lưng áp xuống, mặt hướng lên trên.
+nằm sấp|Nằm bụng áp xuống, lưng hướng lên trên.
+nắm bắt|Hiểu rõ và nắm được điều gì đó, như cơ hội hay thông tin.
+nắm chắc|Giữ thật chặt trong tay; cũng chỉ biết chắc chắn về điều gì.
+nắm giữ|Giữ trong tay, quản lý, kiểm soát, thường nói về quyền hay tài sản.
+nắm vững|Hiểu thật thấu đáo, thuộc kiến thức hay kĩ năng tới mức vận dụng được.
+năng động|Hoạt bát, nhanh nhẹn, chủ động và linh hoạt trong công việc.
+năng khiếu|Khả năng bẩm sinh, thường hơn người, về một lĩnh vực như hát, vẽ.
+năng lực|Khả năng làm việc, giải quyết được những việc cần làm.
+năng lượng|Nguồn sức sinh ra nhiệt, điện, chuyển động; cũng chỉ sức sống của con người.
+năng nổ|Hăng hái, nhiệt tình, xông xáo làm việc.
+năng suất|Lượng làm ra hay thu được trong một thời gian hoặc trên một diện tích.
+nằng nặc|Đòi cho bằng được, nài mãi không thôi.
+nắng|Ánh mặt trời chiếu xuống, mang theo sức nóng.
+nắng gắt|Nắng rất to và nóng, chói chang.
+nắng mưa|Trời nắng và mưa thay nhau; cũng chỉ tính khí thất thường.
+nắng ráo|Trời nắng và khô, không mưa.
+nặng nề|Nặng và chậm chạp, gây cảm giác nặng trĩu; cũng chỉ mức độ nghiêm trọng.
+nặng nhẹ|Mức nặng hay nhẹ; cũng chỉ việc trách móc, nói lời khó nghe.
+nặng nhọc|Đòi hỏi nhiều sức lực, vất vả, nói về công việc chân tay.
+nặng trĩu|Nặng tới mức trĩu xuống, như cành nhiều quả hay lòng nhiều lo âu.
+nấm hương|Nấm mũ nâu thơm đặc trưng, thường phơi khô để hầm, xào hay nấu canh.
+nấm mèo|Mộc nhĩ theo cách gọi miền Nam, tai nấm mỏng nâu đen, ăn giòn.
+nấm mốc|Loại nấm rất nhỏ mọc thành lớp trên đồ ẩm, làm hỏng thức ăn.
+nấm rơm|Nấm nhỏ mũ xám tròn, mọc trên rơm ủ ẩm, thường nấu canh hoặc xào.
+nấm sò|Nấm có mũ mỏng xòe ra như vỏ sò, màu trắng hay xám.
+nấn ná|Cố nán lại hay chần chừ thêm chút nữa, chưa chịu đi.
+nâng cao|Làm cho cao hơn, tốt hơn về mức độ, chất lượng.
+nâng cấp|Cải tiến cho tốt hơn, hiện đại hơn, nhất là máy móc, phần mềm.
+nâng đỡ|Giúp đỡ, dìu dắt người khác để họ vững vàng và tiến bộ hơn.
+nâng giá|Đẩy giá bán của hàng hóa lên cao hơn trước.
+nâng niu|Đối xử nhẹ nhàng, trân trọng với người hay vật mình quý.
+nâu đen|Có màu nâu sẫm ngả sang đen.
+nâu nâu|Hơi có màu nâu, không đậm lắm.
+nấu ăn|Làm chín thực phẩm và chế biến thành món để ăn.
+nấu bếp|Làm công việc nấu nướng trong bếp, có khi là nghề để kiếm sống.
+nấu cơm|Cho gạo và nước vào nồi rồi đun chín thành cơm.
+nấu nướng|Làm các việc bếp núc nói chung như nấu, xào, rán, nướng.
+né tránh|Lánh đi để khỏi gặp hay khỏi phải đối mặt với điều gì.
+nem chua|Món làm từ thịt lợn sống trộn bì, gói lá rồi để lên men chua.
+nem rán|Món cuốn nhân thịt băm trong bánh đa rồi rán giòn, cách gọi miền Bắc.
+nét chữ|Đường nét và dáng vẻ của chữ viết tay mỗi người.
+nét mặt|Vẻ hiện trên gương mặt cho biết người ấy đang vui, buồn hay giận.
+nét vẽ|Đường vạch do bút tạo ra khi vẽ, thể hiện tay nghề người vẽ.
+nể mặt|Vì quý trọng ai mà nhân nhượng, giữ thể diện cho họ.
+nể nang|Ngại làm mất lòng nên không dám nói thẳng hay làm khác ý.
+nể phục|Phục tài, phục đức mà sinh lòng kính nể người khác.
+nếm trải|Trực tiếp trải qua và cảm nhận, thường là gian khổ, thử thách.
+nên thơ|Đẹp và gợi cảm xúc nhẹ nhàng như trong thơ, thường nói về cảnh.
+nền móng|Khối xây ngầm đỡ ngôi nhà; cũng chỉ cái gốc vững để dựng việc lớn.
+nền tảng|Cơ sở vững chắc mà từ đó mọi thứ khác được xây dựng lên.
+nếp cẩm|Giống gạo nếp hạt tím than, hay nấu xôi, chè hoặc trộn sữa chua.
+nếp nhăn|Đường gấp nhỏ trên da hay vải, thường thấy trên mặt người già.
+nếp sống|Cách sống, thói quen hằng ngày đã thành nền nếp của một cộng đồng.
+ngà voi|Cặp răng dài, cong, màu trắng sữa mọc chìa ra từ hàm voi.
+ngả lưng|Nằm xuống nghỉ một chút cho đỡ mỏi, thường không ngủ lâu.
+ngả mũ|Cầm mũ nghiêng xuống để chào; còn có nghĩa bày tỏ sự thán phục ai.
+ngã ba|Chỗ một con đường rẽ ra làm hai, tạo thành ba ngả.
+ngã tư|Nơi hai tuyến đường giao chéo, xe từ bốn hướng gặp nhau và chờ đèn.
+ngạc nhiên|Sững lại vì gặp điều không ngờ tới.
+ngách|Lối đi nhỏ rẽ ra từ một ngõ, thường hẹp hơn ngõ.
+ngái ngủ|Còn uể oải, mắt nhắm mắt mở vì vừa thức dậy hay thiếu ngủ.
+ngại|Không muốn làm vì thấy khó, phiền hay e thẹn.
+ngại ngần|Do dự, chưa dám làm vì còn e ngại điều gì.
+ngại ngùng|E thẹn, rụt rè, không dám tự nhiên trước người khác.
+ngang|Theo hướng từ bên trái sang bên phải, khác với chiều dọc từ trên xuống.
+ngang bằng|Ở cùng một mức cao thấp, không bên nào nhô lên hay thụt xuống.
+ngang dọc|Theo cả chiều ngang và chiều dọc, đan xen khắp nơi.
+ngang hàng|Có vị trí hay địa vị bằng nhau, không ai trên ai.
+ngang ngửa|Gần như bằng nhau, khó phân hơn kém, thường nói về sức lực, tài năng.
+ngang nhau|Bằng nhau về số lượng, mức độ hay giá trị giữa các bên.
+ngành|Lĩnh vực công việc hay chuyên môn riêng, gồm nhiều nghề gần nhau.
+ngành nghề|Các lĩnh vực làm ăn nói chung, như nông nghiệp, may mặc, dịch vụ.
+ngao|Loài có hai mảnh vỏ sống ở bãi cát ven biển, thường nấu canh, hấp.
+ngào ngạt|Có mùi thơm lan tỏa mạnh và đậm khắp xung quanh.
+ngáp|Há rộng miệng hít vào một hơi dài, dấu hiệu quen khi buồn ngủ.
+ngay cả|Từ dùng để nhấn mạnh rằng cả điều tưởng như ngoại lệ cũng vậy.
+ngay ngắn|Thẳng thớm, đúng chỗ, không xiêu lệch hay lộn xộn.
+ngày|Trọn hai mươi bốn giờ liền; cũng chỉ lúc trời sáng, trái với đêm.
+ngày càng|Mỗi lúc một hơn, mức độ cứ tăng dần lên theo thời gian.
+ngày đêm|Suốt cả ngày lẫn đêm, không lúc nào ngừng.
+ngày hội|Ngày tổ chức vui chơi, lễ hội đông người tham gia.
+ngày kia|Ngày sau ngày mai, tức là hai ngày nữa kể từ hôm nay.
+ngày lễ|Ngày kỷ niệm một sự kiện hay theo phong tục, thường có tổ chức lễ.
+ngày mai|Ngày tiếp theo ngay sau hôm nay.
+ngày mùa|Thời gian thu hoạch lúa, nhà nông bận rộn gặt hái.
+ngày nay|Thời đại mình đang sống, phân biệt với thời xa xưa.
+ngày rằm|Ngày mười lăm âm lịch hằng tháng, khi trăng tròn.
+ngày sinh|Ngày một người được sinh ra, thường ghi trong giấy tờ.
+ngày tháng|Ngày và tháng ghi thời điểm; cũng chỉ quãng thời gian đã qua.
+ngày thường|Ngày làm việc bình thường, không phải ngày lễ hay ngày nghỉ.
+ngày trước|Khoảng thời gian trước đây đã qua, thường đã khá lâu.
+ngày xuân|Những ngày mùa xuân, thường gắn với dịp Tết đầu năm.
+ngày xưa|Thời đã qua rất lâu, thường dùng mở đầu truyện cổ tích.
+ngắm|Thong thả nhìn lâu để thưởng thức, như trước hoa nở hay trăng rằm.
+ngắm nghía|Nhìn đi nhìn lại kỹ lưỡng từng chi tiết, vẻ thích thú.
+ngắm nhìn|Nhìn say sưa, thong thả để cảm nhận cảnh vật hay người.
+ngăn|Chắn không cho qua hay xảy ra; cũng chỉ ô chia riêng trong tủ.
+ngăn cách|Chia tách, làm hai bên không liền nhau hay khó qua lại.
+ngăn cản|Làm cho người khác không thực hiện được việc họ định làm.
+ngăn cấm|Không cho phép làm, bắt phải dừng một việc gì.
+ngăn chặn|Không cho điều xấu kịp xảy ra hay lan rộng, như dịch bệnh, cháy rừng.
+ngăn kéo|Hộc hình hộp lắp trong bàn hay tủ, kéo ra đẩy vào để cất đồ.
+ngăn nắp|Gọn gàng, mọi thứ để đúng chỗ, có thứ tự.
+ngăn ngừa|Làm trước để điều xấu như bệnh tật, tai nạn không xảy ra.
+ngắn hạn|Trong một thời gian ngắn, trái với dài hạn.
+ngắn ngủi|Chỉ kéo dài trong thời gian rất ngắn, thường gợi tiếc nuối.
+ngắt|Bứt hoa lá bằng đầu ngón tay; còn có nghĩa làm dừng giữa chừng.
+ngắt điện|Cắt dòng điện không cho chạy qua, bằng cầu dao hay công tắc.
+ngắt lời|Chen vào làm người khác đang nói phải dừng lại.
+ngắt quãng|Bị dừng lại từng đoạn, không liền mạch.
+ngâm nga|Đọc hay hát khe khẽ, kéo dài giọng theo nhịp thơ, câu hát.
+ngâm thơ|Đọc thơ kéo dài giọng, lên xuống theo điệu riêng.
+ngẫm nghĩ|Suy nghĩ kỹ và lâu về một điều gì.
+ngấm ngầm|Diễn ra kín đáo bên trong, không để người khác thấy.
+ngân hà|Dải sáng mờ trắng vắt ngang bầu trời đêm do vô số sao tạo thành.
+ngân nga|Vang kéo dài và rung nhẹ, nói về tiếng chuông, tiếng đàn hay giọng hát.
+ngân sách|Tổng số tiền thu chi dự tính cho một việc, cơ quan hay nhà nước.
+ngần ngại|Chần chừ, lưỡng lự vì thấy phiền hay sợ không ổn.
+ngẩn ngơ|Thẫn thờ như mất hồn, vì quá say mê hay tiếc nuối điều gì.
+ngẩng đầu|Nâng đầu lên, hướng mặt lên trên.
+ngẩng mặt|Ngước mặt nhìn lên, cũng gợi tư thế đường hoàng, không hổ thẹn.
+ngập ngừng|Nói hay làm ngắt quãng, chưa dứt khoát vì còn e ngại.
+ngập tràn|Có rất nhiều, phủ đầy khắp nơi, thường nói về niềm vui, ánh sáng.
+ngất ngây|Say mê, sung sướng đến mức như lâng lâng không tự chủ.
+ngầu|Trông mạnh mẽ, cá tính, gây ấn tượng, cách nói thân mật của giới trẻ.
+ngẫu hứng|Tự nhiên nảy ra cảm hứng, làm mà không định trước.
+ngẫu nhiên|Xảy ra tình cờ, không theo dự tính hay quy luật nào.
+ngấu nghiến|Ăn hay đọc một cách vội vã, tham lam, liên tục không nghỉ.
+ngây ngất|Choáng ngợp, đê mê vì cảm xúc hay hương vị quá mạnh.
+ngây ngô|Khờ khạo, non nớt, thiếu hiểu biết về chuyện đời.
+ngây thơ|Trong sáng, hồn nhiên và còn non nớt hiểu biết, như trẻ nhỏ.
+nghe đồn|Biết được tin qua lời người khác truyền miệng, chưa rõ thực hư.
+nghe lời|Làm theo điều người khác bảo, thường nói về con cái, học trò.
+nghe ngóng|Dỏng tai dò la tin tức, xem tình hình ra sao rồi mới tính.
+nghèo|Thiếu tiền bạc và của cải, đời sống khó khăn.
+nghèo nàn|Thiếu thốn, ít ỏi, không phong phú, nói về vật chất hay nội dung.
+nghề nghiệp|Việc làm chính để kiếm sống, như dạy học, chữa bệnh hay buôn bán.
+nghệ|Củ ruột vàng cam vị hăng, hay dùng tạo màu món ăn và làm thuốc.
+nghệ danh|Tên riêng mà nghệ sĩ dùng khi biểu diễn, khác với tên thật.
+nghệ nhân|Bậc thầy trong một nghề thủ công hay môn nghệ thuật dân gian.
+nghệ thuật|Hội họa, âm nhạc, sân khấu cùng những sáng tạo khơi gợi cảm xúc.
+nghi ngờ|Không tin hẳn, trong lòng còn thắc mắc điều đó có thật hay không.
+nghi ngút|Khói hay hơi bốc lên nhiều, cuồn cuộn và liên tục.
+nghỉ|Thôi làm việc một lúc để lấy lại sức.
+nghỉ chân|Dừng lại nghỉ một lúc giữa đường đi.
+nghỉ đông|Đợt nghỉ dài vào mùa đông, thường ở trường học hay nơi làm việc.
+nghỉ hè|Thời gian học sinh được nghỉ học trong mùa hè.
+nghỉ hưu|Thôi đi làm khi đã đủ tuổi theo quy định, thường được nhận lương hưu.
+nghỉ ngơi|Tạm dừng việc, thả lỏng thân thể cho lại sức.
+nghỉ phép|Tạm thôi đi làm trong ít ngày có xin phép, thường vẫn được trả lương.
+nghỉ tay|Tạm dừng tay khi đang làm để nghỉ một chút.
+nghỉ trưa|Nghỉ ngơi hoặc chợp mắt một lúc vào buổi trưa.
+nghỉ việc|Thôi không làm ở một chỗ làm nữa.
+nghĩ bụng|Tự nhủ trong lòng mà không thốt ra thành lời.
+nghĩ thầm|Tự nói với mình trong đầu mà không thốt ra lời.
+nghị lực|Ý chí bền bỉ, gặp gian khó vẫn gượng dậy làm tiếp.
+nghĩa|Nội dung mà từ, câu diễn đạt; cũng chỉ lẽ phải, tình cảm sâu nặng.
+nghĩa bóng|Nghĩa suy ra từ nghĩa gốc theo lối ví von, hình ảnh.
+nghĩa đen|Nghĩa gốc, đúng như sự vật mà từ gọi tên, không ví von.
+nghĩa là|Từ dùng để giải thích hay nói lại điều trước cho rõ hơn.
+nghĩa tình|Tình gắn bó trước sau như một, nhớ ơn và thương nhau giữa con người.
+nghĩa vụ|Việc phải làm theo trách nhiệm với gia đình, xã hội hay luật pháp.
+nghịch|Lấy đồ vật ra đùa, mân mê hay bày trò không đúng chỗ.
+nghịch ngợm|Hay bày trò đùa nghịch, phá phách, thường nói về trẻ nhỏ.
+nghiêm|Có vẻ đứng đắn, cứng rắn, không cho phép đùa cợt hay làm sai.
+nghiêm chỉnh|Đàng hoàng, đúng mực, làm theo đúng quy định.
+nghiêm khắc|Khắt khe, đòi hỏi cao và không dễ bỏ qua lỗi.
+nghiêm ngặt|Rất chặt chẽ, không cho phép sai lệch, thường nói về quy định, kiểm soát.
+nghiêm nghị|Có vẻ mặt, dáng điệu đứng đắn, khiến người khác phải nể.
+nghiêm trọng|Rất nặng nề, dễ gây hậu quả lớn, nói về sự việc hay tình hình.
+nghiêm túc|Đứng đắn, chăm chú, làm việc thật lòng không đùa cợt.
+nghiên cứu|Tìm hiểu kỹ lưỡng, có phương pháp để hiểu rõ hoặc tìm ra điều mới.
+nghiền nát|Ép, giã cho vỡ vụn thành mảnh nhỏ hay bột.
+nghiến răng|Cắn chặt hai hàm răng vào nhau, thường khi tức giận hay cố chịu đau.
+nghiêng|Chếch về một bên chứ không thẳng đứng, như cây cột sắp đổ.
+nghiêng ngả|Lắc lư, đổ lệch sang hai bên, như khi say hay gặp gió lớn.
+nghiệp dư|Làm vì thích chứ không lấy đó làm nghề sống, như đội bóng phong trào.
+ngỏ lời|Nói ra điều muốn nhờ, mời hay bày tỏ, thường là lần đầu.
+ngỏ ý|Nói ra mong muốn hay đề nghị của mình cho người khác biết.
+ngõ cụt|Lối nhỏ bị bịt ở cuối, phải quay ra; cũng chỉ cảnh bế tắc.
+ngõ hẻm|Con đường nhỏ hẹp len giữa dãy nhà, xe hơi khó lọt vào.
+ngõ ngách|Các lối nhỏ hẹp chằng chịt trong khu dân cư.
+ngoài|Phía bên kia giới hạn của một chỗ, trái với trong.
+ngoài cùng|Ở lớp hay chỗ xa tâm hơn cả, như chiếc áo khoác mặc bên trên.
+ngoài khơi|Vùng biển xa bờ, nhìn từ đất liền chỉ thấy mờ mờ.
+ngoài mặt|Bề ngoài thể hiện ra, khác với điều thật trong lòng.
+ngoài ra|Từ nối dùng để thêm vào điều chưa kể ở trên.
+ngoài rìa|Ở phần mép một vùng; còn có nghĩa bị gạt ra, không được dự phần.
+ngoài trời|Ở nơi không có mái che, giữa khoảng trời rộng.
+ngoại cỡ|To hơn cỡ thông thường, thường nói về quần áo, giày dép.
+ngoại lệ|Trường hợp lọt ra khỏi quy luật chung, khác hẳn phần đông còn lại.
+ngoại ngữ|Thứ tiếng của nước khác, không phải tiếng mẹ đẻ, như tiếng Anh, tiếng Nhật.
+ngoại nhập|Được mua từ nước ngoài đưa về bán trong nước, như hoa quả, xe hơi.
+ngoại ô|Vùng ven sát rìa thành phố, nhà cửa thưa hơn khu trung tâm.
+ngoại quốc|Nước khác, ngoài nước mình, cách nói hơi cũ.
+ngoại thành|Các huyện, xã thuộc thành phố nhưng nằm ngoài khu nội thành.
+ngoại thất|Phần bên ngoài của nhà, xe hay công trình cùng cách bày trí ở đó.
+ngoan|Biết nghe lời, cư xử dễ thương, thường nói về trẻ em.
+ngoan ngoãn|Hiền lành, dễ bảo, luôn vâng lời người lớn.
+ngoạn mục|Đẹp mắt, gây ấn tượng mạnh cho người xem.
+ngoảnh|Quay đầu, quay mặt sang hướng khác.
+ngoáy|Xoay tròn một vật nhỏ bên trong chỗ hẹp, như khi làm sạch tai.
+ngoặc|Dấu dùng từng cặp để tách riêng một phần chữ trong câu.
+ngoặc đơn|Cặp dấu cong mở và đóng, dùng để chèn lời chú thích vào câu.
+ngoặc kép|Cặp dấu đặt hai đầu để trích lời hay đánh dấu chữ dùng đặc biệt.
+ngoằn ngoèo|Uốn cong lượn nhiều vòng, không theo đường thẳng.
+ngóc ngách|Chỗ khuất, góc kẹt khó thấy; cũng chỉ mọi chi tiết nhỏ của sự việc.
+ngọc|Loại đá quý có màu đẹp, thường được mài giũa làm trang sức.
+ngọc bích|Loại ngọc màu xanh biếc, thường làm vòng tay hay đồ trang sức.
+ngọc lan|Cây thân gỗ có hoa trắng hay vàng nhạt, cánh thon dài, hương thơm ngát.
+ngọc trai|Hạt sáng óng kết dần trong lòng con trai, thường xâu làm vòng đeo.
+ngòi bút|Đầu nhọn của cây bút để viết ra mực; cũng chỉ tài năng viết lách.
+ngói|Tấm nung từ đất sét, xếp chồng lên nhau để lợp mái nhà.
+ngon giấc|Ngủ say, sâu và yên, thức dậy thấy khỏe.
+ngon lành|Ăn thấy ngon, hấp dẫn; cũng chỉ việc gì đó trơn tru, dễ dàng.
+ngon miệng|Thấy thức ăn ngon và muốn ăn thêm.
+ngon ngọt|Vừa ngon vừa ngọt; cũng chỉ lời nói êm tai để dỗ dành, dụ dỗ.
+ngón áp út|Ngón tay thứ tư tính từ ngón cái, thường dùng để đeo nhẫn.
+ngón cái|Ngón to, mập ở bàn tay hoặc bàn chân, nằm tách phía trong.
+ngón chân|Mỗi phần nhỏ ở đầu bàn chân, mỗi bàn chân thường có năm cái.
+ngón chân cái|Ngón to nhất ở bàn chân, nằm phía trong.
+ngón chân út|Ngón nhỏ nhất ở mép ngoài bàn chân.
+ngón tay|Mỗi phần nhỏ dài ở bàn tay, dùng để cầm nắm, sờ chạm.
+ngón tay cái|Ngón ngắn, to nằm tách riêng, giúp bàn tay cầm nắm chắc.
+ngón tay trỏ|Ngón thứ hai tính từ ngón cái, hay dùng để chỉ trỏ.
+ngón tay út|Ngón ngắn, nhỏ nhất ở mép ngoài bàn tay.
+ngón trỏ|Ngón nằm giữa ngón cái và ngón giữa, hay dùng để chỉ.
+ngón út|Ngón nhỏ ở mép ngoài cùng của bàn tay hay bàn chân.
+ngọn nguồn|Gốc rễ sâu xa, đầu đuôi của một sự việc.
+ngóng chờ|Mong đợi, nhìn trông ai đó hay điều gì đến.
+ngọt|Mang vị của đường, mía hay quả chín, đầu lưỡi thấy dịu dễ chịu.
+ngọt bùi|Những điều vui sướng, hạnh phúc cùng hưởng với nhau, trái với đắng cay.
+ngọt dịu|Ngọt vừa phải, nhẹ nhàng, dễ chịu.
+ngọt lịm|Ngọt đậm và thấm sâu, như đường tan trong miệng.
+ngọt ngào|Ngọt dịu dễ chịu, thường nói về lời nói, tình cảm hay kỉ niệm.
+ngô nếp|Giống ngô hạt dẻo, màu trắng hoặc tím, thường luộc ăn.
+ngộ nghĩnh|Đáng yêu và hơi lạ mắt, gây cười, thường nói về trẻ em.
+ngộ nhận|Hiểu sai, tưởng điều không đúng là đúng.
+ngôi sao|Chấm sáng nhỏ lấp lánh trên trời đêm; cũng chỉ người rất nổi tiếng.
+ngồi bệt|Ngồi thẳng xuống đất hay sàn, không có ghế.
+ngồi dậy|Từ tư thế nằm nhổm người lên thành ngồi.
+ngồi không|Ngồi yên chẳng làm gì, không có việc để làm.
+ngồi xổm|Ngồi co chân, hai bàn chân chạm đất, mông không chạm đất.
+ngôn ngữ|Hệ thống từ và quy tắc con người dùng để trao đổi ý nghĩ.
+ngổn ngang|Bừa bộn, đồ đạc bày lộn xộn khắp nơi.
+ngỗng|Gia cầm to hơn vịt, cổ dài, kêu to, nuôi lấy thịt.
+ngỗng trời|Loài ngỗng hoang biết bay xa, thường bay thành đàn khi đổi mùa.
+ngột ngạt|Bí bách, khó thở vì thiếu gió, hay vì không khí căng thẳng.
+ngơ ngác|Ngạc nhiên, lúng túng, nhìn quanh như không hiểu chuyện gì.
+ngờ ngợ|Thấy hơi quen hay hơi lạ mà chưa dám chắc.
+ngờ vực|Có mối hoài nghi kéo dài, không yên tâm tin vào ai.
+ngỡ ngàng|Sững sờ, chưa kịp hiểu vì điều xảy ra quá bất ngờ.
+ngủ dậy|Thức giấc rồi rời khỏi giường sau khi ngủ.
+ngủ đông|Trạng thái một số loài vật nằm im suốt mùa đông, hầu như không ăn.
+ngủ gật|Ngủ thiếp đi trong lúc ngồi, đầu gục lên gục xuống.
+ngủ gục|Ngủ trong tư thế gục đầu xuống bàn hay đầu gối, thường vì quá mệt.
+ngủ mê|Ngủ say không biết gì; cũng chỉ ngủ mà nằm mơ.
+ngủ ngày|Đánh một giấc khi trời còn sáng, ngoài giờ ngủ đêm quen thuộc.
+ngủ nhờ|Ngủ tạm ở nhà hay chỗ của người khác.
+ngủ quên|Ngủ say lỡ mất giờ phải dậy hay việc đang định làm.
+ngủ say|Ngủ sâu, khó bị đánh thức.
+ngủ thiếp|Chìm vào giấc ngủ lúc nào không hay.
+ngủ trưa|Chợp mắt một lúc vào giữa ngày, sau bữa cơm trưa.
+ngũ cốc|Các loại hạt lương thực như lúa, ngô, kê, lúa mì.
+ngụ ngôn|Truyện mượn chuyện loài vật, đồ vật để rút ra bài học cho người.
+ngụ ý|Ý được ẩn kín trong lời nói, không nói thẳng ra.
+nguệch ngoạc|Viết hay vẽ xiên xẹo, cẩu thả, không ra hình.
+ngụm|Lượng nước hay chất lỏng vừa một lần ngậm trong miệng.
+nguội lạnh|Đã mất hết hơi ấm, nói về đồ ăn hay tình cảm phai nhạt.
+nguồn|Nơi sông suối bắt đầu chảy; cũng chỉ chỗ cung cấp, sinh ra điều gì.
+nguồn điện|Thiết bị hay nơi cung cấp dòng điện, như pin, ổ cắm.
+nguồn gốc|Nơi hay điều từ đó một sự vật bắt đầu có ra.
+nguồn tin|Nơi hay người cung cấp thông tin, tin tức.
+nguy cơ|Điều xấu đang lấp ló phía trước, có thể ập tới nếu không đề phòng.
+nguy hiểm|Có thể gây hại cho tính mạng, sức khỏe hay tài sản.
+nguy nga|Đồ sộ, lộng lẫy đến choáng ngợp, thường tả cung điện hay đền đài.
+nguyên|Còn ở dạng ban đầu, chưa bị chia ra hay thay đổi.
+nguyên âm|Âm như a, o, u, hơi thoát ra tự do, làm lõi của vần.
+nguyên bản|Bản đầu tiên do tác giả làm ra, chưa bị sửa, dịch hay cắt bớt.
+nguyên chất|Hoàn toàn một chất, không bị pha trộn với thứ khác.
+nguyên do|Lý do vì sao có chuyện xảy ra, thường dùng khi kể, giải thích.
+nguyên liệu|Thứ đem vào nấu nướng hay sản xuất để làm thành món ăn, hàng hóa.
+nguyên mẫu|Sản phẩm làm thử đầu tiên, để dò lỗi trước khi làm đại trà.
+nguyên nhân|Điều gây ra một sự việc hay hiện tượng, dẫn đến kết quả.
+nguyên tắc|Quy định cốt lõi mà người ta giữ vững khi hành động hay xét đoán.
+nguyên văn|Đúng từng chữ như lời hay bản gốc, không thêm bớt.
+nguyên vẹn|Còn đầy đủ, không hư hại hay mất mát chút nào.
+nguyên xi|Giữ y như cũ, không đổi chút nào, cách nói thân mật.
+nguyện vọng|Điều mong muốn tha thiết, mong được đáp ứng.
+nguyệt quế|Cây cảnh hoa trắng; cũng chỉ cây phương Tây có lá kết vòng vinh danh.
+nguyệt thực|Hiện tượng mặt trăng bị bóng trái đất che tối một phần hay toàn bộ.
+ngữ pháp|Các quy tắc về cách ghép từ thành câu của một ngôn ngữ.
+ngữ văn|Môn học ở trường về đọc hiểu văn chương, viết bài và dùng tiếng Việt.
+ngựa|Thú lớn có bờm, chân cao, móng guốc, nuôi để cưỡi hay kéo xe.
+ngựa gỗ|Đồ chơi hình con ngựa cho trẻ ngồi lên bập bênh hoặc quay vòng.
+ngựa ô|Ngựa lông đen nhánh; cũng chỉ đối thủ vô danh bất ngờ vươn lên mạnh.
+ngựa vằn|Loài thú giống ngựa, lông có sọc đen trắng, sống ở đồng cỏ châu Phi.
+ngửi|Đưa mũi lại gần rồi hít để biết vật có mùi gì.
+ngưng tụ|Chuyển từ thể hơi sang thể lỏng khi gặp lạnh, như sương đọng.
+ngừng|Thôi không tiếp tục làm hay hoạt động nữa.
+ngược|Theo chiều trái với bình thường hay với hướng đã định.
+ngược chiều|Đi hay xoay theo hướng trái lại với hướng của người, vật khác.
+ngược dòng|Đi trái với chiều nước chảy; cũng chỉ làm trái xu hướng chung.
+ngược đời|Trái với lẽ thường, khác hẳn cách mọi người vẫn nghĩ.
+ngược gió|Đi hay hướng về phía gió thổi tới, bị gió cản.
+ngược xuôi|Đi lại khắp nơi, vất vả bôn ba nhiều ngả.
+người|Sinh vật biết nói, biết suy nghĩ và lao động, sống thành xã hội.
+người cá|Sinh vật trong truyện cổ, thân người nhưng thay chân bằng đuôi cá.
+người dùng|Người có tài khoản hoặc đang dùng một ứng dụng, thiết bị, dịch vụ.
+người đẹp|Người phụ nữ có dung mạo nổi bật, thường chỉ thí sinh thi sắc đẹp.
+người đời|Những người trong xã hội nói chung, thiên hạ.
+người già|Người đã nhiều tuổi, sức khỏe yếu dần.
+người gửi|Người đứng ra gửi thư, quà hay hàng cho người khác.
+người hầu|Người làm việc phục dịch trong nhà người khác, thường thời xưa.
+người hùng|Người dũng cảm làm được việc lớn, được nhiều người khâm phục.
+người lạ|Người mình không quen biết.
+người làm|Người được thuê làm việc, thường là việc nhà hay việc đồng áng.
+người lớn|Người đã qua tuổi thơ, đủ lớn để tự lo liệu, khác với trẻ nhỏ.
+người máy|Cỗ máy tự cử động làm việc thay người, có loại mang dáng người.
+người mẫu|Người làm nghề trình diễn quần áo hoặc đứng cho chụp ảnh, vẽ.
+người ngoài|Người không ở trong nhà, trong nhóm hay không dính dáng tới chuyện đang bàn.
+người nhà|Người trong gia đình, hay nói khi họ thăm nuôi, lo liệu việc cho ai.
+người quen|Người đã biết nhau nhưng chưa thân lắm.
+người ta|Từ dùng để chỉ người khác nói chung, không nêu rõ là ai.
+người thân|Cha mẹ, anh em, họ hàng hay ai gắn bó gần gũi như ruột thịt.
+người thương|Người mình yêu, cách gọi tình cảm, dịu dàng.
+người tuyết|Hình người đắp bằng tuyết, trẻ em thường làm vào mùa đông.
+người xưa|Những người sống ở thời đã qua lâu, ông cha ta ngày trước.
+người yêu|Người mình yêu và cùng gắn bó trong một mối tình đôi lứa.
+ngưỡng cửa|Thanh ngang sát nền dưới khung cửa; cũng chỉ thời điểm bước vào chặng mới.
+ngưỡng mộ|Trầm trồ, nể phục ai đó vì tài năng hay phẩm chất của họ.
+ngượng|Mất tự nhiên, xấu hổ trước người khác.
+ngượng ngùng|Xấu hổ, bối rối, thường khi bị chú ý hay nói chuyện tình cảm.
+nha đam|Cây lá dày mọng nước, mép có gai, phần thịt trong để ăn, dưỡng da.
+nhà ăn|Gian rộng kê nhiều bàn ở trường hay xí nghiệp để mọi người dùng bữa.
+nhà bác học|Người có kiến thức uyên thâm và nhiều phát minh khoa học.
+nhà báo|Người đi lấy tin, phỏng vấn rồi viết bài, làm phóng sự cho báo đài.
+nhà băng|Cách gọi dân dã của ngân hàng, nơi gửi và vay tiền.
+nhà bếp|Phòng hay gian nhà dùng để nấu ăn.
+nhà chọc trời|Tòa nhà rất cao, có rất nhiều tầng.
+nhà chồng|Gia đình của chồng, nơi người vợ thường về làm dâu sau khi cưới.
+nhà cửa|Chỗ ở của một gia đình nói chung, như khi dọn dẹp hay sửa sang.
+nhà đất|Nhà và đất đai, thường nói về tài sản mua bán.
+nhà để xe|Nơi có mái che dùng để giữ xe.
+nhà điêu khắc|Người sáng tác tượng hay hình khối bằng cách tạc, đắp, đúc.
+nhà ga|Tòa nhà tại bến tàu hỏa hay sân bay, nơi đón trả khách.
+nhà gái|Họ hàng bên cô dâu, đón nhà trai tới hỏi cưới.
+nhà giáo|Người làm nghề dạy học, cách gọi trang trọng.
+nhà giàu|Gia đình dư dả của cải, sống sung túc hơn hẳn người quanh mình.
+nhà gỗ|Ngôi nhà dựng chủ yếu bằng gỗ, từ cột kèo đến vách.
+nhà hàng|Quán ăn thường khang trang, có thực đơn và người bưng món tới bàn.
+nhà hát|Công trình lớn có sân khấu và ghế ngồi, dùng để biểu diễn nghệ thuật.
+nhà in|Nơi có máy móc chuyên in sách, báo, giấy tờ.
+nhà khách|Nhà của cơ quan dùng để tiếp đón và cho khách ở tạm.
+nhà kho|Nhà dùng để chứa hàng hóa hay đồ đạc.
+nhà khoa học|Người làm công việc nghiên cứu khoa học một cách chuyên nghiệp.
+nhà kính|Nhà có vách và mái bằng kính hay nhựa trong, dùng để trồng cây.
+nhà lá|Nhà lợp mái bằng lá, thường đơn sơ.
+nhà lắp ghép|Nhà dựng bằng các tấm, khung làm sẵn rồi ráp lại tại chỗ.
+nhà lầu|Nhà xây có nhiều tầng, kiên cố.
+nhà lưu động|Chỗ ở dựng trên khung xe, thường có giường, bếp, đưa đi khắp nơi.
+nhà máy|Cơ sở sản xuất lớn có nhiều máy móc và công nhân.
+nhà máy điện|Cơ sở dùng máy móc để sản xuất ra điện.
+nhà máy in|Xí nghiệp lớn có nhiều máy in để in sách báo, bao bì.
+nhà nghỉ|Nhà có phòng cho khách thuê ngủ nghỉ ngắn ngày.
+nhà ngói|Nhà lợp mái bằng ngói đất nung.
+nhà nông|Người sống bằng nghề trồng trọt, làm ruộng.
+nhà ống|Nhà hẹp ngang và dài sâu vào trong, thường thấy ở phố.
+nhà ở|Nhà dùng để sinh sống, phân biệt với nơi làm việc.
+nhà phát minh|Người nghĩ ra và chế tạo được những thứ mới chưa từng có.
+nhà riêng|Nhà thuộc riêng một gia đình, không ở chung hay đi thuê.
+nhà rông|Nhà cộng đồng mái cao vút ở làng Tây Nguyên, nơi hội họp, lễ hội.
+nhà sách|Cửa hàng bày bán sách, thường có cả bút vở và đồ dùng học tập.
+nhà sàn|Nhà gác trên hàng cột, sàn cao khỏi mặt đất, hay thấy ở vùng núi.
+nhà tắm|Phòng nhỏ dùng để tắm rửa.
+nhà tập thể|Khu nhà nhiều căn hộ của cơ quan, xí nghiệp cấp cho người làm ở.
+nhà thi đấu|Tòa nhà mái che có sân và khán đài, dùng cho các giải thể thao.
+nhà trai|Họ hàng bên chú rể, mang lễ vật sang nhà gái xin cưới.
+nhà tranh|Nhà lợp bằng rơm rạ hoặc cỏ tranh, ở nông thôn ngày trước.
+nhà trẻ|Nơi gửi con còn nhỏ hơn tuổi mẫu giáo, có người trông nom ban ngày.
+nhà trệt|Nhà xây sát đất không có lầu, cách gọi quen ở miền Nam.
+nhà trọ|Nhà có phòng cho thuê để ở, thường cho sinh viên, người lao động.
+nhà trường|Trường học nói chung, cả nơi dạy học lẫn tập thể thầy trò, nhân viên.
+nhà văn|Người sáng tác truyện, tiểu thuyết, viết văn chương.
+nhà vệ sinh|Phòng có bồn cầu để đi tiêu tiểu và rửa ráy.
+nhà vô địch|Người hay đội đứng đầu, thắng giải cao nhất trong cuộc thi.
+nhà vợ|Gia đình bên vợ của người đàn ông đã cưới.
+nhà vườn|Nhà có vườn rộng bao quanh; cũng chỉ người sống bằng nghề trồng cây trái.
+nhà xe|Doanh nghiệp chạy xe khách; cũng chỉ chỗ có mái che để giữ xe.
+nhà xuất bản|Cơ quan lo việc biên tập, in và phát hành sách.
+nhà xưởng|Nhà rộng dùng làm nơi đặt máy móc, sản xuất.
+nhã nhặn|Lịch sự, nhẹ nhàng và tế nhị khi cư xử.
+nhạc|Âm thanh có giai điệu, tiết tấu do giọng hát hay đàn, trống tạo ra.
+nhạc chuông|Đoạn nhạc phát ra khi điện thoại có cuộc gọi đến.
+nhạc công|Người chơi nhạc cụ trong dàn nhạc hay ban nhạc.
+nhạc cụ|Dụng cụ để đánh, gảy, thổi hay kéo ra tiếng nhạc, như đàn, sáo, trống.
+nhạc nhẹ|Dòng nhạc có giai điệu êm, dễ nghe, thường là các bài hát đại chúng.
+nhạc sống|Âm nhạc do ca sĩ, nhạc công trình diễn trực tiếp, không phát bản ghi.
+nhạc trưởng|Người đứng trước dàn nhạc, dùng tay hoặc đũa để chỉ huy cả dàn.
+nhạc viện|Trường đào tạo chuyên về âm nhạc, dạy biểu diễn và sáng tác.
+nhai|Cử động hàm, cắn đi cắn lại thức ăn cho nhỏ mềm rồi nuốt.
+nhai lại|Ợ thức ăn lên nhai thêm như trâu bò; cũng chỉ việc lặp điều cũ.
+nham thạch|Dòng đá lỏng rực lửa phun khỏi núi lửa, nguội dần lại hóa đá.
+nhàm chán|Lặp đi lặp lại, đơn điệu đến mức khiến người ta không còn hứng thú.
+nhan đề|Dòng chữ ở đầu bài viết, cuốn sách hay bộ phim, gọi tên tác phẩm.
+nhan nhản|Nhiều tới mức đi đâu cũng gặp, nhìn đâu cũng thấy.
+nhan sắc|Vẻ ưa nhìn của gương mặt và dáng người, hay nói về phụ nữ.
+nhàn hạ|Thong thả, ít việc phải làm, không vất vả.
+nhàn nhã|Thư thả, ung dung, không phải vội vàng hay bận rộn.
+nhàn nhạt|Hơi nhạt, vị hoặc màu không đậm lắm.
+nhàn rỗi|Đang rảnh tay, không phải lo việc gì, có thời gian thong thả.
+nhãn|Quả nhỏ vỏ nâu, cùi trắng ngọt; cũng chỉ mảnh giấy ghi thông tin hàng.
+nhãn hiệu|Tên và hình riêng gắn lên hàng hóa để nhận ra hàng của ai.
+nhanh|Có tốc độ cao, mất ít thời gian để làm xong hoặc đi tới.
+nhanh chóng|Diễn ra gọn trong thời gian ngắn, không để chậm trễ hay chờ lâu.
+nhanh gọn|Mau xong và không rườm rà, không thừa bước, thường nói về cách làm việc.
+nhanh lẹ|Mau mắn trong cử động và làm việc, cách nói thường gặp ở miền Nam.
+nhanh nhạy|Nắm bắt và phản ứng nhanh trước tình hình mới.
+nhanh nhẹn|Cử động nhanh và linh hoạt, làm việc tháo vát.
+nhanh tay|Làm động tác bằng tay nhanh, kịp giành được hoặc làm xong việc.
+nhanh trí|Đầu óc lanh lẹ, nghĩ ra cách xử lý ngay khi gặp chuyện bất ngờ.
+nhào lộn|Bật người lên rồi lộn vòng giữa không trung, như trong xiếc hay thể dục.
+nhào nặn|Nhồi đất, bột cho dẻo rồi nặn thành hình; cũng chỉ việc uốn nắn người.
+nháo nhào|Rối loạn, chạy tán loạn mỗi người một hướng, thường khi hoảng sợ.
+nhạt nhẽo|Có vị quá nhạt; cũng chỉ câu chuyện, con người tẻ nhạt, thiếu sức hút.
+nhàu|Có nhiều nếp gấp, nếp nhăn, không còn phẳng, thường nói về vải, giấy.
+nhàu nát|Nhăn nhúm và rách nát vì bị vò hoặc gấp nhiều lần.
+nhảy cẫng|Bật người lên khỏi mặt đất vì mừng rỡ hay phấn khích đột ngột.
+nhảy cóc|Ngồi xổm bật tới như con cóc; cũng có nghĩa bỏ qua bước ở giữa.
+nhảy dây|Trò chơi hay bài tập bật nhảy cho sợi dây quay vòng lướt qua chân.
+nhảy dù|Nhảy từ máy bay xuống, dùng dù để hạ cánh an toàn.
+nhảy múa|Cử động thân thể theo nhịp nhạc để biểu diễn hoặc vui chơi.
+nhảy nhót|Nhảy lên nhảy xuống vui vẻ, không theo bài bản nào.
+nhảy vọt|Tăng hay tiến lên rất nhanh chỉ trong một bước, như giá cả, thành tích.
+nhảy xa|Môn thi bật người khỏi ván giậm, bay về trước rồi đáp xuống hố cát.
+nhạy bén|Nhận biết và phản ứng nhanh, sắc sảo trước sự việc.
+nhạy cảm|Dễ rung động, dễ tự ái; cũng nói về chuyện tế nhị, khó bàn.
+nhắc nhở|Nói cho người khác nhớ hoặc chú ý điều cần làm, cần tránh.
+nhắm nghiền|Nhắm chặt mắt lại, không hé mở chút nào.
+nhăn mặt|Co cơ mặt lại, nhíu mày vì đau, khó chịu hay không bằng lòng.
+nhăn nheo|Có nhiều nếp nhăn, da chùng xuống, thường do tuổi già.
+nhăn nhó|Làm vẻ mặt cau có, khổ sở vì đau đớn hay bực bội.
+nhắn gửi|Gửi lời hỏi thăm, dặn dò tới người ở xa qua người khác.
+nhắn nhủ|Gửi gắm lời dặn dò, khuyên bảo chân tình tới người khác.
+nhắn tin|Gửi lời nhắn bằng chữ, thường qua điện thoại hay ứng dụng.
+nhặt|Cúi xuống cầm từng thứ nằm dưới đất hay rơi vãi lên.
+nhặt nhạnh|Nhặt từng chút một, gom góp những thứ nhỏ lẻ lại.
+nhấc bổng|Nâng hẳn người hoặc vật lên khỏi mặt đất, thường bằng hai tay.
+nhâm nhi|Uống từng ngụm nhỏ, chậm rãi để thưởng thức, thường là trà, rượu.
+nhầm lẫn|Lấy cái này làm cái kia, hiểu hoặc làm sai do không phân biệt rõ.
+nhấm nháp|Cắn từng miếng nhỏ, ăn chậm rãi để cảm nhận hương vị.
+nhân ái|Có lòng thương yêu và sẵn lòng giúp đỡ con người.
+nhân cách|Tư cách và lối sống tạo nên con người thật của một ai.
+nhân công|Người làm thuê, sức lao động bỏ ra để làm một công việc.
+nhân đạo|Biết thương người, tôn trọng và bảo vệ quyền sống của con người.
+nhân hậu|Hiền lành, hay thương người và sẵn lòng bỏ qua lỗi của người khác.
+nhân loại|Tất cả con người trên Trái Đất gộp lại, qua mọi thời đại.
+nhân lực|Số người lao động và sức làm việc mà một nơi có thể huy động.
+nhân nhượng|Chịu bớt phần mình, chấp nhận thiệt một chút để tránh căng thẳng.
+nhân sâm|Cây thuốc có rễ củ to, hình dáng hơi giống người, dùng làm thuốc bổ.
+nhân tài|Người có năng lực vượt trội trong một lĩnh vực, hiếm gặp.
+nhân tạo|Do con người làm ra, thường để thay hay mô phỏng thứ tự nhiên.
+nhân tố|Điều hay người góp phần làm nên kết quả của một việc.
+nhân từ|Hiền hậu, rộng lượng, hay thương xót và tha thứ cho người khác.
+nhân vật|Người hay con vật xuất hiện và hành động trong truyện, phim, kịch.
+nhân viên|Người làm công ăn lương ở cửa hàng, công ty hay cơ quan.
+nhẫn cưới|Nhẫn vợ chồng trao nhau khi cưới, thường đeo ở ngón áp út.
+nhẫn nại|Bền bỉ chịu đựng, kiên trì làm việc khó mà không nản.
+nhẫn nhịn|Cố nén lòng, chịu đựng điều không vừa ý để tránh xích mích.
+nhấn mạnh|Nói rõ, nói mạnh vào điều gì để người khác chú ý.
+nhận biết|Nhìn, nghe hay cảm thấy mà biết được đó là gì.
+nhận dạng|Dựa vào đặc điểm bên ngoài để xác định một người hay vật.
+nhận diện|Xác định rõ một đối tượng hay vấn đề qua các dấu hiệu riêng.
+nhận lời|Trả lời đồng ý khi được mời hay được nhờ việc gì.
+nhận ra|Chợt thấy và biết được điều trước đó chưa biết hoặc chưa để ý.
+nhận thấy|Qua quan sát mà thấy được, hiểu được điều gì.
+nhận thức|Sự hiểu biết về sự vật, có được nhờ suy nghĩ và trải nghiệm.
+nhận việc|Bắt đầu nhận một công việc được giao hoặc vào làm ở nơi mới.
+nhận xét|Nói ra điều mình thấy và đánh giá về một người, bài làm hay việc.
+nhấp nháy|Lúc sáng lúc tắt liên hồi, như đèn trang trí ngày lễ.
+nhấp nhô|Chỗ cao chỗ thấp nối nhau không đều, như sóng biển hay dãy đồi.
+nhập|Đưa vào bên trong, như đưa hàng vào kho hay gõ dữ liệu vào máy.
+nhập cuộc|Bắt tay vào cuộc chơi hay công việc đang diễn ra cùng người khác.
+nhập học|Làm thủ tục rồi bắt đầu học ở trường mới, thường vào đầu năm học.
+nhập hội|Xin vào làm thành viên của một hội hay nhóm người có chung sở thích.
+nhập khẩu|Đưa hàng hóa từ nước khác về bán hay dùng trong nước.
+nhập tâm|Ghi nhớ sâu đến mức thuộc lòng, thấm vào trong đầu.
+nhập vai|Diễn viên hóa thân, sống trong tính cách của nhân vật mình đóng.
+nhất định|Chắc chắn, quyết không đổi ý; cũng có nghĩa ở một mức có giới hạn.
+nhất là|Từ dùng để nhấn mạnh trường hợp nổi bật hơn cả trong số đã nêu.
+nhất quán|Trước sau như một, các phần ăn khớp với nhau, không tự mâu thuẫn.
+nhất quyết|Kiên quyết đến cùng, không chịu đổi ý dù bị can ngăn.
+nhất thời|Chỉ xảy ra trong một lúc, không lâu dài.
+nhất trí|Cùng đồng ý, có chung ý kiến với nhau.
+nhật thực|Lúc Mặt Trăng lướt ngang, che bớt hay che kín Mặt Trời ban ngày.
+nhe răng|Hở môi để lộ răng ra, khi cười hay khi gầm gừ dọa nạt.
+nhè nhẹ|Hơi nhẹ, ở mức vừa phải, êm và không mạnh.
+nhẹ dạ|Dễ tin người, dễ bị lừa hay bị dụ dỗ.
+nhẹ nhàng|Không nặng nề, êm ái, dịu dàng trong cử chỉ hay lời nói.
+nhẹ nhõm|Thảnh thơi, thở phào khi nỗi lo vừa được trút khỏi lòng.
+nhẹ tay|Dùng lực nhẹ, cẩn thận khi làm; cũng chỉ việc xử lý khoan dung.
+nheo|Khép bớt mi mắt lại cho mắt hẹp đi, như khi nhìn chỗ chói.
+nhét|Ấn mạnh, đẩy vật vào chỗ hẹp hoặc chỗ đã chật.
+nhếch|Hơi kéo lệch hoặc nhích lên một chút, thường nói về khóe miệng.
+nhếch mép|Kéo lệch một bên khóe miệng, thường để tỏ ý coi thường hay cười khẩy.
+nhện|Con vật tám chân, thường nhỏ, nhiều loài nhả tơ giăng lưới bắt sâu bọ.
+nhi đồng|Trẻ em ở lứa tuổi nhỏ, khoảng tuổi mẫu giáo và đầu tiểu học.
+nhí nhảnh|Vui tươi, lanh lợi, hay cười nói líu lo, thường nói về người trẻ.
+nhích|Dịch chuyển một chút, chậm và từng ít một.
+nhiệm vụ|Công việc được giao, phải làm cho xong.
+nhiên liệu|Thứ được đốt để lấy nhiệt hay chạy máy, như xăng, dầu, than, củi.
+nhiếp ảnh|Nghề hay nghệ thuật chụp ảnh bằng máy ảnh.
+nhiếp ảnh gia|Người chụp ảnh chuyên nghiệp hoặc làm nghệ thuật bằng ảnh.
+nhiệt|Hơi nóng, dạng năng lượng làm cho vật ấm hoặc nóng lên.
+nhiệt độ|Mức nóng hay lạnh của không khí, cơ thể hay vật, đo bằng độ.
+nhiệt đới|Dải đất hai bên xích đạo, nóng quanh năm, thường có mùa mưa rõ rệt.
+nhiệt huyết|Lòng hăng say, sôi nổi hết mình với công việc hay lý tưởng.
+nhiệt kế|Dụng cụ cho biết độ nóng lạnh, như ống kẹp nách khi bị sốt.
+nhiệt tình|Sốt sắng, hăng hái giúp đỡ hay làm việc hết lòng.
+nhiều|Có số lượng hay khối lượng lớn, trái với ít.
+nhiều chuyện|Hay nói chuyện người khác, thích xen vào việc không phải của mình.
+nhiều lời|Nói nhiều, hay nói dài dòng hoặc nói những điều không cần thiết.
+nhím|Con thú nhỏ có lông cứng nhọn như gai, xù lên khi gặp nguy.
+nhím biển|Con vật biển thân tròn phủ gai tua tủa, sống trên đá ở đáy biển.
+nhìn|Đưa mắt hướng về một phía để thấy người hay vật.
+nhìn nhận|Đánh giá một vấn đề theo cách hiểu riêng; cũng chỉ việc thừa nhận.
+nhìn thấy|Dùng mắt mà thấy được người, vật hay sự việc.
+nhịn đói|Chịu không ăn dù bụng đói, do thiếu thốn hay tự chọn.
+nhỉnh|Lớn hơn hoặc cao hơn một chút so với cái khác.
+nhịp|Khoảng đều đặn mà tiếng gõ hay động tác lặp lại, như tim đập.
+nhịp điệu|Lối mạnh nhẹ, nhanh chậm luân phiên trong nhạc, thơ hay điệu múa.
+nhịp độ|Mức gấp gáp hay thong thả của một quá trình, như làm việc, tăng trưởng.
+nhíu|Chau hai lông mày lại gần nhau, thường khi suy nghĩ hay khó chịu.
+nho khô|Quả nho phơi hoặc sấy khô, vị ngọt, dùng ăn vặt hay làm bánh.
+nho nhỏ|Hơi nhỏ, kích thước khá bé, trông xinh xắn.
+nhỏ bé|Có kích thước, tầm vóc hay vai trò nhỏ, không đáng kể.
+nhỏ con|Có vóc người thấp bé so với người cùng tuổi.
+nhỏ giọt|Rơi xuống từng giọt một; cũng chỉ việc cấp từng ít một, không đều.
+nhỏ gọn|Bé, ít chiếm chỗ và dễ mang theo, thường nói về đồ dùng.
+nhỏ hẹp|Chật, ít khoảng trống; cũng nói về phạm vi hay tầm nhìn bị bó buộc.
+nhỏ lửa|Đun với ngọn lửa yếu để món ăn chín từ từ.
+nhỏ người|Có thân hình mảnh, khung người nhỏ, không to lớn.
+nhỏ nhắn|Nhỏ và xinh xắn, cân đối dễ thương.
+nhỏ nhặt|Vụn vặt, chẳng đáng để bận lòng, như một lỗi vặt hay việc cỏn con.
+nhỏ nhẹ|Nói năng hoặc cử chỉ khẽ khàng, dịu dàng.
+nhỏ tuổi|Ít tuổi đời, thường nói về trẻ em hay người kém tuổi trong nhóm.
+nhỏ xíu|Rất nhỏ, bé đến mức khó nhìn thấy rõ.
+nhóc|Đứa trẻ nhỏ, cách gọi thân mật hay hơi coi thường.
+nhóc con|Cách gọi trêu đùa hoặc thân mật một đứa trẻ còn bé.
+nhọc nhằn|Vất vả và mệt nhọc, phải chịu đựng nhiều khó khăn.
+nhóm trưởng|Người được giao chia việc, đôn đốc và thay mặt các thành viên trong nhóm.
+nhón chân|Nhấc gót, đứng hoặc bước bằng đầu ngón chân.
+nhọn|Thon dần lại thành một đầu bén, dễ đâm thủng, như mũi kim, gai.
+nhọn hoắt|Rất nhọn, đầu sắc đến mức dễ đâm thủng.
+nhổ neo|Kéo neo lên khỏi đáy nước để tàu thuyền bắt đầu rời bến.
+nhồi|Nhét chặt cho đầy bên trong; cũng chỉ việc bóp trộn bột cho dẻo.
+nhồi nhét|Nhét vào quá nhiều, thường chỉ việc ép học dồn dập kiến thức.
+nhôm|Kim loại nhẹ màu trắng bạc, dùng làm nồi, khung cửa, dây điện.
+nhộn nhịp|Đông vui, tấp nập, có nhiều người qua lại và hoạt động.
+nhộng|Côn trùng ở chặng biến hình, nằm giữa sâu non và con trưởng thành.
+nhốt|Để người hay con vật trong lồng, phòng khóa kín cho khỏi ra ngoài.
+nhờ cậy|Trông vào người khác và xin họ giúp mình một việc khó.
+nhờ vả|Hay nhờ người khác giúp việc, thường mang ý phiền hà.
+nhớ đời|Đáng nhớ mãi không quên, thường là bài học hay chuyện khó chịu.
+nhớ lại|Làm cho điều đã qua hiện lên lại trong trí óc.
+nhớ mong|Nhớ và mong ngóng người ở xa, mong được gặp lại.
+nhớ nhà|Mong được về với gia đình, quê hương khi đang ở xa.
+nhớ nhung|Nhớ da diết, thường nói về người yêu đang xa cách.
+nhớ ơn|Không quên những gì người khác đã giúp mình, lòng mong đền đáp.
+nhớ thương|Vừa nhớ vừa thương, nghĩ tới người thân yêu ở xa hay đã khuất.
+nhợt nhạt|Thiếu màu, tái đi, thường nói về da mặt hay màu sắc.
+nhu cầu|Những gì một người hay một nơi cần tới và mong có được.
+nhuần nhuyễn|Thành thạo, thuần thục đến mức làm trôi chảy, tự nhiên.
+nhuận|Có thêm một ngày hay một tháng chèn vào lịch so với năm thường.
+nhúc nhích|Cử động khẽ, dịch chuyển một chút tại chỗ.
+nhúm|Lượng rất nhỏ vừa kẹp giữa mấy đầu ngón tay, như muối, đường.
+nhún|Khuỵu gối hạ thấp người rồi đẩy lên, như khi lấy đà nhảy.
+nhún nhảy|Nhún người lên xuống nhịp nhàng, thường theo tiếng nhạc.
+nhún vai|Nhấc hai vai lên rồi buông, tỏ ý chịu thua, không biết hay mặc kệ.
+nhung|Loại vải mặt phủ lớp lông ngắn mịn, sờ thấy mượt và êm.
+nhuộm|Cho thuốc màu thấm vào vải, sợi hay tóc để đổi sang màu khác.
+nhút nhát|Rụt rè, hay sợ sệt, ngại tiếp xúc với người lạ.
+nhuyễn|Rất mịn, nhỏ và nhão, thường nói về thức ăn đã xay hay nghiền.
+như nhau|Giống hệt hay ngang bằng, không bên nào hơn kém bên nào.
+như thế|Từ dùng để chỉ cách thức hoặc sự việc vừa được nhắc tới.
+như ý|Đúng với điều mình mong, thường gặp trong lời chúc đầu năm.
+nhựa|Chất dẻo nhân tạo làm đồ dùng; cũng chỉ chất dính tiết ra ở cây.
+nhựa đường|Chất đen, dẻo và dính, dùng trộn với đá để rải mặt đường.
+nhựa thông|Chất dính, thơm tiết ra từ cây thông, dùng làm dầu, sơn.
+nhược điểm|Mặt yếu kém, chỗ chưa tốt của người hay sự vật.
+nhường|Để cho người khác hưởng hoặc dùng phần của mình.
+nhường nhịn|Chịu thiệt, nhường phần hơn cho người khác để giữ hòa khí.
+ních|Nhét cho thật đầy, thường nói về việc ăn no căng bụng.
+niềm nở|Vui vẻ, ân cần khi tiếp đón người khác.
+niềm tin|Sự tin tưởng vào người, vào điều gì hay vào bản thân.
+niềm vui|Cảm giác vui sướng, hài lòng trong lòng.
+niêu|Chiếc nồi đất bé, hay dùng nấu cơm cho cháy giòn hoặc kho cá.
+níu kéo|Cố giữ lại, không muốn để mất người hoặc điều gì đó.
+no đủ|Đủ ăn đủ mặc, không thiếu thốn về vật chất.
+no nê|Ăn uống no căng, thỏa thuê đến mức không ăn thêm được.
+nóc nhà|Phần trên cùng của mái nhà, chỗ hai mặt mái gặp nhau.
+nọc độc|Chất độc tiết ra từ một số con vật như rắn, ong, bò cạp.
+noi gương|Làm theo việc tốt, đức tính của người được coi là mẫu mực.
+nói bừa|Buông lời không suy xét, chẳng biết đúng sai hay có căn cứ gì.
+nói chơi|Nói cho vui miệng, không có ý làm thật.
+nói chuyện|Trò chuyện, trao đổi bằng lời với nhau.
+nói đùa|Nói điều không thật hay buồn cười để trêu, tạo không khí vui.
+nói giỡn|Cách nói ở miền Nam chỉ việc đùa cho vui, không nghiêm túc.
+nói khéo|Nói một cách tế nhị, dễ nghe để người khác vừa lòng.
+nói lên|Bày tỏ ra điều mình nghĩ; cũng có nghĩa cho thấy một điều gì.
+nói năng|Dùng lời để trò chuyện, xét về cách ăn nói lễ độ hay cộc cằn.
+nói ngọt|Dùng lời êm tai, khéo léo để dỗ dành hay thuyết phục ai.
+nói nhỏ|Nói với giọng nhỏ, chỉ đủ người ở gần nghe.
+nói thẳng|Nói thật, không vòng vo, không né tránh.
+nói thầm|Nói rất khẽ, gần như không thành tiếng, sát tai người nghe.
+non nớt|Còn non, chưa đủ kinh nghiệm hay sức lực.
+nón lá|Chiếc nón hình chóp chằm bằng lá, đội để che nắng mưa.
+nòng nọc|Con non của ếch, nhái, thân tròn đuôi dài, bơi lội dưới nước.
+nóng|Có nhiệt cao, ở gần thấy hầm hập, chạm vào có thể bỏng rát.
+nóng bức|Nóng gay gắt, ngột ngạt khó chịu, thường nói về thời tiết.
+nóng bừng|Nóng lên đột ngột, thường nói về mặt hay cơ thể khi xấu hổ, giận.
+nóng chảy|Bị nung tới mức đổi từ rắn thành lỏng, như sáp hay sắt trong lò.
+nóng giận|Bực tức, nổi cơn giận, khó kiềm chế bản thân.
+nóng hổi|Còn bốc hơi vì vừa ra lò; cũng nói về tin vừa xảy ra.
+nóng lòng|Bồn chồn, đứng ngồi không yên vì mong một điều đến thật mau.
+nóng nảy|Dễ nổi nóng, hành động vội vàng thiếu bình tĩnh.
+nóng nực|Nóng đến mức bứt rứt, đổ mồ hôi, khó chịu trong người.
+nóng tính|Có tính khí dễ cáu giận, hay nổi nóng với người khác.
+nóng vội|Vội vàng, muốn làm xong ngay mà thiếu suy nghĩ.
+nô đùa|Chạy nhảy, trêu chọc nhau vui vẻ, thường nói về trẻ con.
+nổ máy|Cho động cơ xe hay máy bắt đầu chạy, nghe tiếng máy rền lên.
+nỗ lực|Dồn sức và tâm trí vượt khó để đạt điều mình muốn.
+nồi áp suất|Nồi có nắp đậy kín, tạo áp suất cao để nấu chín nhanh.
+nồi cơm|Nồi dùng riêng để nấu cơm cho bữa ăn gia đình.
+nồi cơm điện|Nồi nấu cơm chạy bằng điện, tự giữ ấm khi cơm đã chín.
+nồi đất|Nồi nung từ đất sét, thường dùng để kho, nấu cho thơm.
+nồi hầm|Nồi thường có thành dày, nắp kín, dùng ninh xương, thịt lâu cho nhừ.
+nồi hấp|Nồi có tầng xửng đục lỗ, dùng hơi nước để hấp chín thức ăn.
+nồi hơi|Thùng kín bằng kim loại đun sôi nước lấy hơi để chạy máy hay sưởi.
+nồi niêu|Các loại nồi và đồ đun nấu trong bếp nói chung.
+nổi bật|Dễ thấy, nổi lên rõ hơn so với xung quanh.
+nổi cáu|Bỗng bực bội, gắt gỏng vì điều không vừa ý.
+nổi nóng|Đột nhiên giận dữ, mất bình tĩnh, nói to hay gay gắt.
+nổi tiếng|Được nhiều người biết tới và nhắc đến.
+nổi trội|Vượt hơn hẳn những người hay vật khác cùng loại.
+nỗi niềm|Những điều chất chứa trong lòng, khó nói thành lời với ai.
+nối dài|Nối thêm một đoạn để làm cho dài ra.
+nối đuôi|Đi hay xếp sát sau nhau thành một hàng dài, như xe kẹt trên đường.
+nối liền|Nối vào nhau thành một dải liên tục, không bị đứt.
+nối mạng|Kết nối máy tính hay điện thoại vào mạng để dùng dịch vụ trực tuyến.
+nối tiếp|Đi liền theo sau và tiếp tục cái trước, không để đứt đoạn.
+nội dung|Những điều được trình bày trong bài viết, bộ phim hay câu chuyện.
+nội địa|Thuộc về bên trong một nước, không ra nước ngoài, như hàng hay chuyến bay.
+nội ngoại|Cả hai bên họ hàng, phía cha và phía mẹ.
+nội tâm|Đời sống suy nghĩ, cảm xúc bên trong một người, người ngoài khó thấy.
+nội thành|Phần lõi đô thị của thành phố, gồm các quận, khác vùng ngoại thành.
+nội thất|Bàn ghế, tủ giường và cách bày biện bên trong ngôi nhà, căn phòng.
+nội trợ|Công việc nấu nướng, dọn dẹp, lo toan trong gia đình.
+nôm na|Đơn giản, dễ hiểu, theo lối nói thông thường.
+nôn nóng|Sốt ruột, vội muốn làm hay biết ngay.
+nông dân|Người làm nghề trồng trọt, chăn nuôi ở nông thôn.
+nông nghiệp|Nghề làm ruộng, trồng cây, nuôi gia súc để làm ra lương thực, thực phẩm.
+nông sản|Lúa gạo, rau quả và các sản phẩm khác do làm nông mà có.
+nông thôn|Vùng quê, nơi phần đông dân sống bằng nghề nông.
+nông trại|Khu đất trồng trọt và chăn nuôi, có nhà cửa và chuồng trại.
+nồng ấm|Ấm áp, thắm thiết, thường nói về tình cảm.
+nồng hậu|Nhiệt tình và chân thành, thường nói về sự đón tiếp.
+nồng nàn|Đằm thắm, sâu đậm, thường nói về tình yêu hay hương thơm.
+nồng nặc|Có mùi rất nặng, xộc lên khó chịu.
+nồng nhiệt|Sôi nổi và hăng hái, như khi hoan nghênh, cổ vũ.
+nốt nhạc|Kí hiệu ghi độ cao và độ dài của một âm trong bản nhạc.
+nốt ruồi|Chấm nhỏ màu đen hay nâu nổi trên da.
+nở hoa|Nụ bung cánh xòe ra, cây bắt đầu ra hoa.
+nở nang|Phát triển đầy đặn, to khỏe, thường nói về cơ thể.
+nở rộ|Nở nhiều và đồng loạt cùng lúc; cũng chỉ sự phát triển mạnh, rầm rộ.
+nới lỏng|Làm cho dây, nút bớt chặt; cũng chỉ việc bớt khắt khe trong quy định.
+nụ cười|Nét mặt vui tươi khi khóe môi cong lên lúc cười.
+núi băng|Tảng băng khổng lồ trôi trên biển lạnh, phần lớn khuất dưới nước.
+núi lửa|Ngọn núi đôi khi phun tro khói và đá nóng chảy từ lòng đất lên.
+núi non|Vùng có nhiều núi, cảnh núi đồi trùng điệp.
+núi rừng|Vùng đất có núi cao và rừng rậm bao phủ.
+nung chảy|Đốt nóng đến mức vật rắn tan thành chất lỏng.
+nũng nịu|Làm ra vẻ hờn dỗi, đòi được chiều, như trẻ con.
+nuôi|Chăm lo cái ăn, chỗ ở để một người hay con vật sống và lớn.
+nuôi dạy|Chăm sóc và dạy dỗ trẻ cho đến khi lớn khôn.
+nuôi dưỡng|Chăm sóc cho sống và lớn lên; cũng chỉ việc vun đắp ước mơ.
+nuôi nấng|Chăm lo cái ăn cái mặc cho con cái khôn lớn.
+nuôi sống|Cung cấp cái ăn, cái cần để duy trì sự sống cho ai.
+nuôi trồng|Chăn nuôi và trồng trọt, thường nói về thủy sản.
+nuối tiếc|Tiếc mãi điều đã qua hay đã mất, lòng không muốn buông.
+nuông chiều|Chiều theo mọi ý muốn, thường là đối với con trẻ.
+nuốt|Cho thức ăn, nước uống từ miệng trôi xuống họng.
+nuốt chửng|Nuốt cả miếng to một lúc, không nhai.
+nút áo|Hạt nhỏ đính trên áo, cài qua khuyết để đóng vạt áo lại.
+nút bấm|Bộ phận nhỏ trên máy móc, ấn vào để bật, tắt hay điều khiển.
+nữ sinh|Học trò hay sinh viên là con gái, đang theo học ở trường.
+nữ trang|Đồ trang sức đeo trên người như nhẫn, vòng, dây chuyền, bông tai.
+nửa chừng|Lưng chừng, đang làm dở dang chưa xong thì dừng.
+nửa đêm|Khoảng thời gian giữa đêm, khi trời đã rất khuya.
+nửa đường|Quãng giữa chặng đường, khi chưa tới nơi định đến.
+nửa mùa|Nửa vời, mới biết sơ sài mà đã làm ra vẻ, thường mang ý chê.
+nửa vời|Không dứt khoát, làm chỉ được một phần, thiếu triệt để.
+nực cười|Đáng buồn cười vì vô lý hay lố bịch.
+nước|Chất lỏng trong của mưa, sông hồ, để uống; cũng chỉ một quốc gia.
+nước biển|Nước mặn chứa nhiều muối, có trong biển và đại dương.
+nước bọt|Chất lỏng tiết ra trong miệng giúp làm mềm thức ăn.
+nước cam|Đồ uống màu vàng cam, vắt hay ép từ múi cam, vị chua ngọt.
+nước canh|Phần nước trong món canh, thường chan vào cơm.
+nước cất|Nước đã chưng cất, tinh khiết, dùng trong phòng thí nghiệm hay y tế.
+nước chanh|Thức uống pha từ chanh vắt, đường và nước, thường thêm đá cho mát.
+nước chấm|Thứ nước pha có vị mặn, chua hay ngọt, dùng để chấm thức ăn.
+nước chè|Nước hãm từ lá chè tươi hoặc khô, miền Nam thường gọi là trà.
+nước cốt|Phần nước đậm đặc vắt ra từ cùi dừa, quả chanh, chưa pha thêm nước.
+nước cốt dừa|Nước béo trắng đục vắt từ cùi dừa nạo, dùng nấu chè và món ăn.
+nước cờ|Một lần đi quân trong ván cờ; cũng chỉ cách tính toán, hành động.
+nước dùng|Phần nước ninh kĩ cho đậm ngọt, dùng chan phở, bún, miến.
+nước dừa|Chất nước trong ruột quả dừa, ngọt mát, thường dùng để uống.
+nước đá|Những viên nước đông cứng, thả vào ly cho đồ uống mát lạnh.
+nước ép|Nước vắt ra bằng cách ép trái cây hay rau.
+nước giải khát|Các thứ đồ uống dùng cho đỡ khát, thường mát và có vị ngọt.
+nước hoa|Dung dịch thơm trong lọ nhỏ, xịt lên da hay áo để tỏa hương.
+nước khoáng|Nước từ nguồn sâu trong lòng đất, chứa nhiều chất khoáng, dùng để uống.
+nước lã|Nước lấy trực tiếp từ nguồn, chưa đun sôi.
+nước lạnh|Nước có nhiệt độ thấp, mát hoặc buốt khi chạm vào.
+nước lèo|Nước dùng chan vào hủ tiếu, bún, cách gọi ở miền Nam.
+nước lọc|Nước trắng để uống, không pha đường hay hương vị gì.
+nước màu|Đường thắng tới sẫm nâu để tạo màu món kho, cách gọi ở miền Nam.
+nước máy|Nước xử lý ở nhà máy rồi dẫn theo ống tới vòi từng nhà.
+nước mắm|Nước chấm mặn làm từ cá ủ với muối lâu ngày.
+nước mặn|Nước có vị mặn do nhiều muối, như nước biển.
+nước mắt|Giọt lệ chảy ra khi khóc, cay mắt hay quá xúc động.
+nước muối|Nước có hòa muối, dùng súc miệng hay rửa vết thương.
+nước mưa|Nước rơi xuống từ mây khi trời mưa, có thể hứng để dùng.
+nước ngầm|Nước tích trong các lớp đất đá sâu, thường lấy lên bằng giếng khoan.
+nước ngoài|Các quốc gia khác ngoài đất nước mình, như khi đi du học, du lịch.
+nước ngọt|Đồ uống pha ngọt, có thể có ga; cũng chỉ nước sông hồ không mặn.
+nước rút|Chặng cuối cần dồn hết sức tăng tốc để hoàn thành.
+nước sạch|Nước không lẫn bẩn hay chất độc, đủ an toàn để tắm giặt, nấu ăn.
+nước sôi|Nước đã đun tới lúc sủi bọt, rất nóng.
+nước suối|Nước chảy từ suối; cũng chỉ nước uống đóng chai, theo cách gọi miền Nam.
+nước trà|Đồ uống pha từ lá trà đã sao khô, có vị chát nhẹ.
+nước tương|Nước chấm nâu sẫm, vị mặn, ủ từ đậu nành, còn gọi là xì dầu.
+nước uống|Thứ nước dùng để uống, đã đủ sạch cho cơ thể.
+nước vo gạo|Nước trắng đục còn lại sau khi vo gạo, có thể dùng tưới cây.
+nườm nượp|Đông đúc, liên tiếp không ngớt, thường nói về người đi lại.
+nương tựa|Dựa vào người khác để được che chở, giúp đỡ.
+nướng|Để thức ăn sát lửa than hay trong lò cho chín vàng, dậy mùi thơm.
+nứt nẻ|Khô tới nỗi rạn thành nhiều đường, như ruộng hạn hay môi ngày rét.
+oách|Trông sang và oai, gây ấn tượng, cách nói thân mật.
+oai phong|Có dáng vẻ uy nghi, mạnh mẽ khiến người khác nể.
+oai vệ|Có dáng điệu trịnh trọng, bệ vệ, ra vẻ quyền thế.
+oải hương|Cây có những bông hoa tím li ti, hương dịu, thường chiết làm tinh dầu.
+oang oang|Tiếng nói to, vang và rõ, như tiếng người quát hay nói qua loa.
+oi bức|Nóng ẩm, không khí đặc và lặng gió, thường trước cơn mưa.
+ong bắp cày|Loài ong to, thân vằn vàng đen, có nọc đốt rất đau.
+ong chúa|Con ong cái lo việc đẻ trứng cho cả đàn, thân dài hơn ong thợ.
+ong mật|Loài ong sống thành đàn, hút mật hoa để làm mật.
+ong thợ|Con ong làm việc trong đàn, đi kiếm mật, xây tổ và nuôi ấu trùng.
+ong vàng|Loài ong có thân màu vàng, hay làm tổ trên cây, đốt đau.
+ong vò vẽ|Loài ong lớn làm tổ tròn treo trên cành cây, đốt rất đau.
+óng ả|Mượt mà và óng ánh, thường nói về tóc hay vải.
+óng ánh|Lấp lánh phản chiếu nhiều sắc, như bong bóng xà phòng hay giọt sương.
+ọp ẹp|Cũ nát, lỏng lẻo, dễ đổ hay gãy.
+ô liu|Cây có quả nhỏ hình bầu dục, dùng ăn và ép lấy dầu.
+ô long|Loại trà ủ lên men một phần, lá thường cuộn tròn, nước vàng, hương dịu.
+ô mai|Món ăn vặt từ quả mơ, mận, sấu ướp đường hoặc muối rồi sấy khô.
+ô nhiễm|Bị làm bẩn bởi chất độc hại, thường nói về không khí, nước hay đất.
+ô tô điện|Xe hơi chạy bằng điện trữ trong pin, phải cắm sạc thay vì đổ xăng.
+ô vuông|Khoảng hình vuông nhỏ được kẻ trên giấy, trên bảng hay mặt sàn.
+ổ bánh|Khối bánh nguyên chưa cắt lát, thường là bánh mì hoặc bánh nướng.
+ổ cắm|Thiết bị nối với nguồn điện, có lỗ để cắm phích của đồ dùng điện.
+ổ cứng|Bộ phận lưu giữ dữ liệu lâu dài bên trong máy tính.
+ổ đĩa|Bộ phận của máy tính dùng để đọc và ghi dữ liệu trên đĩa.
+ổ đĩa cứng|Thiết bị lưu dữ liệu máy tính, thường gồm đĩa từ quay trong vỏ kín.
+ổ điện|Bộ lỗ cắm điện gắn trên tường hoặc kéo dây rời, thường có nhiều lỗ.
+ổ voi|Chỗ mặt đường bị lún vỡ thành hố to và sâu.
+ốc bươu|Loài ốc nước ngọt vỏ to tròn, sống ở ao ruộng, thường luộc ăn.
+ốc đảo|Khoảng đất có nguồn nước, cây cối xanh tươi nằm lọt giữa sa mạc.
+ốc hương|Loài ốc biển vỏ có đốm nâu, thịt thơm, thường nướng hoặc hấp.
+ốc quế|Vỏ bánh giòn hình nón, dùng để đựng kem.
+ốc sên|Con vật thân mềm có vỏ xoắn, bò chậm, sống ở nơi ẩm ướt.
+ốc vít|Chi tiết kim loại có ren xoắn, vặn vào để giữ chặt các vật.
+ôm ấp|Ôm vào lòng trìu mến; cũng chỉ việc nuôi giữ ước mơ trong lòng.
+ôm đồm|Gánh lấy quá nhiều việc cùng lúc, muốn tự làm hết nên khó làm tốt.
+ôm hôn|Vừa ôm vừa hôn để bày tỏ tình cảm thân thiết.
+ôn luyện|Học lại và làm nhiều bài tập để nắm chắc kiến thức.
+ôn tập|Học lại, làm lại bài đã học cho nhớ kĩ, thường trước kì kiểm tra.
+ôn thi|Học lại kiến thức để chuẩn bị cho kì thi sắp tới.
+ồn ào|Có nhiều tiếng động lớn và lộn xộn, gây khó chịu.
+ổn áp|Máy san điện lưới chập chờn thành dòng đều để đồ điện chạy êm.
+ổn định|Yên ổn, đều đặn theo thời gian, không lên xuống thất thường.
+ông bà|Cha mẹ của bố hay mẹ mình; cũng chỉ chung tổ tiên các đời trước.
+ông bầu|Người tổ chức, quản lý và lo chi phí cho nghệ sĩ hay đội bóng.
+ông cha|Lớp người đời trước đã truyền lại cho con cháu nếp sống, kinh nghiệm.
+ông già|Người đàn ông đã già; cũng là cách con gọi thân mật cha mình.
+ông lão|Người đàn ông già, cách gọi hay gặp trong truyện kể.
+ông ngoại|Người đàn ông là cha của mẹ mình.
+ông nội|Người đàn ông là cha của bố mình.
+ông xã|Cách vợ gọi thân mật chồng mình.
+ống bơm|Dụng cụ hình ống có tay đẩy, dùng bơm hơi vào lốp xe, quả bóng.
+ống chân|Đoạn chân nằm giữa đầu gối và mắt cá, mặt trước sát xương.
+ống chỉ|Lõi tròn bằng gỗ hoặc nhựa, có chỉ may quấn quanh.
+ống dẫn|Đường ống dài rỗng ruột, chở nước, khí hay dầu đi xa.
+ống hút|Ống nhỏ và dài, thường bằng nhựa, dùng để hút đồ uống.
+ống khói|Ống cao vươn khỏi mái nhà hay nhà máy để khói bay lên trời.
+ống kính|Bộ phận hình trụ lắp thấu kính trên máy ảnh, máy quay, giúp thu hình.
+ống nghiệm|Ống thủy tinh nhỏ, một đầu kín, dùng làm thí nghiệm hóa học.
+ống nhỏ giọt|Ống nhỏ có núm cao su, dùng để hút và nhỏ chất lỏng từng giọt.
+ống nhòm|Dụng cụ thường có hai ống áp vào mắt, giúp nhìn rõ vật ở xa.
+ống quần|Phần của quần hình ống bao lấy mỗi chân.
+ống sáo|Ống thường bằng trúc khoét lỗ, thổi và bấm ngón để ra tiếng nhạc.
+ống tay|Cách nói gọn chỉ phần áo hình ống bao lấy cánh tay.
+ống tay áo|Phần vải hình ống trên áo để xỏ cánh tay vào, may dài hay ngắn.
+ốp lát|Gắn gạch, đá lên tường và sàn để trang trí và bảo vệ bề mặt.
+ở lại|Không đi mà tiếp tục lưu lại nơi đang có mặt.
+ở riêng|Dọn ra khỏi nhà cha mẹ để tự lo cuộc sống, thường sau khi cưới.
+ở trần|Không mặc áo, để lộ phần thân trên.
+ở trọ|Thuê phòng của người khác để sống tạm khi đi học, đi làm xa nhà.
+ớt bột|Ớt phơi khô rồi xay mịn, tạo vị cay và màu đỏ cho món ăn.
+ớt chuông|Loại ớt quả to hình chuông, không cay, có màu xanh, đỏ hay vàng.
+ớt ngọt|Các loại ớt có vị ngọt, ít hoặc không cay, thường dùng để xào nấu.
+pha chế|Trộn các thành phần theo cách nhất định để làm đồ uống hay thuốc.
+pha lê|Thủy tinh trong vắt, thường mài nhiều mặt lấp lánh, làm ly hay đèn chùm.
+pha loãng|Thêm nước hay chất lỏng khác để làm giảm độ đậm đặc.
+pha trò|Bày ra câu nói hay điệu bộ ngộ nghĩnh để chọc cười mọi người.
+pha trộn|Cho nhiều thứ khác nhau hòa lẫn vào nhau, như màu, vị hay phong cách.
+phá bỏ|Phá đi cho mất hẳn, như nhà cũ hay lề lối đã lỗi thời.
+phá cách|Làm khác lối thông thường để tạo nét mới lạ, thường nói về phong cách.
+phá hỏng|Làm cho hư hỏng, không còn dùng được hay không thành.
+phá lấu|Món lòng heo hoặc bò hầm với ngũ vị hương và nước dừa.
+phá vỡ|Làm cho tan vỡ, không còn nguyên vẹn hay giữ được như trước.
+phác thảo|Vẽ hoặc viết những nét chính ban đầu của bức tranh hay kế hoạch.
+phai|Mất dần màu sắc hoặc độ đậm, trở nên nhạt đi.
+phai màu|Bị nhạt màu dần, thường do giặt nhiều hay phơi nắng lâu.
+phai mờ|Mờ dần đi, không còn rõ nét, thường nói về kí ức hay dấu vết.
+phai nhạt|Bạc màu dần; cũng nói về tình cảm, kí ức mờ đi theo năm tháng.
+phải lòng|Bỗng thấy say mê, đem lòng thương nhớ một người.
+phải trái|Chuyện đúng sai, lẽ phải lẽ trái, như khi phân xử hay khuyên giải.
+phạm lỗi|Làm sai, vi phạm quy định, thường trong thể thao hay nội quy.
+phạm vi|Khoảng giới hạn mà một việc hay một quyền được áp dụng.
+phàn nàn|Kêu ca, than thở vì thấy điều gì chưa vừa ý.
+phản bác|Đưa ra lí lẽ để chỉ ra ý kiến của người khác là sai.
+phản cảm|Khiến người xem, người nghe thấy chướng, khó chịu và muốn tránh xa.
+phản chiếu|Hắt lại ánh sáng hay hình ảnh, như mặt nước hay gương soi.
+phản đối|Tỏ ý không đồng ý, chống lại một ý kiến hay việc làm.
+phản hồi|Đáp lại, gửi lại ý kiến về một thông tin hay sản phẩm.
+phản ứng|Hành động hay thái độ đáp lại một tác động từ bên ngoài.
+phản xạ|Cử động tự nhiên của cơ thể đáp lại kích thích, không cần nghĩ.
+phán đoán|Dựa vào dấu hiệu có được để suy ra điều chưa biết.
+phảng phất|Thoang thoảng, có một chút nhẹ khó nhận rõ, thường nói về mùi hương.
+phanh|Bộ phận bóp hay đạp để hãm xe chậm lại, miền Nam gọi là thắng.
+phao bơi|Vật nổi, thường bằng nhựa bơm hơi, giúp người nổi trên nước khi bơi.
+phao câu|Phần đuôi nhiều mỡ ở cuối thân gà, vịt.
+pháo bông|Pháo bắn lên trời nở bung thành những chùm sáng nhiều màu.
+pháo hoa|Loại pháo bắn lên cao rồi nổ thành chùm sáng nhiều màu trong dịp lễ.
+phát âm|Tạo ra âm thanh của chữ hay từ khi nói.
+phát biểu|Nói lên ý kiến của mình trước nhiều người, như trong cuộc họp.
+phát bóng|Đánh hay đá quả bóng đi để bắt đầu một lượt chơi.
+phát đạt|Làm ăn thuận lợi, ngày càng giàu có, thường nói về kinh doanh.
+phát hành|Đưa sách báo, phim, tiền hay sản phẩm ra cho mọi người dùng hoặc mua.
+phát hiện|Tìm ra hay nhận ra một điều mà trước đó mình chưa thấy.
+phát huy|Làm cho điểm mạnh, giá trị tốt có sẵn được dùng và lớn mạnh hơn.
+phát minh|Tạo ra cái mới chưa từng có, như máy móc hay cách làm.
+phát sáng|Tự tỏa ánh sáng ra xung quanh, như bóng đèn, đom đóm hay màn hình.
+phát sinh|Nảy ra, xuất hiện thêm, thường là điều không có từ đầu.
+phát sóng|Truyền chương trình truyền hình hay phát thanh tới người xem, người nghe.
+phát tài|Làm ăn suôn sẻ, tiền vào nhiều, hay dùng trong lời chúc Tết.
+phát thanh|Đưa tin tức, lời nói và âm nhạc lên sóng cho người nghe qua đài.
+phát triển|Tăng dần về quy mô, chất lượng hay trình độ theo thời gian.
+phạt đền|Cú sút phạt từ chấm gần khung thành, chỉ có thủ môn đứng cản.
+phạt góc|Cú đá từ góc sân khi bóng chạm đội phòng ngự rồi ra biên cuối.
+phẳng lặng|Yên ả, không có xáo động, thường nói về mặt nước hay cuộc sống.
+phẳng phiu|Thẳng và phẳng đều, không nếp nhăn, thường nói về vải vóc, quần áo.
+phẩm chất|Những đức tính, giá trị bên trong của một người hay một vật.
+phẩm màu|Chất tạo màu cho thực phẩm, đồ uống hoặc vải.
+phân biệt|Nhận ra chỗ khác nhau để không lẫn cái này với cái kia.
+phân bón|Chất bón vào đất để cây trồng lớn nhanh, cho nhiều quả hạt.
+phân cách|Ngăn tách ra thành các phần riêng, như giữa hai làn đường.
+phân chia|Chia ra thành nhiều phần cho từng người hay từng nơi.
+phân công|Giao từng phần việc cho từng người cụ thể.
+phân hữu cơ|Phân bón làm từ chất thải động vật hay xác cây cỏ ủ mục.
+phân loại|Chia các vật thành nhóm dựa trên điểm giống nhau.
+phân luồng|Chia dòng xe cộ sang các ngả khác nhau cho khỏi ùn tắc.
+phân nửa|Một nửa hoặc khoảng một nửa của cái gì đó.
+phân phát|Chia ra rồi trao tận tay từng người, như quà, tờ rơi, đồ cứu trợ.
+phân phối|Chia và đưa hàng hóa tới các nơi bán hay người dùng.
+phân số|Số viết thành tử số và mẫu số, ngăn nhau bởi một gạch ngang.
+phân tách|Tách riêng một tổng thể thành từng phần.
+phân tán|Tản ra nhiều ngả, không gom về một mối, như người hay sự chú ý.
+phân tâm|Không tập trung được, bị chú ý sang việc khác.
+phân tích|Chia nhỏ vấn đề, xét kĩ từng phần, từng mặt để hiểu rõ.
+phân vân|Lưỡng lự, chưa quyết được nên chọn bên nào.
+phân vùng|Chia một khoảng lớn thành nhiều khu riêng, mỗi khu dùng vào việc khác nhau.
+phần cứng|Các bộ phận vật lý của máy tính, có thể cầm nắm được.
+phần lớn|Phần nhiều hơn một nửa, chiếm số đông so với phần còn lại.
+phần mềm|Chương trình cài trên máy tính, điện thoại, giúp máy làm từng việc cụ thể.
+phần thưởng|Quà hay giấy khen trao cho người làm tốt, đạt kết quả cao.
+phần trăm|Đơn vị tính tỉ lệ, coi tổng thể là một trăm phần bằng nhau.
+phần việc|Khoản việc được giao cho mỗi người trong công việc chung.
+phấn chấn|Vui vẻ, hăng hái, tinh thần lên cao.
+phấn đấu|Bền bỉ cố gắng từng ngày để vươn tới một đích đã đặt ra.
+phấn hoa|Hạt bụi nhỏ ở nhị hoa, giúp cây thụ phấn.
+phấn khích|Hào hứng mạnh, rất kích động vì điều thú vị.
+phấn khởi|Lòng rộn ràng, tràn đầy hứng khởi, như khi gặp tin vui.
+phấn màu|Thỏi phấn có màu khác trắng, dùng viết bảng hay tô vẽ tranh.
+phấn rôm|Bột mịn màu trắng thoa lên da để giữ khô thoáng, chống rôm sảy.
+phấp phới|Bay lượn nhẹ và liên tục trong gió, thường nói về cờ, vải.
+phật ý|Không vừa lòng, hơi bực vì điều trái ý mình.
+phẩy|Dấu câu nhỏ, dùng để ngăn cách các thành phần trong câu.
+phép|Sự đồng ý của người có quyền cho ai làm một việc gì.
+phép chia|Phép tính tách một số thành các phần bằng nhau, như chia đều bánh.
+phép cộng|Phép tính gộp các số lại để được tổng.
+phép đo|Việc dùng thước, cân hay máy để biết một vật dài, nặng, nóng bao nhiêu.
+phép nhân|Phép tính lấy hai số cho ra tích, viết bằng dấu chéo hay dấu chấm.
+phép tắc|Những quy định, lề lối cư xử cần giữ.
+phép thuật|Sức mạnh siêu nhiên làm được điều kì lạ, thường gặp trong truyện cổ tích.
+phép tính|Thao tác toán học như cộng, trừ, nhân, chia để tìm kết quả.
+phép toán|Quy tắc tính toán cho ra kết quả từ các số hay biểu thức.
+phê bình|Chỉ ra chỗ sai để góp ý; cũng chỉ việc bình luận tác phẩm.
+phế liệu|Vật liệu bỏ đi, đồ cũ hỏng có thể bán để tái chế.
+phết|Quệt một lớp mỏng như bơ, hồ dán hay sơn lên bề mặt.
+phễu|Dụng cụ hình nón, đáy có ống nhỏ, dùng rót chất lỏng vào chai.
+phi công|Người ngồi buồng lái điều khiển máy bay cất cánh, bay và hạ cánh.
+phi hành gia|Người được huấn luyện để bay vào vũ trụ.
+phi lao|Cây cao có cành con xanh mảnh như kim, hay trồng chắn gió ven biển.
+phi ngựa|Cưỡi ngựa và thúc cho ngựa chạy nhanh.
+phi thuyền|Con tàu được phóng lên chở người hay máy móc bay ra ngoài không gian.
+phi thường|Vượt xa mức bình thường, hiếm thấy.
+phí của|Để mất của cải một cách vô ích, dùng không đáng.
+phí phạm|Dùng hoang, không tiết kiệm tiền của hay thời gian.
+phía|Hướng hay khoảng không gian về một bên.
+phía trước|Hướng hoặc khoảng không gian ở đằng trước mặt.
+phích nước|Bình có lớp ruột cách nhiệt, giữ nước nóng được lâu.
+phiên|Lượt, đợt được xếp theo thứ tự, như buổi họp, ca trực hay buổi chợ.
+phiên bản|Một dạng của sản phẩm hay tác phẩm, khác đôi chút với các dạng khác.
+phiên dịch|Dịch lời nói từ tiếng này sang tiếng khác ngay khi nói.
+phiền hà|Gây rắc rối, mất công tốn thời gian, thường nói về thủ tục giấy tờ.
+phiền lòng|Buồn bực, không yên trong dạ vì việc ai đó làm hay nói.
+phiền phức|Rắc rối, nhiêu khê, gây mệt mỏi khi phải xử lý.
+phiền toái|Gây khó chịu, làm vướng bận vì nhiều chuyện lặt vặt.
+phiêu lưu|Đi tới nơi xa lạ, làm việc mạo hiểm để tìm điều mới.
+phiếu|Tờ giấy nhỏ in sẵn mẫu, dùng để ghi chép, xác nhận hay bầu chọn.
+phim|Chuỗi hình động quay, dựng sẵn để chiếu trên màn ảnh, thường kể một chuyện.
+phim ảnh|Ngành điện ảnh và các bộ phim nói chung.
+phim hài|Phim có nội dung vui nhộn, nhằm gây cười.
+phim hoạt hình|Phim làm từ hình vẽ hay mô hình được làm cho chuyển động.
+phim tài liệu|Phim ghi lại sự việc, con người có thật.
+phim truyện|Phim kể một câu chuyện hư cấu do diễn viên đóng.
+phim trường|Khu đất hay xưởng lớn dựng sẵn bối cảnh để đoàn làm phim ghi hình.
+phin|Cốc lọc đáy đục lỗ, đặt trên ly cho cà phê nhỏ từng giọt.
+phình|To phồng lên hơn bình thường.
+phó phòng|Người giúp việc cho trưởng phòng, đứng thứ hai trong một phòng ban.
+phong bì|Túi giấy dẹt để đựng thư hay tiền.
+phong cách|Lối riêng trong cách sống, ăn mặc, làm việc của một người.
+phong cảnh|Cảnh vật thiên nhiên hiện ra trước mắt.
+phong độ|Trạng thái thể lực và tinh thần lúc thi đấu hay làm việc.
+phong lan|Cây hoa thường sống bám thân cây khác, rễ buông lơ lửng, trồng làm cảnh.
+phong phú|Nhiều và đa dạng về loại hay về nội dung.
+phong thái|Dáng vẻ và cách cư xử toát ra bên ngoài của một người.
+phong thư|Bức thư được đựng trong bì dán kín.
+phong trào|Hoạt động có đông người cùng tham gia vì một mục đích chung.
+phong tục|Thói quen lâu đời được cả cộng đồng giữ gìn trong đời sống.
+phòng|Khoảng không gian trong nhà, có tường ngăn và cửa riêng.
+phòng ăn|Phòng đặt bàn ghế dành cho việc ăn uống.
+phòng chờ|Phòng có ghế ngồi cho người chờ đến lượt, như ở sân bay, bệnh viện.
+phòng đợi|Nơi có ghế cho khách ngồi đợi, thường ở nhà ga hay phòng khám.
+phòng học|Phòng có bàn ghế, bảng để dạy và học.
+phòng họp|Phòng có bàn lớn để mọi người ngồi họp bàn công việc.
+phòng khách|Phòng để tiếp khách và sinh hoạt chung trong nhà.
+phòng ngủ|Phòng có giường để nghỉ ngơi và ngủ.
+phòng ngừa|Lo liệu từ sớm để những chuyện như bệnh, cháy, tai nạn khỏi xảy ra.
+phòng ốc|Các phòng trong nhà hay tòa nhà nói chung.
+phòng tắm|Phòng có vòi nước, dùng để tắm rửa.
+phòng thân|Giữ sẵn để tự bảo vệ hay đề phòng lúc khó khăn.
+phòng tối|Căn phòng kín sáng, thường thắp đèn đỏ mờ, để tráng rửa phim ảnh.
+phòng trà|Quán nhỏ có ca sĩ hát nhạc nhẹ cho khách vừa uống vừa nghe.
+phòng tránh|Đề phòng để tránh được bệnh hay điều không hay.
+phòng trọ|Phòng cho thuê để ở, thường trả tiền theo tháng.
+phỏng đoán|Dựa vào vài dấu hiệu để đoán điều mình chưa biết chắc.
+phỏng vấn|Hỏi chuyện một người để lấy thông tin hay để tuyển chọn.
+phóng đại|Nói quá lên so với sự thật; cũng chỉ việc làm hình ảnh to ra.
+phóng khoáng|Rộng rãi, thoải mái, không gò bó trong suy nghĩ và cư xử.
+phóng sự|Bài báo hay thước phim kể tỉ mỉ một chuyện có thật, ghi tận nơi.
+phóng viên|Người đi lấy tin, viết bài cho báo chí hay đài truyền hình.
+phóng xe|Điều khiển xe chạy rất nhanh trên đường.
+phổ biến|Có ở nhiều nơi, được nhiều người biết hay dùng.
+phổ thông|Thuộc trình độ cơ bản, cho số đông; cũng chỉ bậc học dưới đại học.
+phố cổ|Khu phố xưa có nhiều nhà cổ, giữ nét kiến trúc truyền thống.
+phố phường|Các con phố, khu phố trong thành phố nói chung.
+phố xá|Đường sá trong thành phố với nhà cửa, hàng quán và xe cộ qua lại.
+phổi|Cơ quan hô hấp trong lồng ngực, giúp đưa dưỡng khí vào máu.
+phối hợp|Cùng nhau làm, chia việc ăn khớp để đạt mục tiêu chung.
+phối màu|Chọn các màu đặt cạnh nhau cho hợp mắt, như khi mặc đồ hay vẽ.
+phông chữ|Kiểu dáng chữ dùng khi soạn thảo, in ấn trên máy tính.
+phông nền|Tấm vải hay tranh treo phía sau sân khấu hoặc khi chụp ảnh.
+phồng tôm|Món bánh làm từ bột trộn tôm, chiên lên nở phồng và giòn.
+phờ phạc|Mệt mỏi, hốc hác, trông thiếu sức sống.
+phở xào|Món bánh phở đảo trên chảo với thịt bò hay gà và rau.
+phơi bày|Để lộ ra cho mọi người thấy, thường là điều xấu bị che giấu.
+phơi nắng|Đưa đồ hay thân mình ra chỗ nắng chiếu cho khô hoặc cho ấm.
+phơi phới|Tràn đầy niềm vui và sức sống, lòng hớn hở.
+phớt lờ|Cố tình làm như không thấy, không biết.
+phù dâu|Cô gái thân thiết đi kèm, đỡ đần cô dâu trong ngày cưới.
+phù hiệu|Dấu hiệu nhỏ gắn trên áo, cho biết trường, đơn vị hay chức vụ.
+phù hợp|Vừa vặn, ăn khớp với yêu cầu, hoàn cảnh hay con người cụ thể.
+phù rể|Chàng trai thân thiết đi kèm, phụ giúp chú rể trong ngày cưới.
+phù sa|Đất mịn theo nước sông trôi về rồi lắng lại, làm ruộng bãi màu mỡ.
+phủ sóng|Đưa sóng phát thanh, truyền hình hay điện thoại tới một vùng.
+phũ phàng|Thẳng thừng, lạnh lùng khiến người ta đau lòng, như sự thật trần trụi.
+phụ bếp|Người giúp đầu bếp sơ chế, dọn dẹp trong bếp.
+phụ cấp|Khoản tiền trả thêm ngoài lương chính.
+phụ đạo|Dạy thêm để giúp học sinh theo kịp bài học.
+phụ đề|Dòng chữ chạy dưới khung hình, ghi hay dịch lời nhân vật đang nói.
+phụ gia|Chất trộn thêm chút ít vào thức ăn, vật liệu cho bền, đẹp, lâu hỏng.
+phụ giúp|Giúp thêm một tay vào việc của người khác.
+phụ huynh|Cha mẹ hay người đỡ đầu một học trò, khi làm việc với nhà trường.
+phụ kiện|Đồ đi kèm hay thêm vào để dùng hoặc làm đẹp, như ốp điện thoại.
+phụ lòng|Làm người đã tin, đã thương mình phải thất vọng.
+phụ nữ|Người nữ đã trưởng thành, như mẹ, chị, cô hay bà.
+phụ phí|Tiền tính thêm ngoài giá gốc, như khi giao hàng xa hay giờ cao điểm.
+phụ tá|Người giúp việc trực tiếp cho người phụ trách.
+phụ thuộc|Dựa vào người hay vật khác, không tự chủ được.
+phụ trách|Được giao lo liệu và trông coi một việc, một bộ phận.
+phụ trợ|Đi kèm để giúp sức cho phần chính, không giữ vai trò chủ yếu.
+phụ tùng|Các chi tiết rời để thay thế, lắp vào máy móc hay xe cộ.
+phúc|Điều may mắn, êm ấm đến với gia đình, thường nhắc trong lời chúc.
+phục hồi|Trở lại như trước sau khi ốm yếu, hư hại hay sa sút.
+phục vụ|Lo các việc cho khách hay người khác, như bưng món ăn, dọn phòng.
+phủi|Gạt nhẹ bằng tay hoặc khăn cho bụi bẩn bám trên áo, ghế rơi đi.
+phun|Làm nước hay chất lỏng vọt mạnh ra thành tia hoặc màn hạt li ti.
+phun trào|Trào mạnh ra ngoài, thường nói về núi lửa phun dung nham.
+phung phí|Tiêu xài hoang, dùng tiền của không đúng chỗ.
+phút|Quãng thời gian sáu mươi giây, kim dài đồng hồ nhích một vạch.
+phút giây|Khoảng thời gian rất ngắn, thường gắn với một khoảnh khắc đáng nhớ.
+phuy|Thùng lớn hình trụ, thường bằng sắt, để chứa xăng dầu hay nước.
+phức tạp|Có nhiều phần, nhiều mặt rối rắm, khó hiểu.
+phương án|Cách làm được tính trước để giải quyết một việc.
+phương châm|Nguyên tắc định hướng cho cách làm việc hay cách sống.
+phương hướng|Hướng đi, mục tiêu cụ thể cần theo trong hành động.
+phương pháp|Cách thức có hệ thống để làm một việc.
+phương thức|Cách được chọn để làm một việc, như trả tiền mặt hay chuyển khoản.
+phương tiện|Cái dùng để đạt mục đích, như xe cộ để đi lại.
+phượng|Cây tán rộng, nở hoa đỏ vào mùa hè, thường trồng ở sân trường.
+phượng hoàng|Chim trong truyện cổ, đuôi dài rực rỡ, hay được vẽ cặp với rồng.
+phượng vĩ|Cây phượng có hoa đỏ thắm, lá kép nhỏ xếp như lông chim.
+pin sạc|Pin có thể nạp điện lại để dùng nhiều lần.
+protein|Tên gốc nước ngoài của chất đạm, có nhiều trong thịt, trứng, sữa và đậu.
+qua lại|Đi tới đi lui nhiều lượt trên một lối, như xe cộ trên phố đông.
+qua loa|Làm sơ sài, không kĩ lưỡng, chỉ cho xong.
+quà bánh|Bánh kẹo và đồ ăn vặt dùng làm quà.
+quà biếu|Quà đem tặng người trên hay người mình quý trọng.
+quà cáp|Quà nói chung, thường dùng khi thăm hỏi hay nhờ cậy.
+quà tặng|Vật đem tặng người khác để bày tỏ tình cảm.
+quà vặt|Đồ ăn nhẹ, ăn lặt vặt ngoài bữa chính.
+quả cân|Khối kim loại đúc đúng khối lượng, đặt lên đĩa cân để so sức nặng.
+quả cầu|Khối tròn đều mọi phía, như hòn bi, quả bóng hay mô hình trái đất.
+quả đất|Cách gọi dân dã của Trái Đất, hành tinh loài người sinh sống.
+quả khô|Trái cây đã phơi hay sấy khô để ăn được lâu.
+quả lắc|Vật nặng treo đung đưa đều, thường gắn trong đồng hồ.
+quả mọng|Quả có vỏ mỏng, nhiều nước, ruột mềm, như nho hay dâu.
+quả quyết|Tỏ ra chắc chắn, dứt khoát khi nói hay làm, không chút chần chừ.
+quả tạ|Khối kim loại nặng, thường tròn hay gắn đầu thanh, dùng tập sức.
+quá đà|Làm quá mức cần thiết, không kìm lại được.
+quá đáng|Đi quá mức chừng mực, làm người khác bực mình hay tổn thương.
+quá giang|Xin đi nhờ xe hay thuyền của người khác, cách nói ở miền Nam.
+quá giờ|Vượt quá thời gian đã định.
+quá hạn|Đã qua thời hạn quy định mà chưa xong.
+quá khứ|Thời gian và những việc đã qua trước đây.
+quá lời|Nói quá mức, nói nặng lời hay khen quá lên.
+quá sức|Đòi hỏi nhiều hơn sức mình có, khiến người ta không kham nổi.
+quá tải|Vượt quá mức chịu đựng hay sức chứa.
+quá tay|Làm mạnh hay nhiều hơn mức cần, như nêm gia vị bị mặn.
+quá trình|Chuỗi diễn biến, các bước nối tiếp nhau của một việc.
+quá trớn|Hăng quá đà khi đùa nghịch hay nói năng mà không biết dừng đúng lúc.
+quai|Dải hay vòng gắn vào túi, nồi, dép để cầm xách hoặc giữ cho chặt.
+quai hàm|Phần xương hai bên mặt nối tới cằm, chuyển động lên xuống khi ta nhai.
+quai nón|Dây buộc ở nón lá, đeo dưới cằm để giữ nón.
+quái dị|Kì lạ khác thường đến mức đáng sợ.
+quái lạ|Lạ lùng khó hiểu, khác hẳn thường ngày.
+quái vật|Con vật hình thù kì dị, đáng sợ trong truyện.
+quan điểm|Cách nhìn, cách nghĩ về một vấn đề.
+quan họ|Lối hát đối đáp giữa các liền anh liền chị, gắn với vùng Kinh Bắc.
+quan niệm|Cách hiểu và nhìn nhận về sự vật, thường hình thành lâu dài.
+quan sát|Nhìn kĩ để theo dõi, tìm hiểu.
+quan tâm|Để tâm, hỏi han và lo lắng cho người hay việc mà mình coi trọng.
+quan trọng|Có ý nghĩa, tác dụng lớn, không thể bỏ qua.
+quán ăn|Cửa hàng nhỏ bán đồ ăn cho khách.
+quán nước|Quán nhỏ bán nước uống, thường có bàn ghế cho khách ngồi.
+quán quân|Người hay đội đứng đầu khi kết thúc một cuộc thi, được trao giải cao.
+quán trọ|Nơi khách đi đường thuê chỗ ngả lưng qua đêm, thường đơn sơ, rẻ tiền.
+quán xá|Các quán hàng buôn bán nói chung.
+quán xuyến|Lo liệu, coi sóc chu đáo mọi việc, thường là việc nhà.
+quang cảnh|Mọi thứ bày ra trước mắt tại một nơi, cả cảnh vật lẫn người.
+quang đãng|Sáng sủa, thoáng đãng, không bị che khuất.
+quảng bá|Giới thiệu rộng rãi cho nhiều người biết.
+quảng cáo|Đưa lời giới thiệu sản phẩm lên báo, mạng, bảng lớn để mời mua.
+quảng trường|Khoảng đất rộng giữa thành phố, dùng cho hội họp hay đi dạo.
+quanh co|Uốn lượn nhiều vòng; cũng chỉ lời nói vòng vo, không thật.
+quanh năm|Suốt cả năm, không ngừng nghỉ.
+quanh quẩn|Chỉ loanh quanh mãi ở một chỗ hẹp, như trong nhà hay gần xóm.
+quạt bàn|Loại quạt điện nhỏ có đế thấp, để trên bàn làm việc hay bàn học.
+quạt điện|Đồ điện có cánh xoay tròn, đẩy gió làm mát người trong ngày oi.
+quạt giấy|Quạt cầm tay bằng nan tre dán giấy, xòe ra phe phẩy, gấp lại gọn.
+quạt gió|Thiết bị có cánh quay để thổi gió, thường dùng làm mát hay thông hơi.
+quạt máy|Quạt chạy bằng điện, cách gọi quen ở miền Nam.
+quạt thông gió|Quạt gắn trên tường hay trần, hút khí ra để làm thoáng phòng.
+quạt trần|Quạt điện treo trên trần nhà, có cánh lớn quay.
+quay cuồng|Quay tít không dừng; cũng chỉ sự bận rộn, rối ren.
+quay lại|Trở về chỗ cũ hay việc cũ; cũng chỉ việc xoay người nhìn ra sau.
+quay lưng|Xoay lưng lại; cũng chỉ việc bỏ mặc, không quan tâm nữa.
+quay phim|Dùng máy ghi lại cảnh vật, người đang chuyển động để xem lại sau.
+quay vòng|Xoay theo vòng tròn hay luân chuyển hết lượt rồi bắt đầu lại.
+quăng|Vung tay ném vật gì đi xa, thường mạnh và không cẩn thận.
+quân cờ|Vật nhỏ đại diện cho một quân, di chuyển trên bàn cờ.
+quần áo|Những thứ ta mặc lên người nói chung, cất trong tủ, phơi trên dây.
+quần bò|Quần vải dày, thường màu xanh chàm, có đường chỉ nổi, túi tán đinh.
+quần cộc|Quần ngắn ngang đùi, cách gọi ở miền Bắc.
+quần đảo|Nhiều hòn đảo nằm rải gần nhau thành một cụm giữa biển.
+quần đùi|Quần ngắn cũn chỉ tới đùi, hay mặc ở nhà hoặc khi chơi thể thao.
+quần quật|Làm lụng vất vả liên tục không nghỉ.
+quần tất|Quần mỏng bó sát chân, liền với bàn chân, thường do nữ mặc.
+quần tây|Quần dài may cắt kiểu Âu, thường mặc đi làm.
+quần vợt|Môn cầm vợt dây đan, đánh bóng nỉ nhỏ qua lưới căng giữa sân.
+quẩn quanh|Luẩn quẩn, không thoát ra khỏi một chỗ hay một vấn đề.
+quây quần|Tụ họp lại bên nhau thân mật.
+quầy|Bàn dài để bày hàng hay giao dịch với khách.
+quầy lễ tân|Bàn đón khách ở sảnh khách sạn, văn phòng, nơi làm thủ tục.
+quấy rầy|Làm người khác mất yên, như gọi, hỏi mãi khi họ đang bận hay nghỉ.
+que diêm|Thanh gỗ mảnh có đầu thuốc màu, cọ vào cạnh hộp thì bùng lửa.
+quen biết|Đã từng gặp và biết nhau.
+quen mặt|Từng thấy nhiều lần nên nhận ra.
+quen quen|Có vẻ hơi quen, như đã từng gặp hay nghe.
+quen tay|Đã làm nhiều đến mức tay tự cử động thành thạo, không phải nghĩ.
+quen thuộc|Đã biết rõ, gặp thường xuyên nên gần gũi.
+quẹo|Đổi hướng sang trái hay phải, cách nói ở miền Nam.
+quét|Dùng chổi gạt bụi rác cho sạch.
+quét dọn|Quét và thu dọn cho nhà cửa sạch sẽ.
+quê hương|Nơi mình sinh ra và lớn lên, gắn bó tình cảm sâu sắc.
+quê nhà|Quê của mình, nơi có nhà cửa và người thân.
+quê quán|Vùng đất gốc gác của gia đình, thường ghi trên giấy tờ tùy thân.
+quên|Không còn nhớ điều đã biết, hay sơ ý bỏ sót việc cần làm.
+quên bẵng|Quên hẳn đi trong một thời gian dài.
+quên khuấy|Quên mất hoàn toàn, không nghĩ tới.
+quốc lộ|Đường lớn có đánh số, chạy qua nhiều tỉnh cho xe khách, xe tải.
+quy luật|Mối ràng buộc lặp lại đều đặn: có điều này ắt có kết quả kia.
+quy mô|Độ lớn, phạm vi của một tổ chức, công việc hay sự kiện.
+quy tắc|Điều được đặt ra để mọi người làm theo trong một việc nhất định.
+quỹ đạo|Đường chuyển động của hành tinh, vệ tinh quanh một thiên thể.
+quý phái|Có vẻ sang trọng, thanh lịch như người thuộc tầng lớp trên.
+quyên góp|Gom góp tiền hay đồ từ nhiều người, thường để giúp người khó khăn.
+quyền lợi|Những gì một người được hưởng một cách chính đáng, như lương, phép, bảo hiểm.
+quyển|Từ dùng để đếm sách, vở hay tập giấy đóng lại thành cuốn.
+quyến luyến|Gắn bó, không muốn rời xa người hoặc nơi mình yêu mến.
+quyến rũ|Có vẻ hấp dẫn khiến người khác muốn lại gần, khó rời mắt.
+quyết|Định chắc chắn sẽ làm một việc, không thay đổi ý.
+quyết định|Chọn hẳn một hướng sau khi cân nhắc, rồi theo đó mà làm.
+quyết đoán|Có khả năng đưa ra quyết định nhanh, dứt khoát, không do dự.
+quyết liệt|Mạnh mẽ, không lùi bước, như một trận đấu hay cuộc tranh luận căng.
+quyết tâm|Ý chí vững vàng, nhất định làm cho bằng được việc đã đặt ra.
+ra dáng|Có dáng vẻ, cử chỉ giống hẳn một kiểu người, thường là người lớn.
+ra đời|Được sinh ra hoặc bắt đầu xuất hiện, hình thành.
+ra hiệu|Dùng cử chỉ hay ánh mắt để báo ý cho người khác.
+ra hồn|Tạm được, đúng mức tử tế, thường dùng kèm ý phủ định.
+ra khơi|Đi thuyền ra vùng biển xa bờ, thường để đánh cá.
+ra mắt|Lần đầu trình diện trước công chúng hay trước gia đình người yêu.
+ra sức|Dồn hết sức mà làm, cố gắng không nghỉ tay.
+ra vào|Đi vào rồi đi ra một chỗ nhiều lượt, như qua cổng cơ quan.
+ra vẻ|Cố làm ra bộ dạng nào đó để người khác tưởng mình như vậy.
+rà soát|Kiểm tra kỹ lại từng phần để phát hiện thiếu sót hay sai lầm.
+rã rời|Mệt tới mức tay chân bủn rủn, chỉ muốn nằm xuống.
+rác thải|Đồ bỏ đi từ nhà, chợ, xưởng, được gom lại để xử lý.
+rách|Bị thủng hay toạc ra một chỗ, thường nói về vải, giấy.
+rách nát|Rách nhiều chỗ và hư hỏng đến mức tả tơi.
+rách rưới|Mặc quần áo rách cũ, trông nghèo khổ.
+rạch ròi|Tách bạch rõ từng phần, không lẫn lộn, như chuyện tiền nong hay đúng sai.
+radio|Máy thu sóng vô tuyến để nghe đài phát thanh.
+rải rác|Lác đác mỗi chỗ một ít, không dồn lại thành đám.
+rái cá|Thú nhỏ lông dày, chân có màng, sống ở sông hồ và ăn cá.
+rái cá biển|Loài rái cá sống ở biển lạnh, hay nằm ngửa nổi trên mặt nước.
+rám nắng|Da bị sạm màu do phơi nắng lâu.
+rạn nứt|Bị nứt thành vết nhỏ; cũng chỉ tình cảm, quan hệ bắt đầu sứt mẻ.
+rạn san hô|Khối san hô lớn ở biển nông, nơi nhiều loài cá sinh sống.
+ràng buộc|Gò bó, giữ chặt, không để tự do làm theo ý mình.
+rạng đông|Ánh sáng đầu tiên ở chân trời phía đông lúc sắp mọc mặt trời.
+rạng rỡ|Tươi tắn, sáng bừng lên, thường nói về nét mặt.
+rạng sáng|Khoảng thời gian rất sớm, khi đêm vừa hết, trời bắt đầu sáng.
+ranh giới|Đường phân chia giữa hai vùng, hai khu đất hay hai sự vật.
+rành mạch|Rõ ràng, có thứ tự, dễ hiểu, thường nói về lời nói, sổ sách.
+rành rành|Hiển nhiên, rõ đến mức không thể chối cãi.
+rành rọt|Rõ từng tiếng, từng ý, thường nói về cách nói hay đọc.
+rảnh rang|Thong thả, không có việc gì phải lo, có thể nghỉ ngơi tùy ý.
+rảnh tay|Đã xong việc hoặc không cầm gì, nên có thể làm thêm việc khác.
+rãnh|Đường lõm dài và hẹp trên mặt đất hay mặt vật, thường để dẫn nước.
+rao vặt|Tin quảng cáo ngắn về mua bán, cho thuê hay tìm việc nhỏ lẻ.
+rào cản|Điều gây vướng mắc khiến việc khó tiến lên, như ngôn ngữ hay tiền bạc.
+rào chắn|Thanh sắt, hàng cọc dựng ngang lối để chặn người và xe qua lại.
+rào rào|Tiếng động đều, dày như tiếng mưa rơi hay lá cây xao động.
+rạp chiếu phim|Tòa nhà có phòng lớn và màn ảnh rộng để chiếu phim.
+rạp hát|Tòa nhà có sân khấu và hàng ghế khán giả, nơi diễn kịch, ca múa.
+rạp xiếc|Nơi có sân diễn tròn để biểu diễn xiếc, thường có mái che.
+rau cải|Nhóm rau lá xanh như cải ngọt, cải bẹ, thường để luộc hay nấu canh.
+rau cần|Rau thân rỗng mọc ở nước, mùi thơm hắc, thường xào hay nấu canh.
+rau câu|Loại rong biển dùng để nấu thạch làm món tráng miệng.
+rau chân vịt|Rau lá xanh đậm, mềm, thường xào hay nấu canh, còn gọi cải bó xôi.
+rau cỏ|Đủ thứ rau dùng trong bữa ăn nói chung, nghe giản dị, quê mùa.
+rau dền|Cây rau lá mềm, có loại tía đỏ, nấu canh ra nước màu hồng.
+rau diếp|Rau lá rộng, xanh nhạt, giòn mát, hay ăn sống cuốn với bánh tráng.
+rau dưa|Rau luộc và dưa muối, ám chỉ bữa cơm đơn sơ, thanh đạm.
+rau đay|Rau lá nhớt, thường nấu canh với cua vào mùa hè.
+rau đậu|Rau và các loại đậu nói chung, dùng làm thực phẩm.
+rau má|Cây bò sát đất, lá tròn mép khía, hay xay lấy nước uống cho mát.
+rau mùi|Rau thơm lá nhỏ có khía, mùi thơm đặc trưng, dùng rắc lên món ăn.
+rau muống|Rau thân rỗng mọc ở nước hay đất ẩm, thường luộc hoặc xào tỏi.
+rau ngót|Rau lá nhỏ màu xanh đậm, thường nấu canh với thịt băm.
+rau quả|Gọi chung các thứ rau, củ và trái cây, nhóm thực phẩm từ cây cỏ.
+rau răm|Rau thơm lá nhọn, cay nồng, ăn cùng trứng vịt lộn hay gỏi gà.
+rau sạch|Rau trồng có kiểm soát, lượng phân thuốc còn lại dưới mức cho phép.
+rau sống|Rau lá rửa sạch ăn ngay không nấu, kèm bún, nem, bánh xèo.
+rau thơm|Rau mùi hắc dễ chịu như húng, tía tô, kinh giới, để ăn kèm.
+rau xà lách|Rau lá to, giòn, màu xanh nhạt, thường trộn dầu giấm hay ăn sống.
+rau xanh|Rau lá tươi nói chung, phần màu xanh trong mâm cơm hằng ngày.
+rắc rối|Phức tạp, lằng nhằng, gây khó khăn khi giải quyết.
+rắn chắc|Cứng cáp và chắc khỏe, thường nói về cơ bắp, thân hình.
+rắn độc|Loài rắn có tuyến nọc, cắn thì nọc theo răng nanh ngấm vào vết thương.
+rắn hổ mang|Rắn độc lớn, khi bị đe dọa thường bạnh cổ và ngóc đầu lên.
+rắn nước|Loài rắn hay sống quanh ao hồ, ruộng lúa, bơi giỏi, săn cá, ếch.
+răng|Những mẩu cứng màu trắng mọc thành hàng trên hai hàm, để cắn, nhai.
+răng cửa|Mấy chiếc răng dẹt ở chính giữa đằng trước, lộ ra khi cười.
+răng giả|Răng nhân tạo được gắn vào thay cho răng thật đã mất.
+răng hàm|Những chiếc răng to mặt rộng nằm sâu phía trong, để nghiền nát thức ăn.
+răng khôn|Răng hàm mọc sau cùng ở cuối hàm, thường mọc khi đã trưởng thành.
+răng nanh|Chiếc răng nhọn ở góc miệng, dài và sắc ở chó, hổ.
+răng sữa|Răng mọc đầu tiên ở trẻ nhỏ, sau sẽ rụng để thay răng mới.
+râm mát|Có bóng râm che nắng nên mát mẻ.
+râm ran|Tiếng nhiều âm nhỏ vang khắp nơi, như tiếng ve hay tiếng nói cười.
+rầm rầm|Tiếng động to, nặng và dồn dập, như tiếng xe chạy hay đổ vỡ.
+rầm rộ|Sôi nổi, quy mô lớn, gây nhiều tiếng vang, thường nói về phong trào.
+rậm rạp|Um tùm, dày đặc, thường nói về cây cối hay lông tóc.
+râu dê|Chòm râu lưa thưa chỉ mọc ở cằm, nhọn xuống như râu con dê.
+râu mép|Phần râu mọc trên môi trên, ngay dưới mũi.
+râu quai nón|Râu mọc rậm từ mang tai xuống cằm, viền quanh mặt.
+râu ria|Râu mọc ở mép và cằm nói chung.
+rầu rĩ|Buồn bã kéo dài, lộ rõ ra nét mặt và giọng nói.
+rẻ mạt|Rẻ đến mức quá thấp so với giá trị thật.
+rẻ tiền|Giá thấp, thường kèm ý kém chất lượng hay tầm thường.
+rèn giũa|Luyện tập, trau chuốt kỹ lưỡng để tài năng hay tính cách tốt hơn.
+rèn luyện|Tập luyện đều đặn, lâu dài để nâng cao sức khỏe hay phẩm chất.
+reo hò|Hô to, la hét vui vẻ để cổ vũ hay bày tỏ phấn khởi.
+reo mừng|Kêu lên vì vui mừng, phấn khởi.
+rễ cây|Phần cây mọc dưới đất, giữ cây đứng vững và hút nước, chất dinh dưỡng.
+rì rào|Tiếng nhỏ, êm đều kéo dài như tiếng sóng hay tiếng gió lùa qua lá.
+rỉ tai|Nói nhỏ vào tai người khác để truyền tin riêng.
+ria mép|Râu mọc thành hàng trên môi, thường được để dài hay tỉa gọn.
+riêng biệt|Tách hẳn ra một chỗ, không chung hay lẫn với thứ khác.
+riêng lẻ|Đơn lẻ từng cái, từng người, không gộp thành nhóm.
+riêng rẽ|Tách ra từng phần, không đi cùng hay gắn với nhau.
+riêng tư|Chuyện của bản thân mỗi người, không muốn người ngoài dòm ngó hay can dự.
+riềng|Củ gia vị vỏ hồng nhạt, cay hăng, hay giã ướp thịt, kho cá.
+riêu|Món canh chua nấu từ cua, tôm hay cá giã nhỏ, thường có cà chua.
+riêu cua|Canh chua từ cua đồng giã lọc, thịt cua kết thành mảng nổi trên mặt.
+ríu rít|Tiếng chim hay trẻ con kêu nói liên tục, trong và vui.
+rò rỉ|Thoát ra dần qua khe hở; cũng chỉ tin bí mật bị lộ ra ngoài.
+rõ nét|Sắc và rõ từng đường nét, thường nói về hình ảnh, âm thanh.
+rõ ràng|Dễ thấy, dễ hiểu, không mập mờ hay nhầm lẫn.
+rõ rệt|Hiện ra rõ, dễ nhận thấy, thường nói về sự khác biệt hay thay đổi.
+róc rách|Tiếng nước chảy khẽ, đều đều và trong trẻo, như dòng suối nhỏ qua sỏi.
+rón rén|Nhón chân bước khẽ và chậm để không gây tiếng động, sợ ai thức giấc.
+rong biển|Thực vật sống dưới biển, thân mềm, nhiều loại ăn được.
+rong chơi|Đi chơi chỗ này chỗ khác một cách thong thả, không mục đích rõ.
+rong rêu|Lớp cây nhỏ xanh mướt bám trên đá, thành giếng hay đáy ao ẩm ướt.
+rong ruổi|Đi liên tục trên những chặng đường dài, xa xôi.
+ròng rã|Kéo dài liền một mạch, ngày này qua ngày khác không ngừng nghỉ.
+ròng rọc|Bánh xe thường treo trên cao, vắt dây qua để kéo đồ nặng lên.
+rổ rá|Đồ đựng có lỗ thưa, thường đan bằng tre, dùng rửa rau hay vo gạo.
+rối bời|Rối loạn, ngổn ngang, thường nói về tâm trạng, suy nghĩ.
+rối bù|Tóc xù lên, quấn vào nhau lộn xộn như vừa ngủ dậy.
+rối nước|Múa rối truyền thống diễn trên mặt nước, người điều khiển nấp sau màn.
+rối rắm|Phức tạp, chằng chịt, khó hiểu, khó gỡ.
+rối rít|Vội vàng, cuống quýt, làm hay nói nhiều lần liên tục.
+rối tung|Rối loạn lung tung, không còn trật tự gì.
+rộn rã|Vang lên vui vẻ, náo nhiệt và liên tiếp.
+rộn ràng|Náo nức, xôn xao, đầy không khí vui tươi.
+rồng|Con vật trong truyền thuyết thân dài phủ vảy, có sừng, uốn lượn trên mây.
+rồng rắn|Trò chơi trẻ em níu áo nhau thành hàng, vờn lượn giữ khúc đuôi.
+rỗng tuếch|Trống rỗng hoàn toàn, thường nói về đầu óc hay lời nói vô nghĩa.
+rộng lớn|Có khoảng không hay diện tích rất rộng, bao la.
+rộng lượng|Dễ tha thứ, bao dung với lỗi lầm của người khác.
+rộng mở|Mở rộng, sẵn sàng đón nhận, thường nói về cơ hội hay tấm lòng.
+rộng rãi|Có nhiều chỗ, không chật chội; cũng chỉ tính hào phóng, không tính toán.
+rơi vãi|Để lọt ra ngoài, tung tóe mỗi nơi một ít, như hạt cơm hay thóc.
+rời bỏ|Ra đi và thôi gắn bó với một nơi, một người hay một công việc.
+rời khỏi|Đi ra khỏi một nơi, không còn ở đó nữa.
+rời rạc|Rời nhau từng phần, thiếu liên kết, không liền mạch.
+rơm rạ|Phần thân lúa còn lại sau mùa gặt, phơi khô để đun bếp, lợp nhà.
+ru ngủ|Hát hay vỗ nhẹ cho trẻ dần chìm vào giấc ngủ.
+ru rú|Ở lì một chỗ, ít khi ra ngoài giao tiếp.
+rủ rê|Gạ gẫm, kéo người khác theo mình, thường vào chuyện chơi bời không hay.
+rùa biển|Loài rùa lớn sống ở biển, chân dạng mái chèo, lên bờ cát đẻ trứng.
+rục rịch|Bắt đầu chuẩn bị, sửa soạn cho một việc sắp làm.
+rủi ro|Khả năng gặp chuyện xấu ngoài ý muốn, như mất tiền hay bị thương.
+run rẩy|Cả người rung lên không kìm được, thường vì lạnh hay sợ hãi.
+run run|Hơi run nhẹ, không đều, thường nói về giọng nói hay bàn tay.
+rung chuyển|Rung mạnh và chuyển động, như mặt đất khi động đất.
+rung động|Xao xuyến trong lòng trước ai hay điều gì; cũng chỉ sự rung của vật.
+rung rinh|Khẽ đung đưa qua lại, như cành hoa trước gió hay chiếc lá trên cây.
+rùng mình|Cơ thể bỗng run lên một chút vì lạnh hay sợ.
+ruồi|Côn trùng nhỏ có hai cánh, hay bâu vào thức ăn và truyền bệnh.
+ruồi giấm|Loài ruồi rất nhỏ, mắt đỏ, hay bu quanh trái cây chín.
+ruồi muỗi|Ruồi và muỗi nói chung, những côn trùng nhỏ gây phiền và truyền bệnh.
+ruộng|Đất trồng trọt có bờ bao, thường để cấy lúa.
+ruộng đất|Đất cày cấy của nhà nông nói chung, gồm ruộng lúa và bãi trồng màu.
+ruộng lúa|Thửa ruộng đang trồng lúa, thường ngập nước.
+ruộng muối|Ô đất bằng gần biển, dẫn nước biển vào phơi nắng để làm muối.
+ruột|Bộ phận hình ống dài trong bụng, nối tiếp dạ dày, giúp tiêu hóa.
+ruột gan|Lòng dạ, tâm tư sâu kín của con người.
+ruột già|Đoạn ruột to nối tiếp ruột non, hấp thụ nước và tạo phân.
+ruột non|Đoạn ruột dài và nhỏ nối với dạ dày, nơi hấp thụ chất dinh dưỡng.
+ruột thịt|Có cùng dòng máu, quan hệ gần gũi trong gia đình như anh chị em.
+ruột xe|Vòng cao su mỏng nằm trong lốp xe đạp, xe máy, được bơm căng hơi.
+rút gọn|Làm cho ngắn hay đơn giản hơn, như câu văn hay phân số.
+rút lui|Lùi lại, rời khỏi vị trí hay thôi không tham gia nữa.
+rút ngắn|Thu bớt độ dài, như quãng đường, thời hạn hay khoảng chênh lệch.
+rút thăm|Bốc lá phiếu gấp kín một cách may rủi để chia lượt hay chọn người.
+rút tiền|Lấy tiền mặt ra từ tài khoản, ở quầy ngân hàng hay cây tự động.
+rụt rè|E dè, thiếu mạnh dạn khi nói năng hay làm việc.
+rửa ảnh|In hình từ phim chụp ra giấy ảnh bằng thuốc hiện hình.
+rực lửa|Nóng bỏng, sôi sục như lửa cháy, thường nói về khí thế hay ánh mắt.
+rực rỡ|Sáng và tươi màu, nổi bật, đẹp lộng lẫy.
+rừng|Vùng đất rộng cây cối mọc um tùm, là nhà của nhiều muông thú.
+rừng già|Khu rừng đã lâu đời, nhiều cây to cao, tán lá rậm nhiều tầng.
+rừng núi|Vùng có núi non và rừng cây nói chung.
+rừng rậm|Khu rừng cây cối và dây leo chằng chịt, người khó len qua.
+rừng rú|Rừng hoang vu, rậm rạp, ít người lui tới.
+rừng xanh|Rừng cây xanh tốt, thường dùng để chỉ chốn núi rừng hoang sơ.
+rước|Đón về một cách long trọng, thường có nghi lễ, cờ trống.
+rước đèn|Trẻ em xách lồng đèn đi thành đoàn quanh xóm trong đêm Trung thu.
+rườm rà|Thừa nhiều thứ không cần, làm cho lời văn hay cách trang trí kém gọn.
+sa lầy|Bị lún sâu vào bùn; cũng chỉ việc vướng vào tình thế khó thoát.
+sa mạc|Vùng đất rộng mênh mông rất ít mưa, cây cỏ thưa thớt, khô cằn.
+sa sút|Kém dần đi so với trước, thường về sức khỏe, học hành hay làm ăn.
+sa tế|Gia vị sệt làm từ ớt, sả, tỏi phi trong dầu, có vị cay.
+sách|Nhiều trang giấy in chữ, hình được đóng gáy thành cuốn để đọc.
+sách báo|Sách và báo chí nói chung, các ấn phẩm để đọc.
+sách điện tử|Sách ở dạng tệp số, đọc trên máy tính, điện thoại hay máy đọc.
+sách giáo khoa|Sách dùng trong trường học, soạn theo chương trình từng môn, từng lớp.
+sách vở|Sách và vở nói chung, đồ dùng học tập của học sinh.
+sạch bách|Hết nhẵn không sót chút gì, như đĩa thức ăn đã vét sạch.
+sạch đẹp|Không bụi bẩn, gọn gàng và trông đẹp mắt, thường nói về nơi chốn.
+sạch sẽ|Không có bụi bẩn, rác hay vết dơ.
+sai bảo|Ra lệnh, bảo người khác làm việc cho mình.
+sai lầm|Điều làm sai, trái với lẽ phải hay yêu cầu, gây hậu quả không hay.
+sai lệch|Không đúng, lệch khỏi sự thật hay chuẩn ban đầu.
+sai sót|Chỗ sai nhỏ, thiếu sót do sơ ý.
+sai trái|Trái với lẽ phải, đạo đức hay pháp luật.
+sải cánh|Khoảng cách giữa hai đầu cánh khi chim hay máy bay dang rộng.
+san bằng|Làm cho mặt đất phẳng ra; cũng chỉ việc gỡ lại cho bằng điểm số.
+san hô|Động vật biển nhỏ sống thành tập đoàn, tạo khung đá vôi nhiều màu.
+san lấp|Đổ đất cát để làm bằng chỗ trũng, ao hồ.
+san sát|Liền nhau, sát cạnh nhau, thường nói về nhà cửa.
+san sẻ|Chia cho người khác một phần những gì mình có.
+sàn diễn|Mặt sàn cao để người mẫu, diễn viên trình diễn.
+sàn nhà|Mặt nền phía dưới của căn phòng, nơi người đi lại.
+sàn nhảy|Khoảng sàn rộng có nhạc và đèn màu để mọi người ra khiêu vũ.
+sản phẩm|Thứ được làm ra bằng lao động hay quá trình chế tạo.
+sản xuất|Làm ra của cải, hàng hóa bằng sức người hay máy móc.
+sang trọng|Đắt tiền, đẹp và lịch sự, toát lên vẻ giàu có.
+sàng|Đồ đan tròn, mắt thưa, dùng để lắc tách gạo với tấm hay sạn.
+sàng lọc|Lọc qua nhiều vòng để giữ cái đạt yêu cầu và loại phần không hợp.
+sảng khoái|Thấy dễ chịu, khoan khoái và tỉnh táo.
+sáng bóng|Nhẵn và lấp lánh dưới đèn, như sàn mới lau hay xe vừa đánh bóng.
+sáng chế|Nghĩ ra và làm ra vật hay cách làm mới chưa từng có.
+sáng chói|Sáng mạnh đến mức làm lóa mắt.
+sáng giá|Có nhiều triển vọng, được đánh giá cao.
+sáng kiến|Ý mới nghĩ ra giúp làm việc nhanh hơn hay đỡ tốn kém.
+sáng lập|Đứng ra dựng nên một công ty, trường học hay hội nhóm từ buổi đầu.
+sáng loáng|Sáng ánh lên, lấp lánh chói mắt, thường nói về kim loại.
+sáng mắt|Hiểu ra, tỉnh ngộ sau khi bị lầm lẫn hay lừa dối.
+sáng ngời|Sáng rực lên, thường nói về ánh mắt hay phẩm chất tốt đẹp.
+sáng rực|Sáng mạnh và tỏa rộng khắp một vùng.
+sáng sớm|Lúc trời vừa hửng, gà gáy, sương còn đọng và đường còn vắng.
+sáng sủa|Có nhiều ánh sáng; cũng chỉ vẻ mặt thông minh, dễ coi.
+sáng suốt|Có khả năng nhận định rõ, đúng và tỉnh táo.
+sáng tác|Viết thơ, truyện, soạn nhạc hay vẽ tranh do chính mình nghĩ ra.
+sáng tạo|Nghĩ ra cách làm, sản phẩm mới mẻ thay vì đi theo lối mòn cũ.
+sáng tỏ|Rõ ràng, không còn mù mờ hay nghi vấn.
+sành ăn|Biết thưởng thức, phân biệt món ngon món dở.
+sành điệu|Am hiểu và theo kịp các trào lưu về ăn mặc, giải trí.
+sành sỏi|Thành thạo, có nhiều kinh nghiệm trong một lĩnh vực.
+sành sứ|Đồ gốm cứng như bát, đĩa, bình làm từ đất sét nung kỹ.
+sảnh|Gian rộng ngay sau cửa chính của tòa nhà, nơi khách bước vào trước tiên.
+sao băng|Vệt sáng vụt qua trời đêm do đá vũ trụ bốc cháy trong khí quyển.
+sao biển|Con vật dưới đáy biển, thân dẹt xòe năm cánh như ngôi sao.
+sao chép|Tạo thêm bản giống y bản gốc, như chép bài, nhân tệp trên máy tính.
+sao chổi|Vật thể băng đá trên trời, kéo vệt đuôi sáng khi bay gần mặt trời.
+sáo trúc|Nhạc cụ thổi làm bằng ống trúc có khoét lỗ.
+sáp ong|Thứ ong tiết ra để đắp ô tổ, nấu chảy làm nến hay son dưỡng.
+sạp hàng|Quầy hay chỗ bày bán hàng ở chợ.
+sát cánh|Đứng bên cạnh, cùng nhau gắn bó trong công việc hay chiến đấu.
+sát nút|Chỉ hơn kém rất ít vào phút chót, thường nói về tỷ số.
+sau này|Khoảng thời gian về sau, khi đã lớn hay khi mọi việc đổi khác.
+say đắm|Yêu thích mãnh liệt đến mức mê mẩn.
+say mê|Ham thích một việc đến mức dồn hết tâm trí vào đó.
+sắc bén|Sắc, dễ cắt; cũng chỉ suy nghĩ hay lời lẽ nhạy bén, chính xác.
+sắc đẹp|Vẻ đẹp bên ngoài của khuôn mặt và dáng người.
+sắc mặt|Màu da và vẻ trên mặt, cho thấy sức khỏe hay tâm trạng.
+sắc thái|Nét riêng tinh tế của màu sắc, ý nghĩa hay tình cảm.
+sặc sỡ|Có nhiều màu tươi và chói lẫn nhau.
+sắm sửa|Mua đồ đạc cần dùng, nhất là lúc chuẩn bị đón Tết, cưới hỏi.
+sắm vai|Đóng một vai diễn hay nhận một vai trò nào đó.
+săn chắc|Căng và chắc, không chảy xệ, thường nói về da thịt.
+săn đón|Ân cần, nhiệt tình đón tiếp hay tìm đến để mời.
+săn lùng|Đi tìm kiếm ráo riết khắp nơi.
+săn sóc|Trông nom, lo lắng chu đáo cho người khác.
+sẵn lòng|Vui vẻ chịu làm điều được nhờ, không ngần ngại.
+sẵn sàng|Đã chuẩn bị xong xuôi, chỉ chờ lệnh là bắt tay vào ngay.
+sắn dây|Cây dây leo có củ to, thường làm bột pha nước uống cho mát.
+sắp đặt|Bố trí, xếp đặt mọi việc theo ý định.
+sắp sẵn|Chuẩn bị, bày ra từ trước để dùng.
+sắp xếp|Đặt các thứ theo thứ tự hay vị trí hợp lý.
+sắt thép|Kim loại cứng gốc sắt, dùng dựng nhà, làm cầu và máy móc.
+sắt vụn|Sắt thép cũ, hỏng đã bỏ đi, thường thu gom để bán.
+sầm uất|Đông đúc, nhộn nhịp, buôn bán tấp nập.
+sấm chớp|Hiện tượng sấm và chớp xảy ra khi trời mưa giông.
+sấm sét|Sấm và sét nói chung, có thể đánh xuống gây nguy hiểm.
+sậm màu|Có màu đậm, tối hơn bình thường.
+sân bãi|Khu đất trống rộng dùng để tập luyện, đỗ xe hay chứa hàng.
+sân bay|Khu đất rộng có đường băng và nhà ga, nơi máy bay lên xuống.
+sân bóng|Bãi đất phẳng để chơi các môn bóng, thường là bóng đá.
+sân bóng đá|Sân chữ nhật trải cỏ, có khung thành ở hai đầu để đá bóng.
+sân chơi|Bãi đất trống cho trẻ con chạy nhảy, có nơi thêm cầu trượt, xích đu.
+sân cỏ|Mặt sân trồng cỏ để thi đấu, thường chỉ sân bóng đá.
+sân ga|Khu vực cạnh đường ray ở nhà ga, nơi hành khách lên xuống tàu.
+sân khấu|Bục cao trong nhà hát, nơi diễn viên biểu diễn.
+sân quần vợt|Sân phẳng có lưới căng ngang giữa để chơi quần vợt.
+sân sau|Khoảng đất trống phía sau nhà.
+sân thượng|Mặt bằng lộ thiên trên nóc nhà, hay để phơi đồ, trồng cây.
+sân vận động|Khu thể thao lớn có sân thi đấu và khán đài xung quanh.
+sần sùi|Lổn nhổn nốt gồ lên, nhám tay như vỏ mít hay da cóc.
+sâu bọ|Các loài côn trùng nhỏ nói chung.
+sâu đậm|Sâu sắc và đậm đà, thường nói về tình cảm, ấn tượng.
+sâu lắng|Lắng đọng sâu trong lòng, gợi suy tư.
+sâu nặng|Gắn bó sâu sắc và nặng tình.
+sâu róm|Ấu trùng của bướm, thân có nhiều lông, chạm vào gây ngứa.
+sâu sắc|Hiểu biết, suy nghĩ thấu đáo đến tận bản chất.
+sâu thẳm|Sâu hun hút, không nhìn thấy đáy.
+sâu xa|Có ý nghĩa sâu kín, xa rộng, không dễ thấy ngay.
+sầu riêng|Trái to vỏ đầy gai cứng, cơm vàng béo ngậy, mùi nồng nặc khó lẫn.
+sấy tóc|Dùng máy thổi hơi nóng cho tóc ướt mau khô.
+se lạnh|Hơi lành lạnh, thường thấy vào sáng sớm lúc chớm sang đông.
+sen đá|Cây cảnh nhỏ có lá dày, mọng nước xếp thành hình bông hoa.
+sền sệt|Hơi đặc, sánh, không lỏng hẳn.
+shop|Cửa hàng nhỏ bán lẻ, thường là quần áo, mỹ phẩm hay phụ kiện.
+siêng|Chăm chỉ, chịu khó làm việc.
+siêng năng|Chăm chỉ làm việc hay học tập một cách đều đặn.
+siêu|Vượt trội, giỏi hơn hẳn mức bình thường; cũng chỉ ấm nhỏ để sắc thuốc.
+siêu máy tính|Máy tính cực mạnh, dùng cho các phép tính khoa học phức tạp.
+siêu nhân|Nhân vật hư cấu có sức mạnh phi thường, hay cứu người.
+siêu sao|Ngôi sao rất nổi tiếng trong giới nghệ thuật hay thể thao.
+siêu thị|Cửa hàng lớn, khách tự lấy hàng trên kệ rồi ra quầy trả tiền.
+siêu tốc|Có tốc độ rất nhanh, vượt mức thông thường.
+sinh|Đẻ ra con; cũng chỉ việc tạo ra, làm nảy ra điều gì.
+sinh ba|Ba đứa trẻ được sinh cùng một lần.
+sinh đôi|Hai đứa trẻ được sinh cùng một lần.
+sinh động|Có sức sống, gợi được hình ảnh và cảm xúc rõ ràng.
+sinh hoạt|Việc ăn ở, ngủ nghỉ, tắm giặt thường ngày của mỗi người.
+sinh mạng|Mạng sống của mỗi người, thường nói tới khi có tai nạn hay hiểm nguy.
+sinh nhật|Ngày kỷ niệm ngày một người được sinh ra.
+sinh ra|Được mẹ đẻ ra, có mặt trên đời.
+sinh sống|Ở và kiếm sống lâu dài tại một nơi nào đó.
+sinh tố|Nước uống xay nhuyễn từ trái cây với đá và sữa, sánh mịn.
+sinh tồn|Giữ cho mình còn sống trong cảnh khắc nghiệt, như giữa rừng hay ngoài khơi.
+sinh vật|Mọi thực thể có sự sống như người, động vật, cây cỏ.
+sinh viên|Người theo học sau bậc phổ thông, ở các trường đại học, cao đẳng.
+sình lầy|Đất bùn nhão, ngập nước, dễ lún.
+sít sao|Khít, vừa đủ không thừa, thường nói về thời gian hay kế hoạch.
+so le|Không đều, cái cao cái thấp, cái trước cái sau xen kẽ.
+so sánh|Đặt các sự vật cạnh nhau để xem giống và khác ở đâu.
+so với|Từ dùng để đối chiếu với một mốc hay sự vật khác.
+sò huyết|Loài sò nhỏ có thịt màu đỏ như máu, thường nướng hay luộc ăn.
+soạn|Viết ra hay chuẩn bị nội dung như bài giảng, văn bản.
+soạn thảo|Viết và sắp xếp câu chữ cho thư từ, hợp đồng, báo cáo.
+soát|Kiểm lại một lượt cho đúng, thường với vé, giấy tờ hay bài làm.
+soát vé|Kiểm tra vé của khách trước khi cho vào hay lên xe.
+sóc chuột|Loài sóc nhỏ có sọc dọc trên lưng, hay nhét thức ăn vào má.
+soda|Nước có bọt khí, không đường, thường dùng pha đồ uống.
+son phấn|Son môi và phấn trang điểm nói chung, chỉ việc trang điểm.
+song ca|Hai giọng hát cùng nhau một bài, thường chia lời đối đáp.
+song ngữ|Dùng hai thứ tiếng cùng lúc, thường nói về sách hay lớp học.
+song sinh|Cùng mẹ mang một lượt rồi ra đời liền nhau, nói về hai đứa con.
+song song|Chạy cạnh nhau mãi không gặp; cũng chỉ hai việc tiến hành cùng lúc.
+sòng phẳng|Rõ ràng, công bằng, không ai thiệt ai, thường về tiền bạc.
+sóng gió|Những biến cố, khó khăn trắc trở trong cuộc sống.
+sóng sánh|Chao nhẹ, dập dềnh, thường nói về chất lỏng trong vật chứa.
+sổ sách|Sổ ghi chép giấy tờ, thường về tiền nong, công việc.
+sổ tay|Cuốn sổ nhỏ để ghi chép nhanh, mang theo người.
+sổ tiết kiệm|Sổ do ngân hàng cấp, ghi số tiền gửi để lấy lãi.
+số chẵn|Số nguyên chia đôi được trọn vẹn, không lẻ ra một.
+số dư|Phần thừa khi chia không hết; cũng chỉ tiền còn trong tài khoản.
+số đếm|Số dùng để đếm số lượng, như một, hai, ba.
+số đông|Phần đông người trong một nhóm, nhiều hơn hẳn phần còn lại.
+số hiệu|Số hay kí hiệu riêng để nhận biết, như của tàu xe, áo cầu thủ.
+số ít|Nhóm nhỏ, chiếm phần rất ít so với tổng thể.
+số không|Con số chỉ chẳng có gì, viết thành một vòng tròn rỗng.
+số liệu|Các con số thu thập được để phân tích, đánh giá.
+số lượng|Bao nhiêu cái, bao nhiêu người, tức mức nhiều hay ít đếm được.
+số một|Đứng đầu, hàng đầu, vượt hơn tất cả.
+số nhiều|Phần đông trong tổng thể; cũng chỉ dạng từ nói về nhiều vật.
+sôi động|Rộn ràng, náo nức với nhiều hoạt động diễn ra cùng lúc.
+sôi nổi|Hăng hái, nhiệt tình, đầy sức sống.
+sông|Dòng nước lớn chảy dài giữa hai bờ, đổ ra hồ hay biển.
+sông băng|Khối băng khổng lồ trượt rất chậm từ núi cao hay vùng cực xuống thấp.
+sông ngòi|Sông và các dòng nước nói chung trong một vùng.
+sông núi|Cảnh sông và núi, thường dùng để nói về non nước, quê hương.
+sông nước|Vùng có nhiều sông rạch, cuộc sống gắn với nước.
+sống còn|Quyết định việc tồn tại hay mất đi, rất hệ trọng.
+sống động|Chân thực, sinh động như đang diễn ra trước mắt.
+sống lưng|Đường xương chạy dọc giữa lưng.
+sống mũi|Phần gồ chạy dọc giữa mũi.
+sốt ruột|Bồn chồn, đứng ngồi không yên vì chờ lâu hay mong việc xong nhanh.
+sốt sắng|Nhiệt tình, hăng hái giúp đỡ hay làm việc.
+sột soạt|Tiếng cọ xát khô, nhẹ như tiếng giấy hay lá khô.
+sơ chế|Làm bước đầu với nguyên liệu, như nhặt, rửa, thái trước khi nấu.
+sơ đẳng|Ở mức thấp, đơn giản, thuộc phần cơ bản ban đầu.
+sơ đồ|Hình vẽ đơn giản bằng nét, kí hiệu, cho thấy cách sắp xếp các phần.
+sơ hở|Chỗ thiếu cẩn thận, không kín kẽ, dễ để người khác lợi dụng.
+sơ mi|Kiểu áo vải mỏng có cổ bẻ, hàng cúc phía trước và tay áo.
+sơ sài|Đơn giản quá mức, thiếu chi tiết hoặc làm chưa chu đáo.
+sơ sinh|Vừa mới được sinh ra, thường nói về trẻ trong những tuần đầu đời.
+sơ sót|Chỗ sai hoặc thiếu nhỏ do không cẩn thận mà để lọt qua.
+sờ sờ|Hiện ra rõ ràng ngay trước mắt, không thể chối cãi hay làm ngơ.
+sở hữu|Làm chủ một thứ, như nhà đất, xe cộ, có quyền dùng hay bán.
+sở thích|Việc mà một người ưa thích, thường làm lúc rảnh rỗi.
+sở thú|Khu nuôi voi, hổ, khỉ và đủ loài khác trong chuồng để khách tới xem.
+sở trường|Việc một người có năng khiếu và làm giỏi hơn những việc khác.
+sợ hãi|Cảm thấy lo sợ, run rẩy trước điều nguy hiểm hoặc chưa biết rõ.
+sơn ca|Chim nhỏ lông nâu xám, giọng hót trong trẻo, thường sống ở đồng cỏ.
+sơn dầu|Màu vẽ pha với dầu, dùng để vẽ tranh trên vải căng khung.
+sơn lót|Lớp sơn quét đầu tiên để lớp sơn phủ bám chắc và bền màu.
+sơn mài|Tranh hoặc đồ vật vẽ bằng sơn ta nhiều lớp, mài nhẵn cho bóng.
+studio|Phòng làm việc có đèn, phông nền, thiết bị để chụp ảnh hay thu âm.
+su hào|Rau có củ tròn màu xanh nhạt, thường xào hoặc nấu canh.
+su su|Cây leo có quả xanh nhạt sần sùi, ngọn và quả thường xào, luộc.
+suất|Phần được chia cho mỗi người theo định mức, thường là phần ăn hoặc vé.
+súc miệng|Ngậm nước hay nước muối, khoát qua lại trong miệng rồi nhổ ra.
+sục sạo|Lùng khắp ngóc ngách, lật tung mọi chỗ để tìm cho ra.
+sui gia|Cha mẹ hai nhà có con lấy nhau, cách gọi quen ở miền Nam.
+sủi bọt|Nổi lên nhiều bọt nhỏ trên mặt chất lỏng, như khi nước sôi.
+sủi cảo|Bánh gói vỏ bột mì mỏng quanh nhân tôm thịt, thường ăn cùng nước dùng.
+sum họp|Quây quần đông đủ sau thời gian xa cách, thường nói về gia đình.
+sum vầy|Ở bên nhau đầm ấm, vui vẻ và đông đủ, thường nói về người thân.
+sung sức|Có nhiều sức lực, đang ở trạng thái khỏe khoắn và dồi dào năng lượng.
+sung sướng|Cảm thấy rất vui và mãn nguyện; cũng chỉ cuộc sống đầy đủ, an nhàn.
+sung túc|Đầy đủ, dư dả về của cải và đời sống vật chất.
+suối|Dòng nước nhỏ tự nhiên chảy từ núi đồi xuống, thường trong và mát.
+suối khoáng|Dòng nước ngầm phun lên chứa nhiều chất khoáng, thường ấm, để ngâm tắm.
+suối nước nóng|Nguồn nước nóng tự nhiên trào lên từ lòng đất, thường dùng để ngâm mình.
+suôn sẻ|Diễn ra trôi chảy, thuận lợi, không gặp trở ngại gì.
+suốt đời|Trong toàn bộ quãng đời còn lại của một người.
+súp lơ|Rau có hoa non kết thành khối tròn màu trắng hoặc xanh, thường xào.
+sụt giảm|Giảm xuống, đi xuống về số lượng hay mức độ so với trước.
+suy đoán|Dựa vào những gì đã biết để đoán ra điều còn chưa rõ.
+suy giảm|Yếu dần, kém đi về sức khỏe, chất lượng hay khả năng.
+suy luận|Từ các điều đã biết, lập luận từng bước để rút ra kết luận mới.
+suy nghĩ|Vận dụng trí óc để cân nhắc, tìm hiểu hoặc giải quyết một vấn đề.
+suy tính|Cân nhắc kỹ lợi hại, tính toán trước khi quyết định làm gì.
+suy xét|Nhìn nhận kỹ càng mọi mặt để hiểu và đánh giá đúng sự việc.
+suy yếu|Trở nên yếu đi, mất dần sức lực hoặc sức mạnh vốn có.
+sư tử|Thú lớn ăn thịt lông vàng, con đực có bờm rậm, sống thành bầy.
+sư tử biển|Thú biển mình thon, chân dạng mái chèo, có tai ngoài nhỏ, thường ăn cá.
+sử dụng|Đem dùng một vật, một phương tiện hay khả năng vào việc gì đó.
+sứ mệnh|Nhiệm vụ lớn lao, hệ trọng mà một người hoặc tổ chức phải gánh vác.
+sự cố|Việc bất thường xảy ra ngoài ý muốn, gây trục trặc hoặc hư hỏng.
+sự kiện|Việc đáng chú ý đã xảy ra hoặc được tổ chức vào một thời điểm.
+sự nghiệp|Con đường công việc và những thành quả một người gây dựng trong đời.
+sự thật|Điều đã xảy ra đúng như vậy, không bịa hay che giấu.
+sự thực|Điều đúng với thực tế, trái với điều tưởng tượng hoặc lời đồn.
+sự tích|Câu chuyện truyền miệng kể về nguồn gốc của một vật hay phong tục.
+sự việc|Điều đã hoặc đang xảy ra, được xem như một chuyện cụ thể.
+sửa đổi|Thay đổi một phần nội dung cho phù hợp, thường nói về văn bản.
+sửa lỗi|Chữa những chỗ sai cho đúng, thường trong bài viết hoặc chương trình máy tính.
+sửa sai|Nhận ra chỗ làm hỏng rồi chỉnh lại cho đúng.
+sửa sang|Sửa chữa, làm lại cho gọn gàng và đẹp hơn, thường nói về nhà cửa.
+sửa soạn|Chuẩn bị, sắp xếp sẵn sàng trước khi làm việc gì hay đi đâu.
+sữa bột|Sữa được sấy khô thành bột, khi dùng thì pha với nước.
+sữa chua|Món sữa ủ men cho đặc lại, chua nhẹ, thường đựng hũ ăn lạnh.
+sữa đặc|Sữa cô đặc trộn nhiều đường, sánh và ngọt đậm, thường dùng pha cà phê.
+sữa đậu|Nước uống nấu từ các loại đậu xay nhuyễn rồi lọc bỏ bã.
+sữa đậu nành|Nước uống trắng đục làm từ đậu nành xay, lọc bỏ bã rồi đun sôi.
+sữa ong chúa|Chất sánh màu trắng ngà do ong thợ tiết ra để nuôi ong chúa.
+sức bền|Khả năng chịu đựng, làm việc hay vận động lâu mà không mệt hoặc hỏng.
+sức chứa|Mức nhiều nhất người hay đồ mà một chỗ, một vật có thể chứa.
+sức ép|Áp lực đè nặng lên ai đó, buộc phải làm hoặc chịu điều gì.
+sức hút|Cái làm người khác bị cuốn theo, muốn tới gần hay muốn tìm hiểu.
+sức lực|Khả năng của cơ thể để làm việc, vận động và chịu đựng mệt nhọc.
+sức mạnh|Khả năng làm việc nặng, chịu sức ép, về thân thể hay ý chí.
+sức nặng|Độ nặng của một vật; cũng chỉ giá trị, ảnh hưởng của lời nói.
+sức sống|Khả năng sinh sôi, phát triển mạnh mẽ và tràn đầy năng lượng.
+sừng sững|Đứng cao lớn, vững chãi, nổi bật ngay trước mắt.
+sừng trâu|Sừng cong, cứng trên đầu con trâu, có khi làm lược hay đồ mỹ nghệ.
+sửng sốt|Ngạc nhiên đến mức sững người khi gặp điều bất ngờ.
+sững sờ|Đứng lặng người, không nói nên lời vì quá bất ngờ hay xúc động.
+sưởi nắng|Ngồi hoặc nằm ngoài trời để hứng ánh nắng cho ấm người.
+sườn|Hai bên ngực có xương cong, thường chỉ thịt kèm xương ấy để nấu ăn.
+sương|Hạt nước li ti đọng trên lá hay giăng mờ trời lúc đêm, sớm.
+sương giá|Sương đọng lại đông cứng thành lớp băng mỏng màu trắng khi trời rất lạnh.
+sương mai|Giọt nước đọng long lanh trên lá cỏ lúc trời vừa hửng sáng.
+sương mù|Lớp hơi nước dày đặc lơ lửng gần mặt đất, làm khó nhìn xa.
+sướt mướt|Ướt đẫm nước mắt vì khóc nhiều, thường nói về chuyện buồn bi lụy.
+sứt mẻ|Mất một miếng nhỏ nơi miệng hay cạnh, như chén bát va đập lâu ngày.
+sưu tầm|Lần tìm và gom góp những thứ mình thích như tem, tiền xu, đồ cổ.
+sưu tập|Gom nhiều món cùng loại thành bộ để cất giữ, trưng bày.
+tã lót|Vải mềm hoặc miếng thấm hút quấn cho trẻ nhỏ để giữ sạch và ấm.
+tác dụng|Thay đổi một thứ gây ra khi được dùng, có thể lợi hoặc hại.
+tác động|Gây ra ảnh hưởng, làm biến đổi sự vật hay con người.
+tác giả|Người đứng tên cuốn sách, bài hát hay bức tranh do mình làm ra.
+tác hại|Hậu quả xấu một thứ gây ra, như khói thuốc làm hỏng phổi.
+tác phẩm|Thành quả sáng tạo về văn chương hay nghệ thuật, như cuốn sách, bức tranh.
+tác phong|Lối đi đứng, nói năng và làm việc thường ngày của một người.
+tách|Làm cho rời nhau ra; cũng chỉ chiếc cốc nhỏ có quai để uống trà.
+tách biệt|Ở riêng ra, cách xa và không gắn liền với những cái xung quanh.
+tách rời|Để riêng ra từng phần, không còn dính liền với nhau.
+tai hại|Gây ra thiệt hại hoặc hậu quả xấu khó lường.
+tai mèo|Đá vôi lởm chởm nhiều mũi nhọn sắc, thường gặp ở vùng núi đá.
+tai nghe|Đồ nhỏ đeo ở hoặc nhét vào tai, phát tiếng từ điện thoại, máy tính.
+tài ba|Có tài năng xuất chúng về nhiều mặt, thường dùng với ý ngợi khen.
+tài giỏi|Có năng lực cao, làm việc đạt kết quả tốt hơn mức thông thường.
+tài hoa|Có tài năng nổi bật về nghệ thuật, tinh tế và khéo léo.
+tài khoản|Mục đăng kí riêng ở ngân hàng hay trên mạng để giữ tiền, đăng nhập.
+tài liệu|Văn bản, sách vở hay giấy tờ chứa thông tin để học hoặc tra cứu.
+tài năng|Khả năng hơn hẳn người thường ở một việc, như vẽ, hát hay chơi bóng.
+tài nguyên|Của có sẵn trong đất trời để khai thác, như khoáng sản, nước, rừng.
+tài sản|Của cải, tiền bạc và đồ vật có giá trị thuộc về ai đó.
+tài tình|Khéo léo đến độ khiến người khác phục, như một nước cờ bất ngờ.
+tài trợ|Bỏ tiền hay vật chất ra giúp một chương trình, giải đấu hay người học.
+tài tử|Diễn viên điện ảnh có tiếng; cũng chỉ người làm vì sở thích, không chuyên.
+tài xế|Người lái xe ô tô, thường làm nghề chở người hoặc chở hàng.
+tải xuống|Chép dữ liệu, tệp hoặc ứng dụng từ mạng về máy của mình.
+tái chế|Biến chai nhựa, giấy vụn đã dùng thành nguyên liệu hay đồ mới.
+tái hợp|Trở về chung sống hoặc làm việc chung sau khi đã chia tay.
+tái tạo|Làm cho hình thành lại hoặc phục hồi sau khi bị mất hay hư hại.
+tại chỗ|Ngay chỗ đang đứng, đang xảy ra, không phải chuyển đi nơi khác.
+tại sao|Từ dùng để hỏi nguyên nhân, lí do của một việc.
+tam giác|Hình phẳng khép kín bởi ba đoạn thẳng nối ba đỉnh.
+tàm tạm|Ở mức trung bình, không tốt lắm nhưng chấp nhận được.
+tạm biệt|Lời chào khi chia tay, hẹn ngày gặp lại.
+tạm bợ|Chỉ dùng tạm cho qua, sơ sài, không ổn định và không lâu bền.
+tạm ngừng|Dừng lại một lúc rồi sẽ làm tiếp, như trận đấu nghỉ vì mưa.
+tạm ổn|Đã khá ổn định, chưa có gì đáng lo nhưng chưa thật tốt.
+tạm thời|Chỉ dùng hay có trong một khoảng ngắn, chờ cái khác thay.
+tan rã|Rời rã thành từng phần, không còn tập hợp hay tổ chức như trước.
+tan vỡ|Đổ vỡ hoàn toàn, không còn nguyên vẹn, thường nói về tình cảm.
+tàn nhang|Những đốm nhỏ màu nâu nhạt trên da mặt, thường đậm lên khi ra nắng.
+tản bộ|Đi bộ chậm rãi, thong dong cho khuây khỏa, thường quanh công viên.
+tán chuyện|Nói chuyện phiếm, chuyện vặt với nhau cho vui.
+tán gẫu|Trò chuyện linh tinh, không có chủ đề rõ ràng, để giải trí lúc rảnh.
+tán lá|Phần cành lá xòe rộng ở ngọn cây, tạo thành bóng mát.
+tán thành|Gật đầu đồng tình và ủng hộ một ý kiến, một đề xuất đưa ra.
+tàng hình|Ẩn đi để không bị nhìn thấy hoặc không bị máy dò phát hiện.
+tảng đá|Khối đá lớn và nặng, thường nằm nguyên trên mặt đất.
+tạnh|Ngừng hẳn, không còn rơi nữa, thường nói về mưa.
+tao nhã|Thanh lịch, nhẹ nhàng và có vẻ đẹp tinh tế, không tầm thường.
+tào phớ|Món óc đậu mềm mịn ăn với nước đường gừng, cách gọi ở miền Bắc.
+táo bạo|Dám nghĩ dám làm những điều mới lạ, mạo hiểm mà người khác ngại.
+táo tàu|Quả táo đỏ phơi khô, vỏ nhăn, vị ngọt, thường dùng nấu chè.
+táo tây|Quả táo to tròn, vỏ đỏ hoặc xanh, ruột trắng giòn và ngọt.
+tạo dựng|Gây dựng nên từ đầu, như sự nghiệp, cơ ngơi hay mối quan hệ.
+tạo hình|Làm ra hình dáng cho một vật hay nhân vật bằng cách nặn, vẽ.
+tạo thành|Gộp các phần lại để có một cái mới, như giọt nước thành dòng.
+tạp chất|Thứ lẫn vào làm vật không còn nguyên chất, như cát trong gạo.
+tạp chí|Cuốn báo ra đều mỗi tuần hay tháng, gồm bài và ảnh theo chủ đề.
+tạp dề|Tấm vải đeo trước người khi nấu ăn hay làm việc để giữ áo sạch.
+tạp vụ|Việc dọn dẹp, lau chùi lặt vặt ở cơ quan, hoặc người làm việc ấy.
+tàu bay|Cách gọi cũ của máy bay, phương tiện có cánh bay trên không.
+tàu bè|Các loại tàu thuyền nói chung, nhất là khi qua lại tấp nập.
+tàu biển|Tàu lớn chạy trên biển, chở hàng hóa hoặc hành khách.
+tàu cánh ngầm|Tàu có cánh dưới thân, khi chạy nhanh thì nâng thân lên khỏi mặt nước.
+tàu con thoi|Tàu vũ trụ có cánh, bay vào quỹ đạo rồi hạ cánh để dùng lại.
+tàu du lịch|Tàu chở khách đi tham quan, nghỉ dưỡng trên sông hoặc biển.
+tàu điện ngầm|Đoàn tàu chạy bằng điện trong đường hầm dưới lòng đất, chở khách nội đô.
+tàu lá|Phiến lá to và dài có cuống, như lá chuối, lá dừa.
+tàu lửa|Đoàn toa xe do đầu máy kéo, chạy trên đường ray.
+tàu lượn|Trò chơi ngồi xe lao nhanh trên đường ray uốn lượn, lên dốc xuống dốc.
+tàu thuyền|Phương tiện đi trên mặt nước nói chung, từ thuyền nhỏ đến tàu lớn.
+tàu tốc hành|Tàu chạy nhanh, ít dừng ở các ga dọc đường.
+tàu vũ trụ|Phương tiện bay ra ngoài khí quyển, đưa người hoặc thiết bị vào không gian.
+taxi|Xe con chở khách thuê, tính tiền theo đồng hồ đo quãng đường.
+tay áo|Hai ống vải của chiếc áo bọc lấy cánh tay, có loại dài, loại ngắn.
+tay cầm|Bộ phận gắn vào đồ vật để nắm lấy khi cầm, xách hay điều khiển.
+tay chân|Tay và chân trên cơ thể; cũng chỉ người thân tín sai đâu làm đó.
+tay đua|Người tham gia thi đấu tốc độ, như đua xe hay đua thuyền.
+tay lái|Bộ phận người lái cầm để đổi hướng xe, như vô lăng hay ghi đông.
+tay nghề|Trình độ thành thạo, khéo léo trong một nghề nghiệp cụ thể.
+tay phải|Tay ở phía bên phải; cũng chỉ người phụ tá đắc lực.
+tay quay|Thanh gắn vào trục, cầm để quay cho máy hay vật chuyển động.
+tay trái|Tay ở bên trái cơ thể, cùng phía với tim.
+tay vịn|Thanh dọc cầu thang, lan can hoặc trên xe để bám tay cho chắc.
+tắc kè|Bò sát giống thằn lằn lớn, da sần có đốm, kêu to vào ban đêm.
+tắc kè hoa|Bò sát đổi được màu da, lưỡi dài phóng ra bắt mồi.
+tăm bông|Que nhỏ quấn cục bông ở đầu, thường dùng chấm thuốc, lau vết bẩn.
+tắm giặt|Việc tắm cho sạch người và giặt đồ, gộp chung trong sinh hoạt.
+tắm gội|Rửa sạch người và gội cả tóc.
+tắm hơi|Ngồi trong phòng kín đầy hơi nóng cho ra mồ hôi để thư giãn.
+tắm nắng|Phơi mình dưới ánh nắng, thường ở bãi biển, để làm ấm hay sạm da.
+tắm rửa|Dội nước, kỳ cọ cho sạch thân thể.
+tắm táp|Tắm cho sạch sẽ nói chung, mang sắc thái thân mật thường ngày.
+tăng cường|Bổ sung thêm người, sức hay biện pháp cho mạnh và hiệu quả hơn.
+tăng giá|Lên giá, bán đắt hơn so với trước.
+tăng giảm|Thay đổi lên xuống về số lượng hay mức độ.
+tăng tốc|Chạy nhanh dần lên hoặc đẩy nhanh nhịp độ làm việc.
+tăng trưởng|Lớn lên, phát triển về quy mô, thường nói về kinh tế.
+tắt tiếng|Làm máy móc không phát ra âm thanh; cũng chỉ bị mất giọng.
+tâm điểm|Chỗ thu hút sự chú ý và quan tâm của nhiều người.
+tâm hồn|Thế giới bên trong mỗi người, gồm cảm xúc, suy nghĩ và ước mơ.
+tâm huyết|Tình cảm và tâm sức dồn hết vào một việc mình theo đuổi.
+tâm tình|Chuyện trò thân mật để bày tỏ tình cảm riêng tư với nhau.
+tâm trạng|Trạng thái cảm xúc trong lòng ở một lúc nào đó, như vui, buồn, lo.
+tâm trí|Tâm tư và trí óc, nơi suy nghĩ và ghi nhớ của con người.
+tâm tư|Những suy nghĩ, tình cảm kín đáo chưa nói ra.
+tầm cỡ|Quy mô, mức độ lớn hoặc vị thế đáng kể của người hay việc.
+tầm mắt|Phạm vi mắt nhìn bao quát được khi đứng ở một chỗ.
+tầm nhìn|Khả năng nhìn thấy xa; cũng chỉ khả năng thấy trước để định hướng.
+tầm tã|Rơi xuống nặng hạt và dai dẳng không ngớt, thường nói về mưa.
+tầm tay|Khoảng cách tay với tới được, ý chỉ điều dễ đạt.
+tầm thường|Xoàng xĩnh, chẳng có gì đáng để ý hay khác người, thường mang ý chê.
+tầm vóc|Kích thước cơ thể người; cũng chỉ tầm quan trọng, quy mô của sự việc.
+tẩm bột|Nhúng hoặc lăn thực phẩm qua lớp bột trước khi chiên.
+tấm chắn|Tấm vật liệu đặt chắn ngang để ngăn gió, bụi, nước hay va đập.
+tấm gương|Mặt kính phản chiếu hình ảnh; cũng chỉ người hay việc tốt đáng noi theo.
+tấm lòng|Tình cảm chân thành, sự quan tâm thật tâm dành cho người khác.
+tấm lợp|Tấm vật liệu mỏng, rộng như tôn hay tấm xi măng, dùng để lợp mái.
+tân gia|Lễ mừng dọn về nhà mới, thường mời người thân bạn bè tới dự.
+tân tiến|Mới và tiến bộ, theo kịp sự phát triển của thời đại.
+tân trang|Sửa sang, làm mới lại đồ cũ cho đẹp và dùng tốt như mới.
+tận cùng|Chỗ cuối cùng, xa nhất, không còn gì phía sau.
+tận dụng|Dùng hết khả năng, cơ hội hay vật sẵn có, không để phí.
+tận hưởng|Hưởng thụ trọn vẹn niềm vui hay điều tốt đẹp đang có.
+tận mắt|Chính mình nhìn thấy tại chỗ, không phải nghe kể lại hay xem qua ảnh.
+tận tay|Bằng chính tay mình, không nhờ ai làm hay chuyển hộ.
+tận tâm|Hết lòng, dồn hết tâm sức vào công việc được giao.
+tận tình|Hết lòng và chu đáo đến từng việc nhỏ khi lo cho người khác.
+tầng hầm|Tầng nhà xây dưới mặt đất, thường dùng để xe hay chứa đồ.
+tấp nập|Người xe qua lại liên tục, đông đúc và rộn rã, như chợ ngày Tết.
+tập đoàn|Khối nhiều công ty gắn với nhau dưới một bộ máy điều hành chung.
+tập đọc|Môn học ở bậc tiểu học giúp học sinh luyện đọc đúng và hiểu bài.
+tập hợp|Gom người, vật hay thông tin rời rạc về một chỗ cho thành khối chung.
+tập luyện|Lặp đi lặp lại bài tập, động tác để giỏi hơn hay khỏe hơn.
+tập quán|Cách làm đã thành nếp từ lâu trong một vùng hay cộng đồng.
+tập sự|Làm việc thử dưới sự hướng dẫn trước khi được nhận chính thức.
+tập tành|Bắt đầu tập làm một việc gì đó, thường còn vụng về, giọng thân mật.
+tập thể|Nhóm người cùng sinh hoạt, làm việc chung có tổ chức.
+tập tin|Đơn vị dữ liệu được lưu trữ với một tên riêng trên máy tính.
+tập trung|Dồn chú ý vào một việc; cũng chỉ gom người, vật về một nơi.
+tập tục|Lề thói, nghi thức lâu đời trong dân gian, gắn với đời sống cộng đồng.
+tập vở|Cuốn vở và giấy viết dùng để học sinh ghi chép bài.
+tất bật|Vội vã, bận rộn liên tục với nhiều việc.
+tất cả|Toàn bộ, không trừ một ai hay một cái gì.
+tất nhiên|Đương nhiên phải thế, theo lẽ thường không thể khác.
+tất niên|Dịp cuối năm cũ, thường có bữa tiệc sum họp để tiễn năm.
+tây bắc|Hướng nằm giữa phía mặt trời lặn và phía bắc, đối diện đông nam.
+tây nam|Phương chếch giữa nam và tây, chéo ngược với đông bắc trên la bàn.
+tẩy rửa|Làm sạch vết bẩn bằng hóa chất hoặc chất tẩy.
+tẩy trang|Lau sạch son phấn còn trên mặt bằng nước hay dầu chuyên dùng.
+tẻ nhạt|Nhạt nhẽo, đơn điệu, không có gì hấp dẫn hay thú vị.
+tem thư|Miếng giấy nhỏ có răng cưa, dán góc phong bì để trả phí gửi thư.
+tennis|Tên gọi khác của môn quần vợt, đánh bóng nỉ bằng vợt căng lưới.
+tép riu|Tôm rất nhỏ ở ao ruộng; cũng chỉ thứ nhỏ nhoi, không đáng kể.
+tê giác|Con thú to nặng, da dày như giáp, có sừng mọc ngay trên sống mũi.
+tê tê|Con thú mình phủ vảy cứng, cuộn tròn khi sợ, lưỡi dài để bắt kiến.
+tế bào|Phần tí hon ghép nên cơ thể sinh vật, thường chỉ soi kính mới thấy.
+tế nhị|Khéo léo, ý tứ khi cư xử; cũng chỉ chuyện riêng tư khó nói.
+tệ hại|Xấu, kém đến mức gây hại hoặc đáng lo ngại.
+tên gọi|Tên dùng để gọi một người, vật hay sự việc.
+tên riêng|Tên đặt riêng cho một người, nơi chốn hay sự vật, thường viết hoa.
+tên tuổi|Danh tiếng của một người được nhiều người biết đến.
+tha lỗi|Bỏ qua cho người đã làm sai với mình, không trách nữa.
+tha thứ|Rộng lòng bỏ qua điều sai trái người khác gây ra, không oán giận.
+thả bộ|Thong dong dạo bước, đi chậm cho khuây khỏa.
+thả ga|Mặc sức làm gì mà không kìm giữ, như ăn uống, vui chơi.
+thả lỏng|Để cơ thể hay tinh thần chùng xuống, không gồng căng thẳng.
+thác|Chỗ dòng sông, suối chảy qua đoạn dốc, nước đổ xuống mạnh.
+thác nước|Dòng nước từ trên vách cao đổ thẳng xuống, tung bọt trắng xóa.
+thách thức|Việc khó đặt ra buộc người ta phải gắng sức vượt qua.
+thạch|Món ăn trong và dẻo, nấu từ rau câu hay bột rồi để đông.
+thạch anh|Đá tinh thể trong hoặc có màu, cứng, hay làm đồ trang sức.
+thạch cao|Khoáng chất màu trắng, trộn nước rồi khô lại thì cứng, dùng đúc tượng.
+thạch đen|Món mát màu đen, giòn mềm, nấu từ lá cây sương sáo, ăn với đường.
+thạch sùng|Bò sát nhỏ màu xám nhạt, bò trên tường nhà, kêu tắc lưỡi, ăn muỗi.
+thái|Cắt thành miếng mỏng hoặc sợi nhỏ bằng dao.
+thái độ|Cách nghĩ và cách cư xử bộc lộ ra trước một việc hay một người.
+thái quá|Vượt quá mức bình thường, đến mức không hợp lý.
+tham gia|Góp mặt và cùng làm trong một hoạt động, cuộc thi hay nhóm.
+tham khảo|Tìm đọc sách, hỏi ý kiến hay xem mẫu có sẵn để làm đúng.
+tham vọng|Mong muốn lớn và mạnh mẽ đạt được địa vị hay thành công.
+thảm|Tấm dệt dày trải sàn để ngồi, trang trí; cũng chỉ cảnh rất đáng thương.
+thám hiểm|Lặn lội vào nơi xa lạ, hiểm trở như hang sâu để khám phá.
+than|Chất rắn đen nhóm lên cháy đỏ, lấy từ củi đốt hay đào ở mỏ.
+than củi|Chất đốt làm từ gỗ nung yếu lửa trong lò kín, dùng để nướng.
+than đá|Khoáng chất màu đen khai thác từ mỏ, dùng làm chất đốt trong nhà máy.
+than phiền|Kêu ca, tỏ ý không hài lòng về điều gì với người khác.
+than thở|Buông lời kể khổ, kêu ca chuyện buồn của mình cho vơi bớt trong lòng.
+than tổ ong|Viên than hình trụ có nhiều lỗ thủng xuyên dọc, dùng đun bếp.
+than vãn|Phàn nàn, kêu ca dai dẳng về những khó khăn của mình.
+thản nhiên|Tỏ vẻ bình thường như không, dù gặp chuyện đáng lo hay đáng ngại.
+thán phục|Trầm trồ, nể phục hết lòng trước tài hay đức của người khác.
+thang|Dụng cụ có hai thanh dài nối bằng các bậc ngang, dùng để trèo.
+thang cuốn|Cầu thang có bậc tự chuyển động bằng máy, đưa người lên xuống tầng.
+thang máy|Buồng chạy bằng máy, đưa người và hàng lên xuống giữa các tầng nhà.
+tháng chạp|Tháng cuối của năm âm lịch, ngay trước Tết Nguyên đán.
+tháng giêng|Tháng đầu tiên của năm âm lịch, gắn với dịp Tết.
+tháng năm|Tháng liền sau tháng tư; cũng chỉ thời gian dài dằng dặc trôi qua.
+tháng ngày|Chuỗi ngày sống nối nhau trôi đi, thường gợi một quãng đời.
+thanh bình|Yên ả, không loạn lạc, như một làng quê êm đềm.
+thanh lịch|Lịch sự, nhã nhặn và có phong cách đẹp trong ăn mặc, cư xử.
+thanh long|Trái vỏ hồng đỏ có tai xanh, ruột trắng hay đỏ lấm tấm hạt đen.
+thanh mảnh|Thon gọn, mảnh mai và trông nhẹ nhàng.
+thanh niên|Người đang ở tuổi trẻ, đã lớn nhưng chưa đứng tuổi.
+thanh thoát|Nhẹ nhàng, thoải mái, không vướng bận hay nặng nề.
+thanh xuân|Quãng tuổi trẻ đầy sức sống, thường được nhắc lại với nhiều hoài niệm.
+thành công|Làm được điều mình nhắm tới, có kết quả như đã mong.
+thành đạt|Có sự nghiệp vững vàng, đạt được địa vị và thành tựu trong đời.
+thành kiến|Cách nhìn định sẵn về ai đó, thường thiên lệch và khó thay đổi.
+thành lập|Lập ra, dựng nên một tổ chức hay cơ quan mới.
+thành ngữ|Cụm từ dân gian đã thành nếp, nghĩa chung khác hẳn nghĩa từng chữ.
+thành phẩm|Sản phẩm đã hoàn tất mọi khâu sản xuất, sẵn sàng đem dùng hay bán.
+thành phần|Từng thứ góp vào làm nên một tổng thể, như các chất ghi trên nhãn.
+thành phố|Nơi dân cư đông đúc, phố xá san sát, xe cộ đi lại tấp nập.
+thành quả|Điều tốt đẹp gặt hái được sau một quãng dài bỏ công sức.
+thành thạo|Làm giỏi, nhuần nhuyễn nhờ đã quen tay.
+thành thật|Nói ra đúng điều mình nghĩ, không vờ vịt hay giấu giếm.
+thành thị|Vùng đô thị, phố xá đông đúc, trái với nông thôn.
+thành tích|Kết quả đạt được, thường được ghi nhận hoặc khen thưởng.
+thành tựu|Kết quả lớn, có ý nghĩa, đạt được sau thời gian dài.
+thành viên|Người thuộc về một nhóm, tổ chức hay gia đình.
+thảnh thơi|Nhàn nhã, thoải mái, không phải lo nghĩ gì.
+thao tác|Động tác, các bước làm khi sử dụng máy móc hay làm một việc.
+thao thức|Nằm trên giường mà mắt cứ mở, mãi chưa chợp mắt vì bận lòng.
+thảo luận|Nhiều người cùng góp ý, hỏi đáp qua lại quanh một vấn đề chung.
+thảo mộc|Cây cỏ nói chung, hay nhắc tới khi dùng lá, rễ pha trà, làm thuốc.
+thảo nguyên|Đồng cỏ trải rộng tít tắp, ít cây lớn, nơi dân du mục chăn thả.
+tháo|Gỡ rời các bộ phận ra hoặc cởi bỏ thứ đang buộc, đang gắn.
+tháo dỡ|Tháo rời và dỡ bỏ, thường nói về nhà cửa hay công trình.
+tháo gỡ|Giải quyết, làm cho hết vướng mắc hay khó khăn.
+tháo vát|Nhanh nhẹn, giỏi xoay xở trong công việc.
+tháp|Công trình xây cao, đáy rộng rồi nhỏ dần lên đỉnh.
+tháp chuông|Tháp cao có treo chuông, thường ở nhà thờ hoặc chùa.
+tháp nước|Tháp chứa nước đặt trên cao để cấp nước cho khu dân cư.
+thau|Đồ đựng rộng miệng, thành thấp, dùng để rửa, giặt, cách gọi ở miền Nam.
+thay đổi|Trở nên khác trước, hoặc làm cho một thứ không còn như cũ.
+thay mặt|Đứng ra làm việc hay nói thay cho người khác hoặc tập thể.
+thay phiên|Lần lượt thay nhau làm một việc.
+thay vì|Từ dùng để nói chọn làm việc này chứ không làm việc kia.
+thắc mắc|Có điều chưa hiểu, băn khoăn muốn hỏi cho rõ.
+thăm dò|Tìm hiểu một cách dè dặt để nắm tình hình trước khi hành động.
+thăm hỏi|Ghé gặp hay nhắn hỏi tin tức, sức khỏe của người mình quan tâm.
+thăm nom|Đến thăm và trông nom, chăm sóc người ốm hay người thân.
+thăm thú|Đi đây đó ngắm cảnh, xem cho biết.
+thắm thiết|Đằm thắm, gắn bó sâu sắc, thường nói về tình cảm.
+thằn lằn|Bò sát nhỏ thân dài, bốn chân, đuôi dài, thường sống trong bụi cỏ.
+thăng bằng|Trạng thái đứng vững không nghiêng ngả, như khi đi trên dây hay đạp xe.
+thăng chức|Được giao vị trí cao hơn trước ở nơi làm việc, thường kèm thêm lương.
+thăng hoa|Đạt tới trạng thái cảm hứng dâng trào, làm việc hay sáng tạo xuất sắc.
+thăng tiến|Tiến dần lên địa vị, chức vụ cao hơn trong sự nghiệp.
+thăng trầm|Lúc thịnh lúc suy, lúc vui lúc buồn trong cuộc đời.
+thằng bé|Cách gọi thân mật một cậu con trai nhỏ tuổi, thường dùng khi kể chuyện.
+thẳng đứng|Vuông góc với mặt đất, không nghiêng.
+thẳng hàng|Xếp thành một đường thẳng, không lệch.
+thẳng tắp|Thẳng một mạch dài, không cong lệch.
+thẳng thắn|Nói thật suy nghĩ của mình, không vòng vo hay che giấu.
+thẳng thừng|Nói hay làm dứt khoát, không nể nang, thường gây khó chịu.
+thắng bại|Sự thắng hoặc thua trong một cuộc đấu.
+thắng cuộc|Về nhất hoặc giành phần hơn ở một cuộc thi, trò chơi hay tranh tài.
+thắng lợi|Kết quả thành công, giành được điều mong muốn sau đấu tranh.
+thắp sáng|Đốt hay bật đèn cho sáng lên.
+thắt chặt|Siết cho chặt hơn, thường nói về quan hệ, kỷ luật hay chi tiêu.
+thắt lưng|Dây có khóa quấn quanh eo giữ quần; cũng chỉ vùng eo sau lưng.
+thắt nút|Vòng đầu dây qua nhau rồi kéo chặt để tạo thành một nút buộc.
+thầm kín|Kín đáo trong lòng, không muốn để người khác biết.
+thầm lặng|Lặng lẽ, không ồn ào, làm điều gì mà chẳng cần ai biết tới.
+thầm thì|Nói nhỏ nhẹ, khẽ khàng vào tai nhau.
+thấm thía|Cảm nhận sâu sắc, hiểu thấu tận trong lòng.
+thậm chí|Từ dùng để nhấn mạnh điều sắp nói còn hơn mức thường gặp.
+thân cây|Phần chính của cây, mọc từ gốc lên, mang cành lá.
+thân hình|Dáng vóc bề ngoài của cả người, cao hay thấp, gầy hay đầy đặn.
+thân mật|Gần gũi, thân thiết và cởi mở với nhau.
+thân mến|Thân thiết và quý mến, thường dùng khi xưng hô trong thư.
+thân mình|Phần thân của cơ thể, không kể đầu và tay chân.
+thân nhiệt|Độ nóng của cơ thể, thường đo bằng nhiệt kế khi nghi bị sốt.
+thân quen|Quen biết từ lâu, gần gũi.
+thân thể|Toàn bộ phần xác của một người, gồm đầu, mình và tay chân.
+thân thiện|Dễ gần, cười nói cởi mở và cư xử tử tế với người xung quanh.
+thân thiết|Gắn bó, gần gũi với nhau lâu năm.
+thân thuộc|Quen thuộc, gần gũi như người nhà.
+thân thương|Thân thiết và yêu thương trìu mến.
+thân yêu|Gắn bó, quý mến hết lòng, thường nói về người nhà hay quê hương.
+thần bí|Lạ lùng, khó giải thích, như ẩn chứa điều gì vượt ngoài hiểu biết thường.
+thần đồng|Đứa trẻ có tài năng vượt xa bạn cùng tuổi từ rất sớm.
+thần thái|Khí chất toát ra qua ánh mắt, cử chỉ, gây ấn tượng với người nhìn.
+thần thoại|Truyện kể dân gian thời cổ về các vị thần và nguồn gốc thế giới.
+thận trọng|Cẩn thận, cân nhắc kĩ trước khi nói hay làm để tránh sai sót.
+thấp bé|Có dáng người vừa thấp vừa nhỏ, kém hơn mức thường.
+thấp thoáng|Ẩn hiện mờ mờ, khi thấy khi khuất, như mái nhà sau hàng cây.
+thấp thỏm|Bồn chồn không yên, cứ ngóng chờ và lo một chuyện chưa rõ kết quả.
+thập cẩm|Trộn lẫn nhiều thứ khác loại, hay gặp trong tên món như chè, xôi, bánh.
+thập niên|Quãng thời gian mười năm, hay dùng để chia các giai đoạn lịch sử.
+thất bại|Không làm được điều đã định, hoặc thua trong một cuộc tranh đua.
+thất hứa|Đã hẹn với ai mà rồi không giữ lời, không làm như đã nói.
+thất lạc|Bị mất, không rõ đang ở đâu, thường nói về đồ vật hay người thân.
+thất thường|Hay thay đổi bất ngờ, không theo một nếp nhất định.
+thất vọng|Cảm giác hụt hẫng, buồn lòng khi điều mình trông đợi không xảy ra.
+thật|Đúng với sự việc có thực, không giả, không bịa đặt.
+thật lòng|Đúng như trong bụng nghĩ và cảm thấy, không nói cho có lệ.
+thật sự|Đúng là có thực, không phải giả vờ hay tưởng tượng.
+thật tâm|Có ý định ngay thẳng thực sự trong lòng, không vụ lợi hay giả vờ.
+thật thà|Tính tình ngay thẳng, chất phác, không biết nói dối hay mưu mẹo.
+thật tình|Thành thực, không che giấu, hay dùng khi nói thẳng điều mình nghĩ.
+thấu đáo|Kĩ lưỡng, xét đến mọi khía cạnh của vấn đề.
+thấu hiểu|Hiểu sâu sắc và trọn vẹn suy nghĩ, cảm xúc hay hoàn cảnh của ai.
+thầy|Người dạy học hay truyền nghề, thường dùng để gọi giáo viên nam.
+thầy cô|Các thầy giáo và cô giáo nói chung, những người dạy học.
+thầy giáo|Giáo viên là nam, đứng lớp giảng bài cho học sinh ở trường.
+thầy trò|Thầy và học trò, nói về quan hệ giữa người dạy và người học.
+thẻ đỏ|Tấm thẻ trọng tài bóng đá giơ ra để đuổi cầu thủ khỏi sân.
+thẻ nhớ|Tấm mạch nhỏ, dẹt, cắm vào máy ảnh hay điện thoại để lưu dữ liệu.
+thẻ tín dụng|Thẻ ngân hàng cho phép chi tiêu trước bằng tiền vay rồi trả sau.
+thẻ vàng|Cảnh cáo trên sân cỏ, khi trọng tài giơ tấm bìa vàng với cầu thủ.
+thèm thuồng|Rất thèm muốn, lộ rõ qua ánh mắt hay vẻ mặt.
+then|Thanh gỗ hay sắt cài ngang cánh cửa để giữ cửa đóng chặt.
+then chốt|Giữ vai trò cốt lõi, có tính quyết định với toàn bộ sự việc.
+thẹn thùng|Ngượng nghịu, e lệ, hay cúi mặt hoặc đỏ má trước người lạ.
+theo|Đi sau hay đi cùng ai; cũng có nghĩa là làm đúng như đã định.
+theo dõi|Chú ý quan sát liên tục để nắm được diễn biến của sự việc.
+theo đuổi|Kiên trì nhắm tới một mục tiêu; cũng chỉ việc tán tỉnh ai.
+theo kịp|Đuổi kịp hoặc bắt nhịp được với người khác hay sự thay đổi.
+thép|Hợp kim của sắt với chút cacbon, cứng và bền, dùng làm dao, khung nhà.
+thét|Kêu to và gắt, thường vì sợ hãi, đau đớn hay tức giận.
+thề thốt|Thề hứa nhiều lần, nhiều lời để người khác tin mình.
+thể chất|Phần cơ thể của con người xét về sức khỏe, vóc dáng và sức bền.
+thể diện|Danh dự, sự tôn trọng mà một người muốn giữ trước người khác.
+thể dục|Việc tập luyện các động tác vận động để cơ thể khỏe mạnh.
+thể hiện|Bày tỏ, làm lộ ra suy nghĩ, tình cảm hay khả năng ra bên ngoài.
+thể hình|Môn tập tạ để có cơ bắp săn chắc, thân hình cân đối.
+thể lệ|Bộ quy định mà người dự thi phải theo, như hạn nộp bài, cách chấm.
+thể loại|Nhóm tác phẩm cùng hình thức hay nội dung, như trong văn học, phim ảnh.
+thể lực|Sức khỏe cơ bắp, sức chạy nhảy và mang vác của một người.
+thể thao|Các hoạt động vận động và thi đấu theo luật, nhằm rèn luyện sức khỏe.
+thể tích|Độ lớn phần không gian một vật chiếm chỗ, tính bằng mét khối.
+thể xác|Phần da thịt, xương cốt của con người, khác với tâm hồn bên trong.
+thế gian|Cõi đời mà con người đang sống, với đủ mọi chuyện vui buồn.
+thế giới|Toàn bộ trái đất cùng mọi quốc gia và con người trên đó.
+thế hệ|Lớp người cùng một thời, như lớp ông bà, lớp cha mẹ, lớp con cháu.
+thế mạnh|Điều một người hay một nơi làm tốt hơn và có lợi hơn chỗ khác.
+thế nào|Từ để hỏi việc diễn ra ra sao, hay một thứ có đặc điểm gì.
+thềm|Phần nền cao, phẳng trước cửa nhà, nối với bậc lên xuống.
+thênh thang|Rộng rãi, thoáng đãng, đi lại thoải mái, thường nói về đường sá.
+thêu|Dùng kim và chỉ màu khâu thành hình hoa văn trên vải.
+thêu ren|Việc thêu hoa văn và làm ren để trang trí khăn áo, vải vóc.
+thêu thùa|Công việc thêu vá nói chung, đòi hỏi sự khéo tay và tỉ mỉ.
+thi công|Làm các phần việc xây dựng tại công trường, như đào móng, đổ bê tông.
+thi cử|Chuyện làm bài kiểm tra, ôn luyện và dự các kì thi nói chung.
+thi đấu|Tranh tài với nhau trong thể thao hay trò chơi để phân thắng thua.
+thi đỗ|Vượt qua kì thi, đạt kết quả đủ để được công nhận hay tuyển chọn.
+thi đua|Cùng ganh nhau làm tốt hơn, nhanh hơn để lập thành tích.
+thi nhau|Đua nhau làm cùng một việc, người sau cố hơn người trước.
+thi tài|Đọ sức, so tài năng với nhau để xem ai giỏi hơn.
+thi thử|Làm bài thi tập trước kì thi thật để rèn luyện sức học.
+thi tuyển|Thi để chọn ra người được nhận vào học hay vào làm việc.
+thì giờ|Khoảng thời gian rảnh hay bận mà một người có để làm việc gì.
+thì thào|Nói khẽ bằng hơi, giọng nhỏ và yếu, chỉ đủ người gần nghe.
+thì thầm|Nói khẽ sát tai, chỉ đủ cho người ngay bên cạnh nghe được.
+thí dụ|Trường hợp cụ thể đưa ra để minh họa cho điều đang nói.
+thí nghiệm|Làm thử có kiểm soát để kiểm tra hay tìm hiểu một hiện tượng.
+thí sinh|Người dự thi trong một kì thi hay cuộc thi.
+thị giác|Giác quan giúp ta nhận ra màu sắc, hình dạng qua đôi mắt.
+thị lực|Mức nhìn rõ của mắt, thường đo bằng cách đọc bảng chữ cái từ xa.
+thị trấn|Khu phố nhỏ có chợ, cửa hàng và cơ quan, thường nằm giữa vùng quê.
+thị trường|Chuyện mua và bán một loại hàng nói chung, với cung cầu và giá cả.
+thị xã|Tên gọi một loại đô thị hành chính, có phố xá, chợ và cơ quan.
+thìa|Đồ dùng có cán dài và đầu lõm nhỏ, để múc canh, xúc cơm.
+thìa canh|Loại thìa lòng rộng và sâu, dùng để múc canh hay đong gia vị.
+thích|Ưa và muốn gần gũi, muốn có hay muốn làm điều gì đó.
+thích hợp|Hợp với hoàn cảnh hay mục đích, đem dùng thấy vừa vặn.
+thích nghi|Dần thay đổi để sống được, quen được với môi trường mới.
+thích thú|Cảm thấy vui và hứng khởi khi được làm hay được thấy điều gì.
+thích ứng|Dần quen và xoay xở được khi sống hay làm việc ở môi trường mới.
+thiếc|Kim loại mềm màu trắng bạc, dùng để hàn và tráng đồ hộp.
+thiên hà|Hệ khổng lồ gồm vô số ngôi sao, bụi và khí trong vũ trụ.
+thiên nga|Chim nước to, cổ dài cong, lông thường trắng muốt, bơi lượn trên hồ.
+thiên nhiên|Núi sông, cỏ cây, muông thú: mọi thứ tự có, không do người tạo.
+thiên tài|Người tài năng vượt xa số đông, như được trời phú từ lúc sinh ra.
+thiên thạch|Khối đá hay kim loại từ vũ trụ rơi xuống mặt đất.
+thiên vị|Đối xử không công bằng, nghiêng về một phía.
+thiện cảm|Cảm tình tốt, sự quý mến dành cho ai ngay từ đầu.
+thiện chí|Ý muốn tốt, sẵn lòng hợp tác hay giúp đỡ.
+thiêng liêng|Rất cao quý, đáng tôn kính, không được xúc phạm.
+thiệp|Tấm giấy cứng in đẹp, dùng để mời, chúc mừng hay báo tin.
+thiết bị|Máy móc, đồ nghề được lắp đặt hay dùng cho một công việc nào đó.
+thiết kế|Lên ý tưởng và vẽ bản mẫu cho sản phẩm, công trình trước khi làm.
+thiết lập|Tạo dựng nên quan hệ hay tổ chức; cũng chỉ việc cài đặt cho máy.
+thiết thực|Có ích thật sự, đáp ứng đúng nhu cầu trước mắt chứ không viển vông.
+thiết yếu|Cần đến mức thiếu thì khó sống hay khó làm việc, như gạo, nước.
+thiệt|Chịu mất mát, kém phần hơn người; cũng là cách nói miền Nam của thật.
+thiệt thòi|Chịu phần kém, không được hưởng đủ như người khác, thường do hoàn cảnh.
+thiếu|Không có đủ số lượng hay mức cần có.
+thiếu hụt|Bị hụt đi, không đủ số lượng cần có, như thiếu nước hay thiếu người.
+thiếu nhi|Trẻ em nói chung, cách gọi hay dùng trong tên sách báo, ngày lễ.
+thiếu niên|Người ở tuổi mới lớn, khoảng giữa trẻ con và thanh niên.
+thiếu nữ|Cô gái trẻ đang tuổi mới lớn, chưa lấy chồng.
+thiếu sót|Chỗ còn thiếu hoặc chưa làm đúng, chưa làm hết.
+thiếu thốn|Không có đủ những thứ cần cho cuộc sống hằng ngày.
+thím|Cách gọi người vợ của chú, tức em dâu của bố.
+thình thịch|Tiếng đập mạnh, trầm và dồn dập, như tiếng tim đập khi hồi hộp.
+thính|Nghe hay ngửi rất nhạy; cũng chỉ bột gạo rang dùng trộn món ăn.
+thính giả|Người lắng nghe một buổi nói chuyện, buổi hòa nhạc hay chương trình phát thanh.
+thính giác|Giác quan nhờ tai mà nhận ra tiếng động, giọng nói, âm nhạc.
+thịnh hành|Đang được đông người ưa dùng, làm theo trong một khoảng thời gian.
+thịnh soạn|Có nhiều món ngon và đầy đủ, thường nói về bữa ăn.
+thịnh vượng|Phát triển giàu có, sung túc và ngày càng đi lên.
+thịt ba chỉ|Phần thịt bụng lợn có các lớp nạc xen lớp mỡ.
+thịt băm|Thịt được băm hay xay nhỏ, dùng làm nhân hoặc nấu món.
+thịt heo|Thịt của con lợn, cách gọi ở miền Nam, dùng kho, luộc, nướng.
+thịt kho|Món thịt, thường là thịt lợn, kho lâu với nước mắm và đường cho thấm.
+thịt lợn|Thịt của con lợn, loại thịt hay dùng trong bữa ăn gia đình.
+thịt nạc|Phần thịt đỏ, chắc, gần như không dính mỡ.
+thịt nướng|Món thịt tẩm ướp rồi nướng trên than hay lửa cho chín thơm.
+thịt quay|Món thịt, thường là thịt lợn, quay hay nướng nguyên miếng cho da giòn.
+thịt thăn|Dải thịt mềm, ít mỡ chạy dọc theo xương sống của con vật.
+thiu|Bị hỏng, có mùi chua khó chịu, thường nói về thức ăn để lâu.
+thỏ rừng|Loài thỏ sống hoang, chân sau dài, chạy rất nhanh.
+thoa|Bôi nhẹ và đều một lớp mỏng chất gì lên da hay bề mặt.
+thoải|Dốc nghiêng ít, không dựng đứng, thường nói về sườn đồi hay bờ đất.
+thoải mái|Thấy dễ chịu, thong thả, không bị ai gò ép hay bó buộc.
+thoang thoảng|Có mùi nhè nhẹ, khi rõ khi không, bay theo làn gió.
+thoảng|Thoáng qua rất nhẹ và nhanh, thường nói về mùi hương hay làn gió.
+thoáng đãng|Rộng rãi, sáng sủa và có nhiều gió, không bị bí bức.
+thoáng khí|Cho không khí đi qua dễ dàng, thường nói về vải, giày hay phòng ở.
+thoáng qua|Diễn ra rất nhanh, chỉ trong chốc lát rồi qua đi.
+thoát|Vượt ra được, tránh được điều nguy hiểm hay sự ràng buộc.
+thoát hiểm|Ra khỏi được tình huống nguy hiểm, như đám cháy hay tai nạn.
+thoát khỏi|Ra được khỏi một nơi hay một tình trạng không mong muốn.
+thoăn thoắt|Nhanh nhẹn và liên tục, thường nói về tay chân khi làm hay đi.
+thóc|Hạt lúa đã tách khỏi bông, còn nguyên vỏ trấu.
+thóc gạo|Thóc và gạo nói chung, chỉ nguồn lương thực chính.
+thóc lúa|Lúa và thóc nói chung, sản phẩm thu được từ cây lúa.
+thói quen|Cách làm hay nếp sống lặp lại lâu ngày thành tự nhiên.
+thon thả|Mảnh mai, cân đối và gọn gàng, thường nói về dáng người.
+thong dong|Thảnh thơi, ung dung, không vội vàng hay lo nghĩ.
+thong thả|Chậm rãi, từ tốn, không hấp tấp khi đi lại hay làm việc.
+thô sơ|Đơn giản, chưa tinh xảo, làm bằng kĩ thuật còn kém phát triển.
+thôi nôi|Lễ mừng bé tròn một tuổi, thường bày đồ vật cho bé bốc thử.
+thôi thúc|Thúc giục mạnh từ bên trong, khiến người ta muốn làm ngay.
+thổi|Đẩy mạnh luồng hơi từ miệng ra ngoài, cũng nói về gió chuyển động.
+thổi cơm|Cách nói ở miền Bắc chỉ việc nấu cơm.
+thổi phồng|Nói quá lên, làm cho sự việc có vẻ to tát hơn thật.
+thôn|Đơn vị dân cư nhỏ ở làng quê, gồm nhiều hộ, thuộc xã.
+thôn quê|Vùng nông thôn, nơi có làng xóm và đồng ruộng.
+thông|Cây thân thẳng cao, lá nhọn như kim, có nhựa thơm và nón vảy gỗ.
+thông báo|Cho nhiều người cùng biết một tin, bằng loa, giấy dán hay tin nhắn.
+thông cảm|Hiểu được nỗi khó của người khác nên không trách và sẵn lòng bỏ qua.
+thông dụng|Được dùng rộng rãi, quen thuộc trong đời sống.
+thông điệp|Ý chính hay lời nhắn mà một người hoặc tác phẩm muốn gửi gắm.
+thông gia|Quan hệ giữa hai gia đình có con cái lấy nhau.
+thông gió|Làm cho không khí trong phòng hay chỗ kín được lưu thông.
+thông hơi|Tạo lối cho hơi, khí thoát ra ngoài, thường qua lỗ hay ống.
+thông minh|Nhanh hiểu, sáng dạ và biết suy nghĩ, xử lý vấn đề.
+thông qua|Chính thức chấp thuận một dự thảo; cũng có nghĩa là qua trung gian.
+thông suốt|Trôi chảy không vướng tắc, nói về đường sá, liên lạc hay suy nghĩ.
+thông thái|Đọc nhiều, biết rộng, am hiểu nhiều ngành và nói điều gì cũng có lý.
+thông thạo|Biết rõ và sử dụng thành thạo, thường nói về ngôn ngữ hay đường đi.
+thông thoáng|Rộng và có gió lưu thông, không bị che chắn hay bí bách.
+thông thường|Bình thường, hay gặp, theo lệ thường.
+thông tin|Tin tức, dữ liệu giúp người ta biết về một sự việc.
+thống nhất|Hợp lại thành một khối, có chung ý kiến hay mục tiêu.
+thơ ấu|Thời còn bé, tuổi thơ của một người.
+thơ ca|Thơ và ca dao, các tác phẩm thơ nói chung.
+thơ lục bát|Thể thơ Việt có câu sáu chữ và câu tám chữ xen nhau.
+thơ mộng|Đẹp nên thơ, gợi cảm xúc lãng mạn.
+thơ ngây|Trong sáng, ngây thơ, chưa trải sự đời.
+thơ văn|Thơ cùng văn xuôi gộp lại, như sáng tác của một người hay một thời.
+thờ ơ|Dửng dưng, chẳng để tâm hay động lòng trước chuyện xảy ra quanh mình.
+thở dài|Thở ra một hơi dài, thường khi buồn hay chán nản.
+thở dốc|Thở hổn hển, gấp gáp sau khi chạy nhanh hay làm việc nặng.
+thở phào|Thở ra nhẹ nhõm khi vừa thoát khỏi nỗi lo.
+thợ điện|Người đi dây, lắp ổ cắm, bóng đèn và sửa các chỗ hỏng điện.
+thợ hàn|Người làm nghề nối các chi tiết kim loại bằng nhiệt.
+thợ lặn|Người chuyên xuống đáy nước làm việc, thường mang bình khí để trục vớt.
+thợ mỏ|Người làm việc dưới hầm sâu hay công trường khai thác than, quặng.
+thợ mộc|Người cưa, bào, đục gỗ để đóng bàn ghế, giường tủ, cửa.
+thợ rèn|Người làm nghề nung đỏ sắt thép rồi đập thành dao, cuốc.
+thợ sơn|Người quét, lăn hay phun sơn lên tường, cửa và đồ đạc.
+thợ thủ công|Người làm ra sản phẩm bằng tay với công cụ đơn giản.
+thời buổi|Khoảng thời gian, giai đoạn với đặc điểm chung của xã hội.
+thời cơ|Lúc hoàn cảnh đang thuận lợi, nếu ra tay ngay thì dễ thành công.
+thời đại|Một quãng dài trong lịch sử có nét riêng, như thời đồ đá.
+thời điểm|Một lúc, một mốc cụ thể trong thời gian.
+thời gian|Sự trôi qua liên tục từ quá khứ đến tương lai, tính bằng giờ, ngày.
+thời gian biểu|Bảng sắp xếp giờ giấc cho các việc trong ngày hoặc trong tuần.
+thời giờ|Lượng thời gian một người có, thường nói khi cần dùng hay sắp xếp.
+thời hạn|Khoảng thời gian được cho phép, quá mốc đó là trễ hoặc hết hiệu lực.
+thời khắc|Khoảnh khắc, giây phút đáng nhớ, thường mang ý nghĩa đặc biệt.
+thời nay|Thời kì mà chúng ta đang sống, trái với thời xưa.
+thời sự|Chuyện mới xảy ra trong nước, ngoài nước, được báo đài đưa tin hằng ngày.
+thời tiết|Tình trạng nắng, mưa, gió, nóng lạnh của bầu trời trong thời gian ngắn.
+thời trang|Kiểu ăn mặc, trang phục được ưa chuộng trong một thời kì.
+thời xưa|Thời trước đây đã lâu, thời ông bà tổ tiên.
+thơm|Có mùi dễ chịu khiến muốn ngửi mãi, như mùi hoa hay cơm mới.
+thơm lừng|Thơm mạnh, mùi lan tỏa khắp xung quanh.
+thơm ngát|Tỏa hương dịu mà lan xa, thường nói về hoa lúc nở rộ.
+thơm phức|Thơm nồng và hấp dẫn, thường nói về thức ăn vừa nấu xong.
+thơm tho|Sạch sẽ và có mùi thơm dễ chịu, thường nói về người hay quần áo.
+thớt|Miếng gỗ hay nhựa phẳng, dày, kê dưới khi thái rau, chặt thịt.
+thu âm|Ghi lại âm thanh, giọng nói hay tiếng hát vào thiết bị để lưu giữ.
+thu chi|Việc tiền vào và tiền ra của một nhà hay một cơ quan.
+thu dọn|Sắp xếp và dọn dẹp đồ đạc cho gọn gàng.
+thu gom|Nhặt nhạnh từ nhiều chỗ dồn về một nơi, như rác hay đồ cũ.
+thu gọn|Làm cho nhỏ, ngắn hay gọn lại, như xếp đồ hay tóm ý.
+thu hẹp|Làm cho hẹp lại hoặc nhỏ hơn về phạm vi.
+thu hoạch|Gặt hái nông sản khi đã chín; cũng chỉ điều thu được sau khi học.
+thu hồi|Lấy lại thứ đã phát ra, cho mượn hay bán ra, như hàng lỗi.
+thu hút|Kéo sự chú ý hay lòng ham thích của người khác về phía mình.
+thu mua|Mua gom hàng, thường là nông sản, từ nhiều người để bán lại.
+thu ngân|Người nhận tiền và tính hóa đơn ở quầy siêu thị, nhà hàng.
+thu nhặt|Cúi lượm từng thứ rơi rớt, nằm rải rác để gom lại.
+thu nhập|Tiền hay của cải nhận được từ lao động hay kinh doanh.
+thu nhỏ|Làm cho kích thước nhỏ lại so với ban đầu.
+thu thập|Tập hợp, góp nhặt tài liệu, thông tin hay mẫu vật.
+thu xếp|Sắp đặt, lo liệu công việc cho ổn thỏa.
+thủ công|Làm bằng tay với dụng cụ đơn giản, không dùng máy móc.
+thủ đô|Thành phố nơi chính phủ một nước đặt trụ sở, đầu não của quốc gia.
+thủ kho|Người trông giữ và quản lý hàng hóa trong kho.
+thủ khoa|Người đỗ đầu trong một kì thi.
+thủ môn|Cầu thủ đứng trước khung thành, được dùng tay bắt bóng.
+thủ thỉ|Nói nhỏ nhẹ, dịu dàng như kể chuyện riêng với người thân.
+thủ thư|Người trông coi thư viện, xếp sách và giúp bạn đọc mượn sách.
+thủ tục|Các bước giấy tờ phải làm theo quy định, như khi xin giấy phép.
+thú cưng|Con vật nuôi trong nhà để làm bạn, như chó, mèo.
+thú dữ|Con thú hoang hung tợn, có thể tấn công người, như hổ, báo.
+thú hoang|Con thú sống tự nhiên trong rừng, không do người nuôi.
+thú nhận|Nói thật ra điều mình đã làm hay đã giấu.
+thú vật|Loài vật nói chung, nhất là các loài thú bốn chân.
+thú vị|Gây hứng thú, làm người ta thấy hay và thích.
+thú vui|Việc làm khiến mình thích thú lúc rảnh, như câu cá, trồng hoa.
+thụ động|Không chủ động, chỉ làm khi bị tác động hay được bảo.
+thua|Bị kém, không thắng trong cuộc thi hay cuộc đấu.
+thua kém|Kém hơn người khác về một mặt nào đó.
+thua lỗ|Làm ăn mà số tiền thu về ít hơn tiền đã bỏ ra.
+thua thiệt|Bị mất phần hay kém lợi hơn người khác trong một việc.
+thuần|Đã được nuôi dạy cho quen, dễ bảo; cũng chỉ sự không pha tạp.
+thuần khiết|Trong sạch, tinh khiết, không bị pha tạp hay vẩn đục.
+thuần thục|Thành thạo, làm quen tay đến mức nhuần nhuyễn.
+thuận lợi|Có điều kiện dễ dàng, không gặp trở ngại.
+thuận tay|Quen dùng một bên tay khéo hơn bên kia, như khi viết hay cầm đũa.
+thuận tiện|Tiện lợi, dễ dàng cho việc làm hay đi lại.
+thuê|Bỏ tiền ra để dùng tạm nhà, xe, đồ đạc hay công sức người khác.
+thuê bao|Người hay số máy đăng kí dùng dịch vụ viễn thông, trả phí theo kì.
+thuê mướn|Thuê người làm việc hay thuê đồ dùng nói chung.
+thun|Dây hay vải co giãn, kéo ra tự co lại, cách gọi ở miền Nam.
+thung lũng|Dải đất trũng nằm lọt giữa các sườn núi, thường có sông suối chảy qua.
+thùng|Đồ đựng có thành cao, thường có nắp, làm bằng nhựa, gỗ hay kim loại.
+thùng rác|Đồ đựng có nắp, dùng để chứa rác chờ đem đi đổ.
+thùng thư|Hộp đặt nơi công cộng hay trước nhà để bỏ hoặc nhận thư.
+thùng xe|Khoang có thành bao phía sau xe tải, nơi chất hàng lên chở.
+thuốc nhuộm|Chất màu dùng ngâm hay bôi để đổi màu vải, tóc.
+thuộc lòng|Nhớ kĩ tới mức đọc ra trôi chảy mà không cần nhìn sách.
+thuôn|Dài và nhỏ dần về một đầu, trông thon gọn.
+thuở|Một quãng thời gian trong quá khứ, thường đã lâu.
+thút thít|Tiếng khóc nhỏ, rấm rứt, có xen tiếng sụt sịt mũi.
+thụt lùi|Lùi về phía sau hoặc kém đi so với trước, không tiến lên được.
+thuyền|Vật nổi lòng rỗng chở người qua sông nước, đẩy bằng chèo, buồm hay máy.
+thuyền bè|Ghe, thuyền, bè các loại nói chung, đi lại trên sông nước.
+thuyền buồm|Thuyền dùng cánh buồm hứng gió để di chuyển.
+thuyền máy|Thuyền chạy bằng động cơ gắn ở đuôi hay trong thân.
+thuyền rồng|Thuyền thân dài có chạm đầu rồng, thường chở khách dạo sông hay đua hội.
+thuyền thúng|Thuyền tròn như cái thúng lớn, đan bằng tre, thường thấy ở miền Trung.
+thuyền trưởng|Người đứng đầu và điều khiển mọi việc trên một con tàu.
+thuyền viên|Người làm các phần việc trên một con tàu, như lái, nấu ăn, sửa máy.
+thuyết minh|Giới thiệu, giải thích bằng lời cho người xem, như trong phim hay triển lãm.
+thuyết phục|Dùng lý lẽ làm cho người khác tin và nghe theo.
+thuyết trình|Đứng trước đông người nói rõ một chủ đề, thường kèm hình chiếu minh họa.
+thư bảo đảm|Thư gửi bưu điện có ghi số để theo dõi và kí nhận khi giao.
+thư điện tử|Thư viết, gửi và nhận qua mạng máy tính.
+thư giãn|Nghỉ ngơi, thả lỏng cho cơ thể và tinh thần bớt căng thẳng.
+thư mục|Ngăn chứa ảo trên máy tính dùng để xếp các tệp cho gọn.
+thư pháp|Lối viết chữ như vẽ, nét đậm nhạt uyển chuyển, treo làm tranh.
+thư tay|Lá thư tự tay viết ra giấy, khác với thư gõ trên máy.
+thư thả|Có nhiều thời gian, không bị gấp gáp hay dồn ép.
+thư thái|Nhẹ nhõm, thoải mái trong lòng, không lo nghĩ.
+thư viện|Nơi cất giữ nhiều sách báo để mọi người tới đọc hay mượn.
+thử nghiệm|Làm thử để xem cách làm, máy móc hay thuốc có hiệu quả không.
+thử sức|Làm thử một việc để biết khả năng của mình.
+thử thách|Việc khó khăn đặt ra để xem người ta có vượt qua được không.
+thứ ba|Ngày tiếp theo sau thứ hai trong tuần.
+thứ bảy|Ngày cuối tuần, đứng trước chủ nhật.
+thứ hai|Ngày mở đầu tuần làm việc, liền sau chủ nhật.
+thứ hạng|Vị trí theo thứ tự cao thấp trong một bảng xếp hạng.
+thứ lỗi|Bỏ qua, không trách lỗi người khác, hay dùng trong lời xin lỗi lịch sự.
+thứ năm|Ngày nằm kẹp giữa thứ tư và thứ sáu trong một tuần lễ.
+thứ sáu|Ngày đứng sau thứ năm, thường là ngày làm việc cuối tuần.
+thứ thiệt|Đúng là thật, chính gốc, không phải hàng giả, cách nói ở miền Nam.
+thứ tư|Ngày chính giữa tuần làm việc, theo sau thứ ba.
+thưa thớt|Lác đác mỗi chỗ một ít, cách xa nhau, như nhà cửa vùng quê.
+thừa hưởng|Nhận lại của cải, tài năng hay nét tính cách từ người đi trước.
+thừa mứa|Thừa nhiều đến mức phải bỏ đi, thường nói về đồ ăn.
+thừa nhận|Công nhận là đúng, là có thật.
+thừa sức|Có đủ và dư khả năng để làm việc gì.
+thức|Ở trạng thái tỉnh, không ngủ, nhất là vào ban đêm.
+thức ăn|Những gì ăn được để nuôi cơ thể, như cơm, thịt, rau.
+thức ăn nhanh|Đồ ăn chế biến sẵn, phục vụ nhanh, thường ăn tại chỗ hoặc mang đi.
+thức dậy|Tỉnh ngủ và ra khỏi giường.
+thức giấc|Tỉnh dậy sau giấc ngủ, thường bất chợt.
+thức uống|Các loại đồ để uống nói chung.
+thực chất|Bản chất bên trong, cái thật có sau lớp vỏ bề ngoài.
+thực dụng|Chỉ chú ý lợi ích cụ thể, ít bận tâm tới tình cảm, lý tưởng.
+thực đơn|Bản liệt kê các món ăn có trong bữa hay ở quán.
+thực hành|Tự tay làm thử những gì đã học trên lý thuyết để nắm vững.
+thực hiện|Làm cho thành hiện thực một kế hoạch hay yêu cầu.
+thực hư|Sự thật hay giả của một tin tức, sự việc.
+thực khách|Người tới quán, nhà hàng để ăn uống.
+thực lòng|Có lòng thành thực, không giả dối, gần nghĩa với thật lòng.
+thực lực|Sức mạnh, năng lực thật sự mà ai đó có.
+thực phẩm|Các thứ dùng làm thức ăn cho người, như thịt, cá, rau.
+thực sự|Đúng là như vậy chứ không phải giả hay chỉ là vẻ ngoài.
+thực tại|Những gì đang có trước mắt, không phải mơ ước hay chuyện đã qua.
+thực tập|Tập làm thực tế tại nơi làm việc để học nghề.
+thực tập sinh|Người học việc tạm thời tại cơ quan, công ty để lấy kinh nghiệm.
+thực tế|Cái đang thật sự xảy ra trong đời sống, chứ không phải trên lý thuyết.
+thực thụ|Thật sự, chính thức, đúng nghĩa với danh xưng.
+thực vật|Giới sinh vật gồm cây cỏ, thường sống cố định và tự tạo dưỡng chất.
+thước cuộn|Thước dây bằng thép mỏng cuộn trong vỏ hộp, kéo ra để đo dài.
+thước dây|Thước mềm bằng vải hay nhựa, thường dùng đo số đo cơ thể khi may.
+thước đo|Tiêu chuẩn dùng để đánh giá; cũng chỉ dụng cụ đo chiều dài.
+thước đo góc|Thước hình nửa vòng tròn có vạch chia độ, dùng để đo góc.
+thước kẻ|Thanh nhựa hay gỗ thẳng có vạch chia, dùng kẻ đường và đo độ dài.
+thược dược|Loài hoa cánh nhiều lớp, nhiều màu, hay được trồng chơi dịp Tết.
+thương cảm|Xúc động, cảm thông trước hoàn cảnh không may của người khác.
+thương hại|Thấy tội nghiệp cho người kém may, đôi khi kèm sự coi thường.
+thương hiệu|Tên và dấu hiệu nhận biết hàng hóa của một doanh nghiệp.
+thương lượng|Bàn bạc, mặc cả với bên kia để đi tới thỏa thuận chung.
+thương mại|Việc buôn bán hàng hóa, dịch vụ, từ sạp chợ tới giao thương các nước.
+thương mến|Vừa thương yêu vừa quý mến, thường dùng với người thân thiết.
+thương nhân|Người sống bằng nghề buôn bán, mua chỗ này bán chỗ khác.
+thương nhớ|Vừa thương vừa nhớ khôn nguôi người hay nơi chốn đang cách xa mình.
+thương xót|Đau lòng, xót xa trước nỗi khổ hay mất mát của người khác.
+thương yêu|Có tình cảm gắn bó, quan tâm và muốn che chở cho ai.
+thường dân|Dân thường không có chức tước hay quân phục, nhất là trong thời chiến.
+thường lệ|Nếp quen vẫn diễn ra đều đặn như mọi khi.
+thường ngày|Hằng ngày, những gì diễn ra vào các ngày bình thường.
+thưởng|Trao tiền hay quà cho người có thành tích, để ghi công và khích lệ.
+thưởng thức|Ăn, nghe hay xem một cách thích thú để cảm nhận cái hay.
+thượng hạng|Thuộc loại tốt hàng đầu, chất lượng cao.
+thướt tha|Mềm mại, uyển chuyển, thường nói về dáng đi hay tà áo.
+tỉ mỉ|Kĩ lưỡng, chú ý đến từng chi tiết nhỏ.
+tí hon|Rất nhỏ bé so với bình thường.
+tia sáng|Luồng ánh sáng mảnh chiếu theo một hướng.
+tỉa cành|Cắt bớt các cành thừa để cây gọn, thoáng và ra hoa quả tốt.
+tía tô|Cây rau thơm có lá mặt dưới màu tím, dùng ăn sống hay làm thuốc.
+tích|Gom góp dần từng ít một để dành lại, như góp tiền hay trữ điện.
+tích cực|Hăng hái, chủ động làm việc; cũng chỉ cách nghĩ hướng về mặt tốt.
+tích trữ|Mua và cất giữ nhiều để dành dùng hoặc chờ bán.
+tích tụ|Dồn lại dần dần ở một chỗ qua thời gian.
+tiếc nuối|Buồn và day dứt vì điều đã mất hay đã bỏ lỡ.
+tiệc|Bữa ăn uống đông người để mừng một dịp hay chiêu đãi.
+tiệc trà|Buổi gặp mặt có mời trà và bánh kẹo, thường thân mật.
+tiệc tùng|Các cuộc ăn uống, liên hoan nói chung, thường mang ý nhiều lần.
+tiềm ẩn|Có sẵn bên trong nhưng chưa lộ ra.
+tiềm năng|Khả năng sẵn có chưa được khai thác, phát huy.
+tiệm|Cửa hàng nhỏ bán đồ hay nhận làm dịch vụ như cắt tóc, sửa xe.
+tiên nữ|Nàng tiên trong truyện cổ, xinh đẹp và có phép lạ.
+tiên phong|Đi đầu, mở đường trước người khác trong một việc mới.
+tiên tiến|Ở trình độ phát triển cao, đi trước so với mặt bằng chung.
+tiền|Giấy bạc, đồng xu hay số dư tài khoản, đổi được hàng hóa, công sức.
+tiền bạc|Tiền nói chung, của cải dưới dạng tiền.
+tiền cọc|Khoản tiền đưa trước để giữ chỗ hay làm tin khi giao kèo.
+tiền công|Tiền trả cho người lao động để đổi lấy công sức làm việc.
+tiền của|Tiền bạc cùng đồ đạc, nhà đất mà một người hay gia đình có.
+tiền cước|Khoản tiền trả cho việc chuyên chở, gửi hàng hoặc dùng dịch vụ liên lạc.
+tiền đạo|Cầu thủ chơi gần khung thành đối phương, lo săn bàn thắng cho đội nhà.
+tiền giấy|Tiền in thành tờ trên giấy hoặc chất dẻo mỏng, khác với tiền xu.
+tiền lẻ|Tờ bạc mệnh giá nhỏ, đồng xu, tiện để trả lại hay mua món rẻ.
+tiền lương|Khoản tiền người lao động được trả đều đặn cho công việc mình làm.
+tiền mặt|Tiền giấy và tiền xu cầm trao tay, khác với tiền trong tài khoản.
+tiền nong|Tiền bạc nói chung, cách nói thân mật trong đời thường.
+tiền nước|Khoản tiền trả cho lượng nước máy đã dùng, thường tính theo tháng.
+tiền tài|Tiền bạc và của cải, thường nói khi bàn về giàu sang, danh lợi.
+tiền thưởng|Khoản tiền được trao thêm để ghi nhận công sức hoặc thành tích.
+tiền túi|Tiền riêng của mỗi người mang theo hay tự bỏ ra để chi tiêu.
+tiền vệ|Cầu thủ đá ở giữa sân, nối hàng thủ với hàng công.
+tiến bộ|Khá hơn, giỏi hơn trước về học tập, công việc hay cách sống.
+tiến độ|Việc đang nhanh hay chậm so với lịch đã định, sớm hay trễ hạn.
+tiến hành|Bắt đầu và làm một việc theo kế hoạch hay trình tự đã định.
+tiến tới|Đi dần về phía trước để đạt một mục tiêu hay đến một nơi.
+tiến triển|Biến đổi dần qua các giai đoạn, thường theo hướng tốt lên.
+tiện dụng|Dễ sử dụng và hợp với nhu cầu, thường nói về đồ dùng.
+tiện ích|Dịch vụ, cơ sở hay chức năng giúp việc sinh hoạt thuận tiện hơn.
+tiện lợi|Dễ dùng, giúp làm việc nhanh gọn, đỡ mất công sức.
+tiện nghi|Đồ dùng, trang thiết bị giúp sinh hoạt đầy đủ và thoải mái.
+tiện tay|Nhân lúc đang làm việc khác mà làm luôn, không tốn thêm công.
+tiếng|Những gì tai nghe thấy được; cũng chỉ ngôn ngữ riêng của một dân tộc.
+tiếng động|Âm thanh do vật va chạm hoặc chuyển động gây ra.
+tiếng hót|Âm thanh trong trẻo, có giai điệu do chim phát ra.
+tiếng kêu|Âm thanh do con vật, người hoặc máy phát ra để gọi hay báo hiệu.
+tiếng lóng|Lối nói riêng của một nhóm người, mang nghĩa khác cách hiểu thông thường.
+tiếng nói|Ngôn ngữ nói của một dân tộc; cũng chỉ ý kiến của ai đó.
+tiếng ồn|Âm thanh to, hỗn tạp, gây khó chịu, như tiếng xe cộ.
+tiếng tăm|Danh tiếng của một người hay nơi chốn được nhiều người biết đến.
+tiếng vang|Âm dội lại từ tường, vách cứng; cũng chỉ sự được nhiều người nhắc tới.
+tiếng vọng|Âm thanh từ xa vọng lại hoặc dội về, nghe vang và nhỏ dần.
+tiếp|Làm nối theo phần còn dở; cũng có nghĩa là đón và mời khách.
+tiếp diễn|Vẫn đang diễn ra không ngừng, chưa có dấu hiệu dừng lại.
+tiếp đãi|Đón và lo ăn uống, chỗ nghỉ cho khách đến chơi.
+tiếp đón|Ra đón và chào hỏi người mới đến.
+tiếp khách|Gặp, trò chuyện và mời nước khách đến nhà hay cơ quan.
+tiếp nhận|Nhận lấy người, vật hay ý kiến được chuyển đến.
+tiếp nối|Nối liền theo sau, kéo dài thêm điều đã có trước.
+tiếp sức|Góp thêm sức giúp ai vượt khó; cũng chỉ lối thi chạy chuyền nhau.
+tiếp tân|Người đón khách, hướng dẫn và giải đáp ở quầy khách sạn, công ty.
+tiếp theo|Nối liền ngay sau cái vừa qua, như phần sau, người sau.
+tiếp thu|Nhận và hiểu kiến thức, ý kiến để dùng cho mình.
+tiếp tục|Giữ việc đang làm diễn ra thêm, không dừng giữa chừng.
+tiếp viên|Nhân viên lo cho hành khách trên máy bay hay tàu, như phát đồ ăn.
+tiếp xúc|Gặp gỡ, trò chuyện hay chạm vào người hoặc vật nào đó.
+tiết|Máu gia súc, gia cầm dùng làm món ăn; cũng chỉ một giờ học.
+tiết kiệm|Dùng tiền bạc, thời gian, sức lực vừa đủ, không phí phạm.
+tiết lộ|Để cho người khác biết điều đang được giữ kín.
+tiết mục|Một phần trình diễn riêng trong một buổi biểu diễn văn nghệ.
+tiêu biểu|Mang đủ nét đặc trưng, có thể đại diện cho cả nhóm.
+tiêu chí|Điểm mốc đặt ra để dựa vào mà xét, chấm hay chọn lựa.
+tiêu chuẩn|Mức yêu cầu chung dùng để đối chiếu xem có đạt hay không.
+tiêu cực|Mang tính chất xấu, gây hại hoặc thiếu tinh thần lạc quan.
+tiêu dùng|Mua sắm và dùng đồ ăn, quần áo, dịch vụ cho đời sống thường ngày.
+tiêu đề|Dòng chữ ngắn ở đầu bài viết, nêu nội dung chính.
+tiêu điểm|Điều được nhiều người chú ý; cũng chỉ điểm hội tụ ánh sáng.
+tiêu hao|Làm hao hụt dần sức lực, của cải hay nhiên liệu khi dùng.
+tiêu khiển|Làm việc nhẹ nhàng, vui chơi để giải trí lúc rảnh.
+tiêu pha|Chi dùng tiền bạc cho các khoản ăn tiêu hằng ngày.
+tiêu tan|Mất hết, không còn lại gì, thường nói về hi vọng, tài sản.
+tiêu thụ|Bán hàng hóa ra thị trường; cũng chỉ việc dùng hết điện, nhiên liệu.
+tiểu hành tinh|Thiên thể nhỏ bằng đá hay kim loại quay quanh Mặt Trời.
+tiểu sử|Bản tóm tắt cuộc đời, quá trình làm việc của một người.
+tiểu thuyết|Truyện văn xuôi dài, có nhiều nhân vật và tình tiết.
+tiểu thương|Chủ sạp, chủ quầy buôn bán nhỏ, thường thấy ở các chợ truyền thống.
+tìm hiểu|Hỏi han, xem xét để biết rõ; cũng chỉ trai gái qua lại làm quen.
+tìm kiếm|Bỏ công tìm cho ra người hay vật đang cần.
+tìm thấy|Gặp được, phát hiện ra thứ mình đang cần tìm.
+tìm tòi|Chịu khó tìm hiểu, mày mò để khám phá điều mới.
+tin cậy|Tin ở ai đó tới mức dám giao việc, nhờ cậy.
+tin chắc|Tin hoàn toàn, không chút nghi ngờ.
+tin đồn|Chuyện truyền tai nhau chưa rõ thực hư, chẳng biết ai nói ra trước.
+tin học|Môn học và ngành nghề xoay quanh máy tính, phần mềm, lập trình.
+tin nhắn|Lời nhắn bằng chữ gửi qua điện thoại hoặc mạng.
+tin nóng|Tin tức vừa xảy ra, đang được nhiều người chú ý.
+tin tức|Thông tin về các sự việc mới xảy ra, được loan báo đến mọi người.
+tin tưởng|Đặt lòng tin vào người hay điều gì, cho là đúng và đáng theo.
+tin vui|Tin báo về một điều tốt lành, đem lại niềm vui.
+tín hiệu|Dấu hiệu bằng âm thanh, ánh sáng hay hình ảnh để báo tin.
+tinh bột|Chất dự trữ năng lượng có nhiều trong hạt gạo, củ khoai, hạt ngô.
+tinh chế|Lọc, tách bớt tạp chất khỏi đồ thô như đường, dầu, muối cho sạch hơn.
+tinh dầu|Chất dầu thơm chiết từ hoa, lá, vỏ cây, dùng xông hay tạo mùi.
+tinh khiết|Trong sạch, không pha lẫn chút tạp chất nào, như nước cất.
+tinh khôn|Khôn ngoan, lanh lợi, biết nhận ra điều có lợi cho mình.
+tinh nghịch|Hay nghịch ngợm một cách lanh lợi, đáng yêu, thường nói về trẻ em.
+tinh tế|Nhạy bén, nhận ra được những điều nhỏ, khó thấy.
+tinh thần|Phần ý nghĩ, tình cảm, ý chí của con người, khác với thể xác.
+tinh tinh|Loài vượn lớn không đuôi, lông đen, sống ở rừng châu Phi.
+tinh vi|Tỉ mỉ, phức tạp đến từng chi tiết, như máy móc, thủ đoạn.
+tinh ý|Nhanh nhạy, dễ nhận ra ý người khác hay điều nhỏ xung quanh.
+tình ca|Ca khúc kể chuyện yêu đương, nhớ nhung hay chia ly giữa đôi lứa.
+tình cảm|Sự quý mến, gắn bó, yêu ghét mà người ta dành cho nhau.
+tình cảnh|Hoàn cảnh, thường là khó khăn, mà ai đó đang gặp phải.
+tình duyên|Chuyện yêu đương, hôn nhân của một người, thường gắn với ý duyên số.
+tình hình|Cục diện chung của sự việc tại một lúc, đang tốt lên hay xấu đi.
+tình huống|Hoàn cảnh cụ thể xảy ra bất ngờ, buộc người ta phải xử lý.
+tình nghĩa|Tình cảm gắn bó kèm lòng biết ơn, trước sau như một.
+tình nguyện|Tự mình xin làm việc gì, không bị ai ép, thường không lấy công.
+tình thương|Lòng thương mến, quan tâm và muốn chăm sóc người khác.
+tình tiết|Từng sự việc nhỏ trong diễn biến của câu chuyện hay vụ việc.
+tình trạng|Hoàn cảnh, tình hình cụ thể của người hay sự vật lúc đang xét.
+tình tứ|Có vẻ đầy tình cảm yêu đương qua ánh mắt, cử chỉ.
+tình yêu|Tình cảm say mê, gắn bó giữa hai người yêu nhau.
+tỉnh bơ|Làm như không có chuyện gì, mặt không đổi sắc.
+tỉnh dậy|Thức giấc rồi ngồi dậy, hoặc tỉnh lại sau lúc mê man.
+tỉnh giấc|Ra khỏi giấc ngủ, thường bất chợt giữa đêm hay khi có tiếng động.
+tỉnh lẻ|Tỉnh nhỏ, nằm xa các thành phố lớn.
+tỉnh ngủ|Hết cơn buồn ngủ, mắt mở to, đầu óc tỉnh lại.
+tỉnh táo|Đầu óc sáng suốt, nhận biết rõ ràng, không mơ màng hay bị lừa.
+tĩnh lặng|Yên ắng, không có tiếng động hay chuyển động.
+tính cách|Nét riêng trong lối nghĩ, cư xử của mỗi người, như nóng nảy, điềm đạm.
+tính chất|Nét vốn có của sự vật, sự việc, như độ cứng, màu sắc, mùi vị.
+tính khí|Tính tình xét về mặt nóng nảy hay ôn hòa của một người.
+tính năng|Khả năng, chức năng mà máy móc hay sản phẩm có thể làm được.
+tính toán|Làm phép tính với các số; cũng chỉ việc cân nhắc thiệt hơn.
+tivi|Máy thu hình có màn hình, dùng để xem các chương trình truyền hình.
+to béo|Thân người to và nhiều thịt mỡ, trông đẫy đà nặng nề.
+to con|Có thân hình cao lớn, vạm vỡ.
+to đùng|To một cách bất ngờ, trông rất cồng kềnh.
+to gan|Gan dạ, dám làm điều người khác sợ hoặc không dám làm.
+to lớn|Rất lớn về kích cỡ hay về tầm ảnh hưởng, như công lao, ngôi nhà.
+to tát|Lớn lao, nghiêm trọng, thường dùng khi nói quá lên về một việc.
+to tiếng|Nói to, gay gắt với nhau khi cãi cọ.
+to tướng|To khác thường, lộ rõ ra trước mắt.
+tò he|Đồ chơi nặn từ bột gạo nhuộm màu thành hình người, con vật, hoa trái.
+tò mò|Muốn biết, muốn tìm hiểu về điều lạ hay chuyện của người khác.
+tỏ ra|Để lộ ra ngoài thái độ hay cảm xúc, có khi chỉ là giả vờ.
+tỏ tình|Ngỏ lời yêu với người mình thầm thương, mong được đáp lại.
+tỏ vẻ|Làm ra nét mặt, cử chỉ để người khác thấy mình giận, vui hay chê.
+toàn bộ|Tất cả các phần, không thiếu phần nào.
+toàn cảnh|Quang cảnh chung nhìn bao quát cả một vùng.
+toàn cầu|Thuộc về cả thế giới, trải khắp mọi nước.
+toàn diện|Đầy đủ mọi mặt, không bỏ sót mặt nào.
+toàn quốc|Khắp các vùng miền trong cả nước, từ Bắc vào Nam.
+toàn thân|Khắp cả người, từ đầu tới chân.
+toàn vẹn|Còn nguyên, không bị mất mát hay chia cắt, như lãnh thổ.
+toán|Môn của những con số, phép tính, hình khối và lối suy luận chặt chẽ.
+toán đố|Bài toán viết thành câu chuyện, phải đọc hiểu rồi mới tính.
+toang|Mở ra hết cỡ, như cửa; cũng chỉ việc hỏng bét trong cách nói vui.
+toát|Thấm hay lộ ra ngoài, như mồ hôi rịn ra, vẻ đẹp hiện rõ.
+tóc bạc|Sợi tóc đã chuyển màu trắng, thường do tuổi già.
+tóc giả|Mái tóc làm sẵn bằng tóc thật hay sợi nhân tạo, để đội lên đầu.
+tóc mai|Lớp tóc ngắn rủ xuống trước vành tai, ở hai bên thái dương.
+tóc tai|Mái đầu nói chung, hay nhắc khi bàn chuyện chải chuốt gọn hay rối bù.
+toe toét|Cười rộng miệng, để lộ cả răng, trông vui vẻ.
+tỏi tây|Cây rau họ hành, thân trắng to, lá dẹt dài, dùng nấu canh, xào.
+tóm tắt|Nói hoặc viết lại ngắn gọn những ý chính.
+tô điểm|Thêm các chi tiết để làm cho đẹp hơn.
+tô màu|Dùng bút, cọ phủ màu lên hình vẽ.
+tổ ấm|Gia đình yêu thương, đầm ấm, xem như nơi nương tựa.
+tổ chức|Lo liệu cho một việc diễn ra; cũng chỉ tập thể có mục đích chung.
+tổ ong|Nơi ong làm để ở, gồm nhiều ô sáu cạnh bằng sáp.
+tổ tiên|Các thế hệ ông bà, cha ông đã khuất của một gia đình, dòng họ.
+tổ trưởng|Người đứng đầu một tổ, phụ trách công việc chung của tổ.
+tố chất|Phẩm chất, khả năng sẵn có trong một người, giúp làm tốt một việc.
+tốc độ|Mức nhanh hay chậm khi di chuyển hay làm việc.
+tốc hành|Chạy nhanh, ít dừng dọc đường, thường nói về xe, tàu.
+tồi tệ|Rất xấu, rất kém, gây hại hoặc khó chịu.
+tối đa|Mức trần, không thể hoặc không được vượt quá, như số chỗ trên xe.
+tối đen|Tối hoàn toàn, chỉ thấy một màu đen.
+tối giản|Được rút gọn, ít chi tiết, chỉ giữ phần cần thiết.
+tối mịt|Tối hẳn, không còn chút ánh sáng, thường nói khi trời đã về đêm muộn.
+tối om|Tối hẳn và kín, thường nói về trong phòng, trong hang.
+tối sầm|Bỗng tối lại, thường nói về trời sắp mưa hay mắt choáng váng.
+tối tăm|Thiếu ánh sáng, nhìn không rõ; cũng chỉ cảnh sống khổ cực, thiếu hiểu biết.
+tối tân|Hiện đại, dùng kĩ thuật mới, thường nói về máy móc.
+tối thiểu|Mức thấp nhất cần có hay có thể chấp nhận.
+tối thui|Tối đen, chẳng nhìn thấy gì, cách nói thân mật.
+tội nghiệp|Đáng thương, gợi lòng xót xa khi thấy cảnh khổ của ai.
+tôm càng|Loài tôm nước ngọt có đôi càng dài và to, thịt chắc.
+tôm cua|Tôm và cua nói gộp, thủy sản vỏ cứng hay có mặt trong bữa ăn.
+tôm hùm|Loài tôm biển lớn, vỏ cứng có gai, là món hải sản quý.
+tôm khô|Tôm đã luộc rồi phơi hoặc sấy khô, dùng để nấu canh, làm món ăn.
+tôm sú|Loài tôm lớn có vằn sẫm màu trên vỏ, thường nuôi ở vùng nước lợ.
+tôm tép|Tôm và tép nói chung, các loài tôm nhỏ.
+tôm thẻ|Loài tôm vỏ mỏng màu nhạt, thường nuôi nhiều ở đầm ven biển.
+tôn trọng|Coi trọng và đối xử đúng mực với người hay điều gì.
+tôn vinh|Ca ngợi, đề cao công lao hay giá trị của ai, điều gì.
+tồn tại|Có thật và vẫn còn đó, chưa mất đi.
+tổn hại|Gây thiệt hại, mất mát về sức khỏe, của cải hay danh dự.
+tốn kém|Mất nhiều tiền bạc, công sức.
+tổng|Con số thu được sau khi cộng dồn tất cả các khoản lại.
+tổng cộng|Gộp hết lại để tính chung, thường dùng khi nêu con số cuối.
+tổng đài|Nơi nhận và chuyển các cuộc gọi điện thoại, thường để hỗ trợ khách hàng.
+tổng hợp|Gom nhiều phần lại thành một chỉnh thể.
+tổng kết|Nhìn lại và đánh giá kết quả sau một thời gian làm việc.
+tổng số|Số lượng chung khi đếm gộp tất cả lại.
+tốt bụng|Hay giúp đỡ, đối xử hiền hậu với người khác.
+tốt đẹp|Tốt và đáng mong muốn, đem lại niềm vui.
+tốt lành|Tốt và may mắn, không có điều xấu.
+tốt nghiệp|Học xong và được công nhận đã hoàn thành một bậc học, khóa học.
+tơ lụa|Vải dệt từ tơ, mềm, mịn, có ánh bóng.
+tơ tằm|Sợi mảnh óng ánh rút từ kén con tằm, dệt thành lụa mềm mát.
+tờ khai|Tờ giấy in sẵn mẫu để điền thông tin khi làm thủ tục.
+tờ lịch|Tờ giấy ghi ngày tháng, thường bóc mỗi ngày một tờ.
+tờ rơi|Tờ giấy in quảng cáo, phát tay cho người qua đường.
+tơi bời|Tan tác, rối tung lên do bị tác động mạnh và dồn dập.
+tới lui|Đi qua đi lại, thường để thăm hỏi nhau.
+tới tấp|Dồn dập, cái này nối cái kia không ngớt, như câu hỏi hay tin nhắn.
+tra cứu|Tìm thông tin cần biết trong sách, tài liệu hay trên mạng.
+trà chanh|Đồ uống pha từ trà, nước cốt chanh và đường, thường uống với đá.
+trà đen|Loại trà lá đã ủ cho lên men, nước pha có màu nâu đỏ đậm.
+trà sữa|Đồ uống pha từ trà và sữa, thường thêm trân châu và đá.
+trà xanh|Trà lá không ủ lên men, nước pha màu xanh vàng, vị chát.
+trả bài|Đọc lại hay trình bày bài cũ trước lớp để thầy cô kiểm tra.
+trả công|Trả tiền hay vật cho người đã làm việc giúp mình.
+trả giá|Mặc cả để mua rẻ hơn; cũng chỉ việc gánh hậu quả mình gây ra.
+trả góp|Trả tiền mua hàng thành nhiều đợt nhỏ trong một thời gian.
+trả lại|Đưa về cho người chủ thứ đã mượn hay đã nhận.
+trả lời|Đáp lại câu hỏi hay lời gọi của người khác.
+trả ơn|Làm điều tốt lại cho người từng giúp đỡ mình, để tỏ lòng biết ơn.
+trách|Nói ra nỗi phiền lòng với người đã làm sai hay làm mình buồn.
+trách nhiệm|Phần việc mình phải lo và chịu hậu quả nếu làm không tốt.
+trai trẻ|Đang tuổi thanh niên phơi phới sức lực, thường nói về nam giới.
+trải nghiệm|Tự mình sống qua, làm qua một việc để biết và cảm nhận.
+trải qua|Đã sống qua, đi qua một thời gian hay sự việc.
+trái|Phía ngược với phía tay phải; cũng là cách gọi quả ở miền Nam.
+trái cây|Quả ăn được của cây, như cam, xoài, chuối, thường ăn tươi.
+trái đất|Hành tinh nơi loài người sinh sống, quay quanh Mặt Trời.
+trái mùa|Không đúng mùa vụ thường lệ, như quả chín sớm hay mưa vào mùa khô.
+trái nghĩa|Có nghĩa ngược nhau, thường nói về hai từ.
+trái ngược|Hoàn toàn khác, đối lập nhau.
+trái tim|Tim, cơ quan bơm máu; cũng chỉ tình cảm, tấm lòng con người.
+trại hè|Hoạt động cắm trại, vui chơi cho học sinh trong dịp nghỉ hè.
+trạm|Nơi đặt cố định trên đường để dừng nghỉ hay làm một việc nhất định.
+tràn đầy|Đầy ắp đến mức như muốn tràn ra ngoài.
+tràn lan|Lan rộng khắp nơi, không kiểm soát được.
+tràn ngập|Phủ kín khắp nơi, đầy ắp một chỗ.
+tràn trề|Dâng lên dồi dào như sắp tràn, thường nói về hi vọng.
+trán|Vùng phẳng trên lông mày, chỗ hay áp tay lên thử xem có sốt.
+trang bị|Cung cấp đồ dùng, máy móc hay kiến thức cần cho một việc.
+trang chủ|Trang đầu tiên của một trang mạng, dẫn tới các mục khác.
+trang điểm|Dùng phấn, son và các mỹ phẩm để tô cho gương mặt đẹp hơn.
+trang hoàng|Bày biện cho nhà cửa, nơi chốn thêm đẹp, thường vào dịp lễ.
+trang lứa|Những người cùng lứa tuổi.
+trang nghiêm|Nghiêm túc, lặng lẽ và kính cẩn, như trong buổi lễ.
+trang nhã|Đẹp một cách giản dị, lịch sự, không lòe loẹt.
+trang phục|Quần áo, mũ giày mặc trên người, nhất là theo dịp hay nghề.
+trang sức|Nhẫn, vòng, dây chuyền, hoa tai: đồ đeo cho đẹp, thường bằng kim loại quý.
+trang trại|Cơ ngơi rộng ở nông thôn, nơi trồng trọt hoặc chăn nuôi để bán ra.
+trang trí|Thêm hình vẽ, màu sắc, đồ vật để làm một nơi đẹp hơn.
+trang trọng|Nghiêm túc và lịch sự, hợp với dịp quan trọng.
+tráng men|Phủ lớp men lên đồ gốm, kim loại cho bóng và bền.
+tráng miệng|Ăn món ngọt, hoa quả sau bữa chính.
+trạng thái|Dạng tồn tại hay tâm lí của người, vật ở một lúc nào đó.
+tranh|Tác phẩm vẽ trên giấy, vải; cũng chỉ việc giành lấy phần mình.
+tranh ảnh|Tranh vẽ và ảnh chụp nói chung, thường để treo hay minh họa.
+tranh cãi|Cãi nhau để bảo vệ ý kiến của mình.
+tranh dân gian|Tranh do nghệ nhân dân gian làm, thường in khắc gỗ trên giấy dó.
+tranh giải|Thi đấu để giành cúp, huy chương hay phần thưởng.
+tranh giành|Giành giật nhau để lấy về phần mình.
+tranh luận|Đưa lý lẽ qua lại để bảo vệ ý mình và bác ý người khác.
+tranh sơn dầu|Tranh vẽ bằng màu pha dầu, thường trên vải căng khung.
+tranh thủ|Tận dụng chút thời gian hay cơ hội ít ỏi để làm thêm việc gì.
+tranh tường|Tranh vẽ trực tiếp lên mặt tường.
+tranh vẽ|Hình do người vẽ ra bằng bút, màu, khác với ảnh chụp.
+tránh mặt|Cố ý không để gặp ai đó.
+tránh né|Lẩn đi, không muốn đối mặt với người hay chuyện khó.
+trao|Đưa một vật sang tay người khác, thường kèm sự trang trọng hay tin cậy.
+trao đổi|Đổi vật lấy vật với nhau; cũng chỉ việc bàn bạc, góp ý.
+trao tay|Chuyển thẳng từ người này qua người kia, như tiền hàng khi mua bán.
+trao tặng|Trao quà, giải thưởng hay danh hiệu một cách trang trọng.
+trào lưu|Cái mốt lan nhanh, nhiều người làm theo một thời rồi có thể lắng xuống.
+trắc nghiệm|Hình thức kiểm tra cho sẵn vài phương án để người làm chọn câu đúng.
+trắc trở|Gặp trở ngại, không suôn sẻ, thường nói về tình duyên, đường đi.
+trăn trở|Băn khoăn, suy nghĩ nhiều vì điều chưa yên lòng.
+trằn trọc|Nằm xoay qua xoay lại mãi không ngủ được, thường vì lo nghĩ.
+trăng|Vật sáng trên trời ban đêm, là vệ tinh tự nhiên của Trái Đất.
+trăng khuyết|Trăng chưa tròn đầy, chỉ thấy sáng một phần.
+trăng mật|Những ngày ngay sau đám cưới, đôi vợ chồng mới thường đi chơi cùng nhau.
+trăng non|Vầng trăng đầu tháng âm lịch, chỉ hiện một vệt sáng cong và mảnh.
+trăng tròn|Trăng sáng tròn đầy vào giữa tháng âm lịch.
+trắng bệch|Trắng nhợt, không chút hồng hào, thường nói về da mặt khi ốm hay sợ.
+trắng đen|Không màu, chỉ có đen, trắng và các sắc xám, thường nói về ảnh, phim.
+trắng đục|Trắng nhưng không trong, như màu sữa.
+trắng muốt|Trắng mịn và đẹp, trông mượt mà.
+trắng tinh|Trắng hoàn toàn, sạch, không chút vết bẩn.
+trắng toát|Trắng toàn một màu trên cả một diện rộng.
+trắng trẻo|Có nước da trắng, sáng, trông khỏe đẹp.
+trầm hương|Gỗ có chất nhựa thơm, đốt lên tỏa mùi thơm, được coi là quý.
+trầm lặng|Lặng lẽ, ít nói, ít bộc lộ cảm xúc ra ngoài.
+trầm ngâm|Lặng im, suy nghĩ sâu về điều gì.
+trầm tính|Ít nói, giữ vẻ điềm đạm và hiếm khi để lộ cảm xúc ra ngoài.
+trầm trọng|Rất nặng, rất nghiêm trọng, thường nói về bệnh, tình hình.
+trầm trồ|Thốt lời khen ngợi vì thán phục.
+trân châu|Viên bột dẻo nhỏ thả vào trà sữa; cũng chỉ hạt ngọc trai quý.
+trân trọng|Quý và coi trọng người hay điều gì.
+trấn an|Nói hay làm gì đó để người khác bớt lo sợ, yên lòng hơn.
+trấn tĩnh|Giữ cho mình bình tĩnh lại.
+trận đấu|Cuộc thi đấu thể thao giữa hai đội hay hai người.
+trật tự|Sự ngăn nắp, có lề lối; cũng chỉ việc giữ yên lặng, không ồn ào.
+trâu|Con vật nuôi to, da đen xám, sừng cong, dùng để kéo cày.
+trâu bò|Trâu với bò gộp lại, gia súc lớn nhà nông nuôi kéo cày, lấy thịt.
+trầy|Bị xước nhẹ ngoài da hay trên mặt đồ vật.
+tre nứa|Các loại cây thân rỗng có đốt như tre, nứa, dùng làm nhà, đan lát.
+trẻ con|Đứa trẻ còn nhỏ tuổi; cũng chỉ tính nết ngây ngô, chưa chín chắn.
+trẻ em|Người còn nhỏ tuổi, đang lớn lên dưới sự chăm nom của người lớn.
+trẻ nhỏ|Đứa trẻ còn bé, thường chưa tới tuổi đi học hoặc mới vào lớp đầu.
+trẻ sơ sinh|Em bé mới đẻ được ít ngày hay ít tuần.
+trẻ thơ|Trẻ nhỏ, gợi sự ngây thơ, trong sáng.
+trẻ trung|Có vẻ trẻ, tươi tắn, nhanh nhẹn.
+trẻ tuổi|Còn ít tuổi, thường so với những người cùng nghề hay cùng vị trí.
+treo|Móc, buộc vật lên cao để nó lơ lửng.
+tréo ngoe|Ngược đời, trái khoáy, không khớp với lẽ thường.
+trên|Từ chỉ vị trí ở phía cao hơn hoặc ở mặt ngoài của vật khác.
+trên dưới|Khoảng chừng, có thể nhỉnh hơn hoặc kém một chút so với con số nêu.
+trệt|Tầng sát mặt đất của ngôi nhà, cách gọi ở miền Nam.
+trêu|Chọc ghẹo bằng lời hay cử chỉ cho người khác bực, ngượng hoặc bật cười.
+trêu chọc|Liên tục chọc ghẹo, làm cho người khác khó chịu hay xấu hổ.
+trí khôn|Khả năng suy nghĩ, hiểu biết để xử lý tình huống.
+trí não|Khả năng nghĩ ngợi, hiểu biết và nhớ của con người, gắn với bộ óc.
+trí nhớ|Khả năng giữ lại trong đầu và gợi lại những gì đã thấy, đã học.
+trí óc|Đầu óc con người xét về mặt suy nghĩ, khác với sức chân tay.
+trí tuệ|Khả năng hiểu biết sâu và suy xét sáng suốt.
+trị giá|Giá trị tính bằng tiền của một vật.
+trích|Lấy ra một đoạn hay một phần từ cái lớn, như dẫn lời, rút quỹ.
+triển lãm|Trưng bày sản phẩm, tác phẩm cho công chúng xem.
+triển vọng|Cơ hội phát triển tốt về sau mà ta đã có thể nhìn thấy trước.
+triệt để|Đến cùng, hoàn toàn, không để sót.
+triệu|Số viết bằng chữ số một theo sau là sáu chữ số không.
+triệu phú|Người giàu, có của cải tính tới bạc triệu trở lên.
+trình bày|Nói, viết rõ ràng từng ý cho người khác hiểu.
+trình chiếu|Phóng hình ảnh, tài liệu lên màn lớn cho đông người cùng xem.
+trình diễn|Biểu diễn một tiết mục hay sản phẩm trước khán giả.
+trình duyệt|Phần mềm dùng để mở và xem các trang mạng.
+trình độ|Mức hiểu biết, khả năng đạt được trong một lĩnh vực.
+trình làng|Ra mắt lần đầu trước công chúng.
+trình tự|Thứ tự trước sau của các bước hay sự việc.
+trịnh trọng|Có vẻ nghiêm trang, long trọng trong lời nói, cử chỉ.
+trìu mến|Đầy âu yếm, thương mến, thường thể hiện qua ánh mắt, giọng nói.
+trĩu|Nặng đến mức cong oằn xuống, như cành nhiều quả.
+trò chơi|Hoạt động vui chơi có luật lệ, để giải trí.
+trò chuyện|Nói qua nói lại với nhau thân mật, thoải mái, không cần nghi thức.
+trò đùa|Câu nói hay việc bày ra cốt để gây cười hoặc trêu nhau.
+trò vui|Việc làm hay cảnh tượng gây cười, để mua vui.
+trọc|Không còn tóc trên đầu hoặc không có cây cỏ che phủ.
+trói buộc|Ràng buộc chặt, làm mất tự do.
+tròn|Có hình dạng giống mặt đĩa hay quả bóng, không có góc cạnh.
+tròn trịa|Tròn đều và đầy đặn, trông dễ coi.
+tròn trĩnh|Mũm mĩm, tròn đầy, thường nói về khuôn mặt, thân hình.
+tròn xoe|Tròn và mở to, thường nói về mắt.
+trọn đời|Suốt cả một đời người, kéo dài cho tới lúc mất.
+trọn gói|Gồm đủ mọi khoản trong một giá.
+trọn vẹn|Đầy đủ đến cùng, không thiếu phần nào, như niềm vui, lời hứa.
+trong khi|Từ nối chỉ hai việc diễn ra cùng lúc hoặc trái ngược nhau.
+trong lành|Mát và sạch, không lẫn khói bụi, thường nói về không khí hay nguồn nước.
+trong sạch|Ngay thẳng, không dính dáng tới điều gian dối hay tham lam.
+trong sáng|Hồn nhiên, không vẩn ý xấu, thường nói về tâm hồn, tình cảm.
+trong suốt|Cho ánh sáng lọt qua, nhìn thấu rõ phía sau, như kính hay nước sạch.
+trong trẻo|Trong và sáng, nghe dễ chịu, thường nói về giọng nói, tiếng hát.
+trong vắt|Rất trong, nhìn thấu tận đáy, thường nói về nước.
+trong veo|Trong hoàn toàn, không gợn chút vẩn đục nào.
+trong vòng|Trong khoảng thời gian hay phạm vi nhất định.
+trong xanh|Trong và có màu xanh, thường nói về bầu trời, nước biển.
+tròng đen|Phần màu đen hay nâu ở giữa mắt.
+trọng lực|Sức hút của Trái Đất kéo đồ vật rơi xuống khi bị buông tay.
+trọng lượng|Độ nặng của một vật.
+trọng tài|Người điều khiển, phân xử trận đấu theo luật.
+trọng tâm|Phần chính, quan trọng cần tập trung chú ý.
+trổ tài|Đem hết tài năng ra cho người khác thấy.
+trôi chảy|Suôn sẻ, trơn tru, không vấp váp.
+trôi nổi|Dập dềnh theo dòng nước; cũng chỉ đời sống lang bạt, bấp bênh.
+trôi qua|Qua đi, thường nói về thời gian.
+trốn thoát|Chạy khỏi nơi bị giữ, bị vây bắt mà không bị bắt lại.
+trốn tránh|Cố ý trốn đi để khỏi phải gặp ai hay làm việc gì.
+trộn lẫn|Pha trộn vào nhau, không tách riêng ra được.
+trông cậy|Đặt niềm tin vào ai để mong được giúp đỡ, đỡ đần.
+trông chờ|Chờ ai đó hay điều gì sẽ đến, mong cho mau tới.
+trông chừng|Để mắt canh giữ người hay vật để khỏi xảy ra chuyện.
+trông coi|Chăm sóc, giữ gìn người hay vật được giao.
+trông đợi|Mong chờ một kết quả hay điều gì sẽ xảy ra.
+trông mong|Hi vọng, mong mỏi vào ai, điều gì.
+trông ngóng|Mong chờ ai đó hoặc điều gì một cách sốt ruột, bồn chồn.
+trông nom|Coi sóc, chăm lo cho người hoặc vật như trẻ nhỏ, nhà cửa.
+trông thấy|Nhìn và nhận ra được người hay vật bằng mắt.
+trồng chuối|Chống tay hoặc đầu xuống đất, dựng ngược người cho hai chân chổng lên trời.
+trồng trọt|Làm nghề trồng cây, cấy lúa và chăm sóc hoa màu để thu hoạch.
+trống|Nhạc cụ mặt da căng, gõ bằng dùi; cũng có nghĩa là không chứa gì.
+trống đồng|Trống cổ đúc bằng đồng, mặt có hoa văn, gắn với người Việt xưa.
+trống không|Chẳng chứa gì bên trong; cũng chỉ lối nói cụt lủn, thiếu lời thưa gửi.
+trống rỗng|Hoàn toàn rỗng không, thường nói về vật chứa hoặc cảm giác trong lòng.
+trống trải|Rộng, vắng, không có gì che chắn, dễ gợi cảm giác cô quạnh.
+trống trơn|Trống hết, không còn sót chút gì, thường nói về đồ chứa.
+trống vắng|Vắng vẻ, thiếu bóng người hoặc thiếu đi điều thân quen, gây cảm giác buồn.
+trơ trọi|Còn lại một mình giữa khoảng trống, không có gì bên cạnh.
+trơ trụi|Trống không, chẳng còn cây cối hay vật gì che phủ, trông xơ xác.
+trở lại|Quay về nơi cũ hoặc trạng thái cũ sau một thời gian rời đi.
+trở mình|Xoay người sang phía khác khi nằm; còn chỉ lúc sự vật chớm đổi thay.
+trở nên|Chuyển sang có một tính chất hay trạng thái mới khác trước.
+trở ngại|Điều gây khó khăn, cản bước khi làm việc gì.
+trở thành|Chuyển sang làm một người hay vật khác, mang tư cách, vai trò mới.
+trở về|Đi về lại nơi mình đã ra đi, thường là nhà hay quê hương.
+trớ trêu|Éo le, trái ngược với mong muốn đến mức như bị trêu ngươi.
+trợ giúp|Giúp đỡ thêm cho ai đang gặp khó khăn hoặc đang cần.
+trợ thủ|Người giúp việc đắc lực cho người khác trong công việc chính.
+trời|Khoảng không bao la phía trên đầu, nơi có mây bay và các vì sao.
+trời đất|Bầu trời và mặt đất, chỉ chung cả thế giới tự nhiên quanh con người.
+trời xanh|Bầu trời trong, có màu xanh khi trời quang mây.
+trơn tru|Suôn sẻ, trôi chảy, không vướng mắc, thường nói về công việc, lời nói.
+trơn trượt|Trơn đến mức dễ trượt ngã, thường nói về mặt đường, sàn nhà ướt.
+trơn tuột|Rất trơn, khó cầm nắm vì dễ tuột khỏi tay.
+trú ẩn|Ẩn náu vào nơi an toàn để tránh nguy hiểm, mưa gió hay bom đạn.
+trụ cột|Người hay lực lượng chính, gánh vác và giữ vững gia đình, tập thể.
+trụ sở|Địa chỉ làm việc chính của một tổ chức, nơi treo biển tên.
+trúc|Loài tre thân mảnh, đốt thưa, hay trồng làm cảnh và dùng làm ống sáo.
+trục trặc|Hỏng hóc nhẹ hoặc vướng mắc, làm máy móc hay công việc không suôn sẻ.
+trụi|Rụng hoặc bị cắt hết lông, lá, tóc, không còn sót lại.
+trung bình|Ở khoảng giữa, không cao cũng không thấp, không hơn cũng không kém.
+trung gian|Đứng giữa hai bên để nối, môi giới hay chuyển tiếp việc qua lại.
+trung học|Bậc học sau tiểu học, trước đại học, gồm cấp hai và cấp ba.
+trung niên|Lứa tuổi giữa đời người, đã qua thời trẻ nhưng chưa đến tuổi già.
+trung tâm|Phần ở giữa, nơi tập trung hoạt động chính của một vùng.
+trung thành|Một lòng một dạ, không thay đổi tình cảm với người hay điều mình theo.
+trung thu|Tết rằm tháng tám âm lịch, có rước đèn, phá cỗ, ăn bánh nướng.
+trung thực|Ngay thẳng, nói đúng sự thật, không gian dối.
+trung tính|Không nghiêng về bên nào, không mang sắc thái tốt hay xấu rõ rệt.
+trúng tuyển|Đạt yêu cầu và được nhận vào trường hay chỗ làm sau kì thi.
+trút|Đổ dồn hết ra khỏi vật chứa trong một lần.
+trút bỏ|Bỏ đi hết những gì đang mang, như quần áo, gánh nặng hay lo âu.
+truy cập|Mở và sử dụng trang mạng hoặc dữ liệu được lưu trên máy tính.
+truyền|Chuyển tiếp sang người khác hay nơi khác, như nghề, tin tức, dòng điện.
+truyền cảm|Có sức gợi cảm xúc, làm người nghe hay người xem rung động theo.
+truyền đạt|Nói lại, giảng lại để người khác nắm được ý, tin hay kiến thức.
+truyền hình|Việc phát hình và tiếng đi xa để người ta xem trên máy thu hình.
+truyền tải|Chuyển đưa thông tin, thông điệp hay điện năng tới nơi nhận.
+truyền thông|Việc đưa tin tức, thông điệp tới đông đảo công chúng qua báo, đài, mạng.
+truyền thuyết|Chuyện kể dân gian về người, việc thời xưa, xen nhiều chi tiết kỳ lạ.
+truyện cổ|Chuyện từ xa xưa được kể lại qua nhiều đời, như cổ tích, ngụ ngôn.
+truyện dài|Truyện văn xuôi dung lượng lớn, thường in thành cuốn, nhiều nhân vật, tình tiết.
+truyện tranh|Truyện kể chủ yếu bằng tranh vẽ nối tiếp nhau, kèm lời thoại ngắn.
+trưa|Quãng giữa ngày, khoảng sau buổi sáng, thường là lúc ăn cơm và nghỉ ngơi.
+trực giác|Khả năng nhận biết ngay sự việc bằng cảm nhận, không cần suy luận.
+trực thăng|Máy bay có chong chóng lớn trên nóc, cất cánh thẳng lên, lơ lửng được.
+trực tiếp|Không qua trung gian; cũng chỉ việc phát sóng ngay lúc sự kiện diễn ra.
+trực tuyến|Diễn ra hoặc thực hiện qua mạng, không cần gặp mặt tại chỗ.
+trưng bày|Bày ra ở nơi dễ thấy cho mọi người xem, ngắm.
+trứng|Khối do nhiều loài vật cái đẻ ra, có thể nở thành con non.
+trứng gà|Trứng do gà mái đẻ, vỏ trắng hoặc nâu nhạt, là món ăn quen thuộc.
+trứng muối|Trứng vịt ngâm hay ủ muối lâu ngày, lòng đỏ chắc và mặn.
+trứng ngỗng|Trứng của con ngỗng, to hơn trứng gà; cũng chỉ điểm không khi chấm bài.
+trước|Phía mặt mình đang hướng tới; cũng chỉ lúc sớm hơn một mốc thời gian.
+trước đây|Khoảng thời gian đã qua, tính từ lúc đang nói trở về trước.
+trước khi|Từ dùng để chỉ thời điểm diễn ra sớm hơn một việc khác.
+trước kia|Khoảng thời gian đã qua, cách lúc đang nói một quãng khá xa.
+trước mặt|Ngay phía đằng trước, đối diện với mình, trong tầm nhìn.
+trước sau|Lúc đầu cũng như lúc sau, chỉ sự không thay đổi từ đầu đến cuối.
+trườn|Áp sát thân xuống mặt đất rồi nhích người tới, như rắn bò.
+trường|Nơi dạy và học ở bất kỳ bậc nào, từ mẫu giáo tới đại học.
+trường đại học|Cơ sở đào tạo bậc cao sau phổ thông, cấp bằng cử nhân trở lên.
+trường đua|Khu đất có đường chạy dành cho các cuộc thi đua ngựa, đua xe.
+trường học|Khu nhà có lớp học, sân chơi, nơi học sinh tới học hằng ngày.
+trường hợp|Hoàn cảnh hay tình huống cụ thể xảy ra trong thực tế.
+trường mầm non|Trường nhận trông và dạy trẻ nhỏ trước tuổi vào lớp một.
+trường quay|Nơi được dựng sẵn bối cảnh, ánh sáng để quay phim hoặc ghi hình.
+trưởng đoàn|Người đứng đầu, dẫn dắt và chịu trách nhiệm cho một đoàn.
+trưởng phòng|Chức danh của người cầm đầu một phòng ban, lo chia việc cho nhân viên.
+trưởng thành|Lớn lên và chín chắn, đủ sức tự lo cho bản thân.
+trượt|Lướt đi trên mặt trơn do mất chỗ bám; cũng chỉ việc thi không đỗ.
+trượt băng|Lướt trên mặt băng bằng đôi giày gắn lưỡi kim loại dưới đế.
+trượt tuyết|Lướt xuống dốc phủ tuyết trên hai tấm ván dài buộc vào chân.
+trừu tượng|Không có hình thể cụ thể, chỉ nắm bắt được bằng suy nghĩ.
+tu hú|Chim lông đen, kêu vang đầu hè, thường đẻ nhờ vào tổ chim khác.
+tủ áo|Tủ có ngăn và thanh treo móc, dùng để cất giữ quần áo.
+tủ đá|Tủ làm lạnh sâu để đông đá và trữ thực phẩm đông lạnh lâu ngày.
+tủ đứng|Tủ cao, đặt thẳng đứng trên sàn, thường có cánh mở để cất đồ.
+tủ kính|Tủ có cửa hoặc vách bằng kính, dùng để bày đồ cho dễ nhìn.
+tủ lạnh|Thiết bị chạy điện giữ lạnh bên trong, để cất đồ ăn lâu không hỏng.
+tủ sách|Tủ có nhiều ngăn kệ, dùng để xếp và cất giữ sách.
+tụ họp|Đến cùng một chỗ để gặp gỡ nhau, thường là người thân, bạn bè.
+tụ tập|Kéo nhau đến tập trung thành đám đông ở một nơi.
+tua rua|Chùm sợi buông lủng lẳng ở mép khăn, rèm hay áo để trang trí.
+tuân thủ|Làm đúng theo quy định, luật lệ hay điều đã thỏa thuận.
+tuần|Quãng thời gian bảy ngày liền nhau, dùng để chia lịch học, lịch làm.
+tuần lễ|Quãng thời gian bảy ngày, thường dùng khi tính thời hạn, lịch làm việc.
+tuần lộc|Loài hươu xứ lạnh, sừng to phân nhánh, thường kéo xe trượt tuyết.
+tuần tự|Theo đúng thứ tự, lần lượt từng bước một.
+tục lệ|Thói quen, lề lối đã thành nếp lâu đời trong một cộng đồng.
+tủi thân|Chạnh lòng, thấy mình thiệt thòi, đáng thương khi bị lạnh nhạt hay bỏ rơi.
+túi bụi|Dồn dập liên tục, không kịp ngơi tay, thường nói về việc bận rộn.
+túi du lịch|Túi cỡ lớn có quai xách hoặc đeo, dùng đựng đồ khi đi xa.
+túi khí|Túi trong xe tự phồng lên khi va chạm, giúp giảm chấn thương.
+túi ngủ|Túi bằng vải dày có khóa kéo, người chui vào nằm ngủ khi cắm trại.
+túi tiền|Số tiền một người có thể chi tiêu, tức khả năng chi trả của họ.
+túi xách|Đồ đựng thường bằng da hay vải, có quai cầm, mang theo khi ra ngoài.
+tùm lum|Nhiều và lộn xộn, chỗ nào cũng có, thường nói về đồ đạc.
+tủm tỉm|Cười mỉm không thành tiếng, môi khẽ cong lên, thường vì thích thú kín đáo.
+tung|Ném hoặc hất mạnh lên cao, ra xa.
+tung hô|Hô to để chào mừng, ca ngợi ai đó.
+tung hứng|Tung liên tục nhiều vật lên cao rồi bắt lại, thường để biểu diễn.
+tung tăng|Nhún nhảy hớn hở khắp chỗ, thường nói về trẻ nhỏ hay đàn cá.
+tuổi già|Chặng cuối đời người, khi tóc đã bạc và sức lực thường kém đi.
+tuổi tác|Số tuổi của con người, thường nói khi nhấn mạnh già hay trẻ.
+tuổi thơ|Quãng đời thơ ấu, lúc còn là trẻ con.
+tuổi trẻ|Thời kì còn trẻ, đầy sức sống và nhiệt huyết của đời người.
+tuổi xuân|Thời trẻ trung tràn đầy sức sống, thường nhắc với vẻ tiếc nuối.
+tuôn|Chảy ra hoặc trào ra nhiều, liên tục không ngớt.
+tuột|Rời khỏi chỗ đang giữ hay bám vì trơn hoặc lỏng.
+túp lều|Căn lều nhỏ, đơn sơ, thường lợp tranh hay lá.
+tuy nhiên|Từ nối mở ra ý ngược lại hay khác đi so với điều vừa nói.
+tuyên bố|Nói công khai, chính thức điều gì cho mọi người biết.
+tuyển|Chọn lấy người hay vật đạt yêu cầu từ trong số nhiều người, vật khác.
+tuyển chọn|Cân nhắc kĩ rồi chọn ra những người, vật tốt và phù hợp.
+tuyển dụng|Nhận người vào làm việc sau khi xem xét hồ sơ, phỏng vấn.
+tuyển sinh|Xét chọn và nhận người học mới vào trường, thường qua thi hay hồ sơ.
+tuyển tập|Sách gom các tác phẩm chọn lọc của một hay nhiều tác giả.
+tuyển thủ|Người chơi thể thao được chọn vào đội đại diện một nước hay một tỉnh.
+tuyến đường|Đường đi nối liền hai địa điểm, thường dành cho xe cộ hay tàu chạy.
+tuyết|Hạt băng trắng xốp rơi từ trời xuống khi trời rất lạnh.
+tuyệt chiêu|Ngón nghề hay đòn thế đặc biệt, khó ai bắt chước được.
+tuyệt diệu|Hay, đẹp đến mức kì diệu, khiến người ta thán phục.
+tuyệt đỉnh|Đạt tới mức cao vượt bậc, khó có gì vượt qua.
+tuyệt đối|Trọn vẹn, không chừa một ngoại lệ hay sai sót nào.
+tuyệt hảo|Hoàn hảo, không có chút khiếm khuyết nào, thường nói về chất lượng.
+tuyệt phẩm|Tác phẩm hay sản phẩm đạt độ hoàn mĩ hiếm có.
+tuyệt tác|Tác phẩm nghệ thuật làm ra hết sức tài tình, được đánh giá rất cao.
+tuyệt vời|Hay, đẹp, tốt đến mức không chê vào đâu được.
+tư cách|Cách ăn ở, giữ mình của một người; còn chỉ vai trò mình đảm nhận.
+tư duy|Hoạt động suy nghĩ, phân tích, phán đoán của con người để hiểu sự vật.
+tư thế|Cách đặt thân người khi đứng, ngồi, nằm hay làm động tác.
+từ bỏ|Thôi không theo, không giữ hay không làm điều gì nữa.
+từ chối|Không nhận, không đồng ý với điều người khác đưa ra hoặc đề nghị.
+từ giã|Chào để chia tay, rời xa người hay nơi chốn thân thuộc.
+từ ngữ|Các từ và cụm từ được chọn để diễn đạt khi nói hay viết.
+từ thiện|Việc giúp người nghèo khó, hoạn nạn bằng tiền của, công sức, không vì lợi.
+từ tốn|Nhẹ nhàng, thong thả, không vội vàng trong lời nói, cử chỉ.
+từ vựng|Kho từ ngữ của một thứ tiếng, hay vốn chữ một người tích góp được.
+tử tế|Có lòng tốt, đối xử đàng hoàng và chu đáo với người khác.
+tứ kết|Vòng đấu còn tám đội hay tám người, chọn ra bốn vào bán kết.
+tứ tung|Lung tung, bừa bãi khắp mọi hướng, không theo trật tự nào.
+tự ái|Dễ phật lòng, thấy mình bị coi thường dù chỉ vì chuyện nhỏ.
+tự chế|Tự làm ra bằng tay hoặc từ vật liệu sẵn có, không mua sẵn.
+tự chủ|Tự quyết định và điều khiển được việc làm, cảm xúc của bản thân.
+tự do|Thoải mái làm và nghĩ theo ý mình, không bị ràng buộc hay giam giữ.
+tự động|Tự vận hành theo cách đã cài đặt, không cần người điều khiển.
+tự giác|Tự mình làm điều cần làm mà không phải nhắc nhở hay ép buộc.
+tự hào|Hãnh diện, vui sướng vì điều đáng quý của bản thân hay người thân.
+tự học|Tự tìm hiểu và học lấy kiến thức, không cần thầy dạy trực tiếp.
+tự hỏi|Tự đặt câu hỏi trong đầu và suy nghĩ để tìm lời đáp.
+tự lập|Tự lo liệu việc ăn ở, chi tiêu của mình mà không cần dựa dẫm.
+tự nguyện|Làm vì chính mình muốn, không do ai ép hay sai khiến.
+tự nhiên|Không gượng gạo; cũng chỉ cây cỏ, sông núi vốn có, không do người tạo.
+tự ti|Cảm thấy mình kém cỏi, thua người khác nên thiếu tự tin.
+tự tiện|Làm theo ý riêng mà không hỏi hay chờ người có quyền cho phép.
+tự tin|Tin rằng mình làm được nên không rụt rè, e ngại.
+tự trọng|Biết giữ phẩm giá, không chịu làm điều khiến mình bị coi thường.
+tự túc|Tự lo đủ chi phí hay nhu cầu của mình mà không nhờ người khác.
+tựa đề|Tên đặt cho một bài viết, cuốn sách hay bộ phim.
+tức cười|Buồn cười, khiến người ta muốn bật cười.
+tức giận|Bực bội, nổi nóng vì điều trái ý hay bị xúc phạm.
+tức thời|Xảy ra ngay lúc đó, gần như không có độ trễ.
+tức tốc|Hết sức nhanh, lập tức, không chần chừ.
+tức tối|Tức giận đến mức bứt rứt, khó chịu không yên.
+tưng bừng|Rộn rã, nhộn nhịp và đông vui, thường nói về ngày hội, lễ mừng.
+tươi|Còn mới, chưa héo úa hay ươn hỏng, thường nói về rau quả, thịt cá.
+tươi cười|Có nét mặt rạng rỡ, môi nở nụ cười.
+tươi đẹp|Đẹp và tràn đầy sức sống, thường nói về cảnh vật, tương lai.
+tươi mát|Tươi và mát mẻ, gợi cảm giác dễ chịu, sảng khoái.
+tươi rói|Còn tươi nguyên như vừa hái, vừa bắt lên; cũng tả nụ cười rạng rỡ.
+tươi sáng|Sáng sủa, đầy hi vọng, thường nói về tương lai hay màu sắc.
+tươi sống|Còn sống hoặc vừa mới làm, chưa qua chế biến, thường nói về thực phẩm.
+tươi tắn|Có vẻ tươi vui, rạng rỡ, thường nói về nét mặt, dáng vẻ con người.
+tươi thắm|Tươi và có màu sắc đậm, rực rỡ, thường nói về hoa, đôi môi.
+tươi tỉnh|Có vẻ mặt tỉnh táo, vui vẻ, không còn mệt mỏi hay buồn bã.
+tươi tốt|Xanh tươi và phát triển mạnh, thường nói về cây cối.
+tươi vui|Vui vẻ, phấn khởi, tràn đầy sức sống.
+tươm tất|Gọn gàng, đầy đủ và chu đáo, thường nói về ăn mặc, chuẩn bị.
+tương đen|Nước chấm sệt màu nâu đen, vị ngọt mặn, thường ăn kèm phở, gỏi cuốn.
+tương lai|Quãng thời gian còn ở phía trước, những ngày tháng sẽ tới.
+tương ớt|Đồ chấm đỏ sền sệt xay từ ớt, cay ngọt, hay ăn với đồ chiên.
+tương phản|Trái ngược nhau rõ rệt, làm nổi bật lẫn nhau khi đặt cạnh nhau.
+tương tác|Qua lại ảnh hưởng hay đáp lời nhau, như khi trò chuyện trên mạng.
+tương thích|Dùng được cùng nhau mà không xung đột, thường nói về thiết bị, phần mềm.
+tương tự|Gần giống nhau, có nhiều điểm như nhau.
+tương ứng|Phù hợp, khớp với nhau theo từng phần hay từng cặp.
+tương xứng|Cân xứng, ngang tầm với nhau, xứng đáng với nhau.
+tường|Vách thường xây bằng gạch, đá, dùng để ngăn chia hay bao quanh nhà.
+tưởng bở|Vội tin việc sẽ dễ dàng hay có lợi cho mình, nhưng thật ra không.
+tưởng tượng|Hình dung trong đầu những điều không có trước mắt hoặc chưa có thật.
+tượng đài|Khối tượng lớn đặt nơi quảng trường, để tưởng nhớ một người hay sự kiện.
+tượng trưng|Dùng một hình ảnh, vật cụ thể để biểu thị một ý nghĩa.
+tựu trường|Tập trung trở lại trường khi bắt đầu năm học mới, sau kỳ nghỉ hè.
+u buồn|Buồn rầu, ủ dột kéo dài, như có nỗi sầu chất chứa.
+uất ức|Tức tối, nghẹn ngào vì bị oan hay bất công mà không nói ra được.
+uể oải|Mệt mỏi, rã rời, không muốn cử động hay làm gì.
+um tùm|Rậm rạp, cành lá chen dày, thường nói về bụi cây hay vườn hoang.
+ùn tắc|Xe cộ dồn ứ lại, không đi được, thường xảy ra trên đường phố.
+ủng hộ|Đồng tình và giúp đỡ, đứng về phía ai hay việc gì.
+uốn cong|Nắn cho vật đang thẳng cong đi, như cành cây hay sợi dây thép.
+uốn dẻo|Động tác vặn, gập người theo các tư thế khó để khoe sự dẻo dai.
+uốn éo|Vặn vẹo thân mình qua lại, thường để làm điệu.
+uốn lượn|Cong qua cong lại thành nhiều khúc mềm mại, như dòng sông hay đường đèo.
+uốn nắn|Sửa chữa, dạy bảo dần cho đúng, thường nói về tính nết, chữ viết.
+uốn tóc|Làm cho tóc xoăn lại bằng nhiệt hay thuốc.
+uổng công|Bỏ công sức ra mà rốt cuộc chẳng được gì, thành phí hoài.
+uống|Đưa chất lỏng vào miệng và nuốt xuống.
+úp mở|Nói lấp lửng, hé một nửa giấu một nửa để người nghe phải đoán.
+uy tín|Sự tin cậy, kính trọng mà người khác dành cho một người, tổ chức.
+uyển chuyển|Mềm mại, linh hoạt và nhịp nhàng, thường nói về động tác, dáng đi.
+ưa chuộng|Thích và hay chọn hơn thứ khác, thường nói về thị hiếu của số đông.
+ưa nhìn|Có gương mặt, dáng vẻ dễ coi, nhìn thấy dễ mến dù không quá đẹp.
+ưa thích|Thấy hợp ý nên hay tìm tới, như món ăn hay trò chơi quen.
+ức chế|Bực bội vì cảm xúc bị dồn nén mà không giải tỏa được.
+ưng ý|Vừa lòng, hợp với mong muốn của mình.
+ửng đỏ|Hồng đỏ lên nhè nhẹ, như đôi má khi ngượng hay quả chín tới.
+ửng hồng|Hơi hồng lên, có sắc hồng nhạt tươi, thường nói về đôi má.
+ứng biến|Nhanh chóng tìm cách xoay xở khi gặp chuyện bất ngờ, không kịp chuẩn bị.
+ứng dụng|Phần mềm cài trên máy cho một việc; còn nghĩa đem lý thuyết ra dùng.
+ứng phó|Tìm cách đối phó, xử lý khi có tình huống khó khăn xảy ra.
+ứng tuyển|Nộp hồ sơ để được xét nhận vào một vị trí việc làm.
+ứng viên|Người đăng kí dự tuyển vào một chức vụ, công việc hay giải thưởng.
+ứng xử|Cách đối đãi, cư xử với người khác trong các tình huống.
+ước ao|Mong muốn tha thiết một điều chưa có.
+ước chừng|Khoảng chừng, vào khoảng, dùng khi nêu con số không chính xác.
+ước lượng|Tính phỏng chừng số lượng, kích thước dựa trên quan sát.
+ước mong|Điều mong muốn có được, hướng về tương lai.
+ước mơ|Điều tốt đẹp mà người ta mơ tưởng và mong đạt được trong đời.
+ước muốn|Điều mình muốn có hay muốn làm được.
+ước tính|Tính ra con số áng chừng, chưa đo đếm thật chính xác.
+ướp lạnh|Để thực phẩm, đồ uống vào đá hoặc tủ lạnh cho mát, giữ được lâu.
+ướt đẫm|Ướt nhiều đến mức thấm khắp, như áo ướt mồ hôi.
+ướt nhẹp|Ướt dính bết vào người, gây khó chịu.
+ướt sũng|Thấm nước đến mức nhỏ giọt, như quần áo khi dầm mưa.
+ưu ái|Dành cho ai sự quan tâm hay phần lợi hơn hẳn người khác.
+ưu đãi|Quyền lợi tốt hơn bình thường dành cho một số người, như giảm giá.
+ưu điểm|Mặt tốt, chỗ mạnh của người hay vật, trái với nhược điểm.
+ưu thế|Lợi thế vượt trội so với đối thủ hay bên khác.
+ưu tiên|Được xếp trước, được hưởng quyền lợi trước người khác.
+va chạm|Đụng mạnh vào nhau; cũng chỉ sự xích mích, bất đồng giữa người với người.
+va đập|Đập mạnh, dội vào vật khác, thường gây hư hại.
+vách|Mặt ngăn đứng che quanh nhà, thường bằng tre, đất hay gỗ.
+vách đá|Mặt đá dựng đứng của núi hay bờ biển.
+vách ngăn|Tấm dựng lên để chia một khoảng không thành nhiều phần.
+vạch ra|Nêu rõ, đề ra kế hoạch hay chỉ ra điều gì cụ thể.
+vai trò|Chức năng, tác dụng của một người hay vật trong một việc chung.
+vải bạt|Vải dày, dai và chắc, thường dùng làm lều, mái che.
+vải bông|Vải dệt từ sợi cây bông, mềm, thấm mồ hôi, hợp đồ mặc ngày nóng.
+vải thiều|Quả nhỏ tròn, vỏ đỏ sần, cùi trắng ngọt mọng, chín vào đầu hè.
+vải vóc|Các loại vải nói chung, dùng để may mặc.
+vali|Hòm xách có tay cầm, thường có bánh xe, dùng đựng đồ khi đi xa.
+vạm vỡ|To khỏe, thân hình rắn chắc, nở nang.
+van an toàn|Bộ phận tự mở để xả bớt hơi khi áp suất trong máy quá cao.
+van nài|Năn nỉ, xin nhiều lần một cách khẩn khoản.
+van xin|Hạ mình cầu xin ai đó tha thứ hay giúp đỡ.
+ván ép|Tấm gỗ thường ghép từ nhiều lớp mỏng dán chồng, dùng đóng đồ đạc.
+ván trượt|Tấm ván nhỏ gắn bánh xe ở dưới, người đứng lên để lướt đi.
+vạn năng|Dùng được vào nhiều việc khác nhau.
+vạn thọ|Cây hoa có cánh xếp dày, màu vàng hoặc cam, thường bày dịp Tết.
+vạn vật|Mọi vật, mọi sinh vật trong trời đất.
+vang dội|Rền to và lan xa; cũng tả thành công lẫy lừng, nhiều người biết.
+vang vọng|Âm thanh vọng lại, ngân dài và lan xa.
+vàng|Màu như màu nghệ, hoa cúc; cũng chỉ kim loại quý làm trang sức.
+vàng anh|Chim nhỏ lông màu vàng tươi, tiếng hót trong trẻo.
+vàng bạc|Vàng và bạc nói chung, chỉ của cải, đồ quý giá.
+vàng chanh|Màu vàng tươi hơi ngả xanh, giống màu vỏ quả chanh chín.
+vàng hoe|Vàng nhạt, sáng tươi, thường nói về tóc, nắng hay lúa chín.
+vàng óng|Vàng và bóng mượt, ánh lên đẹp mắt.
+vàng rực|Vàng đậm, chói sáng rực rỡ.
+vàng thỏi|Vàng đúc thành khối hình chữ nhật, thường dùng để cất giữ.
+vàng vàng|Hơi vàng, có sắc vàng nhạt.
+vành|Phần viền tròn bao quanh rìa vật, như ở mũ, nón hay bánh xe.
+vành bánh xe|Vòng kim loại tròn ở bánh xe, để lắp lốp lên.
+vành đai|Dải đất hay đường bao quanh một khu vực.
+vành khuyên|Chim nhỏ lông xanh vàng, quanh mắt có vòng lông trắng, hót hay.
+vành tai|Phần sụn mỏng bao quanh lỗ tai, nằm ở hai bên đầu.
+vani|Hương thơm ngọt dịu cho vào bánh, kem, chiết từ quả một loài lan.
+vào cuộc|Bắt đầu nhảy vào tham gia, cùng xử lý một việc đang diễn ra.
+vào vai|Hóa thân thành một nhân vật khi diễn phim, kịch hay chơi trò chơi.
+vay mượn|Mượn tạm tiền hay đồ của người khác, hẹn trả lại sau.
+váy áo|Quần áo, váy vóc nói chung, thường của phụ nữ.
+váy đầm|Váy liền thân, may liền phần trên và phần dưới.
+văn bản|Tài liệu viết hoặc in, ghi lại nội dung theo hình thức nhất định.
+văn chương|Thơ, truyện và các bài viết trau chuốt, dùng lời lẽ có nghệ thuật.
+văn học|Loại hình nghệ thuật ngôn từ gồm thơ, truyện, kịch, cũng là một môn học.
+văn minh|Có trình độ phát triển cao, lối cư xử lịch sự, tiến bộ.
+văn nghệ|Các tiết mục ca hát, múa, diễn kịch, thường biểu diễn trong dịp lễ, hội.
+văn phòng|Chỗ ngồi làm việc giấy tờ, máy tính của cơ quan hay công ty.
+vắn tắt|Gói trong vài lời, chỉ giữ ý chính và lược đi chi tiết.
+vặn vẹo|Uốn, xoay qua xoay lại nhiều lần, không yên.
+vắng bóng|Chẳng thấy xuất hiện ở chỗ vẫn thường có mặt, dù là người hay vật.
+vắng lặng|Ít người qua lại và im ắng, không nghe tiếng động gì.
+vắng mặt|Không có mặt ở chỗ mà lẽ ra phải tới, như buổi học, cuộc họp.
+vắng tanh|Vắng hoàn toàn, không một bóng người.
+vắng vẻ|Ít người qua lại, gợi cảm giác hiu quạnh.
+vắt sữa|Bóp nắn bầu vú bò, dê để lấy sữa.
+vặt vãnh|Nhỏ nhặt, lặt vặt, chẳng đáng bận tâm nhiều.
+vẩn vơ|Lan man, không có đích rõ ràng, thường nói về ý nghĩ.
+vấn đề|Điều cần được xem xét, bàn bạc và giải quyết.
+vận chuyển|Chở hàng hóa hay hành khách tới nơi khác bằng xe, tàu, máy bay.
+vận dụng|Đem kiến thức, kinh nghiệm ra dùng vào việc cụ thể.
+vận động|Cử động, hoạt động thân thể; cũng chỉ việc thuyết phục người khác tham gia.
+vận động viên|Người tập luyện và thi đấu một môn thể thao.
+vận may|Dịp may mắn đến bất ngờ.
+vận tốc|Độ nhanh chậm khi vật di chuyển, trong vật lý có tính cả hướng.
+vâng lời|Làm đúng theo lời dặn bảo của cha mẹ, thầy cô hay người lớn.
+vấp váp|Gặp sai sót, thất bại khi làm việc gì, thường do thiếu kinh nghiệm.
+vất vả|Mệt nhọc, cực khổ vì phải gắng sức nhiều, thường nói về chuyện mưu sinh.
+vật chất|Những thứ có thật, cụ thể như của cải, tiền bạc, khác với tinh thần.
+vật cưng|Con vật được nuôi để làm bạn, như chó, mèo.
+vật dụng|Đồ dùng phục vụ sinh hoạt hay công việc, như bát đĩa, chổi, kéo.
+vật liệu|Thứ như gạch, gỗ, sắt, vải dùng để xây cất hay làm ra đồ vật.
+vật nuôi|Con vật do người chăn nuôi, như gia súc, gia cầm, chó mèo.
+vật phẩm|Đồ vật được làm ra để dùng, tặng hay trưng bày.
+vật thể|Vật có hình dạng, chiếm chỗ trong không gian.
+vật tư|Nguyên vật liệu, máy móc phục vụ sản xuất, xây dựng.
+vây quanh|Tụ lại thành vòng xung quanh một người hay một chỗ.
+vẫy gọi|Ra hiệu bằng tay gọi ai lại; cũng ví điều hấp dẫn đang mời gọi.
+vẫy tay|Đưa bàn tay đung đưa qua lại để chào, tạm biệt hay ra hiệu.
+ve chai|Đồ phế thải như chai lọ, giấy, sắt vụn, được thu gom để bán lại.
+ve sầu|Côn trùng cánh mỏng, sống trên cây, kêu râm ran vào mùa hè.
+vẻ mặt|Nét lộ ra trên gương mặt cho thấy người ấy đang vui, buồn hay giận.
+vẻ ngoài|Hình thức bề ngoài của người hay vật.
+vẻ vang|Rạng rỡ, đáng tự hào, được mọi người kính trọng.
+ven biển|Vùng đất nằm dọc theo bờ biển.
+về già|Lúc tuổi đã cao, quãng cuối đời.
+về hưu|Rời chỗ làm khi đã đủ tuổi, từ đó thường sống bằng lương hưu.
+về vườn|Thôi làm việc, rời chức vụ về quê sống nhàn.
+vệ sinh|Làm sạch, giữ gìn sạch sẽ thân thể và nơi ở để phòng bệnh.
+vệ tinh|Thiết bị bay quanh trái đất; cũng chỉ thiên thể quay quanh một hành tinh.
+vênh|Cong lệch, không còn phẳng hay khớp với nhau.
+vết nhăn|Đường gấp trên da hay vải, thường do tuổi tác hay vò nhàu.
+vết tích|Dấu còn sót lại cho biết một sự việc hay vật từng có ở đó.
+vi vu|Tiếng gió thổi nhẹ, đều; cũng chỉ việc đi chơi thong dong đây đó.
+vì sao|Từ dùng để hỏi nguyên nhân của sự việc.
+vì vậy|Từ nối dẫn tới kết quả hay hệ quả của điều đã nói ở trước.
+vĩ đại|Lớn lao, có tầm vóc và giá trị rất cao.
+ví dụ|Trường hợp cụ thể nêu ra để minh họa cho điều đang nói.
+ví tiền|Bao nhỏ dẹt, thường bằng da, chia ngăn đựng tiền, thẻ, gấp bỏ túi được.
+ví von|So sánh hình ảnh này với hình ảnh khác để diễn tả cho sinh động.
+vị thế|Chỗ đứng và tầm ảnh hưởng của người hay tổ chức so với bên khác.
+vị trí|Chỗ, nơi mà người hay vật đặt hoặc ở.
+vỉa hè|Lối đi bộ chạy dọc hai bên phố, thường cao hơn lòng đường.
+video|Đoạn hình ảnh động có âm thanh được ghi lại để xem trên màn hình.
+việc|Điều cần làm hay đang làm, gắn với một mục đích nào đó.
+việc nhà|Nấu nướng, quét dọn, giặt giũ và những việc lặt vặt trong nhà.
+viền|Đường chạy dọc mép, bao quanh rìa một vật để trang trí hay giữ chắc.
+viễn cảnh|Cảnh tượng tương lai người ta hình dung ra, tươi sáng hay đáng lo.
+viện bảo tàng|Nơi lưu giữ, trưng bày hiện vật lịch sử, văn hóa cho công chúng xem.
+viết|Dùng bút vạch chữ lên giấy hay bề mặt khác.
+viết hoa|Dùng dạng chữ cái in hoa, chẳng hạn ở đầu câu hay tên riêng.
+viết lách|Việc viết văn, viết báo nói chung, thường làm như một nghề hay thú vui.
+viết máy|Bút ngòi kim loại, bơm mực nước vào ống, học trò hay dùng luyện chữ.
+viết tay|Viết trực tiếp bằng bút trên giấy, không qua đánh máy hay in ấn.
+viết tắt|Ghi gọn một từ hay cụm từ, chỉ giữ lại một vài chữ cái.
+việt quất|Cây bụi cho quả mọng nhỏ màu xanh tím, vị chua ngọt, hay làm mứt.
+vinh dự|Niềm tự hào khi được coi trọng, khen ngợi hoặc giao việc đáng quý.
+vinh hạnh|Niềm may mắn đáng tự hào, thường nói khi được gặp người đáng trọng.
+vinh quang|Sự vẻ vang, được mọi người tôn vinh nhờ thành tích hay chiến công lớn.
+vĩnh cửu|Còn mãi với thời gian, không bao giờ mất đi hay thay đổi.
+vĩnh viễn|Mãi mãi về sau, không còn thay đổi hay quay lại được.
+vịnh|Phần biển hay hồ ăn sâu vào đất liền, ba mặt có bờ bao quanh.
+vịt trời|Loài vịt hoang sống ở đầm hồ, bay giỏi, thường di cư theo mùa.
+vitamin|Chất cơ thể cần chút ít, thiếu thì dễ sinh bệnh, có trong thức ăn.
+vỏ chai|Chai rỗng còn lại sau khi đã uống hết, thường đem bán ve chai.
+vỏ chăn|Bao vải may sẵn lồng bên ngoài ruột chăn, tháo ra đem giặt được.
+vỏ chuối|Lớp vỏ ngoài của quả chuối, màu xanh hay vàng, bóc bỏ khi ăn.
+voan|Loại vải mỏng nhẹ, hơi trong, thường dùng may váy, khăn hay rèm.
+vóc dáng|Dáng người nhìn từ bên ngoài, gồm chiều cao, độ đậm hay mảnh khảnh.
+vòi nước|Dụng cụ gắn ở đầu ống, có van đóng mở để lấy nước.
+vòi sen|Cách gọi ngắn của vòi tắm có đầu nhiều lỗ, xả nước ra như mưa.
+vòi voi|Phần mũi liền môi trên dài thõng của voi, để cuốn đồ và hút nước.
+vòng|Đường hay vật cong khép kín thành hình tròn; cũng chỉ một lượt đi quanh.
+vòng bi|Chi tiết máy có các viên bi lăn giữa hai vành, giúp trục quay trơn.
+vòng cổ|Dây hay chuỗi trang sức đeo quanh cổ, thường bằng vàng, bạc hay hạt.
+vòng cung|Đường cong hình một phần vòng tròn, giống dáng cầu vồng.
+vòng đời|Quá trình từ lúc sinh ra, lớn lên đến lúc chết của sinh vật.
+vòng đua|Một lượt chạy hết đường đua khép kín trong cuộc thi tốc độ.
+vòng quanh|Đi theo đường bao quanh một chỗ hoặc đi khắp các nơi của một vùng.
+vòng quay|Một lượt quay trọn của bánh xe hay vật quay quanh trục.
+vòng tay|Món đeo quanh cổ tay; cũng chỉ đôi tay dang ra ôm ấp, che chở.
+vòng tròn|Đường cong khép kín mà mọi điểm trên đó cách đều tâm.
+vòng vèo|Quanh co, rẽ nhiều lần, không đi thẳng, thường nói về đường đi.
+vòng vo|Nói loanh quanh mãi mà không chịu đi thẳng vào điều chính.
+vô bổ|Chẳng đem lại ích lợi gì, thường nói về việc làm hay kiến thức.
+vô cớ|Không có lí do rõ ràng hay chính đáng, thường nói về hành động.
+vô cùng|Ở mức rất cao, không đo đếm hết, dùng để nhấn mạnh.
+vô danh|Không có tên tuổi, không ai biết đến, hoặc không rõ tên.
+vô địch|Thắng tất cả đối thủ, giành vị trí đứng đầu trong một giải thi đấu.
+vô đối|Không có ai sánh kịp, thường dùng trong lời nói thân mật để khen.
+vô giá|Quý tới mức không có số tiền nào đổi được.
+vô hại|Không gây tổn hại hay nguy hiểm cho người hoặc vật.
+vô hạn|Không có giới hạn, không có điểm kết thúc.
+vô hình|Không có hình dạng để mắt thường nhìn thấy.
+vô ích|Không đem lại kết quả hay tác dụng gì dù đã bỏ công.
+vô lăng|Bánh lái hình tròn trong ô tô, người lái xoay để đổi hướng.
+vô nghĩa|Không có ý nghĩa, không rõ nội dung hay giá trị gì.
+vô tận|Không bao giờ cạn hay hết, kéo dài như không có điểm cuối.
+vô tư|Hồn nhiên, thoải mái, không bận lòng lo nghĩ hay tính toán thiệt hơn.
+vô vị|Nhạt, chẳng có mùi vị gì; cũng nói điều tẻ nhạt, không gây hứng thú.
+vồ vập|Tỏ ra mừng rỡ, đón tiếp quá sốt sắng và vội vàng.
+vỗ béo|Cho vật nuôi ăn nhiều để nhanh béo trước khi bán hay giết thịt.
+vỗ về|An ủi, xoa dịu bằng lời nói và cử chỉ dịu dàng.
+vội vã|Gấp gáp, hấp tấp vì muốn làm cho nhanh, thường nói về bước đi.
+vội vàng|Làm nhanh, gấp vì thiếu thời gian nên dễ thiếu cẩn thận.
+vốn liếng|Tiền của dành dụm để làm ăn, nói rộng cả hiểu biết tích lũy được.
+vốn sống|Hiểu biết và kinh nghiệm có được nhờ trải qua nhiều chuyện trong đời.
+vở diễn|Tác phẩm sân khấu được dàn dựng và trình diễn trước khán giả.
+vở kịch|Tác phẩm sân khấu do diễn viên đóng, kể chuyện chủ yếu bằng lời thoại.
+vỡ mộng|Thất vọng khi điều mình mơ ước hay tin tưởng hóa ra không như vậy.
+vợ chồng|Hai người đã kết hôn và chung sống với nhau.
+vợ con|Vợ và các con của một người đàn ông, tức gia đình riêng.
+với nhau|Cụm từ chỉ việc làm qua lại hay chung giữa các bên.
+vu vơ|Bâng quơ, chẳng nhằm vào ai hay điều gì cụ thể.
+vù vù|Tiếng rít nhanh và đều, như tiếng gió mạnh hay cánh quạt quay.
+vũ công|Người biểu diễn múa hay nhảy, thường làm nghề chuyên nghiệp.
+vũ điệu|Điệu nhảy hay điệu múa với các động tác theo nhạc.
+vũ hội|Buổi tiệc lớn có khiêu vũ, khách thường mặc trang phục trang trọng.
+vũ trụ|Toàn bộ không gian cùng mọi ngôi sao, hành tinh và vật chất trong đó.
+vú sữa|Quả tròn vỏ tím hoặc xanh, thịt mềm ngọt có nước trắng như sữa.
+vụ việc|Chuyện đã xảy ra cần làm rõ và xử lý, như tranh chấp, vi phạm.
+vui chơi|Tham gia các trò chơi, hoạt động giải trí cho thư giãn.
+vui cười|Vừa vui vẻ vừa cười nói rộn ràng với nhau.
+vui đùa|Trêu chọc, đùa giỡn nhau một cách vui vẻ.
+vui lòng|Từ đặt trước lời đề nghị cho lịch sự; cũng chỉ sự hài lòng.
+vui mắt|Nhìn thấy thích, nhờ màu sắc tươi hay cảnh nhộn nhịp.
+vui mừng|Phấn khởi, hớn hở khi gặp tin lành hay điều mong đợi.
+vui nhộn|Vui vẻ, sôi nổi và hài hước, dễ gây cười.
+vui sướng|Vui đến mức thấy rất hạnh phúc, mãn nguyện.
+vui thích|Lòng thấy dễ chịu, hào hứng khi gặp hay làm điều hợp ý.
+vui tính|Có tính hay cười đùa, dễ gần và làm người khác vui.
+vui tươi|Vui vẻ và tươi tắn, tràn đầy sức sống.
+vui vẻ|Có tâm trạng vui, thể hiện qua nét mặt và lời nói cởi mở.
+vùi đầu|Dồn hết tâm sức vào một việc, gần như không để ý gì khác.
+vun đắp|Chăm lo, gây dựng dần cho bền chặt, thường nói về tình cảm.
+vun vén|Thu xếp, chăm lo chu đáo cho gia đình hay việc riêng của mình.
+vùn vụt|Rất nhanh và liên tục, thường nói về xe chạy hay thời gian trôi.
+vụn vặt|Nhỏ nhặt, rời rạc, không đáng kể, thường nói về công việc hay chuyện.
+vung vãi|Bị hất, rải ra lung tung khắp nơi, thường do sơ ý.
+vùng biển|Khu vực mặt biển và vùng nước thuộc về một nơi hay một nước.
+vùng cao|Miền đất ở trên núi cao, thường xa xôi và dân cư thưa.
+vùng đất|Một khoảng đất đai rộng có đặc điểm riêng về địa lý hay con người.
+vùng trời|Khoảng không phía trên một vùng đất hay vùng biển.
+vùng vẫy|Cựa quậy, quẫy đạp mạnh tay chân, như khi cố thoát ra hay đang bơi.
+vùng ven|Khu vực nằm sát rìa đô thị, chuyển tiếp giữa thành phố và nông thôn.
+vũng|Chỗ trũng nhỏ trên mặt đất có nước đọng lại.
+vũng bùn|Chỗ trũng đọng nước lẫn nhiều bùn đất, thường có sau mưa.
+vũng lầy|Chỗ đất bùn nhão, dễ lún; cũng chỉ hoàn cảnh xấu khó thoát ra.
+vụng về|Thiếu khéo léo, làm gì cũng lóng ngóng, dễ hỏng việc.
+vuông góc|Cắt nhau thành góc chín mươi độ, như cột nhà đứng trên mặt sàn.
+vuông vắn|Có hình gần vuông, ngay ngắn và cân đối.
+vuông vức|Có các cạnh thẳng, góc rõ, trông vuông thật đều đặn.
+vừa lòng|Thấy ưng ý, không còn gì phải phàn nàn.
+vừa miệng|Có độ mặn ngọt vừa phải, ăn thấy ngon, thường nói về món ăn.
+vừa nãy|Ngay trước đó một chút, cách lúc đang nói chưa bao lâu.
+vừa phải|Ở mức hợp lý, không thái quá cũng không thiếu hụt.
+vừa qua|Mới trôi qua, ngay trước khoảng thời gian đang nói tới.
+vừa sức|Hợp với sức lực hay khả năng, làm được mà không quá nặng nhọc.
+vừa vặn|Khớp đúng kích cỡ, không rộng không chật, thường nói về quần áo.
+vừa vừa|Ở mức chừng mực, không nhiều quá, thường nói khi nhắc ai đó dừng lại.
+vừa ý|Hợp với ý thích, đúng điều mình muốn chọn.
+vựa lúa|Vùng đất trồng lúa rộng lớn, làm ra nhiều gạo cho cả nước.
+vững chắc|Chắc chắn, khó lay chuyển hay đổ vỡ, thường nói về nền móng.
+vững vàng|Ổn định, không dao động trước khó khăn, thường nói về tinh thần.
+vươn mình|Phát triển mạnh và vượt lên, thường nói về đất nước hay một vùng.
+vươn tới|Cố gắng vượt lên để đạt được một mục tiêu cao hơn.
+vươn vai|Duỗi thẳng hai tay và người cho đỡ mỏi, thường khi mới ngủ dậy.
+vườn|Khoảng đất quanh nhà để trồng rau, hoa hay cây ăn quả.
+vườn bách thảo|Nơi trồng và giữ gìn nhiều loài cây để nghiên cứu và tham quan.
+vườn bách thú|Khu nuôi nhiều loài động vật hoang dã để công chúng ngắm và tìm hiểu.
+vườn cây|Khu đất trồng nhiều cây, thường là cây ăn quả.
+vườn hoa|Khu đất trồng nhiều hoa và cây cảnh, thường làm chỗ dạo chơi.
+vườn hồng|Khu vườn trồng nhiều khóm hoa hồng để ngắm hay bán.
+vườn quốc gia|Khu rừng rộng do nhà nước bảo tồn để giữ gìn cây cối, muông thú.
+vườn rau|Mảnh đất trồng các loại rau để ăn trong nhà hay đem bán.
+vườn thú|Cách gọi thông thường của khu nuôi thú hoang cho khách đến xem.
+vườn trẻ|Nơi nhận trông giữ và chăm sóc trẻ rất nhỏ khi cha mẹ đi làm.
+vương miện|Mũ đội đầu sang trọng gắn vàng ngọc, dấu hiệu của vua hay hoa hậu.
+vương vãi|Rơi rớt mỗi nơi một ít, nằm rải rác khắp chỗ.
+vướng mắc|Điều khó khăn, trở ngại khiến công việc chưa giải quyết được.
+vướng víu|Bị cản trở, không gọn gàng, gây khó cử động hay đi lại.
+vượt|Đi qua chỗ khó hoặc tiến lên trước người khác, vật khác.
+vượt bậc|Tiến bộ hay tăng lên rất nhanh, hơn hẳn mức trước đó.
+vượt qua|Đi qua được chỗ khó khăn, trở ngại hay thử thách.
+vượt trội|Hơn hẳn những người hay thứ khác cùng loại.
+vứt bỏ|Ném đi, bỏ hẳn những thứ không cần dùng nữa.
+xa cách|Phải sống xa nhau, ít khi được gặp gỡ, gần gũi.
+xa hoa|Sang trọng, tốn kém quá mức trong ăn tiêu và hưởng thụ.
+xa lạ|Chưa từng quen biết hay gặp gỡ, nên thấy lạ lẫm, cách biệt.
+xa lánh|Cố ý tránh không gần gũi, không qua lại với ai.
+xa lắc|Xa lắm, thường nói nhấn mạnh trong lời nói hằng ngày.
+xa lộ|Đường lớn và rộng cho xe chạy nhanh, nối giữa các thành phố.
+xa tít|Ở rất xa, tận chỗ mắt nhìn khó thấy rõ.
+xa vời|Quá xa, khó đạt tới, thường nói về ước mơ hay mục tiêu.
+xa xa|Ở hơi xa, cách một khoảng vừa phải trong tầm nhìn.
+xa xăm|Xa đến mờ mịt, khó hình dung về không gian hay thời gian.
+xa xỉ|Đắt đỏ, vượt quá nhu cầu thông thường, thường nói về đồ dùng.
+xa xôi|Cách rất xa về đường đi, khó đến được, thường nói về vùng đất.
+xa xưa|Thuộc thời rất lâu về trước.
+xà bông|Chất tạo bọt dùng tắm rửa, giặt giũ, cách gọi ở miền Nam.
+xà ngang|Thanh nằm ngang nối hai cột, như trên khung thành hay giàn tập thể dục.
+xà phòng|Chất tẩy rửa dạng bánh hay nước, tạo bọt khi hòa nước, để tắm giặt.
+xả láng|Thoải mái hết mình, không giới hạn, thường nói về ăn chơi.
+xã hội|Cộng đồng người sống chung, gắn bó qua các quan hệ và quy tắc.
+xá xíu|Món thịt lợn tẩm ướp đậm vị ngọt rồi nướng hay quay, có màu đỏ.
+xác định|Tìm ra hay nêu rõ một điều cho cụ thể và chắc chắn.
+xác minh|Kiểm tra lại để biết một thông tin có đúng sự thật hay không.
+xác nhận|Chính thức công nhận hay khẳng định một điều là đúng.
+xác thực|Kiểm tra để chứng tỏ danh tính hay thông tin là thật, thường trên mạng.
+xách|Cầm quai hay dây của vật rồi nhấc lên mang đi bằng một tay.
+xách tay|Đủ gọn để cầm theo; cũng nói hàng có người mang từ nước ngoài về.
+xám xịt|Có màu xám tối và u ám, thường nói về bầu trời.
+xanh|Có màu của lá cây hoặc màu của bầu trời không mây.
+xanh biếc|Xanh trong và tươi đậm, thường nói về nước, trời hay cây lá.
+xanh dương|Màu xanh đậm như màu nước biển sâu.
+xanh lam|Màu xanh pha chút tím, nằm giữa xanh lục và chàm trong cầu vồng.
+xanh lè|Xanh gắt, nhìn biết ngay còn non, chưa chín, thường nói về trái cây.
+xanh lơ|Màu xanh nhạt và sáng như bầu trời quang mây.
+xanh lục|Màu xanh của lá cây tươi.
+xanh mướt|Xanh tươi, mượt mà và óng ả, thường nói về cây cỏ, lúa non.
+xanh ngắt|Xanh đậm và thăm thẳm, thường nói về bầu trời rộng.
+xanh tốt|Phát triển mạnh, lá nhiều và xanh, thường nói về cây cối.
+xanh tươi|Mơn mởn, căng nhựa sống, không chút héo úa, thường nói về cỏ cây.
+xanh xanh|Ngả màu xanh nhẹ, không đậm.
+xao xuyến|Lòng rung lên bồi hồi, khó dứt, thường khi nhớ ai hay gặp cảnh đẹp.
+xào nấu|Lo việc bếp núc, nấu nướng các món ăn hằng ngày.
+xào xạc|Tiếng lá khô hay cành lá cọ vào nhau sột soạt khi có gió.
+xáo trộn|Làm thay đổi, đảo lộn trật tự vốn có.
+xảy ra|Diễn ra, bỗng nhiên có, thường nói về sự việc hay sự cố.
+xăng|Nhiên liệu lỏng dễ cháy lấy từ dầu mỏ, dùng chạy xe máy, ô tô.
+xăng dầu|Tên gọi chung các nhiên liệu lỏng chế từ dầu mỏ để chạy máy.
+xập xệ|Cũ nát, sắp hỏng, thường nói về nhà cửa.
+xập xình|Tiếng nhạc to và dồn dập theo nhịp trống, như ở sàn nhảy.
+xấu hổ|Ngượng ngùng, thấy mất mặt khi làm sai hay bị chú ý.
+xấu mặt|Mất thể diện trước người ngoài, do mình hay người nhà làm điều dở.
+xây dựng|Dựng nên nhà cửa, cầu đường; cũng chỉ gây dựng sự nghiệp, tổ chức.
+xây đắp|Góp công sức gây dựng từng chút, thường nói về đất nước hay sự nghiệp.
+xe ba bánh|Loại xe chạy trên ba bánh, thường để chở hàng hoặc cho người khuyết tật.
+xe ba gác|Xe chở hàng có ba bánh và thùng phẳng, do người đạp hay gắn máy.
+xe ben|Xe tải có thùng tự nâng lên để đổ đất đá, vật liệu.
+xe bò|Cỗ xe do bò kéo, thường để chở lúa, rơm ở nông thôn.
+xe chở dầu|Xe tải có bồn lớn hình trụ để chở xăng dầu.
+xe chữa cháy|Xe chuyên dụng, thường sơn đỏ, có bồn nước, vòi và thang để dập lửa.
+xe con|Ô tô cỡ nhỏ chở người, thường chỉ có vài chỗ ngồi.
+xe cộ|Đủ thứ xe ngoài đường nói chung, từ xe đạp, xe máy tới ô tô.
+xe cút kít|Xe đẩy tay một bánh, có thùng và hai càng, dùng chở đất, vật liệu.
+xe du lịch|Ô tô chở người, thường dùng cho gia đình hay đoàn đi tham quan.
+xe đạp|Xe hai bánh có bàn đạp, người ngồi đạp cho xe chạy.
+xe đạp nước|Thuyền vui chơi trên hồ, người ngồi đạp cho guồng quay để đi.
+xe đẩy|Xe nhỏ có bánh, dùng tay đẩy để chở đồ hay em bé.
+xe đẩy hàng|Xe khung có bánh để đẩy hàng hóa, thường thấy ở siêu thị hay kho.
+xe điện ngầm|Tàu chạy bằng điện trong đường hầm dưới lòng đất ở thành phố.
+xe đò|Xe chở khách đi tỉnh xa, đón trả dọc đường, cách gọi ở miền Nam.
+xe gắn máy|Cách gọi đầy đủ, trang trọng của xe máy, xe hai bánh có động cơ.
+xe hơi|Ô tô loại nhỏ, chở vài người, có mui kín và bốn bánh.
+xe kéo|Xe hai bánh do người chạy phía trước kéo đi, chở khách thời xưa.
+xe khách|Ô tô nhiều chỗ ngồi chở người đi lại theo tuyến, thường bán vé.
+xe lăn|Ghế có bánh xe để người khuyết tật hay ốm yếu di chuyển.
+xe lu|Xe có trục lăn to và nặng, dùng để cán phẳng mặt đường.
+xe lửa|Đoàn toa nối nhau do đầu máy kéo, chạy trên đường ray.
+xe máy|Xe hai bánh chạy bằng động cơ, dùng đi lại hằng ngày.
+xe mô tô|Xe hai bánh có động cơ, thường cỡ lớn và máy khỏe.
+xe ngựa|Xe có bánh do một hay vài con ngựa kéo, chở người hay hàng.
+xe nôi|Xe đẩy có lòng như chiếc nôi để em bé nằm khi đưa đi dạo.
+xe ôm|Xe máy chở khách lấy tiền, khách ngồi sau người lái.
+xe rác|Xe chuyên thu gom và chở rác đi đổ.
+xe tải|Ô tô chuyên chở hàng, phía sau có thùng hay sàn để chất hàng.
+xe tay ga|Xe máy không cần sang số, chỉ vặn ga, có chỗ để chân phẳng.
+xe tốc hành|Xe khách chạy nhanh, ít dừng đón trả khách dọc đường.
+xe trượt tuyết|Xe không bánh, có thanh trượt bên dưới, đi trên băng tuyết.
+xe ủi đất|Xe chạy xích có lưỡi thép lớn phía trước để san đẩy đất đá.
+xe xích lô|Xe ba bánh đạp chân, khách ngồi ghế phía trước, người đạp ngồi sau.
+xem nhẹ|Coi thường, không đánh giá đúng tầm quan trọng của điều gì.
+xem xét|Cân nhắc kỹ từng mặt trước khi đánh giá hay đưa ra quyết định.
+xen kẽ|Cài lẫn vào nhau theo lượt, cái này rồi tới cái kia.
+xen lẫn|Có cả cái này lẫn cái kia cùng lúc, thường nói về cảm xúc.
+xẻng|Lưỡi sắt rộng, lòng hơi trũng, tra vào cán dài để xúc đất, cát, than.
+xê dịch|Chuyển chỗ đi một chút, lệch khỏi vị trí cũ.
+xế chiều|Lúc chiều muộn khi nắng đã nghiêng; cũng ví quãng cuối đời, lúc tuổi già.
+xếp bằng|Ngồi trên sàn với hai chân gập lại, bắt chéo trước người.
+xếp đặt|Bố trí, sắp đặt mọi thứ theo trật tự hay kế hoạch.
+xếp hàng|Đứng nối đuôi nhau thành hàng để chờ đến lượt.
+xếp loại|Đánh giá rồi chia vào các loại, hạng theo tiêu chuẩn.
+xi măng|Bột phản ứng với nước mà hóa cứng, chất gắn kết trong vữa, bê tông.
+xi nhan|Đèn báo rẽ nhấp nháy trên xe, bật lên để báo hướng sắp rẽ.
+xì dầu|Nước chấm nâu đen, mặn, lên men từ đậu nành, cách gọi ở miền Bắc.
+xì xào|Tiếng nhiều người bàn tán nhỏ, nghe rì rầm không rõ.
+xì xầm|Nói thầm với nhau, người ngoài nghe không rõ lời.
+xí muội|Quả mơ hay mận ướp đường muối rồi phơi khô, vị chua ngọt mặn.
+xích|Dây gồm các mắt kim loại móc nhau, như ở xe đạp, ổ khóa cổng.
+xích đạo|Đường vòng tưởng tượng ngang giữa Trái Đất, tách bán cầu bắc với nam.
+xích đu|Ghế hay tấm ván treo bằng dây, ngồi lên để đu qua lại.
+xích lô|Phương tiện chở khách ba bánh do người đạp, thường đưa khách dạo phố.
+xích mích|Bất hòa, va chạm nhỏ giữa người với người.
+xiếc|Môn nghệ thuật biểu diễn nhào lộn, ảo thuật, thú làm trò.
+xiên|Lệch chéo, không thẳng đứng; cũng chỉ việc dùng que nhọn đâm xuyên qua.
+xiêu lòng|Bị thuyết phục hay cảm động mà đổi ý, thuận theo.
+xiêu vẹo|Nghiêng ngả, lệch lạc, không còn đứng thẳng.
+xin lỗi|Nói nhận lỗi, mong người khác bỏ qua cho điều mình làm sai.
+xin phép|Hỏi ý người có quyền để được cho phép làm điều gì.
+xin việc|Nộp hồ sơ, đề nghị được nhận vào làm việc.
+xin xỏ|Nài nỉ xin người khác cho mình điều gì, có ý hạ mình.
+xinh|Dễ thương, ưa nhìn, thường nói về khuôn mặt hay vật nhỏ nhắn.
+xinh đẹp|Có vẻ ngoài đẹp và dễ mến.
+xinh gái|Đẹp về khuôn mặt và dáng vẻ, nói về con gái.
+xinh trai|Có gương mặt sáng sủa, dễ thương, thường dùng khen con trai nhỏ tuổi.
+xinh tươi|Xinh xắn và tươi tắn, rạng rỡ.
+xinh xắn|Nhỏ nhắn, dễ thương và ưa nhìn.
+xinh xinh|Hơi xinh, có nét dễ thương nhẹ nhàng.
+xíu mại|Món thịt băm vo viên, nấu sốt cà chua, thường ăn với bánh mì.
+xoa bóp|Dùng tay xoa, ấn, nắn trên cơ thể cho đỡ mỏi đau.
+xoa dịu|Làm cho nỗi đau, sự căng thẳng hay giận dữ lắng xuống.
+xoài|Cây ăn quả nhiệt đới, quả hình bầu dục, chín vàng, thịt ngọt thơm.
+xoay|Quay quanh một trục hay đổi hướng sang phía khác.
+xoay chuyển|Làm thay đổi hẳn tình thế hay chiều hướng của sự việc.
+xoay quanh|Quay vòng chung quanh một điểm; cũng nói câu chuyện bàn quanh một chủ đề.
+xoắn|Vặn chặt, quấn các sợi vào nhau thành vòng như dây thừng.
+xoắn ốc|Có hình vòng cuộn dần ra hay vào, giống vỏ ốc.
+xói mòn|Bị nước, gió cuốn trôi dần lớp đất đá; cũng chỉ sự hao mòn dần.
+xóm giềng|Những người sống quanh nhà mình, cùng xóm, cùng ngõ.
+xóm làng|Các xóm, làng ở nông thôn và người dân sống ở đó.
+xong|Đã làm hết, kết thúc một việc.
+xong xuôi|Hoàn tất mọi việc một cách êm ổn, không còn vướng gì.
+xoong chảo|Các loại nồi, chảo dùng để nấu nướng trong bếp nói chung.
+xoong nồi|Đồ đun nấu bằng kim loại có lòng sâu, nói chung trong bếp.
+xót xa|Đau đớn, thương cảm sâu sắc trong lòng.
+xô bồ|Ồn ào, chen chúc và lộn xộn, đủ hạng người, đủ thứ chuyện.
+xô đẩy|Chen lấn, đẩy nhau trong đám đông.
+xộc xệch|Lệch lạc, không ngay ngắn, thường nói về quần áo.
+xối xả|Dồn dập, mạnh và liên tục, thường nói về mưa hay nước đổ.
+xôn xao|Ồn ào, náo động vì nhiều người bàn tán về một chuyện.
+xông pha|Dấn thân vào nơi khó khăn, nguy hiểm mà không ngại ngần.
+xông xáo|Năng nổ, hăng hái lao vào mọi việc.
+xu hướng|Chiều hướng phát triển hay thay đổi chung của sự việc.
+xù xì|Sần sùi, không nhẵn, thường nói về vỏ cây hay da.
+xua đuổi|Đuổi đi, không cho lại gần.
+xuân|Mùa đầu năm, cây đâm chồi, có Tết; cũng chỉ tuổi trẻ đời người.
+xuất bản|Đưa sách, báo ra phát hành, bản in hay điện tử, tới tay người đọc.
+xuất chúng|Tài năng hơn hẳn người thường.
+xuất hiện|Hiện ra, có mặt để người khác thấy.
+xuất phát|Bắt đầu lên đường rời một nơi để đi tới nơi khác.
+xuất sắc|Giỏi, đạt kết quả vượt mức thông thường.
+xuất thân|Nguồn gốc gia đình, tầng lớp mà một người sinh ra.
+xuất xứ|Nơi sản xuất hay nguồn gốc ban đầu của hàng hóa.
+xúc động|Cảm xúc dâng lên mạnh trước một điều gì đó.
+xúc xích|Món thịt xay nhồi vào vỏ ruột thành thanh dài, thường nướng hay chiên.
+xuôi|Theo cùng chiều dòng nước chảy hay chiều đi tới.
+xuôi dòng|Đi theo chiều nước chảy của sông.
+xuồng cứu sinh|Thuyền nhỏ mang theo trên tàu lớn, dùng để cứu người khi gặp nạn.
+xuồng máy|Thuyền nhỏ có gắn động cơ để chạy trên sông nước.
+xuống cấp|Hỏng dần, kém đi theo năm tháng, như nhà cửa, đường sá lâu không sửa.
+xuống dòng|Chuyển sang viết tiếp ở dòng mới, như khi bắt đầu một đoạn văn.
+xuống dốc|Đi xuống chỗ dốc; cũng chỉ sự sa sút, ngày càng tệ đi.
+xuống nước|Chịu nhún nhường, nhượng bộ trước người khác.
+xử sự|Hành động, đối xử với người khác trong một tình huống nào đó.
+xứ sở|Vùng đất, quốc gia, nơi sinh ra và gắn bó.
+xưa kia|Thời gian đã qua lâu, ngày trước.
+xưa nay|Từ trước đến giờ, suốt một thời gian dài.
+xưng hô|Chọn cách gọi mình và gọi đối phương khi nói chuyện, như anh, em, cháu.
+xứng|Phù hợp, ngang tầm với nhau.
+xứng đáng|Đáng được nhận vì công sức hay phẩm chất của mình.
+xứng đôi|Hợp nhau, cân xứng khi thành một cặp, thường nói về vợ chồng.
+xước|Bị trầy một vệt nhỏ trên bề mặt da hay đồ vật.
+xương|Mảnh cứng trắng ngà dưới lớp thịt, ghép thành bộ khung đỡ cơ thể.
+xương bả vai|Xương dẹt hình tam giác ở phía sau vai.
+xương cá|Phần xương nhỏ nhọn trong thân con cá.
+xương ống|Xương dài và rỗng ở chân lợn, bò, thường dùng hầm nước dùng.
+xương rồng|Cây có thân mọng nước, nhiều gai, sống được ở nơi khô hạn.
+xương sống|Chuỗi đốt xương dọc giữa lưng, nâng đỡ cơ thể.
+xương sườn|Các xương cong ôm quanh lồng ngực.
+xương xẩu|Gầy gò, lộ rõ xương, thường nói về thân hình.
+y chang|Giống hệt, không khác chút nào, thường dùng trong khẩu ngữ miền Nam.
+y hệt|Giống nhau đến mức không phân biệt được.
+y nguyên|Còn đúng như ban đầu, không suy suyển hay đổi khác chút nào.
+ý chí|Sức mạnh tinh thần giúp kiên trì theo đuổi mục tiêu.
+ý định|Điều đã tính trong đầu, dự định sẽ làm.
+ý kiến|Điều mình nghĩ, nhận xét hay đề xuất về một vấn đề.
+ý muốn|Điều trong lòng mong được làm hay được có.
+ý nghĩ|Điều chợt hiện ra hay đang được nghĩ tới trong đầu.
+ý nghĩa|Nội dung, giá trị hay điều mà một sự vật, lời nói muốn diễn đạt.
+ý thích|Điều mình thích, sở thích riêng.
+ý thức|Sự nhận biết rõ việc mình làm và trách nhiệm của mình với chung quanh.
+ý tưởng|Suy nghĩ mới nảy ra về một việc cần làm hay cách làm.
+yên ả|Êm đềm, tĩnh lặng, không có sóng gió.
+yên ắng|Im ắng, vắng hẳn tiếng động, gợi cảm giác lặng lẽ.
+yên bình|Bình yên, không có chiến tranh hay xáo động.
+yên lành|Bình yên, không gặp điều gì không may.
+yên lặng|Không nói gì, không phát ra tiếng động.
+yên lòng|Thấy lòng nhẹ nhõm, không còn lo lắng.
+yên ổn|Ổn định, không có xáo trộn hay rắc rối.
+yên sau|Chỗ ngồi sau lưng người lái xe máy, xe đạp, để chở thêm người.
+yên tâm|Tin chắc mọi việc ổn nên không lo nghĩ.
+yên thân|Được để yên, không bị ai quấy rầy hay gây chuyện.
+yên tĩnh|Không có tiếng ồn, tạo cảm giác dễ chịu, thường nói về nơi chốn.
+yên vị|Đã ngồi hay ở đúng chỗ của mình, ổn định.
+yên vui|Bình yên và vui vẻ.
+yến mạch|Loại ngũ cốc hạt dẹt, thường nấu cháo hay ăn sáng với sữa.
+yêu cầu|Đề nghị, đòi hỏi người khác phải làm điều gì.
+yêu dấu|Được yêu thương, trân trọng hết lòng.
+yêu đời|Lạc quan, thấy cuộc sống đáng sống và vui vẻ.
+yêu đương|Có quan hệ tình yêu nam nữ, hẹn hò với nhau.
+yêu mến|Có tình cảm quý mến, thân thiết với ai đó.
+yêu thích|Rất thích, có cảm tình với một thứ hay việc gì.
+yêu thương|Quý mến và quan tâm hết lòng đến người khác.
+yếu đuối|Thiếu sức lực hay bản lĩnh, dễ mủi lòng, dễ gục ngã trước khó khăn.
+yếu kém|Thấp kém về năng lực hay chất lượng, không đạt yêu cầu.
+yếu ớt|Rất yếu, không có sức, thường nói về giọng nói hay cơ thể.
+yếu thế|Ở vào vị trí bất lợi, kém hơn đối phương.
+yếu tố|Thành phần hay điều kiện góp phần tạo nên một sự việc.
+yếu xìu|Rất yếu, uể oải, không còn chút hơi sức nào.
+yoga|Môn rèn luyện gốc Ấn Độ, kết hợp tư thế, hơi thở và tĩnh tâm.
+```
+
+## 11. Danh sách dự phòng (chưa phân tích)
+
+**Trạng thái: dự phòng, chưa phân tích.** 205 từ còn lại trong rổ dự phòng của kịch bản P0 sau khi thay 127 từ chính ở [mục 9.1](#91-câu-hỏi-cho-chủ-dự-án-thiếu-dự-phòng-sau-lượt-viết-lại-cuối) (SHA-256 cột từ `f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b`). Các từ này đã qua cổng tự động và chấm đôi P4, nhưng:
+
+- không được phát hành và không có trong `index.html` hay `thong-tin.html`;
+- chưa được phân tích lại theo quyết định 10: chưa xét ngăn hạn mức, chưa đủ 300 suất như C13 cũ;
+- chỉ 168 từ có câu giải nghĩa đạt D6/D7 ([`p7-v4-du-phong-168-co-nghia-cho-duyet.tsv`](analyzing-tools/ho-so/unified/p7-v4-du-phong-168-co-nghia-cho-duyet.tsv)), 37 từ chưa có giải nghĩa ([`p7-v3-c13-hoa-astra-tu-chua-viet.tsv`](analyzing-tools/ho-so/unified/p7-v3-c13-hoa-astra-tu-chua-viet.tsv)).
+
+Trước khi dùng một từ dự phòng để thay một từ chính, cần chạy lại các bước P6 (ngăn hạn mức), P7 (giải nghĩa sạch, D6, D7) và các kiểm ở mục 4.6.
+
+```text
+áng chừng
+ăn bốc
+ăn nhịp
+ăn tiệm
+ăn trầu
+bâng quơ
+bất chấp
+bất kể
+bèo bọt
+bên dưới
+bên kia
+bí bách
+biết bao
+biết đâu
+bịn rịn
+bụng dạ
+buồn thiu
+cả nghĩ
+chán phèo
+chắc
+chắc hẳn
+chẳng hạn
+chấp nhặt
+chễm chệ
+chín nhừ
+chính cống
+cho nên
+chọc lét
+chốc nữa
+chung tình
+chút
+có điều
+coi như
+cờ vây
+cùng lúc
+cụt hứng
+cười gượng
+cười mỉm
+cửu chương
+dài ngoằng
+dần dần
+dễ ợt
+dĩ nhiên
+dịu hiền
+dù sao
+đáng lẽ
+đáp số
+đắc ý
+đầy năm
+đầy tháng
+đầy tràn
+đến cùng
+đỏ chót
+đon đả
+đôi lúc
+đồng thời
+đột nhiên
+đời xưa
+đủng đỉnh
+đưa đò
+đương nhiên
+gặp thời
+giá mà
+giông giống
+giở giọng
+giở quẻ
+gợi chuyện
+hàng loạt
+hay dở
+hì hụi
+hình như
+học tủ
+hóng chuyện
+ít khi
+ỉu xìu
+khắp
+khó nghĩ
+không ngờ
+không những
+không sao
+khúc khuỷu
+khuya khoắt
+lạ đời
+lạ tai
+làm cỗ
+làm ơn
+lần lượt
+lẫn nhau
+lẽ ra
+leo dây
+leo lét
+loáng thoáng
+loằng ngoằng
+lỗ lãi
+lỗi hẹn
+lộp bộp
+lộp độp
+lời lỗ
+lu bù
+mang máng
+mau mắn
+mấp mé
+méo xệch
+mệt lả
+miễn là
+mỏi nhừ
+mọi khi
+mon men
+mong nhớ
+mỏng dính
+mỏng tanh
+một khi
+mụ mị
+năm kia
+nằm ườn
+nắn nót
+nặng cân
+nặng trịch
+nếu như
+ngả nghiêng
+ngay thật
+ngắn ngủn
+nghe nói
+ngoại trừ
+ngóng trông
+ngụp
+ngược lại
+ngượng nghịu
+nhá nhem
+nhão nhẹt
+nhão nhoẹt
+nhảy sào
+nhân dịp
+nhất thiết
+nhìn chung
+nhưng mà
+nín thinh
+no ấm
+nói chung
+non choẹt
+nóng ruột
+nước nôi
+oái oăm
+phải chăng
+phất phơ
+phép trừ
+qua quýt
+quả là
+quá mức
+quanh
+ra sao
+rơm rớm
+rướn
+sáng trưng
+sau đây
+sẩy chân
+số âm
+sớm tối
+suốt
+tạnh ráo
+tấn tới
+tẻ ngắt
+thả sức
+thay lông
+thẳng đơ
+thẳng tính
+thật ra
+thế mà
+thế thì
+thỉnh thoảng
+thụp
+thực ra
+tía lia
+tình cờ
+tính nết
+tóm lại
+tối mù
+trẻ măng
+tròn vo
+tròng trành
+trở lên
+trừ khi
+trước hết
+trước tiên
+tuổi ta
+tuổi xanh
+tức là
+tương đối
+ủn ỉn
+ước gì
+vào khoảng
+vậy mà
+vậy nên
+vậy thì
+ve vẩy
+vô tình
+vừa mới
+vừa rồi
+xăng xái
+xầm xì
+xin chào
+xoành xoạch
+xúng xính
+xuống cân
+y như
+```

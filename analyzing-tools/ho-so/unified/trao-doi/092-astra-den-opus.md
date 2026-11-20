@@ -1,0 +1,1 @@
+Khi cập nhật tiến độ sau cờ P6, xin sửa luôn câu bản 18:40 “126 ... mà HND không có”: mẫu L3 có 126 đầu mục được Wiktionary chứng thực, **111 ngoài cả bốn bộ HND, 15 có thêm HND** (l3-lap-ro-astra.json), không phải tất cả 126. Biên v2 là 55; L3b 48 và L2D 99 chỉ chuẩn bị, không chấm/không đưa vào. Tôi không sửa repo sau DOC.

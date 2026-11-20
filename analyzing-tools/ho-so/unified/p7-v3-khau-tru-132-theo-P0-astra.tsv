@@ -1,0 +1,133 @@
+khoa	tu	nhan_goc	cong	dot	nguoi_ky	ly_do
+nganhang	ngân hàng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+khachhang	khách hàng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+coquan	cơ quan	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+bien	biển	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+contrung	côn trùng	OK	D7_CUOI:KIEN_THUC	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Phân biệt ba vùng lớn của cơ thể với số đốt thực tế, không thể gọi toàn thân chỉ có ba đốt.
+cogiao	cô giáo	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+thaythe	thay thế	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+chongoi	chỗ ngồi	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+motminh	một mình	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+bimat	bí mật	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+muadong	mùa đông	OK	D7_CUOI:KIEN_THUC	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Vị trí cuối năm và hiện tượng cây rụng lá không đúng chung cho hai bán cầu, các vùng khí hậu.
+taudien	tàu điện	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+cuthe	cụ thể	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+apdung	áp dụng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+vanhanh	vận hành	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+vieclam	việc làm	OK	D7_CUOI:HEP	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Đã lại giới hạn vào việc nhận lương, loại mất trường hợp phổ thông tự làm để kiếm sống.
+chetao	chế tạo	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+lucluong	lực lượng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+chia	chia	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+banhngot	bánh ngọt	OK	D7_CUOI:HEP	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Loại rộng gồm nhiều bánh không nướng, không xốp; đang giới hạn vào một nhóm bánh cụ thể.
+danhrang	đánh răng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+xedien	xe điện	OK	D7_CUOI:HEP	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Còn loại lấy điện qua đường dây, không dùng bình sạc. Lỗi v1 đã tái xuất.
+bayto	bày tỏ	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+chuyendoi	chuyển đổi	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+ngangon	ngắn gọn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+minh	mình	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+tuongduong	tương đương	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+giangvien	giảng viên	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+coimo	cởi mở	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+voihoasen	vòi hoa sen	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+lucdia	lục địa	OK	D7_CUOI:KIEN_THUC	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Trong cách phân biệt lục địa với châu lục ở trường học, châu Á không phải một khối đất liền tách khỏi châu Âu.
+votay	vỗ tay	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+namtay	nắm tay	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+xuyen	xuyên	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+dovat	đồ vật	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+lamsao	làm sao	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+cotsong	cột sống	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+batdong	bất động	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+daynui	dãy núi	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+cuakinh	cửa kính	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+truytim	truy tìm	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+kich	kịch	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+thuongxuyen	thường xuyên	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+ngoaihinh	ngoại hình	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+chamchu	chăm chú	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+lamvuon	làm vườn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+luyen	luyện	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+trunghop	trùng hợp	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+cota	cô ta	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+tieuhoc	tiểu học	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+xalach	xà lách	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+condau	con dấu	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+emai	êm ái	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+nhaymat	nháy mắt	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+chade	cha đẻ	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+nangtien	nàng tiên	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+nghin	nghìn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+ngon	ngón	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+mong	móng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+tamsu	tâm sự	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+loigiai	lời giải	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+danca	dân ca	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+chauluc	châu lục	OK	D7_CUOI:KIEN_THUC	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không phải mọi châu đều gồm nhiều nước; châu Nam Cực là phản ví dụ.
+matkhac	mặt khác	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+congsuc	công sức	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+voso	vỏ sò	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+anhhai	anh hai	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+phuongdong	phương đông	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+dubi	dự bị	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+thomay	thợ may	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+ongcu	ông cụ	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+bomon	bộ môn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+apphich	áp phích	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+nguonsang	nguồn sáng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+bachkim	bạch kim	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+cauvuot	cầu vượt	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+tinhthanh	tỉnh thành	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+vuong	vuông	OK	D7_CUOI:KIEN_THUC	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Đặc trưng là góc vuông, không phải góc thẳng; hai thuật ngữ hình học khác nhau.
+dualeo	dưa leo	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+baotu	bao tử	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+bieucam	biểu cảm	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+chieurong	chiều rộng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+goma	gò má	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+daynit	dây nịt	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+conde	con đẻ	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+longtrong	long trọng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+duongtron	đường tròn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+tunhu	tự nhủ	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+giathanh	giá thành	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+cotbuom	cột buồm	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+nhipnhang	nhịp nhàng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+giaykhen	giấy khen	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+lucgiac	lục giác	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+khopgoi	khớp gối	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+tucngu	tục ngữ	OK	D7_CUOI:HEP	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Có câu tục ngữ không có vần, không đặt hiệp vần như điều kiện bắt buộc.
+tronhoc	trốn học	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+moneo	mỏ neo	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+giayan	giấy ăn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+khoanhtay	khoanh tay	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+chonhoi	chồn hôi	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+conlac	con lắc	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+dautam	dâu tằm	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+truyenmieng	truyền miệng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+cadao	ca dao	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+maimoi	mai mối	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+chanbun	chắn bùn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+banhphong	bánh phồng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+tuoidoi	tuổi đời	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+thuvai	thủ vai	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+nhaycao	nhảy cao	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+chophien	chợ phiên	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+chuhoa	chữ hoa	OK	D7_CUOI:KIEN_THUC	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Cỡ của chữ không quyết định nó viết hoa hay viết thường; lỗi trọng yếu của v1 tái xuất.
+lenchuc	lên chức	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+chimen	chim én	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+mangca	mang cá	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+ngheu	nghêu	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+ghemay	ghế mây	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+ghephu	ghế phụ	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+nanhoa	nan hoa	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+changvang	chạng vạng	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+latdat	lật đật	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+cudau	củ đậu	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+cachuon	cá chuồn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+daunga	dấu ngã	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+congon	công ơn	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+mienman	miên man	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+vayca	vây cá	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+lamlo	làm lơ	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+champhay	chấm phẩy	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6C
+xoatay	xoa tay	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B
+ancuoi	ăn cưới	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B;D6C
+lunglo	lửng lơ	OK	D6_CUOI	P7_V3_P0_KICH_BAN_CHUA_PHAT_HANH	Astra+Opus	Không nhận câu v3 dưới P0; mã D6B

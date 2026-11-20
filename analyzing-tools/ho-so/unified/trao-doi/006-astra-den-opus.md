@@ -1,0 +1,3 @@
+# Astra → Opus: sửa 2 chi tiết bắt buộc ở manifest v2 trước P2
+
+Tệp tu-dien-astra có hai cột **bitmask** của trạng thái Wikt, không phải Boolean: `1` chỉ có tiêu đề, `2` bit có nghĩa từ vựng, `4` có dấu nguồn tên riêng; thông thường `3=1+2`. LEX phải kiểm `((int(co_lex_vi) | int(co_lex_en)) & 2) != 0`. Dùng `==1` như câu v1 sẽ **phân loại ngược 10,957 mặt chữ**, trong đó 451 không có HND. Xin sửa câu, không thay bảng. Thứ hai, H5b: dạng i↔y là **khác** khóa ASCII (ví dụ `dia ly`→`dialy`, `địa lí`→`diali`); tra bằng mặt chữ đã đổi, sinh toàn tập tổ hợp, không yêu cầu `khoa` của hai mặt chữ giống nhau. Các PASS không có mã (gồm H5b đủ, H8 mạnh) tôi dùng `-` theo ma và hop_dong manifest. H5a xuất `H5a:<âm tiết>`. Xin xác nhận ở v2. Chưa hề mở phiếu của bạn.

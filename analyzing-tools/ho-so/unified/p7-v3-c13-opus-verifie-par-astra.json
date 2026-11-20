@@ -1,0 +1,79 @@
+{
+  "che_do_du_phong": "chat",
+  "tep_chon_P5": "ket-qua-chon.tsv",
+  "pool": 10001,
+  "ngan_pool": {
+    "OK_N": 7827,
+    "OK_F": 313,
+    "R1_N": 1839,
+    "R1_F": 22
+  },
+  "chinh": 7776,
+  "chinh_F": 77,
+  "chinh_R1": 0,
+  "ngan_chinh": {
+    "OK_N": 7699,
+    "OK_F": 77
+  },
+  "du_phong": 205,
+  "ngan_du_phong": {
+    "OK_N": 128,
+    "OK_F": 77
+  },
+  "gan_suat": {
+    "OK_N->OK_N": 128,
+    "OK_F->OK_F": 77
+  },
+  "dat_C13": false,
+  "chi_bao": {
+    "M1_C_cong_H": 0.7866666666666666,
+    "M1_lop_mau": {
+      "C": 103,
+      "K": 63,
+      "H": 133,
+      "F": 1
+    },
+    "M1_can_duoi_tren": [
+      221,
+      274
+    ],
+    "M1_lech_ma_goc": 57,
+    "M2_ba_khoi": 263,
+    "M3_trung_binh_chu": 6.797839506172839,
+    "M4_ngoai_le_H8": 0,
+    "M5_nhieu_nhat": 57,
+    "M5_am_tiet": [
+      "bánh",
+      "nhà"
+    ],
+    "M1_mau_sha": "cefdf33894bd75d660ebba2ce0170a6ed3bea184393e9ccf8c2799844eaee476"
+  },
+  "sha_danh_sach_chon": "3609c88ff436708857ac323189f81b5bb9b31d31ea6f0a8924cc02bc61c0e713",
+  "sha_du_phong": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
+  "note": "Chạy bộ Opus bởi Astra, không có --ghi. Mô phỏng hiện hành dưới P0 sau hòa 122. Không ghi đè danh sách hiện hành.",
+  "sha_source_independante": "7bf91a475fad18dcc61dfcb0979269c5482571daa4e13319523403c2ee80a78c",
+  "sha_khau_tru_scenario": "9c746d973ecf68ce3927fcfe075528e611e19f57306af3b3b4399507c066a42b",
+  "commande": [
+    "-B",
+    "-X",
+    "utf8",
+    "..\\opus\\p4\\p6_opus.py",
+    "--du-phong",
+    "chat",
+    "--them",
+    "l2-nhan-sau-H9-opus.tsv",
+    "l2b-nhan-sau-H9-opus.tsv",
+    "l2c-nhan-sau-H9-opus.tsv",
+    "l3-nhan-sau-H9-opus.tsv",
+    "--dem-them",
+    "l2-ung-vien.tsv",
+    "l2b-ung-vien.tsv",
+    "l2c-ung-vien.tsv",
+    "l3-ung-vien.tsv",
+    "--loai",
+    "p6-khau-tru-cuoi.tsv",
+    "p7-khau-tru.tsv",
+    "p7-khau-tru-v2.tsv",
+    "p7-v3-khau-tru-132-theo-P0-astra.tsv"
+  ]
+}

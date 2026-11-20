@@ -1,0 +1,228 @@
+khoa	ung_vien	doc_khac	ppm_gop_ung_vien	ppm_gop_doc_khac	tu_vung_do	dieu_kien	trang_thai_9_1	co
+acquy	acquy	ác quỷ	0.1333	6.7110	AM_TIET_NHAY_CAM:quỷ	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+acquy	ắc quy	ác quỷ	5.0511	6.7110	AM_TIET_NHAY_CAM:quỷ	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+acquy	ăcquy	ác quỷ	0.0146	6.7110	AM_TIET_NHAY_CAM:quỷ	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+bantay	bàn tay	bắn tẩy	39.6936	0.0000	AM_TIET_NHAY_CAM:bắn	-	-	THONG_TIN
+bantinh	bàn tính	bạn tình	0.4757	3.8246	TU_DO	PPM≥0,3;≥PPM_MUC;DO_RO	K1	DA_PHAN_XU
+bantinh	bàn tính	bản tính	0.4757	1.9827	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+bantinh	bàn tính	bẳn tính	0.4757	0.0437	-	-	K1	DA_PHAN_XU
+bantin	bản tin	bắn tin	28.1719	0.1199	AM_TIET_NHAY_CAM:bắn	-	-	THONG_TIN
+bandoc	bạn đọc	bàn độc	3.5072	0.0267	AM_TIET_NHAY_CAM:độc	-	-	THONG_TIN
+baothu	bảo thủ	báo thù	2.7438	11.0753	TU_DO;AM_TIET_NHAY_CAM:thù	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+benh	bênh	bệnh	4.7784	546.6701	AM_TIET_NHAY_CAM:bệnh	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+bich	bịch	bích	9.6107	20.1119	KHOA_TUC_ASTRA	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+bodi	bỏ đi	bố đĩ	56.5221	0.0000	TU_DO;AM_TIET_TUC:đĩ	DO_RO	KHONG_TU_DONG	DA_PHAN_XU
+bodi	bỏ đi	bổ di	56.5221	0.0033	-	-	KHONG_TU_DONG	DA_PHAN_XU
+bodi	bổ di	bỏ đi	0.0033	56.5221	-	PPM≥0,3;≥PPM_MUC	KHONG_TU_DONG	DA_PHAN_XU
+bodi	bổ di	bố đĩ	0.0033	0.0000	TU_DO;AM_TIET_TUC:đĩ	DO_RO	KHONG_TU_DONG	DA_PHAN_XU
+bomay	bộ máy	bọ mảy	15.9793	0.0000	KHOA_TUC_ASTRA	-	-	THONG_TIN
+bomay	bộ máy	bọ mẩy	15.9793	0.0000	KHOA_TUC_ASTRA	-	-	THONG_TIN
+buom	buồm	bươm	11.4375	0.7949	KHOA_TUC_ASTRA	PPM≥0,3	K0	DA_PHAN_XU
+buom	buồm	bướm	11.4375	41.9152	KHOA_TUC_ASTRA	PPM≥0,3;≥PPM_MUC	K0	DA_PHAN_XU
+buom	bướm	buồm	41.9152	11.4375	KHOA_TUC_ASTRA	PPM≥0,3	K0	DA_PHAN_XU
+buom	bướm	bươm	41.9152	0.7949	KHOA_TUC_ASTRA	PPM≥0,3	K0	DA_PHAN_XU
+buoi	bưởi	buồi	3.3184	1.0562	TU_DO;AM_TIET_TUC:buồi;KHOA_TUC_ASTRA	PPM≥0,3;DO_RO	K0	DA_PHAN_XU
+buoi	bưởi	buổi	3.3184	232.5584	KHOA_TUC_ASTRA	PPM≥0,3;≥PPM_MUC	K0	DA_PHAN_XU
+buoi	bưởi	bươi	3.3184	0.1053	KHOA_TUC_ASTRA	-	K0	DA_PHAN_XU
+camthu	cảm thụ	căm thù	0.5542	2.6892	TU_DO;AM_TIET_NHAY_CAM:thù	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+camthu	cảm thụ	cảm thử	0.5542	0.0000	-	-	K1	DA_PHAN_XU
+camthu	cảm thụ	cấm thư	0.5542	0.0100	-	-	K1	DA_PHAN_XU
+camthu	cảm thụ	cầm thú	0.5542	0.8760	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+camthu	cảm thụ	cầm thư	0.5542	0.0325	-	-	K1	DA_PHAN_XU
+catco	cắt cỏ	cắt cổ	2.8543	5.2531	TU_DO	PPM≥0,3;≥PPM_MUC;DO_RO	K1	DA_PHAN_XU
+camtu	cẩm tú	cảm từ	0.3997	0.4254	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+camtu	cẩm tú	cảm tử	0.3997	1.5123	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+camtu	cẩm tú	cầm tù	0.3997	1.0163	TU_DO;AM_TIET_NHAY_CAM:tù	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+chanchua	chan chứa	chân chúa	0.1082	0.1669	AM_TIET_NHAY_CAM:chúa	≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+chayban	chạy bàn	chạy bắn	0.2114	0.0000	AM_TIET_NHAY_CAM:bắn	-	-	THONG_TIN
+chem	chêm	chém	0.2765	13.9802	AM_TIET_NHAY_CAM:chém	PPM≥0,3;≥PPM_MUC;DO_RO	-	CANH_BAO_BAT_BUOC_DOC
+chim	chim	chìm	112.9308	47.9866	-	PPM≥0,3	K0	DA_PHAN_XU
+chim	chìm	chim	47.9866	112.9308	-	PPM≥0,3;≥PPM_MUC	K0	DA_PHAN_XU
+chinhdang	chính đáng	chính đảng	6.3170	0.2473	AM_TIET_NHAY_CAM:đảng	-	-	THONG_TIN
+chinhdang	chính đáng	chỉnh đảng	6.3170	0.0000	AM_TIET_NHAY_CAM:đảng	-	-	THONG_TIN
+chua	chua	chúa	38.7641	593.1544	AM_TIET_NHAY_CAM:chúa	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+chui	chui	chửi	17.9393	7.7153	AM_TIET_NHAY_CAM:chửi	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+condo	con đò	con đỏ	0.0033	0.0649	-	≥PPM_MUC	K1	DA_PHAN_XU
+condo	con đò	côn đồ	0.0033	3.4071	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+cobac	cô bác	cờ bạc	0.5185	15.2135	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+cokinh	cổ kính	có kinh	1.6647	28.9015	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+cokinh	cổ kính	cố kỉnh	1.6647	0.0000	-	-	K1	DA_PHAN_XU
+cotuc	cổ tức	cổ tục	1.9907	0.0000	AM_TIET_NHAY_CAM:tục	-	-	THONG_TIN
+coma	cơ mà	có ma	20.4830	3.3835	TU_DO;AM_TIET_NHAY_CAM:ma	PPM≥0,3	K2_CHUA_KY	DA_PHAN_XU
+coma	cơ mà	có mà	20.4830	13.7793	-	PPM≥0,3	K2_CHUA_KY	DA_PHAN_XU
+coma	cơ mà	có mã	20.4830	3.8930	-	PPM≥0,3	K2_CHUA_KY	DA_PHAN_XU
+cung	cứng	cung	222.2396	1319.8828	KHOA_TUC_ASTRA	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+cung	cứng	cùng	222.2396	1053.3360	KHOA_TUC_ASTRA	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+cung	cứng	cúng	222.2396	12.2986	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+cung	cứng	cũng	222.2396	2138.6249	KHOA_TUC_ASTRA	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+cung	cứng	cưng	222.2396	92.4659	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+cung	cứng	cụng	222.2396	2.5281	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+cung	cứng	củng	222.2396	12.2199	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+cung	cứng	cửng	222.2396	0.2185	KHOA_TUC_ASTRA	-	-	THONG_TIN
+daidat	dải đất	đái dắt	0.5082	0.0000	TU_DO;AM_TIET_TUC:đái	-	K2_CHUA_KY	DA_PHAN_XU
+daikho	dại khờ	đái khó	0.2709	0.0000	TU_DO;AM_TIET_TUC:đái	-	KHONG_TU_DONG	DA_PHAN_XU
+dauhoi	dấu hỏi	đầu hói	0.6702	0.5385	AM_TIET_NHAY_CAM:hói	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+dedai	dễ dãi	đẻ đái	1.9372	0.0146	TU_DO;AM_TIET_TUC:đái	-	K2_CHUA_KY	DA_PHAN_XU
+ditinh	di tinh	đĩ tính	0.0233	0.0000	AM_TIET_TUC:đĩ	DO_RO	-	CANH_BAO_BAT_BUOC_DOC
+diec	diệc	điếc	0.2023	7.2838	AM_TIET_NHAY_CAM:điếc	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+diem	diêm	điếm	5.2073	30.7116	AM_TIET_NHAY_CAM:điếm	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+dodang	dở dang	đồ đảng	0.5523	0.0000	AM_TIET_NHAY_CAM:đảng	-	-	THONG_TIN
+dadang	đa dạng	đa đảng	50.4728	0.1000	AM_TIET_NHAY_CAM:đảng	-	-	THONG_TIN
+daiduong	đại dương	đái đường	70.7627	0.2060	TU_DO;AM_TIET_TUC:đái	-	KHONG_TU_DONG	DA_PHAN_XU
+daitai	đại tài	dái tai	0.4153	0.2972	AM_TIET_TUC:dái	-	KHONG_TU_DONG	DA_PHAN_XU
+daitai	đại tài	đài tải	0.4153	0.0000	-	-	KHONG_TU_DONG	DA_PHAN_XU
+damdang	đảm đang	dâm đãng	0.2876	2.0810	TU_DO;AM_TIET_TUC:dâm;KHOA_TUC_ASTRA	PPM≥0,3;≥PPM_MUC;DO_RO	K0	DA_PHAN_XU
+damdang	đảm đang	dấm dẳng	0.2876	0.0000	KHOA_TUC_ASTRA	-	K0	DA_PHAN_XU
+dangki	đăng kí	đảng kì	10.8248	0.0000	AM_TIET_NHAY_CAM:đảng	-	-	THONG_TIN
+dangtri	đãng trí	đảng trị	1.1790	0.0291	AM_TIET_NHAY_CAM:đảng	-	-	THONG_TIN
+daodien	đạo diễn	đảo điên	9.5319	0.2430	AM_TIET_NHAY_CAM:điên	-	-	THONG_TIN
+dang	đắng	đảng	9.4149	39.0049	AM_TIET_NHAY_CAM:đảng	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+dauco	đâu có	đau cơ	78.9470	1.9639	TU_DO;AM_TIET_NHAY_CAM:đau	PPM≥0,3	K2_CHUA_KY	DA_PHAN_XU
+dauco	đâu có	đầu cơ	78.9470	2.3442	-	PPM≥0,3	K2_CHUA_KY	DA_PHAN_XU
+daudan	đầu đàn	đầu đạn	3.1490	5.1340	TU_DO;AM_TIET_NHAY_CAM:đạn	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+daude	đầu đề	đau đẻ	0.3064	0.2318	AM_TIET_NHAY_CAM:đau	-	-	THONG_TIN
+dauthu	đấu thủ	đầu thú	1.2395	2.6334	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+dien	điện	điên	1522.3341	213.4700	AM_TIET_NHAY_CAM:điên	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+dondau	đón dâu	đón đầu	0.1082	1.3376	-	PPM≥0,3;≥PPM_MUC	K2_CHUA_KY	DA_PHAN_XU
+dondau	đón dâu	đớn đau	0.1082	0.2730	TU_DO;AM_TIET_NHAY_CAM:đau	≥PPM_MUC	K2_CHUA_KY	DA_PHAN_XU
+dodoc	độ dốc	đò dọc	2.6490	0.0000	-	-	KHONG_TU_DONG	DA_PHAN_XU
+dodoc	độ dốc	đô đốc	2.6490	10.1217	-	PPM≥0,3;≥PPM_MUC	KHONG_TU_DONG	DA_PHAN_XU
+dodoc	độ dốc	đỏ đọc	2.6490	0.0067	-	-	KHONG_TU_DONG	DA_PHAN_XU
+dodoc	độ dốc	độ độc	2.6490	1.2690	TU_DO;AM_TIET_NHAY_CAM:độc	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+docdao	độc đáo	độc đạo	61.5885	0.0862	AM_TIET_NHAY_CAM:độc	-	-	THONG_TIN
+docthan	độc thân	độc thần	12.9143	0.6223	TU_DO;AM_TIET_NHAY_CAM:độc	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+dondoc	đôn đốc	đơn độc	0.3402	9.3162	AM_TIET_NHAY_CAM:độc	PPM≥0,3;≥PPM_MUC	KHONG_TU_DONG	DA_PHAN_XU
+dondoc	đơn độc	đôn đốc	9.3162	0.3402	-	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+dongdang	đồng dạng	đồng đảng	0.1936	0.3999	TU_DO;AM_TIET_NHAY_CAM:đảng	PPM≥0,3;≥PPM_MUC	K2_CHUA_KY	DA_PHAN_XU
+dongdang	đồng dạng	đồng đẳng	0.1936	0.4072	-	PPM≥0,3;≥PPM_MUC	K2_CHUA_KY	DA_PHAN_XU
+dongdang	đồng dạng	động dạng	0.1936	0.2457	-	≥PPM_MUC	K2_CHUA_KY	DA_PHAN_XU
+dongtinh	đồng tình	đồng tính	4.0098	81.4187	-	PPM≥0,3;≥PPM_MUC	KHONG_TU_DONG	DA_PHAN_XU
+dongtinh	đồng tình	động tình	4.0098	2.1136	-	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+dongtinh	đồng tình	động tĩnh	4.0098	1.7891	-	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+duongdan	đường dẫn	đường đạn	17.0536	0.6205	TU_DO;AM_TIET_NHAY_CAM:đạn	PPM≥0,3	K1	DA_PHAN_XU
+gaysot	gây sốt	gấy sốt	0.4584	0.0000	AM_TIET_NHAY_CAM:sốt	-	-	THONG_TIN
+hoidau	hồi đầu	hói đầu	0.8417	1.2574	TU_DO;AM_TIET_NHAY_CAM:hói	PPM≥0,3;≥PPM_MUC	KHONG_TU_DONG	DA_PHAN_XU
+hoidau	hồi đầu	hôi dầu	0.8417	0.0637	-	-	KHONG_TU_DONG	DA_PHAN_XU
+hoidau	hồi đầu	hơi dâu	0.8417	0.0000	-	-	KHONG_TU_DONG	DA_PHAN_XU
+hoidau	hồi đầu	hơi đâu	0.8417	0.3204	-	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+khoai	khoai	khoái	29.7605	26.3093	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+khoai	khoai	khổ ải	29.7605	0.2980	KHOA_TUC_ASTRA	-	-	THONG_TIN
+khotho	khổ thơ	khó thở	0.0391	3.7674	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+khon	khôn	khốn	30.9281	181.7806	AM_TIET_NHAY_CAM:khốn	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+khung	khung	khùng	141.3809	22.2258	AM_TIET_NHAY_CAM:khùng	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+kinhthanh	kinh thành	kinh thánh	5.6605	18.7511	TU_DO;AM_TIET_NHAY_CAM:thánh	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+lamdau	làm dâu	làm dấu	0.1007	0.6739	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+lamdau	làm dâu	làm đau	0.1007	5.4395	TU_DO;AM_TIET_NHAY_CAM:đau	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+lamdau	làm dâu	làm đầu	0.1007	2.3051	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+lotda	lót dạ	lột da	0.2069	4.8585	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maluc	mã lực	ma lực	2.9143	0.2281	AM_TIET_NHAY_CAM:ma	-	-	THONG_TIN
+manhdan	mạnh dạn	mạnh dần	1.4559	0.1948	-	-	K1	DA_PHAN_XU
+manhdan	mạnh dạn	mảnh đạn	1.4559	0.7791	TU_DO;AM_TIET_NHAY_CAM:đạn	PPM≥0,3	K1	DA_PHAN_XU
+matmat	mát mắt	mát mặt	0.0612	0.0312	-	-	K2_CHUA_KY	DA_PHAN_XU
+matmat	mát mắt	mất mát	0.0612	18.0836	TU_DO	PPM≥0,3;≥PPM_MUC	K2_CHUA_KY	DA_PHAN_XU
+matmat	mát mắt	mất mật	0.0612	0.4148	-	PPM≥0,3;≥PPM_MUC	K2_CHUA_KY	DA_PHAN_XU
+matmat	mát mắt	mất mặt	0.0612	2.9180	-	PPM≥0,3;≥PPM_MUC	K2_CHUA_KY	DA_PHAN_XU
+maume	màu mè	màu mẽ	1.3138	0.0000	-	-	K1	DA_PHAN_XU
+maume	màu mè	máu me	1.3138	1.8602	TU_DO;AM_TIET_TUC:máu	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	màu mè	máu mê	1.3138	0.0437	AM_TIET_TUC:máu	-	K1	DA_PHAN_XU
+maume	màu mè	mầu mè	1.3138	0.0146	-	-	K1	DA_PHAN_XU
+maume	màu mè	mầu mẽ	1.3138	0.0000	-	-	K1	DA_PHAN_XU
+maume	màu mẽ	màu mè	0.0000	1.3138	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	màu mẽ	máu me	0.0000	1.8602	TU_DO;AM_TIET_TUC:máu	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	màu mẽ	máu mê	0.0000	0.0437	AM_TIET_TUC:máu	≥PPM_MUC	K1	DA_PHAN_XU
+maume	màu mẽ	mầu mè	0.0000	0.0146	-	≥PPM_MUC	K1	DA_PHAN_XU
+maume	màu mẽ	mầu mẽ	0.0000	0.0000	-	-	K1	DA_PHAN_XU
+maume	máu me	màu mè	1.8602	1.3138	-	PPM≥0,3	K1	DA_PHAN_XU
+maume	máu me	màu mẽ	1.8602	0.0000	-	-	K1	DA_PHAN_XU
+maume	máu me	máu mê	1.8602	0.0437	AM_TIET_TUC:máu	-	K1	DA_PHAN_XU
+maume	máu me	mầu mè	1.8602	0.0146	-	-	K1	DA_PHAN_XU
+maume	máu me	mầu mẽ	1.8602	0.0000	-	-	K1	DA_PHAN_XU
+maume	máu mê	màu mè	0.0437	1.3138	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	máu mê	màu mẽ	0.0437	0.0000	-	-	K1	DA_PHAN_XU
+maume	máu mê	máu me	0.0437	1.8602	TU_DO;AM_TIET_TUC:máu	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	máu mê	mầu mè	0.0437	0.0146	-	-	K1	DA_PHAN_XU
+maume	máu mê	mầu mẽ	0.0437	0.0000	-	-	K1	DA_PHAN_XU
+maume	mầu mè	màu mè	0.0146	1.3138	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	mầu mè	màu mẽ	0.0146	0.0000	-	-	K1	DA_PHAN_XU
+maume	mầu mè	máu me	0.0146	1.8602	TU_DO;AM_TIET_TUC:máu	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	mầu mè	máu mê	0.0146	0.0437	AM_TIET_TUC:máu	≥PPM_MUC	K1	DA_PHAN_XU
+maume	mầu mè	mầu mẽ	0.0146	0.0000	-	-	K1	DA_PHAN_XU
+maume	mầu mẽ	màu mè	0.0000	1.3138	-	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	mầu mẽ	màu mẽ	0.0000	0.0000	-	-	K1	DA_PHAN_XU
+maume	mầu mẽ	máu me	0.0000	1.8602	TU_DO;AM_TIET_TUC:máu	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+maume	mầu mẽ	máu mê	0.0000	0.0437	AM_TIET_TUC:máu	≥PPM_MUC	K1	DA_PHAN_XU
+maume	mầu mẽ	mầu mè	0.0000	0.0146	-	≥PPM_MUC	K1	DA_PHAN_XU
+nghien	nghiền	nghiện	73.9909	33.5098	AM_TIET_NHAY_CAM:nghiện	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+nguy	ngụ ý	ngu ý	4.7010	0.0146	AM_TIET_NHAY_CAM:ngu	-	-	THONG_TIN
+nguc	ngực	ngục	35.0032	51.9074	AM_TIET_NHAY_CAM:ngục	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+nhatho	nhà thơ	nhà thổ	3.4809	1.6688	TU_DO	PPM≥0,3;DO_RO	K1	DA_PHAN_XU
+nhatho	nhà thơ	nhà thờ	3.4809	43.3460	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+nuocdai	nước dãi	nước đái	1.1681	4.1991	TU_DO;AM_TIET_TUC:đái;KHOA_TUC_ASTRA	PPM≥0,3;≥PPM_MUC	K0	DA_PHAN_XU
+nuocdai	nước dãi	nước đại	1.1681	0.5008	KHOA_TUC_ASTRA	PPM≥0,3	K0	DA_PHAN_XU
+phat	phát	phật	1015.1246	31.7483	AM_TIET_NHAY_CAM:phật	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+phat	phất	phật	1.6677	31.7483	AM_TIET_NHAY_CAM:phật	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+phatdien	phát điện	phát điên	75.2081	13.6452	TU_DO;AM_TIET_NHAY_CAM:điên	PPM≥0,3	K1	DA_PHAN_XU
+phatsong	phát sóng	phật sống	22.9882	0.0179	AM_TIET_NHAY_CAM:phật	-	-	THONG_TIN
+phattich	phát tích	phật tích	0.0533	0.0100	AM_TIET_NHAY_CAM:phật	-	-	THONG_TIN
+phang	phẳng	phang	73.2107	10.9179	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+phang	phẳng	phăng	73.2107	0.8015	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+phang	phẳng	phạng	73.2107	0.0146	KHOA_TUC_ASTRA	-	-	THONG_TIN
+phang	phẳng	phảng	73.2107	0.4742	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+phanphat	phân phát	phần phật	2.7584	0.0100	AM_TIET_NHAY_CAM:phật	-	-	THONG_TIN
+phandong	phần đông	phản động	0.3510	0.8511	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+phatpho	phất phơ	phật phờ	0.0200	0.0000	AM_TIET_NHAY_CAM:phật	-	-	THONG_TIN
+phich	phích	phịch	12.9042	2.3379	TU_DO;KHOA_TUC_ASTRA	PPM≥0,3	K0	DA_PHAN_XU
+phongthanh	phóng thanh	phong thánh	0.2527	0.2942	AM_TIET_NHAY_CAM:thánh	≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+quat	quạt	quát	50.6509	20.3064	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+quat	quạt	quất	50.6509	7.6399	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+quat	quạt	quật	50.6509	4.0970	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+quat	quạt	quắt	50.6509	0.4761	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+quat	quạt	quặt	50.6509	0.6629	KHOA_TUC_ASTRA	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+quythan	quy thân	quỷ thần	0.0000	2.3404	AM_TIET_NHAY_CAM:quỷ	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+suachua	sữa chua	sữa chúa	6.0460	0.0537	AM_TIET_NHAY_CAM:chúa	-	-	THONG_TIN
+sung	sừng	súng	17.3654	239.8408	AM_TIET_NHAY_CAM:súng	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+thamvan	tham vấn	thẩm vấn	3.5861	9.8740	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+thanh	thanh	thánh	608.0367	107.0548	AM_TIET_NHAY_CAM:thánh	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+thanh	thành	thánh	1832.3009	107.0548	AM_TIET_NHAY_CAM:thánh	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+thanhthan	thanh thản	thành thân	4.4344	0.6392	-	PPM≥0,3	K1	DA_PHAN_XU
+thanhthan	thanh thản	thánh thần	4.4344	11.6860	TU_DO;AM_TIET_NHAY_CAM:thánh	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+thanhtrung	thanh trung	thanh trùng	0.5456	0.4514	-	PPM≥0,3	K1	DA_PHAN_XU
+thanhtrung	thanh trung	thanh trừng	0.5456	1.8968	TU_DO	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+thanhtrung	thanh trung	thành trùng	0.5456	0.0167	-	-	K1	DA_PHAN_XU
+thanhgia	thành gia	thánh giá	0.5823	3.9556	TU_DO;AM_TIET_NHAY_CAM:thánh	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+thanhnhan	thành nhân	thanh nhàn	1.3705	0.1245	-	-	K2_CHUA_KY	DA_PHAN_XU
+thanhnhan	thành nhân	thánh nhân	1.3705	0.5457	TU_DO;AM_TIET_NHAY_CAM:thánh	PPM≥0,3	K2_CHUA_KY	DA_PHAN_XU
+thanhsu	thành sự	thánh sư	8.6486	0.0033	AM_TIET_NHAY_CAM:thánh	-	-	THONG_TIN
+thanhthat	thành thật	thánh thất	21.3734	0.0267	AM_TIET_NHAY_CAM:thánh	-	-	THONG_TIN
+thanhthi	thành thị	thánh thi	2.6974	0.0612	AM_TIET_NHAY_CAM:thánh	-	-	THONG_TIN
+thanhtich	thành tích	thanh tích	11.6717	0.1633	-	-	KHONG_TU_DONG	DA_PHAN_XU
+thanhtich	thành tích	thánh tích	11.6717	0.3392	TU_DO;AM_TIET_NHAY_CAM:thánh	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+thamthu	thăm thú	thâm thù	0.5457	0.2476	AM_TIET_NHAY_CAM:thù	-	-	THONG_TIN
+thudu	thú dữ	thù du	0.5631	0.0612	AM_TIET_NHAY_CAM:thù	-	-	THONG_TIN
+thudu	thú dữ	thù đủ	0.5631	0.0000	AM_TIET_NHAY_CAM:thù	-	-	THONG_TIN
+thuvat	thú vật	thù vặt	6.0433	0.1311	AM_TIET_NHAY_CAM:thù	-	-	THONG_TIN
+thuan	thuần	thù ân	25.3798	0.1045	AM_TIET_NHAY_CAM:thù	-	-	THONG_TIN
+thuan	thuận	thù ân	213.2595	0.1045	AM_TIET_NHAY_CAM:thù	-	-	THONG_TIN
+thuoc	thước	thuốc	366.0080	522.8414	AM_TIET_NHAY_CAM:thuốc	PPM≥0,3;≥PPM_MUC	-	CANH_BAO_BAT_BUOC_DOC
+thuocdo	thước đo	thuốc đỏ	3.6610	0.1074	AM_TIET_NHAY_CAM:thuốc	-	-	THONG_TIN
+truongban	trưởng ban	trường bắn	2.9417	0.6189	TU_DO;AM_TIET_NHAY_CAM:bắn	PPM≥0,3	K1	DA_PHAN_XU
+tuti	tự ti	tù tì	0.7663	0.3999	AM_TIET_NHAY_CAM:tù	PPM≥0,3	-	CANH_BAO_BAT_BUOC_DOC
+tunhan	tư nhân	tu nhân	17.1935	1.2559	-	PPM≥0,3	K1	DA_PHAN_XU
+tunhan	tư nhân	tù nhân	17.1935	25.7270	TU_DO;AM_TIET_NHAY_CAM:tù	PPM≥0,3;≥PPM_MUC	K1	DA_PHAN_XU
+tuday	từ đây	tù đày	16.4606	0.1790	AM_TIET_NHAY_CAM:tù	-	-	THONG_TIN
+tuday	từ đây	tù đầy	16.4606	0.1020	AM_TIET_NHAY_CAM:tù	-	-	THONG_TIN
+tutruong	từ trường	tù trưởng	8.4305	2.9708	AM_TIET_NHAY_CAM:tù	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+tutu	từ từ	tu tu	42.4143	0.0733	-	-	K1	DA_PHAN_XU
+tutu	từ từ	tu tư	42.4143	0.0000	-	-	K1	DA_PHAN_XU
+tutu	từ từ	tu từ	42.4143	0.5002	-	PPM≥0,3	K1	DA_PHAN_XU
+tutu	từ từ	tứ tử	42.4143	0.0000	-	-	K1	DA_PHAN_XU
+tutu	từ từ	tử tù	42.4143	0.7412	TU_DO;AM_TIET_NHAY_CAM:tù	PPM≥0,3	K1	DA_PHAN_XU
+tutu	từ từ	tự tu	42.4143	0.0525	-	-	K1	DA_PHAN_XU
+tutu	từ từ	tự tử	42.4143	14.2050	TU_DO	PPM≥0,3;DO_RO	K1	DA_PHAN_XU
+tutung	tứ tung	tù túng	0.3662	0.5236	AM_TIET_NHAY_CAM:tù	PPM≥0,3;≥PPM_MUC	KHONG_TU_DONG	DA_PHAN_XU
+tudo	tự do	tù đồ	121.3716	0.0146	AM_TIET_NHAY_CAM:tù	-	-	THONG_TIN
+tudong	tự động	tù đọng	411.6291	0.0900	AM_TIET_NHAY_CAM:tù	-	-	THONG_TIN
+ungdung	ứng dụng	ung dung	341.2564	0.4753	AM_TIET_NHAY_CAM:ung	PPM≥0,3	KHONG_TU_DONG	DA_PHAN_XU
+xaoxac	xào xạc	xao xác	0.2198	0.0000	AM_TIET_NHAY_CAM:xác	-	-	THONG_TIN
+xaoxac	xào xạc	xáo xác	0.2198	0.0000	AM_TIET_NHAY_CAM:xác	-	-	THONG_TIN
+yeudau	yêu dấu	yếu đau	4.8836	0.0033	AM_TIET_NHAY_CAM:đau	-	-	THONG_TIN

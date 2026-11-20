@@ -1,0 +1,28 @@
+khoa	tu	nhan_goc	cong	dot	nguoi_ky	ly_do
+buyt	buýt	OK	H5f:CHO_LOAI	H5_lien_tang	Astra+Opus	Opus đọc bằng chứng trong p6-lien-tang-H5-astra.tsv và đồng ý: cùng họ cà phê/cafe hoặc buýt/bus, áp H5f đã ký.
+caphe	cà phê	OK	H5f:CANH_TRANH	H5_lien_tang	Astra+Opus	H5f như c: không dạng nào ≥ 95%. Đối chiếu sơ bộ của Opus (chỉ so mặt có khoảng trắng): 295 dòng phụ đề có cafe/café trong khung tiếng Việt rõ so với 2.279 dòng cà phê → 11,46%. Cận bảo thủ của Astra gồm cả dạng gạch nối/viết liền: 320/(2.876+320) = 10,01%, bỏ dòng trùng 285/(2.430+285) = 10,50%; cả hai > 5%.
+caphesua	cà phê sữa	OK	H5f:THIEU_DU_LIEU	H5_lien_tang	Astra+Opus	Opus đọc bằng chứng trong p6-lien-tang-H5-astra.tsv và đồng ý: cùng họ cà phê/cafe hoặc buýt/bus, áp H5f đã ký.
+caphetrung	cà phê trứng	OK	H5f:THIEU_DU_LIEU	H5_lien_tang	Astra+Opus	Opus đọc bằng chứng trong p6-lien-tang-H5-astra.tsv và đồng ý: cùng họ cà phê/cafe hoặc buýt/bus, áp H5f đã ký.
+capheden	cà phê đen	OK	H5f:CANH_TRANH	H5_lien_tang	Astra+Opus	Opus đọc bằng chứng trong p6-lien-tang-H5-astra.tsv và đồng ý: cùng họ cà phê/cafe hoặc buýt/bus, áp H5f đã ký.
+thiacaphe	thìa cà phê	OK	H5f:THIEU_DU_LIEU	H5_lien_tang	Astra+Opus	Opus đọc bằng chứng trong p6-lien-tang-H5-astra.tsv và đồng ý: cùng họ cà phê/cafe hoặc buýt/bus, áp H5f đã ký.
+xebuyt	xe buýt	OK	H5f:CHO_LOAI	H5_lien_tang	Astra+Opus	Opus đọc bằng chứng trong p6-lien-tang-H5-astra.tsv và đồng ý: cùng họ cà phê/cafe hoặc buýt/bus, áp H5f đã ký.
+otobuyt	ô tô buýt	R1	H5f:CHO_LOAI	H5_lien_tang	Astra+Opus	Opus đọc bằng chứng trong p6-lien-tang-H5-astra.tsv và đồng ý: cùng họ cà phê/cafe hoặc buýt/bus, áp H5f đã ký.
+banhbeo	bánh bèo	-	H6.9	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: phụ đề gần như toàn nghĩa lóng chê (bánh bèo yếu đuối, bánh bèo vô địch)
+nongbong	nóng bỏng	-	H6.6	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: phụ đề chủ yếu nghĩa quyến rũ thể xác; web có rác khiêu dâm
+tinmung	tin mừng	-	H6.4	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: web nhiều Tin Mừng (Phúc Âm)
+giap	giáp	-	H6.1	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: phụ đề chủ yếu áo giáp, bộ giáp; còn tuyến giáp
+chinhphuc	chinh phục	-	H6.1	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: phụ đề còn nghĩa chinh chiếm bằng vũ lực
+cuom	cườm	-	H6.5	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: 2/10 phụ đề là bệnh cườm
+gaysot	gây sốt	-	H6.5	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: phụ đề chủ yếu nghĩa gây sốt lâm sàng
+tuoc	tước	-	H6.3	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: tước vị, tước quyền, tước đoạt
+thantuong	thần tượng	-	H6.4	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: phụ đề chủ yếu người hâm mộ; chấp nhận chứng cứ web của Astra (thờ thần tượng)
+taon	tạ ơn	-	H6.4	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: tạ ơn Chúa, lễ tạ ơn
+themmuon	thèm muốn	-	H6.6	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: có nghĩa ham muốn người lớn
+vuotve	vuốt ve	-	H6.6	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: nhiều ca tiếp xúc tình dục
+rinhrap	rình rập	-	H6.2	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: chủ yếu theo dõi lén người (stalking)
+nghet	nghẹt	-	H6.5	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: mẫu Opus: chủ yếu nghẹt thở; nhất quán với ngộp
+namtinh	nam tính	-	H6:CHU_DE_GIOI	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: đề tài giới (đoạn Danh tính sau H6)
+nutinh	nữ tính	-	H6:CHU_DE_GIOI	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: đề tài giới (đoạn Danh tính sau H6)
+quansooc	quần soóc	-	H5f	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: H5f: soóc/sooc/soọc, phụ đề 9/13 < 95%; nhất quán với soóc ở L2C
+tapduot	tập dượt	-	H5e	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: H5e: tập dợt 20/46 ở phụ đề; nhất quán với dượt ở L2C
+xegoong	xe goòng	-	H5f	soat_luot_P6	Astra+Opus	Astra đề nghị có chứng cứ (p6-soat-luot-khieu-nghi-astra.tsv); Opus đồng ý: H5f: thiếu dữ liệu; nhất quán với goòng ở L2C (mục R1, không ở bản chính)

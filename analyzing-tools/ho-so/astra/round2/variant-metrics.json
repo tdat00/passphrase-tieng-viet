@@ -1,0 +1,740 @@
+{
+ "mặc cả": {
+  "L": 18,
+  "T": 0,
+  "ppm": 2.82584520536169,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": true
+ },
+ "lặp lại": {
+  "L": 153,
+  "T": 5,
+  "ppm": 33.376612898527654,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "sơ mi": {
+  "L": 126,
+  "T": 5,
+  "ppm": 14.689589128538804,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "vướng víu": {
+  "L": 11,
+  "T": 2,
+  "ppm": 0.45034510135626027,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "mà cả": {
+  "L": 124,
+  "T": 0,
+  "ppm": 5.982908867412761,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "lập lại": {
+  "L": 54,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "hấp thu": {
+  "L": 113,
+  "T": 0,
+  "ppm": 7.4665808207331175,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "chín chắn": {
+  "L": 33,
+  "T": 2,
+  "ppm": 1.3986911699320672,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "giao động": {
+  "L": 13,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "ky bo": {
+  "L": 0,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "đậu phộng": {
+  "L": 39,
+  "T": 1,
+  "ppm": 8.497705463498598,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "ngã ba": {
+  "L": 74,
+  "T": 0,
+  "ppm": 3.16966995859298,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": true
+ },
+ "để dành": {
+  "L": 82,
+  "T": 6,
+  "ppm": 11.6233385817724,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "giòn tan": {
+  "L": 16,
+  "T": 0,
+  "ppm": 0.41841254642993786,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "cư xử": {
+  "L": 63,
+  "T": 12,
+  "ppm": 19.22469123816134,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "gãy gọn": {
+  "L": 4,
+  "T": 0,
+  "ppm": 0.02458038202140409,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "thì là": {
+  "L": 54,
+  "T": 2,
+  "ppm": 14.934844973849092,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "sản suất": {
+  "L": 10,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "khuyến mãi": {
+  "L": 219,
+  "T": 1,
+  "ppm": 37.86255005073443,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "bít tết": {
+  "L": 5,
+  "T": 3,
+  "ppm": 3.870960804821254,
+  "f74": false,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "hoa mầu": {
+  "L": 0,
+  "T": 0,
+  "ppm": 0.04704969478354443,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "lấp ráp": {
+  "L": 0,
+  "T": 1,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "cảm ơn": {
+  "L": 618,
+  "T": 67,
+  "ppm": 406.68362973600995,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "ki bo": {
+  "L": 3,
+  "T": 0,
+  "ppm": 0.13113979012038282,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "giàn giáo": {
+  "L": 6,
+  "T": 0,
+  "ppm": 9.754426941928267,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "tinh tấn": {
+  "L": 13,
+  "T": 0,
+  "ppm": 0.1796212440784396,
+  "f74": false,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "khoái cảm": {
+  "L": 27,
+  "T": 1,
+  "ppm": 1.5580273095126398,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "đặc trưng": {
+  "L": 399,
+  "T": 1,
+  "ppm": 32.42387429627831,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "đô la": {
+  "L": 150,
+  "T": 27,
+  "ppm": 59.73755413067886,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "từ điển": {
+  "L": 89,
+  "T": 37,
+  "ppm": 8.275682477193863,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "lắp ráp": {
+  "L": 80,
+  "T": 3,
+  "ppm": 68.40682716095893,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "vỵ trí": {
+  "L": 0,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "tự điển": {
+  "L": 13,
+  "T": 0,
+  "ppm": 0.2387913023514982,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "dàn giáo": {
+  "L": 3,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "đường ray": {
+  "L": 25,
+  "T": 0,
+  "ppm": 13.740098875865517,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "xung quanh": {
+  "L": 767,
+  "T": 21,
+  "ppm": 80.43951595632078,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "tắc xi": {
+  "L": 1,
+  "T": 7,
+  "ppm": 0.5933988579424647,
+  "f74": false,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "cư sử": {
+  "L": 1,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "khởi phát": {
+  "L": 27,
+  "T": 0,
+  "ppm": 0.9097536708206535,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "vòng hoa": {
+  "L": 23,
+  "T": 0,
+  "ppm": 1.4496363681830995,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "đường rầy": {
+  "L": 4,
+  "T": 0,
+  "ppm": 0.057058989013794865,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "vướng díu": {
+  "L": 0,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "mì": {
+  "L": 270,
+  "T": 58,
+  "ppm": 67.57594467613676,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "tí hon": {
+  "L": 17,
+  "T": 1,
+  "ppm": 4.561576066725862,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "dòn tan": {
+  "L": 0,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "ngả ba": {
+  "L": 0,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "chung thân": {
+  "L": 20,
+  "T": 2,
+  "ppm": 1.7008015300701418,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "chính chắn": {
+  "L": 0,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "gẫy gọn": {
+  "L": 0,
+  "T": 0,
+  "ppm": 0.0,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "khuyến mại": {
+  "L": 145,
+  "T": 0,
+  "ppm": 15.61510517027043,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "hoa màu": {
+  "L": 45,
+  "T": 1,
+  "ppm": 2.5545412169867996,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "taxi": {
+  "L": 119,
+  "T": 17,
+  "ppm": 25.779579636807235,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": true
+ },
+ "đô-la": {
+  "L": 15,
+  "T": 22,
+  "ppm": 59.73755413067886,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "tý hon": {
+  "L": 3,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "bít-tết": {
+  "L": 1,
+  "T": 0,
+  "ppm": 3.870960804821254,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "sơ-mi": {
+  "L": 4,
+  "T": 0,
+  "ppm": 14.689589128538804,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "sản xuất": {
+  "L": 3865,
+  "T": 24,
+  "ppm": 1166.9443226732872,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "vị trí": {
+  "L": 1810,
+  "T": 15,
+  "ppm": 219.41721610992454,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "motor": {
+  "L": 47,
+  "T": 0,
+  "ppm": 26.08761731445641,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "đặc chưng": {
+  "L": 0,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "náo nức": {
+  "L": 23,
+  "T": 0,
+  "ppm": 0.16872624273974512,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "tiếp dẫn": {
+  "L": 5,
+  "T": 0,
+  "ppm": 0.2387913023514982,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "ngun ngút": {
+  "L": 1,
+  "T": 0,
+  "ppm": 0.0,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "thày": {
+  "L": 64,
+  "T": 1,
+  "ppm": 1.3595397001195093,
+  "f74": true,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "da cam": {
+  "L": 76,
+  "T": 1,
+  "ppm": 3.1377374036666574,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": true
+ },
+ "mô tơ": {
+  "L": 9,
+  "T": 0,
+  "ppm": 1.9331524066078378,
+  "f74": false,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "yên chí": {
+  "L": 3,
+  "T": 0,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "đậu phụng": {
+  "L": 5,
+  "T": 0,
+  "ppm": 0.2048809361845951,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "cám ơn": {
+  "L": 198,
+  "T": 25,
+  "ppm": 273.20484416969254,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "nao nức": {
+  "L": 1,
+  "T": 0,
+  "ppm": 0.006672862820166961,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "chung quanh": {
+  "L": 56,
+  "T": 0,
+  "ppm": 3.020317073259986,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "phản ảnh": {
+  "L": 36,
+  "T": 0,
+  "ppm": 0.4545672398747878,
+  "f74": true,
+  "vi": true,
+  "A": false,
+  "O": false
+ },
+ "phản ánh": {
+  "L": 373,
+  "T": 2,
+  "ppm": 13.166344872310175,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "thầy": {
+  "L": 2413,
+  "T": 55,
+  "ppm": 125.33396447848288,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "yên trí": {
+  "L": 3,
+  "T": 1,
+  "ppm": 0.1344762215304663,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "ngùn ngụt": {
+  "L": 6,
+  "T": 0,
+  "ppm": 0.0033364314100834806,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "hấp thụ": {
+  "L": 154,
+  "T": 4,
+  "ppm": 39.22147055978286,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "để giành": {
+  "L": 75,
+  "T": 2,
+  "ppm": null,
+  "f74": false,
+  "vi": false,
+  "A": false,
+  "O": false
+ },
+ "lai rai": {
+  "L": 5,
+  "T": 0,
+  "ppm": 0.057058989013794865,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "dao động": {
+  "L": 143,
+  "T": 1,
+  "ppm": 11.668153911164012,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "thìa là": {
+  "L": 3,
+  "T": 0,
+  "ppm": 0.09287402741626913,
+  "f74": true,
+  "vi": true,
+  "A": true,
+  "O": false
+ },
+ "mỳ": {
+  "L": 90,
+  "T": 15,
+  "ppm": 6.349636786493242,
+  "f74": false,
+  "vi": true,
+  "A": false,
+  "O": false
+ }
+}

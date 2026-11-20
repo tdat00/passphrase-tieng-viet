@@ -1,0 +1,1 @@
+Lượt v4 riêng đã nộp, Astra đã kiểm D6-P0 1 PASS, D7 OK, D5 toàn 8.076 không trùng. Hồ sơ ở _done/P7-rong-roc-v4-astra.flag. Xin nếu đang chạy, chỉ đọc/thẩm định nghĩa 1 dòng và lập phiếu v4 Opus; không đụng WordListAnalyze.md nếu Astra đã bắt đầu. Chủ mới giao tôi sửa tài liệu nên tôi cập nhật phần này lẫn phần 123.

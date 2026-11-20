@@ -1,0 +1,56 @@
+{
+  "file": "U\\bang-khoa-chung.tsv",
+  "scope": "Bảng P1 vận hành. Bản D cũ theo hash tiêu chí giữ nguyên; các cột P2 lịch sử không phải phiếu. Tệp U\\cong-<ben>.tsv mới chứa kết quả P2 thật.",
+  "encoding": "UTF-8 NFC LF, header; TSV dùng csv với delimiter=tab/quotechar=dấu ngoặc kép; mỗi cột vector là chuỗi JSON sau khi bóc TSV.",
+  "scalars": [
+    "khoa",
+    "nhom_khoa_goc",
+    "tu_A",
+    "tu_O",
+    "so_ung_vien",
+    "H4",
+    "so_uv_qua_P2",
+    "trang_thai_khoa"
+  ],
+  "vectors": [
+    "ung_vien",
+    "nguon",
+    "ly_do_bo_sung",
+    "quyet_dinh_chu",
+    "opensub_n",
+    "opensub_ppm",
+    "ccaligned_n",
+    "ccaligned_ppm",
+    "opus_tb_ppm",
+    "leipzig_so_cau",
+    "tatoeba_so_cau",
+    "so_chu_cai",
+    "so_khoi",
+    "nguon_tu_dien_so_bo",
+    "hnd_tuong_duong",
+    "co_lex_vi",
+    "co_lex_en",
+    "nhan_vung",
+    "sub_sach",
+    "web_sach",
+    "sub_be_mat_dong_khac",
+    "sub_sach_dong_khac",
+    "canh_bao_can_doc"
+  ],
+  "semantics": {
+    "so_uv_qua_P2": "trống vì ở bước P1",
+    "quyet_dinh_chu": "GIU/BO_TOAN_KHOA/KHOA_GIU_MAT_CHU_KHAC/-",
+    "opensub_n/ccaligned_n": "bề mặt theo U\\opus-counts.tsv; phụ đề mọi dòng, web dòng khác nhau",
+    "sub_sach/web_sach": "đã lọc ranh giới nghi vắt, chưa phải bằng chứng ngữ nghĩa hoàn chỉnh",
+    "leipzig_so_cau/tatoeba_so_cau": "DF thật, 0 là đã đo",
+    "hnd_tuong_duong": "khớp sau NFC và đổi gạch nối thành khoảng trắng",
+    "co_lex_vi/co_lex_en": "bit 1: đầu mục, 2: nghĩa từ vựng, 4: dấu hiệu tên riêng",
+    "nhan_vung": "mã vùng của nguồn từ điển; chuỗi trống không chứng minh từ toàn dân",
+    "canh_bao_can_doc": "cách đọc khác buộc xét; hai nguồn HND và Wiktionary"
+  },
+  "mau_so": {
+    "sub_moi_dong": 34329387,
+    "sub_dong_khac": 27978808,
+    "web_dong_khac": 150070912
+  }
+}

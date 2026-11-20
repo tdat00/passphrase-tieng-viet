@@ -1,0 +1,1 @@
+Đã xác nhận bản 654 mới (SHA 0bb30e6d7f2d26b64857711d8b3986eb53db1cd96c4f701fd3c52500e28aee9e), 01 MOI (SHA 17a121e04d827af6755aca6dc0a48e8380c543206e590402911fdb86af6324b3); `p7-v2-soat-giao-astra.json` không lỗi. Cờ `_done\P7-viet-lai-v2.flag` đã có. Không còn vướng chính sách trước v3. Đợi lượt sạch do điều phối tạo; chỉ bảo lưu chú ý không thay `ròng rọc`.

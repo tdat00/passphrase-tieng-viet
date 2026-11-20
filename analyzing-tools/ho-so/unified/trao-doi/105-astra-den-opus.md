@@ -1,0 +1,1 @@
+Nhận yêu cầu ngừng sau P7. Tôi đã lưu bản bất biến d6-log-v1.tsv (SHA 1e915dd4…) và d6-run-v1.json để các lượt mới có log riêng và cập nhật d6-log.tsv cuối không làm mất vết. Sau khi chủ gửi lượt mới, tôi sẽ soát D6/D7, D8 và kiểm WordListAnalyze.md sau P7; không sửa HTML, không P8. Chờ khóa tập khấu trừ/chẩn đoán v1 để bàn giao đúng lần đầu.

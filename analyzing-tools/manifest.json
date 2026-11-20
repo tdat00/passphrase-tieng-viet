@@ -1,0 +1,197 @@
+{
+  "schema": 1,
+  "ngay": "2026-11-20",
+  "danh_sach": {
+    "so_tu": 7776,
+    "wordlist_txt_sha256": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
+    "cot_tu_sha256": "3609c88ff436708857ac323189f81b5bb9b31d31ea6f0a8924cc02bc61c0e713",
+    "ghi_chu": "cot_tu_sha256 tính trên các từ, mỗi từ một dòng, UTF-8, LF, có LF cuối (giống khối danh sách của kịch bản P0)."
+  },
+  "du_phong": {
+    "so_tu": 205,
+    "trang_thai": "dự phòng, chưa phân tích",
+    "du_phong_txt_sha256": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b"
+  },
+  "nguon_du_lieu": [
+    {
+      "source": "Viet11K",
+      "url": "https://github.com/duyet/vietnamese-wordlist/blob/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet11K.txt",
+      "license": "GNU GPL v2 (LICENSE trong mirror)",
+      "sha256": "401752a95c8c97638ecf4df8445ded60d9db87a8f1bbca2e7fc3b6d00eb1132e"
+    },
+    {
+      "source": "Viet22K",
+      "url": "https://github.com/duyet/vietnamese-wordlist/blob/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet22K.txt",
+      "license": "GNU GPL v2 (LICENSE trong mirror)",
+      "sha256": "fdb37a1f21cb44898894390fb87d137830ed1507316c2729bad2d804db81033d"
+    },
+    {
+      "source": "Viet39K",
+      "url": "https://github.com/duyet/vietnamese-wordlist/blob/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet39K.txt",
+      "license": "GNU GPL v2 (LICENSE trong mirror)",
+      "sha256": "5c139a85964bf8980c6659418007e2ba5e3e5cc0098fe16c08f1bf5a6dd91ec5"
+    },
+    {
+      "source": "Viet74K",
+      "url": "https://github.com/duyet/vietnamese-wordlist/blob/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet74K.txt",
+      "license": "GNU GPL v2 (LICENSE trong mirror)",
+      "sha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90"
+    },
+    {
+      "source": "Kaikki viwiktionary 2026-10-02",
+      "url": "https://kaikki.org/viwiktionary/rawdata.html",
+      "license": "CC BY-SA 4.0, một số trang đồng cấp GFDL/ngoại lệ Wikimedia; chỉ dùng đầu mục, từ loại và nhãn",
+      "sha256": "1f0abd21982660b5fc2eff5eb3fbacbed2d9fe8f476af794dbed0d927ffb8187"
+    },
+    {
+      "source": "Kaikki enwiktionary Vietnamese 2026-10-01",
+      "url": "https://kaikki.org/dictionary/Vietnamese/",
+      "license": "Như điều khoản Wikimedia; không đưa lời giải kho vào TSV",
+      "sha256": "186cd0a62d876dada70c9761bc05e598c8cf7b9a48e0aa518bab6c649e28d945"
+    },
+    {
+      "source": "OpenSubtitles VI v2018",
+      "url": "https://object.pouta.csc.fi/OPUS-OpenSubtitles/v2018/mono/vi.txt.gz",
+      "license": "Quyền văn bản phụ đề không được công bố đồng nhất; ghi công OpenSubtitles.org và Lison & Tiedemann 2016, chỉ phát hành số đếm. https://opus.nlpl.eu/legacy/OpenSubtitles-v2018.php",
+      "sha256": "1aae9970414129b76a4be17dd55f0b9ec6156c1ca0d7a6ec4bee852f453ae2a1",
+      "input_lines": 5126239,
+      "retained_lines": 5126239,
+      "counter_tokens": 34314528
+    },
+    {
+      "source": "CCAligned VI v1",
+      "url": "https://object.pouta.csc.fi/OPUS-CCAligned/v1/mono/vi.txt.gz",
+      "license": "Nhóm CCAligned không nhận quyền đối với công chuẩn bị; không suy CC0 cho mọi trang nguồn. Ghi công El-Kishky et al. 2020; chỉ phát hành số đếm. https://www.statmt.org/cc-aligned/",
+      "sha256": "21c6c05513c5b5565e6f132f0f86ec2a5906cd4199659c0d62129e773a6ff480",
+      "input_lines": 14898377,
+      "retained_lines": 10943350,
+      "counter_tokens": 149860716
+    },
+    {
+      "source": "Leipzig Vietnamese Mixed 2014 300K",
+      "url": "https://downloads.wortschatz-leipzig.de/corpora/vie_mixed_2014_300K.tar.gz",
+      "license": "CC BY cho gói văn bản tải về theo https://wortschatz.uni-leipzig.de/en/usage ; chỉ số đếm.",
+      "sha256": "067c18ff6e719fea866314836c19d4d1ae4b597c4b5207435131cbb5de32c57e",
+      "input_lines": 300000,
+      "retained_lines": 300000,
+      "counter_tokens": 7016878
+    },
+    {
+      "source": "Tatoeba VI, ảnh chụp 2026-11-19",
+      "url": "https://downloads.tatoeba.org/exports/per_language/vie/vie_sentences.tsv.bz2",
+      "license": "Mặc định CC BY 2.0 FR, một số câu CC0 theo https://tatoeba.org/en/terms_of_use ; chỉ số đếm.",
+      "sha256": "e9a6451c46c43d9e15b923945325e74c8f28a8bc8e2e9c864801942337dbcb1a",
+      "input_lines": 33328,
+      "retained_lines": 33328,
+      "counter_tokens": 285270
+    }
+  ],
+  "khong_dua_vao_repo": "Không chứa văn bản kho ngữ liệu, danh sách từ Hồ Ngọc Đức (GPL), dump Wiktionary hay giải nghĩa cũ của hai phân tích; chỉ có số đếm, nhãn, hash.",
+  "tap_luat_P2_v4_sha256": "a7a489a6737045f33c3c8e342c944585f4137c964677bd9f872c14ac498a70c8",
+  "d6": {
+    "tham_chieu": {
+      "OPUS": {
+        "sha256": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+        "body_sha256": "97d0b2fba487118029a83cd4aebd1c45248c3a1a3a5282cf5bb3ef506e56da0d",
+        "rows": 7776
+      },
+      "ASTRA": {
+        "sha256": "6d25230a14d75c208306c12d7acea52d2be0ebb1b47629c98c4d84954afd2067",
+        "body_sha256": "dfd74f433bb77faf2d9033800c58dccdb54adcb5be8a1580ed90cb63c8744f8e",
+        "rows": 7776
+      },
+      "WIKT_VI": {
+        "sha256": "1f0abd21982660b5fc2eff5eb3fbacbed2d9fe8f476af794dbed0d927ffb8187",
+        "head_lang": "vi",
+        "glosses": 57017
+      },
+      "GUIDE": {
+        "sha256": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+        "coverage": "full master including section 12; includes writer sections 1–11"
+      },
+      "FAMILIES": {
+        "sha256": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+        "pairs": 1062
+      }
+    },
+    "cac_luot": {
+      "v1": {
+        "run_id": "f2284fdd413427f34d2bf44a4b032ef29a7665cb5bd39e73679c6f7b7fed31b8",
+        "version": "D6-1.0",
+        "script_sha256": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
+        "reference_set_sha256": "116dfd07eecb0b588596bb11c03e45f93a1eef079955ee14bb168714c41ff08f",
+        "rows": 8076,
+        "status": {
+          "VIET_LAI": 2435,
+          "PASS": 5641
+        }
+      },
+      "v2": {
+        "run_id": "75b111619c62c140716a52f46d3d4021f7d636e26f836129559c7c369d221cd5",
+        "version": "D6-1.0",
+        "script_sha256": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
+        "reference_set_sha256": "116dfd07eecb0b588596bb11c03e45f93a1eef079955ee14bb168714c41ff08f",
+        "rows": 2501,
+        "status": {
+          "VIET_LAI": 629,
+          "PASS": 1872
+        }
+      },
+      "v3": {
+        "run_id": "324bbe04ee6a78815aa80018fc06081fb5fd1e5da1a5888cb2f0e9cefd33de8c",
+        "version": "D6-1.0",
+        "script_sha256": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
+        "reference_set_sha256": "116dfd07eecb0b588596bb11c03e45f93a1eef079955ee14bb168714c41ff08f",
+        "rows": 655,
+        "status": {
+          "PASS": 532,
+          "VIET_LAI": 123
+        }
+      },
+      "v4-rieng": {
+        "run_id": "5a28ad1099341aca5a71539706fb80f2e7fb4c59540e913948db628e31925afe",
+        "version": "D6-1.0",
+        "script_sha256": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
+        "reference_set_sha256": "116dfd07eecb0b588596bb11c03e45f93a1eef079955ee14bb168714c41ff08f",
+        "rows": 1,
+        "status": {
+          "PASS": 1
+        }
+      }
+    },
+    "kiem_lai_phat_hanh": {
+      "ngay": "2026-11-20",
+      "dau_vao": "wordlist.txt",
+      "run_id": "6468432945cacf71d19ce8bad2d267bb60df68ca89959e8e8ffa25d947a6df8a",
+      "rows": 7776,
+      "status": {
+        "PASS": 7776
+      }
+    }
+  },
+  "tep": {
+    "README.md": "06c0c9a63f2e31cd6c87beb2355be864a48b845224f1aedae8319334f819604c",
+    "blocked_keys.tsv": "016996d5424cc1ad3cc23903c85ba9c2a6a141b6402549c168c3a4ab90bdc0e8",
+    "build_wordlist.py": "616a231700827f0b67cde8a0c23005f1da7854930c0a4e14c7cc487901f6ea79",
+    "check_wordlist.py": "583559076e46aa8b524999b8cc9aa0e442b85399786b2726b59f807abd6dcc2f",
+    "count_corpus.py": "5928bd556d3281c902d05dd5b74b678b42d6c014725d38942f1618811557b5a8",
+    "d6-ho-chinh-ta.tsv": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+    "d6-kiem.py": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
+    "d6-tham-chieu.json": "23a85060ac07f289b30bfa8fa4a0ad0e02fcfcf31b07921c8d1f47cc2a25e0e5",
+    "du-phong.txt": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
+    "huong-dan-giai-nghia.md": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+    "kiem-tra-giai-nghia.py": "3f143e967ce2084cb96f271750c72712015b0fdf3a826826232eadceb9d48581",
+    "labels.tsv": "a5b882a82a4bff853fce938deed94cdb4efa5dc969ff05572a68835a7605369b",
+    "nguon-goc-giai-nghia.tsv": "197df30135d5ee8fa5a8e8ff1dc3a284fce89ad97b9a910b03a280ec2db24b33",
+    "spelling_families.tsv": "56f0b31d2a84e9f41495937b49949d2e357368739f07ece0cd1187fe25407c98",
+    "tieu-chi-thong-nhat.md": "3d9e25b4d40a39816965479bc513613d4d8f06be1acf4241bfa01a74a2815106",
+    "verify.mjs": "f9cdbbbd3de34277fdb17da58c3336920ed685ab139b3d5b2032a551dafd6cac",
+    "wordlist.txt": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
+    ".gitignore": "f5c036f6d74c8df95f0cdd2cbfaaf86ac0f9325ec399eb887f918f2eda92cd85"
+  },
+  "ho_so": {
+    "thu_muc": "ho-so/",
+    "so_tep": 277,
+    "readme_sha256": "8a276597559a408e8c6303f6488fb88566389e760854b39e30a3609481605c3f"
+  }
+}

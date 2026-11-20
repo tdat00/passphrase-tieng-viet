@@ -1,0 +1,872 @@
+khoa	candidate_id	tu	nguon	nguoi_cham	chon	ly_do
+axit	axit:1	a xít	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+axit	axit:2	axit	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+acquy	acquy:1	ác quỷ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+acquy	acquy:2	acquy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+acquy	acquy:3	ăcquy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+anco	anco:1	ăn cỏ	O	Astra	Y	Cùng H; hình ảnh gia súc ăn cỏ rõ và thường gặp hơn ăn cỗ trong cả hai kho gộp.
+anco	anco:2	ăn cỗ	A	Astra	N	Cùng H; hình ảnh gia súc ăn cỏ rõ và thường gặp hơn ăn cỗ trong cả hai kho gộp.
+bale	bale:1	ba lê	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bale	bale:2	balê	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+batoong	batoong:1	ba toong	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+batoong	batoong:2	batoong	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+bacmau	bacmau:1	bạc màu	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+bacmau	bacmau:2	bạc mầu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+banthan	banthan:1	bản thân	A	Astra	N	Người gần gũi là danh từ C, hơn đại lượng trừu tượng bản thân; mức chênh xấp xỉ năm lần, không qua 10.
+banthan	banthan:2	bạn thân	O	Astra	Y	Người gần gũi là danh từ C, hơn đại lượng trừu tượng bản thân; mức chênh xấp xỉ năm lần, không qua 10.
+bantin	bantin:1	bản tin	O	Astra	Y	Một bản tin gọi đúng sản phẩm thông tin, C và phổ biến hơn lối bắn tin.
+bantin	bantin:2	bắn tin	A	Astra	N	Một bản tin gọi đúng sản phẩm thông tin, C và phổ biến hơn lối bắn tin.
+banhang	banhang:1	bán hàng	O	Astra	Y	Bạn hàng là người giao dịch nhưng thấp quá mười lần. Chọn hoạt động quen bán hàng như ví dụ S1 đã ký.
+banhang	banhang:2	bạn hàng	A	Astra	N	Bạn hàng là người giao dịch nhưng thấp quá mười lần. Chọn hoạt động quen bán hàng như ví dụ S1 đã ký.
+bansi	bansi:1	bán sỉ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bansi	bansi:2	bần sĩ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+banhkep	banhkep:1	bánh kẹp	O	Astra	N	Đều C, đây là tên riêng một loại bánh; tần suất nhỉnh hơn bánh kẹp, vốn có thể kẹp nhiều nguyên liệu.
+banhkep	banhkep:2	bánh kếp	A	Astra	Y	Đều C, đây là tên riêng một loại bánh; tần suất nhỉnh hơn bánh kẹp, vốn có thể kẹp nhiều nguyên liệu.
+baotuyet	baotuyet:1	bão tuyết	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+baotuyet	baotuyet:2	báo tuyết	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+batan	batan:1	bát ăn	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+batan	batan:2	bất an	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+bamtron	bamtron:1	bặm trợn	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bamtron	bamtron:2	bậm trợn	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+beti	beti:1	bé tí	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+beti	beti:2	bé tị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+beti	beti:3	bệ tì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bida	bida:1	bi da	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bida	bida:2	bida	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bisi	bisi:1	bì sì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bisi	bisi:2	bì sị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bisi	bisi:3	bị sị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+biendi	biendi:1	biến di	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+biendi	biendi:2	biến dị	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+bocap	bocap:1	bò cạp	A	Astra	BO	Bò cạp và bọ cạp đều là cách gọi tự nhiên của cùng con vật nhưng viết lại khác dấu; chênh 1,26/1,64 không giúp định hình một mặt ổn định.
+bocap	bocap:2	bọ cạp	BS	Astra	BO	Bò cạp và bọ cạp đều là cách gọi tự nhiên của cùng con vật nhưng viết lại khác dấu; chênh 1,26/1,64 không giúp định hình một mặt ổn định.
+bodi	bodi:1	bỏ đi	A+O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+bodi	bodi:2	bổ di	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+bovi	bovi:1	bố vi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bovi	bovi:2	bộ vị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bulong	bulong:1	bu lông	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+bulong	bulong:2	bulông	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+cabin	cabin:1	ca bin	BS	Astra	N	Hai mặt đều R1/C, dạng liền phổ biến gấp khoảng tám mươi lần; tránh lớp tách tiếng không quen.
+cabin	cabin:2	cabin	BS	Astra	Y	Hai mặt đều R1/C, dạng liền phổ biến gấp khoảng tám mươi lần; tránh lớp tách tiếng không quen.
+cacao	cacao:1	ca cao	A	Astra	Y	Tên hạt/cây quen như cacao; dạng hai khối dễ nhận ra và có PPM gộp nhỉnh hơn.
+cacao	cacao:2	cacao	BS	Astra	N	Tên hạt/cây quen như cacao; dạng hai khối dễ nhận ra và có PPM gộp nhỉnh hơn.
+calo	calo:1	ca lô	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+calo	calo:2	cà lơ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+calo	calo:3	cả lo	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+calo	calo:4	cả lò	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+calo	calo:5	calo	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+calo	calo:6	calô	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+cari	cari:1	ca ri	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+cari	cari:2	cà ri	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+cari	cari:3	cari	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+cavat	cavat:1	cà vạt	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cavat	cavat:2	cavat	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cactong	cactong:1	các tông	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cactong	cactong:2	cactông	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+canh	canh:1	canh	O	Astra	N	Cùng C; cánh chim/cánh cửa là hình ảnh cụ thể và gộp phổ biến hơn canh.
+canh	canh:2	cánh	A	Astra	Y	Cùng C; cánh chim/cánh cửa là hình ảnh cụ thể và gộp phổ biến hơn canh.
+captoc	captoc:1	cặp tóc	O	Astra	N	Cặp tóc là vật nhưng chỉ 0,083 so với 2,063; không xin ngoại lệ trên mười lần cho cách gọi kẹp tóc biến thiên.
+captoc	captoc:2	cấp tốc	A	Astra	Y	Cặp tóc là vật nhưng chỉ 0,083 so với 2,063; không xin ngoại lệ trên mười lần cho cách gọi kẹp tóc biến thiên.
+caunoi	caunoi:1	câu nói	O	Astra	N	Chọn hình ảnh vật nối hai bên; dưới mười lần so với câu nói.
+caunoi	caunoi:2	cầu nối	A	Astra	Y	Chọn hình ảnh vật nối hai bên; dưới mười lần so với câu nói.
+chang	chang:1	chàng	O	Astra	Y	Người là C, chặng là một phần quãng đường; chàng cũng thường gặp hơn.
+chang	chang:2	chặng	A	Astra	N	Người là C, chặng là một phần quãng đường; chàng cũng thường gặp hơn.
+chamcham	chamcham:1	chằm chằm	A	Astra	Y	Cách nhìn thấy được; cùng lớp với chầm chậm nhưng số đo cao hơn.
+chamcham	chamcham:2	chầm chậm	O	Astra	N	Cách nhìn thấy được; cùng lớp với chầm chậm nhưng số đo cao hơn.
+chap	chap:1	chắp	A	Astra	N	Đều H; chấp có số đo cao rõ, không ký ngoại lệ cho chắp ít hơn trên mười lần.
+chap	chap:2	chấp	O	Astra	Y	Đều H; chấp có số đo cao rõ, không ký ngoại lệ cho chắp ít hơn trên mười lần.
+chapnhat	chapnhat:1	chắp nhặt	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+chapnhat	chapnhat:2	chấp nhặt	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+chapnhat	chapnhat:3	chấp nhất	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+chat	chat:1	chặt	O	Astra	Y	Đều H; động tác hay độ chặt quen, số đo vượt chật hơn mười lần.
+chat	chat:2	chật	A	Astra	N	Đều H; động tác hay độ chặt quen, số đo vượt chật hơn mười lần.
+cham	cham:1	chấm	O	Astra	N	Đều H; tả tốc độ dễ hiểu, số đo nhỉnh hơn chấm.
+cham	cham:2	chậm	A	Astra	Y	Đều H; tả tốc độ dễ hiểu, số đo nhỉnh hơn chấm.
+chancho	chancho:1	chân chó	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+chancho	chancho:2	chần chờ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+chitieu	chitieu:1	chi tiêu	O	Astra	Y	Việc dùng tiền hàng ngày dễ hình dung hơn một chỉ tiêu và được ghi nhận nhiều hơn.
+chitieu	chitieu:2	chỉ tiêu	A	Astra	N	Việc dùng tiền hàng ngày dễ hình dung hơn một chỉ tiêu và được ghi nhận nhiều hơn.
+chieu	chieu:1	chiều	O	Astra	N	Vật trải nằm dễ vẽ hơn khái niệm chiều, số đo vẫn cao, cách nhau dưới hai lần.
+chieu	chieu:2	chiếu	A	Astra	Y	Vật trải nằm dễ vẽ hơn khái niệm chiều, số đo vẫn cao, cách nhau dưới hai lần.
+chinh	chinh:1	chỉnh	A	Astra	Y	Động tác chỉnh dây, chỉnh ghế dễ diễn lại; so với chính trừu tượng chỉ kém chưa ba lần.
+chinh	chinh:2	chính	O	Astra	N	Động tác chỉnh dây, chỉnh ghế dễ diễn lại; so với chính trừu tượng chỉ kém chưa ba lần.
+choan	choan:1	cho ăn	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+choan	choan:2	choán	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+chonggong	chonggong:1	chỏng gọng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+chonggong	chonggong:2	chổng gọng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+chuvi	chuvi:1	chu vi	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+chuvi	chuvi:2	chư vị	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+chuquan	chuquan:1	chủ quan	A	Astra	N	Chỉ người cụ thể, PPM ngang chủ quan mà dễ hình dung hơn.
+chuquan	chuquan:2	chủ quán	O	Astra	Y	Chỉ người cụ thể, PPM ngang chủ quan mà dễ hình dung hơn.
+chuc	chuc:1	chúc	O	Astra	Y	Hành vi nói lời chúc cụ thể, tần suất cao hơn số đếm chục.
+chuc	chuc:2	chục	A	Astra	N	Hành vi nói lời chúc cụ thể, tần suất cao hơn số đếm chục.
+chuoi	chuoi:1	chuỗi	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+chuoi	chuoi:2	chuối	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+chuyentay	chuyentay:1	chuyên tay	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+chuyentay	chuyentay:2	chuyền tay	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+chuyen	chuyen:1	chuyền	A	Astra	N	Hành động di chuyển/chuyển giao quen, hai vế cùng H và chuyển được dùng nhiều hơn.
+chuyen	chuyen:2	chuyển	O	Astra	Y	Hành động di chuyển/chuyển giao quen, hai vế cùng H và chuyển được dùng nhiều hơn.
+codai	codai:1	cỏ dại	O	Astra	Y	Tên thực vật mọc tự nhiên rõ hơn khái niệm cổ đại; dưới mười lần.
+codai	codai:2	cổ đại	A	Astra	N	Tên thực vật mọc tự nhiên rõ hơn khái niệm cổ đại; dưới mười lần.
+cocong	cocong:1	có công	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cocong	cocong:2	cố công	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cole	cole:1	có lẽ	O	Astra	N	XIN_KY_10X: dụng cụ siết đai ốc có hình cụ thể, đối lại có lẽ là tình thái; ngay phân tích độc lập ban đầu tôi đã chọn cờ lê, §S1 cũng ghi từ này. Không phủ nhận PPM 2,58/298,35.
+cole	cole:2	cờ lê	A	Astra	Y	XIN_KY_10X: dụng cụ siết đai ốc có hình cụ thể, đối lại có lẽ là tình thái; ngay phân tích độc lập ban đầu tôi đã chọn cờ lê, §S1 cũng ghi từ này. Không phủ nhận PPM 2,58/298,35.
+coli	coli:1	cố lí	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+coli	coli:2	cơ lí	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+covi	covi:1	có vị	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+covi	covi:2	cờ vỉ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+comle	comle:1	com lê	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+comle	comle:2	comlê	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+condau	condau:1	con dâu	O	Astra	N	Đều C; dụng cụ đóng mực có thể chỉ ngay và tần suất cao hơn con dâu trên mười lần.
+condau	condau:2	con dấu	A	Astra	Y	Đều C; dụng cụ đóng mực có thể chỉ ngay và tần suất cao hơn con dâu trên mười lần.
+connguoi	connguoi:1	con ngươi	A	Astra	N	Đều C. Con ngươi là bộ phận của mắt nhưng số đo chỉ 0,91 so với 196,29, không xin ngoại lệ.
+connguoi	connguoi:2	con người	O	Astra	Y	Đều C. Con ngươi là bộ phận của mắt nhưng số đo chỉ 0,91 so với 196,29, không xin ngoại lệ.
+cotket	cotket:1	cót két	A	Astra	BO	Cả hai là từ tượng thanh chỉ âm đồ gỗ/cơ cấu chuyển động, cọt kẹt và cót két quá gần để chọn một hình thức ổn định trong khóa.
+cotket	cotket:2	cọt kẹt	BS	Astra	BO	Cả hai là từ tượng thanh chỉ âm đồ gỗ/cơ cấu chuyển động, cọt kẹt và cót két quá gần để chọn một hình thức ổn định trong khóa.
+conang	conang:1	cô nàng	O	Astra	Y	Chỉ một người trong cách nói thường ngày, thắng khái niệm cơ năng cả cụ thể và tần suất.
+conang	conang:2	cơ năng	A	Astra	N	Chỉ một người trong cách nói thường ngày, thắng khái niệm cơ năng cả cụ thể và tần suất.
+codong	codong:1	cổ đông	A	Astra	Y	Người góp cổ phần, C và cũng thường được ghi nhận hơn cổ động.
+codong	codong:2	cổ động	O	Astra	N	Người góp cổ phần, C và cũng thường được ghi nhận hơn cổ động.
+cosu	cosu:1	cổ sử	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cosu	cosu:2	cố sự	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cosu	cosu:3	cơ sự	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cosu	cosu:4	cớ sự	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+congtac	congtac:1	công tác	O	Astra	N	Thiết bị bật tắt trong nhà, gần ngang công tác về tần suất; giữ ví dụ S1.
+congtac	congtac:2	công tắc	A	Astra	Y	Thiết bị bật tắt trong nhà, gần ngang công tác về tần suất; giữ ví dụ S1.
+cuhanh	cuhanh:1	củ hành	O	Astra	Y	Thực phẩm cụ thể quen hơn cách nói trang trọng cử hành.
+cuhanh	cuhanh:2	cử hành	A	Astra	N	Thực phẩm cụ thể quen hơn cách nói trang trọng cử hành.
+cuong	cuong:1	cụ ông	O	Astra	N	Cuống lá, cuống hoa là bộ phận dễ quan sát, hai vế C mà hơn cụ ông trên mười lần.
+cuong	cuong:2	cuống	A	Astra	Y	Cuống lá, cuống hoa là bộ phận dễ quan sát, hai vế C mà hơn cụ ông trên mười lần.
+cungdo	cungdo:1	cung độ	BS	Astra	BO	Cứng đơ và cứng đờ cùng mô tả trạng thái rất cứng/bất động; tần suất đều thấp và phân biệt lúc gõ có dấu không ổn định.
+cungdo	cungdo:2	cùng đồ	BS	Astra	BO	Cứng đơ và cứng đờ cùng mô tả trạng thái rất cứng/bất động; tần suất đều thấp và phân biệt lúc gõ có dấu không ổn định.
+cungdo	cungdo:3	cứng đơ	BS	Astra	BO	Cứng đơ và cứng đờ cùng mô tả trạng thái rất cứng/bất động; tần suất đều thấp và phân biệt lúc gõ có dấu không ổn định.
+cungdo	cungdo:4	cứng đờ	BS	Astra	BO	Cứng đơ và cứng đờ cùng mô tả trạng thái rất cứng/bất động; tần suất đều thấp và phân biệt lúc gõ có dấu không ổn định.
+cuongsi	cuongsi:1	cuồng si	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+cuongsi	cuongsi:2	cuồng sĩ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+cupduoi	cupduoi:1	cúp đuôi	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+cupduoi	cupduoi:2	cụp đuôi	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+daihoi	daihoi:1	dài hơi	O	Astra	N	Cùng K; từ chỉ cuộc họp lớn vượt dài hơi gần bốn mươi lần. Không coi mọi hội nghị là ngữ cảnh chính trị.
+daihoi	daihoi:2	đại hội	A	Astra	Y	Cùng K; từ chỉ cuộc họp lớn vượt dài hơi gần bốn mươi lần. Không coi mọi hội nghị là ngữ cảnh chính trị.
+daingoang	daingoang:1	dài ngoằng	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+daingoang	daingoang:2	dài ngoẵng	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dandung	dandung:1	dàn dựng	O	Astra	Y	Có thể quan sát việc sắp đặt cho buổi diễn; dân dụng là khái niệm chỉ phạm vi sử dụng, chênh dưới ba lần.
+dandung	dandung:2	dân dụng	A	Astra	N	Có thể quan sát việc sắp đặt cho buổi diễn; dân dụng là khái niệm chỉ phạm vi sử dụng, chênh dưới ba lần.
+danxep	danxep:1	dàn xếp	A	Astra	Y	Đàn xếp đúng là nhạc cụ, nhưng chỉ 0,018 so với 5,79 và bản thân từ thiên văn viết. Không xin ngoại lệ hơn ba trăm lần.
+danxep	danxep:2	đàn xếp	BS	Astra	N	Đàn xếp đúng là nhạc cụ, nhưng chỉ 0,018 so với 5,79 và bản thân từ thiên văn viết. Không xin ngoại lệ hơn ba trăm lần.
+dangdi	dangdi:1	dáng đi	A+O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dangdi	dangdi:2	đẳng dị	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+danhca	danhca:1	danh ca	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+danhca	danhca:2	đánh cá	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dayday	dayday:1	day day	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dayday	dayday:2	đay đảy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dayday	dayday:3	đây đẩy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dayday	dayday:4	đầy dãy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dayday	dayday:5	đầy đẫy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+datdiu	datdiu:1	dắt dìu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+datdiu	datdiu:2	dắt díu	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+datdiu	datdiu:3	dặt dìu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+danchung	danchung:1	dân chúng	A	Astra	Y	Danh từ tập hợp người rõ hơn dẫn chứng, hai vế cùng R1, PPM cao hơn.
+danchung	danchung:2	dẫn chứng	O	Astra	N	Danh từ tập hợp người rõ hơn dẫn chứng, hai vế cùng R1, PPM cao hơn.
+danda	danda:1	dân dã	O	Astra	Y	Đàn đá gợi hình nhưng 0,017 so với 0,635; nhạc cụ vùng hẹp, không xin ngoại lệ. Giữ được bằng chứng nhạc cụ ở P4 song không cần chọn nó.
+danda	danda:2	đàn đá	A	Astra	N	Đàn đá gợi hình nhưng 0,017 so với 0,635; nhạc cụ vùng hẹp, không xin ngoại lệ. Giữ được bằng chứng nhạc cụ ở P4 song không cần chọn nó.
+daudua	daudua:1	dầu dừa	O	Astra	Y	Cả hai đều C; nguyên liệu quen, số đo vượt đậu đũa trên mười lần.
+daudua	daudua:2	đậu đũa	A	Astra	N	Cả hai đều C; nguyên liệu quen, số đo vượt đậu đũa trên mười lần.
+daumo	daumo:1	dầu mỏ	A	Astra	N	Cả hai cụ thể; nhóm chất dùng nấu ăn quen, tần suất nhỉnh hơn dầu mỏ.
+daumo	daumo:2	dầu mỡ	O	Astra	Y	Cả hai cụ thể; nhóm chất dùng nấu ăn quen, tần suất nhỉnh hơn dầu mỏ.
+dauphong	dauphong:1	dầu phọng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dauphong	dauphong:2	dầu phộng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dauphong	dauphong:3	đậu phọng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dausao	dausao:1	dầu sao	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dausao	dausao:2	dẫu sao	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+daydan	daydan:1	dây dẫn	A	Astra	Y	Dây dẫn điện là vật rõ và có số đo lớn hơn dây đàn hơn mười lần.
+daydan	daydan:2	dây đàn	O	Astra	N	Dây dẫn điện là vật rõ và có số đo lớn hơn dây đàn hơn mười lần.
+diban	diban:1	di bản	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+diban	diban:2	dị bản	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dichi	dichi:1	di chỉ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dichi	dichi:2	dĩ chí	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dichung	dichung:1	di chứng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dichung	dichung:2	dị chủng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dichung	dichung:3	dị chứng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+didich	didich:1	di dịch	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+didich	didich:2	di địch	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+didoi	didoi:1	di dời	BS	Astra	Y	Cùng H, việc chuyển đồ/người tới chỗ khác dễ miêu tả, số đo nhỉnh hơn đi đôi.
+didoi	didoi:2	đi đôi	O	Astra	N	Cùng H, việc chuyển đồ/người tới chỗ khác dễ miêu tả, số đo nhỉnh hơn đi đôi.
+diduong	diduong:1	di dưỡng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+diduong	diduong:2	dị dưỡng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+diduong	diduong:3	đi đường	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+didong	didong:1	di động	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+didong	didong:2	dị đồng	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dihai	dihai:1	di hài	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dihai	dihai:2	di hại	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dihai	dihai:3	dì hai	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dihinh	dihinh:1	di hình	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dihinh	dihinh:2	dị hình	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dili	dili:1	di lí	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dili	dili:2	đi lị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+disan	disan:1	di sản	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+disan	disan:2	dị sản	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+ditang	ditang:1	di táng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ditang	ditang:2	di tặng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ditat	ditat:1	di tật	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ditat	ditat:2	dị tật	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ditat	ditat:3	đi tắt	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+divat	divat:1	di vật	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+divat	divat:2	dị vật	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dithuong	dithuong:1	dĩ thượng	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dithuong	dithuong:2	dị thường	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+divang	divang:1	dĩ vãng	BS	Astra	N	Tình trạng vắng nhà quen, đối lại danh từ trừu tượng dĩ vãng.
+divang	divang:2	đi vắng	A+O	Astra	Y	Tình trạng vắng nhà quen, đối lại danh từ trừu tượng dĩ vãng.
+digiao	digiao:1	dị giao	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+digiao	digiao:2	dị giáo	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dihom	dihom:1	dị hờm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dihom	dihom:2	dị hợm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dinghi	dinghi:1	dị nghị	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dinghi	dinghi:2	đi nghỉ	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+disu	disu:1	dị sử	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+disu	disu:2	dị sự	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+divong	divong:1	dị vòng	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+divong	divong:2	đi vòng	O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dola	dola:1	dò la	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dola	dola:2	đô la	A	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dongdai	dongdai:1	dong dải	BS	Astra	N	Hoạt động buộc kiện rõ hơn cách tả dài dòng; cùng H nhưng số đo vượt ngưỡng mười lần nghiêng đóng đai.
+dongdai	dongdai:2	dông dài	A	Astra	N	Hoạt động buộc kiện rõ hơn cách tả dài dòng; cùng H nhưng số đo vượt ngưỡng mười lần nghiêng đóng đai.
+dongdai	dongdai:3	đóng đai	BS	Astra	Y	Hoạt động buộc kiện rõ hơn cách tả dài dòng; cùng H nhưng số đo vượt ngưỡng mười lần nghiêng đóng đai.
+dongdai	dongdai:4	đồng đại	BS	Astra	N	Hoạt động buộc kiện rõ hơn cách tả dài dòng; cùng H nhưng số đo vượt ngưỡng mười lần nghiêng đóng đai.
+dongdai	dongdai:5	động dại	BS	Astra	N	Hoạt động buộc kiện rõ hơn cách tả dài dòng; cùng H nhưng số đo vượt ngưỡng mười lần nghiêng đóng đai.
+dongdac	dongdac:1	dõng dạc	BS	Astra	N	Tính chất vật chuyển sang thể đặc quan sát được, cùng H và số đo nhỉnh hơn dõng dạc. Hạng R1 vẫn giữ khi chọn.
+dongdac	dongdac:2	đông đặc	A	Astra	Y	Tính chất vật chuyển sang thể đặc quan sát được, cùng H và số đo nhỉnh hơn dõng dạc. Hạng R1 vẫn giữ khi chọn.
+dohang	dohang:1	dỡ hàng	O	Astra	N	Tên đồ chơi trẻ em ở lớp C; gần sáu lần thấp hơn dỡ hàng, vẫn trong khoảng S1 ưu tiên sự cụ thể.
+dohang	dohang:2	đồ hàng	A	Astra	Y	Tên đồ chơi trẻ em ở lớp C; gần sáu lần thấp hơn dỡ hàng, vẫn trong khoảng S1 ưu tiên sự cụ thể.
+dudi	dudi:1	du di	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dudi	dudi:2	dù dì	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dukien	dukien:1	dữ kiện	A	Astra	N	Hai vế đều K; số gộp và bậc quen đều ưu tiên dự kiến.
+dukien	dukien:2	dự kiến	O	Astra	Y	Hai vế đều K; số gộp và bậc quen đều ưu tiên dự kiến.
+dunglai	dunglai:1	dừng lại	A	Astra	Y	Hai vế H cùng nghĩa gần nhau nhưng phân biệt tư thế; số ghi nhận của dừng lại vượt mười lần.
+dunglai	dunglai:2	đứng lại	O	Astra	N	Hai vế H cùng nghĩa gần nhau nhưng phân biệt tư thế; số ghi nhận của dừng lại vượt mười lần.
+dungdung	dungdung:1	dửng dưng	A	Astra	N	Động tác đặt vật theo phương đứng có hình rõ hơn thái độ dửng dưng, cũng có số đo cao hơn.
+dungdung	dungdung:2	dựng đứng	O	Astra	Y	Động tác đặt vật theo phương đứng có hình rõ hơn thái độ dửng dưng, cũng có số đo cao hơn.
+dactrung	dactrung:1	đắc trung	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dactrung	dactrung:2	đặc trưng	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+daylui	daylui:1	đẩy lui	BS	Astra	N	Hành động đẩy về phía sau; hai H, dạng này trội so với đẩy lui.
+daylui	daylui:2	đẩy lùi	A	Astra	Y	Hành động đẩy về phía sau; hai H, dạng này trội so với đẩy lui.
+dedanh	dedanh:1	đề danh	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dedanh	dedanh:2	để dành	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dinhvi	dinhvi:1	đình vi	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dinhvi	dinhvi:2	định vị	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+doan	doan:1	đoán	A	Astra	N	Món để ăn là vật C, thấp hơn động từ đoán chưa sáu lần; hợp ví dụ đã ký.
+doan	doan:2	đồ ăn	O	Astra	Y	Món để ăn là vật C, thấp hơn động từ đoán chưa sáu lần; hợp ví dụ đã ký.
+dongbang	dongbang:1	đóng băng	A	Astra	N	Cảnh địa hình cụ thể và PPM gần như đóng băng.
+dongbang	dongbang:2	đồng bằng	O	Astra	Y	Cảnh địa hình cụ thể và PPM gần như đóng băng.
+dothi	dothi:1	đô thị	O	Astra	Y	Cùng C; nơi dân cư rõ, phổ biến hơn đồ thị, đồng thời là OK thay vì R1.
+dothi	dothi:2	đồ thị	A	Astra	N	Cùng C; nơi dân cư rõ, phổ biến hơn đồ thị, đồng thời là OK thay vì R1.
+doidoi	doidoi:1	đổi đời	O	Astra	Y	Hành động/thay đổi hoàn cảnh có thể kể bằng sự kiện đời thường; thấp hơn đời đời trong hai lần, giữ ưu tiên H.
+doidoi	doidoi:2	đời đời	A	Astra	N	Hành động/thay đổi hoàn cảnh có thể kể bằng sự kiện đời thường; thấp hơn đời đời trong hai lần, giữ ưu tiên H.
+doidau	doidau:1	đối đầu	O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+doidau	doidau:2	đời đầu	A	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+dondoc	dondoc:1	đôn đốc	A	Astra	N	Đôn đốc tuy là động từ nhưng thấp hơn quá mười lần, không đề nghị có chữ ký đặc cách.
+dondoc	dondoc:2	đơn độc	O	Astra	Y	Đôn đốc tuy là động từ nhưng thấp hơn quá mười lần, không đề nghị có chữ ký đặc cách.
+dongdao	dongdao:1	đông đảo	A+O	Astra	Y	Đặc điểm nhìn thấy của một tập người; đồng dao là tên loại lời hát, ở lớp tác nghiệp K và thấp hơn nhiều.
+dongdao	dongdao:2	đồng dao	BS	Astra	N	Đặc điểm nhìn thấy của một tập người; đồng dao là tên loại lời hát, ở lớp tác nghiệp K và thấp hơn nhiều.
+dotquy	dotquy:1	đột quỵ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dotquy	dotquy:2	đột qụy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+dungmuc	dungmuc:1	đúng mức	A	Astra	N	Đều K, từ tả phép cư xử có nghĩa rõ và PPM nhỉnh hơn đúng mức.
+dungmuc	dungmuc:2	đúng mực	BS	Astra	Y	Đều K, từ tả phép cư xử có nghĩa rõ và PPM nhỉnh hơn đúng mức.
+duongdai	duongdai:1	đương đại	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+duongdai	duongdai:2	đường dài	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+elip	elip:1	e líp	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+elip	elip:2	elip	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ekip	ekip:1	ê kíp	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+ekip	ekip:2	êkip	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gacxep	gacxep:1	gác xép	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gacxep	gacxep:2	gác xếp	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gang	gang:1	gang	O	Astra	N	Vật đeo tay dễ hình dung; hai vế C và găng có số đo cao hơn.
+gang	gang:2	găng	A	Astra	Y	Vật đeo tay dễ hình dung; hai vế C và găng có số đo cao hơn.
+gaycan	gaycan:1	gay cấn	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+gaycan	gaycan:2	gây cấn	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+gaygo	gaygo:1	gay go	O	Astra	N	Vóc dáng nhìn thấy, hai dạng gần như ngang số; ưu tiên H trước gay go trừu tượng.
+gaygo	gaygo:2	gầy gò	A	Astra	Y	Vóc dáng nhìn thấy, hai dạng gần như ngang số; ưu tiên H trước gay go trừu tượng.
+gamghe	gamghe:1	gằm ghè	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+gamghe	gamghe:2	gắm ghé	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+gamghe	gamghe:3	gầm ghè	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+gamnham	gamnham:1	gặm nhấm	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gamnham	gamnham:2	gậm nhấm	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+ganbo	ganbo:1	gắn bó	A	Astra	Y	Gân bò là vật C, nhưng 0,05 so với 8,38 và khó tách cách dùng trong ngành thực phẩm; giữ dạng thông dụng.
+ganbo	ganbo:2	gân bò	O	Astra	N	Gân bò là vật C, nhưng 0,05 so với 8,38 và khó tách cách dùng trong ngành thực phẩm; giữ dạng thông dụng.
+gaydung	gaydung:1	gây dựng	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+gaydung	gaydung:2	gầy dựng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+gile	gile:1	gi lê	BS	Astra	Y	Hai dạng cùng gọi áo, dạng hai khối dễ đọc và nguồn dùng nhiều hơn gilê liền.
+gile	gile:2	gilê	BS	Astra	N	Hai dạng cùng gọi áo, dạng hai khối dễ đọc và nguồn dùng nhiều hơn gilê liền.
+giasu	giasu:1	gia sư	O	Astra	Y	Tên người dạy kèm có cảnh rõ; giả sử là khung ngữ pháp, chưa tới ba lần chênh.
+giasu	giasu:2	giả sử	A	Astra	N	Tên người dạy kèm có cảnh rõ; giả sử là khung ngữ pháp, chưa tới ba lần chênh.
+giadu	giadu:1	giả dụ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+giadu	giadu:2	giá dụ	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+giaivi	giaivi:1	giai vị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+giaivi	giaivi:2	giải vi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+giankho	giankho:1	gian khó	A	Astra	Y	Hai vế cùng K; chọn cách có số đo cao hơn gian khổ.
+giankho	giankho:2	gian khổ	BS	Astra	N	Hai vế cùng K; chọn cách có số đo cao hơn gian khổ.
+gianno	gianno:1	giãn nở	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gianno	gianno:2	giãn nợ	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gianh	gianh:1	gianh	BS	Astra	N	Gianh/danh từ cỏ hơi hẹp chỉ 0,11 so với 55,36. Chọn động từ phổ thông, không xin ngoại lệ.
+gianh	gianh:2	giành	BS	Astra	Y	Gianh/danh từ cỏ hơi hẹp chỉ 0,11 so với 55,36. Chọn động từ phổ thông, không xin ngoại lệ.
+gianh	gianh:3	giảnh	BS	Astra	N	Gianh/danh từ cỏ hơi hẹp chỉ 0,11 so với 55,36. Chọn động từ phổ thông, không xin ngoại lệ.
+giaygiua	giaygiua:1	giãy giụa	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+giaygiua	giaygiua:2	giẫy giụa	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+giambong	giambong:1	giămbông	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+giambong	giambong:2	giấm bỗng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+gion	gion:1	gión	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gion	gion:2	giôn	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gion	gion:3	giờn	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+gion	gion:4	giỡn	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+giongnoi	giongnoi:1	giọng nói	O	Astra	Y	Âm thanh có thể nhận ra của một người; phổ biến hơn danh từ trừu tượng giống nòi.
+giongnoi	giongnoi:2	giống nòi	A	Astra	N	Âm thanh có thể nhận ra của một người; phổ biến hơn danh từ trừu tượng giống nòi.
+hanghai	hanghai:1	hàng hải	A	Astra	N	Hành vi xông xáo dễ quan sát; hàng hải là ngành, nhiều hơn khoảng năm lần nhưng không vượt ngưỡng.
+hanghai	hanghai:2	hăng hái	O	Astra	Y	Hành vi xông xáo dễ quan sát; hàng hải là ngành, nhiều hơn khoảng năm lần nhưng không vượt ngưỡng.
+hangnam	hangnam:1	hàng năm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hangnam	hangnam:2	hàng nằm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hangngay	hangngay:1	hàng ngày	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hangngay	hangngay:2	hằng ngày	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hamham	hamham:1	hằm hằm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hamham	hamham:2	hâm hâm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hamham	hamham:3	hâm hẩm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hamham	hamham:4	hầm hầm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hecta	hecta:1	héc ta	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hecta	hecta:2	hecta	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hetmuc	hetmuc:1	hết mức	O	Astra	Y	Hai cụm đều thuộc F, dạng này ghi nhận cao hơn và dễ miêu tả đúng chức năng nhấn mạnh.
+hetmuc	hetmuc:2	hết mực	A	Astra	N	Hai cụm đều thuộc F, dạng này ghi nhận cao hơn và dễ miêu tả đúng chức năng nhấn mạnh.
+hihi	hihi:1	hi hi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hihi	hihi:2	hi hí	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hihi	hihi:3	hì hì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hihi	hihi:4	hí hí	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hihui	hihui:1	hì hụi	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+hihui	hihui:2	hí húi	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+hien	hien:1	hiên	A	Astra	Y	Hiên nhà cụ thể, so với hiền chỉ kém khoảng hai lần.
+hien	hien:2	hiền	O	Astra	N	Hiên nhà cụ thể, so với hiền chỉ kém khoảng hai lần.
+hoclom	hoclom:1	học lỏm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hoclom	hoclom:2	học lóm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hoihop	hoihop:1	hồi hộp	O	Astra	N	H sinh hoạt gặp nhau, dễ dựng cảnh hơn cảm giác hồi hộp; dưới ba lần.
+hoihop	hoihop:2	hội họp	A	Astra	Y	H sinh hoạt gặp nhau, dễ dựng cảnh hơn cảm giác hồi hộp; dưới ba lần.
+huhi	huhi:1	hủ hỉ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+huhi	huhi:2	hú hí	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+huyenhoac	huyenhoac:1	huyền hoặc	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+huyenhoac	huyenhoac:2	huyễn hoặc	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hungsang	hungsang:1	hừng sáng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+hungsang	hungsang:2	hửng sáng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+huong	huong:1	hương	A	Astra	Y	C chỉ hương hoặc nhang, có mùi phân biệt; hướng là quan hệ trừu tượng, nhiều hơn chỉ khoảng năm lần.
+huong	huong:2	hướng	O	Astra	N	C chỉ hương hoặc nhang, có mùi phân biệt; hướng là quan hệ trừu tượng, nhiều hơn chỉ khoảng năm lần.
+imlim	imlim:1	im lìm	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+imlim	imlim:2	im lịm	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+kemcap	kemcap:1	kèm cặp	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+kemcap	kemcap:2	kềm cặp	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ketu	ketu:1	kể từ	O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+ketu	ketu:2	kế tự	A	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+khac	khac:1	khác	O	Astra	Y	Khắc có thể là hành động khắc lên vật, nhưng hơn mười lần thấp hơn tính so sánh khác; không xin ngoại lệ.
+khac	khac:2	khắc	A	Astra	N	Khắc có thể là hành động khắc lên vật, nhưng hơn mười lần thấp hơn tính so sánh khác; không xin ngoại lệ.
+khangkhai	khangkhai:1	khảng khái	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+khangkhai	khangkhai:2	khẳng khái	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+khidot	khidot:1	khỉ đột	O	Astra	N	Hai vế C; chất dùng làm nhiên liệu quen và được ghi nhận nhiều hơn khỉ đột.
+khidot	khidot:2	khí đốt	A	Astra	Y	Hai vế C; chất dùng làm nhiên liệu quen và được ghi nhận nhiều hơn khỉ đột.
+khuyu	khuyu:1	khuỷu	BS	Astra	Y	Khuỷu tay là bộ phận cơ thể cụ thể, không vướng nghĩa chuyên khoa; khuỵu là động tác kém phổ biến hơn.
+khuyu	khuyu:2	khuỵu	BS	Astra	N	Khuỷu tay là bộ phận cơ thể cụ thể, không vướng nghĩa chuyên khoa; khuỵu là động tác kém phổ biến hơn.
+kicop	kicop:1	ki cóp	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+kicop	kicop:2	kí cóp	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+kilo	kilo:1	ki lô	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+kilo	kilo:2	kí lô	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+kilo	kilo:3	kilô	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+kitinh	kitinh:1	kì tình	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+kitinh	kitinh:2	kĩ tính	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+kieng	kieng:1	kiêng	O	Astra	Y	Kiềng là đồ có thực nhưng số đo kém trên ba chục lần, không xem mọi danh từ đều buộc đặc cách.
+kieng	kieng:2	kiềng	A	Astra	N	Kiềng là đồ có thực nhưng số đo kém trên ba chục lần, không xem mọi danh từ đều buộc đặc cách.
+kinhdo	kinhdo:1	kinh đô	O	Astra	Y	Tên gọi nơi chốn thực, rõ hơn tọa độ kinh độ; chênh chưa ba lần.
+kinhdo	kinhdo:2	kinh độ	A	Astra	N	Tên gọi nơi chốn thực, rõ hơn tọa độ kinh độ; chênh chưa ba lần.
+kinhmat	kinhmat:1	kính mát	O	Astra	N	Cả hai là vật; tên loại kính thông dụng và số đo cao hơn kính mát.
+kinhmat	kinhmat:2	kính mắt	A	Astra	Y	Cả hai là vật; tên loại kính thông dụng và số đo cao hơn kính mát.
+lada	lada:1	la đà	BS	Astra	N	Đều R1/H; giữ cách có lượt thực ở hai kho lớn, không dùng la đà bằng không khi còn mặt tốt.
+lada	lada:2	là đà	BS	Astra	Y	Đều R1/H; giữ cách có lượt thực ở hai kho lớn, không dùng la đà bằng không khi còn mặt tốt.
+laray	laray:1	la rày	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+laray	laray:2	la rầy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+lamat	lamat:1	lạ mắt	O	Astra	N	Nhận dạng người chưa quen nhìn thấy được; cùng H và số đo cao hơn lạ mắt.
+lamat	lamat:2	lạ mặt	A	Astra	Y	Nhận dạng người chưa quen nhìn thấy được; cùng H và số đo cao hơn lạ mắt.
+lach	lach:1	lách	O	Astra	N	Gọi dòng nước nhỏ, dễ gợi cảnh; thấp hơn lách khoảng sáu lần, vẫn ưu tiên vật/nơi.
+lach	lach:2	lạch	A	Astra	Y	Gọi dòng nước nhỏ, dễ gợi cảnh; thấp hơn lách khoảng sáu lần, vẫn ưu tiên vật/nơi.
+lamlanh	lamlanh:1	làm lành	A	Astra	N	Đều là hành vi, quá trình hạ nhiệt phổ biến hơn làm lành gần hai chục lần.
+lamlanh	lamlanh:2	làm lạnh	O	Astra	Y	Đều là hành vi, quá trình hạ nhiệt phổ biến hơn làm lành gần hai chục lần.
+lamon	lamon:1	làm ồn	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+lamon	lamon:2	làm ơn	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+lancan	lancan:1	lan can	O	Astra	Y	Vật chắn bên thành cầu/ban công, hai mặt gần bằng tần suất, C ưu tiên.
+lancan	lancan:2	lân cận	A	Astra	N	Vật chắn bên thành cầu/ban công, hai mặt gần bằng tần suất, C ưu tiên.
+lapxuong	lapxuong:1	lạp xường	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+lapxuong	lapxuong:2	lạp xưởng	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+latleo	latleo:1	lạt lẽo	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+latleo	latleo:2	lắt lẻo	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+latleo	latleo:3	lắt léo	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+latleo	latleo:4	lặt lẹo	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+latleo	latleo:5	lật lẹo	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+laubau	laubau:1	làu bàu	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+laubau	laubau:2	lảu bảu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+laubau	laubau:3	lạu bạu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+laubau	laubau:4	lầu bầu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+laubau	laubau:5	lẩu bẩu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+laylat	laylat:1	lay lắt	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+laylat	laylat:2	lay lất	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+laylat	laylat:3	lây lất	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+layon	layon:1	lay ơn	BS	Astra	Y	Tên hoa, cách tách tiếng dễ đọc hơn layơn viết liền; bậc và số đo cũng nhỉnh.
+layon	layon:2	layơn	BS	Astra	N	Tên hoa, cách tách tiếng dễ đọc hơn layơn viết liền; bậc và số đo cũng nhỉnh.
+lanlon	lanlon:1	lăn lộn	A	Astra	N	Tình trạng trộn nhầm nhận ra được, cùng H và có số ghi nhận cao hơn lăn lộn.
+lanlon	lanlon:2	lẫn lộn	O	Astra	Y	Tình trạng trộn nhầm nhận ra được, cùng H và có số ghi nhận cao hơn lăn lộn.
+langxang	langxang:1	lăng xăng	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+langxang	langxang:2	lắng xắng	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+lapbap	lapbap:1	lắp bắp	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+lapbap	lapbap:2	lặp bặp	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+lapbap	lapbap:3	lập bập	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+laplai	laplai:1	lắp lại	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+laplai	laplai:2	lặp lại	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+lanquan	lanquan:1	lẩn quẩn	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+lanquan	lanquan:2	lẫn quẫn	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+lanquan	lanquan:3	lấn quấn	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+laplo	laplo:1	lấp ló	O	Astra	Y	Ló ra một chút rồi khuất, là hình ảnh rõ; cùng H và phổ biến hơn lập lờ.
+laplo	laplo:2	lập lờ	A	Astra	N	Ló ra một chút rồi khuất, là hình ảnh rõ; cùng H và phổ biến hơn lập lờ.
+leloi	leloi:1	lẻ loi	O	Astra	Y	Trạng thái một mình dễ hình dung; lề lối trang trọng hơn và ít lượt.
+leloi	leloi:2	lề lối	A	Astra	N	Trạng thái một mình dễ hình dung; lề lối trang trọng hơn và ít lượt.
+liti	liti:1	li ti	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+liti	liti:2	lí tí	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+lichsu	lichsu:1	lịch sử	A	Astra	N	Cách cư xử nhã nhặn nhìn thấy được; lịch sử trừu tượng và cao hơn khoảng năm lần.
+lichsu	lichsu:2	lịch sự	O	Astra	Y	Cách cư xử nhã nhặn nhìn thấy được; lịch sử trừu tượng và cao hơn khoảng năm lần.
+linhtinh	linhtinh:1	linh tinh	O	Astra	Y	Đều K, cách nói đời thường về những thứ vụn vặt có PPM cao hơn linh tính.
+linhtinh	linhtinh:2	linh tính	A	Astra	N	Đều K, cách nói đời thường về những thứ vụn vặt có PPM cao hơn linh tính.
+loco	loco:1	lò cò	O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+loco	loco:2	lỡ cơ	A	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+lodo	lodo:1	lò dò	A	Astra	N	Đều H; trạng thái chậm thiếu tỉnh táo và có số đo cao hơn lò dò trên mười lần.
+lodo	lodo:2	lờ đờ	O	Astra	Y	Đều H; trạng thái chậm thiếu tỉnh táo và có số đo cao hơn lò dò trên mười lần.
+loai	loai:1	loài	A	Astra	N	Hai vế đều khái niệm phân loại; loại có số đo hơn loài trên mười lần.
+loai	loai:2	loại	O	Astra	Y	Hai vế đều khái niệm phân loại; loại có số đo hơn loài trên mười lần.
+logic	logic:1	logic	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+logic	logic:2	lôgic	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+longlanh	longlanh:1	long lanh	A	Astra	Y	Cùng H, tả ánh sáng quen; số đo vượt lóng lánh hơn mười lần.
+longlanh	longlanh:2	lóng lánh	BS	Astra	N	Cùng H, tả ánh sáng quen; số đo vượt lóng lánh hơn mười lần.
+longnhong	longnhong:1	long nhong	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+longnhong	longnhong:2	lóng nhóng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+longnhong	longnhong:3	lông nhông	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+lotlong	lotlong:1	lót lòng	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+lotlong	lotlong:2	lọt lòng	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+luanquan	luanquan:1	luẩn quẩn	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+luanquan	luanquan:2	luấn quấn	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+luclac	luclac:1	lúc lắc	A	Astra	N	Vật nhỏ tạo tiếng khi lắc, chênh chưa sáu lần so với lúc lắc; ưu tiên C.
+luclac	luclac:2	lục lạc	O	Astra	Y	Vật nhỏ tạo tiếng khi lắc, chênh chưa sáu lần so với lúc lắc; ưu tiên C.
+lungtung	lungtung:1	lung tung	O	Astra	Y	Đều H; phạm vi dùng rộng và số gộp cao hơn lúng túng.
+lungtung	lungtung:2	lúng túng	A	Astra	N	Đều H; phạm vi dùng rộng và số gộp cao hơn lúng túng.
+luoc	luoc:1	luộc	O	Astra	N	Vật để chải tóc, phổ biến và dễ chỉ ra hơn động từ luộc.
+luoc	luoc:2	lược	A	Astra	Y	Vật để chải tóc, phổ biến và dễ chỉ ra hơn động từ luộc.
+luong	luong:1	luống	A	Astra	N	Luống trồng rau là vật gợi hình nhưng chỉ 0,82 so với 68,63; không xin hai chữ ký để ưu tiên nó.
+luong	luong:2	lương	O	Astra	Y	Luống trồng rau là vật gợi hình nhưng chỉ 0,82 so với 68,63; không xin hai chữ ký để ưu tiên nó.
+mach	mach:1	mách	O	Astra	N	Có thể chỉ đường dẫn/mạch điện là đối tượng cụ thể; phổ biến hơn mách.
+mach	mach:2	mạch	A	Astra	Y	Có thể chỉ đường dẫn/mạch điện là đối tượng cụ thể; phổ biến hơn mách.
+machnuoc	machnuoc:1	mách nước	A	Astra	N	Tên dòng nước dưới đất, hình dung được và nhiều lượt hơn mách nước.
+machnuoc	machnuoc:2	mạch nước	O	Astra	Y	Tên dòng nước dưới đất, hình dung được và nhiều lượt hơn mách nước.
+manh	manh:1	mành	A	Astra	N	Mành che cụ thể nhưng mức chênh khoảng năm trăm lần; tên mành còn cạnh tranh với rèm trong khẩu ngữ, không xin ngoại lệ.
+manh	manh:2	mạnh	O	Astra	Y	Mành che cụ thể nhưng mức chênh khoảng năm trăm lần; tên mành còn cạnh tranh với rèm trong khẩu ngữ, không xin ngoại lệ.
+matlong	matlong:1	mát lòng	A	Astra	N	Cả hai K; nghĩa làm người khác phật ý còn nhẹ và ghi nhận nhiều hơn mát lòng trên mười lần.
+matlong	matlong:2	mất lòng	O	Astra	Y	Cả hai K; nghĩa làm người khác phật ý còn nhẹ và ghi nhận nhiều hơn mát lòng trên mười lần.
+maumo	maumo:1	màu mỡ	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+maumo	maumo:2	mầu mỡ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+maunhiem	maunhiem:1	màu nhiệm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+maunhiem	maunhiem:2	mầu nhiệm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+mayo	mayo:1	may ô	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+mayo	mayo:2	mayô	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+maymo	maymo:1	mày mò	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+maymo	maymo:2	máy mó	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+maymo	maymo:3	mầy mò	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+mitu	mitu:1	mĩ từ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+mitu	mitu:2	mĩ tự	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+miennhiem	miennhiem:1	miễn nhiễm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+miennhiem	miennhiem:2	miễn nhiệm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+mongmanh	mongmanh:1	mong manh	A	Astra	BO	Ba dạng gần nhau nghĩa mong manh, mỏng manh, mỏng mảnh; khó giải thích cách gõ lại một mặt mà không nhầm hai mặt khác. Không cần giữ bằng mọi giá.
+mongmanh	mongmanh:2	mỏng manh	BS	Astra	BO	Ba dạng gần nhau nghĩa mong manh, mỏng manh, mỏng mảnh; khó giải thích cách gõ lại một mặt mà không nhầm hai mặt khác. Không cần giữ bằng mọi giá.
+mongmanh	mongmanh:3	mỏng mảnh	BS	Astra	BO	Ba dạng gần nhau nghĩa mong manh, mỏng manh, mỏng mảnh; khó giải thích cách gõ lại một mặt mà không nhầm hai mặt khác. Không cần giữ bằng mọi giá.
+mongmanh	mongmanh:4	móng mánh	BS	Astra	BO	Ba dạng gần nhau nghĩa mong manh, mỏng manh, mỏng mảnh; khó giải thích cách gõ lại một mặt mà không nhầm hai mặt khác. Không cần giữ bằng mọi giá.
+motip	motip:1	mô típ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+motip	motip:2	môtip	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+moto	moto:1	mô tô	BS	Astra	Y	Tên chiếc xe này có hai âm tiết và dễ đọc hơn môtô liền, tần suất và bậc đều ủng hộ.
+moto	moto:2	môtô	BS	Astra	N	Tên chiếc xe này có hai âm tiết và dễ đọc hơn môtô liền, tần suất và bậc đều ủng hộ.
+momang	momang:1	mơ màng	O	Astra	N	Đều H, mở rộng kiến thức/phạm vi có số đo nhỉnh hơn mơ màng.
+momang	momang:2	mở mang	A	Astra	Y	Đều H, mở rộng kiến thức/phạm vi có số đo nhỉnh hơn mơ màng.
+mumi	mumi:1	mủ mỉ	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+mumi	mumi:2	mụ mị	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+mucnuoc	mucnuoc:1	mức nước	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+mucnuoc	mucnuoc:2	mực nước	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nayno	nayno:1	này nọ	O	Astra	N	Sự sinh trưởng có thể quan sát, này nọ là khung phiếm chỉ; chênh chỉ khoảng ba lần.
+nayno	nayno:2	nảy nở	A	Astra	Y	Sự sinh trưởng có thể quan sát, này nọ là khung phiếm chỉ; chênh chỉ khoảng ba lần.
+nanni	nanni:1	năn nỉ	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nanni	nanni:2	nằn nì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngan	ngan:1	ngăn	A	Astra	Y	Cùng H, động tác ngăn lại hay chia ngăn quen và được ghi nhận hơn ngắn.
+ngan	ngan:2	ngắn	O	Astra	N	Cùng H, động tác ngăn lại hay chia ngăn quen và được ghi nhận hơn ngắn.
+nganquy	nganquy:1	ngân quỹ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nganquy	nganquy:2	ngân qũy	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nghelom	nghelom:1	nghe lỏm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nghelom	nghelom:2	nghe lóm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nghen	nghen:1	nghẽn	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nghen	nghen:2	nghẹn	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nghi	nghi:1	nghi	O	Astra	N	Hành động dừng làm để nghỉ dễ hiểu hơn nghi, PPM cao hơn.
+nghi	nghi:2	nghỉ	A	Astra	Y	Hành động dừng làm để nghỉ dễ hiểu hơn nghi, PPM cao hơn.
+ngongoay	ngongoay:1	ngó ngoáy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngongoay	ngongoay:2	ngọ ngoạy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngoac	ngoac:1	ngoác	BS	Astra	N	Dấu ngoặc cho vật/dấu hiệu dạng C; số gộp cao hơn ngoắc, ngoác.
+ngoac	ngoac:2	ngoạc	BS	Astra	N	Dấu ngoặc cho vật/dấu hiệu dạng C; số gộp cao hơn ngoắc, ngoác.
+ngoac	ngoac:3	ngoắc	BS	Astra	N	Dấu ngoặc cho vật/dấu hiệu dạng C; số gộp cao hơn ngoắc, ngoác.
+ngoac	ngoac:4	ngoặc	A	Astra	Y	Dấu ngoặc cho vật/dấu hiệu dạng C; số gộp cao hơn ngoắc, ngoác.
+ngon	ngon:1	ngon	O	Astra	N	Bộ phận tay/chân nhìn thấy; thấp hơn ngon chưa ba lần.
+ngon	ngon:2	ngón	A	Astra	Y	Bộ phận tay/chân nhìn thấy; thấp hơn ngon chưa ba lần.
+ngonngot	ngonngot:1	ngon ngọt	O	Astra	Y	Từ gợi vị hoặc cách nói, hai H nhưng được ghi nhận nhiều hơn ngòn ngọt hơn mười lần.
+ngonngot	ngonngot:2	ngòn ngọt	A	Astra	N	Từ gợi vị hoặc cách nói, hai H nhưng được ghi nhận nhiều hơn ngòn ngọt hơn mười lần.
+ngocnghech	ngocnghech:1	ngốc nghếch	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngocnghech	ngocnghech:2	ngộc nghệch	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngonghech	ngonghech:1	ngơ nghếch	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngonghech	ngonghech:2	ngờ nghệch	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngungon	ngungon:1	ngủ ngon	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+ngungon	ngungon:2	ngụ ngôn	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nguvi	nguvi:1	ngũ vị	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nguvi	nguvi:2	ngữ vị	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nguechngoac	nguechngoac:1	nguếch ngoác	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nguechngoac	nguechngoac:2	nguệch ngoạc	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nguyenvi	nguyenvi:1	nguyên vì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nguyenvi	nguyenvi:2	nguyên vị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngua	ngua:1	ngửa	A	Astra	N	Loài vật cụ thể, phổ biến hơn ngửa và đã nêu tại S1.
+ngua	ngua:2	ngựa	O	Astra	Y	Loài vật cụ thể, phổ biến hơn ngửa và đã nêu tại S1.
+ngungtre	ngungtre:1	ngưng trệ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ngungtre	ngungtre:2	ngừng trệ	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nguoc	nguoc:1	ngước	A	Astra	N	Cùng H; tình trạng trái chiều được dùng nhiều hơn ngước gần bảy chục lần.
+nguoc	nguoc:2	ngược	O	Astra	Y	Cùng H; tình trạng trái chiều được dùng nhiều hơn ngước gần bảy chục lần.
+nguoidung	nguoidung:1	người dùng	A	Astra	Y	Cả hai đều gọi người; dữ liệu gộp nghiêng rất rõ về người dùng, không ưu tiên người dưng.
+nguoidung	nguoidung:2	người dưng	O	Astra	N	Cả hai đều gọi người; dữ liệu gộp nghiêng rất rõ về người dùng, không ưu tiên người dưng.
+nguoithuong	nguoithuong:1	người thương	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nguoithuong	nguoithuong:2	người thường	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nguong	nguong:1	ngưỡng	A	Astra	N	Biểu hiện ngượng có thể thấy; thấp hơn ngưỡng khoảng tám lần, vẫn trong biên cho H, cũng là OK.
+nguong	nguong:2	ngượng	O	Astra	Y	Biểu hiện ngượng có thể thấy; thấp hơn ngưỡng khoảng tám lần, vẫn trong biên cho H, cũng là OK.
+nhamay	nhamay:1	nhà may	A	Astra	N	Hai vế C; nơi sản xuất trong thực tế trội rất xa nhà may, giữ nhà máy.
+nhamay	nhamay:2	nhà máy	O	Astra	Y	Hai vế C; nơi sản xuất trong thực tế trội rất xa nhà may, giữ nhà máy.
+nhanha	nhanha:1	nhà nhà	A	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nhanha	nhanha:2	nhàn hạ	O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nhao	nhao:1	nhà ở	O	Astra	Y	Gọi công trình dùng ở, có PPM cao và dễ hình dung hơn nhào; ví dụ chung S1.
+nhao	nhao:2	nhào	A	Astra	N	Gọi công trình dùng ở, có PPM cao và dễ hình dung hơn nhào; ví dụ chung S1.
+nhamnhap	nhamnhap:1	nham nháp	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nhamnhap	nhamnhap:2	nhăm nhắp	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nhamnhap	nhamnhap:3	nhắm nháp	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nhamnhap	nhamnhap:4	nhâm nhấp	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nhamnhap	nhamnhap:5	nhấm nháp	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nhan	nhan:1	nhãn	BS	Astra	Y	Cùng C; có thể hình dung quả nhãn, nhãn dán; số đo cao hơn nhẫn. Không dùng cả hai cho cùng khóa.
+nhan	nhan:2	nhẫn	A+O	Astra	N	Cùng C; có thể hình dung quả nhãn, nhãn dán; số đo cao hơn nhẫn. Không dùng cả hai cho cùng khóa.
+nhanh	nhanh:1	nhanh	A	Astra	Y	Nhánh là bộ phận cây nhưng kém khoảng hai mươi lần; nhanh là tính chất ngay trong lời nói, không đề nghị ngoại lệ cho nhánh.
+nhanh	nhanh:2	nhánh	O	Astra	N	Nhánh là bộ phận cây nhưng kém khoảng hai mươi lần; nhanh là tính chất ngay trong lời nói, không đề nghị ngoại lệ cho nhánh.
+nhanhnhau	nhanhnhau:1	nhanh nhảu	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nhanhnhau	nhanhnhau:2	nhanh nhẩu	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nhau	nhau:1	nhau	O	Astra	N	XIN_KY_10X: nhàu là trạng thái nhìn thấy ở tờ giấy/áo bị vò, đối lại nhau là đại từ phụ thuộc câu. Danh sách Astra đóng băng trước thảo luận đã chọn nhàu; xin nhận dù PPM 1,216 so với 847,1. Không vì ngoại lệ này mà tự bỏ qua hai chữ ký.
+nhau	nhau:2	nhàu	A	Astra	Y	XIN_KY_10X: nhàu là trạng thái nhìn thấy ở tờ giấy/áo bị vò, đối lại nhau là đại từ phụ thuộc câu. Danh sách Astra đóng băng trước thảo luận đã chọn nhàu; xin nhận dù PPM 1,216 so với 847,1. Không vì ngoại lệ này mà tự bỏ qua hai chữ ký.
+nhay	nhay:1	nháy	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nhay	nhay:2	nhạy	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nham	nham:1	nhắm	O	Astra	Y	Cùng H; nhắm mắt/nhắm đích dễ nhìn và số đo lớn hơn nhẩm trên mười lần.
+nham	nham:2	nhẩm	A	Astra	N	Cùng H; nhắm mắt/nhắm đích dễ nhìn và số đo lớn hơn nhẩm trên mười lần.
+nhanvi	nhanvi:1	nhân vì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nhanvi	nhanvi:2	nhân vị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+nhap	nhap:1	nhấp	A	Astra	N	Cùng H, thao tác nhập đồ hay dữ liệu quen hơn nhấp theo số gộp.
+nhap	nhap:2	nhập	O	Astra	Y	Cùng H, thao tác nhập đồ hay dữ liệu quen hơn nhấp theo số gộp.
+nhom	nhom:1	nhóm	O	Astra	N	Chất kim loại C dễ chỉ ra, PPM gần ngang nhóm trừu tượng.
+nhom	nhom:2	nhôm	A	Astra	Y	Chất kim loại C dễ chỉ ra, PPM gần ngang nhóm trừu tượng.
+nhung	nhung:1	nhung	A	Astra	Y	Loại vải có bề mặt mềm, C và chênh chỉ khoảng ba lần so với nhúng.
+nhung	nhung:2	nhúng	O	Astra	N	Loại vải có bề mặt mềm, C và chênh chỉ khoảng ba lần so với nhúng.
+ninh	ninh:1	ninh	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ninh	ninh:2	nịnh	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+noigot	noigot:1	noi gót	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+noigot	noigot:2	nối gót	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nongcot	nongcot:1	nòng cốt	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+nongcot	nongcot:2	nòng cột	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+ongnghe	ongnghe:1	ong nghệ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ongnghe	ongnghe:2	ống nghe	A+O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+opera	opera:1	opera	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+opera	opera:2	ôpêra	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+ohay	ohay:1	ô hay	BS	Astra	Y	Hai thán từ F; dạng ô hay có số đo cao hơn ơ hay trên mười lần.
+ohay	ohay:2	ơ hay	BS	Astra	N	Hai thán từ F; dạng ô hay có số đo cao hơn ơ hay trên mười lần.
+okia	okia:1	ô kìa	BS	Astra	Y	Cùng F và bậc OK; cách thốt chỉ trỏ có PPM cao hơn ơ kìa.
+okia	okia:2	ơ kìa	BS	Astra	N	Cùng F và bậc OK; cách thốt chỉ trỏ có PPM cao hơn ơ kìa.
+omcham	omcham:1	ôm chằm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+omcham	omcham:2	ôm chầm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+pano	pano:1	pa nô	A	Astra	N	Cùng R1/C, loại bảng quảng cáo; dạng liền có số gộp cao hơn pa nô.
+pano	pano:2	panô	BS	Astra	Y	Cùng R1/C, loại bảng quảng cáo; dạng liền có số gộp cao hơn pa nô.
+pate	pate:1	pa tê	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+pate	pate:2	patê	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+phai	phai:1	phai	A	Astra	Y	XIN_KY_10X: phai mô tả màu trên vải nhạt dần, khác phải là trợ từ mệnh đề; từ phai đã có trong lựa chọn độc lập Astra trước thảo luận. Tôi chấp nhận độ chênh 8,06/4.545 khi có đủ hai chữ ký.
+phai	phai:2	phải	O	Astra	N	XIN_KY_10X: phai mô tả màu trên vải nhạt dần, khác phải là trợ từ mệnh đề; từ phai đã có trong lựa chọn độc lập Astra trước thảo luận. Tôi chấp nhận độ chênh 8,06/4.545 khi có đủ hai chữ ký.
+phamvi	phamvi:1	phạm vi	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+phamvi	phamvi:2	phẩm vị	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+phanxu	phanxu:1	phán xử	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+phanxu	phanxu:2	phân xử	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+phien	phien:1	phiên	A	Astra	Y	Hai khái niệm, phiên cuộc họp/lượt làm việc có số gộp cao hơn và đỡ gắn cảm xúc tiêu cực hơn phiền.
+phien	phien:2	phiền	O	Astra	N	Hai khái niệm, phiên cuộc họp/lượt làm việc có số gộp cao hơn và đỡ gắn cảm xúc tiêu cực hơn phiền.
+phim	phim:1	phim	O	Astra	Y	Hai C; tác phẩm phim dễ hình dung và số ghi nhận trội so với phím.
+phim	phim:2	phím	A	Astra	N	Hai C; tác phẩm phim dễ hình dung và số ghi nhận trội so với phím.
+phomat	phomat:1	pho mát	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+phomat	phomat:2	phó mát	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+phoi	phoi:1	phổi	O	Astra	Y	Cơ quan cơ thể bình thường, không tự thân là bệnh; cụ thể và nhiều lượt hơn phơi.
+phoi	phoi:2	phơi	A	Astra	N	Cơ quan cơ thể bình thường, không tự thân là bệnh; cụ thể và nhiều lượt hơn phơi.
+phunhan	phunhan:1	phu nhân	O	Astra	Y	Cách gọi một người trong văn phong trang trọng, C và phổ biến hơn phủ nhận; giữ bậc R1 thật.
+phunhan	phunhan:2	phủ nhận	A	Astra	N	Cách gọi một người trong văn phong trang trọng, C và phổ biến hơn phủ nhận; giữ bậc R1 thật.
+phucvi	phucvi:1	phục vi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+phucvi	phucvi:2	phục vị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+phuongvi	phuongvi:1	phương vị	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+phuongvi	phuongvi:2	phượng vĩ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+quacquac	quacquac:1	quác quác	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+quacquac	quacquac:2	quạc quạc	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+quatqueo	quatqueo:1	quắt queo	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+quatqueo	quatqueo:2	quắt quéo	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+quatqueo	quatqueo:3	quặt quẹo	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+quaypha	quaypha:1	quấy phá	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+quaypha	quaypha:2	quậy phá	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+quocsi	quocsi:1	quốc sỉ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+quocsi	quocsi:2	quốc sĩ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+rada	rada:1	ra da	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+rada	rada:2	ra đa	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+rada	rada:3	rađa	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+rairac	rairac:1	rải rác	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+rairac	rairac:2	rải rắc	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+ranh	ranh:1	rành	O	Astra	N	Đường lõm trên mặt đất/vật thể, C và tần suất cao hơn rành.
+ranh	ranh:2	rãnh	A	Astra	Y	Đường lõm trên mặt đất/vật thể, C và tần suất cao hơn rành.
+ramrap	ramrap:1	răm rắp	A	Astra	N	Cùng H; tả cây mọc nhiều, PPM cao hơn răm rắp trên mười lần.
+ramrap	ramrap:2	rậm rạp	O	Astra	Y	Cùng H; tả cây mọc nhiều, PPM cao hơn răm rắp trên mười lần.
+rieng	rieng:1	riêng	O	Astra	N	XIN_KY_10X: củ gia vị có mùi và hình ảnh riêng trong bữa ăn, trong khi riêng là thuộc tính chung; kho dịch ít tên cây. Astra đã chọn riềng trước thảo luận và S1 ghi sẵn. Biết PPM 0,107/322,2, vẫn cần hai ký.
+rieng	rieng:2	riềng	A	Astra	Y	XIN_KY_10X: củ gia vị có mùi và hình ảnh riêng trong bữa ăn, trong khi riêng là thuộc tính chung; kho dịch ít tên cây. Astra đã chọn riềng trước thảo luận và S1 ghi sẵn. Biết PPM 0,107/322,2, vẫn cần hai ký.
+robot	robot:1	robot	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+robot	robot:2	rô bốt	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+romra	romra:1	rôm rả	A	Astra	N	Vật còn lại sau thu hoạch lúa, C và phổ biến hơn rôm rả.
+romra	romra:2	rơm rạ	O	Astra	Y	Vật còn lại sau thu hoạch lúa, C và phổ biến hơn rôm rả.
+romooc	romooc:1	rơ moóc	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+romooc	romooc:2	rơmooc	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+rulo	rulo:1	ru lô	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+rulo	rulo:2	rulô	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+sachbong	sachbong:1	sạch bong	BS	Astra	BO	Sạch bong/sạch bóng đều có thể tả đồ sạch hoàn toàn; mức 0,306/0,353 gần nhau. Không quy người dùng phải đoán mặt có dấu nào.
+sachbong	sachbong:2	sạch bóng	BS	Astra	BO	Sạch bong/sạch bóng đều có thể tả đồ sạch hoàn toàn; mức 0,306/0,353 gần nhau. Không quy người dùng phải đoán mặt có dấu nào.
+sang	sang:1	sàng	A	Astra	Y	Vật dụng để sàng hạt, lớp C; PPM 283 so với 800 của sáng nằm dưới mười lần.
+sang	sang:2	sáng	O	Astra	N	Vật dụng để sàng hạt, lớp C; PPM 283 so với 800 của sáng nằm dưới mười lần.
+sanh	sanh:1	sành	A	Astra	N	Nơi rộng để đón khách, cùng C và thường được ghi nhận hơn sành.
+sanh	sanh:2	sảnh	O	Astra	Y	Nơi rộng để đón khách, cùng C và thường được ghi nhận hơn sành.
+saclem	saclem:1	sắc lẻm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+saclem	saclem:2	sắc lẹm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+sammau	sammau:1	sặm màu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+sammau	sammau:2	sậm màu	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+sanco	sanco:1	sẵn có	A	Astra	N	Nơi chơi thể thao có thể hình dung; sẵn có là thuộc tính trừu tượng, nhiều hơn khoảng sáu lần.
+sanco	sanco:2	sân cỏ	O	Astra	Y	Nơi chơi thể thao có thể hình dung; sẵn có là thuộc tính trừu tượng, nhiều hơn khoảng sáu lần.
+samsi	samsi:1	sâm si	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+samsi	samsi:2	sầm sì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+sese	sese:1	se se	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+sese	sese:2	se sẻ	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+sodo	sodo:1	số đo	A	Astra	N	Vật hoặc hình biểu diễn trên giấy, số liệu cũng trội, thay vì số đo.
+sodo	sodo:2	sơ đồ	O	Astra	Y	Vật hoặc hình biểu diễn trên giấy, số liệu cũng trội, thay vì số đo.
+suongsa	suongsa:1	suồng sã	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+suongsa	suongsa:2	sương sa	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+suplo	suplo:1	súp lơ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+suplo	suplo:2	sụp lở	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+suplo	suplo:3	suplơ	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+suyt	suyt:1	suýt	A	Astra	Y	Hai hư từ/thán từ F, vế suýt được ghi nhận nhiều hơn; không đánh đồng với suỵt bảo giữ im lặng.
+suyt	suyt:2	suỵt	BS	Astra	N	Hai hư từ/thán từ F, vế suýt được ghi nhận nhiều hơn; không đánh đồng với suỵt bảo giữ im lặng.
+suytsoat	suytsoat:1	suýt soát	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+suytsoat	suytsoat:2	suỵt soạt	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+taivi	taivi:1	tại vì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+taivi	taivi:2	tại vị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tambo	tambo:1	tạm bợ	A	Astra	Y	Cả hai H, số đo nhỉnh hơn tẩm bổ; mô tả cách dựng hay dùng đồ tạm thời.
+tambo	tambo:2	tẩm bổ	O	Astra	N	Cả hai H, số đo nhỉnh hơn tẩm bổ; mô tả cách dựng hay dùng đồ tạm thời.
+tantinh	tantinh:1	tán tỉnh	A	Astra	N	Tán tỉnh có thể dùng trong giao tiếp lãng mạn và dễ gây ngượng khi đọc passphrase; tôi ưu tiên tận tình trong khóa này dù lớp K, không gán hồi tố H6 cho từ kia.
+tantinh	tantinh:2	tận tình	O	Astra	Y	Tán tỉnh có thể dùng trong giao tiếp lãng mạn và dễ gây ngượng khi đọc passphrase; tôi ưu tiên tận tình trong khóa này dù lớp K, không gán hồi tố H6 cho từ kia.
+taytrang	taytrang:1	tay trắng	A	Astra	N	Hành động cụ thể hằng ngày, hai vế H; tay trắng còn thường là nghĩa bóng. Chênh nhỏ chấp nhận được.
+taytrang	taytrang:2	tẩy trang	O	Astra	Y	Hành động cụ thể hằng ngày, hai vế H; tay trắng còn thường là nghĩa bóng. Chênh nhỏ chấp nhận được.
+tacluoi	tacluoi:1	tắc lưỡi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tacluoi	tacluoi:2	tặc lưỡi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tanggia	tanggia:1	tăng gia	A	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tanggia	tanggia:2	tăng giá	O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tharong	tharong:1	thả rong	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tharong	tharong:2	thả rông	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+thamdo	thamdo:1	thảm đỏ	O	Astra	N	Thảm đỏ là vật nhưng chênh hơn mười lần; thăm dò là hoạt động quan sát/tìm hiểu thông tin, không đề nghị ngoại lệ cho thảm đỏ.
+thamdo	thamdo:2	thăm dò	A	Astra	Y	Thảm đỏ là vật nhưng chênh hơn mười lần; thăm dò là hoạt động quan sát/tìm hiểu thông tin, không đề nghị ngoại lệ cho thảm đỏ.
+thanh	thanh:1	thanh	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+thanh	thanh:2	thành	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+thanhnien	thanhnien:1	thanh niên	O	Astra	Y	Chỉ người trẻ, cụ thể và thường hơn khái niệm thành niên.
+thanhnien	thanhnien:2	thành niên	A	Astra	N	Chỉ người trẻ, cụ thể và thường hơn khái niệm thành niên.
+thanhtinh	thanhtinh:1	thanh tĩnh	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+thanhtinh	thanhtinh:2	thanh tịnh	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+thap	thap:1	tháp	O	Astra	Y	Công trình xây cao, ưu tiên C và có số đo hơn động tác thắp.
+thap	thap:2	thắp	A	Astra	N	Công trình xây cao, ưu tiên C và có số đo hơn động tác thắp.
+that	that:1	thắt	A	Astra	N	Thắt là hành động gợi hình, nhưng số đo thấp hơn thật hơn ba chục lần; không xin ngoại lệ.
+that	that:2	thật	O	Astra	Y	Thắt là hành động gợi hình, nhưng số đo thấp hơn thật hơn ba chục lần; không xin ngoại lệ.
+thamthoat	thamthoat:1	thấm thoát	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+thamthoat	thamthoat:2	thấm thoắt	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+thay	thay:1	thầy	A	Astra	Y	XIN_KY_10X: sau khi khóa thay vượt K2 hai người, thầy gọi người dạy, có 7.562/4.540 mặt chữ ở hai kho chứ không hề hiếm dù dưới thấy 15,6 lần. Đã có trong lựa chọn Astra độc lập và ví dụ S1; không ghép chữ ký K2 thay chữ ký S1.
+thay	thay:2	thấy	O	Astra	N	XIN_KY_10X: sau khi khóa thay vượt K2 hai người, thầy gọi người dạy, có 7.562/4.540 mặt chữ ở hai kho chứ không hề hiếm dù dưới thấy 15,6 lần. Đã có trong lựa chọn Astra độc lập và ví dụ S1; không ghép chữ ký K2 thay chữ ký S1.
+them	them:1	thèm	O	Astra	N	XIN_KY_10X: phần nền/bậc sát trước cửa có hình và vị trí cụ thể; thèm chỉ cảm giác muốn. PPM 2,007/36,48; Astra đã chọn thềm trước thảo luận và S1 có nêu. Cần cả hai người ký riêng.
+them	them:2	thềm	A	Astra	Y	XIN_KY_10X: phần nền/bậc sát trước cửa có hình và vị trí cụ thể; thèm chỉ cảm giác muốn. PPM 2,007/36,48; Astra đã chọn thềm trước thảo luận và S1 có nêu. Cần cả hai người ký riêng.
+then	then:1	then	A	Astra	Y	Thanh chốt cửa, C và còn phổ biến hơn cảm giác thẹn.
+then	then:2	thẹn	O	Astra	N	Thanh chốt cửa, C và còn phổ biến hơn cảm giác thẹn.
+thienha	thienha:1	thiên hà	O	Astra	Y	Hệ các ngôi sao dễ minh họa, C; số tương đương cách nói thiên hạ trừu tượng.
+thienha	thienha:2	thiên hạ	A	Astra	N	Hệ các ngôi sao dễ minh họa, C; số tương đương cách nói thiên hạ trừu tượng.
+thoang	thoang:1	thoảng	A	Astra	Y	Cùng H; mùi/gió thoảng qua và có PPM nhỉnh hơn thoáng.
+thoang	thoang:2	thoáng	O	Astra	N	Cùng H; mùi/gió thoảng qua và có PPM nhỉnh hơn thoáng.
+thunhan	thunhan:1	thu nhận	A	Astra	N	Hai động từ H; thú nhận còn dùng với sai sót đời thường, không mặc nhiên tố tụng, PPM cao hơn thu nhận.
+thunhan	thunhan:2	thú nhận	O	Astra	Y	Hai động từ H; thú nhận còn dùng với sai sót đời thường, không mặc nhiên tố tụng, PPM cao hơn thu nhận.
+thuvi	thuvi:1	thú vị	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+thuvi	thuvi:2	thứ vị	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+thua	thua:1	thua	O	Astra	Y	Hành động/kết quả trong trò chơi, chênh với thưa dưới bảy lần; ưu tiên H thay F tác nghiệp.
+thua	thua:2	thưa	A	Astra	N	Hành động/kết quả trong trò chơi, chênh với thưa dưới bảy lần; ưu tiên H thay F tác nghiệp.
+thuan	thuan:1	thuần	A	Astra	Y	Lớp tác nghiệp H, có thể hình dung thuần hóa/vật thuần, chưa kém thuận mười lần.
+thuan	thuan:2	thuận	O	Astra	N	Lớp tác nghiệp H, có thể hình dung thuần hóa/vật thuần, chưa kém thuận mười lần.
+thutu	thutu:1	thứ tư	O	Astra	Y	Cùng K; tên ngày thường gặp, PPM nhỉnh hơn thứ tự. Không có chữ số trong đầu mục.
+thutu	thutu:2	thứ tự	A	Astra	N	Cùng K; tên ngày thường gặp, PPM nhỉnh hơn thứ tự. Không có chữ số trong đầu mục.
+thuong	thuong:1	thương	O	Astra	N	Hành động cho phần thưởng rõ hơn ý niệm thương, tần suất của vế sau hơn chưa bốn lần.
+thuong	thuong:2	thưởng	A	Astra	Y	Hành động cho phần thưởng rõ hơn ý niệm thương, tần suất của vế sau hơn chưa bốn lần.
+thuongthuc	thuongthuc:1	thường thức	A	Astra	N	Hành động trải nghiệm món ăn/tác phẩm, OK; thường thức trang trọng và thấp hơn nhiều.
+thuongthuc	thuongthuc:2	thưởng thức	O	Astra	Y	Hành động trải nghiệm món ăn/tác phẩm, OK; thường thức trang trọng và thấp hơn nhiều.
+titi	titi:1	ti ti	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titi	titi:2	ti tỉ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titi	titi:3	tì tì	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titi	titi:4	tỉ ti	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titi	titi:5	tí ti	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titi	titi:6	tí tị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titach	titach:1	tì tạch	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titach	titach:2	tí tách	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titeo	titeo:1	tí teo	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+titeo	titeo:2	tí tẹo	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tieudi	tieudi:1	tiểu di	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tieudi	tieudi:2	tiểu dị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tinhthe	tinhthe:1	tinh thể	A	Astra	Y	Vật có cấu trúc hình học định hình, thường gặp khi nói muối/đường, C và số đo cao hơn tình thế. Giữ nguyên R1.
+tinhthe	tinhthe:2	tình thế	O	Astra	N	Vật có cấu trúc hình học định hình, thường gặp khi nói muối/đường, C và số đo cao hơn tình thế. Giữ nguyên R1.
+tinhtrang	tinhtrang:1	tình trạng	O	Astra	Y	Cùng K, thuật ngữ tính trạng ít được dùng ngoài sinh học, số nghiêng hẳn về tình trạng.
+tinhtrang	tinhtrang:2	tính trạng	A	Astra	N	Cùng K, thuật ngữ tính trạng ít được dùng ngoài sinh học, số nghiêng hẳn về tình trạng.
+tinhtu	tinhtu:1	tình tứ	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tinhtu	tinhtu:2	tính từ	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tinh	tinh:1	tỉnh	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tinh	tinh:2	tính	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tonquy	tonquy:1	tôn qúy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tonquy	tonquy:2	tồn qũy	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tongdo	tongdo:1	tông đồ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tongdo	tongdo:2	tông đơ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tongdo	tongdo:3	tôngđơ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tram	tram:1	trạm	O	Astra	Y	Loại địa điểm dễ xác định, hai C; phổ biến hơn trâm trên mười lần.
+tram	tram:2	trâm	A	Astra	N	Loại địa điểm dễ xác định, hai C; phổ biến hơn trâm trên mười lần.
+troc	troc:1	tróc	A	Astra	N	Cùng H; tả bề mặt hoặc đầu không tóc, số ghi nhận nhỉnh hơn tróc.
+troc	troc:2	trọc	O	Astra	Y	Cùng H; tả bề mặt hoặc đầu không tóc, số ghi nhận nhỉnh hơn tróc.
+trongluc	trongluc:1	trong lúc	O	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+trongluc	trongluc:2	trọng lực	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+trongvong	trongvong:1	trong vòng	O	Astra	Y	Trọng vọng là động từ ít gặp hơn khoảng sáu trăm lần; giữ khung trong vòng, vẫn tính vào ngăn F.
+trongvong	trongvong:2	trọng vọng	A	Astra	N	Trọng vọng là động từ ít gặp hơn khoảng sáu trăm lần; giữ khung trong vòng, vẫn tính vào ngăn F.
+trot	trot:1	trót	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+trot	trot:2	trốt	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+trot	trot:3	trớt	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+trot	trot:4	trợt	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+trotroi	trotroi:1	trơ trọi	A	Astra	Y	Hai H, cụm tả cảnh đơn lẻ có PPM cao hơn trở trời trên mười lần.
+trotroi	trotroi:2	trở trời	O	Astra	N	Hai H, cụm tả cảnh đơn lẻ có PPM cao hơn trở trời trên mười lần.
+trum	trum:1	trùm	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+trum	trum:2	trúm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+trum	trum:3	trụm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+trungvi	trungvi:1	trung vị	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+trungvi	trungvi:2	trùng vi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+truyen	truyen:1	truyền	BS	Astra	Y	Truyện là C nhưng PPM thấp hơn truyền khoảng 13 lần; không xin thêm ngoại lệ ngoài các ca có lý do đặc biệt: người dùng vẫn hay gặp động từ truyền.
+truyen	truyen:2	truyện	A	Astra	N	Truyện là C nhưng PPM thấp hơn truyền khoảng 13 lần; không xin thêm ngoại lệ ngoài các ca có lý do đặc biệt: người dùng vẫn hay gặp động từ truyền.
+truyenthong	truyenthong:1	truyền thông	A	Astra	Y	Hai thiên hướng K; lĩnh vực truyền tải tin tức có PPM hơi cao hơn truyền thống.
+truyenthong	truyenthong:2	truyền thống	O	Astra	N	Hai thiên hướng K; lĩnh vực truyền tải tin tức có PPM hơi cao hơn truyền thống.
+truocmat	truocmat:1	trước mắt	A	Astra	N	Quan hệ không gian nhìn thấy, cùng lớp K song nghĩa trực tiếp hơn nghĩa diễn tiến của trước mắt; PPM cao hơn.
+truocmat	truocmat:2	trước mặt	O	Astra	Y	Quan hệ không gian nhìn thấy, cùng lớp K song nghĩa trực tiếp hơn nghĩa diễn tiến của trước mắt; PPM cao hơn.
+tusi	tusi:1	tu sĩ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tusi	tusi:2	tú sĩ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tusi	tusi:3	tử sĩ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tuti	tuti:1	tù tì	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tuti	tuti:2	tự ti	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tuche	tuche:1	tủ chè	A	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tuche	tuche:2	tự chế	O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tudung	tudung:1	tủ đứng	BS	Astra	Y	Vật gia đình phân biệt được, đối với tự dưng F; tỉ lệ 2,7432/0,2819 dưới mười lần khi tính không làm tròn.
+tudung	tudung:2	tự dưng	A+O	Astra	N	Vật gia đình phân biệt được, đối với tự dưng F; tỉ lệ 2,7432/0,2819 dưới mười lần khi tính không làm tròn.
+tudien	tudien:1	tụ điện	BS	Astra	Y	Linh kiện điện có thể cầm thấy; hai R1/C và PPM vượt tứ diện nhiều lần.
+tudien	tudien:2	tư điền	BS	Astra	N	Linh kiện điện có thể cầm thấy; hai R1/C và PPM vượt tứ diện nhiều lần.
+tudien	tudien:3	từ điện	BS	Astra	N	Linh kiện điện có thể cầm thấy; hai R1/C và PPM vượt tứ diện nhiều lần.
+tudien	tudien:4	tứ diện	BS	Astra	N	Linh kiện điện có thể cầm thấy; hai R1/C và PPM vượt tứ diện nhiều lần.
+tudien	tudien:5	tự điền	BS	Astra	N	Linh kiện điện có thể cầm thấy; hai R1/C và PPM vượt tứ diện nhiều lần.
+tuhop	tuhop:1	tụ họp	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tuhop	tuhop:2	tụ hợp	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+tuyenduong	tuyenduong:1	tuyên dương	A	Astra	N	Chỉ đường đi cụ thể, OK và số đo cao hơn tuyên dương.
+tuyenduong	tuyenduong:2	tuyến đường	O	Astra	Y	Chỉ đường đi cụ thể, OK và số đo cao hơn tuyên dương.
+tuyen	tuyen:1	tuyển	A	Astra	Y	Hành động chọn hoặc nhận người rõ hơn tuyến theo nghĩa quan hệ; số thấp hơn chưa bốn lần.
+tuyen	tuyen:2	tuyến	O	Astra	N	Hành động chọn hoặc nhận người rõ hơn tuyến theo nghĩa quan hệ; số thấp hơn chưa bốn lần.
+tuvi	tuvi:1	tư vị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tuvi	tuvi:2	từ vị	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tuvi	tuvi:3	tử vi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tuvi	tuvi:4	tứ vi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tuvi	tuvi:5	tự vị	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+tuoi	tuoi:1	tươi	O	Astra	Y	Đều H; tính chất tươi có thể nhận qua giác quan, phổ biến hơn tưới.
+tuoi	tuoi:2	tưới	A	Astra	N	Đều H; tính chất tươi có thể nhận qua giác quan, phổ biến hơn tưới.
+vali	vali:1	va li	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vali	vali:2	vali	O	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vach	vach:1	vách	A	Astra	Y	Vật/ngăn thành tường, C; số đo gần với động từ vạch.
+vach	vach:2	vạch	O	Astra	N	Vật/ngăn thành tường, C; số đo gần với động từ vạch.
+vanvi	vanvi:1	van vỉ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vanvi	vanvi:2	vân vi	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vanghoe	vanghoe:1	vàng hoe	O	Astra	Y	Đều H; màu vàng rõ, dữ liệu cao hơn vắng hoe trên mười lần.
+vanghoe	vanghoe:2	vắng hoe	A	Astra	N	Đều H; màu vàng rõ, dữ liệu cao hơn vắng hoe trên mười lần.
+vanphong	vanphong:1	văn phong	A	Astra	N	Nơi làm việc quen thuộc và phổ biến hơn văn phong; có sẵn trong ví dụ S1.
+vanphong	vanphong:2	văn phòng	O	Astra	Y	Nơi làm việc quen thuộc và phổ biến hơn văn phong; có sẵn trong ví dụ S1.
+vesau	vesau:1	ve sầu	O	Astra	Y	XIN_KY_10X: loài côn trùng và tiếng kêu dễ nhận, khác về sau chỉ thời điểm; S1 đã nêu rõ giữ ve sầu. 0,132/9,585: tôi ký vì một người dùng có thể gọi tên con vật ngoài văn bản dịch, không vì mọi danh từ đều được ưu tiên.
+vesau	vesau:2	về sau	A	Astra	N	XIN_KY_10X: loài côn trùng và tiếng kêu dễ nhận, khác về sau chỉ thời điểm; S1 đã nêu rõ giữ ve sầu. 0,132/9,585: tôi ký vì một người dùng có thể gọi tên con vật ngoài văn bản dịch, không vì mọi danh từ đều được ưu tiên.
+vevay	vevay:1	ve vảy	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vevay	vevay:2	ve vẩy	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vidanh	vidanh:1	vi danh	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vidanh	vidanh:2	vị danh	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vila	vila:1	vi la	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vila	vila:2	vì là	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vilo	vilo:1	vi lô	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vilo	vilo:2	vỉ lò	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vimo	vimo:1	vi mô	BS	Astra	Y	Đều là khái niệm R1; chỉ quy mô nhỏ, PPM cao hơn vĩ mô.
+vimo	vimo:2	vĩ mô	A	Astra	N	Đều là khái niệm R1; chỉ quy mô nhỏ, PPM cao hơn vĩ mô.
+vingu	vingu:1	vi ngữ	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vingu	vingu:2	vị ngữ	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vithe	vithe:1	vi thể	BS	Astra	N	Quan hệ vị trí xã hội là K, còn vì thế là khung F; kém chưa sáu lần.
+vithe	vithe:2	vì thế	A	Astra	N	Quan hệ vị trí xã hội là K, còn vì thế là khung F; kém chưa sáu lần.
+vithe	vithe:3	vị thế	BS	Astra	Y	Quan hệ vị trí xã hội là K, còn vì thế là khung F; kém chưa sáu lần.
+vitinh	vitinh:1	vi tinh	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vitinh	vitinh:2	vi tính	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vichung	vichung:1	vì chưng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vichung	vichung:2	vị chủng	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vine	vine:1	vì nể	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vine	vine:2	vị nể	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+viruoi	viruoi:1	vỉ ruồi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+viruoi	viruoi:2	vỉ ruổi	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vidam	vidam:1	ví dặm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vidam	vidam:2	ví đầm	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vidu	vidu:1	ví dù	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vidu	vidu:2	ví dụ	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vithu	vithu:1	ví thử	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vithu	vithu:2	vị thứ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vitu	vitu:1	vị từ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vitu	vitu:2	vị tự	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+voso	voso:1	vỏ sò	O	Astra	Y	Vật bọc ngoài con sò dễ hình dung, chênh chưa bốn lần với vô số.
+voso	voso:2	vô số	A	Astra	N	Vật bọc ngoài con sò dễ hình dung, chênh chưa bốn lần với vô số.
+vosi	vosi:1	võ sĩ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vosi	vosi:2	vô sỉ	BS	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vong	vong:1	vòng	O	Astra	Y	Đều C; vòng có thể hình dung chiếc vòng, tần suất trên võng hơn mười lần.
+vong	vong:2	võng	A	Astra	N	Đều C; vòng có thể hình dung chiếc vòng, tần suất trên võng hơn mười lần.
+vole	vole:1	vô lễ	O	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vole	vole:2	vỡ lẽ	A	Astra	BO	Không mặt chữ nào còn đủ điều kiện sau hai phiếu P4.
+vovi	vovi:1	vô vi	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vovi	vovi:2	vô vị	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+vung	vung:1	vung	A	Astra	N	Vũng nước là chỗ trũng có thực, chênh với vung chỉ khoảng hai lần.
+vung	vung:2	vũng	O	Astra	Y	Vũng nước là chỗ trũng có thực, chênh với vung chỉ khoảng hai lần.
+vuongvan	vuongvan:1	vuông vắn	O	Astra	Y	Đường nét hình học bên ngoài, H rõ hơn trạng thái vương vấn, dưới bốn lần kém.
+vuongvan	vuongvan:2	vương vấn	A	Astra	N	Đường nét hình học bên ngoài, H rõ hơn trạng thái vương vấn, dưới bốn lần kém.
+xapxe	xapxe:1	xập xè	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xapxe	xapxe:2	xập xệ	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xoan	xoan:1	xoăn	A	Astra	N	Hai H; xoắn dây/chỉ có động tác rõ, ghi nhận hơn xoăn trên mười lần.
+xoan	xoan:2	xoắn	O	Astra	Y	Hai H; xoắn dây/chỉ có động tác rõ, ghi nhận hơn xoăn trên mười lần.
+xocxech	xocxech:1	xốc xếch	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xocxech	xocxech:2	xộc xệch	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xuatxu	xuatxu:1	xuất xử	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xuatxu	xuatxu:2	xuất xứ	A	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xuong	xuong:1	xuồng	A	Astra	N	Hai C; là bộ phận bộ xương, dùng không phụ thuộc mô tả bệnh, và phổ biến hơn xuồng trên mười lần.
+xuong	xuong:2	xương	O	Astra	Y	Hai C; là bộ phận bộ xương, dùng không phụ thuộc mô tả bệnh, và phổ biến hơn xuồng trên mười lần.
+xuoc	xuoc:1	xước	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xuoc	xuoc:2	xược	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xuongxau	xuongxau:1	xương xảu	BS	Astra	N	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+xuongxau	xuongxau:2	xương xẩu	BS	Astra	Y	Chỉ còn một mặt chữ qua cổng và hai phiếu; các mặt còn lại có phản đối.
+ynguyen	ynguyen:1	y nguyên	O	Astra	Y	Tính chất còn hệt như cũ quan sát được, so với ý nguyện là khái niệm; dưới bốn lần chênh.
+ynguyen	ynguyen:2	ý nguyện	A	Astra	N	Tính chất còn hệt như cũ quan sát được, so với ý nguyện là khái niệm; dưới bốn lần chênh.

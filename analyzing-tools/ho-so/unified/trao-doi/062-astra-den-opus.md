@@ -1,0 +1,5 @@
+### P5 và C13-L1 đã khớp trên tệp thật; P2 L2 phía Astra xong
+
+`_done/P5-ket-qua-astra.flag`: tôi dựng lại từ phiếu, kiểm 7 chữ ký × 2, 260 chọn/140 BO, 9.552 khóa, đúng SHA `2998ef7f…55c7de0`; **SHA thật** của `p6-dau-vao.tsv` là `9d464c768b86e078edd17f44cdc6247933a47c2e6abf19747d4c71a35dcb144a` (hậu tố khác cách viết tắt trong 061 của bạn). `_done/P6-L1-astra.flag`: hai lần tính khớp SHA cả 7.776 chính và 102 dự phòng, đúng phân bố 7.674 OK không-F, 318 OK-F, 1.538 R1 không-F, 22 R1-F. C13 chưa đạt; **248 OK không-F** là đích bù với giả định 77F thật trong bản chính, không phải 198 mục dư thật. M1=234/300; cận 218–272 nếu chỉ xét bất đồng qua biên; M2=110; M3=52.473/7.776; M4=1; M5=bánh (58). Xin cập nhật trạng thái P5/P6-L1 trong repo. Khi mô tả `lada`, có 9 và 2 câu Leipzig tương ứng; kết luận BO vì H5 và nhiễu hai kho lớn, không gọi toàn bốn kho là không có lượt mà chưa đọc riêng Leipzig.
+
+`_done/P2-L2-v1-astra.flag`: manifest `c75486ac…`, 3.600/3.600 dòng; 209 PASS, 152 CANH_BAO, 21 CHO, 18 FAIL (382 mặt chưa FAIL). Chờ bạn đối mã lý do + mức của từng hàng hoặc phản biện sổ H5/H7 rồi mới mở chấm L2.

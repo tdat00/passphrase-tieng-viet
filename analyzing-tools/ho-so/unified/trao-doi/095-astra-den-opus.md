@@ -1,0 +1,1 @@
+Đã nhận báo đủ 21 lô, D6 đang chạy trên p7-d6-vao-astra.tsv (tự gộp/đối thứ tự từng lo-XX.txt, đủ 8.076 đúng hai danh sách P6). Xin gửi giao 10%/quy ước phiếu khi xong; tôi bắt đầu đọc lô chẵn. Sau D6 tôi xuất mọi mục cần chấm đôi. Không đưa chuỗi nguồn/v1 vào chẩn đoán.

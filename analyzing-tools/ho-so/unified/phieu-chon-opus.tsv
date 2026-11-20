@@ -1,0 +1,872 @@
+khoa	candidate_id	tu	nguon	nguoi_cham	chon	ly_do
+axit	axit:1	a xít	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+axit	axit:2	axit	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+acquy	acquy:1	ác quỷ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+acquy	acquy:2	acquy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+acquy	acquy:3	ăcquy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+anco	anco:1	ăn cỏ	O	Opus	Y	S1: nhãn OK, lớp H, 1.486 PPM; ưu tiên cụ thể, rồi thông dụng.
+anco	anco:2	ăn cỗ	A	Opus	N	S1: nhãn OK, lớp H, 1.486 PPM; ưu tiên cụ thể, rồi thông dụng.
+bale	bale:1	ba lê	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bale	bale:2	balê	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+batoong	batoong:1	ba toong	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+batoong	batoong:2	batoong	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+bacmau	bacmau:1	bạc màu	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+bacmau	bacmau:2	bạc mầu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+banthan	banthan:1	bản thân	A	Opus	N	S1: nhãn OK, lớp C, 24.305 PPM; ưu tiên cụ thể, rồi thông dụng.
+banthan	banthan:2	bạn thân	O	Opus	Y	S1: nhãn OK, lớp C, 24.305 PPM; ưu tiên cụ thể, rồi thông dụng.
+bantin	bantin:1	bản tin	O	Opus	Y	S1: nhãn OK, lớp C, 28.172 PPM; ưu tiên cụ thể, rồi thông dụng.
+bantin	bantin:2	bắn tin	A	Opus	N	S1: nhãn OK, lớp C, 28.172 PPM; ưu tiên cụ thể, rồi thông dụng.
+banhang	banhang:1	bán hàng	O	Opus	Y	S1, luật 10 lần: bạn hàng (1.236 PPM) thấp hơn bán hàng (171.408 PPM) quá 10 lần nên chọn mục thông dụng.
+banhang	banhang:2	bạn hàng	A	Opus	N	S1, luật 10 lần: bạn hàng (1.236 PPM) thấp hơn bán hàng (171.408 PPM) quá 10 lần nên chọn mục thông dụng.
+bansi	bansi:1	bán sỉ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bansi	bansi:2	bần sĩ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+banhkep	banhkep:1	bánh kẹp	O	Opus	N	S1: nhãn OK, lớp C, 2.558 PPM; ưu tiên cụ thể, rồi thông dụng.
+banhkep	banhkep:2	bánh kếp	A	Opus	Y	S1: nhãn OK, lớp C, 2.558 PPM; ưu tiên cụ thể, rồi thông dụng.
+baotuyet	baotuyet:1	bão tuyết	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+baotuyet	baotuyet:2	báo tuyết	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+batan	batan:1	bát ăn	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+batan	batan:2	bất an	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+bamtron	bamtron:1	bặm trợn	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bamtron	bamtron:2	bậm trợn	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+beti	beti:1	bé tí	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+beti	beti:2	bé tị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+beti	beti:3	bệ tì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bida	bida:1	bi da	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bida	bida:2	bida	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bisi	bisi:1	bì sì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bisi	bisi:2	bì sị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bisi	bisi:3	bị sị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+biendi	biendi:1	biến di	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+biendi	biendi:2	biến dị	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+bocap	bocap:1	bò cạp	A	Opus	N	S1: nhãn OK, lớp C, 1.64 PPM; ưu tiên cụ thể, rồi thông dụng.
+bocap	bocap:2	bọ cạp	BS	Opus	Y	S1: nhãn OK, lớp C, 1.64 PPM; ưu tiên cụ thể, rồi thông dụng.
+bodi	bodi:1	bỏ đi	A+O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+bodi	bodi:2	bổ di	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+bovi	bovi:1	bố vi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bovi	bovi:2	bộ vị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bulong	bulong:1	bu lông	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+bulong	bulong:2	bulông	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+cabin	cabin:1	ca bin	BS	Opus	N	S1: nhãn R1, lớp C, 13.62 PPM; ưu tiên cụ thể, rồi thông dụng.
+cabin	cabin:2	cabin	BS	Opus	Y	S1: nhãn R1, lớp C, 13.62 PPM; ưu tiên cụ thể, rồi thông dụng.
+cacao	cacao:1	ca cao	A	Opus	Y	S1: nhãn OK, lớp C, 3.24 PPM; ưu tiên cụ thể, rồi thông dụng.
+cacao	cacao:2	cacao	BS	Opus	N	S1: nhãn OK, lớp C, 3.24 PPM; ưu tiên cụ thể, rồi thông dụng.
+calo	calo:1	ca lô	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+calo	calo:2	cà lơ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+calo	calo:3	cả lo	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+calo	calo:4	cả lò	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+calo	calo:5	calo	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+calo	calo:6	calô	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+cari	cari:1	ca ri	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+cari	cari:2	cà ri	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+cari	cari:3	cari	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+cavat	cavat:1	cà vạt	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cavat	cavat:2	cavat	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cactong	cactong:1	các tông	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cactong	cactong:2	cactông	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+canh	canh:1	canh	O	Opus	N	S1: nhãn OK, lớp C, 210.389 PPM; ưu tiên cụ thể, rồi thông dụng.
+canh	canh:2	cánh	A	Opus	Y	S1: nhãn OK, lớp C, 210.389 PPM; ưu tiên cụ thể, rồi thông dụng.
+captoc	captoc:1	cặp tóc	O	Opus	N	S1, luật 10 lần: cặp tóc (0.083 PPM) thấp hơn cấp tốc (2.063 PPM) quá 10 lần nên chọn mục thông dụng.
+captoc	captoc:2	cấp tốc	A	Opus	Y	S1, luật 10 lần: cặp tóc (0.083 PPM) thấp hơn cấp tốc (2.063 PPM) quá 10 lần nên chọn mục thông dụng.
+caunoi	caunoi:1	câu nói	O	Opus	N	S1: nhãn OK, lớp C, 3.997 PPM; ưu tiên cụ thể, rồi thông dụng.
+caunoi	caunoi:2	cầu nối	A	Opus	Y	S1: nhãn OK, lớp C, 3.997 PPM; ưu tiên cụ thể, rồi thông dụng.
+chang	chang:1	chàng	O	Opus	Y	S1: nhãn OK, lớp C, 152.715 PPM; ưu tiên cụ thể, rồi thông dụng.
+chang	chang:2	chặng	A	Opus	N	S1: nhãn OK, lớp C, 152.715 PPM; ưu tiên cụ thể, rồi thông dụng.
+chamcham	chamcham:1	chằm chằm	A	Opus	Y	S1: nhãn OK, lớp H, 5.506 PPM; ưu tiên cụ thể, rồi thông dụng.
+chamcham	chamcham:2	chầm chậm	O	Opus	N	S1: nhãn OK, lớp H, 5.506 PPM; ưu tiên cụ thể, rồi thông dụng.
+chap	chap:1	chắp	A	Opus	N	S1: nhãn OK, lớp H, 195.936 PPM; ưu tiên cụ thể, rồi thông dụng.
+chap	chap:2	chấp	O	Opus	Y	S1: nhãn OK, lớp H, 195.936 PPM; ưu tiên cụ thể, rồi thông dụng.
+chapnhat	chapnhat:1	chắp nhặt	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+chapnhat	chapnhat:2	chấp nhặt	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+chapnhat	chapnhat:3	chấp nhất	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+chat	chat:1	chặt	O	Opus	Y	S1: nhãn OK, lớp H, 100.159 PPM; ưu tiên cụ thể, rồi thông dụng.
+chat	chat:2	chật	A	Opus	N	S1: nhãn OK, lớp H, 100.159 PPM; ưu tiên cụ thể, rồi thông dụng.
+cham	cham:1	chấm	O	Opus	N	S1: nhãn OK, lớp H, 90.372 PPM; ưu tiên cụ thể, rồi thông dụng.
+cham	cham:2	chậm	A	Opus	Y	S1: nhãn OK, lớp H, 90.372 PPM; ưu tiên cụ thể, rồi thông dụng.
+chancho	chancho:1	chân chó	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+chancho	chancho:2	chần chờ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+chitieu	chitieu:1	chi tiêu	O	Opus	Y	S1: nhãn OK, lớp H, 10.194 PPM; ưu tiên cụ thể, rồi thông dụng.
+chitieu	chitieu:2	chỉ tiêu	A	Opus	N	S1: nhãn OK, lớp H, 10.194 PPM; ưu tiên cụ thể, rồi thông dụng.
+chieu	chieu:1	chiều	O	Opus	N	S1: nhãn OK, lớp C, 165.446 PPM; ưu tiên cụ thể, rồi thông dụng.
+chieu	chieu:2	chiếu	A	Opus	Y	S1: nhãn OK, lớp C, 165.446 PPM; ưu tiên cụ thể, rồi thông dụng.
+chinh	chinh:1	chỉnh	A	Opus	Y	S1: nhãn OK, lớp H, 522.724 PPM; ưu tiên cụ thể, rồi thông dụng.
+chinh	chinh:2	chính	O	Opus	N	S1: nhãn OK, lớp H, 522.724 PPM; ưu tiên cụ thể, rồi thông dụng.
+choan	choan:1	cho ăn	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+choan	choan:2	choán	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+chonggong	chonggong:1	chỏng gọng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+chonggong	chonggong:2	chổng gọng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+chuvi	chuvi:1	chu vi	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+chuvi	chuvi:2	chư vị	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+chuquan	chuquan:1	chủ quan	A	Opus	N	S1: nhãn OK, lớp C, 2.032 PPM; ưu tiên cụ thể, rồi thông dụng.
+chuquan	chuquan:2	chủ quán	O	Opus	Y	S1: nhãn OK, lớp C, 2.032 PPM; ưu tiên cụ thể, rồi thông dụng.
+chuc	chuc:1	chúc	O	Opus	Y	S1: nhãn OK, lớp H, 177.838 PPM; ưu tiên cụ thể, rồi thông dụng.
+chuc	chuc:2	chục	A	Opus	N	S1: nhãn OK, lớp H, 177.838 PPM; ưu tiên cụ thể, rồi thông dụng.
+chuoi	chuoi:1	chuỗi	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+chuoi	chuoi:2	chuối	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+chuyentay	chuyentay:1	chuyên tay	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+chuyentay	chuyentay:2	chuyền tay	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+chuyen	chuyen:1	chuyền	A	Opus	N	S1: nhãn OK, lớp H, 821.143 PPM; ưu tiên cụ thể, rồi thông dụng.
+chuyen	chuyen:2	chuyển	O	Opus	Y	S1: nhãn OK, lớp H, 821.143 PPM; ưu tiên cụ thể, rồi thông dụng.
+codai	codai:1	cỏ dại	O	Opus	Y	S1: nhãn OK, lớp C, 3.364 PPM; ưu tiên cụ thể, rồi thông dụng.
+codai	codai:2	cổ đại	A	Opus	N	S1: nhãn OK, lớp C, 3.364 PPM; ưu tiên cụ thể, rồi thông dụng.
+cocong	cocong:1	có công	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cocong	cocong:2	cố công	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cole	cole:1	có lẽ	O	Opus	N	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1 của bộ tiêu chí đã ký; có lẽ là hư từ F, chịu hạn mức Q3.
+cole	cole:2	cờ lê	A	Opus	Y	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1 của bộ tiêu chí đã ký; có lẽ là hư từ F, chịu hạn mức Q3.
+coli	coli:1	cố lí	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+coli	coli:2	cơ lí	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+covi	covi:1	có vị	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+covi	covi:2	cờ vỉ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+comle	comle:1	com lê	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+comle	comle:2	comlê	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+condau	condau:1	con dâu	O	Opus	N	S1: nhãn OK, lớp C, 27.531 PPM; ưu tiên cụ thể, rồi thông dụng.
+condau	condau:2	con dấu	A	Opus	Y	S1: nhãn OK, lớp C, 27.531 PPM; ưu tiên cụ thể, rồi thông dụng.
+connguoi	connguoi:1	con ngươi	A	Opus	N	S1: nhãn OK, lớp C, 196.294 PPM; ưu tiên cụ thể, rồi thông dụng.
+connguoi	connguoi:2	con người	O	Opus	Y	S1: nhãn OK, lớp C, 196.294 PPM; ưu tiên cụ thể, rồi thông dụng.
+cotket	cotket:1	cót két	A	Opus	N	S1: nhãn OK, lớp H, 0.268 PPM; ưu tiên cụ thể, rồi thông dụng.
+cotket	cotket:2	cọt kẹt	BS	Opus	Y	S1: nhãn OK, lớp H, 0.268 PPM; ưu tiên cụ thể, rồi thông dụng.
+conang	conang:1	cô nàng	O	Opus	Y	S1: nhãn OK, lớp C, 13.642 PPM; ưu tiên cụ thể, rồi thông dụng.
+conang	conang:2	cơ năng	A	Opus	N	S1: nhãn OK, lớp C, 13.642 PPM; ưu tiên cụ thể, rồi thông dụng.
+codong	codong:1	cổ đông	A	Opus	Y	S1: nhãn OK, lớp C, 9.886 PPM; ưu tiên cụ thể, rồi thông dụng.
+codong	codong:2	cổ động	O	Opus	N	S1: nhãn OK, lớp C, 9.886 PPM; ưu tiên cụ thể, rồi thông dụng.
+cosu	cosu:1	cổ sử	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cosu	cosu:2	cố sự	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cosu	cosu:3	cơ sự	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cosu	cosu:4	cớ sự	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+congtac	congtac:1	công tác	O	Opus	N	S1: nhãn OK, lớp C, 24.984 PPM; ưu tiên cụ thể, rồi thông dụng.
+congtac	congtac:2	công tắc	A	Opus	Y	S1: nhãn OK, lớp C, 24.984 PPM; ưu tiên cụ thể, rồi thông dụng.
+cuhanh	cuhanh:1	củ hành	O	Opus	Y	S1: nhãn OK, lớp C, 1.526 PPM; ưu tiên cụ thể, rồi thông dụng.
+cuhanh	cuhanh:2	cử hành	A	Opus	N	S1: nhãn OK, lớp C, 1.526 PPM; ưu tiên cụ thể, rồi thông dụng.
+cuong	cuong:1	cụ ông	O	Opus	N	S1: nhãn OK, lớp C, 3.344 PPM; ưu tiên cụ thể, rồi thông dụng.
+cuong	cuong:2	cuống	A	Opus	Y	S1: nhãn OK, lớp C, 3.344 PPM; ưu tiên cụ thể, rồi thông dụng.
+cungdo	cungdo:1	cung độ	BS	Opus	N	S1: nhãn OK, lớp H, 0.673 PPM; ưu tiên cụ thể, rồi thông dụng.
+cungdo	cungdo:2	cùng đồ	BS	Opus	N	S1: nhãn OK, lớp H, 0.673 PPM; ưu tiên cụ thể, rồi thông dụng.
+cungdo	cungdo:3	cứng đơ	BS	Opus	Y	S1: nhãn OK, lớp H, 0.673 PPM; ưu tiên cụ thể, rồi thông dụng.
+cungdo	cungdo:4	cứng đờ	BS	Opus	N	S1: nhãn OK, lớp H, 0.673 PPM; ưu tiên cụ thể, rồi thông dụng.
+cuongsi	cuongsi:1	cuồng si	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+cuongsi	cuongsi:2	cuồng sĩ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+cupduoi	cupduoi:1	cúp đuôi	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+cupduoi	cupduoi:2	cụp đuôi	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+daihoi	daihoi:1	dài hơi	O	Opus	N	S1, luật 10 lần: dài hơi (0.253 PPM) thấp hơn đại hội (9.899 PPM) quá 10 lần nên chọn mục thông dụng.
+daihoi	daihoi:2	đại hội	A	Opus	Y	S1, luật 10 lần: dài hơi (0.253 PPM) thấp hơn đại hội (9.899 PPM) quá 10 lần nên chọn mục thông dụng.
+daingoang	daingoang:1	dài ngoằng	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+daingoang	daingoang:2	dài ngoẵng	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dandung	dandung:1	dàn dựng	O	Opus	Y	S1: nhãn OK, lớp H, 2.747 PPM; ưu tiên cụ thể, rồi thông dụng.
+dandung	dandung:2	dân dụng	A	Opus	N	S1: nhãn OK, lớp H, 2.747 PPM; ưu tiên cụ thể, rồi thông dụng.
+danxep	danxep:1	dàn xếp	A	Opus	Y	S1: nhãn OK, lớp H, 5.791 PPM; ưu tiên cụ thể, rồi thông dụng.
+danxep	danxep:2	đàn xếp	BS	Opus	N	S1: nhãn OK, lớp H, 5.791 PPM; ưu tiên cụ thể, rồi thông dụng.
+dangdi	dangdi:1	dáng đi	A+O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dangdi	dangdi:2	đẳng dị	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+danhca	danhca:1	danh ca	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+danhca	danhca:2	đánh cá	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dayday	dayday:1	day day	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dayday	dayday:2	đay đảy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dayday	dayday:3	đây đẩy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dayday	dayday:4	đầy dãy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dayday	dayday:5	đầy đẫy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+datdiu	datdiu:1	dắt dìu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+datdiu	datdiu:2	dắt díu	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+datdiu	datdiu:3	dặt dìu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+danchung	danchung:1	dân chúng	A	Opus	Y	S1: nhãn R1, lớp C, 7.165 PPM; ưu tiên cụ thể, rồi thông dụng.
+danchung	danchung:2	dẫn chứng	O	Opus	N	S1: nhãn R1, lớp C, 7.165 PPM; ưu tiên cụ thể, rồi thông dụng.
+danda	danda:1	dân dã	O	Opus	Y	S1: nhãn OK, lớp H, 0.635 PPM; ưu tiên cụ thể, rồi thông dụng.
+danda	danda:2	đàn đá	A	Opus	N	S1: nhãn OK, lớp H, 0.635 PPM; ưu tiên cụ thể, rồi thông dụng.
+daudua	daudua:1	dầu dừa	O	Opus	Y	S1: nhãn OK, lớp C, 2.193 PPM; ưu tiên cụ thể, rồi thông dụng.
+daudua	daudua:2	đậu đũa	A	Opus	N	S1: nhãn OK, lớp C, 2.193 PPM; ưu tiên cụ thể, rồi thông dụng.
+daumo	daumo:1	dầu mỏ	A	Opus	N	S1: nhãn OK, lớp C, 6.085 PPM; ưu tiên cụ thể, rồi thông dụng.
+daumo	daumo:2	dầu mỡ	O	Opus	Y	S1: nhãn OK, lớp C, 6.085 PPM; ưu tiên cụ thể, rồi thông dụng.
+dauphong	dauphong:1	dầu phọng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dauphong	dauphong:2	dầu phộng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dauphong	dauphong:3	đậu phọng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dausao	dausao:1	dầu sao	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dausao	dausao:2	dẫu sao	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+daydan	daydan:1	dây dẫn	A	Opus	Y	S1: nhãn OK, lớp C, 15.132 PPM; ưu tiên cụ thể, rồi thông dụng.
+daydan	daydan:2	dây đàn	O	Opus	N	S1: nhãn OK, lớp C, 15.132 PPM; ưu tiên cụ thể, rồi thông dụng.
+diban	diban:1	di bản	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+diban	diban:2	dị bản	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dichi	dichi:1	di chỉ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dichi	dichi:2	dĩ chí	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dichung	dichung:1	di chứng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dichung	dichung:2	dị chủng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dichung	dichung:3	dị chứng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+didich	didich:1	di dịch	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+didich	didich:2	di địch	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+didoi	didoi:1	di dời	BS	Opus	Y	S1: nhãn OK, lớp H, 2.597 PPM; ưu tiên cụ thể, rồi thông dụng.
+didoi	didoi:2	đi đôi	O	Opus	N	S1: nhãn OK, lớp H, 2.597 PPM; ưu tiên cụ thể, rồi thông dụng.
+diduong	diduong:1	di dưỡng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+diduong	diduong:2	dị dưỡng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+diduong	diduong:3	đi đường	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+didong	didong:1	di động	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+didong	didong:2	dị đồng	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dihai	dihai:1	di hài	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dihai	dihai:2	di hại	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dihai	dihai:3	dì hai	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dihinh	dihinh:1	di hình	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dihinh	dihinh:2	dị hình	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dili	dili:1	di lí	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dili	dili:2	đi lị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+disan	disan:1	di sản	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+disan	disan:2	dị sản	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+ditang	ditang:1	di táng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ditang	ditang:2	di tặng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ditat	ditat:1	di tật	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ditat	ditat:2	dị tật	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ditat	ditat:3	đi tắt	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+divat	divat:1	di vật	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+divat	divat:2	dị vật	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dithuong	dithuong:1	dĩ thượng	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dithuong	dithuong:2	dị thường	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+divang	divang:1	dĩ vãng	BS	Opus	N	S1: nhãn OK, lớp H, 2.576 PPM; ưu tiên cụ thể, rồi thông dụng.
+divang	divang:2	đi vắng	A+O	Opus	Y	S1: nhãn OK, lớp H, 2.576 PPM; ưu tiên cụ thể, rồi thông dụng.
+digiao	digiao:1	dị giao	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+digiao	digiao:2	dị giáo	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dihom	dihom:1	dị hờm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dihom	dihom:2	dị hợm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dinghi	dinghi:1	dị nghị	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dinghi	dinghi:2	đi nghỉ	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+disu	disu:1	dị sử	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+disu	disu:2	dị sự	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+divong	divong:1	dị vòng	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+divong	divong:2	đi vòng	O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dola	dola:1	dò la	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dola	dola:2	đô la	A	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dongdai	dongdai:1	dong dải	BS	Opus	N	S1: nhãn R1, lớp H, 3.745 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongdai	dongdai:2	dông dài	A	Opus	N	S1: nhãn R1, lớp H, 3.745 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongdai	dongdai:3	đóng đai	BS	Opus	Y	S1: nhãn R1, lớp H, 3.745 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongdai	dongdai:4	đồng đại	BS	Opus	N	S1: nhãn R1, lớp H, 3.745 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongdai	dongdai:5	động dại	BS	Opus	N	S1: nhãn R1, lớp H, 3.745 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongdac	dongdac:1	dõng dạc	BS	Opus	Y	S1: nhãn OK, lớp H, 0.068 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongdac	dongdac:2	đông đặc	A	Opus	N	S1: nhãn OK, lớp H, 0.068 PPM; ưu tiên cụ thể, rồi thông dụng.
+dohang	dohang:1	dỡ hàng	O	Opus	N	S1: nhãn OK, lớp C, 0.443 PPM; ưu tiên cụ thể, rồi thông dụng.
+dohang	dohang:2	đồ hàng	A	Opus	Y	S1: nhãn OK, lớp C, 0.443 PPM; ưu tiên cụ thể, rồi thông dụng.
+dudi	dudi:1	du di	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dudi	dudi:2	dù dì	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dukien	dukien:1	dữ kiện	A	Opus	N	S1: nhãn OK, lớp K, 20.946 PPM; ưu tiên cụ thể, rồi thông dụng.
+dukien	dukien:2	dự kiến	O	Opus	Y	S1: nhãn OK, lớp K, 20.946 PPM; ưu tiên cụ thể, rồi thông dụng.
+dunglai	dunglai:1	dừng lại	A	Opus	Y	S1: nhãn OK, lớp H, 159.192 PPM; ưu tiên cụ thể, rồi thông dụng.
+dunglai	dunglai:2	đứng lại	O	Opus	N	S1: nhãn OK, lớp H, 159.192 PPM; ưu tiên cụ thể, rồi thông dụng.
+dungdung	dungdung:1	dửng dưng	A	Opus	N	S1: nhãn OK, lớp H, 1.051 PPM; ưu tiên cụ thể, rồi thông dụng.
+dungdung	dungdung:2	dựng đứng	O	Opus	Y	S1: nhãn OK, lớp H, 1.051 PPM; ưu tiên cụ thể, rồi thông dụng.
+dactrung	dactrung:1	đắc trung	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dactrung	dactrung:2	đặc trưng	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+daylui	daylui:1	đẩy lui	BS	Opus	N	S1: nhãn OK, lớp H, 3.325 PPM; ưu tiên cụ thể, rồi thông dụng.
+daylui	daylui:2	đẩy lùi	A	Opus	Y	S1: nhãn OK, lớp H, 3.325 PPM; ưu tiên cụ thể, rồi thông dụng.
+dedanh	dedanh:1	đề danh	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dedanh	dedanh:2	để dành	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dinhvi	dinhvi:1	đình vi	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dinhvi	dinhvi:2	định vị	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+doan	doan:1	đoán	A	Opus	N	S1: nhãn OK, lớp C, 34.563 PPM; ưu tiên cụ thể, rồi thông dụng.
+doan	doan:2	đồ ăn	O	Opus	Y	S1: nhãn OK, lớp C, 34.563 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongbang	dongbang:1	đóng băng	A	Opus	N	S1: nhãn OK, lớp C, 16.527 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongbang	dongbang:2	đồng bằng	O	Opus	Y	S1: nhãn OK, lớp C, 16.527 PPM; ưu tiên cụ thể, rồi thông dụng.
+dothi	dothi:1	đô thị	O	Opus	Y	S1: nhãn OK, lớp C, 25.437 PPM; ưu tiên cụ thể, rồi thông dụng.
+dothi	dothi:2	đồ thị	A	Opus	N	S1: nhãn OK, lớp C, 25.437 PPM; ưu tiên cụ thể, rồi thông dụng.
+doidoi	doidoi:1	đổi đời	O	Opus	Y	S1: nhãn OK, lớp H, 1.331 PPM; ưu tiên cụ thể, rồi thông dụng.
+doidoi	doidoi:2	đời đời	A	Opus	N	S1: nhãn OK, lớp H, 1.331 PPM; ưu tiên cụ thể, rồi thông dụng.
+doidau	doidau:1	đối đầu	O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+doidau	doidau:2	đời đầu	A	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+dondoc	dondoc:1	đôn đốc	A	Opus	N	S1: nhãn OK, lớp K, 9.316 PPM; ưu tiên cụ thể, rồi thông dụng.
+dondoc	dondoc:2	đơn độc	O	Opus	Y	S1: nhãn OK, lớp K, 9.316 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongdao	dongdao:1	đông đảo	A+O	Opus	Y	S1: nhãn OK, lớp H, 3.048 PPM; ưu tiên cụ thể, rồi thông dụng.
+dongdao	dongdao:2	đồng dao	BS	Opus	N	S1: nhãn OK, lớp H, 3.048 PPM; ưu tiên cụ thể, rồi thông dụng.
+dotquy	dotquy:1	đột quỵ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dotquy	dotquy:2	đột qụy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+dungmuc	dungmuc:1	đúng mức	A	Opus	N	S1: nhãn OK, lớp K, 1.193 PPM; ưu tiên cụ thể, rồi thông dụng.
+dungmuc	dungmuc:2	đúng mực	BS	Opus	Y	S1: nhãn OK, lớp K, 1.193 PPM; ưu tiên cụ thể, rồi thông dụng.
+duongdai	duongdai:1	đương đại	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+duongdai	duongdai:2	đường dài	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+elip	elip:1	e líp	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+elip	elip:2	elip	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ekip	ekip:1	ê kíp	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+ekip	ekip:2	êkip	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gacxep	gacxep:1	gác xép	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gacxep	gacxep:2	gác xếp	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gang	gang:1	gang	O	Opus	N	S1: nhãn OK, lớp C, 52.36 PPM; ưu tiên cụ thể, rồi thông dụng.
+gang	gang:2	găng	A	Opus	Y	S1: nhãn OK, lớp C, 52.36 PPM; ưu tiên cụ thể, rồi thông dụng.
+gaycan	gaycan:1	gay cấn	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+gaycan	gaycan:2	gây cấn	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+gaygo	gaygo:1	gay go	O	Opus	N	S1: nhãn OK, lớp H, 0.588 PPM; ưu tiên cụ thể, rồi thông dụng.
+gaygo	gaygo:2	gầy gò	A	Opus	Y	S1: nhãn OK, lớp H, 0.588 PPM; ưu tiên cụ thể, rồi thông dụng.
+gamghe	gamghe:1	gằm ghè	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+gamghe	gamghe:2	gắm ghé	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+gamghe	gamghe:3	gầm ghè	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+gamnham	gamnham:1	gặm nhấm	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gamnham	gamnham:2	gậm nhấm	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+ganbo	ganbo:1	gắn bó	A	Opus	Y	S1, luật 10 lần: gân bò (0.053 PPM) thấp hơn gắn bó (8.377 PPM) quá 10 lần nên chọn mục thông dụng.
+ganbo	ganbo:2	gân bò	O	Opus	N	S1, luật 10 lần: gân bò (0.053 PPM) thấp hơn gắn bó (8.377 PPM) quá 10 lần nên chọn mục thông dụng.
+gaydung	gaydung:1	gây dựng	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+gaydung	gaydung:2	gầy dựng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+gile	gile:1	gi lê	BS	Opus	Y	S1: nhãn R1, lớp C, 0.431 PPM; ưu tiên cụ thể, rồi thông dụng.
+gile	gile:2	gilê	BS	Opus	N	S1: nhãn R1, lớp C, 0.431 PPM; ưu tiên cụ thể, rồi thông dụng.
+giasu	giasu:1	gia sư	O	Opus	Y	S1: nhãn OK, lớp C, 4.64 PPM; ưu tiên cụ thể, rồi thông dụng.
+giasu	giasu:2	giả sử	A	Opus	N	S1: nhãn OK, lớp C, 4.64 PPM; ưu tiên cụ thể, rồi thông dụng.
+giadu	giadu:1	giả dụ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+giadu	giadu:2	giá dụ	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+giaivi	giaivi:1	giai vị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+giaivi	giaivi:2	giải vi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+giankho	giankho:1	gian khó	A	Opus	Y	S1: nhãn OK, lớp K, 2.791 PPM; ưu tiên cụ thể, rồi thông dụng.
+giankho	giankho:2	gian khổ	BS	Opus	N	S1: nhãn OK, lớp K, 2.791 PPM; ưu tiên cụ thể, rồi thông dụng.
+gianno	gianno:1	giãn nở	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gianno	gianno:2	giãn nợ	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gianh	gianh:1	gianh	BS	Opus	N	S1: nhãn OK, lớp H, 55.36 PPM; ưu tiên cụ thể, rồi thông dụng.
+gianh	gianh:2	giành	BS	Opus	Y	S1: nhãn OK, lớp H, 55.36 PPM; ưu tiên cụ thể, rồi thông dụng.
+gianh	gianh:3	giảnh	BS	Opus	N	S1: nhãn OK, lớp H, 55.36 PPM; ưu tiên cụ thể, rồi thông dụng.
+giaygiua	giaygiua:1	giãy giụa	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+giaygiua	giaygiua:2	giẫy giụa	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+giambong	giambong:1	giămbông	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+giambong	giambong:2	giấm bỗng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+gion	gion:1	gión	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gion	gion:2	giôn	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gion	gion:3	giờn	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+gion	gion:4	giỡn	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+giongnoi	giongnoi:1	giọng nói	O	Opus	Y	S1: nhãn OK, lớp C, 22.84 PPM; ưu tiên cụ thể, rồi thông dụng.
+giongnoi	giongnoi:2	giống nòi	A	Opus	N	S1: nhãn OK, lớp C, 22.84 PPM; ưu tiên cụ thể, rồi thông dụng.
+hanghai	hanghai:1	hàng hải	A	Opus	N	S1: nhãn OK, lớp H, 2.439 PPM; ưu tiên cụ thể, rồi thông dụng.
+hanghai	hanghai:2	hăng hái	O	Opus	Y	S1: nhãn OK, lớp H, 2.439 PPM; ưu tiên cụ thể, rồi thông dụng.
+hangnam	hangnam:1	hàng năm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hangnam	hangnam:2	hàng nằm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hangngay	hangngay:1	hàng ngày	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hangngay	hangngay:2	hằng ngày	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hamham	hamham:1	hằm hằm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hamham	hamham:2	hâm hâm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hamham	hamham:3	hâm hẩm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hamham	hamham:4	hầm hầm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hecta	hecta:1	héc ta	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hecta	hecta:2	hecta	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hetmuc	hetmuc:1	hết mức	O	Opus	Y	S1: nhãn OK, lớp F, 2.84 PPM; ưu tiên cụ thể, rồi thông dụng.
+hetmuc	hetmuc:2	hết mực	A	Opus	N	S1: nhãn OK, lớp F, 2.84 PPM; ưu tiên cụ thể, rồi thông dụng.
+hihi	hihi:1	hi hi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hihi	hihi:2	hi hí	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hihi	hihi:3	hì hì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hihi	hihi:4	hí hí	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hihui	hihui:1	hì hụi	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+hihui	hihui:2	hí húi	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+hien	hien:1	hiên	A	Opus	Y	S1: nhãn OK, lớp C, 8.826 PPM; ưu tiên cụ thể, rồi thông dụng.
+hien	hien:2	hiền	O	Opus	N	S1: nhãn OK, lớp C, 8.826 PPM; ưu tiên cụ thể, rồi thông dụng.
+hoclom	hoclom:1	học lỏm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hoclom	hoclom:2	học lóm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hoihop	hoihop:1	hồi hộp	O	Opus	N	S1: nhãn OK, lớp H, 2.047 PPM; ưu tiên cụ thể, rồi thông dụng.
+hoihop	hoihop:2	hội họp	A	Opus	Y	S1: nhãn OK, lớp H, 2.047 PPM; ưu tiên cụ thể, rồi thông dụng.
+huhi	huhi:1	hủ hỉ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+huhi	huhi:2	hú hí	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+huyenhoac	huyenhoac:1	huyền hoặc	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+huyenhoac	huyenhoac:2	huyễn hoặc	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hungsang	hungsang:1	hừng sáng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+hungsang	hungsang:2	hửng sáng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+huong	huong:1	hương	A	Opus	Y	S1: nhãn OK, lớp C, 106.651 PPM; ưu tiên cụ thể, rồi thông dụng.
+huong	huong:2	hướng	O	Opus	N	S1: nhãn OK, lớp C, 106.651 PPM; ưu tiên cụ thể, rồi thông dụng.
+imlim	imlim:1	im lìm	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+imlim	imlim:2	im lịm	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+kemcap	kemcap:1	kèm cặp	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+kemcap	kemcap:2	kềm cặp	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ketu	ketu:1	kể từ	O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+ketu	ketu:2	kế tự	A	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+khac	khac:1	khác	O	Opus	Y	S1, luật 10 lần: khắc (139.674 PPM) thấp hơn khác (1729.919 PPM) quá 10 lần nên chọn mục thông dụng.
+khac	khac:2	khắc	A	Opus	N	S1, luật 10 lần: khắc (139.674 PPM) thấp hơn khác (1729.919 PPM) quá 10 lần nên chọn mục thông dụng.
+khangkhai	khangkhai:1	khảng khái	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+khangkhai	khangkhai:2	khẳng khái	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+khidot	khidot:1	khỉ đột	O	Opus	N	S1: nhãn OK, lớp C, 7.403 PPM; ưu tiên cụ thể, rồi thông dụng.
+khidot	khidot:2	khí đốt	A	Opus	Y	S1: nhãn OK, lớp C, 7.403 PPM; ưu tiên cụ thể, rồi thông dụng.
+khuyu	khuyu:1	khuỷu	BS	Opus	Y	S1: nhãn OK, lớp C, 18.821 PPM; ưu tiên cụ thể, rồi thông dụng.
+khuyu	khuyu:2	khuỵu	BS	Opus	N	S1: nhãn OK, lớp C, 18.821 PPM; ưu tiên cụ thể, rồi thông dụng.
+kicop	kicop:1	ki cóp	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+kicop	kicop:2	kí cóp	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+kilo	kilo:1	ki lô	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+kilo	kilo:2	kí lô	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+kilo	kilo:3	kilô	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+kitinh	kitinh:1	kì tình	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+kitinh	kitinh:2	kĩ tính	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+kieng	kieng:1	kiêng	O	Opus	Y	S1, luật 10 lần: kiềng (0.28 PPM) thấp hơn kiêng (10.763 PPM) quá 10 lần nên chọn mục thông dụng.
+kieng	kieng:2	kiềng	A	Opus	N	S1, luật 10 lần: kiềng (0.28 PPM) thấp hơn kiêng (10.763 PPM) quá 10 lần nên chọn mục thông dụng.
+kinhdo	kinhdo:1	kinh đô	O	Opus	Y	S1: nhãn OK, lớp C, 1.673 PPM; ưu tiên cụ thể, rồi thông dụng.
+kinhdo	kinhdo:2	kinh độ	A	Opus	N	S1: nhãn OK, lớp C, 1.673 PPM; ưu tiên cụ thể, rồi thông dụng.
+kinhmat	kinhmat:1	kính mát	O	Opus	N	S1: nhãn OK, lớp C, 2.549 PPM; ưu tiên cụ thể, rồi thông dụng.
+kinhmat	kinhmat:2	kính mắt	A	Opus	Y	S1: nhãn OK, lớp C, 2.549 PPM; ưu tiên cụ thể, rồi thông dụng.
+lada	lada:1	la đà	BS	Opus	N	S1: nhãn R1, lớp H, 0.254 PPM; ưu tiên cụ thể, rồi thông dụng.
+lada	lada:2	là đà	BS	Opus	Y	S1: nhãn R1, lớp H, 0.254 PPM; ưu tiên cụ thể, rồi thông dụng.
+laray	laray:1	la rày	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+laray	laray:2	la rầy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+lamat	lamat:1	lạ mắt	O	Opus	N	S1: nhãn OK, lớp H, 2.559 PPM; ưu tiên cụ thể, rồi thông dụng.
+lamat	lamat:2	lạ mặt	A	Opus	Y	S1: nhãn OK, lớp H, 2.559 PPM; ưu tiên cụ thể, rồi thông dụng.
+lach	lach:1	lách	O	Opus	N	S1: nhãn OK, lớp C, 1.578 PPM; ưu tiên cụ thể, rồi thông dụng.
+lach	lach:2	lạch	A	Opus	Y	S1: nhãn OK, lớp C, 1.578 PPM; ưu tiên cụ thể, rồi thông dụng.
+lamlanh	lamlanh:1	làm lành	A	Opus	N	S1: nhãn OK, lớp H, 39.6 PPM; ưu tiên cụ thể, rồi thông dụng.
+lamlanh	lamlanh:2	làm lạnh	O	Opus	Y	S1: nhãn OK, lớp H, 39.6 PPM; ưu tiên cụ thể, rồi thông dụng.
+lamon	lamon:1	làm ồn	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+lamon	lamon:2	làm ơn	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+lancan	lancan:1	lan can	O	Opus	Y	S1: nhãn OK, lớp C, 7.187 PPM; ưu tiên cụ thể, rồi thông dụng.
+lancan	lancan:2	lân cận	A	Opus	N	S1: nhãn OK, lớp C, 7.187 PPM; ưu tiên cụ thể, rồi thông dụng.
+lapxuong	lapxuong:1	lạp xường	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+lapxuong	lapxuong:2	lạp xưởng	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+latleo	latleo:1	lạt lẽo	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+latleo	latleo:2	lắt lẻo	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+latleo	latleo:3	lắt léo	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+latleo	latleo:4	lặt lẹo	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+latleo	latleo:5	lật lẹo	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+laubau	laubau:1	làu bàu	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+laubau	laubau:2	lảu bảu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+laubau	laubau:3	lạu bạu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+laubau	laubau:4	lầu bầu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+laubau	laubau:5	lẩu bẩu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+laylat	laylat:1	lay lắt	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+laylat	laylat:2	lay lất	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+laylat	laylat:3	lây lất	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+layon	layon:1	lay ơn	BS	Opus	Y	S1: nhãn OK, lớp C, 0.201 PPM; ưu tiên cụ thể, rồi thông dụng.
+layon	layon:2	layơn	BS	Opus	N	S1: nhãn OK, lớp C, 0.201 PPM; ưu tiên cụ thể, rồi thông dụng.
+lanlon	lanlon:1	lăn lộn	A	Opus	N	S1: nhãn OK, lớp H, 2.361 PPM; ưu tiên cụ thể, rồi thông dụng.
+lanlon	lanlon:2	lẫn lộn	O	Opus	Y	S1: nhãn OK, lớp H, 2.361 PPM; ưu tiên cụ thể, rồi thông dụng.
+langxang	langxang:1	lăng xăng	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+langxang	langxang:2	lắng xắng	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+lapbap	lapbap:1	lắp bắp	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+lapbap	lapbap:2	lặp bặp	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+lapbap	lapbap:3	lập bập	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+laplai	laplai:1	lắp lại	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+laplai	laplai:2	lặp lại	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+lanquan	lanquan:1	lẩn quẩn	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+lanquan	lanquan:2	lẫn quẫn	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+lanquan	lanquan:3	lấn quấn	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+laplo	laplo:1	lấp ló	O	Opus	Y	S1: nhãn OK, lớp H, 0.19 PPM; ưu tiên cụ thể, rồi thông dụng.
+laplo	laplo:2	lập lờ	A	Opus	N	S1: nhãn OK, lớp H, 0.19 PPM; ưu tiên cụ thể, rồi thông dụng.
+leloi	leloi:1	lẻ loi	O	Opus	Y	S1: nhãn OK, lớp H, 0.46 PPM; ưu tiên cụ thể, rồi thông dụng.
+leloi	leloi:2	lề lối	A	Opus	N	S1: nhãn OK, lớp H, 0.46 PPM; ưu tiên cụ thể, rồi thông dụng.
+liti	liti:1	li ti	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+liti	liti:2	lí tí	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+lichsu	lichsu:1	lịch sử	A	Opus	N	S1: nhãn OK, lớp H, 18.176 PPM; ưu tiên cụ thể, rồi thông dụng.
+lichsu	lichsu:2	lịch sự	O	Opus	Y	S1: nhãn OK, lớp H, 18.176 PPM; ưu tiên cụ thể, rồi thông dụng.
+linhtinh	linhtinh:1	linh tinh	O	Opus	Y	S1: nhãn OK, lớp K, 5.621 PPM; ưu tiên cụ thể, rồi thông dụng.
+linhtinh	linhtinh:2	linh tính	A	Opus	N	S1: nhãn OK, lớp K, 5.621 PPM; ưu tiên cụ thể, rồi thông dụng.
+loco	loco:1	lò cò	O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+loco	loco:2	lỡ cơ	A	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+lodo	lodo:1	lò dò	A	Opus	N	S1: nhãn OK, lớp H, 0.308 PPM; ưu tiên cụ thể, rồi thông dụng.
+lodo	lodo:2	lờ đờ	O	Opus	Y	S1: nhãn OK, lớp H, 0.308 PPM; ưu tiên cụ thể, rồi thông dụng.
+loai	loai:1	loài	A	Opus	N	S1: nhãn OK, lớp K, 1462.503 PPM; ưu tiên cụ thể, rồi thông dụng.
+loai	loai:2	loại	O	Opus	Y	S1: nhãn OK, lớp K, 1462.503 PPM; ưu tiên cụ thể, rồi thông dụng.
+logic	logic:1	logic	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+logic	logic:2	lôgic	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+longlanh	longlanh:1	long lanh	A	Opus	Y	S1: nhãn OK, lớp H, 2.412 PPM; ưu tiên cụ thể, rồi thông dụng.
+longlanh	longlanh:2	lóng lánh	BS	Opus	N	S1: nhãn OK, lớp H, 2.412 PPM; ưu tiên cụ thể, rồi thông dụng.
+longnhong	longnhong:1	long nhong	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+longnhong	longnhong:2	lóng nhóng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+longnhong	longnhong:3	lông nhông	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+lotlong	lotlong:1	lót lòng	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+lotlong	lotlong:2	lọt lòng	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+luanquan	luanquan:1	luẩn quẩn	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+luanquan	luanquan:2	luấn quấn	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+luclac	luclac:1	lúc lắc	A	Opus	N	S1: nhãn OK, lớp C, 0.102 PPM; ưu tiên cụ thể, rồi thông dụng.
+luclac	luclac:2	lục lạc	O	Opus	Y	S1: nhãn OK, lớp C, 0.102 PPM; ưu tiên cụ thể, rồi thông dụng.
+lungtung	lungtung:1	lung tung	O	Opus	Y	S1: nhãn OK, lớp H, 6.114 PPM; ưu tiên cụ thể, rồi thông dụng.
+lungtung	lungtung:2	lúng túng	A	Opus	N	S1: nhãn OK, lớp H, 6.114 PPM; ưu tiên cụ thể, rồi thông dụng.
+luoc	luoc:1	luộc	O	Opus	N	S1: nhãn OK, lớp C, 77.059 PPM; ưu tiên cụ thể, rồi thông dụng.
+luoc	luoc:2	lược	A	Opus	Y	S1: nhãn OK, lớp C, 77.059 PPM; ưu tiên cụ thể, rồi thông dụng.
+luong	luong:1	luống	A	Opus	N	S1, luật 10 lần: luống (0.817 PPM) thấp hơn lương (68.633 PPM) quá 10 lần nên chọn mục thông dụng.
+luong	luong:2	lương	O	Opus	Y	S1, luật 10 lần: luống (0.817 PPM) thấp hơn lương (68.633 PPM) quá 10 lần nên chọn mục thông dụng.
+mach	mach:1	mách	O	Opus	N	S1: nhãn OK, lớp C, 178.645 PPM; ưu tiên cụ thể, rồi thông dụng.
+mach	mach:2	mạch	A	Opus	Y	S1: nhãn OK, lớp C, 178.645 PPM; ưu tiên cụ thể, rồi thông dụng.
+machnuoc	machnuoc:1	mách nước	A	Opus	N	S1: nhãn OK, lớp C, 0.786 PPM; ưu tiên cụ thể, rồi thông dụng.
+machnuoc	machnuoc:2	mạch nước	O	Opus	Y	S1: nhãn OK, lớp C, 0.786 PPM; ưu tiên cụ thể, rồi thông dụng.
+manh	manh:1	mành	A	Opus	N	S1, luật 10 lần: mành (1.012 PPM) thấp hơn mạnh (506.979 PPM) quá 10 lần nên chọn mục thông dụng.
+manh	manh:2	mạnh	O	Opus	Y	S1, luật 10 lần: mành (1.012 PPM) thấp hơn mạnh (506.979 PPM) quá 10 lần nên chọn mục thông dụng.
+matlong	matlong:1	mát lòng	A	Opus	N	S1: nhãn OK, lớp K, 1.972 PPM; ưu tiên cụ thể, rồi thông dụng.
+matlong	matlong:2	mất lòng	O	Opus	Y	S1: nhãn OK, lớp K, 1.972 PPM; ưu tiên cụ thể, rồi thông dụng.
+maumo	maumo:1	màu mỡ	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+maumo	maumo:2	mầu mỡ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+maunhiem	maunhiem:1	màu nhiệm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+maunhiem	maunhiem:2	mầu nhiệm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+mayo	mayo:1	may ô	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+mayo	mayo:2	mayô	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+maymo	maymo:1	mày mò	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+maymo	maymo:2	máy mó	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+maymo	maymo:3	mầy mò	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+mitu	mitu:1	mĩ từ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+mitu	mitu:2	mĩ tự	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+miennhiem	miennhiem:1	miễn nhiễm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+miennhiem	miennhiem:2	miễn nhiệm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+mongmanh	mongmanh:1	mong manh	A	Opus	N	S1: nhãn OK, lớp H, 3.866 PPM; ưu tiên cụ thể, rồi thông dụng.
+mongmanh	mongmanh:2	mỏng manh	BS	Opus	Y	S1: nhãn OK, lớp H, 3.866 PPM; ưu tiên cụ thể, rồi thông dụng.
+mongmanh	mongmanh:3	mỏng mảnh	BS	Opus	N	S1: nhãn OK, lớp H, 3.866 PPM; ưu tiên cụ thể, rồi thông dụng.
+mongmanh	mongmanh:4	móng mánh	BS	Opus	N	S1: nhãn OK, lớp H, 3.866 PPM; ưu tiên cụ thể, rồi thông dụng.
+motip	motip:1	mô típ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+motip	motip:2	môtip	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+moto	moto:1	mô tô	BS	Opus	Y	S1: nhãn OK, lớp C, 3.982 PPM; ưu tiên cụ thể, rồi thông dụng.
+moto	moto:2	môtô	BS	Opus	N	S1: nhãn OK, lớp C, 3.982 PPM; ưu tiên cụ thể, rồi thông dụng.
+momang	momang:1	mơ màng	O	Opus	N	S1: nhãn OK, lớp H, 1.207 PPM; ưu tiên cụ thể, rồi thông dụng.
+momang	momang:2	mở mang	A	Opus	Y	S1: nhãn OK, lớp H, 1.207 PPM; ưu tiên cụ thể, rồi thông dụng.
+mumi	mumi:1	mủ mỉ	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+mumi	mumi:2	mụ mị	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+mucnuoc	mucnuoc:1	mức nước	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+mucnuoc	mucnuoc:2	mực nước	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nayno	nayno:1	này nọ	O	Opus	N	S1: nhãn OK, lớp H, 0.707 PPM; ưu tiên cụ thể, rồi thông dụng.
+nayno	nayno:2	nảy nở	A	Opus	Y	S1: nhãn OK, lớp H, 0.707 PPM; ưu tiên cụ thể, rồi thông dụng.
+nanni	nanni:1	năn nỉ	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nanni	nanni:2	nằn nì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngan	ngan:1	ngăn	A	Opus	Y	S1: nhãn OK, lớp H, 209.25 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngan	ngan:2	ngắn	O	Opus	N	S1: nhãn OK, lớp H, 209.25 PPM; ưu tiên cụ thể, rồi thông dụng.
+nganquy	nganquy:1	ngân quỹ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nganquy	nganquy:2	ngân qũy	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nghelom	nghelom:1	nghe lỏm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nghelom	nghelom:2	nghe lóm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nghen	nghen:1	nghẽn	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nghen	nghen:2	nghẹn	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nghi	nghi:1	nghi	O	Opus	N	S1: nhãn OK, lớp H, 225.066 PPM; ưu tiên cụ thể, rồi thông dụng.
+nghi	nghi:2	nghỉ	A	Opus	Y	S1: nhãn OK, lớp H, 225.066 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngongoay	ngongoay:1	ngó ngoáy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngongoay	ngongoay:2	ngọ ngoạy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngoac	ngoac:1	ngoác	BS	Opus	N	S1: nhãn OK, lớp C, 3.298 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngoac	ngoac:2	ngoạc	BS	Opus	N	S1: nhãn OK, lớp C, 3.298 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngoac	ngoac:3	ngoắc	BS	Opus	N	S1: nhãn OK, lớp C, 3.298 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngoac	ngoac:4	ngoặc	A	Opus	Y	S1: nhãn OK, lớp C, 3.298 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngon	ngon:1	ngon	O	Opus	N	S1: nhãn OK, lớp C, 57.689 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngon	ngon:2	ngón	A	Opus	Y	S1: nhãn OK, lớp C, 57.689 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngonngot	ngonngot:1	ngon ngọt	O	Opus	Y	S1: nhãn OK, lớp H, 2.056 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngonngot	ngonngot:2	ngòn ngọt	A	Opus	N	S1: nhãn OK, lớp H, 2.056 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngocnghech	ngocnghech:1	ngốc nghếch	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngocnghech	ngocnghech:2	ngộc nghệch	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngonghech	ngonghech:1	ngơ nghếch	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngonghech	ngonghech:2	ngờ nghệch	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngungon	ngungon:1	ngủ ngon	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+ngungon	ngungon:2	ngụ ngôn	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nguvi	nguvi:1	ngũ vị	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nguvi	nguvi:2	ngữ vị	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nguechngoac	nguechngoac:1	nguếch ngoác	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nguechngoac	nguechngoac:2	nguệch ngoạc	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nguyenvi	nguyenvi:1	nguyên vì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nguyenvi	nguyenvi:2	nguyên vị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngua	ngua:1	ngửa	A	Opus	N	S1: nhãn OK, lớp C, 118.537 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngua	ngua:2	ngựa	O	Opus	Y	S1: nhãn OK, lớp C, 118.537 PPM; ưu tiên cụ thể, rồi thông dụng.
+ngungtre	ngungtre:1	ngưng trệ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ngungtre	ngungtre:2	ngừng trệ	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nguoc	nguoc:1	ngước	A	Opus	N	S1: nhãn OK, lớp H, 94.767 PPM; ưu tiên cụ thể, rồi thông dụng.
+nguoc	nguoc:2	ngược	O	Opus	Y	S1: nhãn OK, lớp H, 94.767 PPM; ưu tiên cụ thể, rồi thông dụng.
+nguoidung	nguoidung:1	người dùng	A	Opus	Y	S1: nhãn OK, lớp C, 155.205 PPM; ưu tiên cụ thể, rồi thông dụng.
+nguoidung	nguoidung:2	người dưng	O	Opus	N	S1: nhãn OK, lớp C, 155.205 PPM; ưu tiên cụ thể, rồi thông dụng.
+nguoithuong	nguoithuong:1	người thương	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nguoithuong	nguoithuong:2	người thường	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nguong	nguong:1	ngưỡng	A	Opus	N	S1: nhãn OK, lớp H, 3.563 PPM; ưu tiên cụ thể, rồi thông dụng.
+nguong	nguong:2	ngượng	O	Opus	Y	S1: nhãn OK, lớp H, 3.563 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhamay	nhamay:1	nhà may	A	Opus	N	S1: nhãn OK, lớp C, 472.272 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhamay	nhamay:2	nhà máy	O	Opus	Y	S1: nhãn OK, lớp C, 472.272 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhanha	nhanha:1	nhà nhà	A	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nhanha	nhanha:2	nhàn hạ	O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nhao	nhao:1	nhà ở	O	Opus	Y	S1: nhãn OK, lớp C, 45.584 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhao	nhao:2	nhào	A	Opus	N	S1: nhãn OK, lớp C, 45.584 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhamnhap	nhamnhap:1	nham nháp	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nhamnhap	nhamnhap:2	nhăm nhắp	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nhamnhap	nhamnhap:3	nhắm nháp	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nhamnhap	nhamnhap:4	nhâm nhấp	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nhamnhap	nhamnhap:5	nhấm nháp	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nhan	nhan:1	nhãn	BS	Opus	Y	S1: nhãn OK, lớp C, 135.121 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhan	nhan:2	nhẫn	A+O	Opus	N	S1: nhãn OK, lớp C, 135.121 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhanh	nhanh:1	nhanh	A	Opus	Y	S1, luật 10 lần: nhánh (37.162 PPM) thấp hơn nhanh (756.638 PPM) quá 10 lần nên chọn mục thông dụng.
+nhanh	nhanh:2	nhánh	O	Opus	N	S1, luật 10 lần: nhánh (37.162 PPM) thấp hơn nhanh (756.638 PPM) quá 10 lần nên chọn mục thông dụng.
+nhanhnhau	nhanhnhau:1	nhanh nhảu	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nhanhnhau	nhanhnhau:2	nhanh nhẩu	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nhau	nhau:1	nhau	O	Opus	N	XIN_KY_10X: cùng tiền lệ cờ lê/có lẽ; nhau là hư từ F (hai bên cùng gán F), nhàu là tính chất quan sát được và vẫn thông dụng (1,2 PPM).
+nhau	nhau:2	nhàu	A	Opus	Y	XIN_KY_10X: cùng tiền lệ cờ lê/có lẽ; nhau là hư từ F (hai bên cùng gán F), nhàu là tính chất quan sát được và vẫn thông dụng (1,2 PPM).
+nhay	nhay:1	nháy	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nhay	nhay:2	nhạy	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nham	nham:1	nhắm	O	Opus	Y	S1: nhãn OK, lớp H, 46.493 PPM; ưu tiên cụ thể, rồi thông dụng.
+nham	nham:2	nhẩm	A	Opus	N	S1: nhãn OK, lớp H, 46.493 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhanvi	nhanvi:1	nhân vì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nhanvi	nhanvi:2	nhân vị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+nhap	nhap:1	nhấp	A	Opus	N	S1: nhãn OK, lớp H, 358.895 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhap	nhap:2	nhập	O	Opus	Y	S1: nhãn OK, lớp H, 358.895 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhom	nhom:1	nhóm	O	Opus	N	S1: nhãn OK, lớp C, 228.554 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhom	nhom:2	nhôm	A	Opus	Y	S1: nhãn OK, lớp C, 228.554 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhung	nhung:1	nhung	A	Opus	Y	S1: nhãn OK, lớp C, 11.316 PPM; ưu tiên cụ thể, rồi thông dụng.
+nhung	nhung:2	nhúng	O	Opus	N	S1: nhãn OK, lớp C, 11.316 PPM; ưu tiên cụ thể, rồi thông dụng.
+ninh	ninh:1	ninh	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ninh	ninh:2	nịnh	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+noigot	noigot:1	noi gót	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+noigot	noigot:2	nối gót	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nongcot	nongcot:1	nòng cốt	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+nongcot	nongcot:2	nòng cột	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+ongnghe	ongnghe:1	ong nghệ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ongnghe	ongnghe:2	ống nghe	A+O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+opera	opera:1	opera	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+opera	opera:2	ôpêra	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+ohay	ohay:1	ô hay	BS	Opus	Y	S1: nhãn OK, lớp F, 0.382 PPM; ưu tiên cụ thể, rồi thông dụng.
+ohay	ohay:2	ơ hay	BS	Opus	N	S1: nhãn OK, lớp F, 0.382 PPM; ưu tiên cụ thể, rồi thông dụng.
+okia	okia:1	ô kìa	BS	Opus	Y	S1: nhãn OK, lớp F, 0.295 PPM; ưu tiên cụ thể, rồi thông dụng.
+okia	okia:2	ơ kìa	BS	Opus	N	S1: nhãn OK, lớp F, 0.295 PPM; ưu tiên cụ thể, rồi thông dụng.
+omcham	omcham:1	ôm chằm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+omcham	omcham:2	ôm chầm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+pano	pano:1	pa nô	A	Opus	N	S1: nhãn R1, lớp C, 0.121 PPM; ưu tiên cụ thể, rồi thông dụng.
+pano	pano:2	panô	BS	Opus	Y	S1: nhãn R1, lớp C, 0.121 PPM; ưu tiên cụ thể, rồi thông dụng.
+pate	pate:1	pa tê	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+pate	pate:2	patê	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+phai	phai:1	phai	A	Opus	Y	XIN_KY_10X: cùng tiền lệ cờ lê/có lẽ; phải là hư từ (lớp tác nghiệp F), phai là động từ cụ thể (phai màu), 8 PPM.
+phai	phai:2	phải	O	Opus	N	XIN_KY_10X: cùng tiền lệ cờ lê/có lẽ; phải là hư từ (lớp tác nghiệp F), phai là động từ cụ thể (phai màu), 8 PPM.
+phamvi	phamvi:1	phạm vi	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+phamvi	phamvi:2	phẩm vị	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+phanxu	phanxu:1	phán xử	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+phanxu	phanxu:2	phân xử	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+phien	phien:1	phiên	A	Opus	Y	S1: nhãn OK, lớp K, 173.32 PPM; ưu tiên cụ thể, rồi thông dụng.
+phien	phien:2	phiền	O	Opus	N	S1: nhãn OK, lớp K, 173.32 PPM; ưu tiên cụ thể, rồi thông dụng.
+phim	phim:1	phim	O	Opus	Y	S1: nhãn OK, lớp C, 351.432 PPM; ưu tiên cụ thể, rồi thông dụng.
+phim	phim:2	phím	A	Opus	N	S1: nhãn OK, lớp C, 351.432 PPM; ưu tiên cụ thể, rồi thông dụng.
+phomat	phomat:1	pho mát	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+phomat	phomat:2	phó mát	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+phoi	phoi:1	phổi	O	Opus	Y	S1: nhãn OK, lớp C, 28.377 PPM; ưu tiên cụ thể, rồi thông dụng.
+phoi	phoi:2	phơi	A	Opus	N	S1: nhãn OK, lớp C, 28.377 PPM; ưu tiên cụ thể, rồi thông dụng.
+phunhan	phunhan:1	phu nhân	O	Opus	N	S1: nhãn OK, lớp H, 10.725 PPM; ưu tiên cụ thể, rồi thông dụng.
+phunhan	phunhan:2	phủ nhận	A	Opus	Y	S1: nhãn OK, lớp H, 10.725 PPM; ưu tiên cụ thể, rồi thông dụng.
+phucvi	phucvi:1	phục vi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+phucvi	phucvi:2	phục vị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+phuongvi	phuongvi:1	phương vị	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+phuongvi	phuongvi:2	phượng vĩ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+quacquac	quacquac:1	quác quác	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+quacquac	quacquac:2	quạc quạc	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+quatqueo	quatqueo:1	quắt queo	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+quatqueo	quatqueo:2	quắt quéo	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+quatqueo	quatqueo:3	quặt quẹo	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+quaypha	quaypha:1	quấy phá	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+quaypha	quaypha:2	quậy phá	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+quocsi	quocsi:1	quốc sỉ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+quocsi	quocsi:2	quốc sĩ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+rada	rada:1	ra da	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+rada	rada:2	ra đa	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+rada	rada:3	rađa	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+rairac	rairac:1	rải rác	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+rairac	rairac:2	rải rắc	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+ranh	ranh:1	rành	O	Opus	N	S1: nhãn OK, lớp C, 30.081 PPM; ưu tiên cụ thể, rồi thông dụng.
+ranh	ranh:2	rãnh	A	Opus	Y	S1: nhãn OK, lớp C, 30.081 PPM; ưu tiên cụ thể, rồi thông dụng.
+ramrap	ramrap:1	răm rắp	A	Opus	N	S1: nhãn OK, lớp H, 1.102 PPM; ưu tiên cụ thể, rồi thông dụng.
+ramrap	ramrap:2	rậm rạp	O	Opus	Y	S1: nhãn OK, lớp H, 1.102 PPM; ưu tiên cụ thể, rồi thông dụng.
+rieng	rieng:1	riêng	O	Opus	N	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1; riêng là từ quan hệ trừu tượng, riềng là vật cụ thể.
+rieng	rieng:2	riềng	A	Opus	Y	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1; riêng là từ quan hệ trừu tượng, riềng là vật cụ thể.
+robot	robot:1	robot	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+robot	robot:2	rô bốt	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+romra	romra:1	rôm rả	A	Opus	N	S1: nhãn OK, lớp C, 0.609 PPM; ưu tiên cụ thể, rồi thông dụng.
+romra	romra:2	rơm rạ	O	Opus	Y	S1: nhãn OK, lớp C, 0.609 PPM; ưu tiên cụ thể, rồi thông dụng.
+romooc	romooc:1	rơ moóc	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+romooc	romooc:2	rơmooc	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+rulo	rulo:1	ru lô	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+rulo	rulo:2	rulô	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+sachbong	sachbong:1	sạch bong	BS	Opus	N	S1: nhãn OK, lớp H, 0.353 PPM; ưu tiên cụ thể, rồi thông dụng.
+sachbong	sachbong:2	sạch bóng	BS	Opus	Y	S1: nhãn OK, lớp H, 0.353 PPM; ưu tiên cụ thể, rồi thông dụng.
+sang	sang:1	sàng	A	Opus	Y	S1: nhãn OK, lớp C, 283.121 PPM; ưu tiên cụ thể, rồi thông dụng.
+sang	sang:2	sáng	O	Opus	N	S1: nhãn OK, lớp C, 283.121 PPM; ưu tiên cụ thể, rồi thông dụng.
+sanh	sanh:1	sành	A	Opus	N	S1: nhãn OK, lớp C, 20.902 PPM; ưu tiên cụ thể, rồi thông dụng.
+sanh	sanh:2	sảnh	O	Opus	Y	S1: nhãn OK, lớp C, 20.902 PPM; ưu tiên cụ thể, rồi thông dụng.
+saclem	saclem:1	sắc lẻm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+saclem	saclem:2	sắc lẹm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+sammau	sammau:1	sặm màu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+sammau	sammau:2	sậm màu	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+sanco	sanco:1	sẵn có	A	Opus	N	S1: nhãn OK, lớp C, 2.745 PPM; ưu tiên cụ thể, rồi thông dụng.
+sanco	sanco:2	sân cỏ	O	Opus	Y	S1: nhãn OK, lớp C, 2.745 PPM; ưu tiên cụ thể, rồi thông dụng.
+samsi	samsi:1	sâm si	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+samsi	samsi:2	sầm sì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+sese	sese:1	se se	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+sese	sese:2	se sẻ	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+sodo	sodo:1	số đo	A	Opus	N	S1: nhãn OK, lớp C, 23.646 PPM; ưu tiên cụ thể, rồi thông dụng.
+sodo	sodo:2	sơ đồ	O	Opus	Y	S1: nhãn OK, lớp C, 23.646 PPM; ưu tiên cụ thể, rồi thông dụng.
+suongsa	suongsa:1	suồng sã	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+suongsa	suongsa:2	sương sa	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+suplo	suplo:1	súp lơ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+suplo	suplo:2	sụp lở	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+suplo	suplo:3	suplơ	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+suyt	suyt:1	suýt	A	Opus	Y	S1: nhãn OK, lớp F, 24.675 PPM; ưu tiên cụ thể, rồi thông dụng.
+suyt	suyt:2	suỵt	BS	Opus	N	S1: nhãn OK, lớp F, 24.675 PPM; ưu tiên cụ thể, rồi thông dụng.
+suytsoat	suytsoat:1	suýt soát	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+suytsoat	suytsoat:2	suỵt soạt	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+taivi	taivi:1	tại vì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+taivi	taivi:2	tại vị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tambo	tambo:1	tạm bợ	A	Opus	Y	S1: nhãn OK, lớp H, 0.282 PPM; ưu tiên cụ thể, rồi thông dụng.
+tambo	tambo:2	tẩm bổ	O	Opus	N	S1: nhãn OK, lớp H, 0.282 PPM; ưu tiên cụ thể, rồi thông dụng.
+tantinh	tantinh:1	tán tỉnh	A	Opus	Y	S1: nhãn OK, lớp H, 7.435 PPM; ưu tiên cụ thể, rồi thông dụng.
+tantinh	tantinh:2	tận tình	O	Opus	N	S1: nhãn OK, lớp H, 7.435 PPM; ưu tiên cụ thể, rồi thông dụng.
+taytrang	taytrang:1	tay trắng	A	Opus	Y	S1: nhãn OK, lớp H, 2.497 PPM; ưu tiên cụ thể, rồi thông dụng.
+taytrang	taytrang:2	tẩy trang	O	Opus	N	S1: nhãn OK, lớp H, 2.497 PPM; ưu tiên cụ thể, rồi thông dụng.
+tacluoi	tacluoi:1	tắc lưỡi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tacluoi	tacluoi:2	tặc lưỡi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tanggia	tanggia:1	tăng gia	A	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tanggia	tanggia:2	tăng giá	O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tharong	tharong:1	thả rong	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tharong	tharong:2	thả rông	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+thamdo	thamdo:1	thảm đỏ	O	Opus	N	S1, luật 10 lần: thảm đỏ (1.033 PPM) thấp hơn thăm dò (12.893 PPM) quá 10 lần nên chọn mục thông dụng.
+thamdo	thamdo:2	thăm dò	A	Opus	Y	S1, luật 10 lần: thảm đỏ (1.033 PPM) thấp hơn thăm dò (12.893 PPM) quá 10 lần nên chọn mục thông dụng.
+thanh	thanh:1	thanh	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+thanh	thanh:2	thành	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+thanhnien	thanhnien:1	thanh niên	O	Opus	Y	S1: nhãn OK, lớp C, 14.335 PPM; ưu tiên cụ thể, rồi thông dụng.
+thanhnien	thanhnien:2	thành niên	A	Opus	N	S1: nhãn OK, lớp C, 14.335 PPM; ưu tiên cụ thể, rồi thông dụng.
+thanhtinh	thanhtinh:1	thanh tĩnh	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+thanhtinh	thanhtinh:2	thanh tịnh	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+thap	thap:1	tháp	O	Opus	Y	S1: nhãn OK, lớp C, 73.487 PPM; ưu tiên cụ thể, rồi thông dụng.
+thap	thap:2	thắp	A	Opus	N	S1: nhãn OK, lớp C, 73.487 PPM; ưu tiên cụ thể, rồi thông dụng.
+that	that:1	thắt	A	Opus	N	S1, luật 10 lần: thắt (41.616 PPM) thấp hơn thật (1484.472 PPM) quá 10 lần nên chọn mục thông dụng.
+that	that:2	thật	O	Opus	Y	S1, luật 10 lần: thắt (41.616 PPM) thấp hơn thật (1484.472 PPM) quá 10 lần nên chọn mục thông dụng.
+thamthoat	thamthoat:1	thấm thoát	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+thamthoat	thamthoat:2	thấm thoắt	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+thay	thay:1	thầy	A	Opus	Y	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1 (thầy là người, lớp C); khóa đã qua K2 với hai chữ ký.
+thay	thay:2	thấy	O	Opus	N	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1 (thầy là người, lớp C); khóa đã qua K2 với hai chữ ký.
+them	them:1	thèm	O	Opus	N	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1; thềm là nơi chốn cụ thể.
+them	them:2	thềm	A	Opus	Y	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1; thềm là nơi chốn cụ thể.
+then	then:1	then	A	Opus	Y	S1: nhãn OK, lớp C, 9.315 PPM; ưu tiên cụ thể, rồi thông dụng.
+then	then:2	thẹn	O	Opus	N	S1: nhãn OK, lớp C, 9.315 PPM; ưu tiên cụ thể, rồi thông dụng.
+thienha	thienha:1	thiên hà	O	Opus	Y	S1: nhãn OK, lớp C, 6.087 PPM; ưu tiên cụ thể, rồi thông dụng.
+thienha	thienha:2	thiên hạ	A	Opus	N	S1: nhãn OK, lớp C, 6.087 PPM; ưu tiên cụ thể, rồi thông dụng.
+thoang	thoang:1	thoảng	A	Opus	Y	S1: nhãn OK, lớp H, 23.467 PPM; ưu tiên cụ thể, rồi thông dụng.
+thoang	thoang:2	thoáng	O	Opus	N	S1: nhãn OK, lớp H, 23.467 PPM; ưu tiên cụ thể, rồi thông dụng.
+thunhan	thunhan:1	thu nhận	A	Opus	N	S1: nhãn OK, lớp H, 10.049 PPM; ưu tiên cụ thể, rồi thông dụng.
+thunhan	thunhan:2	thú nhận	O	Opus	Y	S1: nhãn OK, lớp H, 10.049 PPM; ưu tiên cụ thể, rồi thông dụng.
+thuvi	thuvi:1	thú vị	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+thuvi	thuvi:2	thứ vị	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+thua	thua:1	thua	O	Opus	Y	S1: nhãn OK, lớp H, 61.846 PPM; ưu tiên cụ thể, rồi thông dụng.
+thua	thua:2	thưa	A	Opus	N	S1: nhãn OK, lớp H, 61.846 PPM; ưu tiên cụ thể, rồi thông dụng.
+thuan	thuan:1	thuần	A	Opus	Y	S1: nhãn OK, lớp H, 25.38 PPM; ưu tiên cụ thể, rồi thông dụng.
+thuan	thuan:2	thuận	O	Opus	N	S1: nhãn OK, lớp H, 25.38 PPM; ưu tiên cụ thể, rồi thông dụng.
+thutu	thutu:1	thứ tư	O	Opus	Y	S1: nhãn OK, lớp K, 21.546 PPM; ưu tiên cụ thể, rồi thông dụng.
+thutu	thutu:2	thứ tự	A	Opus	N	S1: nhãn OK, lớp K, 21.546 PPM; ưu tiên cụ thể, rồi thông dụng.
+thuong	thuong:1	thương	O	Opus	N	S1: nhãn OK, lớp H, 204.152 PPM; ưu tiên cụ thể, rồi thông dụng.
+thuong	thuong:2	thưởng	A	Opus	Y	S1: nhãn OK, lớp H, 204.152 PPM; ưu tiên cụ thể, rồi thông dụng.
+thuongthuc	thuongthuc:1	thường thức	A	Opus	N	S1: nhãn OK, lớp H, 50.454 PPM; ưu tiên cụ thể, rồi thông dụng.
+thuongthuc	thuongthuc:2	thưởng thức	O	Opus	Y	S1: nhãn OK, lớp H, 50.454 PPM; ưu tiên cụ thể, rồi thông dụng.
+titi	titi:1	ti ti	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titi	titi:2	ti tỉ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titi	titi:3	tì tì	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titi	titi:4	tỉ ti	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titi	titi:5	tí ti	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titi	titi:6	tí tị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titach	titach:1	tì tạch	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titach	titach:2	tí tách	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titeo	titeo:1	tí teo	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+titeo	titeo:2	tí tẹo	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tieudi	tieudi:1	tiểu di	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tieudi	tieudi:2	tiểu dị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tinhthe	tinhthe:1	tinh thể	A	Opus	N	S1: nhãn OK, lớp K, 8.808 PPM; ưu tiên cụ thể, rồi thông dụng.
+tinhthe	tinhthe:2	tình thế	O	Opus	Y	S1: nhãn OK, lớp K, 8.808 PPM; ưu tiên cụ thể, rồi thông dụng.
+tinhtrang	tinhtrang:1	tình trạng	O	Opus	Y	S1: nhãn OK, lớp K, 80.796 PPM; ưu tiên cụ thể, rồi thông dụng.
+tinhtrang	tinhtrang:2	tính trạng	A	Opus	N	S1: nhãn OK, lớp K, 80.796 PPM; ưu tiên cụ thể, rồi thông dụng.
+tinhtu	tinhtu:1	tình tứ	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tinhtu	tinhtu:2	tính từ	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tinh	tinh:1	tỉnh	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tinh	tinh:2	tính	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tonquy	tonquy:1	tôn qúy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tonquy	tonquy:2	tồn qũy	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tongdo	tongdo:1	tông đồ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tongdo	tongdo:2	tông đơ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tongdo	tongdo:3	tôngđơ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tram	tram:1	trạm	O	Opus	Y	S1: nhãn OK, lớp C, 84.576 PPM; ưu tiên cụ thể, rồi thông dụng.
+tram	tram:2	trâm	A	Opus	N	S1: nhãn OK, lớp C, 84.576 PPM; ưu tiên cụ thể, rồi thông dụng.
+troc	troc:1	tróc	A	Opus	N	S1: nhãn OK, lớp H, 3.752 PPM; ưu tiên cụ thể, rồi thông dụng.
+troc	troc:2	trọc	O	Opus	Y	S1: nhãn OK, lớp H, 3.752 PPM; ưu tiên cụ thể, rồi thông dụng.
+trongluc	trongluc:1	trong lúc	O	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+trongluc	trongluc:2	trọng lực	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+trongvong	trongvong:1	trong vòng	O	Opus	Y	S1: nhãn OK, lớp F, 93.981 PPM; ưu tiên cụ thể, rồi thông dụng.
+trongvong	trongvong:2	trọng vọng	A	Opus	N	S1: nhãn OK, lớp F, 93.981 PPM; ưu tiên cụ thể, rồi thông dụng.
+trot	trot:1	trót	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+trot	trot:2	trốt	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+trot	trot:3	trớt	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+trot	trot:4	trợt	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+trotroi	trotroi:1	trơ trọi	A	Opus	Y	S1: nhãn OK, lớp H, 0.514 PPM; ưu tiên cụ thể, rồi thông dụng.
+trotroi	trotroi:2	trở trời	O	Opus	N	S1: nhãn OK, lớp H, 0.514 PPM; ưu tiên cụ thể, rồi thông dụng.
+trum	trum:1	trùm	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+trum	trum:2	trúm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+trum	trum:3	trụm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+trungvi	trungvi:1	trung vị	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+trungvi	trungvi:2	trùng vi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+truyen	truyen:1	truyền	BS	Opus	Y	S1, luật 10 lần: truyện (33.45 PPM) thấp hơn truyền (436.468 PPM) quá 10 lần nên chọn mục thông dụng.
+truyen	truyen:2	truyện	A	Opus	N	S1, luật 10 lần: truyện (33.45 PPM) thấp hơn truyền (436.468 PPM) quá 10 lần nên chọn mục thông dụng.
+truyenthong	truyenthong:1	truyền thông	A	Opus	Y	S1: nhãn OK, lớp K, 71.95 PPM; ưu tiên cụ thể, rồi thông dụng.
+truyenthong	truyenthong:2	truyền thống	O	Opus	N	S1: nhãn OK, lớp K, 71.95 PPM; ưu tiên cụ thể, rồi thông dụng.
+truocmat	truocmat:1	trước mắt	A	Opus	N	S1: nhãn OK, lớp K, 33.464 PPM; ưu tiên cụ thể, rồi thông dụng.
+truocmat	truocmat:2	trước mặt	O	Opus	Y	S1: nhãn OK, lớp K, 33.464 PPM; ưu tiên cụ thể, rồi thông dụng.
+tusi	tusi:1	tu sĩ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tusi	tusi:2	tú sĩ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tusi	tusi:3	tử sĩ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tuti	tuti:1	tù tì	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tuti	tuti:2	tự ti	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tuche	tuche:1	tủ chè	A	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tuche	tuche:2	tự chế	O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tudung	tudung:1	tủ đứng	BS	Opus	Y	S1: nhãn OK, lớp C, 0.282 PPM; ưu tiên cụ thể, rồi thông dụng.
+tudung	tudung:2	tự dưng	A+O	Opus	N	S1: nhãn OK, lớp C, 0.282 PPM; ưu tiên cụ thể, rồi thông dụng.
+tudien	tudien:1	tụ điện	BS	Opus	Y	S1: nhãn R1, lớp C, 12.38 PPM; ưu tiên cụ thể, rồi thông dụng.
+tudien	tudien:2	tư điền	BS	Opus	N	S1: nhãn R1, lớp C, 12.38 PPM; ưu tiên cụ thể, rồi thông dụng.
+tudien	tudien:3	từ điện	BS	Opus	N	S1: nhãn R1, lớp C, 12.38 PPM; ưu tiên cụ thể, rồi thông dụng.
+tudien	tudien:4	tứ diện	BS	Opus	N	S1: nhãn R1, lớp C, 12.38 PPM; ưu tiên cụ thể, rồi thông dụng.
+tudien	tudien:5	tự điền	BS	Opus	N	S1: nhãn R1, lớp C, 12.38 PPM; ưu tiên cụ thể, rồi thông dụng.
+tuhop	tuhop:1	tụ họp	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tuhop	tuhop:2	tụ hợp	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+tuyenduong	tuyenduong:1	tuyên dương	A	Opus	N	S1: nhãn OK, lớp C, 13.738 PPM; ưu tiên cụ thể, rồi thông dụng.
+tuyenduong	tuyenduong:2	tuyến đường	O	Opus	Y	S1: nhãn OK, lớp C, 13.738 PPM; ưu tiên cụ thể, rồi thông dụng.
+tuyen	tuyen:1	tuyển	A	Opus	Y	S1: nhãn OK, lớp H, 83.636 PPM; ưu tiên cụ thể, rồi thông dụng.
+tuyen	tuyen:2	tuyến	O	Opus	N	S1: nhãn OK, lớp H, 83.636 PPM; ưu tiên cụ thể, rồi thông dụng.
+tuvi	tuvi:1	tư vị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tuvi	tuvi:2	từ vị	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tuvi	tuvi:3	tử vi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tuvi	tuvi:4	tứ vi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tuvi	tuvi:5	tự vị	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+tuoi	tuoi:1	tươi	O	Opus	Y	S1: nhãn OK, lớp H, 88.824 PPM; ưu tiên cụ thể, rồi thông dụng.
+tuoi	tuoi:2	tưới	A	Opus	N	S1: nhãn OK, lớp H, 88.824 PPM; ưu tiên cụ thể, rồi thông dụng.
+vali	vali:1	va li	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vali	vali:2	vali	O	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vach	vach:1	vách	A	Opus	Y	S1: nhãn OK, lớp C, 20.958 PPM; ưu tiên cụ thể, rồi thông dụng.
+vach	vach:2	vạch	O	Opus	N	S1: nhãn OK, lớp C, 20.958 PPM; ưu tiên cụ thể, rồi thông dụng.
+vanvi	vanvi:1	van vỉ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vanvi	vanvi:2	vân vi	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vanghoe	vanghoe:1	vàng hoe	O	Opus	Y	S1: nhãn OK, lớp H, 0.854 PPM; ưu tiên cụ thể, rồi thông dụng.
+vanghoe	vanghoe:2	vắng hoe	A	Opus	N	S1: nhãn OK, lớp H, 0.854 PPM; ưu tiên cụ thể, rồi thông dụng.
+vanphong	vanphong:1	văn phong	A	Opus	N	S1: nhãn OK, lớp C, 183.805 PPM; ưu tiên cụ thể, rồi thông dụng.
+vanphong	vanphong:2	văn phòng	O	Opus	Y	S1: nhãn OK, lớp C, 183.805 PPM; ưu tiên cụ thể, rồi thông dụng.
+vesau	vesau:1	ve sầu	O	Opus	Y	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1; về sau là từ chỉ thời gian.
+vesau	vesau:2	về sau	A	Opus	N	XIN_KY_10X: ví dụ đã đồng thuận ở vòng 2, ghi trong S1; về sau là từ chỉ thời gian.
+vevay	vevay:1	ve vảy	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vevay	vevay:2	ve vẩy	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vidanh	vidanh:1	vi danh	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vidanh	vidanh:2	vị danh	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vila	vila:1	vi la	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vila	vila:2	vì là	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vilo	vilo:1	vi lô	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vilo	vilo:2	vỉ lò	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vimo	vimo:1	vi mô	BS	Opus	Y	S1: nhãn R1, lớp K, 4.17 PPM; ưu tiên cụ thể, rồi thông dụng.
+vimo	vimo:2	vĩ mô	A	Opus	N	S1: nhãn R1, lớp K, 4.17 PPM; ưu tiên cụ thể, rồi thông dụng.
+vingu	vingu:1	vi ngữ	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vingu	vingu:2	vị ngữ	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vithe	vithe:1	vi thể	BS	Opus	N	S1: nhãn OK, lớp K, 9.604 PPM; ưu tiên cụ thể, rồi thông dụng.
+vithe	vithe:2	vì thế	A	Opus	N	S1: nhãn OK, lớp K, 9.604 PPM; ưu tiên cụ thể, rồi thông dụng.
+vithe	vithe:3	vị thế	BS	Opus	Y	S1: nhãn OK, lớp K, 9.604 PPM; ưu tiên cụ thể, rồi thông dụng.
+vitinh	vitinh:1	vi tinh	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vitinh	vitinh:2	vi tính	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vichung	vichung:1	vì chưng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vichung	vichung:2	vị chủng	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vine	vine:1	vì nể	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vine	vine:2	vị nể	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+viruoi	viruoi:1	vỉ ruồi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+viruoi	viruoi:2	vỉ ruổi	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vidam	vidam:1	ví dặm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vidam	vidam:2	ví đầm	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vidu	vidu:1	ví dù	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vidu	vidu:2	ví dụ	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vithu	vithu:1	ví thử	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vithu	vithu:2	vị thứ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vitu	vitu:1	vị từ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vitu	vitu:2	vị tự	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+voso	voso:1	vỏ sò	O	Opus	Y	S1: nhãn OK, lớp C, 3.391 PPM; ưu tiên cụ thể, rồi thông dụng.
+voso	voso:2	vô số	A	Opus	N	S1: nhãn OK, lớp C, 3.391 PPM; ưu tiên cụ thể, rồi thông dụng.
+vosi	vosi:1	võ sĩ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vosi	vosi:2	vô sỉ	BS	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vong	vong:1	vòng	O	Opus	Y	S1: nhãn OK, lớp C, 405.39 PPM; ưu tiên cụ thể, rồi thông dụng.
+vong	vong:2	võng	A	Opus	N	S1: nhãn OK, lớp C, 405.39 PPM; ưu tiên cụ thể, rồi thông dụng.
+vole	vole:1	vô lễ	O	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vole	vole:2	vỡ lẽ	A	Opus	BO	Không mặt chữ nào còn đủ điều kiện sau P4/H9.
+vovi	vovi:1	vô vi	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vovi	vovi:2	vô vị	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+vung	vung:1	vung	A	Opus	N	S1: nhãn OK, lớp C, 8.347 PPM; ưu tiên cụ thể, rồi thông dụng.
+vung	vung:2	vũng	O	Opus	Y	S1: nhãn OK, lớp C, 8.347 PPM; ưu tiên cụ thể, rồi thông dụng.
+vuongvan	vuongvan:1	vuông vắn	O	Opus	Y	S1: nhãn OK, lớp H, 0.109 PPM; ưu tiên cụ thể, rồi thông dụng.
+vuongvan	vuongvan:2	vương vấn	A	Opus	N	S1: nhãn OK, lớp H, 0.109 PPM; ưu tiên cụ thể, rồi thông dụng.
+xapxe	xapxe:1	xập xè	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xapxe	xapxe:2	xập xệ	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xoan	xoan:1	xoăn	A	Opus	N	S1: nhãn OK, lớp H, 62.2 PPM; ưu tiên cụ thể, rồi thông dụng.
+xoan	xoan:2	xoắn	O	Opus	Y	S1: nhãn OK, lớp H, 62.2 PPM; ưu tiên cụ thể, rồi thông dụng.
+xocxech	xocxech:1	xốc xếch	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xocxech	xocxech:2	xộc xệch	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xuatxu	xuatxu:1	xuất xử	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xuatxu	xuatxu:2	xuất xứ	A	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xuong	xuong:1	xuồng	A	Opus	N	S1: nhãn OK, lớp C, 84.481 PPM; ưu tiên cụ thể, rồi thông dụng.
+xuong	xuong:2	xương	O	Opus	Y	S1: nhãn OK, lớp C, 84.481 PPM; ưu tiên cụ thể, rồi thông dụng.
+xuoc	xuoc:1	xước	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xuoc	xuoc:2	xược	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xuongxau	xuongxau:1	xương xảu	BS	Opus	N	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+xuongxau	xuongxau:2	xương xẩu	BS	Opus	Y	Chỉ còn một mặt chữ qua cổng, hai phiếu và H9; các mặt còn lại bị loại.
+ynguyen	ynguyen:1	y nguyên	O	Opus	Y	S1: nhãn OK, lớp H, 0.435 PPM; ưu tiên cụ thể, rồi thông dụng.
+ynguyen	ynguyen:2	ý nguyện	A	Opus	N	S1: nhãn OK, lớp H, 0.435 PPM; ưu tiên cụ thể, rồi thông dụng.

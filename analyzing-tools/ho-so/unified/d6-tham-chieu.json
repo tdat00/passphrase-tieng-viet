@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "sources": {
+    "OPUS": {
+      "path": "../../../WordListAnalyze-Opus.md",
+      "sha256": "317596f999a9843a11dcbc706537ad3bcc6c213fb2ff689a1249dcb183a5a28b",
+      "body_sha256": "97d0b2fba487118029a83cd4aebd1c45248c3a1a3a5282cf5bb3ef506e56da0d",
+      "rows": 7776
+    },
+    "ASTRA": {
+      "path": "../../../WordListAnalyze-Astra.md",
+      "sha256": "b860c210f80c5fc2f27407ef5f2a25ab1781bf975e4b73ec5b7ea8fb47a0bcf2",
+      "body_sha256": "dfd74f433bb77faf2d9033800c58dccdb54adcb5be8a1580ed90cb63c8744f8e",
+      "rows": 7776
+    },
+    "WIKT_VI": {
+      "path": "../astra/vi.jsonl.gz",
+      "sha256": "1f0abd21982660b5fc2eff5eb3fbacbed2d9fe8f476af794dbed0d927ffb8187",
+      "head_lang": "vi",
+      "glosses": 57017
+    },
+    "GUIDE": {
+      "path": "../discussion/huong-dan-giai-nghia.md",
+      "sha256": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+      "coverage": "full master including section 12; includes writer sections 1–11"
+    },
+    "FAMILIES": {
+      "path": "d6-ho-chinh-ta.tsv",
+      "sha256": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+      "pairs": 1062
+    }
+  },
+  "family_registry_inputs": {
+    "../discussion/ho-chinh-ta-ban-dau.tsv": "4a38091c191b84c9d3fc945c670471e9f1a0ce7c0221ce33ab592c2380d0cc67",
+    "ho-chinh-ta-bo-sung.tsv": "cf1e8485cb95e2da077c64308e1bfac37d8f4a83d4573c11780c4b2e37c73656",
+    "../astra/round3\\H5b-cac-cap.tsv": "e821b8251256e97fd77c725cd8ae888958043a23845322090478bf7423529d58",
+    "p4-ho-moi-so-dem-astra.tsv": "f286500b30421e18c31e5717d86d9dd7803d52f830f3d47a8c6d60b770eb8f8a",
+    "l2-ho-H5.tsv": "79f034e662c59c7d7e64304e0f7558d933905baa9eccd914bf2c2b83d8c6f911",
+    "l2b-ho-H5.tsv": "b3779ae2dca8d72b4bd67a9489a8916976ae893811667a6d5b9362366010f4d9",
+    "l2c-ho-H5.tsv": "997fc35a3c944138d4556d00fb3608e251eaf4bc75309a88c94107f2cdf82702",
+    "l3-ho-H5.tsv": "bfeae231cf1e22c52f9811226f2e3374d2d770f944c485811a5b376d367b1718",
+    "p6-khau-tru-cuoi.tsv": "0b76fd020cf000f78b421c159b6548b3024862988f57d03ea90f9fdd00f9cb21",
+    "ket-qua-chon.tsv": "2998ef7f3eb97aef8ebd832b8b6f5d9e2814b46776e65a1144943911255c7de0"
+  },
+  "family_builder_sha256": "ab2fc6c6d033a07732cf671c4f2271631ea6160eb7826cc2cfb36e99c4f42da7",
+  "note": "Không dùng cặp tự sinh, từ đồng nghĩa, chuỗi con hay mọi khóa đã bỏ dấu làm họ chính tả."
+}

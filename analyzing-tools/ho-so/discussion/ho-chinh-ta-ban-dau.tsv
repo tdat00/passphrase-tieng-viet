@@ -1,0 +1,85 @@
+chuan	bien_the	loai_H5	HND_chuan	HND_bien_the	sub_chuan	sub_bien_the	ti_le_sub_%	web_chuan	web_bien_the	ti_le_web_%	sub_dong_khac_chuan	sub_dong_khac_bien_the	ti_le_sub_dong_khac_%	sub_chuan_tho	sub_bien_the_tho	web_chuan_tho	web_bien_the_tho	ket_luan	trong_ds_chuan	trong_ds_bien_the	ghi_chu
+thìa là	thì là	e	39K,74K	39K,74K	5	727	99.3	6	372	98.4	4	650	99.4	5	897	6	391	CHO_NGHIA	A	-	'thì là' phần lớn là từ nối thì + là (loại e).
+nền nếp	nề nếp	c	11K,22K,39K,74K	22K,39K,74K	2	9	81.8	5	39	88.6	2	9	81.8	2	9	5	40	LOAI_THIEU_DU_LIEU	-	-	
+xán lạn	sáng lạn	d	11K,22K,39K,74K	-	8	17	68.0	5	7	58.3	8	16	66.7	8	17	5	7	LOAI_LOI	-	-	
+giấu giếm	giấu diếm	d	22K,39K,74K	-	127	124	49.4	16	8	33.3	115	118	50.6	127	124	16	8	LOAI_LOI	-	-	Astra: Wiktionary tiếng Anh ghi 'giấu diếm' là lỗi viết → nên là loại d; kết luận loại không đổi.
+yên trí	yên chí	c	11K,22K,39K,74K	-	9	8	47.1	1	0	0.0	9	5	35.7	9	8	1	0	CHO_LOAI	A	-	Chưa xác nhận được loại: 'yên chí' không có trong HND (và theo Astra không có ở hai bản Wiktionary) nhưng chiếm 8/17 lượt phụ đề.
+cảm ơn	cám ơn	c	22K,39K,74K	11K,22K,39K,74K	24794	18447	42.7	13533	1318	8.9	9552	7272	43.2	24805	18447	13553	1318	LOAI_CANH_TRANH	A	-	
+để dành	để giành	e	11K,22K,39K,74K	-	654	179	21.5	584	1384	70.3	581	156	21.2	660	181	596	1386	CHO_NGHIA	A	-	'để giành' phần lớn là để + giành (thắng lợi…) (loại e).
+súc tích	xúc tích	d	11K,39K,74K	-	17	3	15.0	272	7	2.5	15	3	16.7	17	7	273	172	CHO_SAT_NGUONG	-	-	Phụ đề mọi dòng 17/3 (đủ 20) → loại; bỏ dòng trùng 15/3 (dưới 20) → qua. Web thô 172 lượt 'xúc tích' gần hết là cảm xúc | tích cực.
+chỉn chu	chỉnh chu	d	74K	-	28	9	24.3	78	40	33.9	27	6	18.2	28	9	78	76	LOAI_LOI	-	-	
+khuyến mãi	khuyến mại	c	74K	74K	84	25	22.9	10975	4571	29.4	74	21	22.1	84	25	10977	4571	LOAI_CANH_TRANH	A	-	
+hy vọng	hi vọng	c	11K,74K	39K,74K	7356	2677	26.7	8969	548	5.8	6271	2309	26.9	7365	2678	8977	548	LOAI_CANH_TRANH	-	-	
+sáp nhập	sát nhập	d	11K,22K,39K,74K	22K,39K,74K	24	42	63.6	1100	148	11.9	23	40	63.5	24	44	1108	152	LOAI_LOI	-	-	
+lặp lại	lập lại	e	39K,74K	-	830	228	21.6	6209	98	1.6	699	191	21.5	865	305	6226	1327	CHO_NGHIA	A	-	Web thô 1.327 lượt 'lập lại' phần lớn là 'thiết lập | lại'; vẫn chờ đọc nghĩa (loại e).
+bánh chưng	bánh trưng	d	22K,39K,74K	-	4	0	0.0	60	0	0.0	2	0	0.0	4	0	60	18	QUA_RIENG_H5	O	-	Đọc đủ 18/18 lượt web của 'bánh trưng': đều là 'bánh | trưng bày' (vắt từ), 0 lượt viết sai tên bánh. Số 24% cũ sai. Chủ dự án quyết giữ.
+kỷ niệm	kỉ niệm	c	11K,74K	39K,74K	646	376	36.8	6268	537	7.9	560	341	37.8	646	376	6276	537	LOAI_CANH_TRANH	-	-	
+đậu hũ	đậu hủ	c	39K,74K	74K	36	6	14.3	114	35	23.5	32	4	11.1	40	6	114	36	LOAI_CANH_TRANH	O	-	
+hấp thụ	hấp thu	c	11K,22K,39K,74K	22K,39K,74K	190	38	16.7	10858	1999	15.5	175	35	16.7	192	46	10914	2036	LOAI_CANH_TRANH	A	-	
+sơ suất	sơ xuất	d	11K,22K,39K,74K	-	93	23	19.8	322	14	4.2	82	21	20.4	93	23	326	30	LOAI_LOI	-	-	
+lý do	lí do	c	11K,74K	39K,74K	8518	1841	17.8	20972	441	2.1	7488	1660	18.1	10224	2215	22293	479	LOAI_CANH_TRANH	-	-	
+chín chắn	chính chắn	d	11K,22K,39K,74K	-	85	11	11.5	48	4	7.7	77	10	11.5	85	11	48	4	LOAI_LOI	A	-	
+cầu vồng	cầu vòng	d	11K,22K,39K,74K	22K	117	23	16.4	1085	12	1.1	105	22	17.3	123	23	1174	37	LOAI_LOI	A	-	
+tham quan	thăm quan	d	11K,22K,39K,74K	-	373	53	12.4	11951	670	5.3	326	49	13.1	387	73	12244	737	LOAI_LOI	-	-	
+ô tô	ôtô / ô-tô	g	11K,39K,74K	74K	411	76	15.6	26324	2026	7.1	356	69	16.2	412	76	26504	2026	QUA_H5G	-	-	Qua H5g nhưng viết liền 'oto' chỉ 3 chữ: trượt H2.
+bánh quy	bánh qui	c	22K,39K,74K	74K	398	47	10.6	1565	10	0.6	338	40	10.6	406	47	1586	10	LOAI_CANH_TRANH	-	-	
+xác suất	xác xuất	d	39K,74K	-	80	10	11.1	944	8	0.8	76	9	10.6	80	13	945	12	LOAI_LOI	A	-	Đọc lượt bị gắn cờ: 3 lượt 'cái xác xuất hiện' là vắt từ, 1 lượt 'xác xuất chính xác' là lỗi thật. 10/90 = 11,1%; bỏ dòng trùng 9/85 = 10,6%.
+chẩn đoán	chuẩn đoán	d	22K,39K,74K	-	527	112	17.5	10951	168	1.5	460	100	17.9	528	113	11004	169	LOAI_LOI	-	-	
+náo nức	nao nức	c	22K,39K,74K	22K,39K,74K	6	0	0.0	20	2	9.1	5	0	0.0	7	0	20	2	LOAI_THIEU_DU_LIEU	A	-	
+xung quanh	chung quanh	c	39K,74K	22K,39K,74K	2068	137	6.2	15023	267	1.7	1852	122	6.2	2076	145	15042	272	LOAI_CANH_TRANH	A	-	
+phản ánh	phản ảnh	c	11K,22K,39K,74K	39K,74K	115	17	12.9	3426	61	1.7	104	11	9.6	115	17	3444	62	LOAI_CANH_TRANH	A	-	
+tí hon	tý hon	c	11K,22K,39K,74K	-	276	10	3.5	125	3	2.3	221	10	4.3	281	10	140	3	QUA_RIENG_H5	A	-	
+dao động	giao động	d	11K,22K,39K,74K	-	103	12	10.4	3043	57	1.8	94	10	9.6	104	12	3043	57	CHO_SAT_NGUONG	A	-	Đọc lượt bị gắn cờ: 5/5 lượt giao động là lỗi thật (mẫu 'dao động từ X đến Y' bị gắn cờ nhầm vì có từ 'động từ'); 4/5 lượt dao động bị gắn cờ là đúng từ. Số chính 12/115 = 10,4%; bỏ dòng trùng 10/104 = 9,6%: sát ngưỡng.
+từ điển	tự điển	c	11K,22K,39K,74K	39K,74K	108	7	6.1	1931	39	2.0	92	7	7.1	110	7	1998	41	LOAI_CANH_TRANH	A	-	
+năng suất	năng xuất	d	11K,22K,39K,74K	-	45	1	2.2	10415	50	0.5	41	1	2.4	45	9	10630	252	QUA_RIENG_H5	A	-	Đọc đủ 8 lượt phụ đề bị gắn cờ: đều vắt từ (tài năng | xuất chúng, khả năng | xuất hiện…); còn 1 lỗi thật.
+đậu phộng	đậu phụng	c	39K,74K	39K,74K	184	12	6.1	1669	9	0.5	156	12	7.1	185	12	1739	9	LOAI_CANH_TRANH	A	-	
+trau dồi	trau giồi	c	11K,22K,39K,74K	39K,74K	18	0	0.0	507	13	2.5	15	0	0.0	18	0	507	13	LOAI_THIEU_DU_LIEU	-	-	
+câu chuyện	câu truyện	d	11K,22K,39K,74K	-	5353	147	2.7	12055	65	0.5	4708	138	2.8	5418	158	12236	77	QUA_RIENG_H5	A	-	
+nghỉ ngơi	nghĩ ngơi	d	22K,39K,74K	-	1900	51	2.6	3996	31	0.8	1500	43	2.8	1932	52	4039	32	QUA_RIENG_H5	OA	-	
+hoa màu	hoa mầu	c	22K,74K	74K	19	3	13.6	407	1	0.2	18	3	14.3	24	3	579	1	LOAI_CANH_TRANH	A	-	
+vẻ đẹp	vẽ đẹp	d	-	-	374	17	4.3	7292	78	1.1	332	17	4.9	417	18	7516	89	QUA_RIENG_H5	-	-	'vẽ đẹp' còn là cụm đúng (vẽ + đẹp); tỉ lệ chỉ là cận trên của lỗi.
+dành dụm	giành dụm	d	22K,39K,74K	-	62	1	1.6	20	0	0.0	54	1	1.8	66	1	22	0	QUA_RIENG_H5	-	-	
+giàu có	giầu có	c	22K,39K,74K	74K	958	17	1.7	1627	3	0.2	856	16	1.8	1040	17	1931	3	QUA_RIENG_H5	OA	-	
+cư xử	cư sử	d	11K,22K,39K,74K	-	1091	10	0.9	766	0	0.0	986	8	0.8	1141	10	777	19	QUA_RIENG_H5	A	-	
+chải chuốt	trải chuốt	d	11K,22K,39K,74K	-	35	1	2.8	313	0	0.0	32	1	3.0	35	1	318	0	QUA_RIENG_H5	O	-	
+xếp hàng	sếp hàng	d	11K,22K,39K,74K	-	384	4	1.0	809	0	0.0	311	3	1.0	388	4	959	0	QUA_RIENG_H5	OA	-	
+giòn tan	dòn tan	c	22K,39K,74K	-	10	0	0.0	70	1	1.4	7	0	0.0	12	0	71	1	LOAI_THIEU_DU_LIEU	A	-	Giữ loại c (Astra: có chứng cứ biến thể giòn/dòn ở tiếng gốc); phụ đề chỉ 10 lượt nên thiếu dữ liệu.
+bảy mươi	bẩy mươi	c	74K	-	24	0	0.0	188	1	0.5	23	0	0.0	37	0	232	3	QUA_RIENG_H5	O	-	Qua H5 nhưng là chuỗi số sản sinh: trượt H3.
+sẵn sàng	sẳn sàng	d	11K,22K,39K,74K	-	12559	100	0.8	16719	88	0.5	8472	91	1.1	12676	100	16860	88	QUA_RIENG_H5	A	-	
+tập trung	tập chung	d	11K,22K,39K,74K	-	3462	41	1.2	22781	33	0.1	2820	36	1.3	3640	45	24008	57	QUA_RIENG_H5	A	-	
+thầy giáo	thày giáo	c	11K,22K,39K,74K	-	158	0	0.0	152	5	3.2	146	0	0.0	167	0	155	5	QUA_RIENG_H5	OA	-	
+xảy ra	xẩy ra	c	11K,22K,39K,74K	-	22667	127	0.6	24892	75	0.3	18000	100	0.6	23048	129	25410	78	QUA_RIENG_H5	A	-	
+vui vẻ	vui vẽ	d	39K,74K	-	4159	25	0.6	7195	15	0.2	3224	19	0.6	4251	25	7276	16	QUA_RIENG_H5	OA	-	
+đường ray	đường rầy	c	74K	74K	257	2	0.8	2735	4	0.1	222	2	0.9	281	3	2891	4	QUA_RIENG_H5	A	-	
+rực rỡ	rực rở	d	11K,22K,39K,74K	-	253	3	1.2	2604	4	0.2	214	2	0.9	287	3	2922	4	QUA_RIENG_H5	OA	-	
+trân trọng	chân trọng	d	11K,22K,39K,74K	-	578	1	0.2	1959	5	0.3	421	1	0.2	585	1	1967	9	QUA_RIENG_H5	A	-	
+sắp xếp	xắp xếp	d	11K,22K,39K,74K	-	1754	12	0.7	11401	21	0.2	1531	11	0.7	1757	12	11491	21	QUA_RIENG_H5	A	-	
+đặc biệt	đặt biệt	d	11K,22K,39K,74K	-	6406	42	0.7	86704	178	0.2	5595	41	0.7	6454	51	87468	201	QUA_RIENG_H5	A	-	
+chia sẻ	chia xẻ	c	22K,39K,74K	22K,39K,74K	1551	21	1.3	28681	25	0.1	1366	19	1.4	1553	21	28791	25	QUA_RIENG_H5	OA	-	'chia xẻ' còn có nghĩa xẻ, tách vật; tỉ lệ chỉ là cận trên.
+xuất sắc	suất sắc	d	11K,22K,39K,74K	-	944	3	0.3	8375	13	0.2	710	2	0.3	968	5	8549	16	QUA_RIENG_H5	-	-	
+nhảy vọt	nhẩy vọt	c	11K,22K,39K,74K	-	43	0	0.0	237	1	0.4	37	0	0.0	43	0	237	1	QUA_RIENG_H5	O	-	
+chặt chẽ	chặt chẻ	d	11K,22K,39K,74K	-	203	1	0.5	8600	15	0.2	182	1	0.5	204	1	8622	15	QUA_RIENG_H5	A	-	
+sạch sẽ	sạch sẻ	d	11K,22K,39K,74K	-	675	3	0.4	4759	3	0.1	599	2	0.3	757	3	4809	3	QUA_RIENG_H5	OA	-	
+xinh xắn	xinh sắn	d	39K,74K	-	266	1	0.4	1423	0	0.0	227	1	0.4	266	1	1434	0	QUA_RIENG_H5	OA	-	
+mạnh mẽ	mạnh mẻ	d	39K,74K	-	2439	11	0.4	28915	8	0.0	2080	11	0.5	2451	11	29113	8	QUA_RIENG_H5	OA	-	
+dòng sông	giòng sông	c	-	-	514	0	0.0	803	4	0.5	416	0	0.0	594	0	845	4	QUA_RIENG_H5	-	-	
+suy nghĩ	suy nghỉ	d	11K,22K,39K,74K	-	4757	5	0.1	7961	5	0.1	4074	4	0.1	4981	5	8110	5	QUA_RIENG_H5	OA	-	
+sử dụng	xử dụng	d	11K,22K,39K,74K	-	4799	51	1.1	423010	95	0.0	4278	51	1.2	4860	51	429833	95	QUA_RIENG_H5	A	-	
+màu sắc	mầu sắc	c	11K,22K,39K,74K	74K	320	0	0.0	46489	31	0.1	290	0	0.0	326	0	47620	31	QUA_RIENG_H5	A	-	
+sản xuất	sản suất	d	11K,22K,39K,74K	-	1008	6	0.6	339739	91	0.0	906	6	0.7	1038	6	345209	92	QUA_RIENG_H5	A	-	
+đậu xanh	đậu sanh	d	39K,74K	-	35	0	0.0	708	0	0.0	27	0	0.0	35	0	764	0	QUA_RIENG_H5	OA	-	
+sửa soạn	sữa soạn	d	11K,22K,39K,74K	-	90	0	0.0	86	0	0.0	78	0	0.0	91	0	86	0	QUA_RIENG_H5	O	-	
+ngùn ngụt	ngun ngút	c	74K	74K	0	0	-	1	0	0.0	0	0	-	0	0	1	0	LOAI_THIEU_DU_LIEU	A	-	
+gãy gọn	gẫy gọn	c	39K,74K	74K	1	0	0.0	3	0	0.0	1	0	0.0	1	0	3	0	LOAI_THIEU_DU_LIEU	A	-	
+giành giật	dành giật	d	22K,39K,74K	11K	38	0	0.0	12	0	0.0	34	0	0.0	40	0	12	0	QUA_RIENG_H5	-	-	
+dỗ dành	giỗ dành	d	22K,39K,74K	-	29	0	0.0	42	0	0.0	27	0	0.0	29	0	44	0	QUA_RIENG_H5	O	-	
+dông dài	giông dài	d	11K,22K,39K,74K	-	17	0	0.0	13	0	0.0	14	0	0.0	17	0	14	0	QUA_RIENG_H5_THIEU_DU_LIEU	A	-	Không kho nào đủ 20 lượt, không có chứng cứ lỗi: chỉ đi tiếp khi hai bên ký (H5d, nhánh thiếu dữ liệu).
+thầy	thày	c	11K,22K,39K,74K	74K	7562	83	1.1	4540	45	1.0	6191	60	1.0	7562	83	4540	45	QUA_RIENG_H5	A	-	
+mì	mỳ	c	11K,22K,39K,74K	-	1541	259	14.4	13524	772	5.4	1321	236	15.2	1541	259	13524	772	LOAI_CANH_TRANH	-	-	Áp cho cả họ khi mì/mỳ là một tiếng nguyên của từ (bánh mì…), không dò chuỗi con.
+taxi	tắc xi / tắc-xi / tắcxi	f	74K	11K,74K	1042	35	3.2	3176	15	0.5	810	34	4.0	1042	35	3176	25	QUA_RIENG_H5	O	A	Cộng các dạng chỉ khác dấu phân cách; còn phải qua H3, H6, H7 như mọi mục.
+radio	ra đi ô / ra-đi-ô / rađiô	f	74K	22K,39K,74K	849	15	1.7	2563	2	0.1	712	13	1.8	849	15	2563	3	QUA_RIENG_H5	O	-	Cộng các dạng chỉ khác dấu phân cách; còn phải qua H3, H6, H7 như mọi mục.
+micrô / mi-crô / mi crô	micro	f	74K	74K	10	106	91.4	689	7596	91.7	10	101	91.0	10	106	689	7596	LOAI_CANH_TRANH	-	O	Không dạng nào đạt 95% ở cả hai kho.
+mô tơ / mô-tơ / môtơ	motor	f	11K,39K,74K	-	11	30	73.2	542	7688	93.4	10	26	72.2	12	30	546	7688	LOAI_CANH_TRANH	A	-	'motor' không có trong HND; không dạng nào đạt 95% ở cả hai kho.
+sơ mi	sơ-mi / sơmi	g	11K,22K,39K,74K	11K,22K,39K,74K	118	32	21.3	3752	80	2.1	112	31	21.7	119	32	3761	80	QUA_H5G	A	-	
+đô la	đô-la / đôla	g	39K,74K	39K,74K	412	785	65.6	9658	1381	12.5	362	709	66.2	648	1014	10741	1459	QUA_H5G	A	-	Ở phụ đề dạng có gạch hoặc viết liền chiếm đa số; dạng 'đô la' vẫn có chứng cứ không gạch.
+bít tết	bít-tết / bíttết	g	39K,74K	39K,74K	122	61	33.3	337	25	6.9	105	58	35.6	122	61	337	25	QUA_H5G	A	-	

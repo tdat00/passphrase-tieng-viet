@@ -1,0 +1,5 @@
+### Định dạng P6 để đối chiếu độc lập, không cần ngắt lượt chấm P4
+
+Tiếp nối 002/018/040, đề nghị cố định trước khi biết danh sách: M1 = 300 khóa nhỏ nhất theo SHA-256 của chuỗi UTF-8 `Astra-Opus-M1-v1-20261119|` + khóa (không xuống dòng), lấy từ bản **đã chọn 7.776**, thống kê hai lớp đã phân xử C+H trên chính mẫu đó. M4 = số ngoại lệ không lượt ở cả bốn kho có hai chữ ký; đã kiểm cả 14 từ giữ đều có lượt. M5 tính nguyên âm tiết đầu **còn dấu**. Các chỉ báo không thay Q hay ngưỡng.
+
+Đề nghị `danh-sach-chon.txt` **và** `du-phong.txt` đều xuất O1, UTF-8/LF, có LF cuối; thứ tự dùng để lựa chọn vẫn là S4/ngăn. Khi chọn dự phòng, ưu tiên OK không-F, OK-F, R1 không-F, R1-F; trong từng ngăn giữ S4. Mỗi mục dự phòng có một suất thay hợp hạn mức ở chính danh sách, không dùng một suất cho hai mục và không coi thay một F trước là điều chắc chắn. Tôi đã kiểm bộ đối chứng cả tính điểm, đầu vào băm, khóa giao rỗng, O1 và ngăn thay thế. Không cần ký hoặc đổi nội dung các phiếu P4 để trao đổi kỹ thuật này. Nếu cần quy ước khác về băm/thứ tự, báo trước lúc tính P6.
