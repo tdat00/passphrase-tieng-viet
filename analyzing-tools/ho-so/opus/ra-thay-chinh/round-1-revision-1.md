@@ -342,3 +342,32 @@ Giữ `Status: Draft (round 1)`.
 **Ký:** `ky-ke-hoach.md`, accept với một điều kiện: T7 của Astra cho cùng kết quả.
 
 Giữ `Status: Draft (round 1)`.
+
+## 13. Sửa theo duyệt ký của Astra: rổ S4, T7, mục 9 (22/11/2026)
+
+**Nhận cả ba điểm của Astra** (`ho-so/astra/ra-thay-chinh/ky-ke-hoach.md`):
+
+- **Rổ chấm:** bỏ *bao tử* (K1, T-dpv2-7) và *chạng vạng* (chờ H5, T-dpv2-6) trước khi chấm.
+  - Lần 1 tôi chỉ lọc theo `cong_loai` của `nguon-goc-giai-nghia.tsv`, nên sót hai trạng thái H ghi ở dự phòng v2.
+  - `xep-lai-rtc.py` nay đọc `du-phong-v2-honorable-mentions.tsv` và kiểm đúng hai mục này. Rổ còn 10.003 mục.
+- **T7:** `so-t7.py` so hai chương trình: khớp 143/143 dòng. Ba cặp từ vào đổi chỗ (38–39, 47–48, 66–67).
+- **Mục 9:** thêm `nieu` (K0), 4 họ QUA còn thiếu, cách thay chữ ký của khóa `chia`. T2 và T3 nay so từng khóa và mã, từng họ và kết luận.
+
+**Đã áp:**
+
+- Kế hoạch:
+  - mục 6: kết quả đã khóa;
+  - mục 6.1: hạng mới của HM;
+  - mục 9: `labels.tsv`, `blocked_keys.tsv`, `spelling_families.tsv`, `chu-ky.tsv`;
+  - mục 11: nguồn `91d8ee9` cho T-rtc-19 và T-rtc-20; thêm T-rtc-21;
+  - mục 12: OI-RTC-P6 đã khép;
+  - mục 13: T2, T3, T7;
+  - mục 15 (còn khoảng 7–14 lượt) và mục 16.
+- Báo cáo chung: mục 1 (dòng 6 và 10), 4.7 mới, 5.
+- Bảng thay: thứ tự từ vào theo S4 mới; cột `hang_S4` là hạng mới, thêm cột `hang_S4_cu`. Script `hop-nhat-rtc.py` đọc `xep-lai-rtc.tsv` và kiểm tập vào, dự bị, thứ tự HM.
+
+**Quyết định kỹ thuật của người soạn, để Astra xem:** `labels.tsv` giữ điểm của rổ P6. Cả 7.981 dòng khớp `xep-hang.tsv`; thứ tự mới chỉ ghi ở hồ sơ S4.
+
+**Ký:** `ky-ke-hoach.md`, accept lần 2, không còn điều kiện.
+
+Giữ `Status: Draft (round 1)`.

@@ -38,12 +38,12 @@
    - K2 chưa đủ hai chữ ký thì không vào bản 1 (TC:167, :202, :525).
    - Phản đối hợp lệ còn giữ sau một lần phản biện thì không phát hành (TC:190–191).
    - "Chờ" là chưa được nhận ở bản 1 (TC:12).
-6. **Từ vào** (mô phỏng theo hạng S4 đã khóa; thứ tự cuối tính lại theo T-rtc-14): 118 dự phòng không-F dùng được (120, bỏ *làm cỗ*, *rướn*). Tập 116: 116 từ vào (106 tầng A, 10 tầng C; hạng 8.096–8.245), còn 2 dự bị. Opus đã tính lại theo T-rtc-14 (`ho-so/opus/ra-thay-chinh/evidence/xep-lai-rtc.*`): tập vào và hai dự bị (*cả nghĩ*, rồi *cửu chương*) không đổi; chờ chương trình độc lập của Astra (T7). Vì chỉ còn 2 dự bị, chủ dự án cho mở chu kỳ HM tối đa 25 từ (Q-rtc-A2, D-rtc-8, `2cc6aec`); HM chỉ lấp ghế sau dự phòng (kế hoạch mục 6.1).
+6. **Từ vào** (thứ tự theo S4 tính lại và đã khóa, T-rtc-21): 118 dự phòng không-F dùng được (120, bỏ *làm cỗ*, *rướn*). Tập 116: 116 từ vào (106 tầng A, 10 tầng C; hạng cũ 8.096–8.245, hạng mới 7.975–8.115), còn 2 dự bị. Hai chương trình chấm độc lập khớp 143/143 dòng trên rổ 10.003 (T-rtc-21): tập vào và hai dự bị (*cả nghĩ*, rồi *cửu chương*) không đổi; chỉ thứ tự bên trong tập vào đổi. Vì chỉ còn 2 dự bị, chủ dự án cho mở chu kỳ HM tối đa 25 từ (Q-rtc-A2, D-rtc-8, `2cc6aec`); HM chỉ lấp ghế sau dự phòng (kế hoạch mục 6.1).
    - **Chu kỳ HM đã thỏa thuận (T-rtc-19):** 25 HM theo hạng, đều qua H1–H9; 5 K2 hai SA ký (*biển, bí mật, vận hành, chia, ngắn gọn*); không chọn *cơ quan* (H6 nhóm 3) và *mình* (lớp F).
 7. **Báo tử:** không có từ chính nào mang khóa `baotu`; ghi `baotu` K1 (T-dpv2-7).
 8. **Chữ ký K2 cũ giữ nguyên (9):** *bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng*. *gián* giữ theo quyết định 5. OI-RTC-KY-CU đã rút.
 9. **D6:** năm nguồn ghim đều có bản đúng byte (C17). D6 chạy trong một vùng riêng ngoài worktree.
-10. **Câu hỏi:** không còn câu hỏi mở. Đã trả lời: Q-rtc-O1 (D-rtc-6), Q-rtc-O2 (D-rtc-7), Q-rtc-A2 (D-rtc-8). Q-rtc-A3 chưa kích hoạt. A1 đã rút. Kế hoạch chưa Final: chỉ còn chương trình chấm độc lập của Astra (T7, OI-RTC-P6) và chữ ký kế hoạch của hai SA.
+10. **Câu hỏi:** không còn câu hỏi mở. Đã trả lời: Q-rtc-O1 (D-rtc-6), Q-rtc-O2 (D-rtc-7), Q-rtc-A2 (D-rtc-8). Q-rtc-A3 chưa kích hoạt. A1 đã rút. Kế hoạch chưa Final: Opus đã ký; chờ chữ ký của Astra.
 
 ## 2. Kết luận chung
 
@@ -210,10 +210,22 @@ Bảng có bốn vai trò: RA (116), VAO (116), DU_BI (2), HM (25; cột `tang` 
   - *ngả ngớn*: Kaikki và HND không ghi nghĩa tục hay tình dục người lớn, nên không phải K0.
 - **Kết quả:** không có điểm lệch, không có câu hỏi cho chủ dự án. Tính lại S4 cho cùng 25 mục, cùng thứ tự.
 
+### 4.7. Tính lại S4 — đã thỏa thuận (T-rtc-21)
+
+- **Opus, lần 1** (`ho-so/opus/ra-thay-chinh/evidence/xep-lai-rtc.*`): rổ 10.005 mục. Chỉ bỏ các mục LOAI có mã cổng H trong `nguon-goc-giai-nghia.tsv`.
+- **Astra** (`ho-so/astra/ra-thay-chinh/ky-ke-hoach.md`, `evidence/ky1-xep-lai-astra.*`):
+  - tái lập đúng kết quả 10.005 của Opus;
+  - chỉ ra hai mục phải bỏ trước khi chấm: *bao tử* (K1 của khóa `baotu`, T-dpv2-7) và *chạng vạng* (chờ H5, T-dpv2-6). Cả hai mang mã lịch sử D6_CUOI, nhưng đầu mục không qua H;
+  - với rổ 10.003, thứ tự từ vào đổi ở ba cặp: 38–39, 47–48, 66–67.
+- **Opus nhận** (`ho-so/unified/du-phong-v2-honorable-mentions.tsv:17,42`, `ho-so/unified/du-phong-v2-ke-hoach.md:421–422`):
+  - đây là hai mục LOAI duy nhất trong rổ mà không phải HM;
+  - sau khi sửa, hai chương trình khớp 143/143 dòng (`ho-so/opus/ra-thay-chinh/evidence/so-t7.log`).
+- **Kết quả:** tập vào, dự bị và thứ tự HM không đổi. Không cần hỏi chủ dự án.
+
 ## 5. Câu hỏi và mục mở
 
 - Câu hỏi: `ra-thay-chinh-cau-hoi.md`.
   - Không còn câu hỏi mở. Đã trả lời: Q-rtc-O1 (D-rtc-6; câu hỏi và câu trả lời ở `0253bb0`), Q-rtc-O2 (D-rtc-7) và Q-rtc-A2 (D-rtc-8) (ở `2cc6aec`). Q-rtc-S1, S2, S3 đã khép bằng thỏa thuận (T-rtc-12 đến T-rtc-14); lập luận từng mục ở `ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`.
   - Chưa kích hoạt: Q-rtc-A3 (kế hoạch mục 12.2).
-- Mục mở và quy trình hai SA khép chúng: `ra-thay-chinh-ke-hoach.md` mục 12. OI-RTC-HM đã khép (T-rtc-19); còn OI-RTC-P6 (chương trình chấm của Astra, T7).
+- Mục mở và quy trình hai SA khép chúng: `ra-thay-chinh-ke-hoach.md` mục 12. OI-RTC-HM (T-rtc-19) và OI-RTC-P6 (T-rtc-21) đã khép; chỉ còn OI-RTC-K2-KY, không chặn Final.
 - Không còn K0 nào tranh chấp, nên không có câu hỏi K0 cho chủ dự án. Các cách đọc có thể là K0 trong 46 khóa chờ (*ghen*/*ghèn*, *tình tứ*, *trường*/*truồng*) phải xét nguồn trước; nếu hai SA còn tranh cãi một khóa K0 thì gửi chủ dự án (TC:164).

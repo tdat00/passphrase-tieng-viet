@@ -1,0 +1,168 @@
+{
+  "commit": "91d8ee9",
+  "T7_khop_Tren_ro_qua_H": false,
+  "co_so_nguon": 10133,
+  "co_so_S4_F_G_T_diem_100_khop": true,
+  "tu_ra": 116,
+  "tu_ra_theo_cong": {
+    "K1": 89,
+    "H5": 24,
+    "K0": 3
+  },
+  "khoa_chan_moi": 94,
+  "loai_them_de_dung_H": {
+    "bao tử": {
+      "hang_cu": 3822,
+      "dong_dpv2": 17
+    },
+    "chạng vạng": {
+      "hang_cu": 6958,
+      "dong_dpv2": 42
+    }
+  },
+  "ket_qua": {
+    "RO_MUC_6": {
+      "so_muc_cham": 10005,
+      "bam_hang_LF": "3f6a19936c883a1440d246cb1365d62572a41f5368eed7da1220162e0655eaf2",
+      "d6_d7_cu_con_trong_ro": 131,
+      "F": 77,
+      "R1": 0,
+      "HM_ke": "giảng viên",
+      "doi_chieu": {
+        "VAO": {
+          "N": 116,
+          "cung_tap_Opus": true,
+          "vi_tri_khac_Opus": 0,
+          "vi_tri_khac_TSV_hang_cu": 30,
+          "hang_toan_ro_khac": 0,
+          "diem_100_khac": 0
+        },
+        "DU_BI": {
+          "N": 2,
+          "cung_tap_Opus": true,
+          "vi_tri_khac_Opus": 0,
+          "vi_tri_khac_TSV_hang_cu": 0,
+          "hang_toan_ro_khac": 0,
+          "diem_100_khac": 0
+        },
+        "HM": {
+          "N": 25,
+          "cung_tap_Opus": true,
+          "vi_tri_khac_Opus": 0,
+          "vi_tri_khac_TSV_hang_cu": 0,
+          "hang_toan_ro_khac": 0,
+          "diem_100_khac": 0
+        }
+      },
+      "du_bi": [
+        "cả nghĩ",
+        "cửu chương"
+      ],
+      "so_cho_doi_trong_118_so_voi_cu": 30
+    },
+    "T_RTC_14": {
+      "so_muc_cham": 10003,
+      "bam_hang_LF": "4f9166796617f71894bd2870771db825aa3f100a0203e94ffb33f5ddd6429014",
+      "d6_d7_cu_con_trong_ro": 129,
+      "F": 77,
+      "R1": 0,
+      "HM_ke": "giảng viên",
+      "doi_chieu": {
+        "VAO": {
+          "N": 116,
+          "cung_tap_Opus": true,
+          "vi_tri_khac_Opus": 6,
+          "vi_tri_khac_TSV_hang_cu": 28,
+          "hang_toan_ro_khac": 116,
+          "diem_100_khac": 24
+        },
+        "DU_BI": {
+          "N": 2,
+          "cung_tap_Opus": true,
+          "vi_tri_khac_Opus": 0,
+          "vi_tri_khac_TSV_hang_cu": 0,
+          "hang_toan_ro_khac": 2,
+          "diem_100_khac": 0
+        },
+        "HM": {
+          "N": 25,
+          "cung_tap_Opus": true,
+          "vi_tri_khac_Opus": 0,
+          "vi_tri_khac_TSV_hang_cu": 0,
+          "hang_toan_ro_khac": 3,
+          "diem_100_khac": 5
+        }
+      },
+      "du_bi": [
+        "cả nghĩ",
+        "cửu chương"
+      ],
+      "so_cho_doi_trong_118_so_voi_cu": 28
+    }
+  },
+  "vi_tri_khac_Opus_tren_ro_dung_H": [
+    {
+      "vai_tro": "VAO",
+      "vi_tri": 38,
+      "Astra": "đỏ chót",
+      "Opus": "leo lét"
+    },
+    {
+      "vai_tro": "VAO",
+      "vi_tri": 39,
+      "Astra": "leo lét",
+      "Opus": "đỏ chót"
+    },
+    {
+      "vai_tro": "VAO",
+      "vi_tri": 47,
+      "Astra": "xoành xoạch",
+      "Opus": "học tủ"
+    },
+    {
+      "vai_tro": "VAO",
+      "vi_tri": 48,
+      "Astra": "học tủ",
+      "Opus": "xoành xoạch"
+    },
+    {
+      "vai_tro": "VAO",
+      "vi_tri": 66,
+      "Astra": "mau mắn",
+      "Opus": "méo xệch"
+    },
+    {
+      "vai_tro": "VAO",
+      "vi_tri": 67,
+      "Astra": "méo xệch",
+      "Opus": "mau mắn"
+    }
+  ],
+  "sha256_blob_dau_vao": {
+    "91d8ee9:analyzing-tools/ho-so/unified/p6-dau-vao.tsv": "9d464c768b86e078edd17f44cdc6247933a47c2e6abf19747d4c71a35dcb144a",
+    "91d8ee9:analyzing-tools/ho-so/unified/l2-nhan-sau-H9-opus.tsv": "bf4306e774c87c6fde950dd0798b776c25ab7fa33e040dfd9aad8e77fc573f67",
+    "91d8ee9:analyzing-tools/ho-so/unified/l2b-nhan-sau-H9-opus.tsv": "404871e5425ffa5e5782c977169ce782844657bb400ba5564fae1377f577ab50",
+    "91d8ee9:analyzing-tools/ho-so/unified/l2c-nhan-sau-H9-opus.tsv": "42be3779823e878a20a201dc8cd126900f4728c812f03996591be20b162a1636",
+    "91d8ee9:analyzing-tools/ho-so/unified/l3-nhan-sau-H9-opus.tsv": "354a8e476d547de4183604a3e4b45e49a671dbf7da02df37795a7a07baeea4d8",
+    "91d8ee9:analyzing-tools/nguon-goc-giai-nghia.tsv": "197df30135d5ee8fa5a8e8ff1dc3a284fce89ad97b9a910b03a280ec2db24b33",
+    "91d8ee9:analyzing-tools/ho-so/unified/opus-counts.tsv": "38591846fb13efec4d2c2ae4a6e01e3414b2367611a8a5596cecd7c08fc550f1",
+    "91d8ee9:analyzing-tools/ho-so/discussion/bang-khoa-chung.tsv": "07195c28834f5bd3ae2c520da1eb60c9c12991c091dd3a259264b5dd9baa03f8",
+    "91d8ee9:analyzing-tools/ho-so/unified/l2-ung-vien.tsv": "c211cafe719c7a4bc42c182f38b9998bd4f7829e60db68119f3874b11f67ac73",
+    "91d8ee9:analyzing-tools/ho-so/unified/l2b-ung-vien.tsv": "e2513ef312b1644789a0617c562b2c5090990caae79e1eed2e86eaf0585bb3fa",
+    "91d8ee9:analyzing-tools/ho-so/unified/l2c-ung-vien.tsv": "96a5b2178d82a6623ca140a1f496b00b9aade3d9e7e0f9d32f31a602d382de29",
+    "91d8ee9:analyzing-tools/ho-so/unified/l3-ung-vien.tsv": "692528b7cba732f40be0cd0f14af7466bf1a5d15d2ba867285ee1ab3dd9dc058",
+    "91d8ee9:analyzing-tools/ho-so/unified/xep-hang.tsv": "74191a1f1ef4ce01158478219d41fa1c94622e13d95646b475b49ce9ef14168c",
+    "91d8ee9:analyzing-tools/labels.tsv": "a5b882a82a4bff853fce938deed94cdb4efa5dc969ff05572a68835a7605369b",
+    "91d8ee9:analyzing-tools/du-phong-phan-loai.tsv": "0f1cf57455e1a368587a101f7b0183c5a47c91c6910d8749be2b802ca0364036",
+    "91d8ee9:analyzing-tools/honorable-mentions.tsv": "122ebc3b1c8a84f125d2a3f8924faab195834913c28454a592a47ba24603fa69",
+    "91d8ee9:analyzing-tools/ho-so/astra/ra-thay-chinh/hm-chu-ky-1.tsv": "2318fbb4ac52e5d952bb540e60855fd90003eac4566bc7b9e4d36b7fdf3b345b",
+    "91d8ee9:analyzing-tools/ho-so/unified/ra-thay-chinh-h7.tsv": "668451b339b6487eab35acdcce9c8df9c17abb66e9f980ee4b212d0e5cbaca81",
+    "91d8ee9:analyzing-tools/ho-so/unified/ra-thay-chinh-h5.tsv": "f1acce8ff9ec7b82bb06de9ba230019ac841436b4d51c92e38c15bdd08d3a3b4",
+    "91d8ee9:analyzing-tools/blocked_keys.tsv": "016996d5424cc1ad3cc23903c85ba9c2a6a141b6402549c168c3a4ab90bdc0e8",
+    "91d8ee9:analyzing-tools/ho-so/astra/ra-thay-chinh/khep-muc-mo-1.tsv": "37d6430b584fa7c1ed1701577e81461330aa46f0bde5ad9407de3c941bdf10f5",
+    "91d8ee9:analyzing-tools/ho-so/astra/ra-thay-chinh/evidence/hm1-phieu-H.tsv": "34b3f0f132a02d5b5f182111ee83c293f7a2dca2d01760cd46bac5c1fad0cc6f",
+    "91d8ee9:analyzing-tools/ho-so/unified/du-phong-v2-honorable-mentions.tsv": "d9e8f4dbc7a581e4d1598787f4f2ed3ee26ad6192b9fed27785cbd1902e7cc22",
+    "91d8ee9:analyzing-tools/ho-so/opus/ra-thay-chinh/evidence/xep-lai-rtc.tsv": "35f074b3d1e2eca4b96817a57624bc3fd10db7f3dd07030154992ba282da80da",
+    "91d8ee9:analyzing-tools/ho-so/unified/ra-thay-chinh-thay-the.tsv": "c3b73b760116e312e4d5162e9f10e5192c5395bd9fe67c1dcbf948c8855bc3c1"
+  }
+}

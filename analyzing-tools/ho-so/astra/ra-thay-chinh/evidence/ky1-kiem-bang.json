@@ -1,0 +1,50 @@
+{
+  "revision": "91d8ee9",
+  "diff_depuis": "2cc6aec",
+  "tsv": {
+    "h5": {
+      "doi_dong": 0,
+      "them_dong": 0,
+      "bo_dong": 0
+    },
+    "h7": {
+      "doi_dong": 4,
+      "them_dong": 0,
+      "bo_dong": 0
+    },
+    "thay-the": {
+      "doi_dong": 0,
+      "them_dong": 25,
+      "bo_dong": 4
+    }
+  },
+  "K2_chinh_va_vao": 238,
+  "K2_HM": [
+    "biển",
+    "bí mật",
+    "chia",
+    "ngắn gọn",
+    "vận hành"
+  ],
+  "D8_118_ung_vien_du_phong_chua_co_dong": 118,
+  "D8_HM_da_co_dong_LOAI": 25,
+  "ho_H5_QUA_bo_sung_T_rtc_16_chua_co_trong_bang_goc": {
+    "giỡn": [
+      "rỡn",
+      23
+    ],
+    "nuốt chửng": [
+      "nuốt trửng",
+      34
+    ],
+    "theo dõi": [
+      "theo rõi",
+      56
+    ],
+    "thư giãn": [
+      "thư dãn",
+      59
+    ]
+  },
+  "sha256_script": "afb831425b966a69e113f7767e28235234adb50d9c5c6970bf52926066b93292"
+}

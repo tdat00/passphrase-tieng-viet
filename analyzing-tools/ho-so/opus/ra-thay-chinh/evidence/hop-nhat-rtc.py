@@ -355,19 +355,28 @@ def main():
     ra_set = {r["tu"] for r in ra}
     s1 = [(r["nguon_astra"].split(";")[0], {"tu": r["tu_chinh"]}) for r in rows7
           if r["trang_thai"] == "TRANH_CHAP" and r["tu_chinh"] not in ra_set]
+    # Thứ tự S4 mới đã khóa (T-rtc-14, T-rtc-21): hai chương trình khớp (so-t7.log). hang_S4 là hạng trong rổ mới;
+    # hang_S4_cu là hạng ở xep-hang.tsv. Từ ra không còn ở rổ mới.
+    xl = {r["tu"]: r for r in rd(HERE / "xep-lai-rtc.tsv", mine=True)}
+    assert {w for w, r in xl.items() if r["vai_tro"] == "VAO"} == {r["tu"] for r in vao if r["vai_tro"] == "VAO"}
+    assert {w for w, r in xl.items() if r["vai_tro"] == "DU_BI"} == {r["tu"] for r in vao if r["vai_tro"] == "DU_BI"}
+    vao.sort(key=lambda r: (r["vai_tro"] != "VAO", int(xl[r["tu"]]["thu_tu"])))
     rows_t = []
     for r in ra:
         rows_t.append({"vai_tro": "RA", "thu_tu": "-", "tu": r["tu"], "lop": r["lop"], "ngan": r["ngan"], "ma": r["ma"],
-                       "trang_thai": trang_ra(r["tu"]), "hang_S4": r["hang_S4"], "tang": "-", "can_soat": "-"})
+                       "trang_thai": trang_ra(r["tu"]), "hang_S4": "-", "hang_S4_cu": r["hang_S4"], "tang": "-",
+                       "can_soat": "-"})
     for i, r in s1:
         rows_t.append({"vai_tro": "RA_NEU_CHU_DU_AN_THEO_ASTRA", "thu_tu": "-", "tu": r["tu"], "lop": lab[r["tu"]]["lop"],
                        "ngan": "OK_KHONG_F" if lab[r["tu"]]["lop"] != "F" else "OK_F", "ma": "K1 (Astra)",
-                       "trang_thai": "CHU_DU_AN_QUYET_Q-rtc-O2", "hang_S4": "-", "tang": "-",
+                       "trang_thai": "CHU_DU_AN_QUYET_Q-rtc-O2", "hang_S4": "-", "hang_S4_cu": "-", "tang": "-",
                        "can_soat": i})
     for r in vao:
-        rows_t.append({"vai_tro": r["vai_tro"], "thu_tu": r["thu_tu"], "tu": r["tu"], "lop": r["lop"], "ngan": r["ngan"],
+        x = xl[r["tu"]]
+        rows_t.append({"vai_tro": r["vai_tro"], "thu_tu": int(x["thu_tu"]) + (116 if r["vai_tro"] == "DU_BI" else 0),
+                       "tu": r["tu"], "lop": r["lop"], "ngan": r["ngan"],
                        "ma": r["ma"], "trang_thai": "CAN_DOC" if r["can_doc"] not in ("-", "") else "SO_BO_DAT",
-                       "hang_S4": r["hang_S4"], "tang": r["tang"], "can_soat": r["can_doc"] or "-"})
+                       "hang_S4": x["hang_moi"], "hang_S4_cu": r["hang_S4"], "tang": r["tang"], "can_soat": r["can_doc"] or "-"})
     # Chu kỳ HM (D-rtc-8): đề xuất của Astra và phiếu duyệt của Opus; HM xếp sau toàn bộ dự phòng.
     hm_a = list(rdn(A / "hm-chu-ky-1.tsv"))
     hm_o = {r["tu"]: r for _, r in rdn(OUT / "hm-chu-ky-1-opus.tsv", mine=True)}
@@ -378,13 +387,15 @@ def main():
     for i, r in hm_a:
         o = hm_o[r["tu"]]
         assert o["y_opus"] == "DONG_Y" and key(r["tu"]) not in khoa_dung, r["tu"]
+        assert xl[r["tu"]]["vai_tro"] == "HM" and xl[r["tu"]]["thu_tu"] == r["thu_tu"], r["tu"]
         k2 = r["ket_qua_H"] != "DAT_H_ASTRA"
         if k2:
             assert o["ky_opus"] == "Y", r["tu"]
         n_hm += 1
         rows_t.append({"vai_tro": "HM", "thu_tu": r["thu_tu"], "tu": r["tu"], "lop": r["lop"],
                        "ngan": hm_k[r["tu"]]["ngan_du_kien"], "ma": "D-rtc-8",
-                       "trang_thai": "DONG_THUAN_HM_K2_DA_KY" if k2 else "DONG_THUAN_HM", "hang_S4": xh[r["tu"]],
+                       "trang_thai": "DONG_THUAN_HM_K2_DA_KY" if k2 else "DONG_THUAN_HM", "hang_S4": xl[r["tu"]]["hang_moi"],
+                       "hang_S4_cu": xh[r["tu"]],
                        "tang": "HM", "can_soat": f"lịch sử {r['nhom_hm']}" + ("; K2 hai SA ký" if k2 else "")})
     assert n_hm <= 25
     write_tsv(U / "ra-thay-chinh-thay-the.tsv", list(rows_t[0].keys()), rows_t)

@@ -90,7 +90,12 @@ pl = rd(AT / "du-phong-phan-loai.tsv")
 tang_d = {r["tu"] for r in pl if r.get("tang") == "D"}
 loai_cu = {r["tu"]: r["cong_loai"] for r in rd(AT / "nguon-goc-giai-nghia.tsv") if r["trang_thai"] == "LOAI"}
 loai_h = {w for w, c in loai_cu.items() if not c.startswith(("D6", "D7"))}
-khong_qua_h = set(dx.GATES_OPEN) | set(dx.KHONG_VAO_1) | {"cơ quan"} | tang_d
+# Mục LOAI ở D6 mà đầu mục trượt hay chờ cổng H ở dự phòng v2 (T-dpv2-6, T-dpv2-7): bao tử (K1), chạng vạng (chờ H5).
+# Sửa theo duyệt ký của Astra (ho-so/astra/ra-thay-chinh/ky-ke-hoach.md): bỏ trước khi chấm, không chỉ lúc chọn.
+dv2 = rd(U / "du-phong-v2-honorable-mentions.tsv")
+truot_h_dv2 = {r["tu"] for r in dv2 if r["ket_luan_nhap"] in ("LOAI_K1", "NGOAI_HM_CHO_H5")}
+assert truot_h_dv2 == {"bao tử", "chạng vạng"}, truot_h_dv2
+khong_qua_h = set(dx.GATES_OPEN) | set(dx.KHONG_VAO_1) | {"cơ quan"} | tang_d | truot_h_dv2
 assert len(ra) == 116 and len(dung_duoc) == 118 and len(hm) == 25 and len(tang_d) == 6
 assert ra <= set(base) and set(dung_duoc) <= set(base) and set(hm) <= set(base)
 log = [f"tái lập xep-hang.tsv: {len(xh)} mục, thứ tự và F khớp",

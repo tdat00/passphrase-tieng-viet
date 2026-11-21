@@ -141,14 +141,14 @@ Danh sách đầy đủ: `ra-thay-chinh-thay-the.tsv` (vai trò RA, cột `trang
 - Tính lại S2/S3 một lần theo P6 trên tập ra cuối (TC:227, :402; `ra-thay-chinh-yeu-cau.md:19`). Rổ chấm: mọi mục qua H1–H9 và có nhãn; mục loại ở D6 chỉ bị bỏ lúc chọn.
 - Dùng S4 mới, khóa một lần trước khi viết nghĩa; không chấm lại sau từng lượt viết lại. Giữ trọng số, ưu tiên tầng và luật hòa.
 - Dự bị là phần chưa dùng của cùng hàng đợi đã khóa, tối đa 25 nếu đủ.
-- **Đã tính lại bằng chương trình của Opus** (`OE/xep-lai-rtc.py`, `.tsv`, `.log`):
-  - tái lập đúng `xep-hang.tsv` (10.133 mục, cùng thứ tự và F);
-  - rổ chấm 10.005 mục: bỏ 116 từ ra và 12 mục không qua H1–H9 ở đợt này (6 mục tầng D; *loằng ngoằng, ngoại trừ, qua quýt, làm cỗ, rướn, cơ quan*). Mục trượt D6/D7 ở P7 vẫn ở rổ;
-  - tập 116 từ vào không đổi. 30 trong 118 vị trí đổi chỗ bên trong tập vào, không ảnh hưởng kết quả vì cả 116 đều vào. Dự bị vẫn là *cả nghĩ*, rồi *cửu chương*;
-  - 25 HM giữ nguyên thứ tự và vẫn là 25 HM OK không-F đầu bảng theo S4 mới (mục 26: *giảng viên*);
+- **Đã tính lại và khóa (T-rtc-21):**
+  - hai chương trình độc lập (Opus: `OE/xep-lai-rtc.*`; Astra: `RD/ky1-xep-lai-astra.*`) đều tái lập đúng `xep-hang.tsv` (10.133 mục) rồi chấm lại;
+  - rổ chấm 10.003 mục. Bỏ 116 từ ra và 14 mục không qua H1–H9: 6 mục tầng D; *loằng ngoằng, ngoại trừ, qua quýt, làm cỗ, rướn, cơ quan*; *bao tử* (K1, T-dpv2-7) và *chạng vạng* (chờ H5, T-dpv2-6). Mục chỉ trượt D6/D7 ở P7 vẫn ở rổ;
+  - hai chương trình khớp cả 143 dòng (vai trò, vị trí, từ, hạng, điểm): `OE/so-t7.log`;
+  - tập 116 từ vào không đổi; hạng mới 7.975–8.115; 28 trong 118 vị trí đổi so với hạng cũ. Dự bị: *cả nghĩ* (8.116), rồi *cửu chương* (8.118);
+  - 25 HM giữ nguyên thứ tự (hạng mới 30–1.522) và vẫn là 25 HM OK không-F đầu bảng (mục 26: *giảng viên*);
   - chế độ phụ (bỏ mọi mục LOAI cũ khỏi rổ) cho cùng tập vào và cùng dự bị.
-- **Chờ T7:** Astra chạy chương trình độc lập của mình trên cùng rổ. Nếu kết quả khác, kế hoạch giữ Draft và hai SA đối chiếu.
-- `ra-thay-chinh-thay-the.tsv` giữ thứ tự đã khóa cho từ vào; thứ tự mới ở `OE/xep-lai-rtc.tsv`. Thứ tự bên trong 116 từ vào không đổi kết quả.
+- `ra-thay-chinh-thay-the.tsv` dùng thứ tự đã khóa: cột `hang_S4` là hạng trong rổ mới, `hang_S4_cu` là hạng ở `xep-hang.tsv`.
 
 Khi chọn thì bỏ qua:
 
@@ -164,7 +164,7 @@ Khi chọn thì bỏ qua:
 
 **Kết quả mô phỏng** (`OE/de-xuat-thay-v2.py`, `.tsv`, `.log`):
 
-- **116 từ ra:** 118 dự phòng dùng được (120 nguồn, bỏ *làm cỗ*, *rướn* theo T-rtc-17). 116 từ vào (106 A, 10 C; hạng đã khóa 8.096–8.245); còn 2 dự bị. Sau thay: 7.776 từ, 7.776 khóa, F = 77, R1 = 0.
+- **116 từ ra:** 118 dự phòng dùng được (120 nguồn, bỏ *làm cỗ*, *rướn* theo T-rtc-17). 116 từ vào (106 A, 10 C; hạng cũ 8.096–8.245, hạng mới 7.975–8.115); còn 2 dự bị. Sau thay: 7.776 từ, 7.776 khóa, F = 77, R1 = 0.
 - **Chủ dự án giữ cả 4 từ của Q-rtc-O2 (D-rtc-7)**, nên không thiếu ghế; nhưng chỉ còn 2 dự bị. Đệm cho D6/D7 là chu kỳ HM ≤ 25 (D-rtc-8, mục 6.1).
 - **Tính lại S2/S3 (T-rtc-14)** chỉ đổi thứ tự trong cùng hàng đợi, không đổi sức chứa.
 - **Nhánh thêm *theo* (lớp F):** 117 ra, 117 vào, F = 77, 7.776 khóa. Chứng minh hạn mức F được cập nhật mỗi lần nhận.
@@ -215,7 +215,7 @@ Từ vào trượt cổng thì nhường ghế cho mục kế tiếp theo phươ
 **Kết quả (T-rtc-19).** 25 HM theo hạng (`ra-thay-chinh-thay-the.tsv`, vai trò HM):
 
 - *ngân hàng, khách hàng, biển, côn trùng, cô giáo, thay thế, chỗ ngồi, một mình, bí mật, mùa đông, tàu điện, cụ thể, áp dụng, vận hành, việc làm, chế tạo, lực lượng, chia, bánh ngọt, đánh răng, xe điện, bày tỏ, chuyển đổi, ngắn gọn, tương đương*;
-- lớp: 9 C, 9 H, 7 K; hạng S4 32–1.541; lịch sử P7: 20 D6_CUOI, 5 D7_CUOI (*côn trùng, mùa đông, việc làm, bánh ngọt, xe điện*);
+- lớp: 9 C, 9 H, 7 K; hạng S4 cũ 32–1.541, mới 30–1.522; lịch sử P7: 20 D6_CUOI, 5 D7_CUOI (*côn trùng, mùa đông, việc làm, bánh ngọt, xe điện*);
 - 5 K2 hai SA ký "không tự động chặn": *biển* (*biến*), *bí mật* (*bỉ mặt*), *vận hành* (*vạn hạnh*), *chia* (*chĩa, chỉa, chía, chị ả*; mở rộng chữ ký cũ của khóa `chia`), *ngắn gọn* (*ngả ngớn, ngả ngốn*);
 - không chọn: *cơ quan* (Astra phản đối theo H6 nhóm 3, Opus nhận; TC:190–191), *mình* (lớp F);
 - không có HM dự phòng ngoài 25 (trần của D-rtc-8).
@@ -319,13 +319,13 @@ Theo D1 và `huong-dan-giai-nghia.md:167–185`.
 | Tệp | Sửa |
 |---|---|
 | `AT/wordlist.txt` | Bỏ các từ ra; thêm từ vào dạng `từ\|giải nghĩa`; giữ O1, NFC, đủ 7.776 dòng |
-| `AT/labels.tsv` | Xóa dòng của từ ra. Đổi `trang_thai` của từ vào từ DU_PHONG sang CHINH, giữ nhãn và lớp; điểm và hạng S4 mới theo T-rtc-14. Thêm `K2` (và `H5` nếu có) vào `chu_ky_hai_ben` cho các từ được ký. HM vào: thêm dòng CHINH (nhãn OK, lớp, F, G, T, điểm theo T-rtc-14) |
+| `AT/labels.tsv` | Xóa dòng của từ ra. Đổi `trang_thai` của từ vào từ DU_PHONG sang CHINH, giữ nhãn và lớp. F, G, T, `diem` giữ như hiện có (rổ P6, khớp `xep-hang.tsv`); thứ tự S4 mới (T-rtc-21) chỉ ở hồ sơ S4, vì tập vào và dự bị giống nhau theo cả hai hạng. Không đổi schema; bảng không có cột hạng. Thêm `K2` (và `H5` nếu có) vào `chu_ky_hai_ben` cho các từ được ký. HM vào: thêm dòng CHINH (nhãn OK, lớp; F, G, T, `diem` lấy từ `xep-hang.tsv`) |
 | `AT/nguon-goc-giai-nghia.tsv` | Từ ra: chuyển sang LOAI, ghi `cong_loai` (H7_K0, H7_K1, H5_c, H5_f…) và `dot_loai` = `ra-thay-chinh`. Từ dự phòng vào: thêm dòng PHAT_HANH. HM vào: đổi dòng LOAI sẵn có thành PHAT_HANH, không thêm dòng (mục 6.1). Giữ 7.776 dòng PHAT_HANH |
-| `AT/blocked_keys.tsv` | Khóa ASCII của mọi từ ra vì H7: K0 cho `phanbac`, `tinhkhi`; K1 cho các khóa K1; K2_CHUA_KY cho khóa K2 không đủ chữ ký; cột `nguon` = `H7_RA_THAY_CHINH`. Thêm `baotu` (K1, `nguon` = `T-dpv2-7`) và `lamco` (K1 của dự phòng *làm cỗ*, `nguon` = `T-rtc-17`): tổng 94 khóa mới |
-| `AT/spelling_families.tsv` | Thêm họ đã chốt: họ LOAI của từ ra (c, f; CHO_LOAI cho bảy họ của T-rtc-13); họ QUA (8 H5b, *rong ruổi*, *trưng bày*); ghi đủ các dạng phân cách theo cách của dòng 258. Không đăng ký họ còn chờ khi từ chính của họ vẫn ở danh sách |
+| `AT/blocked_keys.tsv` | Khóa ASCII của mọi từ ra vì H7: K0 cho `phanbac`, `tinhkhi`, `nieu`; K1 cho các khóa K1; K2_CHUA_KY cho khóa K2 không đủ chữ ký; cột `nguon` = `H7_RA_THAY_CHINH`. Thêm `baotu` (K1, `nguon` = `T-dpv2-7`) và `lamco` (K1 của dự phòng *làm cỗ*, `nguon` = `T-rtc-17`): tổng 94 khóa mới |
+| `AT/spelling_families.tsv` | Thêm họ đã chốt: họ LOAI của từ ra (c, f; CHO_LOAI cho bảy họ của T-rtc-13); 14 họ QUA chưa có trong bảng (8 H5b, *rong ruổi*, *trưng bày*, *giỡn/rỡn*, *nuốt chửng/nuốt trửng*, *theo dõi/theo rõi*, *thư giãn/thư dãn*; `ra-thay-chinh-h5.tsv`, DONG_THUAN_QUA); ghi đủ các dạng phân cách theo cách của dòng 258. Không đăng ký họ còn chờ khi từ chính của họ vẫn ở danh sách |
 | `AT/du-phong.txt`, `AT/du-phong-phan-loai.tsv` | Bỏ các từ đã vào chính; cập nhật tầng và mã vấn đề (*làm cỗ*: H7 K1; *rướn*: H5c, T-rtc-17); tính lại số đếm |
 | `AT/honorable-mentions.tsv` | Bỏ các HM vào danh sách chính (D-rtc-8); HM đã viết mà chưa dùng giữ lại, ghi chú lượt `rtc` |
-| `ho-so/unified/chu-ky.tsv` | Thêm dòng K2 và H5 của từng SA (`hieu_luc = CO`): 238 khóa của danh sách chính và từ vào (T-rtc-18, T-rtc-20) và 5 khóa HM (T-rtc-19); `tep_goc` trỏ tới phiếu ký của SA |
+| `ho-so/unified/chu-ky.tsv` | Thêm dòng K2 và H5 của từng SA (`hieu_luc = CO`): 238 khóa của danh sách chính và từ vào (T-rtc-18, T-rtc-20) và 5 khóa HM (T-rtc-19); `tep_goc` trỏ tới phiếu ký của SA. Khóa `chia`: hai dòng cũ đổi `hieu_luc` và được thay bằng hai dòng mới có phạm vi *chĩa, chỉa, chía, chị ả*; không để bốn dòng cùng hiệu lực |
 | `WordListAnalyze.md` | Đầu tài liệu (dòng 3–11): bản phát hành 2, số liệu tính lại, lượt `rtc`, số dư dự phòng, trỏ tới mục 13. Mục lục (dòng 26–37): thêm mục 13. Mục 3: thêm quyết định của chủ dự án khi duyệt. Mục 10: sinh lại. Mục 11 (dòng 8649–8920): sửa 11.1, 11.2, 11.4, 11.5. Mục 12: cập nhật số HM và các HM đã dùng (D-rtc-8). Mục 13 mới "Rà và thay danh sách chính (bản phát hành 2)": 13.1 Phạm vi và nguồn; 13.2 H5; 13.3 H7; 13.4 Từ đã thay; 13.5 Chữ ký; 13.6 Giải nghĩa từ vào; 13.7 Việc để sau |
 | `index.html`, `thong-tin.html` | Chỉ khối `#wordlist`, sinh bằng `python build_wordlist.py`. Mục "Quy tắc chọn từ" của `thong-tin.html` và `TC` chỉ sửa nếu chủ dự án xác nhận một luật mới |
 | `AT/README.md` | Dòng 77 (số dòng LOAI), dòng 81 (`luot_viet` có `rtc-v*`), dòng 92 (lần chạy D6 mới), số khóa chặn, số họ |
@@ -390,8 +390,9 @@ Lưu lệnh, mã thoát và log.
 | T-rtc-16 | 27 dòng H5 chờ: giữ 21 (khác từ, không lập họ hay qua theo số); thay *chun, thun* (H5e rồi c) và *tép riu* (c, thiếu dữ liệu); khép 3 dòng đã ra hay không vào (*lằng nhằng, xà bông, qua quýt*) | SA-Opus + SA-Astra | 2026-11-21 | `67466fb` |
 | T-rtc-17 | 8 cờ từ vào: giữ 6 (*thay lông* K2 hai SA ký; *xoành xoạch, thụp, loáng thoáng, xầm xì* khác từ; *mang máng* không đỏ); không nhận *làm cỗ* (K1) và *rướn* (c, thiếu dữ liệu) | SA-Opus + SA-Astra | 2026-11-21 | `67466fb` |
 | T-rtc-18 | Gói K2: hai SA ký 204 trong 205 khóa (193 cũ, 4 của T-rtc-12, 7 của D-rtc-6); *bạn thân* trình chủ dự án (Q-rtc-O2). Cùng 29 khóa của T-rtc-15 và *thay lông*, hai SA có 234 chữ ký chung | SA-Opus + SA-Astra | 2026-11-21 | `67466fb` |
-| T-rtc-19 | Chu kỳ HM (D-rtc-8): 25 HM theo hạng, đều qua H1–H9 (mục 6.1); 5 K2 hai SA ký (*biển, bí mật, vận hành, chia, ngắn gọn*); không chọn *cơ quan* (H6 nhóm 3) và *mình* (lớp F) | SA-Opus + SA-Astra | 2026-11-22 | chờ commit |
-| T-rtc-20 | Gói K2 đủ hai chữ ký: Astra ký 4 khóa của D-rtc-7 (`khep-muc-mo-2.tsv`). Tổng 238 khóa (233 khóa chính của T-rtc-18, *thay lông*, 4 khóa của D-rtc-7) và 5 khóa HM của T-rtc-19 | SA-Opus + SA-Astra | 2026-11-22 | chờ commit |
+| T-rtc-19 | Chu kỳ HM (D-rtc-8): 25 HM theo hạng, đều qua H1–H9 (mục 6.1); 5 K2 hai SA ký (*biển, bí mật, vận hành, chia, ngắn gọn*); không chọn *cơ quan* (H6 nhóm 3) và *mình* (lớp F) | SA-Opus + SA-Astra | 2026-11-22 | `91d8ee9` |
+| T-rtc-20 | Gói K2 đủ hai chữ ký: Astra ký 4 khóa của D-rtc-7 (`khep-muc-mo-2.tsv`). Tổng 238 khóa (233 khóa chính của T-rtc-18, *thay lông*, 4 khóa của D-rtc-7) và 5 khóa HM của T-rtc-19 | SA-Opus + SA-Astra | 2026-11-22 | `91d8ee9` |
+| T-rtc-21 | Tính lại S4 theo T-rtc-14: rổ 10.003 (bỏ thêm *bao tử*, *chạng vạng* theo T-dpv2-6, T-dpv2-7); hai chương trình độc lập khớp 143/143 dòng (T7); thứ tự này khóa làm nguồn chung | SA-Opus + SA-Astra | 2026-11-22 | chờ commit |
 
 Các mục T-rtc-* là chỗ hai bên đã đồng ý qua rà chéo, hai lượt duyệt và hai vòng thỏa thuận (`ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`). SA-Astra xác nhận khi duyệt bản sửa này.
 
@@ -399,10 +400,9 @@ Các mục T-rtc-* là chỗ hai bên đã đồng ý qua rà chéo, hai lượt
 
 | ID | Nội dung | Đường xử lý | Chặn Final |
 |---|---|---|---|
-| OI-RTC-P6 | Thứ tự chọn theo T-rtc-14 | Opus đã tính lại (`OE/xep-lai-rtc.*`): tập vào, dự bị và 25 HM không đổi. Còn chương trình độc lập của Astra (T7) | Có |
 | OI-RTC-K2-KY | Ghép 238 chữ ký K2 chung và 5 khóa HM vào `chu-ky.tsv` | Gói phát hành; kiểm gói chữ ký (mục 10) | Không: chữ ký đã đủ (T-rtc-20) |
 
-**Đã khép:** OI-RTC-HM (T-rtc-19); OI-RTC-O2 (D-rtc-7); OI-RTC-A2 (D-rtc-8); OI-RTC-H7-S1 (T-rtc-12, D-rtc-6); OI-RTC-H5-LOAI (T-rtc-13); OI-RTC-H7-CHO và OI-RTC-HND (T-rtc-15; Astra tái ghép đủ 238/238 dòng); OI-RTC-H5-QH và OI-RTC-H5E (T-rtc-16); OI-RTC-VAO (T-rtc-10, T-rtc-17); OI-RTC-H5F (T-rtc-9).
+**Đã khép:** OI-RTC-P6 (T-rtc-21); OI-RTC-HM (T-rtc-19); OI-RTC-O2 (D-rtc-7); OI-RTC-A2 (D-rtc-8); OI-RTC-H7-S1 (T-rtc-12, D-rtc-6); OI-RTC-H5-LOAI (T-rtc-13); OI-RTC-H7-CHO và OI-RTC-HND (T-rtc-15; Astra tái ghép đủ 238/238 dòng); OI-RTC-H5-QH và OI-RTC-H5E (T-rtc-16); OI-RTC-VAO (T-rtc-10, T-rtc-17); OI-RTC-H5F (T-rtc-9).
 
 ### 12.1. Quy trình hai SA khép mục mở (đã dùng ở khép mục mở 1)
 
@@ -476,12 +476,12 @@ Khi điều kiện xảy ra, orchestrator chép câu hỏi vào `ra-thay-chinh-c
 **Kỹ thuật:**
 
 - T1: hai bộ kiểm (bản LF) và `build --check` báo 0 lỗi.
-- T2: mọi khóa của từ ra vì H7, `baotu` và `lamco` có trong `blocked_keys.tsv`.
-- T3: các họ mới có trong `spelling_families.tsv`; C5 đạt; kiểm họ H5 độc lập (tách " / ") đạt.
+- T2: `blocked_keys.tsv` có đúng 94 khóa mới với đúng mã: K0 `phanbac`, `tinhkhi`, `nieu`; K1 cho 89 khóa của từ ra vì H7, `baotu` và `lamco`. So từng khóa và mã với `ra-thay-chinh-h7.tsv`, không chỉ đếm dòng.
+- T3: mọi họ đã chốt có trong `spelling_families.tsv` với đúng kết luận (LOAI, CHO_LOAI, QUA), so từng họ với `ra-thay-chinh-h5.tsv`; C5 đạt; kiểm họ H5 độc lập (tách " / ") đạt.
 - T4: `labels.tsv` có 7.776 dòng CHINH, F ≤ 77, R1 = 0. Kiểm gói chữ ký đạt: mọi K2 giữ lại, kể cả HM vào, có hai dòng ký hiệu lực trong `chu-ky.tsv`.
 - T5: `--phat-hanh` báo 0 LỖI; D6 PASS 7.776/7.776 với đủ năm nguồn ghim. D7 có ý kiến của cả hai SA, phần chồng chéo ít nhất max(15, ⌈0,10 × N⌉) từ.
 - T6: D8 khớp một-một với danh sách: 7.776 dòng PHAT_HANH, từ ra là LOAI.
-- T7: hai chương trình độc lập, theo phương pháp T-rtc-14, cho cùng tập vào, cùng thứ tự dự bị và HM (Opus: `OE/xep-lai-rtc.log`; Astra: chưa chạy).
+- T7: hai chương trình độc lập, theo phương pháp T-rtc-14, cho cùng tập vào, cùng thứ tự dự bị và HM Đạt ở bước kế hoạch: `OE/so-t7.log`, 143/143 dòng. Chạy lại nếu tập ra đổi.
 - T8: dự phòng, HM, `manifest.json` và các mục tài liệu khớp tập thực.
 - T9: soát toàn tập sau khi thay (A9). Mọi cách đọc cùng khóa trong DOC_KHAC, HND và đầu mục Kaikki đã có phán quyết, gồm:
   - K0 bất kể tần suất;
@@ -510,10 +510,10 @@ Khi điều kiện xảy ra, orchestrator chép câu hỏi vào `ra-thay-chinh-c
 | 1 | Đã xong: Astra duyệt nháp hai lượt; Opus sửa (`round-1-revision-1.md`). Lượt duyệt cuối gộp vào bước ký ở 3b | Xong |
 | 2 | Đã xong: hai SA thỏa thuận S1, S2, S3 (`thoa-thuan-1`, `thoa-thuan-2`; T-rtc-12 đến T-rtc-14); chủ dự án trả lời Q-rtc-O1 (D-rtc-6, `0253bb0`) | Xong |
 | 3a | Đã xong: hai SA khép mục mở (`khep-muc-mo-1` của hai bên; T-rtc-15 đến T-rtc-18); chủ dự án trả lời Q-rtc-O2 (D-rtc-7) và Q-rtc-A2 (D-rtc-8), `2cc6aec` | Xong |
-| 3b | Đã xong: chọn 25 HM (T-rtc-19), gói K2 đủ hai chữ ký (T-rtc-20), Opus tính lại S4 (T-rtc-14). Còn: Astra chạy chương trình độc lập (T7) và ký; orchestrator đặt Final; chủ dự án duyệt | 1 lượt SA (thêm 1 nếu T7 lệch); 1 lần chủ dự án duyệt |
+| 3b | Đã xong: chọn 25 HM (T-rtc-19), gói K2 đủ hai chữ ký (T-rtc-20), tính lại S4, hai chương trình khớp (T-rtc-21). Còn: Astra ký; orchestrator đặt Final; chủ dự án duyệt | 1 lượt SA; 1 lần chủ dự án duyệt |
 | 4 | Viết `rtc-v1` cho lô tối đa 143 từ (từ vào, dự bị, HM); D2/D5/D6, D7; viết lại tối đa hai lượt; lấp ghế theo mục 6.1. Hết hàng đợi thì hỏi chủ dự án | 1–3 lượt viết; 2–6 lượt SA |
 | 5 | Dev-Sonnet: (a) tác vụ chuẩn bị: gói chữ ký, đăng ký họ, khóa chặn, hai kiểm độc lập; (b) commit phát hành: dữ liệu, khối sinh, tài liệu, manifest; (c) soát toàn tập (T9) | 3–4 lượt dev; orchestrator kiểm và commit |
-| Tổng | | Khoảng 7–15 lượt agent còn lại và 1 lần chủ dự án duyệt |
+| Tổng | | Khoảng 7–14 lượt agent còn lại và 1 lần chủ dự án duyệt |
 
 ## 16. Tham chiếu
 
@@ -523,5 +523,5 @@ Khi điều kiện xảy ra, orchestrator chép câu hỏi vào `ra-thay-chinh-c
 - `check_wordlist.py:120–137`;
 - `d6-kiem.py:371–378, 528–531, 545–560`; `d6-tham-chieu.json`;
 - `ho-so/unified/chu-ky.tsv`, `canh-bao-khong-dau.tsv`, `xep-hang.tsv`, `p6-tinh-doc-lap-astra.py`, `du-phong-v2-ke-hoach.md:415–432`;
-- `AT/honorable-mentions.tsv`; `ho-so/astra/ra-thay-chinh/hm-chu-ky-1.{tsv,md}`, `khep-muc-mo-2.tsv`; `ho-so/opus/ra-thay-chinh/hm-chu-ky-1-opus.{tsv,md}`, `OE/hm-chu-ky-1-opus.py`, `OE/xep-lai-rtc.py`;
+- `AT/honorable-mentions.tsv`; `ho-so/astra/ra-thay-chinh/hm-chu-ky-1.{tsv,md}`, `khep-muc-mo-2.tsv`; `ho-so/opus/ra-thay-chinh/hm-chu-ky-1-opus.{tsv,md}`, `OE/hm-chu-ky-1-opus.py`, `OE/xep-lai-rtc.py`, `OE/so-t7.py`; `RD/ky1-xep-lai-astra.*`;
 - phân tích, rà chéo, duyệt nháp, thỏa thuận và phiếu ký trong `ho-so/{opus,astra}/ra-thay-chinh/` (Opus ký kế hoạch: `ho-so/opus/ra-thay-chinh/ky-ke-hoach.md`).
