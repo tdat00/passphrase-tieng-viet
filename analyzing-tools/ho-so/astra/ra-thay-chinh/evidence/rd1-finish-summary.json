@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-11-21T15:30:14.628832+07:00",
+  "protected_files_unchanged": 24,
+  "draft_input_files_unchanged": 9,
+  "independent_artifacts_unchanged": 41,
+  "H7_reviewed": 60,
+  "H7_keep_concessions": 29,
+  "H7_replace_concession": "thái",
+  "H7_disputed": 30,
+  "H7_other_pending": 46,
+  "H5_direct_unclosed_words": 11,
+  "H5_adjudication": 8,
+  "H5_measurement": 3,
+  "H5_other_relations_pending": 14,
+  "K2_precedent_active_signature_rows": {
+    "mát mắt": 0,
+    "đón dâu": 0,
+    "kính": 2
+  },
+  "new_release_signatures_written": 0,
+  "new_glosses_written": 0,
+  "raw_source_saved": false,
+  "question_answer_lines_blank": 5,
+  "format": "UTF-8 without BOM; CRLF; no trailing whitespace; final newline",
+  "report_sha256_bytes": "6f38e39811f4a16edc70942b273f072a67153d6045a3152116548158ffe5e760",
+  "status": "PASS_REVIEW_ARTIFACTS_NOT_RELEASE"
+}

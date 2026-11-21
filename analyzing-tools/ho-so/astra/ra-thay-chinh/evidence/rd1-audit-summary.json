@@ -1,0 +1,461 @@
+{
+  "H7_rows": 349,
+  "H7_states": {
+    "DONG_THUAN_GIU_KY_K2": 169,
+    "GIU_ASTRA_CHO": 48,
+    "DONG_THUAN_THAY": 66,
+    "TRANH_CHAP": 59,
+    "DONG_THUAN_GIU": 6,
+    "TRANH_CHAP_ASTRA_CHO": 1
+  },
+  "H5_rows": 65,
+  "H5_states": {
+    "DONG_THUAN_QUA": 19,
+    "TRANH_CHAP_ASTRA_CHO": 12,
+    "DONG_THUAN_KHAC_TU": 3,
+    "DONG_THUAN_THAY": 10,
+    "TRANH_CHAP": 21
+  },
+  "H5_false_pass_count": 9,
+  "current_out": 87,
+  "current_in": 87,
+  "prepared_spares": 25,
+  "raw_eligible_reserve": 120,
+  "eligible_tiers": {
+    "A": 108,
+    "C": 12
+  },
+  "remaining_after_87": 33,
+  "unprepared_tail": [
+    "năm kia",
+    "lời lỗ",
+    "tuổi xanh",
+    "dịu hiền",
+    "áng chừng",
+    "tính nết",
+    "cả nghĩ",
+    "cửu chương"
+  ],
+  "entrants_order_matches": true,
+  "projected_main_size": 7776,
+  "projected_main_F": 77,
+  "projected_main_R1": 0,
+  "A24_vs_first24": {
+    "intersection": 23,
+    "A_only": [
+      "nhá nhem"
+    ],
+    "first24_only": [
+      "làm cỗ"
+    ]
+  },
+  "current_frequency": [
+    {
+      "role": "RA",
+      "n": 87,
+      "median_clean_ppm": 1.7062750707221612
+    },
+    {
+      "role": "VAO",
+      "n": 87,
+      "median_clean_ppm": 0.07619187036585172
+    }
+  ],
+  "F_fallback_counterexample": {
+    "scenario": "O87 + theo; chạy lại logic vòng chọn v2 hiện có, không nạp HND",
+    "out": 88,
+    "needed_OK_N": 87,
+    "initial_F_slack": 1,
+    "selected": 87,
+    "selected_F": 76,
+    "result_size": 7775,
+    "result_F": 152
+  },
+  "S4_baseline_exact": true,
+  "S4_O87": [
+    {
+      "mode": "CHON_DUOC_MOI_TINH",
+      "pool": 9905,
+      "F": 77,
+      "R1": 0,
+      "new_entry_only": [],
+      "locked_selection_only": [],
+      "additional_main_out": [],
+      "reserve_order_difference_count": 21,
+      "reserve_order_first_differences": [
+        {
+          "position": 7,
+          "locked": "tấn tới",
+          "rescored": "leo dây"
+        },
+        {
+          "position": 8,
+          "locked": "leo dây",
+          "rescored": "tấn tới"
+        },
+        {
+          "position": 38,
+          "locked": "leo lét",
+          "rescored": "đáp số"
+        },
+        {
+          "position": 39,
+          "locked": "đáp số",
+          "rescored": "leo lét"
+        },
+        {
+          "position": 40,
+          "locked": "đỏ chót",
+          "rescored": "ve vẩy"
+        },
+        {
+          "position": 41,
+          "locked": "ve vẩy",
+          "rescored": "đỏ chót"
+        },
+        {
+          "position": 42,
+          "locked": "dài ngoằng",
+          "rescored": "giở quẻ"
+        },
+        {
+          "position": 43,
+          "locked": "giở quẻ",
+          "rescored": "lộp độp"
+        },
+        {
+          "position": 44,
+          "locked": "lộp độp",
+          "rescored": "tía lia"
+        },
+        {
+          "position": 45,
+          "locked": "tía lia",
+          "rescored": "dài ngoằng"
+        },
+        {
+          "position": 48,
+          "locked": "xoành xoạch",
+          "rescored": "thụp"
+        },
+        {
+          "position": 50,
+          "locked": "lạ đời",
+          "rescored": "xoành xoạch"
+        }
+      ],
+      "reserve_order_all_differences": [
+        {
+          "position": 7,
+          "locked": "tấn tới",
+          "rescored": "leo dây"
+        },
+        {
+          "position": 8,
+          "locked": "leo dây",
+          "rescored": "tấn tới"
+        },
+        {
+          "position": 38,
+          "locked": "leo lét",
+          "rescored": "đáp số"
+        },
+        {
+          "position": 39,
+          "locked": "đáp số",
+          "rescored": "leo lét"
+        },
+        {
+          "position": 40,
+          "locked": "đỏ chót",
+          "rescored": "ve vẩy"
+        },
+        {
+          "position": 41,
+          "locked": "ve vẩy",
+          "rescored": "đỏ chót"
+        },
+        {
+          "position": 42,
+          "locked": "dài ngoằng",
+          "rescored": "giở quẻ"
+        },
+        {
+          "position": 43,
+          "locked": "giở quẻ",
+          "rescored": "lộp độp"
+        },
+        {
+          "position": 44,
+          "locked": "lộp độp",
+          "rescored": "tía lia"
+        },
+        {
+          "position": 45,
+          "locked": "tía lia",
+          "rescored": "dài ngoằng"
+        },
+        {
+          "position": 48,
+          "locked": "xoành xoạch",
+          "rescored": "thụp"
+        },
+        {
+          "position": 50,
+          "locked": "lạ đời",
+          "rescored": "xoành xoạch"
+        },
+        {
+          "position": 51,
+          "locked": "thụp",
+          "rescored": "lạ đời"
+        },
+        {
+          "position": 52,
+          "locked": "gặp thời",
+          "rescored": "chung tình"
+        },
+        {
+          "position": 53,
+          "locked": "chung tình",
+          "rescored": "ỉu xìu"
+        },
+        {
+          "position": 54,
+          "locked": "ỉu xìu",
+          "rescored": "gặp thời"
+        },
+        {
+          "position": 69,
+          "locked": "méo xệch",
+          "rescored": "ngụp"
+        },
+        {
+          "position": 70,
+          "locked": "bí bách",
+          "rescored": "méo xệch"
+        },
+        {
+          "position": 71,
+          "locked": "ngụp",
+          "rescored": "bí bách"
+        },
+        {
+          "position": 72,
+          "locked": "trẻ măng",
+          "rescored": "rướn"
+        },
+        {
+          "position": 73,
+          "locked": "rướn",
+          "rescored": "trẻ măng"
+        }
+      ],
+      "assumption": "Chỉ kiểm rổ O87 hiện có; mọi phán quyết H5/H7 của nhánh vẫn có điều kiện."
+    },
+    {
+      "mode": "H_QUA_CONG_TINH_D6_LOAI_KHI_CHON",
+      "pool": 10035,
+      "F": 77,
+      "R1": 0,
+      "new_entry_only": [],
+      "locked_selection_only": [],
+      "additional_main_out": [],
+      "reserve_order_difference_count": 25,
+      "reserve_order_first_differences": [
+        {
+          "position": 7,
+          "locked": "tấn tới",
+          "rescored": "leo dây"
+        },
+        {
+          "position": 8,
+          "locked": "leo dây",
+          "rescored": "tấn tới"
+        },
+        {
+          "position": 13,
+          "locked": "bâng quơ",
+          "rescored": "lạ tai"
+        },
+        {
+          "position": 14,
+          "locked": "lạ tai",
+          "rescored": "làm cỗ"
+        },
+        {
+          "position": 15,
+          "locked": "làm cỗ",
+          "rescored": "mỏi nhừ"
+        },
+        {
+          "position": 16,
+          "locked": "mỏi nhừ",
+          "rescored": "bâng quơ"
+        },
+        {
+          "position": 38,
+          "locked": "leo lét",
+          "rescored": "ve vẩy"
+        },
+        {
+          "position": 39,
+          "locked": "đáp số",
+          "rescored": "leo lét"
+        },
+        {
+          "position": 41,
+          "locked": "ve vẩy",
+          "rescored": "đáp số"
+        },
+        {
+          "position": 50,
+          "locked": "lạ đời",
+          "rescored": "thụp"
+        },
+        {
+          "position": 51,
+          "locked": "thụp",
+          "rescored": "lạ đời"
+        },
+        {
+          "position": 52,
+          "locked": "gặp thời",
+          "rescored": "ỉu xìu"
+        }
+      ],
+      "reserve_order_all_differences": [
+        {
+          "position": 7,
+          "locked": "tấn tới",
+          "rescored": "leo dây"
+        },
+        {
+          "position": 8,
+          "locked": "leo dây",
+          "rescored": "tấn tới"
+        },
+        {
+          "position": 13,
+          "locked": "bâng quơ",
+          "rescored": "lạ tai"
+        },
+        {
+          "position": 14,
+          "locked": "lạ tai",
+          "rescored": "làm cỗ"
+        },
+        {
+          "position": 15,
+          "locked": "làm cỗ",
+          "rescored": "mỏi nhừ"
+        },
+        {
+          "position": 16,
+          "locked": "mỏi nhừ",
+          "rescored": "bâng quơ"
+        },
+        {
+          "position": 38,
+          "locked": "leo lét",
+          "rescored": "ve vẩy"
+        },
+        {
+          "position": 39,
+          "locked": "đáp số",
+          "rescored": "leo lét"
+        },
+        {
+          "position": 41,
+          "locked": "ve vẩy",
+          "rescored": "đáp số"
+        },
+        {
+          "position": 50,
+          "locked": "lạ đời",
+          "rescored": "thụp"
+        },
+        {
+          "position": 51,
+          "locked": "thụp",
+          "rescored": "lạ đời"
+        },
+        {
+          "position": 52,
+          "locked": "gặp thời",
+          "rescored": "ỉu xìu"
+        },
+        {
+          "position": 53,
+          "locked": "chung tình",
+          "rescored": "gặp thời"
+        },
+        {
+          "position": 54,
+          "locked": "ỉu xìu",
+          "rescored": "ngắn ngủn"
+        },
+        {
+          "position": 55,
+          "locked": "ngắn ngủn",
+          "rescored": "chung tình"
+        },
+        {
+          "position": 59,
+          "locked": "loáng thoáng",
+          "rescored": "lộp bộp"
+        },
+        {
+          "position": 60,
+          "locked": "lộp bộp",
+          "rescored": "loáng thoáng"
+        },
+        {
+          "position": 68,
+          "locked": "mỏng dính",
+          "rescored": "méo xệch"
+        },
+        {
+          "position": 69,
+          "locked": "méo xệch",
+          "rescored": "mỏng dính"
+        },
+        {
+          "position": 70,
+          "locked": "bí bách",
+          "rescored": "ngụp"
+        },
+        {
+          "position": 71,
+          "locked": "ngụp",
+          "rescored": "bí bách"
+        },
+        {
+          "position": 72,
+          "locked": "trẻ măng",
+          "rescored": "rướn"
+        },
+        {
+          "position": 73,
+          "locked": "rướn",
+          "rescored": "trẻ măng"
+        },
+        {
+          "position": 104,
+          "locked": "no ấm",
+          "rescored": "tạnh ráo"
+        },
+        {
+          "position": 105,
+          "locked": "tạnh ráo",
+          "rescored": "no ấm"
+        }
+      ],
+      "assumption": "Chỉ kiểm rổ O87 hiện có; mọi phán quyết H5/H7 của nhánh vẫn có điều kiện."
+    }
+  ],
+  "bit_tet_registered_family_source": "analyzing-tools\\spelling_families.tsv:258",
+  "new_glosses_written": 0,
+  "protected_files_unchanged": 24,
+  "limits": "Cổng ngữ nghĩa và nghĩa mới chưa khép; phép chiếu 87 không phải nghiệm thu phát hành."
+}

@@ -1,0 +1,67 @@
+{
+  "H7_original_contested_cohort": 60,
+  "H7_concessions_keep": 29,
+  "H7_concession_replace": [
+    "thái"
+  ],
+  "H7_remaining_contested": 30,
+  "H7_remaining_words": [
+    "bền bỉ",
+    "ca nhạc",
+    "cắm đầu",
+    "choàng",
+    "cò trắng",
+    "giao",
+    "húng",
+    "hững hờ",
+    "khiến",
+    "lề đường",
+    "lưới",
+    "ngại",
+    "ngao",
+    "nguyên",
+    "nhồi",
+    "phòng ngủ",
+    "phù dâu",
+    "sàng",
+    "sân ga",
+    "sông",
+    "thắm thiết",
+    "thị trường",
+    "thôn",
+    "thuần",
+    "tiệm",
+    "trạm",
+    "trăng tròn",
+    "tường",
+    "vòng",
+    "xuân"
+  ],
+  "H7_extra_pending_closed": [
+    "chung cư",
+    "sắn dây"
+  ],
+  "H7_pending_other_keys": 46,
+  "old_signature_scope_questions_withdrawn": [
+    "kính/kinh",
+    "bình/bịnh",
+    "trứng/trừng"
+  ],
+  "H5_old_ten_still_without_final_gate": 10,
+  "H5_new_case": "rầm rầm/rần rần",
+  "H5_words_requiring_adjudication": 8,
+  "H5_relation_agreed_measurement_pending": [
+    "cải xoong",
+    "xà bông",
+    "xà phòng"
+  ],
+  "H5_affected_words_not_closed": 11,
+  "H5_prior_signed_case_closed": "bít tết/bíp tết",
+  "H5_additional_18_closed_different": [
+    "buồn lòng/buồm lòng",
+    "tâm trí/tâm chí",
+    "run run/rung rung"
+  ],
+  "H5_remaining_relations_from_18": 14,
+  "new_release_signatures_written": 0
+}

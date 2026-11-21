@@ -1,0 +1,458 @@
+{
+  "H7_states": {
+    "DONG_THUAN_GIU_CAN_KY_K2": 196,
+    "CHO_CAN_CU": 46,
+    "DONG_THUAN_THAY": 80,
+    "GIU_CHU_KY_CU": 7,
+    "TRANH_CHAP": 17,
+    "DONG_THUAN_GIU": 2,
+    "GIU_QUYET_DINH_CHU": 1
+  },
+  "H5_states": {
+    "CHO_CAN_CU": 27,
+    "DONG_THUAN_QUA": 11,
+    "DONG_THUAN_KHAC_TU": 6,
+    "DONG_THUAN_THAY": 11,
+    "DO_XONG_CHO_ASTRA_XAC_NHAN": 3,
+    "TRANH_CHAP": 7
+  },
+  "roles": {
+    "RA": 101,
+    "RA_NEU_S1_THEO_ASTRA": 17,
+    "VAO": 101,
+    "DU_BI": 19
+  },
+  "selection_cases": [
+    {
+      "case": "O101",
+      "out": 101,
+      "in": 101,
+      "spares": 19,
+      "keys": 7776,
+      "F": 77,
+      "R1": 0
+    },
+    {
+      "case": "O101_THEO",
+      "out": 102,
+      "in": 102,
+      "spares": 19,
+      "keys": 7776,
+      "F": 77,
+      "R1": 0
+    },
+    {
+      "case": "A118",
+      "out": 118,
+      "in": 118,
+      "spares": 2,
+      "keys": 7776,
+      "F": 77,
+      "R1": 0
+    }
+  ],
+  "F_R1_current_rows_valid": true,
+  "R1_to_OK_counterexample": {
+    "candidate_taken": true,
+    "R1_after": 1,
+    "actual_current_reserve_R1": 0
+  },
+  "H5b_combination_missing": [
+    "tỷ mỷ"
+  ],
+  "H5b_affected_current_queue": [],
+  "H5_exact_mapping_pass": true,
+  "H5_unknown_code_fails_closed": true,
+  "H5f_totals": {
+    "cải xoong": {
+      "sub_moi_dong_sach": 4,
+      "web_dong_khac_sach": 42,
+      "sub_dong_khac_sach": 4,
+      "sub_moi_dong": 4,
+      "web_dong_khac": 45
+    },
+    "cải soong": {
+      "sub_moi_dong_sach": 0,
+      "web_dong_khac_sach": 0,
+      "sub_dong_khac_sach": 0,
+      "sub_moi_dong": 0,
+      "web_dong_khac": 0
+    },
+    "xà phòng": {
+      "sub_moi_dong_sach": 181,
+      "web_dong_khac_sach": 3895,
+      "sub_dong_khac_sach": 151,
+      "sub_moi_dong": 185,
+      "web_dong_khac": 3981
+    },
+    "xà bông": {
+      "sub_moi_dong_sach": 108,
+      "web_dong_khac_sach": 320,
+      "sub_dong_khac_sach": 103,
+      "sub_moi_dong": 108,
+      "web_dong_khac": 321
+    }
+  },
+  "H5f_sensitivity": [
+    {
+      "column": "sub_moi_dong_sach",
+      "xa_phong": 181,
+      "xa_bong": 108,
+      "total": 289,
+      "xa_phong_percent": "62.629757785",
+      "pass95": false
+    },
+    {
+      "column": "web_dong_khac_sach",
+      "xa_phong": 3895,
+      "xa_bong": 320,
+      "total": 4215,
+      "xa_phong_percent": "92.408066429",
+      "pass95": false
+    },
+    {
+      "column": "sub_dong_khac_sach",
+      "xa_phong": 151,
+      "xa_bong": 103,
+      "total": 254,
+      "xa_phong_percent": "59.448818898",
+      "pass95": false
+    },
+    {
+      "column": "sub_moi_dong",
+      "xa_phong": 185,
+      "xa_bong": 108,
+      "total": 293,
+      "xa_phong_percent": "63.139931741",
+      "pass95": false
+    },
+    {
+      "column": "web_dong_khac",
+      "xa_phong": 3981,
+      "xa_bong": 321,
+      "total": 4302,
+      "xa_phong_percent": "92.538354254",
+      "pass95": false
+    }
+  ],
+  "corpus_hash_logs_match_manifest": true,
+  "corpus_recounted_by_Astra": false,
+  "existing_K2_in_pending": [
+    {
+      "tu": "nướng",
+      "current_row": "analyzing-tools\\ho-so\\unified\\ra-thay-chinh-h7.tsv:239",
+      "signature_rows": "analyzing-tools\\ho-so\\unified\\chu-ky.tsv:1831;analyzing-tools\\ho-so\\unified\\chu-ky.tsv:1832",
+      "action_Astra": "GIU_CHU_KY_CU; không có chứng cứ mới ở lượt này"
+    },
+    {
+      "tu": "phết",
+      "current_row": "analyzing-tools\\ho-so\\unified\\ra-thay-chinh-h7.tsv:247",
+      "signature_rows": "analyzing-tools\\ho-so\\unified\\chu-ky.tsv:1872;analyzing-tools\\ho-so\\unified\\chu-ky.tsv:1873",
+      "action_Astra": "GIU_CHU_KY_CU; không có chứng cứ mới ở lượt này"
+    }
+  ],
+  "net_new_K2_candidates": 194,
+  "O101_median": {
+    "out": 1.765711645032586,
+    "in": 0.07285543895576824
+  },
+  "S4_O101": [
+    {
+      "mode": "CHON_DUOC_MOI_TINH",
+      "pool": 9891,
+      "F": 77,
+      "new_entry_only": [],
+      "locked_only": [],
+      "queue_difference_count": 24,
+      "queue_differences": [
+        {
+          "position": 7,
+          "locked": "tấn tới",
+          "rescored": "leo dây"
+        },
+        {
+          "position": 8,
+          "locked": "leo dây",
+          "rescored": "tấn tới"
+        },
+        {
+          "position": 38,
+          "locked": "leo lét",
+          "rescored": "đáp số"
+        },
+        {
+          "position": 39,
+          "locked": "đáp số",
+          "rescored": "leo lét"
+        },
+        {
+          "position": 40,
+          "locked": "đỏ chót",
+          "rescored": "ve vẩy"
+        },
+        {
+          "position": 41,
+          "locked": "ve vẩy",
+          "rescored": "đỏ chót"
+        },
+        {
+          "position": 42,
+          "locked": "dài ngoằng",
+          "rescored": "giở quẻ"
+        },
+        {
+          "position": 43,
+          "locked": "giở quẻ",
+          "rescored": "lộp độp"
+        },
+        {
+          "position": 44,
+          "locked": "lộp độp",
+          "rescored": "tía lia"
+        },
+        {
+          "position": 45,
+          "locked": "tía lia",
+          "rescored": "dài ngoằng"
+        },
+        {
+          "position": 48,
+          "locked": "xoành xoạch",
+          "rescored": "thụp"
+        },
+        {
+          "position": 49,
+          "locked": "học tủ",
+          "rescored": "xoành xoạch"
+        },
+        {
+          "position": 50,
+          "locked": "lạ đời",
+          "rescored": "học tủ"
+        },
+        {
+          "position": 51,
+          "locked": "thụp",
+          "rescored": "lạ đời"
+        },
+        {
+          "position": 52,
+          "locked": "gặp thời",
+          "rescored": "ỉu xìu"
+        },
+        {
+          "position": 53,
+          "locked": "chung tình",
+          "rescored": "gặp thời"
+        },
+        {
+          "position": 54,
+          "locked": "ỉu xìu",
+          "rescored": "ngắn ngủn"
+        },
+        {
+          "position": 55,
+          "locked": "ngắn ngủn",
+          "rescored": "chung tình"
+        },
+        {
+          "position": 67,
+          "locked": "mau mắn",
+          "rescored": "ngụp"
+        },
+        {
+          "position": 68,
+          "locked": "mỏng dính",
+          "rescored": "mau mắn"
+        },
+        {
+          "position": 70,
+          "locked": "bí bách",
+          "rescored": "mỏng dính"
+        },
+        {
+          "position": 71,
+          "locked": "ngụp",
+          "rescored": "bí bách"
+        },
+        {
+          "position": 72,
+          "locked": "trẻ măng",
+          "rescored": "rướn"
+        },
+        {
+          "position": 73,
+          "locked": "rướn",
+          "rescored": "trẻ măng"
+        }
+      ]
+    },
+    {
+      "mode": "H_QUA_CONG_TINH_D6_LOAI_KHI_CHON",
+      "pool": 10021,
+      "F": 77,
+      "new_entry_only": [],
+      "locked_only": [],
+      "queue_difference_count": 31,
+      "queue_differences": [
+        {
+          "position": 13,
+          "locked": "bâng quơ",
+          "rescored": "lạ tai"
+        },
+        {
+          "position": 14,
+          "locked": "lạ tai",
+          "rescored": "làm cỗ"
+        },
+        {
+          "position": 15,
+          "locked": "làm cỗ",
+          "rescored": "mỏi nhừ"
+        },
+        {
+          "position": 16,
+          "locked": "mỏi nhừ",
+          "rescored": "bâng quơ"
+        },
+        {
+          "position": 17,
+          "locked": "oái oăm",
+          "rescored": "mon men"
+        },
+        {
+          "position": 18,
+          "locked": "mon men",
+          "rescored": "oái oăm"
+        },
+        {
+          "position": 33,
+          "locked": "đon đả",
+          "rescored": "ủn ỉn"
+        },
+        {
+          "position": 34,
+          "locked": "ủn ỉn",
+          "rescored": "đon đả"
+        },
+        {
+          "position": 38,
+          "locked": "leo lét",
+          "rescored": "ve vẩy"
+        },
+        {
+          "position": 39,
+          "locked": "đáp số",
+          "rescored": "đỏ chót"
+        },
+        {
+          "position": 40,
+          "locked": "đỏ chót",
+          "rescored": "leo lét"
+        },
+        {
+          "position": 41,
+          "locked": "ve vẩy",
+          "rescored": "đáp số"
+        },
+        {
+          "position": 50,
+          "locked": "lạ đời",
+          "rescored": "thụp"
+        },
+        {
+          "position": 51,
+          "locked": "thụp",
+          "rescored": "lạ đời"
+        },
+        {
+          "position": 52,
+          "locked": "gặp thời",
+          "rescored": "ỉu xìu"
+        },
+        {
+          "position": 53,
+          "locked": "chung tình",
+          "rescored": "ngắn ngủn"
+        },
+        {
+          "position": 54,
+          "locked": "ỉu xìu",
+          "rescored": "gặp thời"
+        },
+        {
+          "position": 55,
+          "locked": "ngắn ngủn",
+          "rescored": "chung tình"
+        },
+        {
+          "position": 59,
+          "locked": "loáng thoáng",
+          "rescored": "lộp bộp"
+        },
+        {
+          "position": 60,
+          "locked": "lộp bộp",
+          "rescored": "loáng thoáng"
+        },
+        {
+          "position": 67,
+          "locked": "mau mắn",
+          "rescored": "méo xệch"
+        },
+        {
+          "position": 68,
+          "locked": "mỏng dính",
+          "rescored": "mau mắn"
+        },
+        {
+          "position": 69,
+          "locked": "méo xệch",
+          "rescored": "mỏng dính"
+        },
+        {
+          "position": 70,
+          "locked": "bí bách",
+          "rescored": "ngụp"
+        },
+        {
+          "position": 71,
+          "locked": "ngụp",
+          "rescored": "bí bách"
+        },
+        {
+          "position": 72,
+          "locked": "trẻ măng",
+          "rescored": "rướn"
+        },
+        {
+          "position": 73,
+          "locked": "rướn",
+          "rescored": "trẻ măng"
+        },
+        {
+          "position": 79,
+          "locked": "thẳng tính",
+          "rescored": "nóng ruột"
+        },
+        {
+          "position": 80,
+          "locked": "nóng ruột",
+          "rescored": "thẳng tính"
+        },
+        {
+          "position": 104,
+          "locked": "no ấm",
+          "rescored": "tạnh ráo"
+        },
+        {
+          "position": 105,
+          "locked": "tạnh ráo",
+          "rescored": "no ấm"
+        }
+      ]
+    }
+  ],
+  "new_glosses_written": 0,
+  "source_text_saved": false
+}

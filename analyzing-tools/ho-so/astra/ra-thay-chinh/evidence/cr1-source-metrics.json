@@ -1,0 +1,33 @@
+{
+  "HND_sources": [
+    {
+      "source": "Viet11K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet11K.txt",
+      "sha256": "401752a95c8c97638ecf4df8445ded60d9db87a8f1bbca2e7fc3b6d00eb1132e",
+      "source_saved": false
+    },
+    {
+      "source": "Viet22K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet22K.txt",
+      "sha256": "fdb37a1f21cb44898894390fb87d137830ed1507316c2729bad2d804db81033d",
+      "source_saved": false
+    },
+    {
+      "source": "Viet39K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet39K.txt",
+      "sha256": "5c139a85964bf8980c6659418007e2ba5e3e5cc0098fe16c08f1bf5a6dd91ec5",
+      "source_saved": false
+    },
+    {
+      "source": "Viet74K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet74K.txt",
+      "sha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90",
+      "source_saved": false
+    }
+  ],
+  "HND_main_pairs": 3426,
+  "HND_missing_DOC_pairs": 374,
+  "matches_Opus_HND_table": true,
+  "Wiktionary_queries": 32,
+  "raw_source_saved": false
+}

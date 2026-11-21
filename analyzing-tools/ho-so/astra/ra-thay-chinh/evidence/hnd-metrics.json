@@ -1,0 +1,14 @@
+{
+  "source": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet74K.txt",
+  "sha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90",
+  "stored_source_text": false,
+  "main_H5_pairs": 632,
+  "H5_generator_replay_exact": true,
+  "h5_HND_lowercase": 609,
+  "h5_HND_only_capitalized": 19,
+  "h5_not_in_HND74": 4,
+  "additional_main_HND_readings_without_saved_count_row": 45,
+  "replacement_candidate_words": 329,
+  "replacement_candidate_H5_pairs": 27,
+  "replacement_candidate_H7_pairs": 127
+}

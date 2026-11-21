@@ -1,0 +1,42 @@
+{
+  "OPUS": {
+    "path": "../WordListAnalyze-Opus.md",
+    "expected": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+    "raw": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+    "LF": "3017463f6442d728890af00d9ced36b23e1b401e3de8a29c59f2d0fa7d21def6",
+    "git_blob": "3017463f6442d728890af00d9ced36b23e1b401e3de8a29c59f2d0fa7d21def6",
+    "exists": true
+  },
+  "ASTRA": {
+    "path": "../WordListAnalyze-Astra.md",
+    "expected": "6d25230a14d75c208306c12d7acea52d2be0ebb1b47629c98c4d84954afd2067",
+    "raw": "0f94b58c422cd88ac0a50c0f2eace9da9ba5aed3e7630f577af29901cc9b25df",
+    "LF": "6d25230a14d75c208306c12d7acea52d2be0ebb1b47629c98c4d84954afd2067",
+    "git_blob": "6d25230a14d75c208306c12d7acea52d2be0ebb1b47629c98c4d84954afd2067",
+    "exists": true
+  },
+  "WIKT_VI": {
+    "path": "vi.jsonl.gz",
+    "expected": "1f0abd21982660b5fc2eff5eb3fbacbed2d9fe8f476af794dbed0d927ffb8187",
+    "raw": null,
+    "LF": null,
+    "git_blob": null,
+    "exists": false
+  },
+  "GUIDE": {
+    "path": "huong-dan-giai-nghia.md",
+    "expected": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+    "raw": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+    "LF": "40909787f3cad5ddbd438b7db1f31ad2b547cc303b666222ade108410a307439",
+    "git_blob": "40909787f3cad5ddbd438b7db1f31ad2b547cc303b666222ade108410a307439",
+    "exists": true
+  },
+  "FAMILIES": {
+    "path": "d6-ho-chinh-ta.tsv",
+    "expected": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+    "raw": "df32c84df96a4ef46ce847e5e055e77f28caed2ff47991756f3d68ddb4523913",
+    "LF": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+    "git_blob": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+    "exists": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "base": "1c3f504",
+  "rows": [
+    632,
+    1177,
+    1942
+  ],
+  "h5_mathematical_exclusions": 8,
+  "new_selected_word_projection": 141,
+  "projected_size": 7776,
+  "projected_keys_unique": true,
+  "H1_H2_numeric": true,
+  "new_glosses_written": 0,
+  "fresh_D6_run": false,
+  "D6_preflight": {
+    "OPUS": {
+      "available": true,
+      "raw_match": true,
+      "LF_match": false,
+      "expected_sha256": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+      "actual_sha256": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9"
+    },
+    "ASTRA": {
+      "available": true,
+      "raw_match": false,
+      "LF_match": true,
+      "expected_sha256": "6d25230a14d75c208306c12d7acea52d2be0ebb1b47629c98c4d84954afd2067",
+      "actual_sha256": "0f94b58c422cd88ac0a50c0f2eace9da9ba5aed3e7630f577af29901cc9b25df"
+    },
+    "WIKT_VI": {
+      "available": false,
+      "raw_match": false,
+      "LF_match": false,
+      "expected_sha256": "1f0abd21982660b5fc2eff5eb3fbacbed2d9fe8f476af794dbed0d927ffb8187",
+      "actual_sha256": null
+    },
+    "GUIDE": {
+      "available": true,
+      "raw_match": true,
+      "LF_match": false,
+      "expected_sha256": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+      "actual_sha256": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f"
+    },
+    "FAMILIES": {
+      "available": true,
+      "raw_match": false,
+      "LF_match": true,
+      "expected_sha256": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+      "actual_sha256": "df32c84df96a4ef46ce847e5e055e77f28caed2ff47991756f3d68ddb4523913"
+    }
+  },
+  "baseline_commands": [
+    {
+      "name": "native-python",
+      "exit": 1,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit\nSố khối: 1: 480, 2: 7033, 3: 263\nĐộ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39\nLớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776\nLỖI | C1: wordlist.txt phải dùng LF và có LF cuối\nTổng: 1 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    },
+    {
+      "name": "native-js",
+      "exit": 1,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái\nLỖI | C1: wordlist.txt phải là UTF-8 không BOM, LF, có LF cuối\nLỖI | C8: thong-tin.html không khớp wordlist.txt\nLỖI | C8: mục 10 của WordListAnalyze.md không khớp wordlist.txt\nTổng: 3 lỗi.\n",
+      "stderr": ""
+    },
+    {
+      "name": "native-build-check",
+      "exit": 0,
+      "stdout": "Ba khối khớp wordlist.txt.\n",
+      "stderr": ""
+    },
+    {
+      "name": "canonical-python",
+      "exit": 0,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit\nSố khối: 1: 480, 2: 7033, 3: 263\nĐộ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39\nLớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776\nTổng: 0 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    },
+    {
+      "name": "canonical-js",
+      "exit": 0,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái\nTổng: 0 lỗi.\n",
+      "stderr": ""
+    },
+    {
+      "name": "D6-self-test",
+      "exit": 0,
+      "stdout": "D6-1.0: 20 ca tổng hợp đạt.\n",
+      "stderr": ""
+    }
+  ],
+  "native_checkers_pass": false,
+  "canonical_is_exact_git_blob": true,
+  "new_release_pass_claimed": false,
+  "production_protected_bytes_unchanged": true,
+  "format_errors": []
+}

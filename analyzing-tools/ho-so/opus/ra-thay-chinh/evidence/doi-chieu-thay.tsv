@@ -1,0 +1,461 @@
+chieu	tu	opus	opus_ma	astra	astra_ma	opus_v2
+RA	áo ngủ	GIU	-	CHO	H7-H0001	GIU
+RA	áo quần	RA	K1	RA	H7-0003:K1:áo quan	RA
+RA	ăn diện	GIU	-	RA	H7-0005:K1:ân điển	RA
+RA	bà chủ	GIU	-	RA	H7-0009:K1:bá chủ	RA
+RA	bàn ăn	RA	K1	RA	H7-0010:K1:bản án	RA
+RA	bản đồ	GIU	-	RA	H7-0011:K1:ban đỏ	GIU
+RA	bạn thân	GIU	-	CHO	H7-0014	GIU
+RA	bảng	GIU	-	CHO	H7-0017	GIU
+RA	bảng hiệu	GIU	-	CHO	H5-0011	GIU
+RA	bảo hành	GIU	-	RA	H7-0026:K1:bạo hành	RA
+RA	báo động	GIU	-	RA	H7-0028:K1:bạo động	RA
+RA	bề mặt	GIU	-	CHO	H7-0038	GIU
+RA	bể bơi	GIU	-	CHO	H7-0039	GIU
+RA	bền bỉ	GIU	-	RA	H7-0040:K1:bên bị	GIU
+RA	bình	GIU	-	RA	H7-0044:K1:binh;H7-0047:K1:bịnh	GIU
+RA	bít tết	GIU	-	CHO	H5-0023	GIU
+RA	bóng láng	GIU	-	CHO	H5-0025	GIU
+RA	bóng loáng	GIU	-	CHO	H5-0026	GIU
+RA	bồ kết	RA	LOAI_THIEU_DU_LIEU	RA	H5-0027:DE_NGHI_LOAI_H5C:bồ kếp	RA
+RA	bố mẹ	GIU	-	RA	H7-0054:K0:bỏ mẹ	RA
+RA	bộ ba	GIU	-	RA	H7-0056:K1:bỏ bà	RA
+RA	bộ đồ	GIU	-	RA	H7-0058:K1:bợ đỡ	GIU
+RA	bộc phát	GIU	-	CHO	H5-0028;H5-0029	GIU
+RA	buồn lòng	GIU	-	CHO	H5-0032	GIU
+RA	ca nhạc	GIU	-	RA	H7-0074:K1:cà nhắc	GIU
+RA	cải xoong	RA	LOAI_THIEU_DU_LIEU	CHO	H5-0040	RA
+RA	cao giá	RA	K1_GIAP_RANH	RA	H7-0088:K1:cáo già	RA
+RA	cắm đầu	GIU	-	RA	H7-0091:K1:cầm đầu	GIU
+RA	cần cù	GIU	-	CHO	H7-0094	GIU
+RA	chậm	GIU	-	CHO	H7-0121	GIU
+RA	chân đất	GIU	-	CHO	H7-0138	GIU
+RA	chậu	GIU	-	CHO	H7-0145	GIU
+RA	chiên	GIU	-	RA	H7-0153:K1:chiến	GIU
+RA	choàng	GIU	-	RA	H7-0159:K1:choáng	GIU
+RA	chỏm	GIU	-	RA	H7-0161:K1:chôm	RA
+RA	chòng chành	RA	LOAI_THIEU_DU_LIEU	RA	H5-0100:DE_NGHI_LOAI_H5C:tròng trành	RA
+RA	chồn	GIU	-	RA	H7-0170:K1:chôn	RA
+RA	chồng	GIU	-	RA	H7-0177:K1:chông	GIU
+RA	chốt	GIU	-	RA	H7-0181:K1:chột	GIU
+RA	chơ vơ	DIEU_KIEN	CAN_HAI_CHU_KY	CHO	H5-0112	RA
+RA	chú ý	GIU	-	RA	H7-0190:K1:chuỳ;H7-0191:K1:chùy	GIU
+RA	chun	GIU	-	CHO	H5-0126	GIU
+RA	chung	GIU	-	CHO	H7-0201;H7-0202	GIU
+RA	chung cư	RA	K1_GIAP_RANH	GIU	-	GIU
+RA	chuông	GIU	-	RA	H7-0211:K1:chưởng	GIU
+RA	chữ nghĩa	RA	K1	RA	H7-0216:K1:chủ nghĩa	RA
+RA	co rúm	GIU	-	CHO	H5-0140	RA
+RA	cò trắng	GIU	-	RA	H7-0220:K1:cờ trắng	GIU
+RA	có mặt	GIU	-	RA	H7-0224:K1:cơ mật	GIU
+RA	cổ đông	GIU	-	CHO	H7-0230	GIU
+RA	cổ thụ	RA	K1_GIAP_RANH	RA	H7-0231:K1:cố thủ	RA
+RA	công đoạn	GIU	-	CHO	H7-0236	GIU
+RA	cổng	GIU	-	CHO	H7-0240	GIU
+RA	cộng sự	GIU	-	RA	H7-0247:K1:công sự	RA
+RA	cột mốc	GIU	-	CHO	H5-0145	GIU
+RA	cuốc	GIU	-	RA	H7-0257:K1:cược	RA
+RA	cuống	GIU	-	CHO	H7-0260;H7-0263	GIU
+RA	dàn ý	GIU	-	RA	H7-0271:K1:dân y;H7-0272:K1:dân ý	RA
+RA	dặn dò	RA	K1	RA	H7-0274:K1:dẫn độ	RA
+RA	dây chun	GIU	-	RA	H5-0154:DE_NGHI_LOAI_H5C:dây thun	RA
+RA	dây thun	GIU	-	RA	H5-0155:DE_NGHI_LOAI_H5C:dây chun	RA
+RA	di dời	RA	K1_GIAP_RANH	RA	H7-0285:K1:đi đời	RA
+RA	di động	GIU	-	RA	H7-X1728:K0:đi đồng	GIU
+RA	dí dỏm	GIU	-	CHO	H5-0156	GIU
+RA	diều	GIU	-	RA	H7-0289:K1:điêu;H7-0290:K1:điếu	RA
+RA	do đó	GIU	-	RA	S4 sau tính lại S2/S3; không phải phát hiện H5/H7 mới	GIU
+RA	dò hỏi	RA	K1_GIAP_RANH	RA	H7-0293:K1:dở hơi	RA
+RA	đa năng	GIU	-	RA	H7-0296:K1:đa nang	GIU
+RA	đánh bại	GIU	-	RA	H7-0297:K1:đánh bài	RA
+RA	đậm đà	RA	K1	RA	H7-0306:K1:đấm đá	RA
+RA	đầu mùa	RA	K1	RA	H7-0308:K1:đậu mùa	RA
+RA	đề cử	GIU	-	RA	H7-X0453:K1:dê cụ	GIU
+RA	đích	GIU	-	RA	H7-0316:K1:địch	RA
+RA	điểm nhấn	GIU	-	CHO	H7-H0013	GIU
+RA	điều hành	GIU	-	CHO	H7-0318	GIU
+RA	đinh	GIU	-	CHO	H7-0321	GIU
+RA	đỏ thắm	RA	K1	RA	H7-0328:K1:do thám	RA
+RA	đồ bạc	GIU	-	CHO	H7-H0014	GIU
+RA	đông đúc	GIU	-	RA	H7-X1869:K1:động dục;H7-X1875:K1:động đực	GIU
+RA	đồng ý	GIU	-	RA	H7-0362:K1:đông y	GIU
+RA	đột phá	GIU	-	RA	H7-0366:K1:đốt phá	RA
+RA	đuốc	GIU	-	RA	H7-0367:K1:dược	GIU
+RA	gầy gò	RA	K1_GIAP_RANH	RA	H7-0401:K1:gây gổ	RA
+RA	ghen	GIU	-	CHO	H7-X0507	GIU
+RA	già dặn	RA	LOAI_THIEU_DU_LIEU	GIU	-	RA
+RA	giảm	GIU	-	RA	H7-0409:K1:giam	RA
+RA	gián	GIU	-	RA	H7-0413:K1:gian	GIU
+RA	giảng	GIU	-	RA	H7-0418:K1:giàng	GIU
+RA	giao	GIU	-	RA	H7-0422:K1:giáo	GIU
+RA	giấc	GIU	-	RA	H7-0428:K1:giặc	RA
+RA	giận dỗi	RA	K1	RA	H7-0429:K1:gian dối	RA
+RA	giỡn	GIU	-	CHO	H5-0205	GIU
+RA	giun	GIU	-	CHO	H5-0206	GIU
+RA	gọng	GIU	-	RA	H7-0443:K1:gông	RA
+RA	hạt dẻ	GIU	-	CHO	H5-0222	GIU
+RA	hâm mộ	GIU	-	RA	H7-0460:K1:hầm mộ	RA
+RA	hì hục	GIU	-	CHO	H5-0225	GIU
+RA	họ hàng	GIU	-	CHO	H7-0468	GIU
+RA	hoa mai	GIU	-	RA	H7-0469:K1:hoả mai	RA
+RA	hoang đảo	GIU	-	CHO	H7-0473	GIU
+RA	hoang sơ	GIU	-	CHO	H7-0475	GIU
+RA	hỏi thăm	GIU	-	RA	H7-0479:K1:hội thẩm	RA
+RA	hóm hỉnh	RA	K1_GIAP_RANH	RA	H7-0480:K1:hợm hĩnh	RA
+RA	hố ga	RA	K1	RA	H7-0481:K1:ho gà	RA
+RA	húng	GIU	-	RA	H7-0493:K1:hung	GIU
+RA	hững hờ	GIU	-	RA	H7-X0633:K1:hùng hổ	GIU
+RA	kể cả	GIU	-	RA	H7-0500:K1:kẻ cả	GIU
+RA	khác	GIU	-	CHO	H7-0502	GIU
+RA	khảm	GIU	-	RA	H7-0505:K1:khám;H7-0507:K1:khắm	GIU
+RA	khăn	GIU	-	RA	H7-0510:K1:khàn;H7-0512:K1:khấn	GIU
+RA	khiến	GIU	-	RA	H7-0520:K1:khiên	GIU
+RA	khuy	GIU	-	CHO	H7-H0017;H7-H0018	GIU
+RA	kiến	GIU	-	RA	H7-0552:K1:kiện	RA
+RA	kiểu	GIU	-	RA	H7-0555:K1:kiêu	GIU
+RA	kính	GIU	-	RA	H7-0559:K1:kinh	GIU
+RA	làm khó	GIU	-	CHO	H7-0563	GIU
+RA	làm mẫu	GIU	-	RA	H7-0564:K1:làm màu	GIU
+RA	làng	GIU	-	RA	H7-0569:K1:lăng	RA
+RA	lăn tăn	GIU	-	CHO	H5-0288	GIU
+RA	lằng nhằng	RA	K1	RA	H7-0578:K0:lăng nhăng	RA
+RA	lấn át	RA	LOAI_LOI	CHO	H5-0290	RA
+RA	lề đường	GIU	-	RA	H7-0584:K1:lê dương	GIU
+RA	liên quan	GIU	-	RA	H7-0590:K1:liên quân	GIU
+RA	lo lắng	GIU	-	RA	H7-0593:K1:lố lăng	GIU
+RA	loay hoay	DIEU_KIEN	CHO_SAT_NGUONG	CHO	H5-0298	RA
+RA	lon ton	GIU	-	CHO	H5-0299	GIU
+RA	lòng vòng	GIU	-	CHO	H5-0300	GIU
+RA	lỗi thời	GIU	-	CHO	H7-0596	GIU
+RA	lưới	GIU	-	RA	H7-0609:K1:lười	GIU
+RA	măng	GIU	-	RA	H7-0632:K1:mắng	RA
+RA	mặt nước	GIU	-	CHO	H7-0634	GIU
+RA	mê mẩn	RA	K1_GIAP_RANH	RA	H7-0637:K1:mê man	RA
+RA	mời mọc	GIU	-	RA	H7-0645:K1:moi móc	RA
+RA	nằm mơ	RA	K1	RA	H7-0663:K1:nam mô;H7-0664:K1:nấm mồ	RA
+RA	nắm vững	RA	K1_GIAP_RANH	RA	H7-0665:K1:nằm vùng	RA
+RA	nắng	GIU	-	CHO	H7-0666	GIU
+RA	ngại	GIU	-	RA	H7-0674:K1:ngai	GIU
+RA	ngao	GIU	-	RA	H7-0680:K1:ngáo;H7-0681:K1:ngạo	GIU
+RA	ngáp	GIU	-	CHO	H7-0682	GIU
+RA	ngắt	GIU	-	RA	H7-0702:K1:ngạt;H7-0703:K1:ngất	RA
+RA	nghèo	GIU	-	CHO	H7-H0026	GIU
+RA	ngoảnh	RA	LOAI_THIEU_DU_LIEU	RA	H5-0348:DE_NGHI_LOAI_H5C:ngảnh	RA
+RA	ngọc	GIU	-	RA	H7-0716:K1:ngốc	RA
+RA	ngụm	GIU	-	RA	H7-0727:K1:ngủm	RA
+RA	nguyên	GIU	-	RA	H7-0728:K1:nguyền	GIU
+RA	ngựa	GIU	-	RA	H7-0730:K1:ngứa	RA
+RA	nhai	GIU	-	RA	H7-0742:K1:nhãi	RA
+RA	nhàu	GIU	-	RA	H7-0753:K1:nhậu	RA
+RA	nhâm nhi	GIU	-	RA	H7-0758:K1:nhảm nhí	GIU
+RA	nhồi	GIU	-	RA	H7-0772:K1:nhói	GIU
+RA	nhốt	GIU	-	RA	H7-0775:K1:nhọt	RA
+RA	niêu	GIU	-	CHO	H7-0786	GIU
+RA	nuốt chửng	GIU	-	CHO	H5-0385	GIU
+RA	ong thợ	GIU	-	CHO	H7-0797	GIU
+RA	ọp ẹp	GIU	-	CHO	H5-0388	GIU
+RA	phản bác	GIU	-	RA	H7-X1126:K0:phân bắc	RA
+RA	phân công	RA	K1_GIAP_RANH	RA	H7-0805:K1:phản công	RA
+RA	phấp phới	RA	LOAI_THIEU_DU_LIEU	RA	H5-0389:DE_NGHI_LOAI_H5C:phất phới	RA
+RA	phí phạm	GIU	-	RA	H5-0392:DE_NGHI_LOAI_H5C:phí phạn	RA
+RA	phong bì	GIU	-	RA	H7-0812:K1:phòng bị	GIU
+RA	phong thư	RA	K1_GIAP_RANH	RA	H7-0813:K1:phòng thủ	RA
+RA	phòng	GIU	-	RA	H7-0817:K1:phỏng	GIU
+RA	phòng ngủ	GIU	-	RA	H7-0820:K1:phòng ngự	GIU
+RA	phù dâu	GIU	-	RA	H7-0824:K1:phủ đầu	GIU
+RA	quà tặng	GIU	-	RA	H7-0831:K1:quả tang	GIU
+RA	quên	GIU	-	RA	H7-0851:K1:quèn	GIU
+RA	quyển	GIU	-	CHO	H7-0854	GIU
+RA	rãnh	GIU	-	CHO	H7-0857	GIU
+RA	rau dền	RA	LOAI_THIEU_DU_LIEU	RA	H5-0404:DE_NGHI_LOAI_H5C:rau giền	RA
+RA	rầm rầm	GIU	-	CHO	H5-0408	GIU
+RA	rầm rộ	GIU	-	CHO	H5-0409	RA
+RA	rậm rạp	GIU	-	CHO	H5-0410	GIU
+RA	rong ruổi	GIU	-	CHO	H5-0413	GIU
+RA	ròng rã	GIU	-	CHO	H5-0414	GIU
+RA	ru rú	GIU	-	CHO	H5-0416	GIU
+RA	run run	GIU	-	CHO	H5-0417	GIU
+RA	rung động	GIU	-	CHO	H7-0872	GIU
+RA	sàng	GIU	-	RA	H7-0881:K1:sảng	GIU
+RA	sắn dây	RA	K1	GIU	-	GIU
+RA	sân ga	GIU	-	RA	H7-0886:K1:sa ngã	GIU
+RA	sền sệt	GIU	-	CHO	H5-0426	GIU
+RA	sông	GIU	-	RA	H7-0891:K1:sòng	GIU
+RA	su hào	DIEU_KIEN	CAN_HAI_CHU_KY	CHO	H5-0433	RA
+RA	tài hoa	RA	K1	RA	H7-0902:K1:tai hoạ;H7-0903:K1:tai họa	RA
+RA	tâm trí	GIU	-	CHO	H5-0440	GIU
+RA	tép riu	GIU	-	CHO	H5-0441	GIU
+RA	thái	GIU	-	CHO	H7-0910	RA
+RA	thảm	GIU	-	RA	H7-0912:K1:tham	RA
+RA	than	GIU	-	RA	H7-0925:K1:thần	RA
+RA	thắm thiết	GIU	-	RA	H7-0940:K1:thảm thiết	GIU
+RA	thầy	GIU	-	RA	H7-0946:K1:thây	GIU
+RA	theo	GIU	-	RA	H7-0948:K1:thẹo	GIU
+RA	theo dõi	GIU	-	CHO	H5-0468	GIU
+RA	thể lực	RA	K1_GIAP_RANH	RA	H7-0951:K1:thế lực	RA
+RA	thị trường	GIU	-	RA	H7-0955:K1:thị trưởng	GIU
+RA	thiên tài	RA	K1	RA	H7-0957:K1:thiên tai	RA
+RA	thính	GIU	-	CHO	H7-0963	GIU
+RA	thong dong	RA	K1	RA	H7-0969:K1:thông đồng	RA
+RA	thổi	GIU	-	RA	H7-0975:K1:thối	GIU
+RA	thôn	GIU	-	RA	H7-0979:K1:thộn	GIU
+RA	thớt	GIU	-	RA	H7-0981:K1:thọt	RA
+RA	thuần	GIU	-	RA	H7-0986:K1:thụ án	GIU
+RA	thun	GIU	-	CHO	H5-0507	GIU
+RA	thư giãn	GIU	-	CHO	H5-0513	GIU
+RA	thư thái	RA	K1	RA	H7-0992:K1:thụ thai	RA
+RA	tiệm	GIU	-	RA	H7-1004:K1:tiêm	GIU
+RA	tiền công	RA	K1_GIAP_RANH	RA	H7-1012:K1:tiến công	RA
+RA	tiền lương	GIU	-	CHO	H7-1014	GIU
+RA	tiếp viên	RA	K1_GIAP_RANH	RA	H7-1017:K1:tiếp viện	RA
+RA	tình tứ	GIU	-	CHO	H7-X1440	GIU
+RA	tính khí	GIU	-	RA	H7-X1437:K0:tinh khí	RA
+RA	tổng	GIU	-	CHO	H7-1032	GIU
+RA	trạm	GIU	-	RA	H7-1044:K1:trảm;H7-1046:K1:trẫm	GIU
+RA	trán	GIU	-	CHO	H7-1053	GIU
+RA	trăng tròn	GIU	-	RA	H7-1065:K1:trắng trợn	GIU
+RA	treo	GIU	-	RA	H7-1069:K1:trẹo	GIU
+RA	triệu	GIU	-	CHO	H7-1071	GIU
+RA	trình diễn	GIU	-	RA	H7-1072:K1:trình diện	GIU
+RA	trời	GIU	-	RA	H7-1088:K1:trói;H7-1090:K1:trối	RA
+RA	trưng bày	GIU	-	CHO	H5-0577	GIU
+RA	trường	GIU	-	CHO	H7-1104;H7-1108	GIU
+RA	tung	GIU	-	RA	H7-1115:K1:tụng	GIU
+RA	tường	GIU	-	RA	H7-1132:K1:tướng	GIU
+RA	vất vả	GIU	-	CHO	H7-1145	GIU
+RA	vòng	GIU	-	RA	H7-1150:K1:vong	GIU
+RA	xà bông	GIU	-	CHO	H5-0608;H5-B001	RA
+RA	xà phòng	GIU	-	CHO	H5-B002	RA
+RA	xanh	GIU	-	CHO	H5-0611	GIU
+RA	xập xình	DIEU_KIEN	CAN_HAI_CHU_KY	CHO	H5-0615	RA
+RA	xù xì	GIU	-	CHO	H5-0629	RA
+RA	xuân	GIU	-	RA	H7-1173:K1:xử án	GIU
+VAO	anh hai	-	-	VAO	HM_D6_CUOI	-
+VAO	áp dụng	-	-	VAO	HM_D6_CUOI	-
+VAO	áp phích	-	-	VAO	HM_D6_CUOI	-
+VAO	ăn bốc	-	-	-	-	VAO
+VAO	ăn nhịp	-	-	-	-	DU_BI
+VAO	ăn tiệm	VAO	-	-	-	VAO
+VAO	ăn trầu	-	-	-	-	VAO
+VAO	bạch kim	-	-	VAO	HM_D6_CUOI	-
+VAO	bánh ngọt	-	-	VAO	HM_D7_CUOI	-
+VAO	bánh phồng	-	-	VAO	HM_D6_CUOI	-
+VAO	bày tỏ	-	-	VAO	HM_D6_CUOI	-
+VAO	bâng quơ	VAO	-	VAO	DU_PHONG	VAO
+VAO	bất động	-	-	VAO	HM_D6_CUOI	-
+VAO	bèo bọt	VAO	-	-	-	VAO
+VAO	bí bách	-	-	-	-	VAO
+VAO	bí mật	-	-	VAO	HM_D6_CUOI	-
+VAO	biển	-	-	VAO	HM_D6_CUOI	-
+VAO	biểu cảm	-	-	VAO	HM_D6_CUOI	-
+VAO	bịn rịn	-	-	-	-	VAO
+VAO	bộ môn	-	-	VAO	HM_D6_CUOI	-
+VAO	bụng dạ	VAO	-	VAO	DU_PHONG	VAO
+VAO	buồn thiu	VAO	-	VAO	DU_PHONG	VAO
+VAO	ca dao	-	-	VAO	HM_D6_CUOI	-
+VAO	cá chuồn	-	-	VAO	HM_D6_CUOI	-
+VAO	cầu vượt	-	-	VAO	HM_D6_CUOI	-
+VAO	cha đẻ	-	-	VAO	HM_D6_CUOI	-
+VAO	chăm chú	-	-	VAO	HM_D6_CUOI	-
+VAO	chắn bùn	-	-	VAO	HM_D6_CUOI	-
+VAO	chấm phẩy	-	-	VAO	HM_D6_CUOI	-
+VAO	chấp nhặt	-	-	-	-	DU_BI
+VAO	châu lục	-	-	VAO	HM_D7_CUOI	-
+VAO	chế tạo	-	-	VAO	HM_D6_CUOI	-
+VAO	chễm chệ	-	-	-	-	DU_BI
+VAO	chia	-	-	VAO	HM_D6_CUOI	-
+VAO	chiều rộng	-	-	VAO	HM_D6_CUOI	-
+VAO	chim én	-	-	VAO	HM_D6_CUOI	-
+VAO	chín nhừ	-	-	-	-	DU_BI
+VAO	chính cống	VAO	-	VAO	DU_PHONG	VAO
+VAO	chỗ ngồi	-	-	VAO	HM_D6_CUOI	-
+VAO	chốc nữa	VAO	-	-	-	VAO
+VAO	chồn hôi	-	-	VAO	HM_D6_CUOI	-
+VAO	chợ phiên	-	-	VAO	HM_D6_CUOI	-
+VAO	chung tình	DU_BI	-	-	-	VAO
+VAO	chuyển đổi	-	-	VAO	HM_D6_CUOI	-
+VAO	chữ hoa	-	-	VAO	HM_D7_CUOI	-
+VAO	con dấu	-	-	VAO	HM_D6_CUOI	-
+VAO	con đẻ	-	-	VAO	HM_D6_CUOI	-
+VAO	con lắc	-	-	VAO	HM_D6_CUOI	-
+VAO	cô giáo	-	-	VAO	HM_D6_CUOI	-
+VAO	côn trùng	-	-	VAO	HM_D7_CUOI	-
+VAO	công ơn	-	-	VAO	HM_D6_CUOI	-
+VAO	công sức	-	-	VAO	HM_D6_CUOI	-
+VAO	cột buồm	-	-	VAO	HM_D6_CUOI	-
+VAO	cột sống	-	-	VAO	HM_D6_CUOI	-
+VAO	cờ vây	VAO	-	VAO	DU_PHONG	VAO
+VAO	cởi mở	-	-	VAO	HM_D6_CUOI	-
+VAO	củ đậu	-	-	VAO	HM_D6_CUOI	-
+VAO	cụ thể	-	-	VAO	HM_D6_CUOI	-
+VAO	cụt hứng	VAO	-	VAO	DU_PHONG	VAO
+VAO	cửa kính	-	-	VAO	HM_D6_CUOI	-
+VAO	cười gượng	-	-	-	-	VAO
+VAO	cười mỉm	-	-	-	-	DU_BI
+VAO	dài ngoằng	VAO_NEU_DIEU_KIEN	-	-	-	VAO
+VAO	dãy núi	-	-	VAO	HM_D6_CUOI	-
+VAO	dân ca	-	-	VAO	HM_D6_CUOI	-
+VAO	dâu tằm	-	-	VAO	HM_D6_CUOI	-
+VAO	dấu ngã	-	-	VAO	HM_D6_CUOI	-
+VAO	dây nịt	-	-	VAO	HM_D6_CUOI	-
+VAO	dễ ợt	-	-	-	-	DU_BI
+VAO	dưa leo	-	-	VAO	HM_D6_CUOI	-
+VAO	đánh răng	-	-	VAO	HM_D6_CUOI	-
+VAO	đáp số	VAO_NEU_DIEU_KIEN	-	-	-	VAO
+VAO	đắc ý	-	-	-	-	VAO
+VAO	đầy năm	-	-	-	-	DU_BI
+VAO	đầy tháng	-	-	-	-	VAO
+VAO	đầy tràn	-	-	-	-	VAO
+VAO	đỏ chót	VAO_NEU_DIEU_KIEN	-	-	-	VAO
+VAO	đon đả	VAO	-	-	-	VAO
+VAO	đồ vật	-	-	VAO	HM_D6_CUOI	-
+VAO	đời xưa	-	-	-	-	VAO
+VAO	đủng đỉnh	VAO	-	-	-	VAO
+VAO	đưa đò	VAO	-	VAO	DU_PHONG	VAO
+VAO	đường tròn	-	-	VAO	HM_D6_CUOI	-
+VAO	êm ái	-	-	VAO	HM_D6_CUOI	-
+VAO	gặp thời	DU_BI	-	-	-	VAO
+VAO	ghế mây	-	-	VAO	HM_D6_CUOI	-
+VAO	ghế phụ	-	-	VAO	HM_D6_CUOI	-
+VAO	giá thành	-	-	VAO	HM_D6_CUOI	-
+VAO	giảng viên	-	-	VAO	HM_D6_CUOI	-
+VAO	giấy ăn	-	-	VAO	HM_D6_CUOI	-
+VAO	giấy khen	-	-	VAO	HM_D6_CUOI	-
+VAO	giông giống	-	-	-	-	DU_BI
+VAO	giở giọng	VAO	-	-	-	VAO
+VAO	giở quẻ	DU_BI	-	-	-	VAO
+VAO	gò má	-	-	VAO	HM_D6_CUOI	-
+VAO	gợi chuyện	VAO	-	VAO	DU_PHONG	VAO
+VAO	hay dở	VAO	-	-	-	VAO
+VAO	học tủ	DU_BI	-	-	-	VAO
+VAO	hóng chuyện	-	-	-	-	VAO
+VAO	ỉu xìu	DU_BI	-	-	-	VAO
+VAO	khách hàng	-	-	VAO	HM_D6_CUOI	-
+VAO	khó nghĩ	VAO	-	VAO	DU_PHONG	VAO
+VAO	khoanh tay	-	-	VAO	HM_D6_CUOI	-
+VAO	khớp gối	-	-	VAO	HM_D6_CUOI	-
+VAO	khúc khuỷu	DU_BI	-	-	-	VAO
+VAO	khuya khoắt	DU_BI	-	-	-	VAO
+VAO	lạ đời	DU_BI	-	-	-	VAO
+VAO	lạ tai	VAO	-	VAO	DU_PHONG	VAO
+VAO	làm cỗ	VAO	-	-	-	VAO
+VAO	làm lơ	-	-	VAO	HM_D6_CUOI	-
+VAO	làm sao	-	-	VAO	HM_D6_CUOI	-
+VAO	làm vườn	-	-	VAO	HM_D6_CUOI	-
+VAO	lật đật	-	-	VAO	HM_D6_CUOI	-
+VAO	leo dây	VAO	-	VAO	DU_PHONG	VAO
+VAO	leo lét	VAO	-	-	-	VAO
+VAO	loáng thoáng	-	-	-	-	VAO
+VAO	long trọng	-	-	VAO	HM_D6_CUOI	-
+VAO	lỗ lãi	-	-	-	-	DU_BI
+VAO	lỗi hẹn	-	-	-	-	VAO
+VAO	lộp bộp	-	-	-	-	VAO
+VAO	lộp độp	DU_BI	-	-	-	VAO
+VAO	lời giải	-	-	VAO	HM_D6_CUOI	-
+VAO	lu bù	-	-	-	-	DU_BI
+VAO	lục địa	-	-	VAO	HM_D7_CUOI	-
+VAO	lục giác	-	-	VAO	HM_D6_CUOI	-
+VAO	luyện	-	-	VAO	HM_D6_CUOI	-
+VAO	mai mối	-	-	VAO	HM_D6_CUOI	-
+VAO	mang cá	-	-	VAO	HM_D6_CUOI	-
+VAO	mang máng	-	-	-	-	VAO
+VAO	mau mắn	-	-	-	-	VAO
+VAO	mấp mé	VAO	-	VAO	DU_PHONG	VAO
+VAO	méo xệch	-	-	-	-	VAO
+VAO	mệt lả	-	-	-	-	VAO
+VAO	miên man	-	-	VAO	HM_D6_CUOI	-
+VAO	mình	-	-	VAO	HM_D6_CUOI	-
+VAO	mỏ neo	-	-	VAO	HM_D6_CUOI	-
+VAO	mỏi nhừ	VAO	-	VAO	DU_PHONG	VAO
+VAO	mon men	VAO	-	VAO	DU_PHONG	VAO
+VAO	mong nhớ	VAO	-	-	-	VAO
+VAO	mỏng dính	-	-	-	-	VAO
+VAO	mỏng tanh	-	-	-	-	DU_BI
+VAO	móng	-	-	VAO	HM_D6_CUOI	-
+VAO	một mình	-	-	VAO	HM_D6_CUOI	-
+VAO	mụ mị	VAO	-	VAO	DU_PHONG	VAO
+VAO	mùa đông	-	-	VAO	HM_D7_CUOI	-
+VAO	nan hoa	-	-	VAO	HM_D6_CUOI	-
+VAO	nàng tiên	-	-	VAO	HM_D6_CUOI	-
+VAO	nằm ườn	-	-	-	-	VAO
+VAO	nắm tay	-	-	VAO	HM_D6_CUOI	-
+VAO	nắn nót	-	-	-	-	DU_BI
+VAO	nặng cân	-	-	-	-	VAO
+VAO	nặng trịch	-	-	-	-	VAO
+VAO	ngả nghiêng	-	-	-	-	VAO
+VAO	ngay thật	-	-	-	-	DU_BI
+VAO	ngắn ngủn	-	-	-	-	VAO
+VAO	ngân hàng	-	-	VAO	HM_D6_CUOI	-
+VAO	nghêu	-	-	VAO	HM_D6_CUOI	-
+VAO	nghìn	-	-	VAO	HM_D6_CUOI	-
+VAO	ngoại hình	-	-	VAO	HM_D6_CUOI	-
+VAO	ngón	-	-	VAO	HM_D6_CUOI	-
+VAO	ngóng trông	-	-	-	-	DU_BI
+VAO	nguồn sáng	-	-	VAO	HM_D6_CUOI	-
+VAO	ngụp	-	-	-	-	VAO
+VAO	ngượng nghịu	-	-	-	-	VAO
+VAO	nhá nhem	VAO	-	VAO	DU_PHONG	VAO
+VAO	nhảy cao	-	-	VAO	HM_D6_CUOI	-
+VAO	nhảy sào	VAO	-	-	-	VAO
+VAO	nháy mắt	-	-	VAO	HM_D6_CUOI	-
+VAO	nhịp nhàng	-	-	VAO	HM_D6_CUOI	-
+VAO	nín thinh	VAO	-	VAO	DU_PHONG	VAO
+VAO	no ấm	-	-	-	-	DU_BI
+VAO	non choẹt	-	-	-	-	DU_BI
+VAO	nóng ruột	-	-	-	-	VAO
+VAO	nước nôi	-	-	-	-	DU_BI
+VAO	oái oăm	VAO	-	VAO	DU_PHONG	VAO
+VAO	ông cụ	-	-	VAO	HM_D6_CUOI	-
+VAO	phất phơ	VAO	-	VAO	DU_PHONG	VAO
+VAO	phép trừ	-	-	-	-	VAO
+VAO	phương đông	-	-	VAO	HM_D6_CUOI	-
+VAO	rơm rớm	VAO	-	VAO	DU_PHONG	VAO
+VAO	rướn	-	-	-	-	VAO
+VAO	sáng trưng	VAO	-	VAO	DU_PHONG	VAO
+VAO	sẩy chân	-	-	-	-	DU_BI
+VAO	số âm	VAO	-	VAO	DU_PHONG	VAO
+VAO	sớm tối	-	-	-	-	DU_BI
+VAO	tạnh ráo	-	-	-	-	DU_BI
+VAO	tàu điện	-	-	VAO	HM_D6_CUOI	-
+VAO	tâm sự	-	-	VAO	HM_D6_CUOI	-
+VAO	tấn tới	VAO	-	VAO	DU_PHONG	VAO
+VAO	tẻ ngắt	-	-	-	-	VAO
+VAO	thả sức	-	-	-	-	VAO
+VAO	thay lông	VAO	-	-	-	VAO
+VAO	thay thế	-	-	VAO	HM_D6_CUOI	-
+VAO	thẳng đơ	-	-	-	-	DU_BI
+VAO	thẳng tính	-	-	-	-	VAO
+VAO	thợ may	-	-	VAO	HM_D6_CUOI	-
+VAO	thủ vai	-	-	VAO	HM_D6_CUOI	-
+VAO	thụp	DU_BI	-	-	-	VAO
+VAO	thường xuyên	-	-	VAO	HM_D6_CUOI	-
+VAO	tía lia	DU_BI	-	-	-	VAO
+VAO	tiểu học	-	-	VAO	HM_D6_CUOI	-
+VAO	tỉnh thành	-	-	VAO	HM_D6_CUOI	-
+VAO	tối mù	-	-	-	-	DU_BI
+VAO	trẻ măng	-	-	-	-	VAO
+VAO	tròn vo	-	-	-	-	VAO
+VAO	trốn học	-	-	VAO	HM_D6_CUOI	-
+VAO	trùng hợp	-	-	VAO	HM_D6_CUOI	-
+VAO	truyền miệng	-	-	VAO	HM_D6_CUOI	-
+VAO	tục ngữ	-	-	VAO	HM_D7_CUOI	-
+VAO	tuổi đời	-	-	VAO	HM_D6_CUOI	-
+VAO	tuổi ta	-	-	-	-	DU_BI
+VAO	tự nhủ	-	-	VAO	HM_D6_CUOI	-
+VAO	tương đương	-	-	VAO	HM_D6_CUOI	-
+VAO	ủn ỉn	VAO	-	-	-	VAO
+VAO	vây cá	-	-	VAO	HM_D6_CUOI	-
+VAO	ve vẩy	VAO_NEU_DIEU_KIEN	-	-	-	VAO
+VAO	việc làm	-	-	VAO	HM_D7_CUOI	-
+VAO	vỏ sò	-	-	VAO	HM_D6_CUOI	-
+VAO	vòi hoa sen	-	-	VAO	HM_D6_CUOI	-
+VAO	vỗ tay	-	-	VAO	HM_D6_CUOI	-
+VAO	xà lách	-	-	VAO	HM_D6_CUOI	-
+VAO	xăng xái	-	-	-	-	DU_BI
+VAO	xầm xì	-	-	-	-	DU_BI
+VAO	xe điện	-	-	VAO	HM_D7_CUOI	-
+VAO	xoa tay	-	-	VAO	HM_D6_CUOI	-
+VAO	xoành xoạch	DU_BI	-	-	-	VAO
+VAO	xúng xính	VAO	-	-	-	VAO
+VAO	xuống cân	VAO	-	VAO	DU_PHONG	VAO
+VAO	xuyên	-	-	VAO	HM_D6_CUOI	-

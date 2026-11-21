@@ -1,0 +1,33 @@
+{
+  "base_commit": "1c3f50406f5115f5c33ca87c8534831b011e2b10",
+  "H5": {
+    "pairs": 632,
+    "main_words": 474
+  },
+  "H7": {
+    "pairs": 1177,
+    "keys": 634,
+    "recomputed_exact": true,
+    "both_denominators_same_scope": true,
+    "all_saved_main_pairs": 3074,
+    "all_saved_main_keys": 1635,
+    "extended_pairs": 1897
+  },
+  "baotu_main": null,
+  "baotu_registered": false,
+  "A_by_class": {
+    "K": 38,
+    "H": 71,
+    "F": 39
+  },
+  "main_classes": {
+    "C": 2915,
+    "H": 3169,
+    "K": 1615,
+    "F": 77
+  },
+  "main_labels": {
+    "OK": 7776
+  },
+  "D6_dump_available": false
+}

@@ -1,0 +1,6 @@
+tu	nguon	url	revision	sha256_response	ket_qua_kiem	source_text_saved
+theo rõi	VDict	https://vdict.com/theo%20r%C3%B5i,3,0,0.html	-	28e284b8e8addad6e7a813d62e98be70e61f9e62c0b137546fcc28c5f40228c7	web_fetch xác nhận nhãn không chuẩn; quy về theo dõi	False
+dun	VDict	https://vdict.com/dun,3,0,0.html	-	90ef71f33eeca2a579dbb10dd39506ee6a55f7f39629e648038cf7be97ae7d72	web_fetch xác nhận nghĩa động tác đẩy/thúc, không phải đầu mục giun đã xét	False
+rí rỏm	VDict	https://vdict.com/r%C3%AD%20r%E1%BB%8Fm,3,0,0.html	-	8bd40ee97a4c042ce45bb1708a446315c5015f0556886a6e6f70f4703a15f98e	web_fetch xác nhận nét hài hước tế nhị; không có nhãn biến thể của dí dỏm trong trang đã đọc	False
+đá gà	VDict	https://vdict.com/%C4%91%C3%A1%20g%C3%A0,3,0,0.html	-	b88dcc2709191e863dd1c56399faf62c71bc7cc6b2602c086c90f55f05f5eca1	web_fetch xác nhận hoạt động chọi gà, thường gắn cá cược	False
+đá gà	Wikipedia vi	https://vi.wikipedia.org/w/index.php?oldid=74677317	74677317	996fee7cacd16e31797f7bbc6675a8e11f47b018db7f0c4dbba01003a6511ff4	Đã đọc phần mở đầu; đối chứng toàn hoạt động, không suy từ tiếng gà	False

@@ -1,0 +1,24 @@
+{
+  "H5f_confirmed_replace": [
+    "cải xoong",
+    "xà bông",
+    "xà phòng"
+  ],
+  "H7_disputed": 17,
+  "H5_disputed": 7,
+  "agreed_out_after_H5f_confirmation": 94,
+  "O_proposed_out_unchanged": 101,
+  "existing_K2_to_reuse": [
+    "nướng",
+    "phết"
+  ],
+  "new_K2_signature_queue": 194,
+  "entrant_flag_closure_proposals": [
+    "đưa đò",
+    "nặng cân",
+    "thẳng đơ"
+  ],
+  "open_items_can_be_worked_jointly": true,
+  "no_promise_all_pending_items_will_pass": true,
+  "new_release_signatures_written": 0
+}
