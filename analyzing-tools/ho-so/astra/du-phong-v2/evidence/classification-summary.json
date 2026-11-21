@@ -1,0 +1,96 @@
+{
+  "reserve_tiers": {
+    "A": 158,
+    "C": 10,
+    "B": 37
+  },
+  "reserve_tier_compartments": {
+    "A_OK_KHONG_F": 118,
+    "C_OK_KHONG_F": 10,
+    "B_OK_F": 37,
+    "A_OK_F": 40
+  },
+  "reserve_tier_words_C": [
+    "ăn trầu",
+    "bèo bọt",
+    "chấp nhặt",
+    "giở giọng",
+    "giở quẻ",
+    "mụ mị",
+    "non choẹt",
+    "thụp",
+    "tía lia",
+    "tuổi xanh"
+  ],
+  "hm_n": 200,
+  "hm_tiers": {
+    "HM_D6": 117,
+    "HM_R1": 73,
+    "HM_D7": 10
+  },
+  "hm_classes": {
+    "C": 117,
+    "H": 44,
+    "K": 34,
+    "F": 5
+  },
+  "hm_compartments": {
+    "OK_KHONG_F": 122,
+    "R1_KHONG_F": 73,
+    "OK_F": 5
+  },
+  "hm_sources": {
+    "L1": 195,
+    "L2A": 2,
+    "L3": 3
+  },
+  "hm_h8": {
+    "MANH": 200
+  },
+  "hm_h3_two_signatures": [
+    "chim én",
+    "chữ hoa",
+    "con đẻ",
+    "con lắc",
+    "ghế phụ",
+    "lời giải",
+    "mang cá",
+    "nắm tay",
+    "nguồn sáng",
+    "phương đông",
+    "piano",
+    "thủ vai",
+    "trốn học",
+    "tuổi đời",
+    "vây cá",
+    "vĩ cầm",
+    "vỏ sò",
+    "xoa tay"
+  ],
+  "hm_k2_two_signatures": [
+    "chia"
+  ],
+  "hm_F_score_range": [
+    2.749263,
+    98.387653
+  ],
+  "reserve_d6_versions": {
+    "v2": 35,
+    "v1": 123,
+    "v3": 10,
+    "CHUA_VIET": 37
+  },
+  "substitution_slots": {
+    "K": 43,
+    "H": 85,
+    "F": 77
+  },
+  "available_main_slots_excluding_owner_keep": {
+    "C": 2902,
+    "H": 3168,
+    "K": 1615,
+    "F": 77
+  },
+  "rule_new_hard_rejections": 0,
+  "meaning": "verified:số đếm và đối chiếu; assumed:tầng mới, độ quen và nhận định nghĩa của riêng Astra; không là phê duyệt thay từ"
+}

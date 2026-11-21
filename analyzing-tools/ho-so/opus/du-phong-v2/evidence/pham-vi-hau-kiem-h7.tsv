@@ -1,0 +1,1178 @@
+khoa	tu_chinh	doc_khac	ppm_gop_tu_chinh	ppm_gop_doc_khac	doc_khac_ge_tu_chinh
+amhieu	am hiểu	ám hiệu	3.5068	0.9538	KHONG
+annhan	an nhàn	ân nhân	0.4073	0.7909	CO
+aoquan	áo quần	áo quan	0.9941	0.3239	KHONG
+anco	ăn cỏ	ăn có	1.3858	0.3854	KHONG
+andien	ăn diện	ân điển	0.7173	1.3914	CO
+anmay	ăn may	ăn mày	0.9359	1.8799	CO
+bachi	ba chỉ	bà chị	0.5732	1.7786	CO
+balo	ba lô	balô	15.0307	0.7023	KHONG
+bachu	bà chủ	bá chủ	4.7285	0.8344	KHONG
+banan	bàn ăn	bản án	5.5210	4.0637	KHONG
+bando	bản đồ	ban đỏ	75.0982	1.3417	KHONG
+banle	bản lề	bán lẻ	7.9227	34.1394	CO
+banthao	bản thảo	bán tháo	3.1564	0.3882	KHONG
+banthan	bạn thân	bán thân	20.2692	1.0127	KHONG
+bang	bảng	bang	279.2634	84.3784	KHONG
+bang	bảng	bàng	279.2634	3.1603	KHONG
+bang	bảng	báng	279.2634	0.8784	KHONG
+bang	bảng	băng	279.2634	162.8285	KHONG
+bang	bảng	bằng	279.2634	1164.2828	CO
+banh	bánh	banh	153.8766	13.9857	KHONG
+banh	bánh	bành	153.8766	0.7123	KHONG
+banh	bánh	bảnh	153.8766	3.5192	KHONG
+banhbao	bánh bao	bảnh bao	4.2578	1.7658	KHONG
+banhda	bánh đa	bánh đà	0.1068	1.1678	CO
+banhtrai	bánh trái	bảnh trai	0.2228	0.8630	CO
+baohanh	bảo hành	bạo hành	50.5410	2.5118	KHONG
+baodong	báo động	bao đồng	43.0040	0.4147	KHONG
+baodong	báo động	bạo động	43.0040	2.5545	KHONG
+baynhay	bay nhảy	bầy nhầy	0.4447	0.4584	CO
+bapbenh	bập bênh	bấp bênh	0.9863	0.6243	KHONG
+batcan	bất cẩn	bất cần	2.9938	0.4784	KHONG
+batlua	bật lửa	bắt lửa	3.1735	1.8244	KHONG
+baygio	bây giờ	bấy giờ	613.4667	2.3283	KHONG
+bebe	be bé	be be	0.3227	0.3327	CO
+begay	bẻ gãy	bẻ gẫy	3.4905	0.3530	KHONG
+bebet	bê bết	be bét	0.1928	0.4226	CO
+betong	bê tông	bêtông	64.0875	1.0376	KHONG
+bemat	bề mặt	bẽ mặt	139.6306	2.8082	KHONG
+beboi	bể bơi	bê bối	19.8787	2.6862	KHONG
+benbi	bền bỉ	bên bị	6.0485	0.4700	KHONG
+biendang	biến dạng	biên dạng	14.3817	0.3336	KHONG
+biet	biết	biệt	2837.6499	9.5751	KHONG
+bieu	biếu	biểu	1.1562	10.4904	CO
+binh	bình	binh	86.8072	37.0338	KHONG
+binh	bình	bính	86.8072	0.9529	KHONG
+binh	bình	bĩnh	86.8072	1.0737	KHONG
+binh	bình	bịnh	86.8072	1.4334	KHONG
+binhtinh	bình tĩnh	bình tình	110.1113	0.7610	KHONG
+bosua	bò sữa	bơ sữa	1.5104	0.4913	KHONG
+bongbong	bong bóng	bòng bong	19.5194	0.4426	KHONG
+bongbay	bóng bay	bóng bẩy	2.2142	0.8117	KHONG
+bongda	bóng đá	bong da	32.8627	0.4404	KHONG
+boduong	bổ dưỡng	bố dượng	2.7019	1.1348	KHONG
+bome	bố mẹ	bỏ mẹ	55.6157	3.8868	KHONG
+bovo	bố vợ	bơ vơ	0.5743	0.4538	KHONG
+boba	bộ ba	bỏ bà	2.3460	0.3934	KHONG
+bodo	bộ đồ	bỏ dở	23.2374	0.7977	KHONG
+bodo	bộ đồ	bợ đỡ	23.2374	0.3385	KHONG
+bomat	bộ mặt	bỏ mất	5.2348	0.3081	KHONG
+bonho	bộ nhớ	bọn họ	28.7599	53.2781	CO
+bonphan	bổn phận	bón phân	5.0014	1.0283	KHONG
+bode	bờ đê	bố đẻ	0.2274	0.6120	CO
+bode	bờ đê	bồ đề	0.2274	0.9732	CO
+bung	bụng	bung	32.5775	2.9073	KHONG
+bung	bụng	bùng	32.5775	5.2149	KHONG
+bung	bụng	búng	32.5775	1.2112	KHONG
+bung	bụng	bưng	32.5775	0.9008	KHONG
+bung	bụng	bừng	32.5775	2.1294	KHONG
+buon	buồn	buôn	52.0136	14.0410	KHONG
+buongtha	buông tha	buông thả	1.2791	0.7103	KHONG
+buong	buồng	buông	28.0087	18.5168	KHONG
+buot	buốt	buột	0.6452	0.3190	KHONG
+buoc	bước	buộc	138.2663	52.2830	KHONG
+canhac	ca nhạc	cà nhắc	1.3776	0.3564	KHONG
+cakho	cá kho	cá khô	0.1201	0.3977	CO
+caro	cá rô	ca rô	0.6437	0.4286	KHONG
+caro	cá rô	carô	0.6437	0.6573	CO
+camdoan	cam đoan	cấm đoán	4.2749	0.7423	KHONG
+camtinh	cảm tình	cảm tính	2.1266	0.9475	KHONG
+camdo	cám dỗ	cầm đồ	6.0819	1.5315	KHONG
+cang	cảng	càng	45.7287	156.5117	CO
+cang	cảng	cáng	45.7287	1.9069	KHONG
+cang	cảng	căng	45.7287	27.3293	KHONG
+cang	cảng	cẳng	45.7287	0.6454	KHONG
+canh	cánh	cành	58.9375	7.6007	KHONG
+canh	cánh	cạnh	58.9375	59.6583	CO
+canh	cánh	cảnh	58.9375	71.2527	CO
+caogia	cao giá	cáo già	1.7063	0.7677	KHONG
+capdien	cáp điện	cấp điện	14.3176	2.3827	KHONG
+caumay	cau mày	cầu may	0.3666	0.3327	KHONG
+camdau	cắm đầu	cầm đầu	1.0151	4.3764	CO
+cancau	cần câu	cần cẩu	3.6110	35.2534	CO
+cancau	cần câu	cắn câu	3.6110	1.3943	KHONG
+cancu	cần cù	căn cứ	0.5938	29.3452	CO
+canke	cận kề	cặn kẽ	1.8097	0.6865	KHONG
+cautruc	cấu trúc	cầu trục	109.6838	5.2707	KHONG
+cayco	cây cỏ	cây cọ	1.5142	1.3815	KHONG
+chala	chà là	chả là	0.4934	2.7236	CO
+chaca	chả cá	cha cả	0.2448	0.4975	CO
+chai	chai	chài	128.4505	1.5230	KHONG
+chai	chai	chái	128.4505	0.4473	KHONG
+chai	chai	chải	128.4505	14.6455	KHONG
+chang	chàng	chang	54.6239	13.2012	KHONG
+chang	chàng	chăng	54.6239	13.0749	KHONG
+chang	chàng	chằng	54.6239	1.2470	KHONG
+chang	chàng	chẳng	54.6239	343.1829	CO
+chanh	chanh	chánh	14.1104	6.4338	KHONG
+chao	chảo	chao	9.4974	3.9591	KHONG
+chao	chảo	chào	9.4974	562.1148	CO
+chao	chảo	cháo	9.4974	5.3234	KHONG
+chay	chạy	chay	320.3017	8.5544	KHONG
+chay	chạy	chày	320.3017	14.9319	KHONG
+chay	chạy	cháy	320.3017	105.0306	KHONG
+chay	chạy	chảy	320.3017	44.3233	KHONG
+chay	chạy	chấy	320.3017	13.7841	KHONG
+chamcham	chằm chằm	chăm chăm	5.5094	0.5542	KHONG
+chamcham	chằm chằm	chậm chậm	5.5094	0.3652	KHONG
+chat	chặt	chát	48.1953	1.0347	KHONG
+chat	chặt	chất	48.1953	254.3777	CO
+chat	chặt	chắt	48.1953	0.6027	KHONG
+cham	chậm	chàm	57.9902	3.3884	KHONG
+cham	chậm	châm	57.9902	6.6532	KHONG
+cham	chậm	chăm	57.9902	4.0262	KHONG
+cham	chậm	chạm	57.9902	58.3889	CO
+cham	chậm	chẩm	57.9902	0.3754	KHONG
+chan	chân	chan	203.7197	14.4770	KHONG
+chan	chân	chán	203.7197	33.3129	KHONG
+chan	chân	chăn	203.7197	23.3036	KHONG
+chan	chân	chấn	203.7197	2.4892	KHONG
+chan	chân	chần	203.7197	0.7368	KHONG
+chan	chân	chẩn	203.7197	0.3113	KHONG
+chan	chân	chận	203.7197	1.7038	KHONG
+chan	chân	chắn	203.7197	18.1753	KHONG
+chan	chân	chằn	203.7197	0.6545	KHONG
+chan	chân	chẵn	203.7197	1.6183	KHONG
+chan	chân	chặn	203.7197	56.1061	KHONG
+chandung	chân dung	chặn đứng	7.1012	1.9815	KHONG
+chandat	chân đất	chăn dắt	0.1050	0.4963	CO
+chantinh	chân tình	chằn tinh	0.6929	0.9605	CO
+chap	chấp	chập	2.9836	1.1900	KHONG
+chau	chậu	chau	11.5409	15.5430	CO
+chau	chậu	cháu	11.5409	667.6398	CO
+chau	chậu	châu	11.5409	627.4956	CO
+chau	chậu	chấu	11.5409	0.7958	KHONG
+chau	chậu	chầu	11.5409	2.7061	KHONG
+chen	chén	chen	20.5319	12.1283	KHONG
+chen	chén	chèn	20.5319	43.2066	CO
+chen	chén	chẹn	20.5319	1.3932	KHONG
+cheo	chèo	chéo	11.2628	17.9185	CO
+chibao	chỉ bảo	chỉ báo	2.0972	8.1656	CO
+chiem	chị em	chiêm	14.9344	0.3401	KHONG
+chiem	chị em	chiếm	14.9344	50.5517	CO
+chien	chiên	chiến	20.3889	39.3732	CO
+chieudai	chiều dài	chiêu đãi	80.0696	1.8189	KHONG
+chieu	chiếu	chiêu	35.2393	12.5201	KHONG
+chieu	chiếu	chiểu	35.2393	1.1876	KHONG
+chinh	chỉnh	chình	305.8671	0.4215	KHONG
+chiukho	chịu khó	chịu khổ	1.4781	1.3936	KHONG
+choang	choàng	choáng	0.6464	3.0986	CO
+chom	chỏm	chòm	0.4365	0.7886	CO
+chom	chỏm	chôm	0.4365	5.8839	CO
+chom	chỏm	chồm	0.4365	0.3406	KHONG
+chom	chỏm	chớm	0.4365	0.3199	KHONG
+choi	chổi	chòi	12.5942	1.7069	KHONG
+choi	chổi	chói	12.5942	3.0383	KHONG
+choi	chổi	chơi	12.5942	422.9095	CO
+choi	chổi	chọi	12.5942	3.4996	KHONG
+choi	chổi	chối	12.5942	2.6557	KHONG
+choi	chổi	chồi	12.5942	3.8101	KHONG
+chon	chồn	chôn	7.2515	23.3475	CO
+chon	chồn	chơn	7.2515	0.8866	KHONG
+chon	chồn	chọn	7.2515	471.2592	CO
+chon	chồn	chốn	7.2515	10.2703	CO
+chong	chồng	chong	109.5345	6.4695	KHONG
+chong	chồng	chòng	109.5345	2.6149	KHONG
+chong	chồng	chóng	109.5345	1.5144	KHONG
+chong	chồng	chông	109.5345	0.5627	KHONG
+chong	chồng	chống	109.5345	422.0604	CO
+chong	chồng	chổng	109.5345	0.3081	KHONG
+chot	chốt	chót	20.5468	5.2580	KHONG
+chot	chốt	chột	20.5468	0.3922	KHONG
+chot	chốt	chợt	20.5468	3.8897	KHONG
+chop	chớp	chóp	7.8889	1.4144	KHONG
+chop	chớp	chộp	7.8889	2.5898	KHONG
+chopmat	chớp mắt	chợp mắt	3.1564	2.2469	KHONG
+chudao	chu đáo	chủ đạo	9.9108	2.3505	KHONG
+chunhat	chủ nhật	chữ nhật	25.0983	14.3947	KHONG
+chuquan	chủ quán	chủ quản	1.5292	0.9224	KHONG
+chutam	chú tâm	chủ tâm	2.1052	0.4459	KHONG
+chuy	chú ý	chuỳ	110.5422	0.5075	KHONG
+chuy	chú ý	chùy	110.5422	0.5075	KHONG
+chuy	chú ý	chủ ý	110.5422	2.4808	KHONG
+chuc	chúc	chức	90.5410	9.6403	KHONG
+chuc	chúc	chực	90.5410	0.5318	KHONG
+chum	chùm	chum	13.5470	1.6666	KHONG
+chum	chùm	chụm	13.5470	0.5243	KHONG
+chun	chun	chùn	9.3396	0.3831	KHONG
+chung	chung	chùng	149.1249	1.1771	KHONG
+chung	chung	chúng	149.1249	1100.4829	CO
+chung	chung	chưng	149.1249	0.7873	KHONG
+chung	chung	chủng	149.1249	14.4523	KHONG
+chung	chung	chứng	149.1249	29.6983	KHONG
+chung	chung	chừng	149.1249	13.6514	KHONG
+chung	chung	chững	149.1249	0.3092	KHONG
+chungcu	chung cư	chứng cứ	8.2838	11.9085	CO
+chuong	chuông	chuồng	31.1311	15.4077	KHONG
+chuong	chuông	chuộng	31.1311	0.5359	KHONG
+chuong	chuông	chương	31.1311	20.5592	KHONG
+chuong	chuông	chướng	31.1311	0.3383	KHONG
+chuong	chuông	chường	31.1311	0.5096	KHONG
+chuong	chuông	chưởng	31.1311	3.7741	KHONG
+chuot	chuột	chuốt	54.6184	1.2395	KHONG
+chuyen	chuyển	chuyên	217.6682	63.2286	KHONG
+chuyen	chuyển	chuyến	217.6682	109.9930	KHONG
+chuyen	chuyển	chuyện	217.6682	1104.1134	CO
+chunghia	chữ nghĩa	chủ nghĩa	0.3069	11.1438	CO
+chungminh	chứng minh	chúng mình	68.0094	8.8908	KHONG
+chungnhan	chứng nhận	chứng nhân	111.2580	0.4179	KHONG
+chungto	chứng tỏ	chúng tớ	16.0980	10.9166	KHONG
+cotrang	cò trắng	cờ trắng	0.0167	0.3160	CO
+cohau	có hậu	cô hầu	1.8599	1.1866	KHONG
+cohieu	có hiếu	cờ hiệu	0.1591	0.4435	CO
+coloi	có lợi	có lỗi	22.0355	10.6291	KHONG
+comat	có mặt	cơ mật	53.2699	0.4168	KHONG
+concon	cỏn con	con con	0.6982	1.5080	CO
+codau	cô dâu	có đâu	14.3296	7.1386	KHONG
+cochan	cổ chân	có chân	0.5815	1.5911	CO
+codien	cổ điển	cơ điện	58.0220	3.3932	KHONG
+codong	cổ đông	cô đọng	9.8753	0.4217	KHONG
+codong	cổ đông	cơ động	9.8753	2.1469	KHONG
+cothu	cổ thụ	cố thủ	0.5522	1.4060	CO
+covu	cổ vũ	có vú	8.0356	2.5547	KHONG
+cotinh	cố tình	có tình	8.0899	0.5063	KHONG
+congchung	công chúng	công chứng	12.1987	2.6918	KHONG
+congcong	công cộng	cong cong	48.1718	0.5240	KHONG
+congdoan	công đoạn	công đoàn	2.4131	8.0007	CO
+congnhan	công nhân	công nhận	21.9053	32.6501	CO
+congtac	công tắc	cộng tác	23.5244	10.5300	KHONG
+cong	cổng	cong	143.7995	27.5442	KHONG
+cong	cổng	còng	143.7995	13.8517	KHONG
+cong	cổng	cóng	143.7995	1.3715	KHONG
+cong	cổng	công	143.7995	47.5703	KHONG
+cong	cổng	cõng	143.7995	1.8923	KHONG
+cong	cổng	cọng	143.7995	1.3968	KHONG
+cong	cổng	cống	143.7995	11.8788	KHONG
+cong	cổng	cộng	143.7995	39.6666	KHONG
+congsu	cộng sự	công sự	18.6952	0.9719	KHONG
+coso	cơ sở	có số	174.7586	10.1361	KHONG
+cothe	cơ thể	có thế	180.0015	7.9664	KHONG
+cothe	cơ thể	có thể	180.0015	3847.4982	CO
+cothe	cơ thể	cô thế	180.0015	1.1253	KHONG
+coibo	cởi bỏ	coi bộ	0.9528	2.2506	CO
+cuabien	cua biển	cửa biển	0.0500	0.5903	CO
+cungcap	cung cấp	cứng cáp	1156.6713	1.2579	KHONG
+cuoc	cuốc	cuộc	1.5294	328.7679	CO
+cuoc	cuốc	cước	1.5294	6.6425	CO
+cuoc	cuốc	cược	1.5294	49.1368	CO
+cuon	cuộn	cuốn	198.9772	98.4496	KHONG
+cuon	cuộn	cuồn	198.9772	0.3742	KHONG
+cuong	cuống	cuồng	2.9822	4.3667	CO
+cuong	cuống	cương	2.9822	12.0785	CO
+cuong	cuống	cường	2.9822	4.9636	CO
+cuong	cuống	cưỡng	2.9822	5.7647	CO
+cuaquay	cựa quậy	cửa quay	0.5783	5.2807	CO
+cuoi	cười	cuối	74.2164	159.0719	CO
+cuoi	cười	cuội	74.2164	0.3323	KHONG
+cuoi	cười	cưới	74.2164	66.5276	KHONG
+cuoi	cười	cưỡi	74.2164	24.6775	KHONG
+dadau	da đầu	da dầu	4.0373	1.0234	KHONG
+daihan	dài hạn	đại hàn	13.8259	1.0796	KHONG
+dany	dàn ý	dân y	0.0613	1.0143	CO
+dany	dàn ý	dân ý	0.0613	0.3513	CO
+daydo	dạy dỗ	đây đó	4.8919	2.4411	KHONG
+dando	dặn dò	dẫn độ	0.4747	1.7642	CO
+dando	dặn dò	đắn đo	0.4747	0.6598	CO
+dautay	dâu tây	dấu tay	4.6482	3.0851	KHONG
+dautay	dâu tây	đầu tay	4.6482	1.0143	KHONG
+dauan	dầu ăn	dấu ấn	3.6253	6.8482	CO
+daucau	dấu câu	đầu cầu	0.2536	0.3694	CO
+daunang	dấu nặng	dầu nặng	0.0313	0.7640	CO
+daydan	dây dẫn	dày dạn	13.5714	1.8653	KHONG
+daydan	dây dẫn	dày dặn	13.5714	1.1733	KHONG
+daydan	dây dẫn	đầy đặn	13.5714	1.1492	KHONG
+daykem	dây kẽm	dạy kèm	1.0936	2.0903	CO
+didoi	di dời	đi đời	2.5832	0.8809	KHONG
+dientich	diện tích	điện tích	46.2791	0.8706	KHONG
+dieu	diều	diễu	2.8442	0.5139	KHONG
+dieu	diều	diệu	2.8442	3.1416	CO
+dieu	diều	điêu	2.8442	1.6715	KHONG
+dieu	diều	điếu	2.8442	5.4612	CO
+dieu	diều	điều	2.8442	1291.2086	CO
+dieu	diều	điệu	2.8442	12.0378	CO
+dohoi	dò hỏi	dở hơi	0.6599	5.6569	CO
+dulieu	dữ liệu	dự liệu	268.4058	0.6464	KHONG
+dutru	dự trữ	dự trù	27.6818	0.5322	KHONG
+danang	đa năng	đa nang	22.4449	0.4905	KHONG
+danhbai	đánh bại	đánh bài	34.3108	1.7786	KHONG
+danhbat	đánh bắt	đánh bật	2.0424	0.7911	KHONG
+danhdau	đánh dấu	đánh đầu	51.2048	0.3411	KHONG
+danhdo	đánh đố	đánh đổ	0.3211	0.8806	CO
+danhdong	đánh đồng	đánh động	0.4100	0.8360	CO
+danhgia	đánh giá	danh giá	200.1067	2.6572	KHONG
+datdo	đắt đỏ	đất đỏ	2.1083	0.3287	KHONG
+datgia	đắt giá	đặt giá	1.1999	1.1987	KHONG
+dattien	đắt tiền	đặt tiền	10.1213	1.2885	KHONG
+damda	đậm đà	đấm đá	2.1549	0.4505	KHONG
+daumay	đầu máy	dầu máy	3.1321	2.0817	KHONG
+daumua	đầu mùa	đậu mùa	0.8047	1.0769	CO
+dautu	đầu tư	đầu từ	170.7430	0.6107	KHONG
+dauden	đậu đen	đầu đen	1.7010	1.0968	KHONG
+daudo	đậu đỏ	đâu đó	1.5604	34.0062	CO
+demat	để mắt	để mất	9.8620	13.7562	CO
+detam	để tâm	đệ tam	4.0320	0.8122	KHONG
+divang	đi vắng	đi văng	2.5772	3.2672	CO
+dich	đích	dịch	14.3969	81.6305	CO
+dich	đích	địch	14.3969	11.9894	KHONG
+dientu	điện tử	điện từ	146.8596	18.5462	KHONG
+dieuhanh	điều hành	diễu hành	94.8986	8.0731	KHONG
+dinh	đinh	dinh	18.9653	17.0832	KHONG
+dinh	đinh	dính	18.9653	75.2192	CO
+dinh	đinh	đình	18.9653	10.3322	KHONG
+dinh	đinh	đính	18.9653	19.5015	CO
+dinh	đinh	đỉnh	18.9653	40.9273	CO
+dinh	đinh	định	18.9653	198.8080	CO
+dinhdang	định dạng	dính dáng	42.4370	5.8077	KHONG
+dinhhuong	định hướng	đinh hương	23.0799	1.5175	KHONG
+doluong	đo lường	độ lượng	21.8296	0.3327	KHONG
+dotham	đỏ thắm	do thám	0.2228	5.1107	CO
+doan	đồ ăn	doan	27.1648	2.7028	KHONG
+doan	đồ ăn	doãn	27.1648	0.6176	KHONG
+doan	đồ ăn	đoan	27.1648	0.4614	KHONG
+doan	đồ ăn	đoàn	27.1648	46.4871	CO
+doan	đồ ăn	đoạn	27.1648	66.5073	CO
+doan	đồ ăn	đồ án	27.1648	0.5199	KHONG
+doda	đồ da	đồ đá	1.0064	1.1351	CO
+dodac	đồ đạc	đo đạc	17.7145	2.3328	KHONG
+dothua	đồ thừa	đổ thừa	0.5604	0.6690	CO
+doimoi	đổi mới	đồi mồi	27.2966	0.4462	KHONG
+doimoi	đổi mới	đời mới	27.2966	0.8451	KHONG
+doitien	đổi tiền	đòi tiền	1.3465	1.9126	CO
+doichieu	đối chiếu	đổi chiều	2.8461	0.5130	KHONG
+doipho	đối phó	đội phó	25.0790	0.7665	KHONG
+dongbac	đông bắc	đồng bạc	5.8282	1.1582	KHONG
+dongdu	đông đủ	đông du	0.7995	0.4371	KHONG
+dong	đồng	dong	197.8265	38.6781	KHONG
+dong	đồng	dòng	197.8265	175.6434	KHONG
+dong	đồng	dông	197.8265	0.6679	KHONG
+dong	đồng	dộng	197.8265	0.8287	KHONG
+dong	đồng	đong	197.8265	2.0209	KHONG
+dong	đồng	đóng	197.8265	125.0258	KHONG
+dong	đồng	đông	197.8265	211.3307	CO
+dong	đồng	đọng	197.8265	1.5556	KHONG
+dong	đồng	đống	197.8265	57.4568	KHONG
+dong	đồng	đổng	197.8265	0.5527	KHONG
+dong	đồng	động	197.8265	57.1608	KHONG
+dongbang	đồng bằng	đồng bảng	15.8153	0.9904	KHONG
+dongbo	đồng bộ	đóng bộ	22.6099	0.3032	KHONG
+dongco	đồng cỏ	động cơ	5.1268	218.0138	CO
+dongdoi	đồng đội	dòng dõi	8.5387	3.9635	KHONG
+dongho	đồng hồ	dòng họ	100.9882	3.4598	KHONG
+dongluong	đồng lương	động lượng	0.4335	0.4985	CO
+dongy	đồng ý	đông y	124.8437	0.5587	KHONG
+donglong	động lòng	đồng lòng	0.7665	1.0332	CO
+dongtu	động từ	đồng từ	2.6597	0.4168	KHONG
+dongtu	động từ	đồng tử	2.6597	1.6496	KHONG
+dotpha	đột phá	đốt phá	8.2483	0.7161	KHONG
+duoc	đuốc	dược	2.2382	30.6126	CO
+duoc	đuốc	đước	2.2382	0.4179	KHONG
+duoc	đuốc	được	2.2382	8087.2970	CO
+duoi	đuôi	duỗi	29.2662	2.7208	KHONG
+duoi	đuôi	dưới	29.2662	368.5713	CO
+duoi	đuôi	đuối	29.2662	0.8150	KHONG
+duoi	đuôi	đuổi	29.2662	40.1692	CO
+dung	đứng	dung	150.4471	12.6836	KHONG
+dung	đứng	dùng	150.4471	592.3109	CO
+dung	đứng	dúng	150.4471	1.0063	KHONG
+dung	đứng	dũng	150.4471	2.7750	KHONG
+dung	đứng	dưng	150.4471	0.5502	KHONG
+dung	đứng	dụng	150.4471	15.7838	KHONG
+dung	đứng	dứng	150.4471	0.3035	KHONG
+dung	đứng	dừng	150.4471	90.6415	KHONG
+dung	đứng	dựng	150.4471	24.4685	KHONG
+dung	đứng	đùng	150.4471	1.5384	KHONG
+dung	đứng	đúng	150.4471	1042.6207	CO
+dung	đứng	đũng	150.4471	0.3348	KHONG
+dung	đứng	đưng	150.4471	1.0451	KHONG
+dung	đứng	đụng	150.4471	30.6956	KHONG
+dung	đứng	đừng	150.4471	831.2349	CO
+dung	đứng	đựng	150.4471	40.2850	KHONG
+dungdau	đứng đầu	đụng đầu	18.6502	0.5121	KHONG
+duong	đường	dương	390.1572	49.3553	KHONG
+duong	đường	dường	390.1572	1.0881	KHONG
+duong	đường	dưỡng	390.1572	36.7641	KHONG
+duong	đường	dượng	390.1572	2.8640	KHONG
+duong	đường	đương	390.1572	3.0501	KHONG
+duongbang	đường băng	đường bằng	4.8557	0.3528	KHONG
+duongbien	đường biển	đường biên	13.5123	0.6112	KHONG
+ganh	gánh	ganh	5.3765	1.3198	KHONG
+gara	gara	ga ra	4.4486	0.6116	KHONG
+gang	găng	gắng	2.5910	3.4280	CO
+gaygo	gầy gò	gây gổ	0.5888	0.5434	KHONG
+ghim	ghim	ghìm	6.7843	0.5121	KHONG
+giadinh	gia đình	gia đinh	326.4764	0.9889	KHONG
+giadinh	gia đình	giả định	326.4764	7.0283	KHONG
+giatoc	gia tộc	gia tốc	9.2955	5.4872	KHONG
+giaca	giá cả	già cả	64.2521	0.3336	KHONG
+giave	giá vẽ	giá vé	0.1942	10.4065	CO
+giai	giải	giai	78.4481	5.7959	KHONG
+giam	giảm	giam	250.5677	24.7754	KHONG
+giam	giảm	giám	250.5677	3.7864	KHONG
+giam	giảm	giăm	250.5677	0.7228	KHONG
+giam	giảm	giẫm	250.5677	1.6410	KHONG
+gian	gián	gian	19.5431	10.8066	KHONG
+gian	gián	giãn	19.5431	9.3585	KHONG
+gian	gián	giản	19.5431	3.3792	KHONG
+gian	gián	giận	19.5431	29.8473	CO
+giang	giảng	giang	6.0458	32.9812	CO
+giang	giảng	giàng	6.0458	0.6122	KHONG
+giang	giảng	giáng	6.0458	3.6397	KHONG
+giang	giảng	giăng	6.0458	3.7468	KHONG
+giang	giảng	giằng	6.0458	0.7256	KHONG
+giao	giao	giáo	170.5781	19.8821	KHONG
+giau	giàu	giấu	44.5440	48.8154	CO
+giau	giàu	giầu	44.5440	0.3111	KHONG
+giat	giặt	giật	32.4585	12.5597	KHONG
+giac	giấc	giác	2.9133	3.2070	CO
+giac	giấc	giắc	2.9133	2.9085	KHONG
+giac	giấc	giặc	2.9133	1.0469	KHONG
+giandoi	giận dỗi	gian dối	0.5154	1.3363	CO
+giay	giấy	giày	267.4485	92.1775	KHONG
+giay	giấy	giây	267.4485	98.1713	KHONG
+giay	giấy	giãy	267.4485	0.3385	KHONG
+giay	giấy	giầy	267.4485	7.2564	KHONG
+gioi	giỏi	gioi	127.9839	1.1611	KHONG
+gioi	giỏi	giòi	127.9839	1.8752	KHONG
+gioi	giỏi	giới	127.9839	32.7869	KHONG
+gioi	giỏi	giời	127.9839	6.4066	KHONG
+giong	giọng	gióng	30.5030	0.5056	KHONG
+giong	giọng	giông	30.5030	1.6217	KHONG
+giong	giọng	giống	30.5030	201.7460	CO
+giua	giữa	giũa	311.3125	0.3624	KHONG
+giuong	giường	giương	148.9034	1.6036	KHONG
+gong	gọng	gông	1.5512	0.4459	KHONG
+gong	gọng	gồng	1.5512	0.3715	KHONG
+guong	gương	guồng	28.8686	0.8972	KHONG
+hang	hang	hàng	32.9246	425.7688	CO
+hang	hang	háng	32.9246	2.5093	KHONG
+hang	hang	hãng	32.9246	55.7474	CO
+hang	hang	hăng	32.9246	1.3260	KHONG
+hang	hang	hạng	32.9246	31.9478	KHONG
+hang	hang	hẫng	32.9246	0.5830	KHONG
+hang	hang	hằng	32.9246	10.1484	KHONG
+hang	hang	hẵng	32.9246	1.7148	KHONG
+hangdong	hang động	hàng đống	7.1546	1.8757	KHONG
+hangan	hàng ăn	hàn gắn	0.4170	2.6944	CO
+hanh	hành	hanh	21.3096	5.2135	KHONG
+hanh	hành	hạnh	21.3096	3.7572	KHONG
+haohung	hào hứng	hào hùng	5.7557	0.4482	KHONG
+hammo	hâm mộ	hầm mỏ	24.3070	2.6112	KHONG
+hammo	hâm mộ	hầm mộ	24.3070	2.6388	KHONG
+hiem	hiếm	hiểm	29.8437	1.3491	KHONG
+hien	hiên	hiến	5.8875	12.3753	CO
+hien	hiên	hiện	5.8875	72.9837	CO
+hieu	hiểu	hiếu	559.3961	1.8407	KHONG
+hieu	hiểu	hiệu	559.3961	192.6378	KHONG
+hinh	hình	hỉnh	210.6953	0.3029	KHONG
+hinhdang	hình dạng	hình dáng	59.0298	6.4645	KHONG
+hohang	họ hàng	hở hang	8.5208	0.4256	KHONG
+hoamai	hoa mai	hoả mai	0.3140	0.4292	CO
+hoasu	hoa sứ	hoạ sư	0.0467	0.3385	CO
+hoang	hoang	hoàng	37.8883	22.6975	KHONG
+hoang	hoang	hoảng	37.8883	5.3053	KHONG
+hoangdao	hoang đảo	hoàng đạo	0.2161	1.9372	CO
+hoangduong	hoang đường	hoàng dương	1.8076	0.3027	KHONG
+hoangso	hoang sơ	hoảng sợ	2.2186	8.2884	CO
+hoac	hoặc	hoắc	1520.3037	3.5896	KHONG
+hocvien	học viên	học viện	24.6608	15.6094	KHONG
+hoihan	hỏi han	hối hận	1.0633	12.8521	CO
+hoitham	hỏi thăm	hội thẩm	5.7450	1.0032	KHONG
+homhinh	hóm hỉnh	hợm hĩnh	0.4140	0.9798	CO
+hoga	hố ga	ho gà	0.4216	0.5150	CO
+hoithao	hội thảo	hội thao	39.5403	0.3749	KHONG
+hoitruong	hội trường	hội trưởng	6.0905	0.4085	KHONG
+homnay	hôm nay	hôm này	268.6202	1.5108	KHONG
+hong	hồng	hong	73.8770	31.6499	KHONG
+hong	hồng	hòng	73.8770	1.1292	KHONG
+hong	hồng	hóng	73.8770	0.9117	KHONG
+hong	hồng	hông	73.8770	12.4772	KHONG
+hong	hồng	họng	73.8770	11.3453	KHONG
+hong	hồng	hỏng	73.8770	35.2100	KHONG
+hong	hồng	hổng	73.8770	1.4214	KHONG
+hopso	hộp số	hộp sọ	22.1190	3.8076	KHONG
+hung	húng	hung	2.3067	24.8848	CO
+hung	húng	hùng	2.3067	8.4304	CO
+hung	húng	hưng	2.3067	11.6153	CO
+hung	húng	hứng	2.3067	5.9881	CO
+hung	húng	hừng	2.3067	0.6347	KHONG
+huyen	huyện	huyền	15.2971	4.5108	KHONG
+keng	kẻng	keng	0.0537	0.7592	CO
+keca	kể cả	kẻ cả	39.6499	0.4155	KHONG
+keula	kêu la	kêu là	0.7305	0.4392	KHONG
+khac	khác	khạc	1257.5921	0.7977	KHONG
+khac	khác	khấc	1257.5921	0.3239	KHONG
+kham	khảm	kham	7.6207	3.6683	KHONG
+kham	khảm	khám	7.6207	20.5947	CO
+kham	khảm	khâm	7.6207	0.4865	KHONG
+kham	khảm	khắm	7.6207	0.4988	KHONG
+khao	khao	khảo	6.1259	0.6317	KHONG
+khan	khăn	khan	53.5145	7.1254	KHONG
+khan	khăn	khàn	53.5145	0.5401	KHONG
+khan	khăn	khán	53.5145	0.4207	KHONG
+khan	khăn	khấn	53.5145	0.5202	KHONG
+khan	khăn	khẩn	53.5145	4.6318	KHONG
+khan	khăn	khắn	53.5145	0.6025	KHONG
+khau	khâu	khau	21.8348	0.5617	KHONG
+khau	khâu	kháu	21.8348	0.3788	KHONG
+khau	khâu	khấu	21.8348	1.4952	KHONG
+khau	khâu	khẩu	21.8348	49.4925	CO
+kheo	khéo	kheo	2.2702	0.5078	KHONG
+khien	khiến	khiên	199.2607	10.2663	KHONG
+khien	khiến	khiển	199.2607	1.8569	KHONG
+khit	khít	khịt	2.7980	0.3190	KHONG
+khokhan	khó khăn	khô khan	107.8529	0.7262	KHONG
+khoa	khoa	khoá	27.7540	217.5062	CO
+khoa	khoa	khoả	27.7540	1.0440	KHONG
+khoa	khoa	khóa	27.7540	217.5062	CO
+khoa	khoa	khỏa	27.7540	1.0440	KHONG
+khoahoc	khoa học	khóa học	107.4875	50.6168	KHONG
+khoan	khoan	khoán	126.3637	0.3628	KHONG
+khoan	khoan	khoản	126.3637	95.6728	KHONG
+khoang	khoang	khoáng	29.8519	7.4938	KHONG
+khoang	khoang	khoảng	29.8519	206.9953	CO
+khoang	khoang	khoắng	29.8519	0.3093	KHONG
+khoanh	khoanh	khoảnh	0.6728	0.7000	CO
+khoe	khoe	khoé	7.0942	0.4764	KHONG
+khoe	khoe	khoẻ	7.0942	95.2828	CO
+khoe	khoe	khóe	7.0942	0.4764	KHONG
+khoe	khoe	khỏe	7.0942	95.2828	CO
+khoi	khói	khoi	32.6233	2.5727	KHONG
+khoi	khói	khôi	32.6233	0.7429	KHONG
+khoi	khói	khơi	32.6233	1.3130	KHONG
+khoi	khói	khỏi	32.6233	445.8507	CO
+khoi	khói	khối	32.6233	71.1882	CO
+khoi	khói	khởi	32.6233	13.1234	KHONG
+khom	khóm	khom	0.4133	0.5867	CO
+khocan	khô cằn	khô cạn	1.2179	0.5323	KHONG
+khong	không	khống	11903.9360	1.1352	KHONG
+khonghe	không hề	khó nghe	87.7135	1.0913	KHONG
+khuan	khuân	khuẩn	0.6426	2.3387	CO
+khuyen	khuyên	khuyển	41.7484	0.7561	KHONG
+kien	kiến	kiên	41.6876	3.1665	KHONG
+kien	kiến	kiện	41.6876	18.0251	KHONG
+kieng	kiêng	kiếng	1.1492	2.2564	CO
+kieng	kiêng	kiểng	1.1492	0.4093	KHONG
+kieu	kiểu	kiêu	208.6263	0.5132	KHONG
+kieu	kiểu	kiếu	208.6263	0.3864	KHONG
+kieu	kiểu	kiều	208.6263	3.0832	KHONG
+kieu	kiểu	kiệu	208.6263	1.1551	KHONG
+kinh	kính	kinh	123.7698	40.4041	KHONG
+kinh	kính	kình	123.7698	0.5039	KHONG
+kinhcan	kính cận	kính cẩn	0.1645	0.5300	CO
+lala	là lạ	là là	1.8164	2.4138	CO
+lamkho	làm khó	làm khổ	3.2553	0.9078	KHONG
+lammau	làm mẫu	làm màu	2.7141	0.6621	KHONG
+lammoi	làm mối	làm mồi	0.2049	2.3716	CO
+lang	làng	lang	43.0396	12.6461	KHONG
+lang	làng	láng	43.0396	2.2005	KHONG
+lang	làng	lãng	43.0396	2.4430	KHONG
+lang	làng	lăng	43.0396	4.8005	KHONG
+lang	làng	lạng	43.0396	2.5730	KHONG
+lang	làng	lắng	43.0396	3.8167	KHONG
+lang	làng	lằng	43.0396	0.4684	KHONG
+lang	làng	lặng	43.0396	3.0284	KHONG
+lanh	lạnh	lanh	112.6710	12.0857	KHONG
+lanh	lạnh	lành	112.6710	23.3829	KHONG
+lanh	lạnh	lánh	112.6710	0.8547	KHONG
+lanh	lạnh	lãnh	112.6710	9.7818	KHONG
+langnhang	lằng nhằng	lăng nhăng	1.1878	1.5093	CO
+langnghe	lắng nghe	làng nghề	28.0650	1.0310	KHONG
+lambam	lẩm bẩm	lầm bầm	1.0369	0.9447	KHONG
+laudai	lâu đài	lâu dài	26.4392	45.8582	CO
+layloi	lầy lội	lấy lời	0.2488	0.6559	CO
+leloi	lẻ loi	le lói	0.4605	0.3843	KHONG
+leduong	lề đường	lê dương	2.3390	0.3069	KHONG
+leduong	lề đường	lễ đường	2.3390	0.3694	KHONG
+lenh	lệnh	lềnh	110.8642	0.5133	KHONG
+liem	liềm	liêm	0.3222	2.4989	CO
+liem	liềm	liếm	0.3222	12.1875	CO
+lienhoan	liên hoan	liên hoàn	5.5485	2.9234	KHONG
+lienquan	liên quan	liên quân	283.9503	0.8882	KHONG
+lieu	liễu	liều	2.6511	63.1493	CO
+lieu	liễu	liệu	2.6511	84.0179	CO
+lolang	lo lắng	lố lăng	97.1299	0.3855	KHONG
+lolieu	lo liệu	lộ liễu	6.3890	1.0758	KHONG
+loang	loãng	loang	4.3715	0.3796	KHONG
+loithoi	lỗi thời	lôi thôi	5.3988	0.7498	KHONG
+long	lông	long	76.7513	100.2702	CO
+long	lông	lòng	76.7513	71.8274	KHONG
+long	lông	lóng	76.7513	0.6906	KHONG
+long	lông	lõng	76.7513	0.4954	KHONG
+long	lông	lỏng	76.7513	35.6825	KHONG
+long	lông	lồng	76.7513	31.7362	KHONG
+loithe	lợi thế	lời thề	39.9562	6.8215	KHONG
+lunglay	lung lay	lừng lẫy	3.7848	0.7063	KHONG
+lung	lưng	lung	31.9393	3.6438	KHONG
+lung	lưng	lùng	31.9393	2.6558	KHONG
+lung	lưng	lủng	31.9393	1.0221	KHONG
+lung	lưng	lửng	31.9393	3.3370	KHONG
+luoi	lưới	lười	150.2510	3.7645	KHONG
+luoi	lưới	lưỡi	150.2510	59.0837	KHONG
+luon	lươn	luôn	1.1795	472.9191	CO
+luon	lươn	luồn	1.1795	2.7082	CO
+luon	lươn	lượn	1.1795	7.8773	CO
+luong	lương	luồng	31.8162	18.2736	KHONG
+luong	lương	lường	31.8162	5.3058	KHONG
+luong	lương	lưỡng	31.8162	3.2243	KHONG
+luong	lương	lượng	31.8162	81.5165	CO
+luot	lướt	lượt	14.2918	162.7222	CO
+luutru	lưu trữ	lưu trú	164.2684	10.1956	KHONG
+manh	mạnh	manh	136.8297	3.2942	KHONG
+manh	mạnh	mánh	136.8297	3.1172	KHONG
+manh	mạnh	mãnh	136.8297	1.0506	KHONG
+manh	mạnh	mảnh	136.8297	51.6997	KHONG
+maychu	máy chủ	máy chữ	78.7124	0.3153	KHONG
+maydo	máy dò	may đo	19.2736	0.6741	KHONG
+maymay	máy may	mảy may	6.7582	0.4784	KHONG
+mang	măng	mang	1.7657	404.4686	CO
+mang	măng	màng	1.7657	74.6420	CO
+mang	măng	máng	1.7657	7.2869	CO
+mang	măng	mạng	1.7657	208.6098	CO
+mang	măng	mảng	1.7657	16.6039	CO
+mang	măng	mắng	1.7657	2.4705	CO
+matkinh	mắt kính	mặt kính	2.1190	0.6876	KHONG
+matnuoc	mặt nước	mất nước	6.4719	6.4191	KHONG
+mattrang	mặt trăng	mất trắng	17.9644	0.3415	KHONG
+mapmo	mấp mô	mập mờ	0.0671	0.6529	CO
+meman	mê mẩn	mê man	1.1175	0.5995	KHONG
+mega	mề gà	mega	0.0300	5.6388	CO
+mimat	mi mắt	mí mắt	0.4179	3.5346	CO
+mien	miến	miền	2.0373	73.8990	CO
+mien	miến	miễn	2.0373	14.3142	CO
+mien	miến	miện	2.0373	0.4936	KHONG
+miengan	miếng ăn	miệng ăn	0.5018	0.3976	KHONG
+mieng	miệng	miếng	78.5034	83.6120	CO
+moimoc	mời mọc	moi móc	0.3560	0.3351	KHONG
+moiday	mới đây	mới đấy	5.8046	1.7810	KHONG
+moitinh	mới tinh	mối tình	1.0290	1.4505	CO
+mummim	mũm mĩm	mủm mỉm	6.0421	0.6039	KHONG
+muoi	muối	muôi	38.4332	0.3392	KHONG
+muoi	muối	muỗi	38.4332	18.8253	KHONG
+muoi	muối	muội	38.4332	27.6362	KHONG
+muoi	muối	mươi	38.4332	1.1370	KHONG
+muoi	muối	mười	38.4332	46.9948	CO
+mung	mừng	mùng	55.8583	2.6431	KHONG
+muon	mượn	muôn	24.0839	4.2866	KHONG
+muon	mượn	muốn	24.0839	2326.0930	CO
+muon	mượn	muộn	24.0839	57.6741	CO
+muon	mượn	mướn	24.0839	2.5320	KHONG
+muong	mương	muông	2.9453	0.3407	KHONG
+muong	mương	muỗng	2.9453	12.5715	CO
+muong	mương	mường	2.9453	1.7829	KHONG
+muot	mượt	mướt	4.3375	0.3729	KHONG
+nammo	nằm mơ	nam mô	3.0772	0.4605	KHONG
+nammo	nằm mơ	nấm mồ	3.0772	1.3894	KHONG
+namvung	nắm vững	nằm vùng	1.8322	1.6811	KHONG
+nang	nắng	nang	21.8323	18.3171	KHONG
+nang	nắng	nàng	21.8323	88.8949	CO
+nang	nắng	nâng	21.8323	113.3840	CO
+nang	nắng	năng	21.8323	7.4468	KHONG
+nang	nắng	nạng	21.8323	1.0945	KHONG
+nang	nắng	nẫng	21.8323	0.4584	KHONG
+nang	nắng	nặng	21.8323	103.5307	CO
+ngach	ngách	ngạch	0.7930	0.5599	KHONG
+ngai	ngại	ngai	12.9423	3.2257	KHONG
+ngai	ngại	ngài	12.9423	628.6589	CO
+ngai	ngại	ngãi	12.9423	1.6346	KHONG
+ngai	ngại	ngải	12.9423	1.7571	KHONG
+ngang	ngang	ngáng	61.1140	1.9938	KHONG
+ngang	ngang	ngẩng	61.1140	1.4161	KHONG
+ngao	ngao	ngáo	0.6161	0.6478	CO
+ngao	ngao	ngạo	0.6161	0.4726	KHONG
+ngap	ngáp	ngập	0.7583	11.4162	CO
+ngay	ngày	ngay	1006.1901	722.0454	KHONG
+ngay	ngày	ngáy	1006.1901	2.9670	KHONG
+ngay	ngày	ngây	1006.1901	0.5148	KHONG
+ngay	ngày	ngấy	1006.1901	0.4826	KHONG
+ngaynay	ngày nay	ngày này	36.9655	10.6978	KHONG
+ngaythang	ngày tháng	ngay thẳng	5.5430	1.9723	KHONG
+ngam	ngắm	ngàm	33.1473	0.3573	KHONG
+ngam	ngắm	ngâm	33.1473	19.5343	KHONG
+ngam	ngắm	ngăm	33.1473	3.7906	KHONG
+ngam	ngắm	ngấm	33.1473	1.9890	KHONG
+ngam	ngắm	ngầm	33.1473	30.5867	KHONG
+ngam	ngắm	ngẫm	33.1473	0.6396	KHONG
+ngam	ngắm	ngậm	33.1473	4.7507	KHONG
+ngan	ngăn	ngan	72.0687	10.8102	KHONG
+ngan	ngăn	ngàn	72.0687	58.8446	KHONG
+ngan	ngăn	ngán	72.0687	1.7612	KHONG
+ngan	ngăn	ngân	72.0687	4.1860	KHONG
+ngan	ngăn	ngần	72.0687	3.0650	KHONG
+nganchan	ngăn chặn	ngăn chận	65.8949	0.4131	KHONG
+ngat	ngắt	ngạt	18.7479	1.0025	KHONG
+ngat	ngắt	ngất	18.7479	6.9440	KHONG
+nghe	nghệ	nghe	9.2729	752.0744	CO
+nghe	nghệ	nghé	9.2729	1.6808	KHONG
+nghe	nghệ	nghê	9.2729	0.6910	KHONG
+nghe	nghệ	nghề	9.2729	41.6161	CO
+nghi	nghỉ	nghì	127.0472	0.8193	KHONG
+nghi	nghỉ	nghĩ	127.0472	1330.9320	CO
+nghi	nghỉ	nghị	127.0472	3.7903	KHONG
+nghingoi	nghỉ ngơi	nghĩ ngợi	41.0174	1.2540	KHONG
+nghiem	nghiêm	nghiệm	6.7599	4.1060	KHONG
+ngoai	ngoài	ngoái	442.6034	0.5351	KHONG
+ngoai	ngoài	ngoại	442.6034	13.2176	KHONG
+ngoaile	ngoại lệ	ngoài lề	10.3117	0.7558	KHONG
+ngoc	ngọc	ngốc	31.1054	46.5906	CO
+ngoi	ngói	ngoi	14.0001	1.2898	KHONG
+ngoi	ngói	ngòi	14.0001	2.3384	KHONG
+ngoi	ngói	ngôi	14.0001	33.6139	CO
+ngoi	ngói	ngơi	14.0001	1.6861	KHONG
+ngoi	ngói	ngồi	14.0001	237.3621	CO
+ngoi	ngói	ngời	14.0001	1.3429	KHONG
+ngot	ngọt	ngót	23.3416	2.4284	KHONG
+nguy	ngụ ý	nguy	4.6653	8.9844	CO
+nguy	ngụ ý	nguỵ	4.6653	3.5558	KHONG
+nguy	ngụ ý	ngụy	4.6653	3.5558	KHONG
+ngum	ngụm	ngủm	3.3077	1.1399	KHONG
+nguyen	nguyên	nguyền	36.6075	11.4786	KHONG
+nguyen	nguyên	nguyện	36.6075	11.3730	KHONG
+ngua	ngựa	ngứa	76.0890	14.5289	KHONG
+ngua	ngựa	ngừa	76.0890	4.0286	KHONG
+ngung	ngừng	ngưng	65.9381	21.8835	KHONG
+nguoi	người	nguôi	4524.1598	0.9394	KHONG
+nguoi	người	nguội	4524.1598	25.4153	KHONG
+nguoi	người	ngươi	4524.1598	567.1063	KHONG
+nguoingoai	người ngoài	nguôi ngoai	17.0057	0.5093	KHONG
+nhao	nhà ở	nhão	39.4718	0.8675	KHONG
+nhao	nhà ở	nhạo	39.4718	2.4785	KHONG
+nhac	nhạc	nhấc	88.2331	12.7371	KHONG
+nhac	nhạc	nhắc	88.2331	51.6826	KHONG
+nhai	nhai	nhái	10.2279	2.0561	KHONG
+nhai	nhai	nhãi	10.2279	3.4096	KHONG
+nhai	nhai	nhại	10.2279	2.5403	KHONG
+nhan	nhãn	nhàn	76.7070	0.4479	KHONG
+nhan	nhãn	nhân	76.7070	40.8179	KHONG
+nhan	nhãn	nhăn	76.7070	5.0545	KHONG
+nhan	nhãn	nhạn	76.7070	1.5823	KHONG
+nhan	nhãn	nhấn	76.7070	59.5730	KHONG
+nhan	nhãn	nhận	76.7070	435.9314	CO
+nhan	nhãn	nhắn	76.7070	100.1581	CO
+nhan	nhãn	nhẵn	76.7070	4.1609	KHONG
+nhanh	nhanh	nhành	603.1381	0.6535	KHONG
+nhau	nhàu	nhậu	0.2276	2.8518	CO
+nhat	nhặt	nhát	14.7871	7.5602	KHONG
+nhat	nhặt	nhạt	14.7871	13.3049	KHONG
+nhat	nhặt	nhất	14.7871	1291.3129	CO
+nhat	nhặt	nhật	14.7871	254.5317	CO
+nhamnhi	nhâm nhi	nhảm nhí	1.3643	11.0642	CO
+nhandang	nhận dạng	nhân dạng	22.8407	2.2633	KHONG
+nhanloi	nhận lời	nhận lỗi	3.3483	0.8095	KHONG
+nhap	nhập	nháp	121.1166	0.5675	KHONG
+nheo	nheo	nhéo	0.3754	0.4784	CO
+nheo	nheo	nhẽo	0.3754	0.3776	CO
+nhieu	nhiều	nhiêu	1620.4434	5.5935	KHONG
+nhieu	nhiều	nhiễu	1620.4434	8.6138	KHONG
+nhin	nhìn	nhịn	589.1306	3.7743	KHONG
+nhip	nhịp	nhíp	37.9355	1.6609	KHONG
+nhoc	nhóc	nhọc	122.4964	0.5018	KHONG
+nhon	nhọn	nhơn	7.1498	3.9359	KHONG
+nhon	nhọn	nhộn	7.1498	0.7215	KHONG
+nhon	nhọn	nhờn	7.1498	4.6208	KHONG
+nhoi	nhồi	nhói	11.4411	0.8432	KHONG
+nhom	nhôm	nhom	228.8735	0.4486	KHONG
+nhong	nhộng	nhông	2.3966	0.5444	KHONG
+nhot	nhốt	nhọt	23.1401	1.0885	KHONG
+nhot	nhốt	nhột	23.1401	1.7700	KHONG
+nhot	nhốt	nhớt	23.1401	13.8509	KHONG
+nhung	nhung	nhũng	9.7978	1.0723	KHONG
+nhung	nhung	nhưng	9.7978	2335.1722	CO
+nhung	nhung	những	9.7978	3482.1643	CO
+nhuom	nhuộm	nhuốm	35.1924	1.1754	KHONG
+nhuthe	như thế	như thể	229.9063	23.9410	KHONG
+nhuy	như ý	nhuỵ	2.3342	0.3031	KHONG
+nhuy	như ý	nhụy	2.3342	0.3031	KHONG
+nhuong	nhường	nhượng	5.3351	4.7814	KHONG
+nieu	niêu	niệu	0.2585	1.6234	CO
+noilen	nói lên	nổi lên	6.6773	6.1260	KHONG
+nong	nóng	nong	299.7421	4.6541	KHONG
+nong	nóng	nòng	299.7421	3.4192	KHONG
+nong	nóng	nông	299.7421	5.5774	KHONG
+nong	nóng	nồng	299.7421	1.3311	KHONG
+noithat	nội thất	nói thật	92.8738	28.6275	KHONG
+noilong	nới lỏng	nỗi lòng	3.2659	0.3381	KHONG
+nuot	nuốt	nuột	17.3230	0.5021	KHONG
+nuocda	nước đá	nước da	2.8251	0.5963	KHONG
+nuong	nướng	nương	49.8887	1.1935	KHONG
+ongtho	ong thợ	ống thở	0.2537	1.1154	CO
+onganh	óng ánh	ông anh	0.5043	5.4380	CO
+oliu	ô liu	ôliu	4.5021	1.1927	KHONG
+ongxa	ông xã	ống xả	1.8762	5.5630	CO
+phale	pha lê	phá lệ	10.9345	0.4405	KHONG
+phai	phai	phái	5.3784	15.7214	CO
+phanung	phản ứng	phần ứng	86.6523	2.5324	KHONG
+phandoan	phán đoán	phân đoạn	3.6060	8.7820	CO
+phancong	phân công	phản công	2.5775	3.2172	CO
+phanloai	phân loại	phân loài	32.3460	0.3437	KHONG
+phankhoi	phấn khởi	phân khối	2.1943	0.4014	KHONG
+phay	phẩy	phay	0.7657	13.8325	CO
+phicong	phi công	phí công	17.8046	0.5895	KHONG
+phien	phiên	phiến	25.1642	5.7012	KHONG
+phinh	phình	phỉnh	2.5356	0.5242	KHONG
+phongbi	phong bì	phòng bị	11.5156	1.0978	KHONG
+phongthu	phong thư	phòng thủ	0.2969	14.1975	CO
+phong	phòng	phong	658.4215	33.9330	KHONG
+phong	phòng	phóng	658.4215	33.8537	KHONG
+phong	phòng	phông	658.4215	1.6741	KHONG
+phong	phòng	phỏng	658.4215	2.6172	KHONG
+phong	phòng	phồng	658.4215	5.0598	KHONG
+phongan	phòng ăn	phong ấn	4.8485	1.7861	KHONG
+phongngu	phòng ngủ	phòng ngự	47.4658	1.4784	KHONG
+phoi	phổi	phoi	27.1007	0.4353	KHONG
+phoi	phổi	phôi	27.1007	12.9135	KHONG
+phoi	phổi	phối	27.1007	2.4848	KHONG
+phudau	phù dâu	phủ đầu	1.9570	0.4981	KHONG
+phuc	phúc	phục	9.5121	9.4107	KHONG
+phuc	phúc	phức	9.5121	0.7749	KHONG
+phun	phun	phún	158.9246	1.4793	KHONG
+phut	phút	phụt	311.6728	0.3008	KHONG
+phuong	phượng	phương	4.6913	34.7752	CO
+phuong	phượng	phường	4.6913	20.5866	CO
+quatang	quà tặng	quả tang	54.9594	1.6850	KHONG
+quacau	quả cầu	qua cầu	10.4128	1.0704	KHONG
+quakho	quả khô	quá khổ	0.7319	2.5126	CO
+quata	quả tạ	quá ta	0.3744	0.5167	CO
+quai	quai	quái	3.1068	124.2524	CO
+quang	quăng	quang	8.5727	80.7941	CO
+quang	quăng	quàng	8.5727	0.7846	KHONG
+quang	quăng	quãng	8.5727	11.1100	CO
+quang	quăng	quầng	8.5727	1.4372	KHONG
+quang	quăng	quẳng	8.5727	3.9372	KHONG
+quang	quăng	quặng	8.5727	9.7477	CO
+quay	quầy	quay	27.5518	249.8957	CO
+quay	quầy	quày	27.5518	1.3606	KHONG
+quay	quầy	quây	27.5518	2.3553	KHONG
+quay	quầy	quấy	27.5518	0.7734	KHONG
+quay	quầy	quẩy	27.5518	2.7501	KHONG
+quay	quầy	quẫy	27.5518	0.4459	KHONG
+quay	quầy	quậy	27.5518	6.4069	KHONG
+quet	quét	quẹt	44.6985	1.6732	KHONG
+quen	quên	quen	186.1752	57.2093	KHONG
+quen	quên	quèn	186.1752	1.2531	KHONG
+quyen	quyển	quyên	23.7201	2.2766	KHONG
+quyen	quyển	quyến	23.7201	15.3833	KHONG
+quyen	quyển	quyền	23.7201	215.2012	CO
+ramat	ra mắt	ra mặt	24.5835	3.1063	KHONG
+rach	rách	rạch	11.3590	10.2130	KHONG
+ranh	rãnh	ranh	29.1689	6.0717	KHONG
+ranh	rãnh	rảnh	29.1689	10.5383	KHONG
+rang	răng	rang	70.8950	8.9951	KHONG
+rang	răng	ràng	70.8950	1.7335	KHONG
+rang	răng	ráng	70.8950	7.2675	KHONG
+rang	răng	rạng	70.8950	1.2427	KHONG
+rang	răng	rằng	70.8950	909.9366	CO
+rang	răng	rặng	70.8950	1.9414	KHONG
+rangcua	răng cửa	răng cưa	0.6296	2.1444	CO
+rong	rồng	rong	53.0001	10.9401	KHONG
+rong	rồng	ròng	53.0001	4.4259	KHONG
+rong	rồng	rông	53.0001	0.7276	KHONG
+rong	rồng	rống	53.0001	0.7907	KHONG
+rong	rồng	rỗng	53.0001	22.3744	KHONG
+rong	rồng	rộng	53.0001	91.0231	CO
+rungdong	rung động	rúng động	11.0764	0.4533	KHONG
+ruoi	ruồi	rưới	10.6678	0.3884	KHONG
+ruoi	ruồi	rưỡi	10.6678	13.7931	CO
+ruong	ruộng	rương	2.0840	4.3765	CO
+ruot	ruột	rượt	25.0269	2.3883	KHONG
+rung	rừng	rung	70.9668	49.8050	KHONG
+rung	rừng	rụng	70.9668	10.6995	KHONG
+sach	sách	sạch	152.1622	170.1883	CO
+sang	sàng	sang	14.0359	166.0476	CO
+sang	sàng	sảng	14.0359	0.5342	KHONG
+sanh	sảnh	sanh	15.4936	6.4821	KHONG
+sanh	sảnh	sánh	15.4936	3.8071	KHONG
+saphang	sạp hàng	sắp hàng	0.0604	0.8718	CO
+sanday	sắn dây	sán dây	0.0300	1.0473	CO
+sanga	sân ga	sa ngã	1.6967	1.0632	KHONG
+sinh	sinh	sình	82.5490	0.4201	KHONG
+sole	so le	số lẻ	0.2660	0.3656	CO
+soda	soda	sô đa	9.2322	0.3485	KHONG
+song	sông	song	62.8253	30.9609	KHONG
+song	sông	sòng	62.8253	4.7482	KHONG
+song	sông	sóng	62.8253	62.0505	KHONG
+song	sông	sống	62.8253	530.0767	CO
+song	sông	sổng	62.8253	0.5133	KHONG
+soso	sờ sờ	sơ sơ	0.4292	0.4942	CO
+suoi	suối	sưởi	14.8991	37.5745	CO
+suachua	sữa chua	sửa chữa	5.8551	75.2647	CO
+sungso	sững sờ	sừng sỏ	0.5569	0.3664	KHONG
+suong	sương	suông	8.8173	0.9321	KHONG
+suong	sương	sướng	8.8173	16.4612	CO
+tainghe	tai nghe	tài nghệ	18.8676	0.5521	KHONG
+taihoa	tài hoa	tai hoạ	0.7480	4.4176	CO
+taihoa	tài hoa	tai họa	0.7480	4.4176	CO
+tanh	tạnh	tanh	0.6408	1.9249	CO
+tanh	tạnh	tánh	0.6408	1.7938	CO
+tamdiem	tâm điểm	tam điểm	2.0328	0.6511	KHONG
+tamtinh	tâm tình	tâm tính	0.7448	0.3123	KHONG
+tantinh	tận tình	tân tinh	3.2808	0.3266	KHONG
+thach	thạch	thách	10.5452	6.1453	KHONG
+thai	thái	thai	55.6496	86.5416	CO
+thai	thái	thải	55.6496	41.2310	KHONG
+tham	thảm	tham	32.5195	7.7188	KHONG
+tham	thảm	thám	32.5195	2.8503	KHONG
+tham	thảm	thâm	32.5195	18.4995	KHONG
+tham	thảm	thăm	32.5195	85.9084	CO
+tham	thảm	thấm	32.5195	107.3308	CO
+tham	thảm	thầm	32.5195	1.6224	KHONG
+tham	thảm	thẩm	32.5195	6.7219	KHONG
+tham	thảm	thẫm	32.5195	1.1645	KHONG
+tham	thảm	thậm	32.5195	1.4565	KHONG
+tham	thảm	thắm	32.5195	0.6409	KHONG
+tham	thảm	thẳm	32.5195	0.6206	KHONG
+than	than	thân	71.5495	64.1458	KHONG
+than	than	thăn	71.5495	0.8297	KHONG
+than	than	thần	71.5495	129.9289	CO
+than	than	thận	71.5495	27.5458	KHONG
+thang	thang	tháng	42.5267	504.8469	CO
+thang	thang	thăng	42.5267	6.6974	KHONG
+thang	thang	thắng	42.5267	109.9278	CO
+thang	thang	thằng	42.5267	338.0124	CO
+thang	thang	thẳng	42.5267	78.4738	CO
+thao	tháo	thao	30.3262	11.6130	KHONG
+thao	tháo	thạo	30.3262	1.3048	KHONG
+thao	tháo	thảo	30.3262	27.7825	KHONG
+thap	tháp	thấp	69.0469	319.4630	CO
+thap	tháp	thập	69.0469	5.7942	KHONG
+thau	thau	thâu	1.4285	1.9073	CO
+thau	thau	thấu	1.4285	2.5848	CO
+thau	thau	thầu	1.4285	7.0626	CO
+thamthiet	thắm thiết	thảm thiết	0.4347	0.3348	KHONG
+thanthe	thân thể	thân thế	9.8484	0.5163	KHONG
+that	thật	thất	940.0845	7.8169	KHONG
+thattinh	thật tình	thất tình	5.2161	0.8148	KHONG
+thay	thầy	thay	99.6692	83.8881	KHONG
+thay	thầy	thày	99.6692	1.3237	KHONG
+thay	thầy	thây	99.6692	1.5556	KHONG
+thay	thầy	thảy	99.6692	4.0241	KHONG
+theo	theo	thẹo	971.0761	1.0949	KHONG
+theo	theo	thẻo	971.0761	0.3272	KHONG
+theoduoi	theo đuổi	theo đuôi	21.9058	2.3456	KHONG
+theluc	thể lực	thế lực	1.9855	4.8710	CO
+thenao	thế nào	thể nào	474.6543	4.6954	KHONG
+them	thềm	thêm	1.5280	593.6322	CO
+thitham	thì thầm	thịt hầm	5.7038	1.0796	KHONG
+thitruong	thị trường	thị trưởng	239.1276	16.6561	KHONG
+thia	thìa	thia	5.2090	0.5054	KHONG
+thientai	thiên tài	thiên tai	18.7540	4.7701	KHONG
+thiep	thiệp	thiếp	8.2291	17.2937	CO
+thiet	thiệt	thiết	28.7364	20.0995	KHONG
+thieu	thiếu	thiêu	102.6701	24.0715	KHONG
+thieu	thiếu	thiểu	102.6701	0.8645	KHONG
+thinh	thính	thinh	1.1419	3.7350	CO
+thinh	thính	thỉnh	1.1419	0.9728	KHONG
+thinh	thính	thịnh	1.1419	3.5855	CO
+thoa	thoa	thoả	4.8849	3.1439	KHONG
+thoa	thoa	thỏa	4.8849	3.1439	KHONG
+thoat	thoát	thoạt	80.2158	1.0439	KHONG
+thoc	thóc	thọc	2.4085	2.8046	CO
+thongdong	thong dong	thông đồng	0.2100	1.4412	CO
+thoi	thổi	thoi	64.6238	9.5061	KHONG
+thoi	thổi	thói	64.6238	2.7280	KHONG
+thoi	thổi	thôi	64.6238	1317.3522	CO
+thoi	thổi	thơi	64.6238	0.4316	KHONG
+thoi	thổi	thỏi	64.6238	3.7714	KHONG
+thoi	thổi	thối	64.6238	11.1218	KHONG
+thoi	thổi	thời	64.6238	46.5663	KHONG
+thon	thôn	thon	3.6450	3.8247	CO
+thon	thôn	thốn	3.6450	0.8032	KHONG
+thon	thôn	thộn	3.6450	1.0637	KHONG
+thong	thông	thống	47.7393	6.5313	KHONG
+thot	thớt	thọt	1.7172	0.3743	KHONG
+thot	thớt	thốt	1.7172	2.2490	CO
+thuhoi	thu hồi	thử hỏi	13.5836	0.6975	KHONG
+thua	thua	thừa	50.5896	17.7720	KHONG
+thua	thua	thửa	50.5896	0.5073	KHONG
+thuan	thuần	thụ án	5.1334	0.4155	KHONG
+thue	thuê	thuế	90.9628	56.2086	KHONG
+thung	thùng	thung	98.0630	1.7240	KHONG
+thung	thùng	thủng	98.0630	7.2857	KHONG
+thung	thùng	thừng	98.0630	11.0822	KHONG
+thuyen	thuyền	thuyên	90.3038	0.9832	KHONG
+thuthai	thư thái	thụ thai	1.8433	2.6655	CO
+thuloi	thứ lỗi	thu lôi	25.3871	0.3283	KHONG
+thutu	thứ tư	thư từ	21.1146	4.7055	KHONG
+thuc	thức	thúc	44.5733	5.1890	KHONG
+thuc	thức	thục	44.5733	0.6020	KHONG
+thuc	thức	thực	44.5733	58.1543	CO
+thucday	thức dậy	thúc đẩy	20.5225	46.0080	CO
+thuong	thưởng	thường	38.6803	269.6698	CO
+thuong	thưởng	thượng	38.6803	42.1015	CO
+tich	tích	tịch	8.0342	1.3006	KHONG
+tiec	tiệc	tiếc	66.8647	80.2117	CO
+tieman	tiềm ẩn	tiệm ăn	6.0399	0.5578	KHONG
+tiem	tiệm	tiêm	25.8429	66.6554	CO
+tiem	tiệm	tiềm	25.8429	0.4542	KHONG
+tienphong	tiên phong	tiền phong	11.6214	0.3064	KHONG
+tienphong	tiên phong	tiền phòng	11.6214	1.3667	KHONG
+tien	tiền	tiên	578.0401	33.7867	KHONG
+tien	tiền	tiến	578.0401	81.3274	KHONG
+tien	tiền	tiễn	578.0401	7.2685	KHONG
+tien	tiền	tiện	578.0401	15.2519	KHONG
+tiencong	tiền công	tiến công	1.4972	1.3918	KHONG
+tienle	tiền lẻ	tiền lệ	2.2466	1.7476	KHONG
+tienluong	tiền lương	tiên lượng	6.8801	1.1479	KHONG
+tiendo	tiến độ	tiền đồ	9.3358	0.3855	KHONG
+tiep	tiếp	tiệp	101.8303	1.0919	KHONG
+tiepvien	tiếp viên	tiếp viện	4.3511	3.6177	KHONG
+tiet	tiết	tiệt	13.5022	1.1819	KHONG
+tieude	tiêu đề	tiểu đệ	20.0324	0.4080	KHONG
+tieuthu	tiêu thụ	tiểu thư	48.6492	16.6964	KHONG
+tinhtinh	tinh tinh	tính tình	2.7972	0.8353	KHONG
+tinhtu	tình tứ	tinh tú	0.1870	0.3998	CO
+tinhchat	tính chất	tinh chất	26.7854	3.5420	KHONG
+tivi	tivi	ti vi	8.6207	2.0966	KHONG
+tove	tỏ vẻ	tô vẽ	1.8319	0.3857	KHONG
+toan	toán	toan	12.4626	4.4204	KHONG
+toan	toán	toàn	12.4626	189.5799	CO
+toang	toang	toáng	0.2173	0.5425	CO
+toitan	tối tân	tồi tàn	2.2573	1.8167	KHONG
+tong	tổng	tong	120.6049	4.6769	KHONG
+tong	tổng	tòng	120.6049	0.4379	KHONG
+tong	tổng	tông	120.6049	21.3128	KHONG
+tong	tổng	tọng	120.6049	0.5088	KHONG
+tong	tổng	tống	120.6049	12.3761	KHONG
+tralai	trả lại	trả lãi	37.2183	0.4678	KHONG
+trai	trái	trai	101.8981	64.2039	KHONG
+trai	trái	trãi	101.8981	1.9241	KHONG
+trai	trái	trại	101.8981	39.3688	KHONG
+trai	trái	trải	101.8981	23.8059	KHONG
+tram	trạm	tram	82.8323	6.8746	KHONG
+tram	trạm	tràm	82.8323	2.3088	KHONG
+tram	trạm	trám	82.8323	2.9697	KHONG
+tram	trạm	trăm	82.8323	44.6285	KHONG
+tram	trạm	trảm	82.8323	0.6399	KHONG
+tram	trạm	trầm	82.8323	3.5013	KHONG
+tram	trạm	trẫm	82.8323	2.9722	KHONG
+tran	trán	tran	6.3923	22.4243	CO
+tran	trán	tràn	6.3923	19.3968	CO
+tran	trán	trân	6.3923	3.0613	KHONG
+tran	trán	trăn	6.3923	2.3242	KHONG
+tran	trán	trấn	6.3923	4.8640	KHONG
+tran	trán	trần	6.3923	76.4562	CO
+tran	trán	trận	6.3923	105.0767	CO
+trangtrai	trang trại	trang trải	22.4632	2.8078	KHONG
+trangtrong	trang trọng	trắng trong	2.5557	1.3949	KHONG
+tranh	tranh	tránh	30.3387	212.1405	CO
+trao	trao	trào	42.4125	3.8776	KHONG
+trao	trao	tráo	42.4125	1.3532	KHONG
+trang	trăng	trang	10.0265	635.0969	CO
+trang	trăng	tràng	10.0265	3.9995	KHONG
+trang	trăng	tráng	10.0265	29.8205	CO
+trang	trăng	trạng	10.0265	0.9745	KHONG
+trang	trăng	trảng	10.0265	0.4697	KHONG
+trang	trăng	trắng	10.0265	257.7944	CO
+trangtron	trăng tròn	trắng trợn	2.2583	1.0757	KHONG
+trau	trâu	trau	5.2782	0.3440	KHONG
+trau	trâu	trấu	5.2782	3.0666	KHONG
+treo	treo	trèo	82.8250	11.9080	KHONG
+treo	treo	trẹo	82.8250	0.4538	KHONG
+trieu	triệu	triêu	148.9643	0.4489	KHONG
+trieu	triệu	triều	148.9643	13.7674	KHONG
+trinhdien	trình diễn	trình diện	18.3330	2.9144	KHONG
+tron	tròn	tron	60.0156	4.6782	KHONG
+tron	tròn	trôn	60.0156	0.3278	KHONG
+tron	tròn	trơn	60.0156	14.1197	KHONG
+tron	tròn	trọn	60.0156	6.9729	KHONG
+tron	tròn	trốn	60.0156	61.1344	CO
+tron	tròn	trộn	60.0156	96.9115	CO
+tron	tròn	trợn	60.0156	0.4234	KHONG
+trongtai	trọng tài	trọng tải	33.2505	2.7272	KHONG
+trong	trống	trong	60.0949	5114.0513	CO
+trong	trống	tròng	60.0949	4.7973	KHONG
+trong	trống	trông	60.0949	218.1747	CO
+trong	trống	trọng	60.0949	11.3871	KHONG
+trong	trống	trỏng	60.0949	0.4226	KHONG
+trong	trống	trồng	60.0949	39.7345	KHONG
+troi	trời	troi	131.6432	1.5846	KHONG
+troi	trời	trói	131.6432	20.7605	KHONG
+troi	trời	trôi	131.6432	12.0465	KHONG
+troi	trời	trối	131.6432	1.2282	KHONG
+troi	trời	trồi	131.6432	1.2588	KHONG
+troi	trời	trỗi	131.6432	0.5039	KHONG
+troi	trời	trội	131.6432	19.1288	KHONG
+troidat	trời đất	trôi dạt	13.0124	2.0351	KHONG
+truc	trúc	trục	12.9484	114.2305	CO
+truc	trúc	trực	12.9484	9.6363	KHONG
+trui	trụi	trui	2.5371	0.4883	KHONG
+trung	trứng	trung	59.4994	912.4625	CO
+trung	trứng	trùng	59.4994	29.8797	KHONG
+trung	trứng	trúng	59.4994	32.0806	KHONG
+trung	trứng	trũng	59.4994	1.1690	KHONG
+trung	trứng	trưng	59.4994	2.9638	KHONG
+trung	trứng	trừng	59.4994	0.8778	KHONG
+truong	trường	truồng	247.8419	0.3645	KHONG
+truong	trường	trương	247.8419	10.5370	KHONG
+truong	trường	trướng	247.8419	0.4710	KHONG
+truong	trường	trưởng	247.8419	65.8330	KHONG
+truong	trường	trượng	247.8419	4.0120	KHONG
+truongthanh	trưởng thành	trường thành	65.2241	1.2379	KHONG
+tuan	tuần	tuân	212.4558	19.6680	KHONG
+tuan	tuần	tuấn	212.4558	4.9305	KHONG
+tuantu	tuần tự	tuấn tú	1.2455	0.3236	KHONG
+tung	tung	tùng	29.4150	8.3666	KHONG
+tung	tung	tưng	29.4150	1.3044	KHONG
+tung	tung	tụng	29.4150	0.4239	KHONG
+tung	tung	từng	29.4150	412.0690	CO
+tuoitho	tuổi thơ	tuổi thọ	3.7073	44.8372	CO
+tuoitre	tuổi trẻ	tươi trẻ	7.2896	1.2588	KHONG
+tuon	tuôn	tuồn	3.6453	1.1903	KHONG
+tuot	tuột	tuốt	4.0914	2.6822	KHONG
+tuyen	tuyển	tuyên	14.5362	3.9431	KHONG
+tuyen	tuyển	tuyền	14.5362	2.3093	KHONG
+tuyet	tuyết	tuyệt	39.8684	240.7543	CO
+tugia	từ giã	tư gia	0.4693	0.6558	CO
+tuton	từ tốn	tự tôn	0.4201	0.6013	CO
+tudo	tự do	từ đó	118.5064	34.0357	KHONG
+tuhoi	tự hỏi	tụ hội	35.2147	0.3262	KHONG
+tuoi	tươi	tuổi	49.3139	226.8182	CO
+tuongtu	tương tự	tương tư	92.0276	0.3260	KHONG
+tuong	tường	tuồng	206.2680	0.3848	KHONG
+tuong	tường	tương	206.2680	8.3784	KHONG
+tuong	tường	tướng	206.2680	19.0943	KHONG
+tuong	tường	tưởng	206.2680	114.6695	KHONG
+tuong	tường	tượng	206.2680	21.6359	KHONG
+uong	uống	uổng	225.5904	0.6445	KHONG
+uong	uống	ương	225.5904	0.6194	KHONG
+vantho	vạn thọ	vần thơ	0.8460	0.4672	KHONG
+vang	vàng	vang	267.3538	12.5074	KHONG
+vang	vàng	váng	267.3538	0.5106	KHONG
+vang	vàng	vâng	267.3538	450.5187	CO
+vang	vàng	vãng	267.3538	0.4414	KHONG
+vang	vàng	văng	267.3538	5.3800	KHONG
+vang	vàng	vầng	267.3538	1.2581	KHONG
+vang	vàng	vắng	267.3538	3.3444	KHONG
+vatva	vất vả	vật vã	11.0295	0.6071	KHONG
+vien	viền	viên	8.9630	261.3915	CO
+vien	viền	viễn	8.9630	2.7280	KHONG
+vien	viền	viện	8.9630	49.6035	CO
+vinh	vịnh	vinh	24.8682	22.2736	KHONG
+vong	vòng	vong	164.5432	2.8605	KHONG
+vong	vòng	vọng	164.5432	2.5211	KHONG
+vobo	vô bổ	vô bờ	0.5142	0.3552	KHONG
+voco	vô cớ	vô cơ	1.4229	4.2890	CO
+vove	vỗ về	vo ve	0.4049	0.6150	CO
+vove	vỗ về	vò vẽ	0.4049	0.9889	CO
+vungvay	vùng vẫy	vung vẩy	0.8011	0.4517	KHONG
+vung	vũng	vùng	3.1471	121.2486	CO
+vung	vũng	vụng	3.1471	4.0516	CO
+vung	vũng	vừng	3.1471	1.7694	KHONG
+vung	vũng	vững	3.1471	4.8232	CO
+vuon	vườn	vươn	65.5205	6.3787	KHONG
+vuon	vườn	vượn	65.5205	1.1951	KHONG
+vuot	vượt	vuốt	50.8974	7.9782	KHONG
+vuot	vượt	vuột	50.8974	1.4322	KHONG
+vuotqua	vượt qua	vượt quá	78.4528	23.8117	KHONG
+xaxi	xa xỉ	xá xị	2.7857	0.3099	KHONG
+xahoi	xã hội	xả hơi	121.0432	1.5018	KHONG
+xeng	xẻng	xèng	4.2642	0.9533	KHONG
+xephang	xếp hàng	xếp hạng	8.2945	37.2795	CO
+xoay	xoay	xoáy	54.3216	13.6736	KHONG
+xong	xong	xông	189.2296	20.6925	KHONG
+xong	xong	xổng	189.2296	1.2631	KHONG
+xuan	xuân	xử án	20.6411	1.3175	KHONG
+xung	xứng	xung	6.5758	29.4085	CO
+xung	xứng	xưng	6.5758	1.8820	KHONG
+xuong	xương	xuống	56.3727	525.3359	CO
+xuong	xương	xưởng	56.3727	24.7461	KHONG

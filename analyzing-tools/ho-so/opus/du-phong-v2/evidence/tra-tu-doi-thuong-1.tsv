@@ -1,0 +1,286 @@
+tu	khoa	so_chu	noi_co_mat	trung_khoa	sub_sach	web_sach
+trà sữa	trasua	6	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		23	484
+bánh bao	banhbao	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		142	656
+bánh cuốn	banhcuon	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		6	82
+bánh xèo	banhxeo	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		20	137
+bánh tráng	banhtrang	9	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		12	291
+bánh kem	banhkem	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		112	364
+bánh tét	banhtet	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	24
+bánh giò	banhgio	7	CHINH|XEP_HANG:OK/CHINH|P1:A:CHO_P2:H8: OPUS=0.034590 PPM <0,1; Leipzig=1 <2; Tatoeba=0 <1; cần hai phiếu ngoại lệ|P4:O=OK/-,A=OK/-		1	6
+phở bò	phobo	5	CHUA_TUNG_VAO_RO			-
+bún chả	buncha	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	37
+bún bò	bunbo	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1	60
+bún riêu	bunrieu	7	CHINH|XEP_HANG:OK/CHINH|P1:BS:QUA_P2:|P4:O=OK/-,A=OK/-		0	10
+cơm tấm	comtam	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	32
+cơm chiên	comchien	8	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		15	163
+cơm rang	comrang	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2	30
+xôi gà	xoiga	5	CHUA_TUNG_VAO_RO			-
+sữa chua	suachua	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		95	1340
+sữa tươi	suatuoi	7	P1:O:QUA_P2:		22	382
+nước mía	nuocmia	7	CHUA_TUNG_VAO_RO			-
+nước cam	nuoccam	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		92	311
+nước dừa	nuocdua	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		9	229
+sinh tố	sinhto	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		55	3521
+kem que	kemque	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		9	14
+kẹo mút	keomut	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		32	30
+kẹo dẻo	keodeo	6	CHUA_TUNG_VAO_RO			-
+bỏng ngô	bongngo	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		62	144
+hạt điều	hatdieu	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		4	991
+hạt dẻ	hatde	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		115	758
+đậu phụ	dauphu	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		28	525
+giò lụa	giolua	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	2
+chả lụa	chalua	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:CHO_P2:H8: OPUS=0.094645 PPM <0,1; Leipzig=1 <2; Tatoeba=0 <1; cần hai phiếu ngoại lệ|P4:O=OK/-,A=OK/-		1	24
+nem rán	nemran	6	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		0	12
+thịt kho	thitkho	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		2	24
+cá kho	cakho	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	36
+canh chua	canhchua	8	CHUA_TUNG_VAO_RO			-
+mì tôm	mitom	5	CHUA_TUNG_VAO_RO			-
+mì gói	migoi	5	CHUA_TUNG_VAO_RO			-
+mứt dừa	mutdua	6	CHUA_TUNG_VAO_RO			-
+ô mai	omai	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		7	15
+tào phớ	taopho	6	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		0	3
+sữa đậu nành	suadaunanh	10	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		30	522
+trà xanh	traxanh	7	CHINH|XEP_HANG:OK/CHINH|P1:BS:QUA_P2:|P4:O=OK/-,A=OK/-		32	1516
+nước ngọt	nuocngot	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		116	1270
+nước suối	nuocsuoi	8	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		15	428
+nước lọc	nuocloc	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		64	677
+tủ lạnh	tulanh	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		417	7438
+máy giặt	maygiat	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		89	6605
+nồi cơm điện	noicomdien	10	CHINH|XEP_HANG:OK/CHINH|LO:l2-ung-vien.tsv			-
+lò vi sóng	lovisong	8	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		56	2818
+quạt trần	quattran	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		4	550
+quạt máy	quatmay	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2	145
+máy lạnh	maylanh	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		59	2713
+bàn ủi	banui	5	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		12	382
+bàn là	banla	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		32	319
+giẻ lau	gielau	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		22	44
+xô nước	xonuoc	6	CHUA_TUNG_VAO_RO			-
+chậu rửa	chaurua	7	CHUA_TUNG_VAO_RO			-
+bồn tắm	bontam	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		320	7976
+vòi nước	voinuoc	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		102	1490
+bình nước	binhnuoc	8	CHUA_TUNG_VAO_RO			-
+ấm đun	amdun	5	CHUA_TUNG_VAO_RO			-
+cốc nước	cocnuoc	7	CHUA_TUNG_VAO_RO			-
+ly nước	lynuoc	6	CHUA_TUNG_VAO_RO			-
+muỗng	muong	5	CHUA_TUNG_VAO_RO	CHINH:mương		-
+thớt	thot	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		59	257
+chảo	chao	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		184	2043
+khăn mặt	khanmat	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		6	402
+khăn tắm	khantam	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		106	1345
+bàn chải	banchai	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		148	8051
+kem đánh răng	kemdanhrang	11	CHINH|XEP_HANG:OK/CHINH|P1:BS:QUA_P2:|P4:O=OK/-,A=OK/-		58	853
+dầu gội	daugoi	6	CHUA_TUNG_VAO_RO	CHINH:đầu gối		-
+xà phòng	xaphong	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		181	3894
+xà bông	xabong	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		51	318
+nước hoa	nuochoa	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		300	3729
+gối ôm	goiom	5	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		4	14
+chăn bông	chanbong	8	CHUA_TUNG_VAO_RO			-
+ga giường	gagiuong	8	CHUA_TUNG_VAO_RO			-
+nệm	nem	3	CHUA_TUNG_VAO_RO			-
+rèm cửa	remcua	6	CHUA_TUNG_VAO_RO			-
+thảm	tham	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		642	6943
+đèn ngủ	denngu	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		10	198
+ổ cắm	ocam	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		23	7236
+dây điện	daydien	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		96	5266
+bóng đèn	bongden	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		164	5293
+điện thoại	dienthoai	9	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		8052	77785
+máy tính	maytinh	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2030	57415
+máy tính bảng	maytinhbang	11	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+bàn phím	banphim	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		59	7560
+màn hình	manhinh	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		624	71420
+tai nghe	tainghe	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		128	5096
+máy in	mayin	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		48	27958
+máy ảnh	mayanh	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		243	11629
+mật khẩu	matkhau	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		329	12282
+tin nhắn	tinnhan	7	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		1809	15218
+cuộc gọi	cuocgoi	7	CHUA_TUNG_VAO_RO			-
+trò chơi	trochoi	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2538	63756
+lướt web	luotweb	7	CHUA_TUNG_VAO_RO			-
+tải về	taive	5	CHUA_TUNG_VAO_RO			-
+sao lưu	saoluu	6	CHUA_TUNG_VAO_RO			-
+đám mây	dammay	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		305	5966
+xe máy	xemay	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		161	7907
+xe đạp	xedap	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		469	14984
+xe hơi	xehoi	5	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		445	11732
+xe khách	xekhach	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		4	416
+xe tải	xetai	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1398	21436
+máy bay	maybay	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		5423	15560
+sân bay	sanbay	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1361	14942
+nhà ga	nhaga	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		436	1934
+vé tàu	vetau	5	CHUA_TUNG_VAO_RO			-
+ga tàu	gatau	5	CHUA_TUNG_VAO_RO			-
+xe cứu hỏa	xecuuhoa	8	CHUA_TUNG_VAO_RO			-
+thang máy	thangmay	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		926	13023
+cầu thang	cauthang	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		827	3854
+bãi đỗ xe	baidoxe	7	CHUA_TUNG_VAO_RO			-
+trạm xăng	tramxang	8	CHUA_TUNG_VAO_RO			-
+cây xăng	cayxang	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		27	26
+siêu thị	sieuthi	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		267	6008
+công viên	congvien	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1142	12643
+vườn thú	vuonthu	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		48	400
+thư viện	thuvien	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		738	7302
+bảo tàng	baotang	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		784	6081
+nhà hàng	nhahang	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1115	15990
+quán ăn	quanan	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		157	569
+khách sạn	khachsan	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2534	49747
+trường học	truonghoc	9	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		683	8934
+lớp học	lophoc	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		438	6701
+sân trường	santruong	9	CHUA_TUNG_VAO_RO			-
+sân chơi	sanchoi	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		136	2594
+rạp phim	rapphim	7	CHUA_TUNG_VAO_RO			-
+bưu điện	buudien	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		191	1733
+tiệm bánh	tiembanh	8	CHUA_TUNG_VAO_RO			-
+tiệm tóc	tiemtoc	7	CHUA_TUNG_VAO_RO			-
+hiệu sách	hieusach	8	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		59	133
+nhà sách	nhasach	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		8	166
+quảng trường	quangtruong	11	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		345	2529
+bãi biển	baibien	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		764	12095
+hồ bơi	hoboi	5	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+bể bơi	beboi	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		199	5089
+sân vận động	sanvandong	10	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		98	2277
+thác nước	thacnuoc	8	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+hồ nước	honuoc	6	CHUA_TUNG_VAO_RO			-
+bờ biển	bobien	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		852	2668
+sa mạc	samac	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		980	1292
+rừng rậm	rungram	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		107	168
+đồi núi	doinui	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		27	214
+thung lũng	thunglung	9	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		761	1616
+cánh đồng	canhdong	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		405	850
+ruộng lúa	ruonglua	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		4	83
+bầu trời	bautroi	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		889	2033
+mây trắng	maytrang	8	P1:O:QUA_P2:|P4:O=X/H3,A=OK/-		3	46
+mưa phùn	muaphun	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2	181
+tuyết rơi	tuyetroi	8	CHUA_TUNG_VAO_RO			-
+gió mát	giomat	6	CHUA_TUNG_VAO_RO			-
+hoàng hôn	hoanghon	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		288	1346
+bình minh	binhminh	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		592	961
+trăng tròn	trangtron	9	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		133	96
+sao băng	saobang	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		82	70
+cây xanh	cayxanh	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		18	990
+lá cây	lacay	5	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+hoa hồng	hoahong	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		406	6409
+hoa sen	hoasen	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		67	4664
+hoa mai	hoamai	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		3	81
+hoa cúc	hoacuc	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		82	912
+hoa lan	hoalan	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		42	333
+hướng dương	huongduong	10	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		29	1324
+cây dừa	caydua	6	CHUA_TUNG_VAO_RO			-
+cây tre	caytre	6	CHUA_TUNG_VAO_RO			-
+cây thông	caythong	8	CHUA_TUNG_VAO_RO			-
+rau muống	raumuong	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	42
+rau cải	raucai	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		33	99
+cà chua	cachua	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		278	3416
+cà rốt	carot	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		191	1853
+khoai tây	khoaitay	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		605	3844
+khoai lang	khoailang	9	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		39	600
+dưa hấu	duahau	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		57	1108
+xoài	xoai	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		36	954
+chuối	chuoi	5	P1:O:QUA_P2:|P4:O=OK/-,A=K/K2		390	1800
+quýt	quyt	4	P1:O:QUA_P2:|P4:O=OK/-,A=V/H5c		30	237
+nho	nho	3	CHUA_TUNG_VAO_RO			-
+táo	tao	3	CHUA_TUNG_VAO_RO			-
+mận	man	3	CHUA_TUNG_VAO_RO			-
+vải thiều	vaithieu	8	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		0	35
+nhãn	nhan	4	CHINH|XEP_HANG:OK/CHINH|P1:BS:QUA_P2:|P4:O=OK/-,A=OK/-		326	21567
+chôm chôm	chomchom	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2	65
+sầu riêng	saurieng	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		3	144
+mít	mit	3	CHUA_TUNG_VAO_RO			-
+dứa	dua	3	CHUA_TUNG_VAO_RO			-
+đu đủ	dudu	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		24	278
+thanh long	thanhlong	9	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		52	580
+măng cụt	mangcut	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	69
+mèo con	meocon	6	CHUA_TUNG_VAO_RO			-
+chó con	chocon	6	CHUA_TUNG_VAO_RO			-
+cún con	cuncon	6	CHUA_TUNG_VAO_RO			-
+gà con	gacon	5	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		55	3036
+vịt con	vitcon	6	CHUA_TUNG_VAO_RO			-
+con bò	conbo	5	CHUA_TUNG_VAO_RO			-
+con trâu	contrau	7	CHUA_TUNG_VAO_RO			-
+con ngựa	conngua	7	P1:O:QUA_P2:|P4:O=X/H3,A=X/H3		1618	1119
+con heo	conheo	6	P1:O:QUA_P2:|P4:O=X/H3,A=X/H3		377	70
+con dê	conde	5	CHUA_TUNG_VAO_RO			-
+con cừu	concuu	6	CHUA_TUNG_VAO_RO			-
+con thỏ	contho	6	CHUA_TUNG_VAO_RO			-
+con voi	convoi	6	CHUA_TUNG_VAO_RO			-
+con hổ	conho	5	CHUA_TUNG_VAO_RO			-
+sư tử	sutu	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		823	948
+con khỉ	conkhi	6	CHUA_TUNG_VAO_RO			-
+con gấu	congau	6	CHUA_TUNG_VAO_RO			-
+gấu trúc	gautruc	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		285	345
+con cáo	concao	6	CHUA_TUNG_VAO_RO			-
+hươu cao cổ	huoucaoco	9	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		42	83
+ngựa vằn	nguavan	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		64	100
+chim sẻ	chimse	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		62	128
+chim cánh cụt	chimcanhcut	11	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		371	485
+cá heo	caheo	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		199	353
+cá voi	cavoi	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		518	355
+cá mập	camap	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		576	619
+rùa biển	ruabien	7	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		33	73
+ốc sên	ocsen	5	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		80	101
+ong mật	ongmat	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		19	79
+chuồn chuồn	chuonchuon	10	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		31	80
+châu chấu	chauchau	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		57	74
+dế mèn	demen	5	CHINH|XEP_HANG:OK/CHINH|P1:BS:QUA_P2:|P4:O=OK/-,A=OK/-		1	9
+đom đóm	domdom	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		64	103
+bút bi	butbi	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		9	212
+bút chì	butchi	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		137	3204
+thước kẻ	thuocke	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		10	83
+cục tẩy	cuctay	6	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		3	34
+cặp sách	capsach	7	P1:O:QUA_P2:		49	28
+ba lô	balo	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		158	3815
+sách giáo khoa	sachgiaokhoa	12	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		45	556
+bảng đen	bangden	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		11	173
+phấn trắng	phantrang	9	CHUA_TUNG_VAO_RO			-
+hồ dán	hodan	5	CHUA_TUNG_VAO_RO			-
+giấy màu	giaymau	7	CHUA_TUNG_VAO_RO			-
+bài tập	baitap	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		335	4234
+điểm số	diemso	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		107	1427
+học kỳ	hocky	5	P1:BS:LOAI_P2:H5b: học kì; tỷ lệ dạng kia 18.6% ≥5%, tổng hai dạng ≥0,5 PPM		94	907
+kỳ thi	kythi	5	CHUA_TUNG_VAO_RO			-
+giờ học	giohoc	6	CHUA_TUNG_VAO_RO			-
+giờ ra chơi	giorachoi	9	CHUA_TUNG_VAO_RO			-
+áo khoác	aokhoac	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		936	7514
+áo len	aolen	5	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		151	2369
+áo phông	aophong	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		50	1112
+áo thun	aothun	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		79	3350
+quần đùi	quandui	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		68	288
+váy	vay	3	CHUA_TUNG_VAO_RO			-
+giày dép	giaydep	7	LO:l2-ung-vien.tsv			-
+giày thể thao	giaythethao	11	CHUA_TUNG_VAO_RO			-
+tất	tat	3	CHUA_TUNG_VAO_RO			-
+mũ len	mulen	5	CHINH|XEP_HANG:OK/CHINH|P1:BS:QUA_P2:|P4:O=OK/-,A=OK/-		5	86
+khăn quàng	khanquang	9	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		75	422
+găng tay	gangtay	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		307	13056
+kính râm	kinhram	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		61	326
+đồng hồ	dongho	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2220	20573
+vòng tay	vongtay	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		276	2147
+nhẫn	nhan	4	P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-	CHINH:nhãn	2561	6415
+dây chuyền	daychuyen	9	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		327	30504
+bông tai	bongtai	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		65	2486
+túi xách	tuixach	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		213	7085
+ví tiền	vitien	6	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+nấu ăn	nauan	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		580	7246
+đi bộ	dibo	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1287	12254
+chạy bộ	chaybo	6	CHUA_TUNG_VAO_RO			-
+bơi lội	boiloi	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		85	948
+leo núi	leonui	6	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		172	2202
+đạp xe	dapxe	5	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+cắm trại	camtrai	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		407	2244
+câu cá	cauca	5	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+du lịch	dulich	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		938	42515
+chụp ảnh	chupanh	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		642	4217
+ca hát	cahat	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		89	262
+nhảy múa	nhaymua	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		303	1400
+vẽ tranh	vetranh	7	CHUA_TUNG_VAO_RO			-
+đọc sách	docsach	7	CHUA_TUNG_VAO_RO			-
+xem phim	xemphim	7	CHUA_TUNG_VAO_RO			-
+nghe nhạc	nghenhac	8	CHUA_TUNG_VAO_RO			-
+chơi cờ	choico	6	CHUA_TUNG_VAO_RO			-
+ngủ trưa	ngutrua	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		62	73
+tắm biển	tambien	7	CHUA_TUNG_VAO_RO			-
+dạo phố	daopho	6	CHUA_TUNG_VAO_RO			-
+mua sắm	muasam	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		463	14541
+dọn dẹp	dondep	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1139	1875
+giặt giũ	giatgiu	7	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		50	77
+rửa bát	ruabat	6	CHUA_TUNG_VAO_RO			-
+tưới cây	tuoicay	7	CHUA_TUNG_VAO_RO			-

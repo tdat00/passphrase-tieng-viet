@@ -1,0 +1,143 @@
+tu	khoa	so_chu	noi_co_mat	trung_khoa	sub_sach	web_sach
+bàn học	banhoc	6	CHUA_TUNG_VAO_RO	CHINH:bạn học		-
+ghế đá	gheda	5	CHUA_TUNG_VAO_RO			-
+tủ quần áo	tuquanao	8	CHUA_TUNG_VAO_RO			-
+tủ sách	tusach	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		10	179
+kệ sách	kesach	6	CHUA_TUNG_VAO_RO			-
+giá sách	giasach	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		20	112
+móc áo	mocao	5	CHUA_TUNG_VAO_RO			-
+mắc áo	macao	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		7	48
+dây phơi	dayphoi	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		2	40
+kẹp phơi	kepphoi	7	CHUA_TUNG_VAO_RO			-
+ống hút	onghut	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		58	1333
+nắp chai	napchai	7	CHUA_TUNG_VAO_RO			-
+vỏ chai	vochai	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		14	30
+hộp sữa	hopsua	6	CHUA_TUNG_VAO_RO			-
+hộp cơm	hopcom	6	CHUA_TUNG_VAO_RO			-
+cặp lồng	caplong	7	CHUA_TUNG_VAO_RO			-
+bình giữ nhiệt	binhgiunhiet	12	CHUA_TUNG_VAO_RO			-
+quạt nan	quatnan	7	XEP_HANG:R1/-|P1:A:QUA_P2:|P4:O=R1/-,A=OK/-		0	1
+quạt giấy	quatgiay	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1	23
+đèn pin	denpin	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		126	2756
+đèn lồng	denlong	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		74	839
+nến thơm	nenthom	7	CHUA_TUNG_VAO_RO			-
+khăn giấy	khangiay	8	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+bông gòn	bonggon	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		20	125
+tăm bông	tambong	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		10	243
+kim chỉ	kimchi	6	CHUA_TUNG_VAO_RO	CHINH:kim chi		-
+cúc áo	cucao	5	CHUA_TUNG_VAO_RO			-
+khóa kéo	khoakeo	7	CHUA_TUNG_VAO_RO			-
+dây kéo	daykeo	6	CHUA_TUNG_VAO_RO			-
+ô dù	odu	3	CHUA_TUNG_VAO_RO			-
+ủng	ung	3	CHUA_TUNG_VAO_RO			-
+dép tổ ong	deptoong	8	CHUA_TUNG_VAO_RO			-
+guốc	guoc	4	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		59	153
+nón lá	nonla	5	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		0	90
+mũ rơm	murom	5	CHUA_TUNG_VAO_RO			-
+son môi	sonmoi	6	CHUA_TUNG_VAO_RO			-
+kẹp tóc	keptoc	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		33	111
+dây buộc tóc	daybuoctoc	10	CHUA_TUNG_VAO_RO			-
+gương soi	guongsoi	8	CHUA_TUNG_VAO_RO			-
+bánh đa	banhda	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	32
+bánh đúc	banhduc	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		0	34
+bánh rán	banhran	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		136	214
+bánh bò	banhbo	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		1	20
+bánh da lợn	banhdalon	9	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		2	4
+bánh khọt	banhkhot	8	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		0	33
+bánh bột lọc	banhbotloc	10	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		0	21
+chè đỗ đen	chedoden	8	CHUA_TUNG_VAO_RO			-
+sữa đặc	suadac	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		3	129
+phô mai	phomai	6	CHUA_TUNG_VAO_RO			-
+xúc xích	xucxich	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		365	1639
+lạp xưởng	lapxuong	8	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		7	28
+thịt nguội	thitnguoi	9	CHUA_TUNG_VAO_RO			-
+trứng ốp la	trungopla	9	CHUA_TUNG_VAO_RO			-
+trứng chiên	trungchien	10	CHUA_TUNG_VAO_RO			-
+trứng luộc	trungluoc	9	CHUA_TUNG_VAO_RO			-
+rau luộc	rauluoc	7	CHUA_TUNG_VAO_RO			-
+dưa muối	duamuoi	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		27	15
+cà pháo	caphao	6	CHINH|XEP_HANG:OK/CHINH|LO:l2-ung-vien.tsv			-
+mắm tôm	mamtom	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2	39
+tương ớt	tuongot	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		20	284
+tương cà	tuongca	7	CHUA_TUNG_VAO_RO			-
+bến phà	benpha	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		65	241
+đò ngang	dongang	7	CHUA_TUNG_VAO_RO	CHINH:đồng áng		-
+cầu treo	cautreo	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		8	160
+đường hầm	duongham	8	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		751	2399
+ngã tư	ngatu	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		135	330
+ngã ba	ngaba	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		30	803
+vỉa hè	viahe	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		110	830
+bến cảng	bencang	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		206	682
+hải đăng	haidang	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		101	324
+trạm dừng	tramdung	8	CHUA_TUNG_VAO_RO			-
+nhà chờ	nhacho	6	CHUA_TUNG_VAO_RO			-
+mưa phùn	muaphun	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		2	181
+sương mù	suongmu	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		272	2400
+sương sớm	suongsom	8	CHUA_TUNG_VAO_RO			-
+nắng sớm	nangsom	7	CHUA_TUNG_VAO_RO			-
+trăng non	trangnon	8	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		19	4
+sao mai	saomai	6	CHUA_TUNG_VAO_RO			-
+sao hôm	saohom	6	CHUA_TUNG_VAO_RO			-
+khe suối	khesuoi	7	CHUA_TUNG_VAO_RO			-
+hang động	hangdong	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		257	1022
+đá cuội	dacuoi	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		41	170
+sỏi đá	soida	5	CHUA_TUNG_VAO_RO			-
+cát trắng	cattrang	8	CHUA_TUNG_VAO_RO			-
+bãi cát	baicat	6	CHUA_TUNG_VAO_RO			-
+sóng biển	songbien	8	CHUA_TUNG_VAO_RO			-
+san hô	sanho	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		138	3692
+rong biển	rongbien	8	CHINH|XEP_HANG:OK/CHINH|LO:l3-ung-vien.tsv			-
+cá vàng	cavang	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		46	140
+cá chép	cachep	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		18	209
+cá rô	caro	4	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		8	158
+cá lóc	caloc	5	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		0	62
+tôm hùm	tomhum	6	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		132	405
+cua đồng	cuadong	7	CHINH|XEP_HANG:OK/CHINH|LO:l2-ung-vien.tsv			-
+ốc bươu	ocbuou	6	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		0	6
+sứa biển	suabien	7	CHUA_TUNG_VAO_RO			-
+sao biển	saobien	7	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		27	87
+hải cẩu	haicau	6	P1:A+O:QUA_P2:|P4:O=OK/-,A=K/K2		172	152
+cú mèo	cumeo	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		10	13
+gõ kiến	gokien	6	CHINH|XEP_HANG:OK/CHINH|P1:O:QUA_P2:|P4:O=OK/-,A=OK/-		12	54
+bồ câu	bocau	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		325	467
+gà trống	gatrong	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		59	692
+gà mái	gamai	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		65	252
+vịt bầu	vitbau	6	CHUA_TUNG_VAO_RO			-
+ngỗng	ngong	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		183	724
+chó cỏ	choco	5	CHUA_TUNG_VAO_RO			-
+thời khóa biểu	thoikhoabieu	12	CHUA_TUNG_VAO_RO			-
+học bạ	hocba	5	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		11	106
+sổ liên lạc	solienlac	9	CHUA_TUNG_VAO_RO			-
+bảng con	bangcon	7	CHUA_TUNG_VAO_RO			-
+bút mực	butmuc	6	CHINH|XEP_HANG:OK/CHINH|P1:A:QUA_P2:|P4:O=OK/-,A=OK/-		10	74
+bút lông	butlong	7	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		7	132
+giấy nháp	giaynhap	8	CHINH|XEP_HANG:OK/CHINH|P1:A+O:QUA_P2:|P4:O=OK/-,A=OK/-		3	36
+vở ô li	vooli	5	CHUA_TUNG_VAO_RO			-
+ê ke	eke	3	CHUA_TUNG_VAO_RO			-
+máy tính bỏ túi	maytinhbotui	12	CHUA_TUNG_VAO_RO			-
+nước mía	nuocmia	7	CHUA_TUNG_VAO_RO			-
+kẹo dẻo	keodeo	6	CHUA_TUNG_VAO_RO			-
+canh chua	canhchua	8	CHUA_TUNG_VAO_RO			-
+mứt dừa	mutdua	6	CHUA_TUNG_VAO_RO			-
+chậu rửa	chaurua	7	CHUA_TUNG_VAO_RO			-
+bình nước	binhnuoc	8	CHUA_TUNG_VAO_RO			-
+chăn bông	chanbong	8	CHUA_TUNG_VAO_RO			-
+ga giường	gagiuong	8	CHUA_TUNG_VAO_RO			-
+rèm cửa	remcua	6	CHUA_TUNG_VAO_RO			-
+cuộc gọi	cuocgoi	7	CHUA_TUNG_VAO_RO			-
+sao lưu	saoluu	6	CHUA_TUNG_VAO_RO			-
+ga tàu	gatau	5	CHUA_TUNG_VAO_RO			-
+trạm xăng	tramxang	8	CHUA_TUNG_VAO_RO			-
+sân trường	santruong	9	CHUA_TUNG_VAO_RO			-
+rạp phim	rapphim	7	CHUA_TUNG_VAO_RO			-
+tiệm bánh	tiembanh	8	CHUA_TUNG_VAO_RO			-
+tiệm tóc	tiemtoc	7	CHUA_TUNG_VAO_RO			-
+giờ ra chơi	giorachoi	9	CHUA_TUNG_VAO_RO			-
+giày thể thao	giaythethao	11	CHUA_TUNG_VAO_RO			-
+chạy bộ	chaybo	6	CHUA_TUNG_VAO_RO			-
+hồ dán	hodan	5	CHUA_TUNG_VAO_RO			-
+giấy màu	giaymau	7	CHUA_TUNG_VAO_RO			-
+phấn trắng	phantrang	9	CHUA_TUNG_VAO_RO			-
+ấm đun	amdun	5	CHUA_TUNG_VAO_RO			-
+xôi gà	xoiga	5	CHUA_TUNG_VAO_RO			-
+phở bò	phobo	5	CHUA_TUNG_VAO_RO			-

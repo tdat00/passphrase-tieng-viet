@@ -1,0 +1,562 @@
+{
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-analysis.md": {
+    "sha256_bytes": "1bf9d34b813f3c865de62723f35838e3cfbde7ed5a46fcf85ce76c0743ae3139",
+    "sha256_LF": "613639b57fa47d15ac60157ffb354f3b93766523d40fe79083cfcc6b25f73bdf",
+    "bytes": 35352,
+    "lines": 374,
+    "CRLF": 374,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-cross-review.md": {
+    "sha256_bytes": "6fd00245cdd7c158036c65f7e240c099754c4e751de3d9791fe27667923aa71b",
+    "sha256_LF": "a02d88be82b2506a883a705e731b23171cf1e980dfc013fffed9dcf4442f1c46",
+    "bytes": 17711,
+    "lines": 190,
+    "CRLF": 190,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md": {
+    "sha256_bytes": "0f7527a2dd2ae719943979fcb11864d542ac3c410333e280fd0c459621f2d3c2",
+    "sha256_LF": "34ebaeafcb13fd8ec337d9efb15fc1d433459894bcda59a374126c297362b7f9",
+    "bytes": 40322,
+    "lines": 431,
+    "CRLF": 431,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\h7-quet-bo-sung.tsv": {
+    "sha256_bytes": "f6368f80bc30775e7a20fc1375c2120347833b99030b87211f28f0a8e817ef26",
+    "sha256_LF": "fddbb3e8d1fe80694df12b1fc4388ee45e36c6ab25dede6ead240dae236145aa",
+    "bytes": 9085,
+    "lines": 149,
+    "CRLF": 149,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\de-xuat-hop-nhat.py": {
+    "sha256_bytes": "3720caac355674ae3074e4c774a944cf5303338a60d3de62725ef4ba2796f3ce",
+    "sha256_LF": "76b785ec03c4a6f195318684222f816578f987776e2229bc62e6975ea678353e",
+    "bytes": 5076,
+    "lines": 82,
+    "CRLF": 82,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\kiem-h8-chinh-thuc.py": {
+    "sha256_bytes": "669a2ec014590f27c2ceee57f7eca5cd87d6d9bcaf746733aeb4b34271f9d7c3",
+    "sha256_LF": "ee7fc4d226c50b625f573c5d59a7db67dcd16cbb2ed5e83006201f7aae097f09",
+    "bytes": 3145,
+    "lines": 68,
+    "CRLF": 68,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\round-1-analysis.md": {
+    "sha256_bytes": "390579a5a270692a438a6ddb43f08cbcb24c35a50997dbf55d5327a977492a05",
+    "sha256_LF": "e8e94240e2c6bafb97f5a7a0a7624cc9bbb208f335bea7a0bed19a315c48cebe",
+    "bytes": 29616,
+    "lines": 277,
+    "CRLF": 277,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\round-1-cross-review.md": {
+    "sha256_bytes": "386c563358664e0d40eb6e4deb7cd203633adfd07312f8f0c5d2689e2d984424",
+    "sha256_LF": "20a3ddabf2ba6d9efdd5f671559959d19d7d67677c7c372cfdfe56edd09602e6",
+    "bytes": 27668,
+    "lines": 187,
+    "CRLF": 187,
+    "BOM": false
+  },
+  "analyzing-tools\\manifest.json": {
+    "sha256_bytes": "a8e6250205688acf52e9feaa8106c044b2da9f393d6bfa367aac2bc9c8c25866",
+    "sha256_LF": "2112d1289bf1135de110e30e4f3202305b59f71b9a43dac15d0fe97c2ee50cff",
+    "bytes": 9771,
+    "lines": 197,
+    "CRLF": 197,
+    "BOM": false
+  },
+  "analyzing-tools\\README.md": {
+    "sha256_bytes": "57c9aefce9f46c1fe6061fb5152d180ad07065d8f1a7a6d0391235f18c3613df",
+    "sha256_LF": "06c0c9a63f2e31cd6c87beb2355be864a48b845224f1aedae8319334f819604c",
+    "bytes": 8699,
+    "lines": 80,
+    "CRLF": 80,
+    "BOM": false
+  },
+  "analyzing-tools\\tieu-chi-thong-nhat.md": {
+    "sha256_bytes": "3d9e25b4d40a39816965479bc513613d4d8f06be1acf4241bfa01a74a2815106",
+    "sha256_LF": "253544fbf08a20302702cfb21c8fee505da488ec8e1dcfd7f7aa4c16b0cda033",
+    "bytes": 63946,
+    "lines": 633,
+    "CRLF": 633,
+    "BOM": false
+  },
+  "analyzing-tools\\check_wordlist.py": {
+    "sha256_bytes": "583559076e46aa8b524999b8cc9aa0e442b85399786b2726b59f807abd6dcc2f",
+    "sha256_LF": "211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb",
+    "bytes": 8419,
+    "lines": 191,
+    "CRLF": 191,
+    "BOM": false
+  },
+  "analyzing-tools\\verify.mjs": {
+    "sha256_bytes": "f9cdbbbd3de34277fdb17da58c3336920ed685ab139b3d5b2032a551dafd6cac",
+    "sha256_LF": "df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90",
+    "bytes": 5073,
+    "lines": 85,
+    "CRLF": 85,
+    "BOM": false
+  },
+  "analyzing-tools\\build_wordlist.py": {
+    "sha256_bytes": "616a231700827f0b67cde8a0c23005f1da7854930c0a4e14c7cc487901f6ea79",
+    "sha256_LF": "67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0",
+    "bytes": 3794,
+    "lines": 82,
+    "CRLF": 82,
+    "BOM": false
+  },
+  "WordListAnalyze.md": {
+    "sha256_bytes": "47bcf0ffb9bd1d22dac5c0b9eb75ae9b5cfa44d1b503183c3db0c199913a2fbd",
+    "sha256_LF": "0a0504e59d22d91795f96406ff55224cf4fde064ec57005b988b837ad6f5c857",
+    "bytes": 780587,
+    "lines": 8863,
+    "CRLF": 8863,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\joint-build.py": {
+    "sha256_bytes": "8b116ce6c1e9b278c0203078fa797b059eaa934416e6e21fda9f04a2380cd362",
+    "sha256_LF": "fae9bd470939496352b274e34b1a08c85f2e1e8d669976d120ed1a24a8d9076e",
+    "bytes": 43860,
+    "lines": 672,
+    "CRLF": 672,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\revision-1-audit.json": {
+    "sha256_bytes": "b44c6338ebc094bd732a88422d9f17c9b221325548718de6f36b3ee12263db91",
+    "sha256_LF": "5fe1e592093365eb9e98af205242c669ee9238461b93d1ccdfcd249e2c83baa5",
+    "bytes": 945,
+    "lines": 31,
+    "CRLF": 31,
+    "BOM": false
+  },
+  "analyzing-tools\\wordlist.txt": {
+    "sha256_bytes": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4",
+    "sha256_LF": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
+    "bytes": 685020,
+    "lines": 7776,
+    "CRLF": 7776,
+    "BOM": false
+  },
+  "analyzing-tools\\du-phong.txt": {
+    "sha256_bytes": "02bc37051b008e5b538113f5710280c5570cbd890049e2635d86fcbefb5221a7",
+    "sha256_LF": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
+    "bytes": 2578,
+    "lines": 205,
+    "CRLF": 205,
+    "BOM": false
+  },
+  "analyzing-tools\\labels.tsv": {
+    "sha256_bytes": "75fcdf0a466f696c47307650113252652f3545ffc8728d0d10a0c1ccbf0bde4e",
+    "sha256_LF": "a5b882a82a4bff853fce938deed94cdb4efa5dc969ff05572a68835a7605369b",
+    "bytes": 456204,
+    "lines": 7982,
+    "CRLF": 7982,
+    "BOM": false
+  },
+  "analyzing-tools\\blocked_keys.tsv": {
+    "sha256_bytes": "f65526bc5bb62c2f4b70400df2862a44d69783347b03eb6b8ce8d5e1e1dbec20",
+    "sha256_LF": "016996d5424cc1ad3cc23903c85ba9c2a6a141b6402549c168c3a4ab90bdc0e8",
+    "bytes": 1728,
+    "lines": 111,
+    "CRLF": 111,
+    "BOM": false
+  },
+  "analyzing-tools\\spelling_families.tsv": {
+    "sha256_bytes": "565fee9d502f62aab4f987cb712d680505c48d51d297393f55225cd4fec792e6",
+    "sha256_LF": "56f0b31d2a84e9f41495937b49949d2e357368739f07ece0cd1187fe25407c98",
+    "bytes": 16655,
+    "lines": 278,
+    "CRLF": 278,
+    "BOM": false
+  },
+  "analyzing-tools\\nguon-goc-giai-nghia.tsv": {
+    "sha256_bytes": "5a730565c19657239acaeced34b8185503d9490fb12e112942ed3e95b84edeab",
+    "sha256_LF": "197df30135d5ee8fa5a8e8ff1dc3a284fce89ad97b9a910b03a280ec2db24b33",
+    "bytes": 1016787,
+    "lines": 7959,
+    "CRLF": 7959,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\xep-hang.tsv": {
+    "sha256_bytes": "5be03ce6000dd8591c9d8974b93710995c33124fdd19c773b5862b919d0a0215",
+    "sha256_LF": "74191a1f1ef4ce01158478219d41fa1c94622e13d95646b475b49ce9ef14168c",
+    "bytes": 761449,
+    "lines": 10134,
+    "CRLF": 10134,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\p6-dau-vao.tsv": {
+    "sha256_bytes": "7f2e7b46a7a5c9aa46b6cadda9c7e1f39f5bc636c425a71f5e15fb7903c019b5",
+    "sha256_LF": "9d464c768b86e078edd17f44cdc6247933a47c2e6abf19747d4c71a35dcb144a",
+    "bytes": 300677,
+    "lines": 9553,
+    "CRLF": 9553,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\opus-counts.tsv": {
+    "sha256_bytes": "4c250ddb19731ad21cc1a878671ef55637c7fc602105c402ef2b669031337036",
+    "sha256_LF": "38591846fb13efec4d2c2ae4a6e01e3414b2367611a8a5596cecd7c08fc550f1",
+    "bytes": 1570916,
+    "lines": 18221,
+    "CRLF": 18221,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\chu-ky.tsv": {
+    "sha256_bytes": "84dcf3e79dc0690c41118c0fd1ca9d6e568217479a402bdaa8fa48b34655baa6",
+    "sha256_LF": "23715db2b49c5c696f9d6fc128f8895ec80323a08a88b85aac45d8e5f51330d2",
+    "bytes": 296190,
+    "lines": 2548,
+    "CRLF": 2548,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\phan-bien.tsv": {
+    "sha256_bytes": "8702d0d47c938abc62487df33884d6f292d158f03782eb5f2419fa28de861ec3",
+    "sha256_LF": "d98cf9a7adfcb0c59256044641519401e3fb0027b6b0f8bd71d45e1364594d37",
+    "bytes": 184744,
+    "lines": 1121,
+    "CRLF": 1121,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\phieu-astra.tsv": {
+    "sha256_bytes": "309fb5988a875a0571c5ef513f54c1e837b286e491f7b5e24985762455d4751c",
+    "sha256_LF": "6e6113f937ef273f8a66f0f9cadf1a4594961facfb72c36ca1bddb4d25abce57",
+    "bytes": 1635245,
+    "lines": 12148,
+    "CRLF": 12148,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\phieu-opus.tsv": {
+    "sha256_bytes": "04a85ef49127c3a7748c42de175321914c45818eb8070c106d9b67e195147e08",
+    "sha256_LF": "87d5eb143b650a62421e3f73f2951e3fc38bd0c84769927f79bcbbced096ceec",
+    "bytes": 1060862,
+    "lines": 12148,
+    "CRLF": 12148,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\p6-khau-tru-cuoi.tsv": {
+    "sha256_bytes": "d7094c29c169e3c15811a721974833564e623fce4aab291dc02e5fbdde55bcfa",
+    "sha256_LF": "0b76fd020cf000f78b421c159b6548b3024862988f57d03ea90f9fdd00f9cb21",
+    "bytes": 5868,
+    "lines": 28,
+    "CRLF": 28,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\p7-khau-tru.tsv": {
+    "sha256_bytes": "47cf7033003a930b333dcaf0dd0d281d8121e8c0af4eaf2cfab881a90ae3115a",
+    "sha256_LF": "24cc4ff26975a108cafaabf876463e8297ee6ebe21e04819558fe12ca67cae37",
+    "bytes": 5313,
+    "lines": 23,
+    "CRLF": 23,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\p7-khau-tru-v2.tsv": {
+    "sha256_bytes": "8ffdc51d0577ec41438d137656d946ea2744bbb7ae7b608c8881cd7dd7ee10c3",
+    "sha256_LF": "ece259b4f5940bca35927ffd46a14909676a89e17ebd733c2dbe595d7e5dd209",
+    "bytes": 633,
+    "lines": 2,
+    "CRLF": 2,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\p7-v3-khau-tru-132-theo-P0-astra.tsv": {
+    "sha256_bytes": "c76bdbe36807f71b268f2d827c5495cc96b56837fe25c13e61a32e4f0b9dd034",
+    "sha256_LF": "9c746d973ecf68ce3927fcfe075528e611e19f57306af3b3b4399507c066a42b",
+    "bytes": 16371,
+    "lines": 133,
+    "CRLF": 133,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\p7-v3-c13-hoa-astra-tu-chua-viet.tsv": {
+    "sha256_bytes": "3607419d3756a74335be1dc1a01ee108d02f15d0a4a730c92d0dcec30b12e912",
+    "sha256_LF": "e33f2b0335416a52dbc67d17df6b1b6f66466cfccd98da0946ccefdbf8b60ec4",
+    "bytes": 963,
+    "lines": 38,
+    "CRLF": 38,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\p7-v4-kiem-ke-D8-chua-chot-astra.tsv": {
+    "sha256_bytes": "a440a8358dea7f76a0de928a664ab01b6cd96ac1e9c9cf579e7b20537c76bea2",
+    "sha256_LF": "9cfd931aa6a144ca1d3ef8423e6a803b7b43b6465c64241a3c69d615d339dfbd",
+    "bytes": 1055766,
+    "lines": 8114,
+    "CRLF": 8114,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l2d-ung-vien.tsv": {
+    "sha256_bytes": "475cd11cb65928cda6e666ab5bea9683994c93610e21f52c35672f0f85c126c4",
+    "sha256_LF": "748c6119b192ae31e126d909e9424085f7bac02ccbeb78f239688d0ac4ebad92",
+    "bytes": 13431,
+    "lines": 100,
+    "CRLF": 100,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l3b-de-cu-opus.tsv": {
+    "sha256_bytes": "65db9bbe96501a9421d9232ebe263d23e721fb7f9a7e31b7ce3b0633675fbf38",
+    "sha256_LF": "5e7e7e55936e1982e825d7b1d33275e76a6b7cf3351b096ff93d1c8d2d689825",
+    "bytes": 2691,
+    "lines": 49,
+    "CRLF": 49,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\tap-luat-P2-v4.json": {
+    "sha256_bytes": "acffd96020b68dff5b6ac8722eacc1a3e9bc8b7203bb61893df044ef81c0d91a",
+    "sha256_LF": "a7a489a6737045f33c3c8e342c944585f4137c964677bd9f872c14ac498a70c8",
+    "bytes": 18750,
+    "lines": 580,
+    "CRLF": 580,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\discussion\\bang-khoa-chung.tsv": {
+    "sha256_bytes": "090d7337b26b7141173679617350f4a5579591ae0e06056f5ef306b110966bec",
+    "sha256_LF": "07195c28834f5bd3ae2c520da1eb60c9c12991c091dd3a259264b5dd9baa03f8",
+    "bytes": 5698927,
+    "lines": 12758,
+    "CRLF": 12758,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l2-ung-vien.tsv": {
+    "sha256_bytes": "da09cae9215a15b39bfbd17e306dab09e68c3a3c7bc07375b8e20eb0ecbdcfb8",
+    "sha256_LF": "c211cafe719c7a4bc42c182f38b9998bd4f7829e60db68119f3874b11f67ac73",
+    "bytes": 53552,
+    "lines": 401,
+    "CRLF": 401,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l2-nhan-sau-H9-opus.tsv": {
+    "sha256_bytes": "d82f31fa4759ebd2b48bbe3667964b553e0f7751ee2db584c8155b6655e1e4ef",
+    "sha256_LF": "bf4306e774c87c6fde950dd0798b776c25ab7fa33e040dfd9aad8e77fc573f67",
+    "bytes": 10972,
+    "lines": 322,
+    "CRLF": 322,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l2b-ung-vien.tsv": {
+    "sha256_bytes": "3eb1a0a6245cd41f70b25754f29524b7c6abd97f75c0c21c2e06035280b35d63",
+    "sha256_LF": "e2513ef312b1644789a0617c562b2c5090990caae79e1eed2e86eaf0585bb3fa",
+    "bytes": 27146,
+    "lines": 201,
+    "CRLF": 201,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l2b-nhan-sau-H9-opus.tsv": {
+    "sha256_bytes": "47b146c8a61ad3964d712d2ff4eef850aa61519830e3a20e6c52c11e4607ba94",
+    "sha256_LF": "404871e5425ffa5e5782c977169ce782844657bb400ba5564fae1377f577ab50",
+    "bytes": 5449,
+    "lines": 149,
+    "CRLF": 149,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l2c-ung-vien.tsv": {
+    "sha256_bytes": "24034ed5e7fce541326d63114ecd092b78f25c4e1533085bfb4cdf17d80538c6",
+    "sha256_LF": "96a5b2178d82a6623ca140a1f496b00b9aade3d9e7e0f9d32f31a602d382de29",
+    "bytes": 13636,
+    "lines": 99,
+    "CRLF": 99,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l2c-nhan-sau-H9-opus.tsv": {
+    "sha256_bytes": "0790e4e601513de214757d2fd0d4a37e1d5c34eda270415f4b08b83a09819645",
+    "sha256_LF": "42be3779823e878a20a201dc8cd126900f4728c812f03996591be20b162a1636",
+    "bytes": 1644,
+    "lines": 52,
+    "CRLF": 52,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l3-ung-vien.tsv": {
+    "sha256_bytes": "9338fda3450d2a4f5e20b444b24ab5c5fa483694b68d97d9862f815c6db7ac0a",
+    "sha256_LF": "692528b7cba732f40be0cd0f14af7466bf1a5d15d2ba867285ee1ab3dd9dc058",
+    "bytes": 16137,
+    "lines": 127,
+    "CRLF": 127,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\l3-nhan-sau-H9-opus.tsv": {
+    "sha256_bytes": "b99e9d0bdd4b76cd347365ae5a6ffb10f521b427d7ddcf7528757c57bf72b216",
+    "sha256_LF": "354a8e476d547de4183604a3e4b45e49a671dbf7da02df37795a7a07baeea4d8",
+    "bytes": 3671,
+    "lines": 112,
+    "CRLF": 112,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\d6-log-v1.tsv": {
+    "sha256_bytes": "205e81062cf26d7acf04d8b66e1a2758aef34ffc87a032fa0e68d9c93dddd830",
+    "sha256_LF": "1e915dd4de9a9330976e5716e7fcdeab8e1b26b87f50ac4f311d38d6093c955f",
+    "bytes": 2904758,
+    "lines": 8077,
+    "CRLF": 8077,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\d6-log-v2.tsv": {
+    "sha256_bytes": "6dac222d8fe2b6de43b5c98d173da0ede44175a19929f98273280ea7572c1ed1",
+    "sha256_LF": "b171975d4c18b1f0ee53b485fbfdcd3ecc7a720db6637cae2bb56df0ff3eade8",
+    "bytes": 880703,
+    "lines": 2502,
+    "CRLF": 2502,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\d6-log-v3.tsv": {
+    "sha256_bytes": "0e7baf8718aff338cecb5aecdd2440ec2f35debad9e57f90e593de887e35ff1e",
+    "sha256_LF": "c943f6d554ef32e9144cec00121ae84825bafe423fae5d11ff3c3d7276b7e59a",
+    "bytes": 225069,
+    "lines": 656,
+    "CRLF": 656,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\d6-log-v4-rieng.tsv": {
+    "sha256_bytes": "e43624d85d1f3a78eb429f073fe870621e17012d3d16f689e8bac8b1179e29fc",
+    "sha256_LF": "097682351f992eaf3e2c11e261ca78c52608b3c6ef5b6cc35f509b6a313cd6ba",
+    "bytes": 456,
+    "lines": 2,
+    "CRLF": 2,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\p7-v4-du-phong-168-co-nghia-cho-duyet.tsv": {
+    "sha256_bytes": "2f85ea443917d1bdb2d13b941308e4825d9b828c5b9e92ccfdab72ebcef5bace",
+    "sha256_LF": "cfb71e703ba12b7f07164a1ff320503d270d649c64c1db0c0c546990c021de65",
+    "bytes": 14423,
+    "lines": 169,
+    "CRLF": 169,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\soat-nghia-astra.tsv": {
+    "sha256_bytes": "3cb1c12feb7c9e88998fac6548c88d9ec20978ad5fe85687c3051b9c0fca6f64",
+    "sha256_LF": "3cff1a33b8c7527b8e3b492f4fd89149bfb468ad82fd192adb8ad7cd82561b8f",
+    "bytes": 449872,
+    "lines": 5698,
+    "CRLF": 5698,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\soat-nghia-opus.tsv": {
+    "sha256_bytes": "e497cd0e48ceb40329b753b74cf99bc5e84542cb896eb1225cdc4815ab0c013a",
+    "sha256_LF": "315ce0afb6cadeafff4696a2d9963ac001040daf4021b63ed934933b196a26e6",
+    "bytes": 180016,
+    "lines": 5840,
+    "CRLF": 5840,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\soat-nghia-v2-astra.tsv": {
+    "sha256_bytes": "ffdda95d9841f213dccd39cc3d845f7c559990427166f3a867166d315aef5a95",
+    "sha256_LF": "7893b17bed94c3ae878d3f9236b669f0c51e8aad12ce8a97d3275a6d5d492d15",
+    "bytes": 124744,
+    "lines": 1756,
+    "CRLF": 1756,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\soat-nghia-v2-opus.tsv": {
+    "sha256_bytes": "0756859adbd83192049ee8e7da91b0b07a7fef866eb2f1faa8704e2e562af19e",
+    "sha256_LF": "e8b63f0099f198ca96838107b9b6c346244e022448c951662441b5fb8b702576",
+    "bytes": 53392,
+    "lines": 1699,
+    "CRLF": 1699,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\soat-nghia-v3-astra.tsv": {
+    "sha256_bytes": "fd37f4ffed9431548c670dfe09d7908a7b709cba87f87f596ef3c61bf2e8e6d6",
+    "sha256_LF": "fcfef9cc35cfd2420a3b6d47859140dae738dc94e816f67776b768607d03f885",
+    "bytes": 38061,
+    "lines": 660,
+    "CRLF": 660,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\soat-nghia-v3-opus.tsv": {
+    "sha256_bytes": "b9c1a58807b6adfb9707faf710e455fcb5d69b1c4b5187c9b31aeb793f15ec1e",
+    "sha256_LF": "84af987d6a58aad78b08f8fc13f932b63a9c3a7b7bda1c22c9f3e07b02793be0",
+    "bytes": 11770,
+    "lines": 384,
+    "CRLF": 384,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\soat-nghia-v3-opus-bo-sung.tsv": {
+    "sha256_bytes": "12fb44238878615f1429dd45ba744f416f5467b2750e1dd759c971a474619a7f",
+    "sha256_LF": "b84c5eea3b8600576c6774e6b02ed38f17d546a926241e4f44c3ef5de4538e2d",
+    "bytes": 1088,
+    "lines": 38,
+    "CRLF": 38,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\cong-opus-v4.tsv": {
+    "sha256_bytes": "6166a3ae082d5d0eb4841aead2a79d1ee0ebc93ed502e34ae86554a71f18b29e",
+    "sha256_LF": "1d25a283c483ed389d23ab93e4c165d6b58f0fcd6ac26b7e41533a6f9d7d8eb9",
+    "bytes": 5215537,
+    "lines": 120205,
+    "CRLF": 120205,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\cong-astra-v4.tsv": {
+    "sha256_bytes": "cdc966778ab59109c97dc84d0393b72fc4d9e5697387aec6a8c2377d28efca97",
+    "sha256_LF": "4b376fbec21177738419994f17f36747e336a3799daa1ac40574a6c546ebb068",
+    "bytes": 4534957,
+    "lines": 120205,
+    "CRLF": 120205,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\du-phong-205-bac-sau-soat-cheo-opus.tsv": {
+    "sha256_bytes": "b504f39c0a5896c2f906c0afedc47e082b384b44a13a4c6dcd812d83ecf9309a",
+    "sha256_LF": "5063399bdedca7daa969fe631077147e6de4164593cfc1079b02920d5ed29e30",
+    "bytes": 12261,
+    "lines": 206,
+    "CRLF": 206,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\cross-review-reserve-diff.tsv": {
+    "sha256_bytes": "68c71f99869f18f4fc42112cb21b4087bb408683e57f717ed665ae317b42f764",
+    "sha256_LF": "8b842f903f6566333590719dfd69f5a0a113ac092cc45611ec0dc4c58837af46",
+    "bytes": 93917,
+    "lines": 206,
+    "CRLF": 206,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\du-phong-phan-loai.tsv": {
+    "sha256_bytes": "75ce49fc41c9d46f1c8b115e4b1ba78006ebf799f3aa3dbe3dba909b21635b12",
+    "sha256_LF": "9bae7cdd024c8d84574d866ab8c89b9b15d36b0b2879edefceaeeda019e3203a",
+    "bytes": 404825,
+    "lines": 206,
+    "CRLF": 206,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\de-cu-hop-nhat-de-xuat-opus.tsv": {
+    "sha256_bytes": "9ba3dc48d32a471bd38031716d71d0a9152933d392ddb3eecda3cff5bd0f8d2c",
+    "sha256_LF": "e786ebf0e6b2501b408184202624cadfa024d89b8b3e2d03ab4ae142b16c36bd",
+    "bytes": 13291,
+    "lines": 285,
+    "CRLF": 285,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\de-cu-them-opus.tsv": {
+    "sha256_bytes": "f5ffddd654ad5595da045f44d07124380c0a954c53cad23e1e0fac80f541aad9",
+    "sha256_LF": "43ab955d2ad7dfa749c431dcdc16966971738738785a5a13efdbcd5e40a06e7a",
+    "bytes": 117129,
+    "lines": 263,
+    "CRLF": 263,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\cross-review-honorable-diff.tsv": {
+    "sha256_bytes": "3ad01415889f69baca0a1c2ccbb926fc402c2e570ecd3ba227dc22d9d74411a6",
+    "sha256_LF": "c91995782eec877ee59f016012cf6ccaa49c63c04eae0b9a599acd938538af80",
+    "bytes": 104648,
+    "lines": 310,
+    "CRLF": 310,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\revision-1-chu-ky-astra.tsv": {
+    "sha256_bytes": "8a1933e69006af5eb3b6145c42b99bbef8f0bb2293ba1b131dcef66b80a2d279",
+    "sha256_LF": "cc8a1d96d4d85c830d5fb4ff361fc8247d61df9547bb25ff9eba71139c441daa",
+    "bytes": 1548,
+    "lines": 3,
+    "CRLF": 3,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\revision-1-h7-ngoaitru.tsv": {
+    "sha256_bytes": "4a958df261b8b86e6e0c88ecb82ff5c3f3c51ee9f6f1fd9802ab057c072e4668",
+    "sha256_LF": "ebc8e158d7cd31fed10d081005be3b810f2a6415189477fab810652695485125",
+    "bytes": 918,
+    "lines": 2,
+    "CRLF": 2,
+    "BOM": false
+  }
+}

@@ -1,0 +1,101 @@
+=== native_python
+argv=["C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe", "-X", "utf8", "-B", "Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\check_wordlist.py"]
+exit=1
+Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+Số khối: 1: 480, 2: 7033, 3: 263
+Độ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39
+Lớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776
+LỖI | C1: wordlist.txt phải dùng LF và có LF cuối
+Tổng: 1 lỗi, 0 cảnh báo.
+
+
+=== native_node
+argv=["node", "Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\verify.mjs"]
+exit=1
+Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+LỖI | C1: wordlist.txt phải là UTF-8 không BOM, LF, có LF cuối
+LỖI | C8: thong-tin.html không khớp wordlist.txt
+LỖI | C8: mục 10 của WordListAnalyze.md không khớp wordlist.txt
+Tổng: 3 lỗi.
+
+
+=== build_check
+argv=["C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe", "-X", "utf8", "-B", "Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py", "--check"]
+exit=0
+Ba khối khớp wordlist.txt.
+
+
+=== preview_python_canonical_LF
+argv=["C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe", "-X", "utf8", "-B", "-c", "\nimport json,pathlib,runpy,sys\np=json.load(sys.stdin); root=pathlib.Path.cwd(); rb=pathlib.Path.read_bytes; rt=pathlib.Path.read_text\ndef b(path):return p['wordlist'].encode('utf-8') if path.resolve()==root/'analyzing-tools'/'wordlist.txt' else rb(path)\ndef t(path,*args,**kw):return p['doc'].replace('\\r\\n','\\n') if path.resolve()==root/'WordListAnalyze.md' else rt(path,*args,**kw)\npathlib.Path.read_bytes=b;pathlib.Path.read_text=t\nrunpy.run_path(str(root/'analyzing-tools'/'check_wordlist.py'),run_name='__main__')\n"]
+exit=0
+Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+Số khối: 1: 480, 2: 7033, 3: 263
+Độ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39
+Lớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776
+Tổng: 0 lỗi, 0 cảnh báo.
+
+
+=== preview_node_canonical_LF
+argv=["node", "--input-type=module", "-e", "\nimport fs from 'node:fs';import path from 'node:path';import {pathToFileURL} from 'node:url';\nconst native=fs.readFileSync,p=JSON.parse(native(0,'utf8')),root=process.cwd();\nfs.readFileSync=function(file,opt){\n if(typeof file==='string'){\n  const f=path.resolve(file).toLowerCase();let s;\n  if(f===path.join(root,'analyzing-tools','wordlist.txt').toLowerCase())s=p.wordlist;\n  if(f===path.join(root,'WordListAnalyze.md').toLowerCase())s=p.doc;\n  if(s!==undefined){const enc=typeof opt==='string'?opt:opt?.encoding;return enc?s:Buffer.from(s,'utf8');}\n }\n return native.apply(this,arguments);\n};\nawait import(pathToFileURL(path.join(root,'analyzing-tools','verify.mjs')).href);\n"]
+exit=0
+Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+Tổng: 0 lỗi.
+
+
+=== build_edited_document_CRLF
+argv=["C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe", "-X", "utf8", "-B", "-c", "\nimport json,pathlib,runpy,sys\np=json.load(sys.stdin);root=pathlib.Path.cwd();rt=pathlib.Path.read_text\ndef t(path,*args,**kw):\n if path.resolve()==root/'WordListAnalyze.md':\n  return p['doc'] if kw.get('newline')=='' else p['doc'].replace('\\r\\n','\\n')\n return rt(path,*args,**kw)\npathlib.Path.read_text=t\nscript=root/'analyzing-tools'/'build_wordlist.py';sys.argv=[str(script),'--check']\nrunpy.run_path(str(script),run_name='__main__')\n"]
+exit=0
+Ba khối khớp wordlist.txt.
+
+
+=== build_LF_baseline_known_limit
+argv=["C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe", "-X", "utf8", "-B", "-c", "\nimport json,pathlib,runpy,sys\np=json.load(sys.stdin);root=pathlib.Path.cwd();rt=pathlib.Path.read_text\ndef t(path,*args,**kw):\n value=p['doc'] if path.resolve()==root/'WordListAnalyze.md' else rt(path,*args,**kw)\n if path.resolve() in {root/'index.html',root/'thong-tin.html',root/'WordListAnalyze.md'}:\n  return value.replace('\\r\\n','\\n')\n return value\npathlib.Path.read_text=t\nscript=root/'analyzing-tools'/'build_wordlist.py';sys.argv=[str(script),'--check']\nrunpy.run_path(str(script),run_name='__main__')\n"]
+exit=1
+
+Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+    runpy.run_path(str(script),run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 294, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "Q:\tmp\passphrase-tieng-viet\analyzing-tools\build_wordlist.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "Q:\tmp\passphrase-tieng-viet\analyzing-tools\build_wordlist.py", line 70, in main
+    for name, (old, new) in build(read_list()).items():
+                            ~~~~~^^^^^^^^^^^^^
+  File "Q:\tmp\passphrase-tieng-viet\analyzing-tools\build_wordlist.py", line 44, in build
+    out[name] = (text, splice(text, SCRIPT_OPEN, "</script>", "".join(l + "\r\n" for l in lines), "\r\n"))
+                       ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "Q:\tmp\passphrase-tieng-viet\analyzing-tools\build_wordlist.py", line 34, in splice
+    start = text.index(nl, start) + len(nl)
+            ~~~~~~~~~~^^^^^^^^^^^
+ValueError: substring not found
+
+=== build_LF_edited_known_limit
+argv=["C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe", "-X", "utf8", "-B", "-c", "\nimport json,pathlib,runpy,sys\np=json.load(sys.stdin);root=pathlib.Path.cwd();rt=pathlib.Path.read_text\ndef t(path,*args,**kw):\n value=p['doc'] if path.resolve()==root/'WordListAnalyze.md' else rt(path,*args,**kw)\n if path.resolve() in {root/'index.html',root/'thong-tin.html',root/'WordListAnalyze.md'}:\n  return value.replace('\\r\\n','\\n')\n return value\npathlib.Path.read_text=t\nscript=root/'analyzing-tools'/'build_wordlist.py';sys.argv=[str(script),'--check']\nrunpy.run_path(str(script),run_name='__main__')\n"]
+exit=1
+
+Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+    runpy.run_path(str(script),run_name='__main__')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 294, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "Q:\tmp\passphrase-tieng-viet\analyzing-tools\build_wordlist.py", line 82, in <module>
+    main()
+    ~~~~^^
+  File "Q:\tmp\passphrase-tieng-viet\analyzing-tools\build_wordlist.py", line 70, in main
+    for name, (old, new) in build(read_list()).items():
+                            ~~~~~^^^^^^^^^^^^^
+  File "Q:\tmp\passphrase-tieng-viet\analyzing-tools\build_wordlist.py", line 44, in build
+    out[name] = (text, splice(text, SCRIPT_OPEN, "</script>", "".join(l + "\r\n" for l in lines), "\r\n"))
+                       ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "Q:\tmp\passphrase-tieng-viet\analyzing-tools\build_wordlist.py", line 34, in splice
+    start = text.index(nl, start) + len(nl)
+            ~~~~~~~~~~^^^^^^^^^^^
+ValueError: substring not found
+
+Mô phỏng nằm trong bộ nhớ; không ghi bản sao glossary hoặc sửa vùng bảo vệ.

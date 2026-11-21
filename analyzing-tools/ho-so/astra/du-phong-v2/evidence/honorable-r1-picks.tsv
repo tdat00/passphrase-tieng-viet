@@ -1,0 +1,74 @@
+tu	chu_de	ly_do_de_cu
+lập trình	tin_hoc	Quen với người học máy tính; giữ R1, không suy nhãn OK từ số đếm.
+thống kê	hoc_tap	Có ngữ cảnh học đường và công việc phổ biến; giữ R1.
+vi tính	tin_hoc	Thuật ngữ gần đời sống, dữ liệu tần suất mạnh; giữ R1.
+chỉ số	hoc_tap	Khái niệm dùng trong nhiều việc thường ngày; giữ R1.
+nguyên tử	khoa_hoc	Kiến thức phổ thông; không đồng nhất nguyên mục với vũ khí.
+nguyên tố	khoa_hoc	Kiến thức học đường; không phải tổ hợp tự do.
+hữu cơ	khoa_hoc	Gần sinh hoạt và kiến thức phổ thông; giữ R1.
+trích dẫn	hoc_tap	Quen trong học và đọc; giữ R1 dù tần suất cao.
+tích hợp	cong_nghe	Ngữ cảnh thiết bị và công việc phổ biến; vẫn thiên chuyên môn.
+biên dịch	ngon_ngu_tin_hoc	Có ngữ cảnh nghề nghiệp lành; cần nghĩa sạch sau này, giữ R1.
+sinh thái	khoa_hoc	Chủ đề thiên nhiên phổ thông; giữ R1.
+biên tập	ngon_ngu	Hoạt động nghề nghiệp lành, có chứng liệu mạnh.
+giả thuyết	hoc_tap	Khái niệm học tập quen; không gán nghĩa dối trá từ tiếng giả.
+thiên văn	khoa_hoc	Chủ đề khoa học lành, gần nhóm thiên thể được giữ.
+viễn thông	cong_nghe	Gần đời sống công nghệ; vẫn giữ R1 chuyên môn.
+kiểm chứng	hoc_tap	Hoạt động học tập và suy luận lành; giữ R1.
+hiệu suất	khoa_hoc	Khái niệm học đường có chứng liệu mạnh.
+tần số	khoa_hoc	Khái niệm thường gặp trong thiết bị và học tập.
+tối ưu	cong_nghe	Từ nghề nghiệp có số đếm mạnh; không tự nâng thành OK.
+mã nguồn	tin_hoc	Thuật ngữ tin học cụ thể về nội dung phần mềm; giữ R1.
+hợp chất	khoa_hoc	Kiến thức phổ thông, không phải tên chất nguy hiểm riêng.
+chuyên viên	nghe_nghiep	Tên vai trò nghề nghiệp chung, không tên riêng hay chức quyền nhà nước tự thân.
+tinh thể	khoa_hoc	Gợi vật rõ, chủ đề khoa học lành.
+xí nghiệp	nghe_nghiep	Tên cơ sở làm việc chung; giữ nhãn R1 lịch sử.
+biên tập viên	nghe_nghiep	Tên người theo nghề cố định ba khối, không cụm tự do.
+khí quyển	khoa_hoc	Kiến thức tự nhiên phổ thông, không thuộc thảm họa tự thân.
+hợp kim	khoa_hoc	Vật liệu quen trong đồ dùng, có chứng liệu mạnh.
+phi hành đoàn	nghe_nghiep	Tên nhóm người cố định ba khối; không mặc định hoạt động quân sự.
+dương cầm	am_nhac	Đồ vật âm nhạc gợi hình; khác từ đồng nghĩa không phải khác cách viết.
+nhà sử học	nghe_nghiep	Tên nghề cố định ba khối, không phải tên ngành ghép hàng loạt.
+piano	am_nhac	Tên nhạc cụ có họ chính tả đã qua H5; vẫn giữ R1.
+luận văn	hoc_tap	Đối tượng học tập quen, giữ R1.
+học giả	nghe_nghiep	Danh từ chung về người, không tên riêng.
+đại lục	thien_nhien	Khái niệm địa lý, không địa danh riêng.
+thương gia	nghe_nghiep	Tên nghề chung có chứng liệu, không đồng nhất thương mại với cờ bạc.
+thắng cảnh	thien_nhien	Gợi cảnh vật, không tên riêng.
+bản ghi	cong_nghe	Đối tượng thông tin lành, giữ R1.
+hợp xướng	am_nhac	Chủ đề biểu diễn âm nhạc, không nghi lễ tự thân.
+y phục	sinh_hoat	Đồ dùng quen nhưng cách gọi thiên văn viết, giữ R1.
+tường lửa	tin_hoc	Thuật ngữ thiết bị/phần mềm; không suy thảm họa từ một tiếng.
+phòng ban	nghe_nghiep	Tổ chức nơi làm việc thường ngày, không quyền lực nhà nước tự thân.
+luận án	hoc_tap	Đối tượng học tập, giữ R1 vì phạm vi dùng.
+diễn giả	nghe_nghiep	Tên vai trò chung có chứng liệu mạnh.
+bảng tuần hoàn	khoa_hoc	Tên đối tượng học tập cố định ba khối, dài đúng mười hai chữ.
+máy thu thanh	cong_nghe	Tên thiết bị cố định ba khối, có chứng cứ từ vựng trong hồ sơ.
+biến áp	cong_nghe	Thiết bị điện gợi hình; giữ R1 chuyên môn.
+dịch giả	nghe_nghiep	Tên nghề chung, không suy bệnh từ tiếng dịch.
+hương liệu	sinh_hoat	Đối tượng vật liệu thường ngày; khóa toàn mục khác khóa bị chặn huong.
+chân đế	cong_nghe	Bộ phận đồ vật dễ hình dung, giữ R1 theo hồ sơ.
+khí cầu	cong_nghe	Đồ vật gợi hình, không quân sự tự thân.
+duyên hải	thien_nhien	Khái niệm địa lý chung, không tên riêng.
+nhật báo	ngon_ngu	Đối tượng đọc thông thường, không tự đồng nhất với chính trị.
+vĩ cầm	am_nhac	Tên nhạc cụ, vẫn giữ nhãn R1 cách gọi.
+biên kịch	nghe_nghiep	Vai trò hoặc hoạt động nghề nghiệp lành.
+lớp phủ	cong_nghe	Khái niệm vật liệu dễ hình dung, giữ R1.
+điện trở	cong_nghe	Kiến thức và linh kiện điện phổ thông, giữ R1.
+tụ điện	cong_nghe	Linh kiện có thể hình dung, không dùng như thuật ngữ y khoa.
+tặng phẩm	sinh_hoat	Đồ vật làm quà, không mặc định nguyên mục là lễ vật tôn giáo.
+tân sinh viên	hoc_tap	Tên nhóm người cố định ba khối, gần đời sống học đường.
+văn bằng	hoc_tap	Đối tượng học tập/nghề nghiệp chung, giữ R1.
+bác học	hoc_tap	Danh từ chung hoặc tính chất học thuật, không tên riêng.
+vận tải	nghe_nghiep	Hoạt động nghề nghiệp lành, giữ R1 theo hồ sơ.
+ấn bản	ngon_ngu	Đối tượng sách báo, giữ R1 văn viết.
+băng tải	cong_nghe	Thiết bị gợi hình trong sản xuất, không nhạy cảm tự thân.
+tiểu luận	hoc_tap	Đối tượng học tập có chứng liệu, giữ R1.
+thiên thể	khoa_hoc	Danh từ chung khoa học, cùng nguyên tắc giữ thiên thể của chủ.
+tiền sảnh	sinh_hoat	Không gian sinh hoạt gợi hình, giữ R1 cách gọi.
+lò nung	cong_nghe	Thiết bị sản xuất, không suy vũ khí hoặc thảm họa.
+trầm tích	thien_nhien	Kiến thức tự nhiên, không bệnh hoặc chất thải.
+mạch nha	thuc_pham	Nguyên liệu thực phẩm; không mặc định nguyên mục là rượu bia.
+trợ giảng	nghe_nghiep	Vai trò học đường chung có chứng liệu.
+tự truyện	ngon_ngu	Thể loại tác phẩm, không cần tên riêng.
+thổ cẩm	sinh_hoat	Vật liệu/sản phẩm dệt; không phải từ chỉ danh tính dân tộc.

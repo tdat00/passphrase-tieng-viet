@@ -1,0 +1,100 @@
+{
+  "base_commit": "cefb99386d4845e40bc2d3eabc7d6898d078305d",
+  "reserve_rows": 205,
+  "reserve_common_tiers": {
+    "A": 148,
+    "C": 15,
+    "B": 36,
+    "D": 6
+  },
+  "reserve_tier_disputes": [],
+  "reserve_any_disputes": 0,
+  "reserve_h8": {
+    "MANH": 198,
+    "KHONG_LUOT": 1,
+    "CHI_BE_MAT": 2,
+    "YEU": 4
+  },
+  "reserve_glosses": {
+    "CO_PASS_LICH_SU": 168,
+    "CHUA_VIET": 37
+  },
+  "hm_rows": 285,
+  "hm_groups": {
+    "D6_CUOI": 122,
+    "L3B_CHUA_CHAM": 46,
+    "R1": 107,
+    "D7_CUOI": 10
+  },
+  "hm_joint_states": {
+    "CUNG_DE_CU_CHUA_PHAT_HANH": 237,
+    "NGOAI_HM_CHUA_THAM_DINH": 46,
+    "LOAI_K1": 1,
+    "NGOAI_HM_CHO_H5": 1
+  },
+  "hm_counted_N": 237,
+  "hm_counted_groups": {
+    "D6_CUOI": 120,
+    "R1": 107,
+    "D7_CUOI": 10
+  },
+  "hm_counted_h8": {
+    "MANH": 236,
+    "CHI_BE_MAT": 1
+  },
+  "reserve_agreement_before_new_Q7": {
+    "A": 149,
+    "B": 36,
+    "C": 14,
+    "D": 6
+  },
+  "closed_questions": [
+    "Q-dpv2-2",
+    "Q-dpv2-3",
+    "Q-dpv2-4",
+    "Q-dpv2-5",
+    "Q-dpv2-6",
+    "Q-dpv2-7"
+  ],
+  "open_questions": [
+    "Q-dpv2-1"
+  ],
+  "ngoaitru_decision": "T-dpv2-9: C/CHO_H7, không dùng trước khi đo tỷ lệ nghĩa và hai SA ký mức K",
+  "hm_h8": {
+    "MANH": 238,
+    "CHUA_CO_CONG_L3B": 46,
+    "CHI_BE_MAT": 1
+  },
+  "hm_original_attempts": {
+    "v1,v2,v3": 131,
+    "v2,v3": 1
+  },
+  "mat_khac_recorded_versions_and_refs": [
+    {
+      "version": "v2",
+      "ref": "analyzing-tools\\ho-so\\unified\\d6-log-v2.tsv:1318"
+    },
+    {
+      "version": "v3",
+      "ref": "analyzing-tools\\ho-so\\unified\\d6-log-v3.tsv:391"
+    }
+  ],
+  "h8_rule_version": "tap-luat-P2 v4.1",
+  "h8_rule_denominators": {
+    "sub_moi_dong": 34329387,
+    "sub_dong_khac": 27978808,
+    "web_dong_khac": 150070912
+  },
+  "h8_replay_all_historical_rows_matched": true,
+  "h1_h2_numeric_h4_blocked_keys_490_rows": true,
+  "protected": {
+    "index.html": "01b76617f8df57d80e59d0989001ced8f7714ae95e85828b351bce2a5517a423",
+    "thong-tin.html": "8ec3bbf763f2465994bde4239079a3795eb2eb3bf21f61fe29aa683cb8bf3ea7",
+    "analyzing-tools\\wordlist.txt": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4",
+    "WordListAnalyze.md section10 bytes": "4b91fac689e70ccb0715b92b49efe4305fbb19c3bc90dd449e72fba72889f6fa"
+  },
+  "draft_tables_sha256_LF": {
+    "du-phong-v2-phan-loai.tsv": "398253dd39d3c5431fc54d51eda9e57b2481219dc10b2c22f6a0b8b652ec355e",
+    "du-phong-v2-honorable-mentions.tsv": "947681d3e6e11a2882f98f48a35c28959a592551b02e8a14901dd55ba1c5dfd5"
+  }
+}

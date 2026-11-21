@@ -1,0 +1,96 @@
+== Dự phòng
+so_dong 205 so_cot 23 dung_thu_tu_du_phong_txt True
+tang_chung {'A': 141, 'C': 14, 'CHO_HOA': 11, 'B': 36, 'D': 3}
+giai_nghia {'CO_PASS_LICH_SU': 168, 'CHUA_VIET': 37}
+h8 {'MANH': 198, 'KHONG_LUOT': 1, 'CHI_BE_MAT': 2, 'YEU': 4}
+CHO_HOA 11 ăn trầu, bèo bọt, chấp nhặt, giở giọng, giở quẻ, hì hụi, mụ mị, nhão nhẹt, nhão nhoẹt, non choẹt, tía lia
+tang_sau_khi_dong_Q2_Q3 {'A': 149, 'B': 36, 'C': 14, 'D': 6}
+tang_x_ngan_sau {('A', 'OK_F'): 40, ('A', 'OK_KHONG_F'): 109, ('B', 'OK_F'): 36, ('C', 'OK_F'): 1, ('C', 'OK_KHONG_F'): 13, ('D', 'OK_KHONG_F'): 6}
+A_F_co_nghia 40
+== HM
+so_dong 285 so_cot 27
+khoa_tinh_lai_dung True
+khoa_trung_trong_HM 0
+giao_khoa_chinh [] giao_khoa_du_phong []
+do_dai_ngoai_4_12 []
+khong_NFC []
+nhom {'D6_CUOI': 122, 'L3B_CHUA_CHAM': 46, 'R1': 107, 'D7_CUOI': 10}
+ket_luan_nhap {'CUNG_DE_CU_CHUA_PHAT_HANH': 230, 'CHO_HOA': 55}
+h8 {'MANH': 238, 'CHUA_CO_CONG_L3B': 46, 'CHI_BE_MAT': 1}
+  CHO_HOA: bao tử baotu D6_CUOI OK C Q-dpv2-5 H7_DE_CU CO_DIEU_KIEN CHO_H7_DE_NGHI_K1 HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI;CHO_HOA;ASTRA_DE_NGHI_K1
+  CHO_HOA: chạng vạng changvang D6_CUOI OK K Q-dpv2-4 H5_DIEU_KIEN_HM CO_DIEU_KIEN CHO_H5 HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI;CHO_HOA
+  CHO_HOA: cơ quan coquan D6_CUOI OK C Q-dpv2-6 H6_UU_TIEN_DE_CU CO_DIEU_KIEN UU_TIEN_THAP_RA_H6 HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI;CHO_HOA
+  CHO_HOA: dự bị dubi D6_CUOI OK K Q-dpv2-6 H6_UU_TIEN_DE_CU CO_DIEU_KIEN UU_TIEN_THAP_RA_H6 HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI;CHO_HOA
+  CHO_HOA: đại lục dailuc R1 R1 C Q-dpv2-6 H6_UU_TIEN_DE_CU KHONG_DE_CU DE_CU_LOI HO_SO_R1_LICH_SU;CHO_HOA
+  CHO_HOA: lên chức lenchuc D6_CUOI OK H Q-dpv2-6 H6_UU_TIEN_DE_CU CO_DIEU_KIEN UU_TIEN_THAP_RA_H6 HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI;CHO_HOA
+  CHO_HOA: lực lượng lucluong D6_CUOI OK K Q-dpv2-6 H6_UU_TIEN_DE_CU CO_DIEU_KIEN UU_TIEN_THAP_RA_H6 HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI;CHO_HOA
+  CHO_HOA: tần số tanso R1 R1 K Q-dpv2-5 H7_DE_CU CO_DIEU_KIEN CHO_KHEP_H7 HO_SO_R1_LICH_SU;CHO_HOA
+  CHO_HOA: truy tìm truytim D6_CUOI OK H Q-dpv2-6 H6_UU_TIEN_DE_CU CO_DIEU_KIEN UU_TIEN_THAP_RA_H6 HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI;CHO_HOA
+L3B 46 tranh_chap_dac_biet [('giờ cao điểm', 'CO_DUOC_TINH_HM_L3B;H2_THUC_THE_BA_KHOI'), ('nắng ấm', 'CO_DUOC_TINH_HM_L3B;H3_X_CHUA_XET'), ('ớt đỏ', 'CO_DUOC_TINH_HM_L3B;H3_X_CHUA_XET')]
+cung_de_cu 230
+N_neu_Q4_pa2_Q5_baotu_K1_tanso_K2 {'Q6_giu_6': 237, 'Q6_bo_6': 231, 'Q6_astra_giu_1': 232, 'Q6_opus_cu_giu_5': 236}
+nhom_N_Q6_giu_6 {'D6_CUOI': 120, 'R1': 107, 'D7_CUOI': 10}
+== Cột không chứa câu giải nghĩa
+cot_nghia_du_phong ['giai_nghia'] gia_tri ['CHUA_VIET', 'CO_PASS_LICH_SU'] cot_nghia_HM []
+cau_nghia_chinh_xuat_hien_trong_hai_TSV 0
+== Dòng được trích trong câu hỏi
+opus-counts.tsv:463 baotu	bao tử	UNG_VIEN	2	102	102
+opus-counts.tsv:1961 chongchanh	chòng chành	UNG_VIEN	2	3	3
+opus-counts.tsv:4870 hihui	hì hụi	UNG_VIEN	2	0	0
+opus-counts.tsv:8221 nhaonhet	nhão nhẹt	UNG_VIEN	2	9	9
+opus-counts.tsv:8222 nhaonhoet	nhão nhoẹt	UNG_VIEN	2	6	6
+opus-counts.tsv:10478 tanso	tần số	UNG_VIEN	2	395	370
+opus-counts.tsv:12029 trongtranh	tròng trành	UNG_VIEN	2	2	2
+opus-counts.tsv:12702 vaynen	vậy nên	UNG_VIEN	2	2269	2170
+opus-counts.tsv:13474 baotu	báo tử	DOC_KHAC	2	36	26
+opus-counts.tsv:15957 nhaonhoet	nhão nhoét	DOC_KHAC	2	5	5
+opus-counts.tsv:15958 nhaonhet	nhão nhét	DOC_KHAC	2	0	0
+opus-counts.tsv:17448 tanso	tận số	DOC_KHAC	2	14	14
+opus-counts.tsv:17654 vaynen	vảy nến	DOC_KHAC	2	5	5
+O/de-cu-them-opus.tsv:81 bao tử
+O/de-cu-them-opus.tsv:171 tần số
+O/round-1-cross-review.md:58 ### 2.1. Sáu từ D của Opus (Astra: A)
+O/round-1-cross-review.md:78 - H5 lại đòi hai bên xác nhận "cùng một từ" mới áp (`AT/tieu-chi-thong-nhat.md:135`). Nếu
+O/round-1-cross-review.md:80 ### 2.2. Bậc C
+O/round-1-cross-review.md:97 ### 2.3. Đề cử thêm
+O/round-1-cross-review.md:102 | R1 | 73: chọn theo chủ đề; gồm 19 mục hai bên cùng chấm R1 và 4 mục L2/L3 | 60: phiếu lệ
+O/round-1-cross-review.md:106 - **5 mục Astra tạm bỏ** (*cơ quan, lực lượng, truy tìm, dự bị, lên chức*):
+O/round-1-cross-review.md:110   - Đề nghị giữ trong đề cử, ghi cờ "Astra đề nghị rà H6". Đề cử không phát hành, nên một
+O/round-1-cross-review.md:113   - trừ *đại lục* (A): hai bên đều chấm R1; trong báo chí từ này thường chỉ "Trung Quốc đạ
+O/round-1-cross-review.md:114   - nhận *piano* của Astra: mã loại H5 của Opus là sai (mục 4).
+O/round-1-cross-review.md:141 | E6 | Lý do giữ *đại lục* ("khái niệm địa lý") bỏ qua nghĩa chính trị thường gặp | (A) |
+O/round-1-cross-review.md:173 | CH1 | Giữ, cập nhật chứng cứ | Chủ dự án | *chòng chành* (danh sách chính) và *tròng trà
+WordListAnalyze.md:471   - Hai lô dự bị chỉ được chuẩn bị, **không chấm và không đưa vào pool**: L3b (48 ứng viên do Opus đề cử, sau
+WordListAnalyze.md:744 | A | Giữ nguyên luật, mở thêm ứng viên: L2D (99) và L3b (48), tổng 147 khóa đã chuẩn bị. Chấm đôi theo P4, qu
+WordListAnalyze.md:745 | B | Duyệt thêm một lượt sạch cho 117 mục chính còn trượt D6 (114 OK không-F + 3 F); có thể thêm 3 dự phòng O
+WordListAnalyze.md:151 | 8 | **Không dùng từ 3 chữ** (viết liền chỉ có 3 chữ cái), kể cả làm bậc lấp cuối hay dự phòng. Nếu thiếu, ha
+WordListAnalyze.md:153 | 10 | **Ngày 20/11/2026: phát hành 7.776 từ chính đã có giải nghĩa đạt** (kịch bản P0 trừ 132 mục ở mục 9.1),
+tieu-chi-thong-nhat.md:79 ### H2. Độ dài và số khối
+tieu-chi-thong-nhat.md:97 - Nếu mục chỉ có trong một wordlist (không có nghĩa từ điển), hai bên phải ký xác nhận ngh
+tieu-chi-thong-nhat.md:103 ### H5. Chính tả ổn định
+tieu-chi-thong-nhat.md:135 - **Danh sách cặp do người duyệt đăng ký** và xác nhận là cùng một từ. Bộ sinh biến thể tự
+tieu-chi-thong-nhat.md:137 ### H6. Nghĩa không thuộc nhóm đỏ
+tieu-chi-thong-nhat.md:154 Danh tính (giới, xu hướng tính dục, dân tộc) không bị coi là từ tục. Vì là đề tài nhạy cảm
+tieu-chi-thong-nhat.md:156 ### H7. Cổng đọc không dấu (áp cho mọi mục, kể cả phần giao)
+tieu-chi-thong-nhat.md:169 - Bảng phân xử ở mục 9.1. Mọi mục mới phải qua cổng này sau khi ghép.
+tieu-chi-thong-nhat.md:171 ### H8. Chứng liệu tối thiểu
+tieu-chi-thong-nhat.md:178 - Kho chưa đo **không** tính là số 0: phải đo bù.
+tieu-chi-thong-nhat.md:180 ### H9. Không còn phản đối hợp lệ
+tieu-chi-thong-nhat.md:193 - Mục đã chốt ở mục 1 không bị phản đối lại vì chính lý do đã chốt.
+verdict_h5.py ton_tai True so_dong 73
+de-xuat-hop-nhat.py:53 PHU_QUYET_OPUS = {"đại lục": "H6.3 (A): trong báo chí thường chỉ Trung Quốc đại lục; hai b
+de-xuat-hop-nhat.py:61         continue
+U/l3b-de-cu-opus.tsv ton_tai True so_dong_du_lieu 48 dong3 giocaodiem
+== Lịch sử lượt viết của 132 mục khấu trừ (nhận định của Astra về mặt khác)
+so_muc 132 theo_luot {'v1+v2+v3': 131, 'v2+v3': 1}
+muc_thieu_v1 ['mặt khác']
+mat_khac_trong_viet-lai-v1 False
+mat_khac_trong_viet-lai-v2 True
+== SHA vùng bảo vệ (kế hoạch §3, §4.3)
+sha_byte index.html 01b76617f8df57d80e59d0989001ced8f7714ae95e85828b351bce2a5517a423
+sha_byte thong-tin.html 8ec3bbf763f2465994bde4239079a3795eb2eb3bf21f61fe29aa683cb8bf3ea7
+sha_byte analyzing-tools/wordlist.txt 8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4
+sha_byte muc10 (từ đầu dòng ## 10. đến ngay trước dòng ## 11.) 4b91fac689e70ccb0715b92b49efe4305fbb19c3bc90dd449e72fba72889f6fa
+sha_lf wordlist.txt 1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581
+sha cot tu 3609c88ff436708857ac323189f81b5bb9b31d31ea6f0a8924cc02bc61c0e713
+sha_lf du-phong.txt f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b

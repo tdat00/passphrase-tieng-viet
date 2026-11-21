@@ -1,0 +1,151 @@
+{
+  "runs": [
+    {
+      "label": "native_python",
+      "argv": [
+        "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\check_wordlist.py"
+      ],
+      "exit_code": 1,
+      "expected": 1,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit\nSố khối: 1: 480, 2: 7033, 3: 263\nĐộ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39\nLớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776\nLỖI | C1: wordlist.txt phải dùng LF và có LF cuối\nTổng: 1 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    },
+    {
+      "label": "native_node",
+      "argv": [
+        "node",
+        "Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\verify.mjs"
+      ],
+      "exit_code": 1,
+      "expected": 1,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái\nLỖI | C1: wordlist.txt phải là UTF-8 không BOM, LF, có LF cuối\nLỖI | C8: thong-tin.html không khớp wordlist.txt\nLỖI | C8: mục 10 của WordListAnalyze.md không khớp wordlist.txt\nTổng: 3 lỗi.\n",
+      "stderr": ""
+    },
+    {
+      "label": "build_check",
+      "argv": [
+        "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "expected": 0,
+      "stdout": "Ba khối khớp wordlist.txt.\n",
+      "stderr": ""
+    },
+    {
+      "label": "preview_python_canonical_LF",
+      "argv": [
+        "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-c",
+        "\nimport json,pathlib,runpy,sys\np=json.load(sys.stdin); root=pathlib.Path.cwd(); rb=pathlib.Path.read_bytes; rt=pathlib.Path.read_text\ndef b(path):return p['wordlist'].encode('utf-8') if path.resolve()==root/'analyzing-tools'/'wordlist.txt' else rb(path)\ndef t(path,*args,**kw):return p['doc'].replace('\\r\\n','\\n') if path.resolve()==root/'WordListAnalyze.md' else rt(path,*args,**kw)\npathlib.Path.read_bytes=b;pathlib.Path.read_text=t\nrunpy.run_path(str(root/'analyzing-tools'/'check_wordlist.py'),run_name='__main__')\n"
+      ],
+      "exit_code": 0,
+      "expected": 0,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit\nSố khối: 1: 480, 2: 7033, 3: 263\nĐộ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39\nLớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776\nTổng: 0 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    },
+    {
+      "label": "preview_node_canonical_LF",
+      "argv": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "\nimport fs from 'node:fs';import path from 'node:path';import {pathToFileURL} from 'node:url';\nconst native=fs.readFileSync,p=JSON.parse(native(0,'utf8')),root=process.cwd();\nfs.readFileSync=function(file,opt){\n if(typeof file==='string'){\n  const f=path.resolve(file).toLowerCase();let s;\n  if(f===path.join(root,'analyzing-tools','wordlist.txt').toLowerCase())s=p.wordlist;\n  if(f===path.join(root,'WordListAnalyze.md').toLowerCase())s=p.doc;\n  if(s!==undefined){const enc=typeof opt==='string'?opt:opt?.encoding;return enc?s:Buffer.from(s,'utf8');}\n }\n return native.apply(this,arguments);\n};\nawait import(pathToFileURL(path.join(root,'analyzing-tools','verify.mjs')).href);\n"
+      ],
+      "exit_code": 0,
+      "expected": 0,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái\nTổng: 0 lỗi.\n",
+      "stderr": ""
+    },
+    {
+      "label": "build_edited_document_CRLF",
+      "argv": [
+        "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-c",
+        "\nimport json,pathlib,runpy,sys\np=json.load(sys.stdin);root=pathlib.Path.cwd();rt=pathlib.Path.read_text\ndef t(path,*args,**kw):\n if path.resolve()==root/'WordListAnalyze.md':\n  return p['doc'] if kw.get('newline')=='' else p['doc'].replace('\\r\\n','\\n')\n return rt(path,*args,**kw)\npathlib.Path.read_text=t\nscript=root/'analyzing-tools'/'build_wordlist.py';sys.argv=[str(script),'--check']\nrunpy.run_path(str(script),run_name='__main__')\n"
+      ],
+      "exit_code": 0,
+      "expected": 0,
+      "stdout": "Ba khối khớp wordlist.txt.\n",
+      "stderr": ""
+    },
+    {
+      "label": "build_LF_baseline_known_limit",
+      "argv": [
+        "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-c",
+        "\nimport json,pathlib,runpy,sys\np=json.load(sys.stdin);root=pathlib.Path.cwd();rt=pathlib.Path.read_text\ndef t(path,*args,**kw):\n value=p['doc'] if path.resolve()==root/'WordListAnalyze.md' else rt(path,*args,**kw)\n if path.resolve() in {root/'index.html',root/'thong-tin.html',root/'WordListAnalyze.md'}:\n  return value.replace('\\r\\n','\\n')\n return value\npathlib.Path.read_text=t\nscript=root/'analyzing-tools'/'build_wordlist.py';sys.argv=[str(script),'--check']\nrunpy.run_path(str(script),run_name='__main__')\n"
+      ],
+      "exit_code": 1,
+      "expected": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 11, in <module>\n    runpy.run_path(str(script),run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 294, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py\", line 82, in <module>\n    main()\n    ~~~~^^\n  File \"Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py\", line 70, in main\n    for name, (old, new) in build(read_list()).items():\n                            ~~~~~^^^^^^^^^^^^^\n  File \"Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py\", line 44, in build\n    out[name] = (text, splice(text, SCRIPT_OPEN, \"</script>\", \"\".join(l + \"\\r\\n\" for l in lines), \"\\r\\n\"))\n                       ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py\", line 34, in splice\n    start = text.index(nl, start) + len(nl)\n            ~~~~~~~~~~^^^^^^^^^^^\nValueError: substring not found\n"
+    },
+    {
+      "label": "build_LF_edited_known_limit",
+      "argv": [
+        "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-c",
+        "\nimport json,pathlib,runpy,sys\np=json.load(sys.stdin);root=pathlib.Path.cwd();rt=pathlib.Path.read_text\ndef t(path,*args,**kw):\n value=p['doc'] if path.resolve()==root/'WordListAnalyze.md' else rt(path,*args,**kw)\n if path.resolve() in {root/'index.html',root/'thong-tin.html',root/'WordListAnalyze.md'}:\n  return value.replace('\\r\\n','\\n')\n return value\npathlib.Path.read_text=t\nscript=root/'analyzing-tools'/'build_wordlist.py';sys.argv=[str(script),'--check']\nrunpy.run_path(str(script),run_name='__main__')\n"
+      ],
+      "exit_code": 1,
+      "expected": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 11, in <module>\n    runpy.run_path(str(script),run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 294, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py\", line 82, in <module>\n    main()\n    ~~~~^^\n  File \"Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py\", line 70, in main\n    for name, (old, new) in build(read_list()).items():\n                            ~~~~~^^^^^^^^^^^^^\n  File \"Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py\", line 44, in build\n    out[name] = (text, splice(text, SCRIPT_OPEN, \"</script>\", \"\".join(l + \"\\r\\n\" for l in lines), \"\\r\\n\"))\n                       ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py\", line 34, in splice\n    start = text.index(nl, start) + len(nl)\n            ~~~~~~~~~~^^^^^^^^^^^\nValueError: substring not found\n"
+    }
+  ],
+  "protected_bytes_unchanged": true,
+  "all_expected": true,
+  "preview_section10_byte_identical": true,
+  "preview_doc_sha256_bytes": "eb8a6fc04c905de6869e23cfd0c4c4d5e4b6b67cb910bd09ec10ab4f88fb9c9a",
+  "preview_saved_to_disk": false,
+  "native_checkers_pass": false,
+  "canonical_is_exact_git_blob": true,
+  "fresh_D6_run": false,
+  "draft_rows": [
+    205,
+    285
+  ],
+  "unique_keys_including_main": 8266,
+  "hm_counted_N": 237,
+  "reserve_agreed_H7_hold": "ngoại trừ / ngoại trú; T-dpv2-9; chưa ký mức K trước khi đo",
+  "build_edited_document_CRLF_pass": true,
+  "build_LF_baseline_and_edited_same_known_error": true,
+  "legacy_files_unchanged": true,
+  "legacy_files_sha256_bytes": {
+    "WordListAnalyze-Opus.md": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+    "WordListAnalyze-Astra.md": "0f94b58c422cd88ac0a50c0f2eace9da9ba5aed3e7630f577af29901cc9b25df"
+  },
+  "question_links_valid": true,
+  "inputs_still_match": 70,
+  "publication_templates_match_plan": true,
+  "draft_output_sha256_bytes": {
+    "du-phong-v2-bao-cao-chung.md": "e4ed5ae2e98fa615d65b5692bf68521a1e840e9f5103377343b2014386aaef83",
+    "du-phong-v2-ke-hoach.md": "a05a20f4bf2d06a26aa7f3f7b6d021240a41a940ee7131ac6f76033a6684213a",
+    "du-phong-v2-phan-loai.tsv": "67d13ec3b6bb923aebeb04d849c2cdcf5d2400b164c33208fd37fe9516aa671a",
+    "du-phong-v2-honorable-mentions.tsv": "1bb63aabeee360befece128667cf035cc174f5c283e77cc49a0a72f4936646c2",
+    "du-phong-v2-cau-hoi.md": "df2041fc4cc1993f59ec88a06e12a96d63f5638c28fc246a4d6a388592bdcb23"
+  },
+  "document_format": "UTF-8 không BOM, CRLF, không khoảng trắng cuối dòng, có dòng cuối",
+  "artifact_catalog_rows": 116
+}

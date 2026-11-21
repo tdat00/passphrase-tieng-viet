@@ -1,0 +1,285 @@
+tu	khoa	nhom_de_xuat	ben	nhan	lop	ghi_chu
+anh hai	anhhai	DC1	CA_HAI	OK	C	-
+ánh nhìn	anhnhin	DC3	CHI_OPUS	-	-	-
+áp dụng	apdung	DC1	CA_HAI	OK	H	-
+áp phích	apphich	DC1	CA_HAI	OK	C	-
+ăn cưới	ancuoi	DC1	CA_HAI	OK	H	-
+ấn bản	anban	R1	CHI_ASTRA	R1	C	-
+bác học	bachoc	R1	CHI_ASTRA	R1	C	-
+bạch kim	bachkim	DC1	CA_HAI	OK	C	-
+bản ghi	banghi	R1	CHI_ASTRA	R1	C	-
+bảng tuần hoàn	bangtuanhoan	R1	CA_HAI	R1	C	-
+bánh gạo	banhgao	DC3	CHI_OPUS	-	-	-
+bánh ngọt	banhngot	DC1	CA_HAI	OK	C	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+bánh phồng	banhphong	DC1	CA_HAI	OK	C	-
+bánh sinh nhật	banhsinhnhat	DC3	CHI_OPUS	-	-	12 chữ, đúng mức trần H2
+bánh xếp	banhxep	DC3	CHI_OPUS	-	-	-
+bao tử	baotu	DC1	CA_HAI	OK	C	H7: khóa baotu trùng báo tử (nhóm 4), PPM gộp 0,385 ≥ 0,3 nhưng không có trong canh-bao-khong-dau.tsv: phải đọc K1/K2 trước khi xét lại
+bảo hiểm	baohiem	R1	CHI_OPUS	R1	K	-
+bảo trợ	baotro	R1	CHI_OPUS	R1	H	-
+bày tỏ	bayto	DC1	CA_HAI	OK	H	-
+băng tải	bangtai	R1	CHI_ASTRA	R1	C	-
+băng trôi	bangtroi	DC3	CHI_OPUS	-	-	-
+bắp rang	baprang	DC3	CHI_OPUS	-	-	-
+bất động	batdong	DC1	CA_HAI	OK	H	-
+bí mật	bimat	DC1	CA_HAI	OK	K	-
+biên dịch	biendich	R1	CA_HAI	R1	H	-
+biên kịch	bienkich	R1	CHI_ASTRA	R1	C	-
+biên tập	bientap	R1	CA_HAI	R1	H	-
+biên tập viên	bientapvien	R1	CA_HAI	R1	C	-
+biển	bien	DC1	CA_HAI	OK	C	-
+biến áp	bienap	R1	CHI_ASTRA	R1	C	-
+biểu cảm	bieucam	DC1	CA_HAI	OK	H	-
+bò rừng	borung	DC3	CHI_OPUS	-	-	-
+bộ môn	bomon	DC1	CA_HAI	OK	K	-
+bông cải xanh	bongcaixanh	DC3	CHI_OPUS	-	-	-
+buồng tắm	buongtam	DC3	CHI_OPUS	-	-	-
+bút chì màu	butchimau	DC3	CHI_OPUS	-	-	-
+ca dao	cadao	DC1	CA_HAI	OK	C	-
+cá chuồn	cachuon	DC1	CA_HAI	OK	C	-
+cầu vượt	cauvuot	DC1	CA_HAI	OK	C	-
+cha đẻ	chade	DC1	CA_HAI	OK	C	-
+chạng vạng	changvang	DC1	CA_HAI	OK	K	H5: HND có dạng choạng vạng (khác khóa) chưa từng được đếm; cần đo trước khi xét lại
+chăm chú	chamchu	DC1	CA_HAI	OK	H	-
+chắn bùn	chanbun	DC1	CA_HAI	OK	C	-
+chấm phẩy	champhay	DC1	CA_HAI	OK	C	-
+chân đế	chande	R1	CHI_ASTRA	R1	C	-
+chân không	chankhong	R1	CHI_OPUS	R1	K	-
+châu lục	chauluc	DC1	CA_HAI	OK	C	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+chế tạo	chetao	DC1	CA_HAI	OK	H	-
+chỉ số	chiso	R1	CHI_ASTRA	R1	K	-
+chia	chia	DC1	CA_HAI	OK	H	K2 đã đủ hai chữ ký
+chiều rộng	chieurong	DC1	CA_HAI	OK	K	-
+chim én	chimen	DC1	CA_HAI	OK	C	-
+chỗ ngồi	chongoi	DC1	CA_HAI	OK	C	-
+chồn hôi	chonhoi	DC1	CA_HAI	OK	C	-
+chợ đêm	chodem	DC3	CHI_OPUS	-	-	-
+chợ phiên	chophien	DC1	CA_HAI	OK	C	-
+chủ nhiệm	chunhiem	R1	CHI_OPUS	R1	C	-
+chuyên ngành	chuyennganh	R1	CHI_OPUS	R1	K	-
+chuyên viên	chuyenvien	R1	CA_HAI	R1	C	-
+chuyển đổi	chuyendoi	DC1	CA_HAI	OK	H	-
+chữ hoa	chuhoa	DC1	CA_HAI	OK	C	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+con dấu	condau	DC1	CA_HAI	OK	C	Khóa trùng con dâu, còn đâu; lành
+con đẻ	conde	DC1	CA_HAI	OK	C	-
+con em	conem	R1	CHI_OPUS	R1	C	-
+con lắc	conlac	DC1	CA_HAI	OK	C	-
+cô giáo	cogiao	DC1	CA_HAI	OK	C	-
+cô ta	cota	DC1	CA_HAI	OK	F	-
+cố vấn	covan	R1	CHI_OPUS	R1	C	-
+cối xay gió	coixaygio	DC3	CHI_OPUS	-	-	-
+côn trùng	contrung	DC1	CA_HAI	OK	C	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+công ơn	congon	DC1	CA_HAI	OK	K	-
+công sức	congsuc	DC1	CA_HAI	OK	K	-
+cộng hưởng	conghuong	R1	CHI_OPUS	R1	K	-
+cột buồm	cotbuom	DC1	CA_HAI	OK	C	-
+cột sống	cotsong	DC1	CA_HAI	OK	C	-
+cơ khí	cokhi	R1	CHI_OPUS	R1	K	-
+cơ quan	coquan	DC1	CHI_OPUS	OK	C	Astra tạm không đề cử: để ngoài đợt đề cử vì cần rà riêng nghĩa cơ quan nhà nước; không kết luận loại cứng.
+cởi mở	coimo	DC1	CA_HAI	OK	H	-
+củ cải đỏ	cucaido	DC3	CHI_OPUS	-	-	-
+củ đậu	cudau	DC1	CA_HAI	OK	C	-
+cụ thể	cuthe	DC1	CA_HAI	OK	K	-
+cửa kính	cuakinh	DC1	CA_HAI	OK	C	-
+dãy núi	daynui	DC1	CA_HAI	OK	C	-
+dân ca	danca	DC1	CA_HAI	OK	C	-
+dâu tằm	dautam	DC1	CA_HAI	OK	C	-
+dấu ngã	daunga	DC1	CA_HAI	OK	C	-
+dây nịt	daynit	DC1	CA_HAI	OK	C	-
+dịch giả	dichgia	R1	CHI_ASTRA	R1	C	-
+diễn giả	diengia	R1	CHI_ASTRA	R1	C	-
+diễn viên hài	dienvienhai	DC3	CHI_OPUS	-	-	-
+duyên hải	duyenhai	R1	CHI_ASTRA	R1	C	-
+dự bị	dubi	DC1	CHI_OPUS	OK	K	Astra tạm không đề cử: để ngoài vì cần phân định nghĩa quân sự với thể thao.
+dưa leo	dualeo	DC1	CA_HAI	OK	C	-
+dương cầm	duongcam	R1	CHI_ASTRA	R1	C	-
+đai an toàn	daiantoan	DC3	CHI_OPUS	-	-	-
+đánh răng	danhrang	DC1	CA_HAI	OK	H	-
+đẳng cấp	dangcap	R1	CHI_OPUS	R1	K	-
+đĩa đơn	diadon	DC3	CHI_OPUS	-	-	-
+đĩa nhạc	dianhac	DC3	CHI_OPUS	-	-	-
+điện trở	dientro	R1	CHI_ASTRA	R1	C	-
+đồ vật	dovat	DC1	CA_HAI	OK	C	-
+đường tròn	duongtron	DC1	CA_HAI	OK	C	-
+êm ái	emai	DC1	CA_HAI	OK	H	-
+ghế mây	ghemay	DC1	CA_HAI	OK	C	-
+ghế phụ	ghephu	DC1	CA_HAI	OK	C	-
+giả thuyết	giathuyet	R1	CA_HAI	R1	K	-
+giá thành	giathanh	DC1	CA_HAI	OK	K	-
+giảng viên	giangvien	DC1	CA_HAI	OK	C	-
+giáo khoa	giaokhoa	R1	CHI_OPUS	R1	K	-
+giấy ăn	giayan	DC1	CA_HAI	OK	C	-
+giấy khen	giaykhen	DC1	CA_HAI	OK	C	-
+giờ cao điểm	giocaodiem	DC3	CHI_OPUS	-	-	-
+gò má	goma	DC1	CA_HAI	OK	C	-
+hiệu suất	hieusuat	R1	CHI_ASTRA	R1	K	-
+hình học	hinhhoc	R1	CHI_OPUS	R1	K	-
+học giả	hocgia	R1	CHI_ASTRA	R1	C	-
+hồng ngoại	hongngoai	R1	CHI_OPUS	R1	K	-
+hợp chất	hopchat	R1	CA_HAI	R1	C	-
+hợp đồng	hopdong	R1	CHI_OPUS	R1	C	-
+hợp kim	hopkim	R1	CA_HAI	R1	C	-
+hợp xướng	hopxuong	R1	CA_HAI	R1	C	-
+hương liệu	huonglieu	R1	CHI_ASTRA	R1	C	-
+hương thảo	huongthao	DC3	CHI_OPUS	-	-	-
+hữu cơ	huuco	R1	CA_HAI	R1	K	-
+kẹp giấy	kepgiay	DC3	CHI_OPUS	-	-	-
+khách hàng	khachhang	DC1	CA_HAI	OK	C	-
+khí cầu	khicau	R1	CHI_ASTRA	R1	C	-
+khí quyển	khiquyen	R1	CA_HAI	R1	C	-
+khoanh tay	khoanhtay	DC1	CA_HAI	OK	H	-
+khởi nghiệp	khoinghiep	R1	CHI_OPUS	R1	H	-
+khớp gối	khopgoi	DC1	CA_HAI	OK	C	-
+khuyên tai	khuyentai	DC3	CHI_OPUS	-	-	-
+kịch	kich	DC1	CA_HAI	OK	C	-
+kiểm chứng	kiemchung	R1	CHI_ASTRA	R1	H	-
+kiến tạo	kientao	R1	CHI_OPUS	R1	H	-
+làm lơ	lamlo	DC1	CA_HAI	OK	H	-
+làm sao	lamsao	DC1	CA_HAI	OK	F	-
+làm vườn	lamvuon	DC1	CA_HAI	OK	H	-
+lập trình	laptrinh	R1	CA_HAI	R1	H	-
+lật đật	latdat	DC1	CA_HAI	OK	H	-
+lên chức	lenchuc	DC1	CHI_OPUS	OK	H	Astra tạm không đề cử: để ngoài vì cần phân định công việc thông thường với quyền lực nhà nước.
+lò nung	lonung	R1	CHI_ASTRA	R1	C	-
+long trọng	longtrong	DC1	CA_HAI	OK	H	-
+lời giải	loigiai	DC1	CA_HAI	OK	K	-
+lớp phủ	lopphu	R1	CHI_ASTRA	R1	C	-
+luận án	luanan	R1	CHI_ASTRA	R1	C	-
+luận văn	luanvan	R1	CA_HAI	R1	C	-
+lục địa	lucdia	DC1	CA_HAI	OK	C	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+lục giác	lucgiac	DC1	CA_HAI	OK	C	-
+luyện	luyen	DC1	CA_HAI	OK	H	-
+lực lượng	lucluong	DC1	CHI_OPUS	OK	K	Astra tạm không đề cử: để ngoài vì có liên tưởng phổ biến quân sự; không chọn nghĩa lành để tự cho qua H6.
+lửng lơ	lunglo	DC1	CA_HAI	OK	H	-
+lưỡi trai	luoitrai	DC3	CHI_OPUS	-	-	-
+mã nguồn	manguon	R1	CHI_ASTRA	R1	K	-
+mạch nha	machnha	R1	CHI_ASTRA	R1	C	-
+mai mối	maimoi	DC1	CA_HAI	OK	H	-
+mang cá	mangca	DC1	CA_HAI	OK	C	-
+máy chụp hình	maychuphinh	DC3	CHI_OPUS	-	-	-
+máy rửa bát	mayruabat	DC3	CHI_OPUS	-	-	-
+máy thu thanh	maythuthanh	R1	CHI_ASTRA	R1	C	-
+mặt khác	matkhac	DC1	CA_HAI	OK	F	-
+miên man	mienman	DC1	CA_HAI	OK	K	-
+mình	minh	DC1	CA_HAI	OK	F	-
+mỏ neo	moneo	DC1	CA_HAI	OK	C	-
+mòng biển	mongbien	DC3	CHI_OPUS	-	-	-
+móng	mong	DC1	CA_HAI	OK	C	-
+một mình	motminh	DC1	CA_HAI	OK	K	-
+mùa đông	muadong	DC1	CA_HAI	OK	K	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+nan hoa	nanhoa	DC1	CA_HAI	OK	C	-
+nàng tiên	nangtien	DC1	CA_HAI	OK	C	-
+nắm tay	namtay	DC1	CA_HAI	OK	H	-
+nắng ấm	nangam	DC3	CHI_OPUS	-	-	Cần xét X (tổ hợp tự do) ở P4
+ngắn gọn	ngangon	DC1	CA_HAI	OK	H	-
+ngân hàng	nganhang	DC1	CA_HAI	OK	C	-
+nghêu	ngheu	DC1	CA_HAI	OK	C	-
+nghìn	nghin	DC1	CA_HAI	OK	K	-
+ngoại hình	ngoaihinh	DC1	CA_HAI	OK	K	-
+ngón	ngon	DC1	CA_HAI	OK	C	-
+ngủ nướng	ngunuong	DC3	CHI_OPUS	-	-	-
+nguồn sáng	nguonsang	DC1	CA_HAI	OK	C	-
+nguyên tố	nguyento	R1	CA_HAI	R1	K	-
+nguyên tử	nguyentu	R1	CA_HAI	R1	K	-
+người hâm mộ	nguoihammo	DC3	CHI_OPUS	-	-	-
+nhà kinh doanh	nhakinhdoanh	R1	CHI_OPUS	R1	C	-
+nhà sử học	nhasuhoc	R1	CA_HAI	R1	C	-
+nhà tạo mẫu	nhataomau	DC3	CHI_OPUS	-	-	-
+nhà thầu	nhathau	R1	CHI_OPUS	R1	C	-
+nhảy cao	nhaycao	DC1	CA_HAI	OK	H	-
+nháy mắt	nhaymat	DC1	CA_HAI	OK	H	-
+nhấp chuột	nhapchuot	DC3	CHI_OPUS	-	-	-
+nhật báo	nhatbao	R1	CHI_ASTRA	R1	C	-
+nhịp nhàng	nhipnhang	DC1	CA_HAI	OK	H	-
+nhóm nhạc	nhomnhac	DC3	CHI_OPUS	-	-	-
+ông cụ	ongcu	DC1	CA_HAI	OK	C	-
+ớt đỏ	otdo	DC3	CHI_OPUS	-	-	Cần xét X (tổ hợp tự do) ở P4
+phân tử	phantu	R1	CHI_OPUS	R1	K	Khóa trùng phần tử; không thuộc nhóm đỏ
+phi cơ	phico	R1	CHI_OPUS	R1	C	-
+phi hành đoàn	phihanhdoan	R1	CA_HAI	R1	C	-
+phòng ban	phongban	R1	CHI_ASTRA	R1	C	-
+phu nhân	phunhan	R1	CHI_OPUS	R1	C	-
+phương đông	phuongdong	DC1	CA_HAI	OK	K	-
+piano	piano	R1	CHI_ASTRA	R1	C	Họ pi a nô/pi-a-nô/pianô đã qua H5 (spelling_families.tsv:269); Opus rút mã loại H5
+quả cầu tuyết	quacautuyet	DC3	CHI_OPUS	-	-	-
+quần yếm	quanyem	DC3	CHI_OPUS	-	-	-
+rừng mưa	rungmua	DC3	CHI_OPUS	-	-	-
+sân bóng rổ	sanbongro	DC3	CHI_OPUS	-	-	-
+sinh học	sinhhoc	R1	CHI_OPUS	R1	K	-
+sinh thái	sinhthai	R1	CA_HAI	R1	K	-
+sữa tắm	suatam	DC3	CHI_OPUS	-	-	-
+tài chính	taichinh	R1	CHI_OPUS	R1	K	-
+tàu điện	taudien	DC1	CA_HAI	OK	C	-
+tắc đường	tacduong	DC3	CHI_OPUS	-	-	-
+tặng phẩm	tangpham	R1	CHI_ASTRA	R1	C	-
+tâm sự	tamsu	DC1	CA_HAI	OK	H	-
+tân sinh viên	tansinhvien	R1	CHI_ASTRA	R1	C	-
+tần số	tanso	R1	CA_HAI	R1	K	H7: khóa tanso trùng tận số (cái chết), PPM gộp 0,21 dưới mốc còi; ghi để người đọc biết
+tầng lửng	tanglung	DC3	CHI_OPUS	-	-	-
+tập huấn	taphuan	R1	CHI_OPUS	R1	H	-
+tên đệm	tendem	DC3	CHI_OPUS	-	-	-
+thay thế	thaythe	DC1	CA_HAI	OK	H	-
+thắng cảnh	thangcanh	R1	CHI_ASTRA	R1	C	-
+thiên thể	thienthe	R1	CHI_ASTRA	R1	C	-
+thiên văn	thienvan	R1	CA_HAI	R1	K	-
+thổ cẩm	thocam	R1	CHI_ASTRA	R1	C	-
+thống kê	thongke	R1	CA_HAI	R1	H	-
+thợ may	thomay	DC1	CA_HAI	OK	C	-
+thợ xây	thoxay	DC3	CHI_OPUS	-	-	-
+thủ vai	thuvai	DC1	CA_HAI	OK	H	-
+thú nhồi bông	thunhoibong	DC3	CHI_OPUS	-	-	-
+thuật ngữ	thuatngu	R1	CHI_OPUS	R1	K	-
+thương gia	thuonggia	R1	CA_HAI	R1	C	-
+thường xuyên	thuongxuyen	DC1	CA_HAI	OK	F	-
+tích hợp	tichhop	R1	CHI_ASTRA	R1	H	-
+tiền sảnh	tiensanh	R1	CHI_ASTRA	R1	C	-
+tiếp thị	tiepthi	R1	CHI_OPUS	R1	H	-
+tiểu học	tieuhoc	DC1	CA_HAI	OK	K	-
+tiểu luận	tieuluan	R1	CHI_ASTRA	R1	C	-
+tinh thể	tinhthe	R1	CA_HAI	R1	C	-
+tỉnh thành	tinhthanh	DC1	CA_HAI	OK	C	-
+toán học	toanhoc	R1	CHI_OPUS	R1	K	-
+tối ưu	toiuu	R1	CHI_ASTRA	R1	K	-
+trà đá	trada	DC3	CHI_OPUS	-	-	-
+trang viên	trangvien	DC3	CHI_OPUS	-	-	-
+trầm tích	tramtich	R1	CHI_ASTRA	R1	C	-
+tri thức	trithuc	R1	CHI_OPUS	R1	K	-
+trì hoãn	trihoan	R1	CHI_OPUS	R1	H	-
+trích dẫn	trichdan	R1	CHI_ASTRA	R1	H	-
+trốn học	tronhoc	DC1	CA_HAI	OK	H	-
+trợ giảng	trogiang	R1	CHI_ASTRA	R1	C	-
+trùng hợp	trunghop	DC1	CA_HAI	OK	K	-
+truy tìm	truytim	DC1	CHI_OPUS	OK	H	Astra tạm không đề cử: để ngoài vì cần phân định ngữ cảnh tố tụng và tìm kiếm thường ngày.
+truyền miệng	truyenmieng	DC1	CA_HAI	OK	H	-
+tụ điện	tudien	R1	CHI_ASTRA	R1	C	-
+tuần hoàn	tuanhoan	R1	CHI_OPUS	R1	H	-
+tục ngữ	tucngu	DC1	CA_HAI	OK	K	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+tuổi đời	tuoidoi	DC1	CA_HAI	OK	K	-
+tự nhủ	tunhu	DC1	CA_HAI	OK	H	-
+tự truyện	tutruyen	R1	CHI_ASTRA	R1	C	-
+tương đương	tuongduong	DC1	CA_HAI	OK	K	-
+tường lửa	tuonglua	R1	CHI_ASTRA	R1	C	-
+vách núi	vachnui	DC3	CHI_OPUS	-	-	-
+văn bằng	vanbang	R1	CHI_ASTRA	R1	C	-
+vận hành	vanhanh	DC1	CA_HAI	OK	H	-
+vận tải	vantai	R1	CA_HAI	R1	H	-
+vây cá	vayca	DC1	CA_HAI	OK	C	-
+vi sóng	visong	R1	CHI_OPUS	R1	K	-
+vi tính	vitinh	R1	CA_HAI	R1	K	-
+vĩ cầm	vicam	R1	CHI_ASTRA	R1	C	-
+việc làm	vieclam	DC1	CA_HAI	OK	K	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+viễn thông	vienthong	R1	CA_HAI	R1	K	-
+vinh danh	vinhdanh	R1	CHI_OPUS	R1	H	-
+vỏ sò	voso	DC1	CA_HAI	OK	C	-
+vỏ xe	voxe	DC3	CHI_OPUS	-	-	-
+vòi hoa sen	voihoasen	DC1	CA_HAI	OK	C	-
+vô tuyến	votuyen	R1	CHI_OPUS	R1	K	-
+vỗ tay	votay	DC1	CA_HAI	OK	H	-
+vuông	vuong	DC1	CA_HAI	OK	H	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+xà lách	xalach	DC1	CA_HAI	OK	C	-
+xe điện	xedien	DC1	CA_HAI	OK	C	Câu cũ trượt D7 (nội dung); từ không có vấn đề
+xí nghiệp	xinghiep	R1	CHI_ASTRA	R1	C	-
+xoa tay	xoatay	DC1	CA_HAI	OK	H	-
+xuất khẩu	xuatkhau	R1	CHI_OPUS	R1	H	-
+xuyên	xuyen	DC1	CA_HAI	OK	H	-
+y phục	yphuc	R1	CHI_ASTRA	R1	C	-
