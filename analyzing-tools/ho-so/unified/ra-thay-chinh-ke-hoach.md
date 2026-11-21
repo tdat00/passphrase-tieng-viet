@@ -1,6 +1,6 @@
 # Rà và thay danh sách chính — kế hoạch
 
-**Status: Draft (round 1)**
+**Status: Final (2026-11-22, base fc97441)** — SA-Opus "accept" (`ho-so/opus/ra-thay-chinh/ky-ke-hoach.md`), SA-Astra "accept" (`ho-so/astra/ra-thay-chinh/ky-ke-hoach.md`, chạy trên gpt-6.2-astra theo Q-rtc-M1 b). Không còn câu hỏi mở. Thay danh sách chính chỉ bắt đầu khi chủ dự án duyệt kế hoạch này (D-rtc-3).
 
 - **Tác giả:** SA-Opus (soạn), SA-Astra (duyệt). Lượt duyệt 1 và 2 của Astra: "changes requested" (`ho-so/astra/ra-thay-chinh/round-1-review-drafts.md`). Bản này đã sửa theo cả hai lượt, các thỏa thuận T-rtc-12 đến T-rtc-18 và quyết định D-rtc-5 đến D-rtc-8 của chủ dự án (nhật ký: `ho-so/opus/ra-thay-chinh/round-1-revision-1.md`).
 - **Ngày:** 21/11/2026.
@@ -392,7 +392,7 @@ Lưu lệnh, mã thoát và log.
 | T-rtc-18 | Gói K2: hai SA ký 204 trong 205 khóa (193 cũ, 4 của T-rtc-12, 7 của D-rtc-6); *bạn thân* trình chủ dự án (Q-rtc-O2). Cùng 29 khóa của T-rtc-15 và *thay lông*, hai SA có 234 chữ ký chung | SA-Opus + SA-Astra | 2026-11-21 | `67466fb` |
 | T-rtc-19 | Chu kỳ HM (D-rtc-8): 25 HM theo hạng, đều qua H1–H9 (mục 6.1); 5 K2 hai SA ký (*biển, bí mật, vận hành, chia, ngắn gọn*); không chọn *cơ quan* (H6 nhóm 3) và *mình* (lớp F) | SA-Opus + SA-Astra | 2026-11-22 | `91d8ee9` |
 | T-rtc-20 | Gói K2 đủ hai chữ ký: Astra ký 4 khóa của D-rtc-7 (`khep-muc-mo-2.tsv`). Tổng 238 khóa (233 khóa chính của T-rtc-18, *thay lông*, 4 khóa của D-rtc-7) và 5 khóa HM của T-rtc-19 | SA-Opus + SA-Astra | 2026-11-22 | `91d8ee9` |
-| T-rtc-21 | Tính lại S4 theo T-rtc-14: rổ 10.003 (bỏ thêm *bao tử*, *chạng vạng* theo T-dpv2-6, T-dpv2-7); hai chương trình độc lập khớp 143/143 dòng (T7); thứ tự này khóa làm nguồn chung | SA-Opus + SA-Astra | 2026-11-22 | chờ commit |
+| T-rtc-21 | Tính lại S4 theo T-rtc-14: rổ 10.003 (bỏ thêm *bao tử*, *chạng vạng* theo T-dpv2-6, T-dpv2-7); hai chương trình độc lập khớp 143/143 dòng (T7); thứ tự này khóa làm nguồn chung | SA-Opus + SA-Astra | 2026-11-22 | fc97441 |
 
 Các mục T-rtc-* là chỗ hai bên đã đồng ý qua rà chéo, hai lượt duyệt và hai vòng thỏa thuận (`ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`). SA-Astra xác nhận khi duyệt bản sửa này.
 
