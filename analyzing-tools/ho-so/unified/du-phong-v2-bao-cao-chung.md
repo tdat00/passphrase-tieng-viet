@@ -1,6 +1,6 @@
 # Dự phòng v2 — báo cáo chung, bản sửa 1
 
-**Status: Draft (round 1).** Ngày 20/11/2026. **Soạn:** SA-Astra; **đồng tác giả phân tích:** SA-Opus. SA-Opus đã **accept** ở Lượt duyệt 2 (`O\round-1-review-drafts.md`); Astra nhận các cập nhật hệ quả §D. Giữ Draft theo yêu cầu, chưa chuyển Final hoặc phát hành. **Base:** `cefb99386d4845e40bc2d3eabc7d6898d078305d`.
+**Status: Draft (round 1).** Phân tích ngày 20/11/2026, cập nhật 21/11/2026. **Soạn:** SA-Astra; **đồng tác giả phân tích:** SA-Opus. Lượt duyệt 3 yêu cầu giữ lý do trong bảng công bố; Astra đã áp nguyên văn 30/8 ghi chú và bổ sung kiểm T10, chờ kiểm lại riêng điểm này. Chưa chuyển Final hoặc phát hành. **Base:** `cefb99386d4845e40bc2d3eabc7d6898d078305d`.
 
 ## Tóm tắt
 
@@ -9,7 +9,7 @@
 - Ca **ngoại trừ/ngoại trú** đã được hai SA chốt C/CHO_H7, không dùng trước khi đo và ký mức K. Tầng cuối: **A148/B36/C15/D6**, không còn CHO_HOA.
 - **HM N=237**: 120 D6, 10 D7, 107 R1. Bảng hồ sơ vẫn 285 dòng; 48 dòng không tính gồm 46 L3b, chạng vạng và bao tử.
 - Astra đồng ký K2 cho `tanso`, `vaynen`; hai SA nhận K1 cho `baotu`; nhận phương án giữ sáu HM có cờ rà H6. Q-dpv2-2 đến Q-dpv2-6 đã đóng.
-- Chỉ còn **Q-dpv2-1** cho chủ về hậu kiểm riêng. Q-dpv2-7 đóng bằng T-dpv2-9, không gửi SA-Fable; việc đo để khép H7 vẫn để sau.
+- **Không còn câu hỏi mở.** Chủ trả lời “3” cho Q-dpv2-1 ngày 20/11/2026, lưu tại `1734b43`: chuyển phát hiện sang yêu cầu rà/thay chính riêng, không làm trong dự phòng v2. Q-dpv2-7 đã đóng bằng T-dpv2-9; việc đo để khép H7 vẫn để sau.
 - Kiểm LF nguyên mã và kiểm `build_wordlist.py --check` trên tài liệu đã sửa được mô phỏng trong bộ nhớ; byte bảo vệ không đổi. Lỗi CRLF nền và giới hạn build trên bản LF được ghi riêng.
 
 **Quy ước:** `verified` là đối chiếu dữ liệu/mã/hồ sơ; `assumed` là nhận định ngôn ngữ, không phải phép đo nghĩa đỏ. “Cùng đề cử” không phải phê duyệt phát hành. `AT = analyzing-tools`; `U = AT\ho-so\unified`; `O = AT\ho-so\opus\du-phong-v2`; `OE = O\evidence`; `A = AT\ho-so\astra\du-phong-v2`; `E = A\evidence`.
@@ -55,6 +55,8 @@ Nguồn: hai `U\cong-*-v4.tsv`, `E\revision-1-h7-counts.tsv`, `E\revision-1-audi
 ## 2. Bảng tầng theo từng từ
 
 Bảng đầy đủ: [`du-phong-v2-phan-loai.tsv`](du-phong-v2-phan-loai.tsv), **205 dòng**, giữ đúng từ/thứ tự của du-phong.txt. Hai cột ý kiến phản ánh vị trí mới nhất; các phân tích độc lập và diff vòng 1 vẫn giữ làm lịch sử.
+
+**Đã bổ sung lý do công bố:** cột `ghi_chu` có đúng 30 văn bản được chốt ở Lượt duyệt 3 §D, gồm mọi C/D và các đầu mục có quyết định riêng. Khi bỏ hai cột ý kiến để xuất bảng gọn, vẫn sao chép nguyên `ghi_chu`; bảng cảnh báo §11 có 21 dòng C/D và cột Lý do, không chỉ còn mã D8/H5 chung.
 
 | Mốc | A | B | C | D | Chờ hòa |
 |---|---:|---:|---:|---:|---:|
@@ -108,13 +110,17 @@ Bảng hồ sơ [`du-phong-v2-honorable-mentions.tsv`](du-phong-v2-honorable-men
 
 **verified:** N=230 cùng đề cử ban đầu + tần số + sáu mục H6 = **237**. N không còn phụ thuộc một câu hỏi Q-dpv2-6 chưa trả lời.
 
+Tám ghi chú HM (sáu cờ H6, tần số K2, vây cá CHI_BE_MAT) được giữ nguyên trong bảng công bố; 229 mục còn lại ghi `-`. T10 kiểm cả phép chiếu 237 dòng, không nhầm 285 dòng hồ sơ với bảng công bố.
+
 **Lịch sử viết:** cả hai xác nhận 131/132 mục lỗi nghĩa có log v1/v2/v3, riêng mặt khác chỉ có v2/v3 và không có ở danh sách viết lại v1. Khi khôi phục phải kiểm lịch sử đúng từ/quyền mở lượt; không khẳng định cả 132 đã hết hai lượt viết lại. Đợt này không mở viết.
 
 ## 4. Lịch sử đóng câu hỏi và việc còn mở
 
-### 4.1. Q-dpv2-1 — vẫn mở, gửi chủ
+### 4.1. Q-dpv2-1 — đã đóng, D-dpv2-5
 
-Opus muốn ghi nhận rồi hậu kiểm giới hạn; Astra không mở thêm công việc trong đợt này nếu chủ chưa giao. Việc này không chặn ghi nhận/phân loại.
+**Trước:** Opus muốn ghi nhận rồi hậu kiểm giới hạn; Astra không mở thêm công việc trong đợt này nếu chủ chưa giao.
+
+**Quyết định chủ:** chọn phương án **3**, “Yêu cầu rà/thay chính riêng”, ngày 20/11/2026 khoảng 22:40 +07:00. Toàn bộ câu hỏi và Answer nằm ở `1734b43:analyzing-tools/ho-so/unified/du-phong-v2-cau-hoi.md`. Astra kiểm lại và **accept**: họ chòng chành/tròng trành, 632 cặp H5 thô, 1.177 cặp H7 và ca báo tử được bàn giao cho yêu cầu riêng, với P6/P7/phát hành; không mở rộng dự phòng v2 hoặc thay chính tại đây.
 
 **verified:** bộ sinh H5 thô có 632 cặp/474 từ chính. Khảo sát H7 có 1.177 cặp/634 khóa chính đạt mốc PPM nhưng chưa có dòng trong bảng còi; bảng còi có 227 dòng/117 khóa. `E\revision-1-audit.py` tính lại độc lập, khớp tập chứ không chỉ tổng số.
 
@@ -178,9 +184,9 @@ Tất cả mô phỏng của Astra nằm trong bộ nhớ. Checker Python/JS v�
 ## 6. Bước tiếp và bằng chứng
 
 1. Ghi T-dpv2-9 và đóng Q-dpv2-7 theo Lượt duyệt 2 đã accept; không gửi lại các câu đã đóng.
-2. Chủ quyết định có giao hậu kiểm riêng theo Q-dpv2-1; không tự mở quét toàn bộ.
-3. Sau khi chốt phần còn lại, hai SA khóa trạng thái/tầng, chỉ xuất **237 dòng được tính** ra bảng HM công bố, hoàn tất nghiệm thu rồi điều phối commit. Status hiện vẫn Draft.
+2. Bàn giao các phát hiện cho yêu cầu rà/thay chính riêng theo D-dpv2-5; không chạy quét/đo hoặc thay chính trong dự phòng v2.
+3. Giữ các tầng/trạng thái đã thống nhất và chỉ xuất **237 dòng được tính** ra bảng HM công bố ở bước được giao. Hai SA xác nhận bản cập nhật quyết định chủ; điều phối chuyển Final sau sign-off và thực hiện các bước nghiệm thu/commit tương ứng. Status hiện vẫn Draft.
 
-Kế hoạch: [`du-phong-v2-ke-hoach.md`](du-phong-v2-ke-hoach.md). Câu hỏi chỉ còn mở: [`du-phong-v2-cau-hoi.md`](du-phong-v2-cau-hoi.md).
+Kế hoạch: [`du-phong-v2-ke-hoach.md`](du-phong-v2-ke-hoach.md). Tệp câu hỏi (không còn câu mở): [`du-phong-v2-cau-hoi.md`](du-phong-v2-cau-hoi.md).
 
-Evidence bản sửa: `E\revision-1-audit.py`, `revision-1-audit.json`, `revision-1-h7-counts.tsv`, `revision-1-h6-six-votes.tsv`, `revision-1-chu-ky-astra.tsv`, `revision-1-h7-ngoaitru.tsv`; code dựng/kiểm `E\joint-build.py`, các `joint-*.json` và `joint-proof.log`. Nội dung câu hỏi trước khi rút được lưu ở `E\revision-1-question-history.json` vì nháp gốc chưa commit.
+Evidence bản sửa: `E\revision-1-audit.py`, `revision-1-audit.json`, `revision-1-h7-counts.tsv`, `revision-1-h6-six-votes.tsv`, `revision-1-chu-ky-astra.tsv`, `revision-1-h7-ngoaitru.tsv`; code dựng/kiểm `E\joint-build.py`, các `joint-*.json` và `joint-proof.log`. Các bản lưu câu hỏi cũ ở `E\revision-1-question-history.json` được giữ làm lịch sử; Q&A cuối của chủ nằm trong `1734b43`. Status vẫn Draft, chưa thực hiện yêu cầu riêng.

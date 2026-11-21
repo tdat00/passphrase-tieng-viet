@@ -1,0 +1,41 @@
+== Dữ liệu cuối
+DAT | TSV | hai TSV không đổi so với 1734b43
+DAT | TSV | tầng A148/B36/C15/D6, không CHO_HOA | {'A': 148, 'B': 36, 'C': 15, 'D': 6}
+DAT | TSV | không còn tranh chấp hay câu hỏi trong dự phòng
+DAT | TSV | HM 285 dòng hồ sơ, N = 237
+DAT | D-L2 | ngoại trừ theo Lượt duyệt 2 §D
+DAT | E1-L2 | ba D có lại nguồn/câu kết
+DAT | E2-L2 | bỏ chữ 'Astra:' lặp
+== Câu hỏi và Decisions
+DAT | Q | tệp câu hỏi chỉ còn 'Không còn câu hỏi mở.'
+DAT | Q | 1734b43 có Answer 3 của chủ cho Q-dpv2-1
+Decisions: D-dpv2-1, D-dpv2-2, D-dpv2-3, D-dpv2-4, D-dpv2-5, T-dpv2-1, T-dpv2-2, T-dpv2-3, T-dpv2-4, T-dpv2-5, T-dpv2-6, T-dpv2-7, T-dpv2-8, T-dpv2-9
+DAT | DEC | mã duy nhất, đủ D-dpv2-1..5 và T-dpv2-1..9
+DAT | DEC | mỗi hàng đủ 5 ô, có người quyết, ngày, commit nguồn
+DAT | DEC | D-dpv2-* do chủ quyết, T-dpv2-* do hai SA
+DAT | DEC | commit 1734b43 tồn tại
+DAT | DEC | commit cefb993 tồn tại
+DAT | DEC | không còn 'pending' hay 'CHUA_COMMIT' trong kế hoạch
+DAT | OPEN | kế hoạch và báo cáo ghi không còn câu hỏi mở
+== Điểm neo cho người triển khai
+DAT | NEO | WordListAnalyze.md: đúng một dòng '> - **Dự phòng:**'
+DAT | NEO | WordListAnalyze.md: đúng một dòng mục lục 11
+DAT | NEO | WordListAnalyze.md: §11 là mục cuối
+DAT | NEO | README: đúng một hàng du-phong.txt trong bảng tệp
+DAT | NEO | README: có tiêu đề '## Cập nhật danh sách'
+== Số liệu người triển khai phải ra (từ hai TSV hồ sơ)
+BANG_TANG A: OK không-F 109, OK-F 39, tổng 148
+BANG_TANG B: OK không-F 0, OK-F 36, tổng 36
+BANG_TANG C: OK không-F 13, OK-F 2, tổng 15
+BANG_TANG D: OK không-F 6, OK-F 0, tổng 6
+BANG_CANH_BAO: 21 mục C/D; mục A/B có trạng thái riêng: không có
+trang_thai_h dự phòng: {'HO_SO_LICH_SU_CHUA_PHE_DUYET_THAY': 197, 'KHONG_DUNG_H5_H9': 6, 'CHO_H5': 1, 'CHO_H7': 1}
+BANG_NHOM_HM: {('D6_CUOI', 'HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI'): 120, ('R1', 'HO_SO_R1_LICH_SU'): 106, ('D7_CUOI', 'HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI'): 10, ('R1', 'HO_SO_R1_LICH_SU;H7_K2'): 1}
+BANG_TU_HM: 237 dòng; độ dài dieu_kien tối đa 159 ký tự, trung vị 93
+bang_chung dự phòng: độ dài tối đa 560 ký tự; có dấu '\\': 205 dòng
+== Vùng bảo vệ
+DAT | B1 | SHA byte index.html
+DAT | B1 | SHA byte thong-tin.html
+DAT | B1 | SHA byte analyzing-tools/wordlist.txt
+DAT | B1 | chỉ tệp hồ sơ bị sửa so với 1734b43 | 8
+Tổng: 0 mục chưa đạt.

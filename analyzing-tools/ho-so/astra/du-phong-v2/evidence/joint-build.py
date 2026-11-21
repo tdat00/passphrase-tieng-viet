@@ -56,6 +56,8 @@ A: hồ sơ ưu tiên chuẩn bị thay. B: còn thiếu câu giải nghĩa. C: 
 
 Chi tiết từng từ và căn cứ nằm trong [bảng phân loại](analyzing-tools/du-phong-phan-loai.tsv).
 
+Lý do ngữ nghĩa/độ quen là nhận định đã thống nhất của hai SA, không phải tỷ lệ gõ sai đã đo. Tổng chứng liệu là tổng lượt sạch phụ đề/web và số câu Leipzig/Tatoeba; đây là chỉ báo biên tập, không thay mã H8. Trong lý do H5, lượt sạch chỉ hai kho OPUS. Các cụm dùng từ nào trước phản ánh hạng S4 hiện tại, không tạo quy tắc ưu tiên mới.
+
 {{BANG_CANH_BAO}}
 
 ### 11.3. Ngăn hạn mức và quy tắc thay thế
@@ -123,14 +125,24 @@ RESERVE_COLUMNS = [
     "tu", "khoa", "lop", "ngan", "tang_opus", "tang_astra", "tang_chung",
     "tranh_chap", "ma_van_de", "cau_hoi", "trang_thai_h", "giai_nghia",
     "luot_viet", "sha256_giai_nghia", "h8", "F", "diem", "thay_duoc",
-    "con_thieu", "y_kien_opus", "y_kien_astra", "bang_chung", "xac_minh",
+    "con_thieu", "ghi_chu", "y_kien_opus", "y_kien_astra", "bang_chung", "xac_minh",
 ]
 HM_COLUMNS = [
     "tu", "khoa", "nhom", "nhan_ho_so", "lop", "xac_minh_lop",
     "de_cu_opus", "de_cu_astra", "ket_luan_nhap", "tranh_chap", "cau_hoi",
     "trang_thai_h", "ngan_du_kien", "h8", "sub_sach", "web_sach", "leipzig",
     "tatoeba", "F", "diem", "nguon", "ly_do_chua_chon", "dieu_kien",
-    "y_kien_opus", "y_kien_astra", "bang_chung", "xac_minh",
+    "ghi_chu", "y_kien_opus", "y_kien_astra", "bang_chung", "xac_minh",
+]
+PUBLIC_RESERVE_COLUMNS = [
+    "tu", "khoa", "lop", "ngan", "tang", "trang_thai_h", "ma_van_de", "giai_nghia",
+    "luot_viet", "sha256_giai_nghia", "h8", "F", "diem", "thay_duoc", "con_thieu",
+    "ghi_chu", "bang_chung",
+]
+PUBLIC_HM_COLUMNS = [
+    "tu", "khoa", "nhom", "nhan_ho_so", "lop", "xac_minh_lop", "trang_thai_h",
+    "ngan_du_kien", "h8", "sub_sach", "web_sach", "leipzig", "tatoeba", "F", "diem",
+    "nguon", "ly_do_chua_chon", "dieu_kien", "ghi_chu", "bang_chung",
 ]
 
 
@@ -169,6 +181,48 @@ def catalog_artifacts():
     return len(rows)
 
 
+def public_notes():
+    source = OPUS / "round-1-review-drafts.md"
+    notes = {"reserve": {}, "hm": {}}
+    active, kind = False, None
+    for line_no, line in enumerate(read(source).splitlines(), 1):
+        if line == "## Lượt duyệt 3 (ký kế hoạch)":
+            active = True
+        if not active:
+            continue
+        if line.startswith("- **Văn bản `ghi_chu` cho bảng dự phòng**"):
+            kind = "reserve"
+        elif line.startswith("- **Văn bản `ghi_chu` cho bảng HM**"):
+            kind = "hm"
+        elif line.startswith("### E."):
+            break
+        if kind and line.startswith("| "):
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if len(cells) != 2 or cells[0] == "Từ":
+                continue
+            for word in cells[0].split(", "):
+                assert word not in notes[kind]
+                notes[kind][word] = {"ghi_chu": cells[1],
+                                     "nguon": str(source.relative_to(ROOT)) + ":" + str(line_no)}
+    assert len(notes["reserve"]) == 30 and len(notes["hm"]) == 8
+    rows = [{"pham_vi": kind, "tu": word, **entry} for kind in ("reserve", "hm")
+            for word, entry in sorted(notes[kind].items(), key=lambda item: o1(item[0]))]
+    save_tsv(EV / "public-ghi-chu.tsv", ["pham_vi", "tu", "ghi_chu", "nguon"], rows)
+    return notes
+
+
+def public_projection(reserve, hm):
+    reserve_out = [
+        {c: row["tang_chung"] if c == "tang" else row[c] for c in PUBLIC_RESERVE_COLUMNS}
+        for row in reserve
+    ]
+    hm_out = [
+        {c: row[c] for c in PUBLIC_HM_COLUMNS}
+        for row in hm if row["ket_luan_nhap"] == "CUNG_DE_CU_CHUA_PHAT_HANH"
+    ]
+    return reserve_out, hm_out
+
+
 def official_h8(data):
     gates = {}
     for author in ("opus", "astra"):
@@ -204,6 +258,7 @@ def h8_replay(source, rules):
 
 def build():
     data = load()
+    notes = public_notes()
     h8 = official_h8(data)
     rules = data["rules"]
     opus_res = {r["tu"]: r for r in tsv(OPUS / "evidence" / "du-phong-205-bac-sau-soat-cheo-opus.tsv")}
@@ -306,6 +361,7 @@ def build():
             "h8": h8_code, "F": label["F"], "diem": label["diem"],
             "thay_duoc": "OK_F→F khi Q3 đang đầy" if label["lop"] == "F" else "OK_khong_F→C/H/K/F nếu các cổng đủ",
             "con_thieu": missing, "y_kien_opus": o_note, "y_kien_astra": a_note,
+            "ghi_chu": notes["reserve"].get(word, {}).get("ghi_chu", "-"),
             "bang_chung": ";".join(x for x in (
                 o["_ref"], a["_ref"], label["_ref"], h8_ref, original["p4_ref"],
                 review_ref + ":64" if word in H5_RESOLVED else None,
@@ -313,6 +369,7 @@ def build():
                 new_signatures[word]["_ref"] if word == "vậy nên" else None,
                 new_h7["_ref"] if word == "ngoại trừ" else None,
                 accepted_h7_ref if word == "ngoại trừ" else None,
+                notes["reserve"].get(word, {}).get("nguon"),
             ) if x),
             "xac_minh": "verified:nhãn/số/hash/hồ sơ; assumed:tầng mới và ngữ nghĩa; chưa có chữ ký bản chung",
         })
@@ -414,13 +471,15 @@ def build():
                 (rank["nhan"] + ("_F" if rank["lop"] == "F" else "_KHONG_F")),
             "h8": h8_code, **numbers, "F": rank.get("F", "-"), "diem": rank.get("diem", "-"),
             "nguon": origin, "ly_do_chua_chon": reason, "dieu_kien": missing,
+            "ghi_chu": notes["hm"].get(word, {}).get("ghi_chu", "-"),
             "y_kien_opus": o_position, "y_kien_astra": a_position,
             "bang_chung": ";".join(x for x in (o.get("_ref"), a["_ref"], source_ref, h8_ref,
                                                  rank.get("_ref"), removed.get(word, {}).get("_ref"),
                                                  review_ref + ":101" if word in H6_FLAGGED else None,
                                                  review_ref + ":83" if provisional or word == "chạng vạng" else None,
                                                  review_ref + ":90" if word in {"bao tử", "tần số"} else None,
-                                                 new_signatures[word]["_ref"] if word == "tần số" else None) if x),
+                                                 new_signatures[word]["_ref"] if word == "tần số" else None,
+                                                 notes["hm"].get(word, {}).get("nguon")) if x),
             "xac_minh": "verified:số/khóa/nguồn; assumed:đề cử và ngữ nghĩa; không phải phê duyệt phát hành",
         })
     assert len(reserve_rows) == 205 and len(hm_rows) == 285
@@ -431,6 +490,24 @@ def build():
     assert Counter(r["tang_chung"] for r in reserve_rows) == {"A": 148, "B": 36, "C": 15, "D": 6}
     ngoai = next(r for r in reserve_rows if r["tu"] == "ngoại trừ")
     assert ngoai["trang_thai_h"] == "CHO_H7" and ngoai["ma_van_de"] == "H7;D8_CHUA_CO"
+    expected_notes = {r["tu"] for r in reserve_rows if r["tang_chung"] in {"C", "D"}} | SOFT_RESOLVED | {"vậy nên"}
+    assert set(notes["reserve"]) == expected_notes
+    assert set(notes["hm"]) == H6_FLAGGED | {"tần số", "vây cá"}
+    public_reserve, public_hm = public_projection(reserve_rows, hm_rows)
+    assert sum(r["ghi_chu"] != "-" for r in public_reserve) == 30
+    assert sum(r["ghi_chu"] == "-" for r in public_reserve) == 175
+    assert sum(r["ghi_chu"] != "-" for r in public_hm) == 8
+    assert sum(r["ghi_chu"] == "-" for r in public_hm) == 229
+    for kind, rows in (("reserve", public_reserve), ("hm", public_hm)):
+        for row in rows:
+            assert row["ghi_chu"] == notes[kind].get(row["tu"], {}).get("ghi_chu", "-")
+    for first, second in (("lỗ lãi", "lời lỗ"), ("mỏng dính", "mỏng tanh")):
+        left, right = (data["labels_by_word"][w] for w in (first, second))
+        assert left["nhan"] == right["nhan"] == "OK" and float(left["diem"]) > float(right["diem"])
+    for word, expected_total in {"ăn nhịp": 0, "cả nghĩ": 2, "chễm chệ": 3, "cửu chương": 6,
+                                 "tạnh ráo": 2, "thẳng đơ": 1, "tối mù": 2}.items():
+        assert sum(int(data["by_word"][word][k]) for k in ("sub_sach", "web_sach", "leipzig", "tatoeba")) == expected_total
+    assert int(data["by_word"]["hì hụi"]["sub_sach"]) == int(data["by_word"]["hì hụi"]["web_sach"]) == 0
     all_new_keys = [r["khoa"] for r in reserve_rows + hm_rows]
     assert len(set(all_new_keys)) == 490
     assert not set(all_new_keys) & {key(w) for w in data["main"]}
@@ -456,9 +533,15 @@ def build():
         "hm_joint_states": dict(Counter(r["ket_luan_nhap"] for r in hm_rows)),
         "hm_counted_N": len(counted_hm), "hm_counted_groups": dict(Counter(r["nhom"] for r in counted_hm)),
         "hm_counted_h8": dict(Counter(r["h8"] for r in counted_hm)),
+        "public_notes": {"reserve_nonempty": 30, "reserve_dash": 175, "hm_nonempty": 8, "hm_dash": 229,
+                         "C_D_warning_rows": 21, "evidence_totals_and_S4_verified": True,
+                         "source": "Opus Lượt duyệt 3 §D; giữ nguyên văn"},
         "reserve_agreement_before_new_Q7": {"A": 149, "B": 36, "C": 14, "D": 6},
-        "closed_questions": [f"Q-dpv2-{i}" for i in range(2, 8)],
-        "open_questions": ["Q-dpv2-1"],
+        "closed_questions": [f"Q-dpv2-{i}" for i in range(1, 8)],
+        "open_questions": [],
+        "owner_Q1_answer": {"option": "3", "source_commit": "1734b43",
+                            "decision": "D-dpv2-5", "separate_main_list_request": True,
+                            "executed_within_du_phong_v2": False},
         "ngoaitru_decision": "T-dpv2-9: C/CHO_H7, không dùng trước khi đo tỷ lệ nghĩa và hai SA ký mức K",
         "hm_h8": dict(Counter(r["h8"] for r in hm_rows)),
         "hm_original_attempts": dict(Counter(",".join(r["_version"] for r in data["d6"][w]) for w in removed)),
@@ -493,9 +576,11 @@ def proposed_document(data, reserve, hm):
     tiers = Counter(r["tang_chung"] for r in reserve)
     tier_order = ["A", "B", "C", "D"] + (["CHO_HOA"] if tiers["CHO_HOA"] else [])
     tier_table = "| Tầng | Số từ trong nháp |\n|---|---:|\n" + "\n".join(f"| {k} | {tiers[k]} |" for k in tier_order)
-    warning_table = "| Từ | Trạng thái nháp | Còn thiếu |\n|---|---|---|\n" + "\n".join(
-        f"| {r['tu']} | {r['tang_chung']} / {r['trang_thai_h']} | {r['con_thieu']} |"
-        for r in reserve if r["tang_chung"] in ("C", "D", "CHO_HOA")
+    warning_rows = [r for r in reserve if r["tang_chung"] in ("C", "D")]
+    assert len(warning_rows) == 21 and all(r["ghi_chu"] != "-" for r in warning_rows)
+    warning_table = "| Từ | Tầng | Lý do | Việc còn thiếu |\n|---|---|---|---|\n" + "\n".join(
+        f"| {r['tu']} | {r['tang_chung']} | {r['ghi_chu']} | {r['con_thieu']} |"
+        for r in warning_rows
     )
     section11 = SECTION11.replace("{{BANG_TANG}}", tier_table).replace("{{BANG_CANH_BAO}}", warning_table)
     section11 = section11.replace("{{DU_PHONG_205}}", "\n".join(data["reserve"]))
@@ -522,6 +607,44 @@ def proof(data, reserve, hm, summary):
     for template in (HEADER, TOC, SECTION11, SECTION12, README_ROWS, README_SECTION):
         assert template.strip() in plan_text, "Mẫu trong kế hoạch khác mẫu được mô phỏng"
     qtext = JOINT_FILES["cau-hoi.md"].read_text(encoding="utf-8")
+    assert "Không còn câu hỏi mở." in qtext
+    assert not any(line.startswith("## Q-dpv2-") for line in qtext.splitlines())
+    notes = public_notes()
+    for kind in notes.values():
+        for entry in kind.values():
+            assert entry["ghi_chu"] in plan_text, "Kế hoạch thiếu nguyên văn ghi_chu đã chốt"
+    plan_notes = {"reserve": {}, "hm": {}}
+    notes_block = plan_text.split("#### 4.2.1. Văn bản ghi_chu đã chốt", 1)[1].split("### 4.3.", 1)[0]
+    kind = "reserve"
+    for line in notes_block.splitlines():
+        if line.startswith("**Tám dòng HM**"):
+            kind = "hm"
+        if line.startswith("| "):
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if len(cells) == 2 and cells[0] != "Từ":
+                for word in cells[0].split(", "):
+                    plan_notes[kind][word] = cells[1]
+    assert plan_notes == {kind: {w: r["ghi_chu"] for w, r in words.items()} for kind, words in notes.items()}
+    for path in (JOINT_FILES["phan-loai.tsv"], JOINT_FILES["honorable-mentions.tsv"]):
+        git_path = str(path.relative_to(ROOT)).replace("\\", "/")
+        previous = subprocess.check_output(["git", "show", "1734b43:" + git_path],
+                                           cwd=ROOT, text=True, encoding="utf-8")
+        before = list(csv.DictReader(io.StringIO(previous), delimiter="\t"))
+        with path.open(encoding="utf-8", newline="") as stream:
+            after = list(csv.DictReader(stream, delimiter="\t"))
+        assert [r["tu"] for r in before] == [r["tu"] for r in after]
+        for old, new in zip(before, after):
+            for column, value in old.items():
+                if column == "bang_chung":
+                    assert new[column].startswith(value), (old["tu"], column)
+                else:
+                    assert new[column] == value, (old["tu"], column)
+    owner_record = subprocess.check_output(
+        ["git", "show", "1734b43:analyzing-tools/ho-so/unified/du-phong-v2-cau-hoi.md"],
+        cwd=ROOT, text=True, encoding="utf-8",
+    )
+    assert "**Answer (owner, 2026-11-20):** 3" in owner_record
+    assert "**Yêu cầu rà/thay chính riêng:**" in owner_record
     for row in reserve + hm:
         if row["cau_hoi"]:
             for question in row["cau_hoi"].split(";"):
@@ -529,6 +652,10 @@ def proof(data, reserve, hm, summary):
         if row["tranh_chap"] != "KHONG":
             assert row["cau_hoi"], row["tu"]
     preview = proposed_document(data, reserve, hm)
+    assert "| Từ | Tầng | Lý do | Việc còn thiếu |" in preview
+    for row in reserve:
+        if row["tang_chung"] in {"C", "D"}:
+            assert f"| {row['tu']} | {row['tang_chung']} | {row['ghi_chu']} | {row['con_thieu']} |" in preview
     canonical = subprocess.check_output(
         ["git", "show", summary["base_commit"] + ":analyzing-tools/wordlist.txt"], cwd=ROOT)
     assert canonical == (TOOLS / "wordlist.txt").read_bytes().replace(b"\r\n", b"\n")
@@ -630,7 +757,11 @@ runpy.run_path(str(script),run_name='__main__')
         "build_LF_baseline_and_edited_same_known_error": True,
         "legacy_files_unchanged": True, "legacy_files_sha256_bytes": legacy,
         "question_links_valid": True, "inputs_still_match": len(INPUTS),
+        "owner_Q1_answer_commit_verified": "1734b43",
+        "open_questions": [],
         "publication_templates_match_plan": True,
+        "T10_public_reasons": summary["public_notes"],
+        "draft_data_unchanged_except_added_reasons_and_appended_refs": True,
         "draft_output_sha256_bytes": {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in JOINT_FILES.values()},
         "document_format": "UTF-8 không BOM, CRLF, không khoảng trắng cuối dòng, có dòng cuối",
     }

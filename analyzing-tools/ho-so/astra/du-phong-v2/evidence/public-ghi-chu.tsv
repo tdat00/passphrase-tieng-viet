@@ -1,0 +1,39 @@
+pham_vi	tu	ghi_chu	nguon
+reserve	ăn nhịp	C: chứng liệu yếu — tổng chứng liệu 0 ở bốn kho; H8 theo ngoại lệ hai chữ ký	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:503
+reserve	ăn trầu	A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:504
+reserve	bèo bọt	A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:504
+reserve	cả nghĩ	C: H8 CHI_BE_MAT — chỉ đủ mức nhờ lượt bề mặt; tổng chứng liệu 2 ở bốn kho	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:505
+reserve	chán phèo	D: H5c — cùng từ với chán phè; chán phèo không có lượt web nên không thể đạt ≥ 95% ở cả hai kho	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:506
+reserve	chấp nhặt	A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:504
+reserve	chễm chệ	C: chứng liệu yếu — tổng chứng liệu 3 ở bốn kho	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:507
+reserve	chọc lét	D: H5c — cùng từ với chọc léc (như họ cù lét/cù léc); chọc lét không có lượt web nên không thể đạt ≥ 95%	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:508
+reserve	cửu chương	C: H8 YEU — tổng chứng liệu 6 ở bốn kho	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:509
+reserve	giở giọng	A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:504
+reserve	giở quẻ	A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:504
+reserve	hì hụi	D: H5c — cùng từ với hè hụi; hì hụi không có lượt sạch nào nên không thể đạt ≥ 95% (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:510
+reserve	loằng ngoằng	C: chờ H5 — dạng loằn ngoằn (khác khóa) chưa xác nhận cùng từ và chưa đếm	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:511
+reserve	lỗi hẹn	C: dễ lẫn với lỡ hẹn (danh sách chính) cả nghĩa lẫn âm	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:512
+reserve	lời lỗ	C: H8 YEU; gần nghĩa lỗ lãi (dự phòng) — dùng lỗ lãi trước	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:513
+reserve	mỏng tanh	C: gần nghĩa mỏng dính (dự phòng) — dùng mỏng dính trước	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:514
+reserve	mụ mị	A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:504
+reserve	ngoại trừ	C: chờ H7 — ngoại trú có nghĩa điều trị (H6.5, tiền lệ nội trú), PPM gộp 1,215 ≥ 0,3; đo tỷ lệ nghĩa rồi hai SA ký mức K (T-dpv2-9)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:515
+reserve	nhão nhẹt	D: H5c — cùng từ với nhão nhoẹt; không dạng nào đạt ≥ 95% với ≥ 20 lượt (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:516
+reserve	nhão nhoẹt	D: H5c — cùng từ với nhão nhẹt; không dạng nào đạt ≥ 95% với ≥ 20 lượt (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:517
+reserve	non choẹt	A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:504
+reserve	tạnh ráo	C: H8 YEU — tổng chứng liệu 2 ở bốn kho	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:518
+reserve	thẳng đơ	C: H8 YEU — tổng chứng liệu 1 ở bốn kho	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:519
+reserve	thụp	C: từ đơn, thường cần cụm đi kèm để nhận ra	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:520
+reserve	tía lia	A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:504
+reserve	tối mù	C: H8 CHI_BE_MAT — chỉ đủ mức nhờ lượt bề mặt; tổng chứng liệu 2 ở bốn kho	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:521
+reserve	tròng trành	D: H5c — cùng từ với chòng chành (danh sách chính); cả họ dưới 20 lượt mỗi kho; mục chính chuyển sang yêu cầu riêng (D-dpv2-5)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:522
+reserve	trở lên	C: chỉ khác trở nên (danh sách chính) ở l/n, dễ gõ nhầm khóa; chưa có câu	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:523
+reserve	tuổi xanh	C: sắc thái văn chương hơn giao tiếp thường	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:524
+reserve	vậy nên	B: H7 K2 — vảy nến hiếm (PPM gộp 0,253); hai SA ký không tự động chặn (T-dpv2-7)	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:525
+hm	cơ quan	T-dpv2-8: rà H6.3 (nghĩa cơ quan nhà nước) trước khi dùng	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:531
+hm	dự bị	T-dpv2-8: rà H6.1 (nghĩa quân sự) trước khi dùng	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:532
+hm	đại lục	T-dpv2-8: rà H6.3 (cách dùng Trung Quốc đại lục) trước khi dùng	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:533
+hm	lên chức	T-dpv2-8: rà H6.3 (quyền lực nhà nước) trước khi dùng	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:534
+hm	lực lượng	T-dpv2-8: rà H6.1 (liên tưởng quân sự) trước khi dùng	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:535
+hm	tần số	T-dpv2-7: H7 K2 — tận số hiếm (PPM gộp 0,207); hai SA ký không tự động chặn	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:536
+hm	truy tìm	T-dpv2-8: rà H6.2 (ngữ cảnh tố tụng) trước khi dùng	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:537
+hm	vây cá	H8 CHI_BE_MAT; đã đọc kiểm đúng nghĩa ở P4	analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md:538

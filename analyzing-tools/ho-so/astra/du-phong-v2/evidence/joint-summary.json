@@ -42,6 +42,15 @@
     "MANH": 236,
     "CHI_BE_MAT": 1
   },
+  "public_notes": {
+    "reserve_nonempty": 30,
+    "reserve_dash": 175,
+    "hm_nonempty": 8,
+    "hm_dash": 229,
+    "C_D_warning_rows": 21,
+    "evidence_totals_and_S4_verified": true,
+    "source": "Opus Lượt duyệt 3 §D; giữ nguyên văn"
+  },
   "reserve_agreement_before_new_Q7": {
     "A": 149,
     "B": 36,
@@ -49,6 +58,7 @@
     "D": 6
   },
   "closed_questions": [
+    "Q-dpv2-1",
     "Q-dpv2-2",
     "Q-dpv2-3",
     "Q-dpv2-4",
@@ -56,9 +66,14 @@
     "Q-dpv2-6",
     "Q-dpv2-7"
   ],
-  "open_questions": [
-    "Q-dpv2-1"
-  ],
+  "open_questions": [],
+  "owner_Q1_answer": {
+    "option": "3",
+    "source_commit": "1734b43",
+    "decision": "D-dpv2-5",
+    "separate_main_list_request": true,
+    "executed_within_du_phong_v2": false
+  },
   "ngoaitru_decision": "T-dpv2-9: C/CHO_H7, không dùng trước khi đo tỷ lệ nghĩa và hai SA ký mức K",
   "hm_h8": {
     "MANH": 238,
@@ -94,7 +109,7 @@
     "WordListAnalyze.md section10 bytes": "4b91fac689e70ccb0715b92b49efe4305fbb19c3bc90dd449e72fba72889f6fa"
   },
   "draft_tables_sha256_LF": {
-    "du-phong-v2-phan-loai.tsv": "398253dd39d3c5431fc54d51eda9e57b2481219dc10b2c22f6a0b8b652ec355e",
-    "du-phong-v2-honorable-mentions.tsv": "947681d3e6e11a2882f98f48a35c28959a592551b02e8a14901dd55ba1c5dfd5"
+    "du-phong-v2-phan-loai.tsv": "cfa62f6614fd596ac7685ac68396431e546d193e37270d7012dd23d613c9ee9d",
+    "du-phong-v2-honorable-mentions.tsv": "d9e8f4dbc7a581e4d1598787f4f2ed3ee26ad6192b9fed27785cbd1902e7cc22"
   }
 }

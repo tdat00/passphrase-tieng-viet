@@ -429,3 +429,156 @@ Chạy trong `OE`:
 3. `python kiem-dau-ra.py`: kiểm định dạng mọi tệp trong `O`.
 
 Lượt này không tải và không lưu văn bản kho, định nghĩa hay câu giải nghĩa. Trang Wiktionary chỉ được đọc để ghi quan hệ nghĩa.
+
+## Lượt duyệt 3 (ký kế hoạch)
+
+**Ngày:** 21/11/2026. **Bản được duyệt:** năm tệp `U\du-phong-v2-*` ở working tree. So với `1734b43`, chỉ kế hoạch, báo cáo chung và tệp câu hỏi đổi; hai TSV không đổi. Opus cũng đọc nhật ký `A\round-1-revision-1.md`.
+
+**Kết luận: changes requested.** Trả lời của chủ được ghi đúng (mục A). Dữ liệu, Decisions, điểm neo và tương thích checker đều đạt (mục B, C). Còn **một thay đổi bắt buộc**: hai bảng công bố và bảng cảnh báo ở §11 chưa mang lý do tầng của các mục C và D (mục D). Opus sẽ ký Final ngay khi thay đổi này được áp; chỉ cần kiểm lại riêng điểm đó.
+
+### A. Trả lời của chủ cho Q-dpv2-1: accept
+
+- Câu trả lời "3" tại `1734b43:analyzing-tools/ho-so/unified/du-phong-v2-cau-hoi.md` khớp nguyên văn phương án 3: mở yêu cầu riêng để rà/thay danh sách chính, không làm trong dự phòng v2 (V).
+- D-dpv2-5 ghi đúng ý đó. Hệ quả đã có đủ trong kế hoạch: một gạch ở §2 "Ngoài phạm vi", rủi ro ở §11, bước 2 và 6 ở §12, các dòng OI-RA-THAY-CHINH và OI-SCAN ở §13. Báo cáo chung §4.1 ghi quyết định; tệp câu hỏi ghi "Không còn câu hỏi mở." (V).
+- Không cần hỏi thêm chủ. Phạm vi và chi phí của yêu cầu riêng sẽ được chốt khi yêu cầu đó được mở, ngoài kế hoạch này.
+
+### B. Kiểm trạng thái cuối
+
+Lệnh `python kiem-ky-ke-hoach.py` (chạy trong `OE`) → `OE\kiem-ky-ke-hoach.log`: 0 mục chưa đạt (V).
+
+- **Dữ liệu:**
+  - hai TSV không đổi so với `1734b43`; tầng A148/B36/C15/D6, không còn CHO_HOA, tranh chấp hay câu hỏi;
+  - HM có 285 dòng hồ sơ, N = 237;
+  - dòng *ngoại trừ* đúng Lượt duyệt 2 §D; gợi ý E1 và E2 của lượt 2 đã áp.
+- **Decisions:**
+  - 14 hàng (D-dpv2-1..5, T-dpv2-1..9), mã duy nhất, đủ năm ô;
+  - D-dpv2-* do chủ quyết, T-dpv2-* do hai SA quyết;
+  - commit `1734b43` và `cefb993` tồn tại; không còn `pending` hay `CHUA_COMMIT`.
+- **Điểm neo cho người triển khai:** mỗi neo xuất hiện đúng một lần.
+  - Trong `WordListAnalyze.md`: dòng `> - **Dự phòng:**` và dòng 11 của mục lục; §11 là mục cuối.
+  - Trong `AT\README.md`: hàng `du-phong.txt` và tiêu đề `## Cập nhật danh sách`.
+- **Vùng bảo vệ:** SHA byte của ba tệp chính đúng; chỉ tệp hồ sơ bị sửa.
+- **Mô phỏng lại** (`mo-phong-ke-hoach.py --nhan ky-3`), kết quả trùng nền ở cả hai chế độ:
+  - bản LF: check 0 lỗi, verify 0 lỗi, build `ValueError`;
+  - bản CRLF: check C1, verify C1 + 2×C8, build đạt.
+
+### C. Kế hoạch đã đủ để triển khai chưa
+
+| Phần | Kết luận | Ghi chú |
+|---|---|---|
+| Gạch đầu dòng và mục lục của `WordListAnalyze.md` | Đủ | Văn bản chính xác; neo duy nhất |
+| §11–§12 | Đủ, trừ `BANG_CANH_BAO` | Mẫu cố định; token tất định. Số người triển khai phải ra được nêu sau bảng này |
+| `AT\README.md` | Đủ | Hàng thay, hai hàng mới và mục mới đều có văn bản chính xác |
+| Hai TSV mới ở `AT` | Thiếu lý do tầng | Thay đổi bắt buộc D.1 |
+| `manifest.json` | Đủ | Trường thay, trường giữ và cách băm đã rõ; số cuối lấy từ TSV |
+| Nghiệm thu | Đủ, cần thêm một kiểm | Thêm T10 (D.1) |
+| Decisions | Nhất quán | Xem mục B |
+| Câu hỏi mở | Không còn | |
+
+Số người triển khai phải ra (V, `OE\kiem-ky-ke-hoach.log`):
+
+- `BANG_TANG` (OK không-F / OK-F / tổng): A 109/39/148, B 0/36/36, C 13/2/15, D 6/0/6.
+- `BANG_CANH_BAO`: 21 dòng C/D. Không có mục A/B nào mang trạng thái riêng.
+- `BANG_NHOM_HM`: 120 D6_CUOI, 10 D7_CUOI, 106 R1, và 1 R1 có H7_K2.
+- `BANG_TU_HM`: 237 dòng.
+
+### D. Thay đổi bắt buộc
+
+**1. Lý do tầng phải có trong bảng công bố và trong §11.**
+
+- **Vấn đề:**
+  - Bảng công bố `AT\du-phong-phan-loai.tsv` bỏ hai cột ý kiến, và kế hoạch §4.2 (dòng 113) chỉ định nghĩa `ghi_chu` cho các dòng có câu hỏi đã đóng.
+  - Vì vậy sáu mục C không còn lý do tầng nào trong cột công bố: `ma_van_de` của chúng chỉ là `D8_CHUA_CO`, chung cho mọi dòng. Đó là *chễm chệ, lỗi hẹn, mỏng tanh, thụp, tuổi xanh* và *trở lên* (mục này còn thêm `CHUA_VIET`). *lời lỗ* mất ý gần nghĩa với *lỗ lãi*.
+  - Sáu mục D chỉ có mã `H5`, không nêu từ cùng họ.
+  - `BANG_CANH_BAO` (§5.2, dòng 242) không có cột lý do.
+  - Chủ yêu cầu phân tầng kèm lý do, và hai SA đã thống nhất "thêm một bảng ngắn cho D, C có lý do" (`O\round-1-cross-review.md:129`). Theo kế hoạch hiện tại, lý do chỉ còn truy được qua con trỏ `bang_chung` vào hồ sơ.
+- **Sửa kế hoạch:**
+  - **§4.2:** thay gạch `ghi_chu` của bảng dự phòng bằng: "`ghi_chu`: lý do tầng/trạng thái đã thống nhất, một câu ngắn, không trích nguồn. Bắt buộc với mọi dòng C, D và mọi dòng có quyết định T-dpv2-*; nêu từ đối chứng khi lý do là H5, dễ lẫn hoặc gần nghĩa. Các dòng khác ghi `-`. Văn bản lấy đúng bảng ở `O\round-1-review-drafts.md`, Lượt duyệt 3 §D." Định nghĩa `ghi_chu` của bảng HM theo cùng nguyên tắc.
+  - **§5.2:** thay quy tắc `BANG_CANH_BAO` bằng: "21 dòng C/D theo O1; cột `Từ | Tầng | Lý do | Việc còn thiếu`; Lý do = `ghi_chu`, Việc còn thiếu = `con_thieu`. Không viết giải nghĩa." Nếu `E\joint-build.py` dựng bảng này thì cập nhật cho khớp và giữ `--prove` đạt.
+  - **§10:** thêm T10: "`du-phong-phan-loai.tsv` có 30 dòng mang `ghi_chu` đúng bảng đã chốt (8 A, 1 B, 15 C, 6 D) và 175 dòng `-`; `honorable-mentions.tsv` có 8 dòng mang `ghi_chu`, 229 dòng `-`; `BANG_CANH_BAO` có 21 dòng và cột Lý do."
+- **Văn bản `ghi_chu` cho bảng dự phòng** (O1; dấu `—` là gạch ngang trong ô):
+
+| Từ | `ghi_chu` |
+|---|---|
+| ăn nhịp | C: chứng liệu yếu — tổng chứng liệu 0 ở bốn kho; H8 theo ngoại lệ hai chữ ký |
+| ăn trầu, bèo bọt, chấp nhặt, giở giọng, giở quẻ, mụ mị, non choẹt, tía lia | A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4) |
+| cả nghĩ | C: H8 CHI_BE_MAT — chỉ đủ mức nhờ lượt bề mặt; tổng chứng liệu 2 ở bốn kho |
+| chán phèo | D: H5c — cùng từ với chán phè; chán phèo không có lượt web nên không thể đạt ≥ 95% ở cả hai kho |
+| chễm chệ | C: chứng liệu yếu — tổng chứng liệu 3 ở bốn kho |
+| chọc lét | D: H5c — cùng từ với chọc léc (như họ cù lét/cù léc); chọc lét không có lượt web nên không thể đạt ≥ 95% |
+| cửu chương | C: H8 YEU — tổng chứng liệu 6 ở bốn kho |
+| hì hụi | D: H5c — cùng từ với hè hụi; hì hụi không có lượt sạch nào nên không thể đạt ≥ 95% (T-dpv2-4) |
+| loằng ngoằng | C: chờ H5 — dạng loằn ngoằn (khác khóa) chưa xác nhận cùng từ và chưa đếm |
+| lỗi hẹn | C: dễ lẫn với lỡ hẹn (danh sách chính) cả nghĩa lẫn âm |
+| lời lỗ | C: H8 YEU; gần nghĩa lỗ lãi (dự phòng) — dùng lỗ lãi trước |
+| mỏng tanh | C: gần nghĩa mỏng dính (dự phòng) — dùng mỏng dính trước |
+| ngoại trừ | C: chờ H7 — ngoại trú có nghĩa điều trị (H6.5, tiền lệ nội trú), PPM gộp 1,215 ≥ 0,3; đo tỷ lệ nghĩa rồi hai SA ký mức K (T-dpv2-9) |
+| nhão nhẹt | D: H5c — cùng từ với nhão nhoẹt; không dạng nào đạt ≥ 95% với ≥ 20 lượt (T-dpv2-4) |
+| nhão nhoẹt | D: H5c — cùng từ với nhão nhẹt; không dạng nào đạt ≥ 95% với ≥ 20 lượt (T-dpv2-4) |
+| tạnh ráo | C: H8 YEU — tổng chứng liệu 2 ở bốn kho |
+| thẳng đơ | C: H8 YEU — tổng chứng liệu 1 ở bốn kho |
+| thụp | C: từ đơn, thường cần cụm đi kèm để nhận ra |
+| tối mù | C: H8 CHI_BE_MAT — chỉ đủ mức nhờ lượt bề mặt; tổng chứng liệu 2 ở bốn kho |
+| tròng trành | D: H5c — cùng từ với chòng chành (danh sách chính); cả họ dưới 20 lượt mỗi kho; mục chính chuyển sang yêu cầu riêng (D-dpv2-5) |
+| trở lên | C: chỉ khác trở nên (danh sách chính) ở l/n, dễ gõ nhầm khóa; chưa có câu |
+| tuổi xanh | C: sắc thái văn chương hơn giao tiếp thường |
+| vậy nên | B: H7 K2 — vảy nến hiếm (PPM gộp 0,253); hai SA ký không tự động chặn (T-dpv2-7) |
+
+- **Văn bản `ghi_chu` cho bảng HM** (229 dòng còn lại ghi `-`):
+
+| Từ | `ghi_chu` |
+|---|---|
+| cơ quan | T-dpv2-8: rà H6.3 (nghĩa cơ quan nhà nước) trước khi dùng |
+| dự bị | T-dpv2-8: rà H6.1 (nghĩa quân sự) trước khi dùng |
+| đại lục | T-dpv2-8: rà H6.3 (cách dùng Trung Quốc đại lục) trước khi dùng |
+| lên chức | T-dpv2-8: rà H6.3 (quyền lực nhà nước) trước khi dùng |
+| lực lượng | T-dpv2-8: rà H6.1 (liên tưởng quân sự) trước khi dùng |
+| tần số | T-dpv2-7: H7 K2 — tận số hiếm (PPM gộp 0,207); hai SA ký không tự động chặn |
+| truy tìm | T-dpv2-8: rà H6.2 (ngữ cảnh tố tụng) trước khi dùng |
+| vây cá | H8 CHI_BE_MAT; đã đọc kiểm đúng nghĩa ở P4 |
+
+- **Căn cứ cho số liệu:** các lý do lấy đúng nội dung đã thống nhất trong cột ý kiến của hai TSV hồ sơ và các quyết định T-dpv2-*. Với ba mục *chán phèo, chọc lét, hì hụi*, đối chứng chưa được đo, nên chỉ ghi rằng dạng dự phòng không thể đạt ngưỡng; không suy rằng dạng kia đạt hay trượt (theo `A\round-1-cross-review.md` §2.2). Các tổng chứng liệu lấy từ `y_kien_opus` của bảng dự phòng hồ sơ.
+
+### E. Gợi ý không bắt buộc
+
+1. Cột `bang_chung` trong hai bảng công bố: dùng dấu `/` và đường dẫn tương đối từ `analyzing-tools`, như `manifest.json`. Hiện chưa có TSV công bố nào chứa đường dẫn.
+2. Kế hoạch §7: ghi thẳng số cuối, `du_phong.tang = {A:148, B:36, C:15, D:6}`, và thêm commit quyết định `1734b43` vào `phan_tich_du_phong`.
+3. Tệp câu hỏi: thêm một tiêu đề và một câu trỏ tới `1734b43` cùng kế hoạch §9, để người mở tệp biết Q&A nằm ở đâu.
+4. Thứ tự với D-dpv2-5: nên triển khai phần công bố dự phòng v2 trước, như ảnh chụp dữ liệu tại `1734b43`. Nếu yêu cầu riêng đổi danh sách chính hoặc dự phòng, yêu cầu đó phải cập nhật §11–§12, hai TSV và manifest.
+5. Báo cáo chung §6: đổi chữ "Câu hỏi chỉ còn mở" thành "Tệp câu hỏi (không còn câu mở)".
+
+### F. Bằng chứng của lượt này
+
+Chạy trong `OE`:
+
+1. `python kiem-ky-ke-hoach.py` → `kiem-ky-ke-hoach.log`.
+2. `python mo-phong-ke-hoach.py <thư mục tạm ngoài repo> --nhan ky-3 [--crlf]` → `mo-phong-ke-hoach-ky-3.log`, `mo-phong-ke-hoach-ky-3-crlf.log`. Thư mục tạm đã xóa.
+3. `python kiem-dau-ra.py`: kiểm định dạng mọi tệp trong `O`.
+
+Lượt này không tải và không lưu văn bản kho, định nghĩa hay câu giải nghĩa.
+
+### Kiểm lại thay đổi 4
+
+**Ngày:** 21/11/2026. So working tree với `1734b43`. **Kết luận: accept. Opus ký kế hoạch Final.**
+
+- **Lệnh:** `python kiem-thay-doi-4.py` (chạy trong `OE`) → `OE\kiem-thay-doi-4.log`: 0 mục chưa đạt (V). Văn bản chuẩn được đọc thẳng từ hai bảng ở §D trên, không gõ lại.
+- **Hai bảng hồ sơ:**
+  - mỗi bảng chỉ thêm cột `ghi_chu`; cột cũ duy nhất đổi là `bang_chung`, và chỉ được nối thêm một con trỏ tới đúng dòng của bảng §D (38/38 con trỏ đúng);
+  - thứ tự từ, tầng A148/B36/C15/D6 và N = 237 không đổi; tệp vẫn CRLF, UTF-8 không BOM.
+- **Ô `ghi_chu`:**
+  - 30 dòng dự phòng và 8 dòng HM trùng nguyên văn §D; mọi dòng khác ghi `-`;
+  - cả 21 dòng C/D đều có lý do;
+  - bảng §4.2.1 của kế hoạch và `E\public-ghi-chu.tsv` (38 dòng) cũng trùng nguyên văn.
+- **Kế hoạch:**
+  - §4.1 ghi đúng 24/28 cột hồ sơ; schema công bố 17/20 cột giữ nguyên; định nghĩa `ghi_chu` cũ đã được thay;
+  - `BANG_CANH_BAO` có cột Lý do và 21 dòng;
+  - T10 kiểm trên phép chiếu công bố; phép chiếu thử cho đúng 30/175 và 8/229.
+- **Phần diễn giải mới ở §4.2.1 và §11:**
+  - không đổi văn bản ghi chú;
+  - điểm S4 được dẫn khớp cột `diem` (lỗ lãi 5,401989 > lời lỗ 2,900190; mỏng dính 7,006689 > mỏng tanh 4,969709);
+  - câu "lượt sạch chỉ hai kho OPUS" làm rõ đúng ý ô *hì hụi*.
+- **Không làm hỏng chỗ khác:**
+  - mô phỏng lại sau khi mẫu §11 đổi (`mo-phong-ke-hoach.py --nhan td4`) cho kết quả trùng nền ở cả hai chế độ;
+  - SHA byte của ba tệp chính đúng; chỉ tệp hồ sơ bị sửa;
+  - tệp câu hỏi vẫn ghi không còn câu mở.
+- **Gợi ý không bắt buộc của Lượt duyệt 3:** E2–E5 đã áp. E1 (dấu `/` trong `bang_chung` công bố) chưa áp; điểm này không chặn ký.

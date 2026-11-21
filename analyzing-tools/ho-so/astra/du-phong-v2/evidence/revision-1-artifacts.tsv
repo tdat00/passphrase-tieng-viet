@@ -26,6 +26,7 @@ analyzing-tools\ho-so\astra\du-phong-v2\evidence\joint-proof.json	ASTRA	du-phong
 analyzing-tools\ho-so\astra\du-phong-v2\evidence\joint-proof.log	ASTRA	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\astra\du-phong-v2\evidence\joint-publication-text.json	ASTRA	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\astra\du-phong-v2\evidence\joint-summary.json	ASTRA	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
+analyzing-tools\ho-so\astra\du-phong-v2\evidence\public-ghi-chu.tsv	ASTRA	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\astra\du-phong-v2\evidence\reserve-judgements.tsv	ASTRA	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\astra\du-phong-v2\evidence\reserve-probe.tsv	ASTRA	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\astra\du-phong-v2\evidence\revision-1-artifacts.tsv	ASTRA	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
@@ -88,8 +89,12 @@ analyzing-tools\ho-so\opus\du-phong-v2\evidence\kiem-d6-168.py	OPUS	du-phong-v2-
 analyzing-tools\ho-so\opus\du-phong-v2\evidence\kiem-dau-ra.py	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\opus\du-phong-v2\evidence\kiem-h8-chinh-thuc.py	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\opus\du-phong-v2\evidence\kiem-hnd.py	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
+analyzing-tools\ho-so\opus\du-phong-v2\evidence\kiem-ky-ke-hoach.log	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
+analyzing-tools\ho-so\opus\du-phong-v2\evidence\kiem-ky-ke-hoach.py	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\opus\du-phong-v2\evidence\lap-de-cu.py	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\opus\du-phong-v2\evidence\mo-phong-ke-hoach-crlf.log	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
+analyzing-tools\ho-so\opus\du-phong-v2\evidence\mo-phong-ke-hoach-ky-3-crlf.log	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
+analyzing-tools\ho-so\opus\du-phong-v2\evidence\mo-phong-ke-hoach-ky-3.log	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\opus\du-phong-v2\evidence\mo-phong-ke-hoach-nen-crlf.log	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\opus\du-phong-v2\evidence\mo-phong-ke-hoach-nen.log	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng
 analyzing-tools\ho-so\opus\du-phong-v2\evidence\mo-phong-ke-hoach-sua-1-crlf.log	OPUS	du-phong-v2-ke-hoach.md §14; báo cáo/phân tích/review của nhóm tương ứng

@@ -16,11 +16,11 @@
     "BOM": false
   },
   "analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md": {
-    "sha256_bytes": "0f7527a2dd2ae719943979fcb11864d542ac3c410333e280fd0c459621f2d3c2",
-    "sha256_LF": "34ebaeafcb13fd8ec337d9efb15fc1d433459894bcda59a374126c297362b7f9",
-    "bytes": 40322,
-    "lines": 431,
-    "CRLF": 431,
+    "sha256_bytes": "76bd062a15c24a04b05e6560777901529c11f5e225e50b1a758a17bf0b7190be",
+    "sha256_LF": "7df2e3189001c21b00b2b5780a86337710b0a3effb48002774229b166a22ba5d",
+    "bytes": 52146,
+    "lines": 558,
+    "CRLF": 558,
     "BOM": false
   },
   "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\h7-quet-bo-sung.tsv": {
@@ -120,11 +120,11 @@
     "BOM": false
   },
   "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\joint-build.py": {
-    "sha256_bytes": "8b116ce6c1e9b278c0203078fa797b059eaa934416e6e21fda9f04a2380cd362",
-    "sha256_LF": "fae9bd470939496352b274e34b1a08c85f2e1e8d669976d120ed1a24a8d9076e",
-    "bytes": 43860,
-    "lines": 672,
-    "CRLF": 672,
+    "sha256_bytes": "1e43650a0d6a279b2cbe2aea47bfb5c251b50a21e871f0d75467b090e17f3516",
+    "sha256_LF": "ab04cafaf36381522bcdabc57b3d7e511497234423ef5eb8168ffdd8c45fb458",
+    "bytes": 51768,
+    "lines": 803,
+    "CRLF": 803,
     "BOM": false
   },
   "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\revision-1-audit.json": {

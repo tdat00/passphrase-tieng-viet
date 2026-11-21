@@ -43,3 +43,17 @@ Các sửa số liệu/khóa/chữ ký được kiểm từ tệp/mã, không ch
 **accept.** Astra nhận toàn bộ §D của Opus: đóng Q-dpv2-7 bằng T-dpv2-9, ngoại trừ C/CHO_H7, không dùng trước khi đo tỷ lệ nghĩa điều trị ở web và hai SA ký mức K. Không ghi K2 đã ký chỉ vì Opus nghiêng K2.
 
 Đã cập nhật năm bản nháp và bộ dựng: **A148/B36/C15/D6**, không còn CHO_HOA; HM vẫn **237/285 dòng hồ sơ**. Tệp câu hỏi chỉ giữ Q-dpv2-1 (owner); lịch sử Q7 lưu trong `revision-1-question-history.json`. Giữ `Status: Draft (round 1)`, thêm OI-H7-NGOAITRU; chưa mở đo, thay từ hoặc ghi bảng phát hành. Đã khôi phục chi tiết nguồn ở ba D và bỏ tiền tố “Astra:” lặp theo các gợi ý nhỏ.
+
+## Ghi nhận trả lời chủ — 21/11/2026
+
+**accept.** Đã đối chiếu Answer “3” ngày 20/11/2026 tại `1734b43`: việc rà/thay chính được chuyển sang yêu cầu riêng, không làm trong dự phòng v2. Ghi **D-dpv2-5**, cập nhật phạm vi ngoài/việc bàn giao/rủi ro/phases; các nguồn Decisions còn chờ commit đổi sang `1734b43`.
+
+Q-dpv2-1 đã đóng, tệp câu hỏi ghi “Không còn câu hỏi mở”; đầy đủ Q&A còn trong Git tại commit trên. Giữ `Status: Draft (round 1)`, A148/B36/C15/D6 và N=237; không khởi động rà/đo, viết nghĩa hay thay chính.
+
+## Ghi nhận Lượt duyệt 3 — 21/11/2026
+
+**accept.** Đúng là phép rút gọn trước đây làm mất lý do C/D. Đã thêm `ghi_chu` vào hai bảng hồ sơ và quy tắc sao chép nguyên sang bảng công bố; dùng đúng 30 văn bản dự phòng và 8 văn bản HM tại §D của Opus. Bảng cảnh báo §11 có 21 dòng C/D, cột Lý do; thêm T10 kiểm phép chiếu công bố (30/175 và 8/229), không chỉ bảng hồ sơ.
+
+Đã kiểm tổng chứng liệu và các cặp theo S4. Giữ nguyên văn ghi chú, bổ sung chú giải: “chứng liệu yếu” không tự đổi mã H8; “lượt sạch” H5 chỉ hai kho OPUS; “dùng … trước” phản ánh hạng S4 hiện tại, không ban hành TT2. Các nhận định ngôn ngữ vẫn là nhận định đã thống nhất, không là số liệu gõ sai.
+
+Nhận các gợi ý ghi số cuối vào manifest, thêm tiêu đề/pointer Q&A, và yêu cầu công việc riêng phải cập nhật §11–§12/TSV/manifest nếu đổi từ. Chưa đổi quy ước đường dẫn trong TSV. Giữ Draft, A148/B36/C15/D6, N=237 và byte chính; không thực hiện yêu cầu riêng.

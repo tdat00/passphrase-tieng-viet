@@ -1,11 +1,12 @@
 # Dự phòng v2 — kế hoạch cập nhật tài liệu, bản sửa 1
 
-Status: Draft (round 1)
+Status: Final (2026-11-21, base 1734b43)
 
 **Authors:** SA-Astra (người soạn), SA-Opus (người review).
 **Date:** 2026-11-20.
 **Base commit:** `cefb99386d4845e40bc2d3eabc7d6898d078305d`.
-**Sign-off:** SA-Opus accept ở Lượt duyệt 2 (`O\round-1-review-drafts.md`); SA-Astra nhận cập nhật §D và ghi T-dpv2-9. Hai SA đã thống nhất tầng/trạng thái và N. Giữ Status Draft theo yêu cầu, chưa phải lệnh triển khai, Final hoặc phê duyệt thay chính.
+**Sign-off:** SA-Astra "accept" (2026-11-21, sau khi áp thay đổi 4 của Lượt duyệt 3); SA-Opus "accept" (2026-11-21, `analyzing-tools\ho-so\opus\du-phong-v2\round-1-review-drafts.md`, Lượt duyệt 3, "Kiểm lại thay đổi 4"). Không còn câu hỏi mở. Kế hoạch chỉ phân tích: không thay danh sách chính.
+**Cập nhật quyết định chủ:** ngày 21/11/2026 đối chiếu câu trả lời “3” ngày 20/11/2026 trong `1734b43`; chấp nhận chuyển việc rà/thay chính sang yêu cầu riêng, không mở rộng dự phòng v2.
 
 `AT = analyzing-tools`; `U = AT\ho-so\unified`; `A = AT\ho-so\astra\du-phong-v2`; `O = AT\ho-so\opus\du-phong-v2`; `E = A\evidence`. `verified` chỉ sự kiện đã đối chiếu; `assumed/proposed` chỉ đề nghị chưa được chốt. Dấu `/` trong liên kết Markdown là URL; các đường dẫn/lệnh Windows dùng `\`.
 
@@ -36,6 +37,7 @@ Theo câu trả lời thiết lập phạm vi: chỉ phân tích/phân loại; d
 - Viết nghĩa mới, viết lại nghĩa, mở ngoại lệ D7, tự nâng R1, thay từ chính, đổi S4/TT2 hay quota, cam kết đủ 300 dự phòng.
 - Tải/lưu corpus hoặc định nghĩa; chuẩn hóa checkout nguồn chính; commit/push/merge bởi SA.
 - Các câu trạng thái có ngày 20/11/2026 về 205 dự phòng trong `WordListAnalyze-Opus.md:265`, `WordListAnalyze-Astra.md:95` và quyết định 10 tại `WordListAnalyze.md:153`: giữ nguyên như lịch sử; trạng thái hiện hành về sau đọc ở §11 mới.
+- Yêu cầu riêng rà/thay danh sách chính theo D-dpv2-5: họ chòng chành/tròng trành, 632 cặp H5 thô, 1.177 cặp H7 và ca báo tử được bàn giao cho yêu cầu đó, với quy trình P6/P7/phát hành riêng; không đo, rà rộng hoặc thay chính trong dự phòng v2.
 
 **Giới hạn của bước đang thực hiện:** chỉ ghi năm tệp `U\du-phong-v2-*` được giao và thư mục Astra. Chưa thực hiện các thay đổi tài liệu hiện hành nêu trên.
 
@@ -83,16 +85,16 @@ Hai tài liệu lưu trữ nêu trong phạm vi cũng phải nguyên byte; hash 
 
 Schema được đóng trong `E\joint-build.py`:
 
-- Dự phòng, 23 cột:
+- Dự phòng, 24 cột:
 
 ```text
-tu	khoa	lop	ngan	tang_opus	tang_astra	tang_chung	tranh_chap	ma_van_de	cau_hoi	trang_thai_h	giai_nghia	luot_viet	sha256_giai_nghia	h8	F	diem	thay_duoc	con_thieu	y_kien_opus	y_kien_astra	bang_chung	xac_minh
+tu	khoa	lop	ngan	tang_opus	tang_astra	tang_chung	tranh_chap	ma_van_de	cau_hoi	trang_thai_h	giai_nghia	luot_viet	sha256_giai_nghia	h8	F	diem	thay_duoc	con_thieu	ghi_chu	y_kien_opus	y_kien_astra	bang_chung	xac_minh
 ```
 
-- HM, 27 cột:
+- HM, 28 cột:
 
 ```text
-tu	khoa	nhom	nhan_ho_so	lop	xac_minh_lop	de_cu_opus	de_cu_astra	ket_luan_nhap	tranh_chap	cau_hoi	trang_thai_h	ngan_du_kien	h8	sub_sach	web_sach	leipzig	tatoeba	F	diem	nguon	ly_do_chua_chon	dieu_kien	y_kien_opus	y_kien_astra	bang_chung	xac_minh
+tu	khoa	nhom	nhan_ho_so	lop	xac_minh_lop	de_cu_opus	de_cu_astra	ket_luan_nhap	tranh_chap	cau_hoi	trang_thai_h	ngan_du_kien	h8	sub_sach	web_sach	leipzig	tatoeba	F	diem	nguon	ly_do_chua_chon	dieu_kien	ghi_chu	y_kien_opus	y_kien_astra	bang_chung	xac_minh
 ```
 
 `tranh_chap=KHONG` không có nghĩa đã phát hành hoặc đã khép mọi cổng. Ngoại trừ đã được hai SA chốt C/CHO_H7, `cau_hoi=-`; giữ nguyên việc đo nghĩa/ký mức K trước khi dùng. Không còn dòng CHO_HOA.
@@ -108,7 +110,7 @@ tu	khoa	lop	ngan	tang	trang_thai_h	ma_van_de	giai_nghia	luot_viet	sha256_giai_ng
 ```
 
 - `tang` lấy kết luận chung đã ký, không còn CHO_HOA.
-- `ghi_chu` là lý do được chốt khi đóng từng câu hỏi; không tự lấy một phía chỉ để lấp ô.
+- `ghi_chu`: lý do tầng/trạng thái đã thống nhất, một câu ngắn, không trích nguồn. Bắt buộc với mọi dòng C, D và mọi dòng có quyết định riêng cho đầu mục trong T-dpv2-*; nêu từ đối chứng khi lý do là H5, dễ lẫn hoặc gần nghĩa. Lấy nguyên văn bảng đã chốt ở mục 4.2.1 dưới đây và `O\round-1-review-drafts.md`, Lượt duyệt 3 §D; các dòng khác ghi `-`. Sao chép trực tiếp cột `ghi_chu` của bảng hồ sơ, không suy lại từ mã chung D8.
 - Mục D vẫn có dòng; `thay_duoc` phải giải thích **khả năng ngăn chỉ có ý nghĩa khi đủ cổng**, không làm D thành dùng được.
 - `giai_nghia` tách khỏi tầng: CO_PASS_LICH_SU/CHUA_VIET. *Trở lên* ở C vẫn chưa viết.
 - `sha256_giai_nghia` băm câu nguyên văn UTF-8, không nhầm với hash JSON-token của D6; bản token-hash/đúng lượt nằm ở hồ sơ chi tiết.
@@ -130,10 +132,58 @@ N = count(ket_luan_nhap == "CUNG_DE_CU_CHUA_PHAT_HANH")
 
 - Q-dpv2-4 đã chốt phương án 2: 46 L3b và chạng vạng ở hồ sơ/§12.3, không tính. Bao tử là K1, không tính cả khóa baotu.
 - Bảng công bố chỉ chứa 237 dòng được tính. Điều kiện về nghĩa, R1, H6 trước khi dùng vẫn phải giữ; N không phải số ghế thay được.
+- `ghi_chu` của HM áp cùng nguyên tắc: sao chép đúng tám ghi chú đã chốt ở mục 4.2.1, 229 dòng còn lại ghi `-`; không làm mất quyết định H6/H7 khi bỏ hai cột ý kiến.
 - Không tự tìm thêm/bớt đầu mục để đạt con số khác. Nếu có phát hiện cổng mới trước Final, phải ghi nhận và chốt lại thay đổi, không sửa âm thầm.
 - Giờ cao điểm: hai SA nhận phản đối H2; mục ở lại hồ sơ L3b. Không dùng nhãn có điều kiện để né luật.
 
 **Định dạng chung:** UTF-8 không BOM, có tiêu đề, NFC đầu mục, không khoảng trắng cuối dòng, có dòng cuối. Dùng CRLF trong checkout Windows như các TSV hiện có, LF trong Git. Ô chưa có/không áp dụng ghi `-`, không đổi thành số 0. Không có cột giải nghĩa hoặc trích đoạn nguồn.
+
+#### 4.2.1. Văn bản ghi_chu đã chốt
+
+Giữ nguyên văn các ô dưới đây, không thêm câu giải nghĩa. Dòng gộp tám từ dùng cùng một văn bản cho cả tám; tổng cộng **30 dòng dự phòng** (8 A, 1 B, 15 C, 6 D), 175 dòng còn lại ghi `-`.
+
+| Từ | ghi_chu |
+|---|---|
+| ăn nhịp | C: chứng liệu yếu — tổng chứng liệu 0 ở bốn kho; H8 theo ngoại lệ hai chữ ký |
+| ăn trầu, bèo bọt, chấp nhặt, giở giọng, giở quẻ, mụ mị, non choẹt, tía lia | A: cảnh báo sắc thái đã rút, chưa có phản đối H6 hợp lệ (T-dpv2-4) |
+| cả nghĩ | C: H8 CHI_BE_MAT — chỉ đủ mức nhờ lượt bề mặt; tổng chứng liệu 2 ở bốn kho |
+| chán phèo | D: H5c — cùng từ với chán phè; chán phèo không có lượt web nên không thể đạt ≥ 95% ở cả hai kho |
+| chễm chệ | C: chứng liệu yếu — tổng chứng liệu 3 ở bốn kho |
+| chọc lét | D: H5c — cùng từ với chọc léc (như họ cù lét/cù léc); chọc lét không có lượt web nên không thể đạt ≥ 95% |
+| cửu chương | C: H8 YEU — tổng chứng liệu 6 ở bốn kho |
+| hì hụi | D: H5c — cùng từ với hè hụi; hì hụi không có lượt sạch nào nên không thể đạt ≥ 95% (T-dpv2-4) |
+| loằng ngoằng | C: chờ H5 — dạng loằn ngoằn (khác khóa) chưa xác nhận cùng từ và chưa đếm |
+| lỗi hẹn | C: dễ lẫn với lỡ hẹn (danh sách chính) cả nghĩa lẫn âm |
+| lời lỗ | C: H8 YEU; gần nghĩa lỗ lãi (dự phòng) — dùng lỗ lãi trước |
+| mỏng tanh | C: gần nghĩa mỏng dính (dự phòng) — dùng mỏng dính trước |
+| ngoại trừ | C: chờ H7 — ngoại trú có nghĩa điều trị (H6.5, tiền lệ nội trú), PPM gộp 1,215 ≥ 0,3; đo tỷ lệ nghĩa rồi hai SA ký mức K (T-dpv2-9) |
+| nhão nhẹt | D: H5c — cùng từ với nhão nhoẹt; không dạng nào đạt ≥ 95% với ≥ 20 lượt (T-dpv2-4) |
+| nhão nhoẹt | D: H5c — cùng từ với nhão nhẹt; không dạng nào đạt ≥ 95% với ≥ 20 lượt (T-dpv2-4) |
+| tạnh ráo | C: H8 YEU — tổng chứng liệu 2 ở bốn kho |
+| thẳng đơ | C: H8 YEU — tổng chứng liệu 1 ở bốn kho |
+| thụp | C: từ đơn, thường cần cụm đi kèm để nhận ra |
+| tối mù | C: H8 CHI_BE_MAT — chỉ đủ mức nhờ lượt bề mặt; tổng chứng liệu 2 ở bốn kho |
+| tròng trành | D: H5c — cùng từ với chòng chành (danh sách chính); cả họ dưới 20 lượt mỗi kho; mục chính chuyển sang yêu cầu riêng (D-dpv2-5) |
+| trở lên | C: chỉ khác trở nên (danh sách chính) ở l/n, dễ gõ nhầm khóa; chưa có câu |
+| tuổi xanh | C: sắc thái văn chương hơn giao tiếp thường |
+| vậy nên | B: H7 K2 — vảy nến hiếm (PPM gộp 0,253); hai SA ký không tự động chặn (T-dpv2-7) |
+
+**Tám dòng HM**, 229 dòng công bố còn lại ghi `-`:
+
+| Từ | ghi_chu |
+|---|---|
+| cơ quan | T-dpv2-8: rà H6.3 (nghĩa cơ quan nhà nước) trước khi dùng |
+| dự bị | T-dpv2-8: rà H6.1 (nghĩa quân sự) trước khi dùng |
+| đại lục | T-dpv2-8: rà H6.3 (cách dùng Trung Quốc đại lục) trước khi dùng |
+| lên chức | T-dpv2-8: rà H6.3 (quyền lực nhà nước) trước khi dùng |
+| lực lượng | T-dpv2-8: rà H6.1 (liên tưởng quân sự) trước khi dùng |
+| tần số | T-dpv2-7: H7 K2 — tận số hiếm (PPM gộp 0,207); hai SA ký không tự động chặn |
+| truy tìm | T-dpv2-8: rà H6.2 (ngữ cảnh tố tụng) trước khi dùng |
+| vây cá | H8 CHI_BE_MAT; đã đọc kiểm đúng nghĩa ở P4 |
+
+**Diễn giải không đổi văn bản:** “tổng chứng liệu” là `sub_sach + web_sach + leipzig + tatoeba`, chỉ là chỉ báo biên tập; “chứng liệu yếu” không tự đổi mã H8 MANH thành YEU. “Lượt sạch” trong lý do H5 chỉ hai kho OPUS, không phủ nhận bốn câu Leipzig của hì hụi. Các cụm “dùng … trước” phản ánh thứ tự S4 hiện tại: lỗ lãi 5,401989 > lời lỗ 2,900190; mỏng dính 7,006689 > mỏng tanh 4,969709, không tạo quy tắc mới.
+
+Nguồn máy đọc được trích nguyên văn và ghi pointer tại `E\public-ghi-chu.tsv`. Bộ dựng kiểm số lượng, tập từ, đúng từng ô, các tổng chứng liệu và thứ tự S4; không tự diễn đạt lại các ghi chú.
 
 ### 4.3. du-phong.txt và các bảng nền
 
@@ -184,6 +234,8 @@ A: hồ sơ ưu tiên chuẩn bị thay. B: còn thiếu câu giải nghĩa. C: 
 {{BANG_TANG}}
 
 Chi tiết từng từ và căn cứ nằm trong [bảng phân loại](analyzing-tools/du-phong-phan-loai.tsv).
+
+Lý do ngữ nghĩa/độ quen là nhận định đã thống nhất của hai SA, không phải tỷ lệ gõ sai đã đo. Tổng chứng liệu là tổng lượt sạch phụ đề/web và số câu Leipzig/Tatoeba; đây là chỉ báo biên tập, không thay mã H8. Trong lý do H5, lượt sạch chỉ hai kho OPUS. Các cụm dùng từ nào trước phản ánh hạng S4 hiện tại, không tạo quy tắc ưu tiên mới.
 
 {{BANG_CANH_BAO}}
 
@@ -237,7 +289,7 @@ Nếu muốn khôi phục một mục từng bị loại ở P7, phải kiểm l
 | Token | Nguồn và quy tắc |
 |---|---|
 | BANG_TANG | GROUP BY `tang, ngan` trên 205 dòng cuối; cột tầng/OK không-F/OK-F/tổng; tổng 205. Không có CHO_HOA khi công bố |
-| BANG_CANH_BAO | Các mục C/D hoặc `trang_thai_h` còn việc riêng, O1; cột từ/tầng/mã vấn đề/việc thiếu/nguồn. Không viết giải nghĩa |
+| BANG_CANH_BAO | 21 dòng C/D theo O1; cột Từ / Tầng / Lý do / Việc còn thiếu. Lý do = `ghi_chu`, Việc còn thiếu = `con_thieu`. Không viết giải nghĩa |
 | DU_PHONG_205 | Cột từ nguyên trạng của `AT\du-phong.txt`, đúng 205 dòng, không thêm/sửa |
 | BANG_NHOM_HM | GROUP BY `nhom,trang_thai_h` của N mục cuối; ghi rõ N, không dùng 285 nháp thay N |
 | BANG_TU_HM | N dòng O1: từ/nhóm/lớp/trạng thái/điều kiện còn lại, link tới TSV; không có cờ tranh chấp chưa chốt |
@@ -284,7 +336,7 @@ Không sửa quy trình thay danh sách thành A→C hoặc tự mở lô nghĩa
 du_phong.trang_thai = "đã phân tích, chưa phát hành"
 du_phong.phan_loai_tsv = "du-phong-phan-loai.tsv"
 du_phong.phan_loai_tsv_sha256 = SHA256(LF(public reserve TSV))
-du_phong.tang = {A:a, B:b, C:c, D:d}   # tổng 205, số đã chốt
+du_phong.tang = {A:148, B:36, C:15, D:6}
 du_phong.giai_nghia_lich_su = {co_cau_dat:168, chua_viet:37, d8_du_phong:0}
 du_phong.h8 = {MANH:198, YEU:4, CHI_BE_MAT:2, KHONG_LUOT:1}
 
@@ -299,6 +351,7 @@ honorable_mentions = {
 
 phan_tich_du_phong = {
   base_commit:"cefb99386d4845e40bc2d3eabc7d6898d078305d",
+  quyet_dinh_commit:"1734b43",
   h8_tap_luat:"ho-so/unified/tap-luat-P2-v4.json",
   h8_tap_luat_sha256:SHA256(LF(tập luật giữ nguyên)),
   h8_tong_am_tiet:{sub_moi_dong:34329387,sub_dong_khac:27978808,web_dong_khac:150070912}
@@ -351,29 +404,32 @@ Log và exit code nằm ở `E\joint-proof.json`, `E\joint-proof.log`. Nếu ch�
 
 ## 9. Decisions
 
-Không gán `cefb993` cho những câu trả lời thiết lập chỉ mới có trong hội thoại. Các hàng CHUA_COMMIT sẽ được điều phối bổ sung commit lưu lời yêu cầu/quyết định thật; không tự bịa hash.
+Hồ sơ vòng 1 và câu trả lời chủ cho Q-dpv2-1 đã được lưu ở `1734b43`; các nguồn trước đây chờ commit được trỏ tới commit đó. `cefb993` vẫn là base dữ liệu/mã và nguồn của tập luật P2 đã ký.
 
 | ID | Decision | Decided by | Date | Source commit |
 |---|---|---|---|---|
-| D-dpv2-1 | Chỉ phân tích/phân loại dự phòng và HM; chưa viết nghĩa hoặc phát hành | owner | 2026-11-20 | CHUA_COMMIT — yêu cầu/setup chủ, được ghi trong lời giao việc và §1 |
-| D-dpv2-2 | Main 7.776, hai HTML, nguồn chuẩn và toàn §10 giữ nguyên byte | owner | 2026-11-20 | CHUA_COMMIT — trả lời phạm vi của chủ; base bảo vệ cefb993 |
-| D-dpv2-3 | HM khoảng 100–300 từ | owner | 2026-11-20 | CHUA_COMMIT — trả lời thiết lập số lượng |
-| D-dpv2-4 | Không tạo docs mới; kết quả cuối cập nhật tài liệu hiện có | owner | 2026-11-20 | CHUA_COMMIT — lời chủ “không cần tạo thư mục riêng…” và chỉ dẫn bước 3 |
-| T-dpv2-1 | Giữ du-phong.txt 205 dòng/SHA; tầng ở TSV riêng | SA-Opus + SA-Astra, đồng thuận kỹ thuật trong review | 2026-11-20 | CHUA_COMMIT — hai cross-review §1 và §2.4; không phải chữ ký Final |
-| T-dpv2-2 | Tên HM là honorable-mentions.tsv, giữ khối 205 ở §11.5 | SA-Opus + SA-Astra | 2026-11-20 | CHUA_COMMIT — O\round-1-cross-review.md §2.4 |
-| T-dpv2-3 | Dùng mã/mẫu số H8 P2 v4.1; giữ riêng CHI_BE_MAT | Hai SA đã cùng xác định lỗi; Astra đối mã lại khi soạn | 2026-11-20 | cefb993 — U\tap-luat-P2-v4.json và hai bảng cổng; sửa mô tả trong các bản du-phong-v2 chưa commit |
-| T-dpv2-4 | Đóng 11 lệch cũ: A cho tám mục sắc thái; D theo H5c cho hì hụi, nhão nhẹt, nhão nhoẹt. Hì hụi theo họ hè hụi, không kết luận về hì hục | SA-Opus + SA-Astra | 2026-11-20 | pending |
-| T-dpv2-5 | C chỉ là nhãn cảnh báo; S4 giữ nguyên; không ban hành TT2 | SA-Opus + SA-Astra | 2026-11-20 | pending |
-| T-dpv2-6 | HM chỉ tính mục đủ thẩm định; 46 L3b và chạng vạng ở hồ sơ/§12.3, không tính N; giờ cao điểm không đạt H2 hiện hành | SA-Opus + SA-Astra | 2026-11-20 | pending |
-| T-dpv2-7 | Baotu là K1; tanso và vaynen là K2 “không tự động chặn”, đủ hai chữ ký; không mở lại cổng nghĩa hay cấp quyền thay | SA-Opus + SA-Astra | 2026-11-20 | pending |
-| T-dpv2-8 | Giữ cả sáu cơ quan/lực lượng/truy tìm/dự bị/lên chức/đại lục với cờ rà H6; chưa có chứng cứ mới đủ phản đối H9. N=237 | SA-Opus + SA-Astra | 2026-11-20 | pending |
-| T-dpv2-9 | Ngoại trừ ở C/CHO_H7: nghĩa điều trị của ngoại trú thuộc phạm vi H6.5 theo tiền lệ nội trú, còi H7 bật; không dùng đến khi đo tỷ lệ nghĩa và hai SA ký mức K. Chưa ký K2 cho khóa này | SA-Opus + SA-Astra | 2026-11-20 | pending |
+| D-dpv2-1 | Chỉ phân tích/phân loại dự phòng và HM; chưa viết nghĩa hoặc phát hành | owner | 2026-11-20 | 1734b43 |
+| D-dpv2-2 | Main 7.776, hai HTML, nguồn chuẩn và toàn §10 giữ nguyên byte | owner | 2026-11-20 | 1734b43 |
+| D-dpv2-3 | HM khoảng 100–300 từ | owner | 2026-11-20 | 1734b43 |
+| D-dpv2-4 | Không tạo docs mới; kết quả cuối cập nhật tài liệu hiện có | owner | 2026-11-20 | 1734b43 |
+| D-dpv2-5 | Q-dpv2-1: phát hiện ở danh sách chính (họ chòng chành/tròng trành, 632 cặp H5 thô, 1.177 cặp H7, báo tử) được chuyển sang một yêu cầu riêng để rà/thay danh sách chính; không làm trong dự phòng v2 | owner | 2026-11-20 | 1734b43 |
+| T-dpv2-1 | Giữ du-phong.txt 205 dòng/SHA; tầng ở TSV riêng | SA-Opus + SA-Astra, đồng thuận kỹ thuật trong review | 2026-11-20 | 1734b43 |
+| T-dpv2-2 | Tên HM là honorable-mentions.tsv, giữ khối 205 ở §11.5 | SA-Opus + SA-Astra | 2026-11-20 | 1734b43 |
+| T-dpv2-3 | Dùng mã/mẫu số H8 P2 v4.1; giữ riêng CHI_BE_MAT | Hai SA đã cùng xác định lỗi; Astra đối mã lại khi soạn | 2026-11-20 | cefb993 — tập luật/cổng; 1734b43 — xác nhận trong hồ sơ dự phòng v2 |
+| T-dpv2-4 | Đóng 11 lệch cũ: A cho tám mục sắc thái; D theo H5c cho hì hụi, nhão nhẹt, nhão nhoẹt. Hì hụi theo họ hè hụi, không kết luận về hì hục | SA-Opus + SA-Astra | 2026-11-20 | 1734b43 |
+| T-dpv2-5 | C chỉ là nhãn cảnh báo; S4 giữ nguyên; không ban hành TT2 | SA-Opus + SA-Astra | 2026-11-20 | 1734b43 |
+| T-dpv2-6 | HM chỉ tính mục đủ thẩm định; 46 L3b và chạng vạng ở hồ sơ/§12.3, không tính N; giờ cao điểm không đạt H2 hiện hành | SA-Opus + SA-Astra | 2026-11-20 | 1734b43 |
+| T-dpv2-7 | Baotu là K1; tanso và vaynen là K2 “không tự động chặn”, đủ hai chữ ký; không mở lại cổng nghĩa hay cấp quyền thay | SA-Opus + SA-Astra | 2026-11-20 | 1734b43 |
+| T-dpv2-8 | Giữ cả sáu cơ quan/lực lượng/truy tìm/dự bị/lên chức/đại lục với cờ rà H6; chưa có chứng cứ mới đủ phản đối H9. N=237 | SA-Opus + SA-Astra | 2026-11-20 | 1734b43 |
+| T-dpv2-9 | Ngoại trừ ở C/CHO_H7: nghĩa điều trị của ngoại trú thuộc phạm vi H6.5 theo tiền lệ nội trú, còi H7 bật; không dùng đến khi đo tỷ lệ nghĩa và hai SA ký mức K. Chưa ký K2 cho khóa này | SA-Opus + SA-Astra | 2026-11-20 | 1734b43 |
 
 Luật không từ ba chữ và quyết định phát hành 7.776 không cần đủ 300 dự phòng tiếp tục áp dụng từ `WordListAnalyze.md:151–153` ở base. Không mở lại chúng.
 
-Nguồn đóng T-dpv2-4..8: `O\round-1-review-drafts.md` §3.1–3.5 và `A\round-1-revision-1.md`; chữ ký K2 mới tại `E\revision-1-chu-ky-astra.tsv:2–3`, đối chiếu chữ ký Opus tại review dòng 95. Điều phối điền commit thật sau; không dùng hash base thay cho các quyết định mới.
+Nguồn đóng T-dpv2-4..8: `O\round-1-review-drafts.md` §3.1–3.5 và `A\round-1-revision-1.md`; chữ ký K2 tại `E\revision-1-chu-ky-astra.tsv:2–3`, đối chiếu chữ ký Opus tại review dòng 95. Các hồ sơ này nằm trong `1734b43`, không dùng hash base thay cho các quyết định mới.
 
-Nguồn T-dpv2-9: `O\round-1-review-drafts.md`, Lượt duyệt 2 §B/§D, và ghi nhận lượt 2 ở `A\round-1-revision-1.md`. Nội dung câu hỏi trước khi rút được lưu trong `E\revision-1-question-history.json` vì các nháp trước chưa commit. Q-dpv2-2..7 không tái dùng; chỉ còn Q-dpv2-1 mở.
+Nguồn T-dpv2-9: `O\round-1-review-drafts.md`, Lượt duyệt 2 §B/§D, và ghi nhận lượt 2 ở `A\round-1-revision-1.md`. Các bản lưu câu hỏi cũ ở `E\revision-1-question-history.json` được giữ làm lịch sử.
+
+Nguồn D-dpv2-5: toàn bộ Q-dpv2-1 và dòng `Answer (owner, 2026-11-20): 3` tại `1734b43:analyzing-tools/ho-so/unified/du-phong-v2-cau-hoi.md`. Đã đối chiếu câu trả lời với phương án 3; không còn câu hỏi mở, các mã Q-dpv2-1..7 không tái dùng. Báo tử là ca đối chứng của ứng viên bao tử, được bàn giao như bằng chứng cho yêu cầu rà chính, không được mô tả thành một mục chính đang phát hành.
 
 ## 10. Acceptance criteria
 
@@ -401,11 +457,12 @@ Nguồn T-dpv2-9: `O\round-1-review-drafts.md`, Lượt duyệt 2 §B/§D, và g
 | T7 | UTF-8 không BOM, CRLF working tree, final newline, không trailing whitespace | Kiểm byte; thử stage do điều phối, không để safecrlf thất bại |
 | T8 | Không có bản sao corpus/định nghĩa/gloss cũ | Soát tệp mới; chỉ số/hash/đầu mục/nhận định, không tải/lưu nguồn thô |
 | T9 | Manifest đúng | Parse JSON, đối SHA LF các tệp mới/đổi, giữ các hash bất biến, đếm hồ sơ dự kiến đưa Git |
+| T10 | Lý do không bị mất khi xuất công bố | `du-phong-phan-loai.tsv` có 30 ghi_chu đúng mục 4.2.1 (8 A, 1 B, 15 C, 6 D) và 175 `-`; `honorable-mentions.tsv` có 8 ghi_chu đúng bảng, 229 `-`; BANG_CANH_BAO có 21 dòng, cột Lý do bằng ghi_chu. Kiểm trên phép chiếu 17/20 cột công bố, không chỉ hai bảng hồ sơ |
 
 ## 11. Rủi ro và giảm thiểu
 
 - **Cách đọc y khoa bị bỏ qua:** T-dpv2-9 giữ ngoại trừ C/CHO_H7; đo nghĩa trước khi ký mức K. Không suy “không phải tên bệnh” thành không thuộc H6.5 hoặc lấy PPM toàn chuỗi làm tỷ lệ nghĩa đỏ.
-- **H5 mới tác động chính:** ghi phát hiện, không sửa bảng checker hoặc chính để che/bù; Q-dpv2-1 quyết định công việc tương lai.
+- **H5/H7 tác động chính:** D-dpv2-5 đã chuyển các phát hiện sang yêu cầu rà/thay chính riêng; không vì câu trả lời “3” mà mở rộng dự phòng v2, sửa checker hoặc thay chính tại đây.
 - **Hồ sơ ngoài N bị xuất nhầm:** chỉ lọc CUNG_DE_CU_CHUA_PHAT_HANH; 46 L3b/chạng vạng/bao tử không nằm trong 237.
 - **C thành luật xếp hạng mới:** TT2 đã rút; S4 giữ nguyên.
 - **Bảng phát hành chưa phản ánh cổng mới:** ghi rõ D/LOAI_K1 trong TSV và thủ tục bảo trì; chỉ đăng ký bảng chính thức khi có tác vụ được giao, theo OI-BANG-PHAT-HANH.
@@ -413,15 +470,17 @@ Nguồn T-dpv2-9: `O\round-1-review-drafts.md`, Lượt duyệt 2 §B/§D, và g
 - **Đổi mẫu số khiến đổi nhãn sát mốc:** lấy P2 đã ký; bánh củ cải thuộc hồ sơ để sau và vẫn là YEU theo P2.
 - **Hash CRLF/LF lẫn nhau:** bảo vệ bằng byte, manifest bằng LF; không sửa byte nguồn chính để đạt cổng.
 - **Bản quyền:** không ghi văn bản nguồn vào evidence; preview chỉ trong bộ nhớ.
+- **Mất lý do khi rút gọn schema:** ghi_chu là trường công bố bắt buộc cho C/D và các đầu mục có quyết định riêng; T10 kiểm phép chiếu thật, không chỉ con trỏ bang_chung.
+- **Ảnh chụp trở nên cũ khi yêu cầu riêng đổi từ:** yêu cầu rà/thay chính phải đồng bộ lại §11–§12, hai TSV công bố và manifest nếu đổi danh sách chính hoặc dự phòng; không mang nguyên số liệu/lý do tại 1734b43 sang danh sách mới.
 
 ## 12. Phases và task outline
 
-1. **Review — đã xong:** Opus accept ở Lượt duyệt 2; hai SA đóng Q-dpv2-2..7, ghi T-dpv2-4..9. Không còn câu hỏi supervisor.
-2. **Câu hỏi còn mở:** chủ quyết định phạm vi công việc tương lai qua Q-dpv2-1. Không tự chọn đề nghị hoặc mở việc đo/quét mới.
+1. **Review nội dung — đã thống nhất:** các câu hỏi đã đóng. Lượt duyệt 3 yêu cầu giữ lý do trong bảng công bố; đã bổ sung 30/8 ghi_chu, cột Lý do và T10, chờ Opus kiểm lại riêng điểm này.
+2. **Trả lời chủ — đã ghi nhận:** phương án 3 tại `1734b43` đóng Q-dpv2-1 bằng D-dpv2-5. Bàn giao phát hiện cho yêu cầu riêng có quy trình P6/P7/phát hành; không thực hiện yêu cầu đó trong dự phòng v2.
 3. **Khóa dữ liệu:** 205 tầng/trạng thái và 237 HM đã thống nhất; sinh TSV gọn bằng bộ lọc đã định, không suy CHO_H7 thành đã được phép dùng. Status vẫn Draft cho tới bước hoàn tất do điều phối/chủ yêu cầu.
 4. **Cập nhật tài liệu hiện có:** áp đúng mẫu header/TOC/§11–12, README; chỉ ở giai đoạn được giao sau Final.
 5. **Manifest và nghiệm thu:** băm LF/đếm tệp, chạy ba cổng ở chế độ phù hợp trên tệp thật, so byte/link/counts; điều phối ghi log và commit. Không push nếu chủ chưa yêu cầu.
-6. **Tác vụ bảo trì sau, không tự mở:** đăng ký các họ/khóa mới vào bảng phát hành khi được giao. Họ chạm chòng chành cần quyết định riêng trước khi thay bảng gây C5 trượt; không nới checker để né.
+6. **Yêu cầu riêng để sau:** rà/thay chính và việc đăng ký các họ/khóa có ảnh hưởng tới chính được phối hợp trong phạm vi riêng theo D-dpv2-5, với P6/P7/phát hành. Không đổi bảng gây C5 trượt hoặc nới checker để né trong dự phòng v2.
 
 Không có ước lượng tiền/thời gian giả định cho corpus/viết sạch; chúng nằm ngoài nhiệm vụ này.
 
@@ -429,7 +488,7 @@ Không có ước lượng tiền/thời gian giả định cho corpus/viết s�
 
 | Mã | Việc | Tình trạng/đường xử |
 |---|---|---|
-| Q-dpv2-1 | Chủ có giao hậu kiểm chính sau này không | Không chặn lưu phát hiện hiện tại; chưa có quyền mở tác vụ thêm |
+| Q-dpv2-1 | Trả lời phạm vi của chủ | Đã đóng: phương án 3, D-dpv2-5, nguồn 1734b43 |
 | Q-dpv2-2, Q-dpv2-3 | H5 và tám A/C | Đã đóng: T-dpv2-4/5 |
 | Q-dpv2-4 | HM chưa thẩm định | Đã đóng: T-dpv2-6 |
 | Q-dpv2-5 | Baotu/tanso/vaynen | Đã đóng: T-dpv2-7; đủ hai chữ ký K2 |
@@ -439,10 +498,13 @@ Không có ước lượng tiền/thời gian giả định cho corpus/viết s�
 | OI-D7 | Kiểm lịch sử đúng từ trước tái mở P7 | Để sau; không có lượt viết nào được giao |
 | OI-D8 | Hoàn tất nguồn gốc nghĩa khi chuẩn bị thay thật | Để sau, không giả hoàn thành từ 168 hash |
 | OI-CHECKOUT | Cách giữ LF lâu dài trên Windows | Ngoài phạm vi; không sửa .gitattributes/nguồn chính hiện tại |
-| OI-SCAN | Rà 632 cặp H5/474 từ chính và 1.177 cặp H7/634 khóa | Chỉ nếu chủ giao; đây là số đầu vào chưa phân loại, không phải số lỗi. Bước giới hạn ban đầu chỉ họ chòng chành/tròng trành |
-| OI-BANG-PHAT-HANH | Đăng ký họ hì hụi/hè hụi, nhão nhẹt/nhão nhoẹt, chọc lét/chọc léc, chán phèo/chán phè vào spelling_families.tsv; baotu vào blocked_keys.tsv | Để sau, khi có tác vụ thay/bảo trì được giao. Họ tròng trành/chòng chành chờ quyết định chủ vì ghi LOAI sẽ làm C5 trượt ở chính; phải phối hợp P6/P7/phát hành nếu thay chính |
+| OI-RA-THAY-CHINH | Yêu cầu riêng rà/thay danh sách chính: họ chòng chành/tròng trành, 632 cặp H5 thô, 1.177 cặp H7, ca báo tử | Chủ đã chọn phương án 3 ngày 20/11/2026, nguồn 1734b43. Để sau, lập kế hoạch/phạm vi/chi phí và P6/P7/phát hành riêng; không thực hiện trong dự phòng v2. Nếu đổi từ, phải cập nhật §11–§12, hai TSV công bố và manifest |
+| OI-SCAN | Dữ liệu bàn giao: 632 cặp H5/474 từ chính và 1.177 cặp H7/634 khóa | Thuộc OI-RA-THAY-CHINH; là số đầu vào chưa phân loại, không phải số lỗi. Không áp giới hạn của phương án 2 đã không được chọn |
+| OI-BANG-PHAT-HANH | Đăng ký họ hì hụi/hè hụi, nhão nhẹt/nhão nhoẹt, chọc lét/chọc léc, chán phèo/chán phè vào spelling_families.tsv; baotu vào blocked_keys.tsv | Để sau, phối hợp yêu cầu riêng D-dpv2-5 khi ảnh hưởng chính. Họ tròng trành/chòng chành làm C5 trượt nếu chỉ ghi LOAI; phải phối hợp P6/P7/phát hành, không sửa trong dự phòng v2 |
 
 Chỉ đổi Status thành Final khi không còn câu hỏi quan trọng **trong phạm vi thực hiện** chưa được xử lý, hai SA accept văn bản/dữ liệu và mọi chữ ký/nguồn quyết định cần thiết đã ghi. Các việc tương lai chưa được giao không được coi là đã được chủ phê duyệt.
+
+Hiện không còn câu hỏi mở. Vẫn giữ `Status: Draft (round 1)` theo yêu cầu; điều phối chuyển Final sau hai sign-off. D-dpv2-5 phê duyệt việc chuyển sang yêu cầu riêng, không phải cho phép thực hiện nó trong bản kế hoạch này.
 
 ## 14. Tham chiếu
 
@@ -452,7 +514,9 @@ Chỉ đổi Status thành Final khi không còn câu hỏi quan trọng **trong
 - `A\round-1-analysis.md`, `A\round-1-cross-review.md`; hai báo cáo tương ứng trong O; các đề nghị sau review trong evidence.
 - `U\tap-luat-P2-v4.json`, hai cổng v4, `AT\tieu-chi-thong-nhat.md`, các nguồn/dòng được nối trong TSV.
 - `E\joint-build.py`, `joint-inputs.json`, `joint-summary.json`, `joint-publication-text.json`, `joint-proof.json`, `joint-proof.log`.
+- `E\public-ghi-chu.tsv`: 30 ghi chú dự phòng và 8 ghi chú HM nguyên văn từ Lượt duyệt 3 §D của Opus, có pointer từng dòng.
 - `O\round-1-review-drafts.md`; `A\round-1-revision-1.md`; `E\revision-1-*` gồm audit, chữ ký, số H7, phiếu P4 sáu từ, ca ngoại trú và bản lưu câu hỏi cũ.
+- `1734b43:analyzing-tools/ho-so/unified/du-phong-v2-cau-hoi.md`: toàn bộ Q&A của chủ cho Q-dpv2-1.
 
 ### Hồ sơ dự kiến đưa vào Git
 
