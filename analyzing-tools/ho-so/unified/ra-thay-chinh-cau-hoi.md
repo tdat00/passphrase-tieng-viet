@@ -46,7 +46,7 @@ Tệp này chỉ ghi các câu hỏi còn mở. Mọi đường dẫn tính từ
 
 **Bị chặn:** tập ra cuối, gói chữ ký K2, sức chứa.
 
-**Answer (owner, ):**
+**Answer (owner, 2026-11-21):** giữ cả 4 từ (*cần cù*, *tiền lương*, *triệu*, *bạn thân*), tức theo Opus. Nguyên văn form `ask_user`: "giữ tất cả".
 
 ## Q-rtc-A2 — lấp ghế khi thiếu dự phòng
 
@@ -75,4 +75,4 @@ Tệp này chỉ ghi các câu hỏi còn mở. Mọi đường dẫn tính từ
 
 **Bị chặn:** sức chứa, lượt viết nghĩa, kế hoạch Final.
 
-**Answer (owner, ):**
+**Answer (owner, 2026-11-21):** phương án 1 — mở chu kỳ có giới hạn tối đa 25 từ có thể cân nhắc (HM) nhãn OK, viết nghĩa sạch mới. Nguyên văn form `ask_user`: "1".
