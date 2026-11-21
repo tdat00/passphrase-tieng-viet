@@ -1,0 +1,31 @@
+tu	ket_qua_H	ly_do
+ngân hàng	DAT_H_ASTRA	H6: tổ chức/dịch vụ tài chính, không tự là quyền lực nhà nước hay cờ bạc; không thấy đối chứng H7 nguyên khóa ở sáu nguồn đã ghim.
+khách hàng	DAT_H_ASTRA	H6: quan hệ giao dịch thông thường, không tự là hành vi phạm pháp; không có đối chứng H7 nguyên khóa.
+cơ quan	BO_H6_3	T-dpv2-8: Kaikki vi và en ghi nghĩa độc lập về đơn vị nhà nước; mẫu phụ đề có các cơ quan chấp pháp/liên bang. Không dùng nghĩa giải phẫu để xóa nghĩa quyền lực. Cô quân, cố quận đều 0/0, không phải lý do loại.
+biển	K2_ASTRA_CHO_OPUS	Không tự động chặn: biến có cả lời đuổi bất lịch sự lẫn thay đổi/biến mất; không lấy PPM cả từ làm số lần mắng. Biên có nghĩa biên giới/ghi, biện có thể có văn cảnh lễ, biền là địa hình; không chứng thực K0. Đã kiểm biễn riêng ở H5.
+côn trùng	DAT_H_ASTRA	Tên một nhóm động vật, không phải H6.10 vì có loài người đọc không ưa. Không có cách đọc đỏ toàn khóa; côn trùn không tự là một họ chính tả.
+cô giáo	DAT_H_ASTRA	Cố giao chỉ quan hệ quen biết cũ, không thuộc H6. Cô là dạng gọi tắt, không là dạng viết sai/chuẩn cạnh tranh với nguyên cụm cô giáo.
+thay thế	DAT_H_ASTRA	Động tác đổi mục này bằng mục khác không tự là hành vi có hại; không có đối chứng H7 nguyên khóa hoặc họ H5 phát hành đang chờ.
+chỗ ngồi	DAT_H_ASTRA	Mục xác định vị trí sinh hoạt; chổ ngồi là lỗi hỏi/ngã có nguồn. Đo riêng cả hai kho và phụ đề bỏ trùng: qua H5d, không phải miễn loại h.
+một mình	DAT_H_ASTRA	Cụm cố định chỉ tình trạng đơn lẻ; không đồng nhất với trầm cảm hoặc tự hại. Lớp K khác mục F một khối mình.
+bí mật	K2_ASTRA_CHO_OPUS	Không tự động chặn: nguyên mục bí mật không tự chỉ tội phạm. Bỉ mặt có nghĩa miệt thị thật, nhưng chỉ 0/1 lượt sạch và hẹp hơn hẳn cách đọc chính; không hạ nhãn chỉ vì dưới còi.
+mùa đông	DAT_H_ASTRA	Mưa dông là hiện tượng thời tiết, không tất yếu là thảm họa. Họ mưa giông/mưa dông bị loại H5 cho đúng các mặt chữ đó, không lan qua khóa để loại mùa đông.
+tàu điện	DAT_H_ASTRA	Tái đo tàu điện/tầu điện, kể cả phụ đề bỏ dòng trùng; quan hệ tàu/tầu về phương tiện xét theo chuẩn c nghiêm hơn. Cả hai kho đủ 20, tàu điện giữ ≥95%.
+cụ thể	DAT_H_ASTRA	Nghĩa tính chất thông thường; không bẻ cụm để lấy nghĩa của từng tiếng. Đã dò cụ thễ; không phát hiện lỗi cạnh tranh đạt ngưỡng.
+áp dụng	DAT_H_ASTRA	Hành động dùng một cách thức/quy tắc, không mặc nhiên là cưỡng chế. Không có cặp H7 toàn khóa hay họ H5 bị giữ lại.
+vận hành	K2_ASTRA_CHO_OPUS	Không tự động chặn: vạn hạnh có cả nghĩa lành và thuật ngữ Phật học hiếm, Vạn Hạnh còn là tên riêng. Các lượt web hạ chữ không đo riêng nghĩa đạo; không bỏ qua nghĩa đạo cũng không đếm đôi hai dạng viết hoa/thường.
+việc làm	DAT_H_ASTRA	Việc làm thuộc sinh hoạt/lao động, không tự thành chính trị. H7 không có đối chứng; lịch sử trượt nội dung nghĩa cũ không chặn đầu mục và không cho dùng lại câu.
+chế tạo	DAT_H_ASTRA	Không thêm vũ khí làm tân ngữ để tạo H6.1; mục chữ thường có chứng thực riêng, không dùng một tên riêng trùng chữ làm H3.
+lực lượng	DAT_H_ASTRA	T-dpv2-8: các nguồn ghi sức mạnh/tập hợp người nói chung; mẫu có quân/công an nhưng do bổ ngữ hoặc đối tượng được nhắc, không đồng nhất mọi lực lượng với quân lực. Lực lưỡng không đỏ.
+chia	K2_ASTRA_BO_SUNG_CHO_OPUS	Không tự động chặn: chĩa có hai chữ ký cũ; chỉa là dạng khác của chĩa, có dùng cho đồ vật vô hại. Chìa, chía, chị ả không chứng thực K0/K1; thia là tên cá, không phải cách viết của chia. Ký cả phạm vi mới; không gán ý mới cho Opus.
+bánh ngọt	DAT_H_ASTRA	Tên thực phẩm, không xếp xấu chỉ vì liên tưởng dinh dưỡng. Không có đối chứng H7; cổng cũ trượt là D7, phải soát câu mới.
+đánh răng	DAT_H_ASTRA	H6.5 miễn rõ vệ sinh hằng ngày; không suy bạo lực từ đánh. Đành rằng là thành phần lập luận, không đỏ.
+xe điện	DAT_H_ASTRA	Tên phương tiện dân dụng; khác mặt chữ/khóa với tàu điện dù có liên hệ về nghĩa. Không nhập nhầm hai vé hoặc lấy lại câu D7 cũ.
+bày tỏ	DAT_H_ASTRA	Nói ý mình không tự là chửi hay thao túng. Đã đo cả bầy tỏ và bày tõ; ngay cả gán hết lượt này cho cùng một họ, c/d đều không làm dạng chính trượt.
+chuyển đổi	DAT_H_ASTRA	Chuyển dời có nghĩa dịch vị trí, không đỏ. Đã đếm đủ ba tổ hợp hỏi/ngã ngoài dạng chuẩn; không có chứng cứ để loại hoặc trừ điểm.
+ngắn gọn	K2_ASTRA_CHO_OPUS	Không tự động chặn: ngả ngớn có sắc thái chê/không đứng đắn nhưng không phải từ tục hay chỉ hành vi tình dục; ngả ngốn thiên về tư thế/bừa bộn, ngá ngởn thiên về thiếu để ý. Cả ba cách đọc hiếm, không gộp thành một nghĩa đỏ.
+mình	BO_Q3_F	Lớp F đã 77/77, 116 ghế ra đều OK không-F. Không đánh đồng tiêu chí này với điểm thông dụng F hoặc với một phản đối H7.
+tương đương	DAT_H_ASTRA	Nghĩa so sánh thông thường; Tương Dương là tên riêng, không biến thành đối chứng đỏ cho nguyên cụm chữ thường. Không có họ H5 phải loại.
+giảng viên	NGOAI_CHU_KY	Chỉ dò biên sau hạng 1541; không đề xuất, không ký, không viết nghĩa theo danh sách hiện tại.
+cởi mở	NGOAI_CHU_KY	Chỉ dò biên sau hạng 1541; không đề xuất, không ký, không viết nghĩa theo danh sách hiện tại.
+vòi hoa sen	NGOAI_CHU_KY	Chỉ dò biên sau hạng 1541; không đề xuất, không ký, không viết nghĩa theo danh sách hiện tại.

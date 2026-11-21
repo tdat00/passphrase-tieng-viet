@@ -267,3 +267,78 @@ python -X utf8 -B kiem-dau-ra.py
 - Câu hỏi: Q-rtc-O2 (4 từ) và Q-rtc-A2 (lấp ghế; đề nghị hai SA là chu kỳ HM có giới hạn), dòng Answer trống.
 - Báo cáo chung: mục 1, 3, 4.5 mới, 5.
 - Giữ `Status: Draft (round 1)`.
+
+## 11. Áp câu trả lời Q-rtc-O2 và Q-rtc-A2 (22/11/2026)
+
+**Kiểm câu trả lời:** "accept". Chủ dự án trả lời rõ (commit `2cc6aec`): Q-rtc-O2 "giữ tất cả", Q-rtc-A2 "1".
+
+**Đã áp:**
+
+- Kế hoạch, mục 11: thêm D-rtc-7 (giữ *cần cù, tiền lương, triệu, bạn thân*, K2) và D-rtc-8 (chu kỳ HM tối đa 25 từ nhãn OK). Người quyết: owner, ngày 2026-11-21, nguồn `2cc6aec`. Nguồn của T-rtc-15 đến T-rtc-18 điền `67466fb`.
+- Kế hoạch, mục 5 và 6: số từ ra cuối là 116; bỏ nhánh thiếu ghế. Thêm mục 6.1 thiết kế chu kỳ HM:
+  - nguồn: 125 HM OK không-F (bỏ 5 lớp F vì F đã đủ 77; không dùng R1, TC:407);
+  - Astra đề xuất theo `diem`, Opus duyệt một lượt, ca còn lệch trình chủ dự án;
+  - kiểm lại H1–H9 với bảng chặn gồm khóa K0/K1 mới của đợt này;
+  - HM xếp sau toàn bộ dự phòng; tập ≤ 25 và thứ tự lấy lại theo S4 mới (T-rtc-14);
+  - một lô viết `rtc-lo-01`, tối đa 143 từ; cổng và số lượt viết lại như mục 7;
+  - lấp ghế khi trượt: dự bị trước, rồi HM; hết hàng đợi thì hỏi chủ dự án;
+  - D8 cho mọi mục đã viết; HM chưa dùng vẫn là HM; không bù dự phòng (T-rtc-7).
+- Kế hoạch, mục 7, 9, 12 (OI-RTC-O2 và OI-RTC-A2 đã khép; thêm OI-RTC-HM; OI-RTC-K2-KY gồm 4 khóa của D-rtc-7), 12.1, 12.2, 13 (T11), 14, 15.
+- Câu hỏi: không còn câu hỏi mở; dẫn tới `0253bb0` và `2cc6aec`.
+- Báo cáo chung: mục 1, 3.1, 3.3, 4.5, 5.
+- Script:
+  - `de-xuat-thay-v2.py` thêm hằng `D_RTC_7`; chỉ là hằng, kết quả mô phỏng không đổi;
+  - `hop-nhat-rtc.py` gộp D-rtc-6 và D-rtc-7, ghi mã quyết định theo từng từ.
+  - Chạy lại `hop-nhat-rtc.py`; không cần HND.
+
+**Số:**
+
+- H7, 349 khóa: 89 đồng thuận thay, 3 chủ dự án thay, 226 giữ đã ký phiếu, 7 chủ dự án giữ đã ký phiếu, 4 chủ dự án giữ chờ chữ ký bổ sung của Astra, 10 không đỏ, 9 chữ ký cũ, 1 *gián*.
+- Thay: 116 ra, 116 vào, 2 dự bị; không còn dòng RA_NEU_CHU_DU_AN_THEO_ASTRA.
+- H5 không đổi.
+
+**Chưa làm:** chữ ký bổ sung của Astra cho 4 khóa chưa có trong repo. Khi có phiếu, thêm bộ đọc vào `hop-nhat-rtc.py`; 4 khóa chuyển sang CHU_DU_AN_GIU_DA_KY_PHIEU.
+
+Giữ `Status: Draft (round 1)`.
+
+## 12. Duyệt chu kỳ HM, gộp chữ ký, tính lại S4, chuẩn bị Final (22/11/2026)
+
+**Đầu vào của Astra:** `hm-chu-ky-1.{tsv,md}` (25 HM; 5 K2 chờ Opus); `khep-muc-mo-2.tsv` (ký K2 cho 4 khóa của D-rtc-7).
+
+**Duyệt HM** (`hm-chu-ky-1-opus.{tsv,md}`):
+
+- đồng ý cả 25 mục, cùng việc không chọn *cơ quan* (H6 nhóm 3) và *mình* (lớp F);
+- ký K2 cho *biển, bí mật, vận hành, chia, ngắn gọn*;
+- không có điểm lệch.
+- Kiểm: `evidence/hm-chu-ky-1-opus.py`. HND tạm ngoài repo, đã xóa sau khi chạy; Kaikki dùng bản đã ghim.
+
+**Tính lại S4 theo T-rtc-14** (`evidence/xep-lai-rtc.*`):
+
+- tái lập đúng `xep-hang.tsv`;
+- rổ chấm 10.005 mục; tập vào và dự bị không đổi; 30 trong 118 vị trí đổi chỗ bên trong tập vào;
+- 25 HM cùng thứ tự;
+- còn chờ chương trình độc lập của Astra (T7).
+
+**Đã áp vào bản nháp chung:**
+
+- Kế hoạch:
+  - mục 5: 4 khóa của D-rtc-7 đã đủ hai chữ ký;
+  - mục 6: kết quả tính lại;
+  - mục 6.1: kết quả T-rtc-19 và cách ghi D8 cho HM vào (đổi dòng LOAI sẵn có thành PHAT_HANH);
+  - mục 9: `labels.tsv`, `nguon-goc-giai-nghia.tsv`, `chu-ky.tsv`, `blocked_keys.tsv` (thêm `lamco`), `du-phong-phan-loai.tsv`;
+  - mục 11: T-rtc-19, T-rtc-20 (nguồn: chờ commit);
+  - mục 12: OI-RTC-HM đã khép; OI-RTC-K2-KY không còn chặn Final;
+  - mục 13: B1, T2, T4, T7, T11; thêm T12, T13;
+  - mục 15: còn khoảng 7–15 lượt;
+  - mục 16.
+- Báo cáo chung: mục 1, 3.1 (11 khóa chủ dự án giữ đã ký), 3.3 (vai trò HM), 4.6 mới, 5.
+- Câu hỏi: bỏ "ca HM còn lệch".
+- Bảng thay: thêm 25 dòng HM (`tang` = HM; 20 DONG_THUAN_HM, 5 DONG_THUAN_HM_K2_DA_KY).
+- Bảng H7: 4 khóa của D-rtc-7 thành CHU_DU_AN_GIU_DA_KY_PHIEU (tổng 11).
+- Script `hop-nhat-rtc.py`: đọc `khep-muc-mo-2.tsv` và hai phiếu HM; kiểm khóa HM không trùng khóa đang dùng.
+
+**Đính chính của Opus:** `lamco` phải vào `blocked_keys.tsv`. T-rtc-17 xếp *làm cỗ* là K1, mà K1 chặn cả khóa (TC:166); Astra đã đếm khóa này. Tổng khóa chặn mới là 94, không phải 93.
+
+**Ký:** `ky-ke-hoach.md`, accept với một điều kiện: T7 của Astra cho cùng kết quả.
+
+Giữ `Status: Draft (round 1)`.

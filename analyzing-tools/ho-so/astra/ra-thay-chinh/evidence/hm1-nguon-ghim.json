@@ -1,0 +1,38 @@
+{
+  "ghim": [
+    {
+      "source": "Viet11K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet11K.txt",
+      "sha256": "401752a95c8c97638ecf4df8445ded60d9db87a8f1bbca2e7fc3b6d00eb1132e"
+    },
+    {
+      "source": "Viet22K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet22K.txt",
+      "sha256": "fdb37a1f21cb44898894390fb87d137830ed1507316c2729bad2d804db81033d"
+    },
+    {
+      "source": "Viet39K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet39K.txt",
+      "sha256": "5c139a85964bf8980c6659418007e2ba5e3e5cc0098fe16c08f1bf5a6dd91ec5"
+    },
+    {
+      "source": "Viet74K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet74K.txt",
+      "sha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90"
+    },
+    {
+      "source": "Kaikki viwiktionary 2026-10-02",
+      "url": "https://kaikki.org/viwiktionary/raw-wiktextract-data.jsonl.gz",
+      "sha256": "1f0abd21982660b5fc2eff5eb3fbacbed2d9fe8f476af794dbed0d927ffb8187",
+      "hash_of": "gzip"
+    },
+    {
+      "source": "Kaikki enwiktionary Vietnamese 2026-10-01",
+      "url": "https://kaikki.org/dictionary/Vietnamese/kaikki.org-dictionary-Vietnamese.jsonl.gz",
+      "sha256": "186cd0a62d876dada70c9761bc05e598c8cf7b9a48e0aa518bab6c649e28d945",
+      "hash_of": "jsonl"
+    }
+  ],
+  "hnd_cau_tho_da_luu": false,
+  "nguong_hang_quet": 1720
+}

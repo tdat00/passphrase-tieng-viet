@@ -120,7 +120,9 @@ def main():
     out_utf8()
     v2 = load("v2", HERE / "doi-chieu-v2.py")
     h7m = load("h7", HERE / "sang-loc-h7.py")
-    qd = load("dx2", HERE / "de-xuat-thay-v2.py").D_RTC_6  # quyết định của chủ dự án (D-rtc-6)
+    _dx = load("dx2", HERE / "de-xuat-thay-v2.py")  # quyết định của chủ dự án: D-rtc-6 (Q-rtc-O1), D-rtc-7 (Q-rtc-O2)
+    qd = {**{w: v for w, v in _dx.D_RTC_6.items()}, **{w: v for w, v in _dx.D_RTC_7.items()}}
+    qd_id = {**{w: "D-rtc-6" for w in _dx.D_RTC_6}, **{w: "D-rtc-7" for w in _dx.D_RTC_7}}
     lab = {r["tu"]: r for r in rd(AT / "labels.tsv")}
     main_words = {l.split("|")[0] for l in lines(AT / "wordlist.txt")}
     v2src = (HERE / "doi-chieu-v2.py").read_text(encoding="utf-8").splitlines()
@@ -153,6 +155,8 @@ def main():
     for (loai, t), (i, r) in kma.items():
         if loai in ("H7_CHO", "K2"):
             km7[t.split(" (")[0].strip()] = (i, r, kmo[(loai, t)])
+    km2 = {r["tu_hoac_khoa"].split(" (")[0].strip(): (i, r) for i, r in rdn(A / "khep-muc-mo-2.tsv")}  # Astra ký theo D-rtc-7
+    assert set(km2) <= set(km7), set(km2) - set(km7)
     tt1 = [(i, r) for i, r in rdn(A / "thoa-thuan-1.tsv")]  # thỏa thuận 1 của Astra (D-rtc-5)
     tt7 = {r["tu_hoac_khoa"].split(" (")[0].split(" / ")[0].strip(): (i, r) for i, r in tt1 if r["loai"] == "S1"}
     tt5 = {r["tu_hoac_khoa"].split(" (")[0].split(" / ")[0].strip(): (i, r) for i, r in tt1 if r["loai"] == "S2"}
@@ -214,7 +218,13 @@ def main():
             n_a, ly_a = f"{ref(A / 'khep-muc-mo-1.tsv', i)}; trước đó: {n_a}", f"{r['de_xuat_astra']}: {r['ly_do']}"
             ov = ah if ro["y_opus"] == "DONG_Y" else "K2"
             n_o, ly_o = ref(OUT / "khep-muc-mo-1-opus.tsv", io), f"{ro['y_opus']}: {ro['ly_do']}"
-            hai = [x for x, k in (("Astra", r["ky_astra"]), ("Opus", ro["ky_opus"])) if k == "Y"]
+            ky_a = r["ky_astra"]
+            if w in km2:
+                i2, r2 = km2[w]
+                ah = ma(KM7, r2["de_xuat_astra"], ref(A / "khep-muc-mo-2.tsv", i2))
+                n_a, ly_a = f"{ref(A / 'khep-muc-mo-2.tsv', i2)}; trước đó: {n_a}", f"{r2['de_xuat_astra']}: {r2['ly_do']}"
+                ky_a = r2["ky_astra"]
+            hai = [x for x, k in (("Astra", ky_a), ("Opus", ro["ky_opus"])) if k == "Y"]
             if "K2" in (ov, ah):
                 ky = "+".join(hai) if hai else "-"
         tt = trang7(ov, ah)
@@ -223,7 +233,7 @@ def main():
         if w in qd:
             tt = "CHU_DU_AN_THAY" if qd[w] == "K1" else ("CHU_DU_AN_GIU_DA_KY_PHIEU" if ky == "Astra+Opus" else "CHU_DU_AN_GIU_CAN_KY_K2")
         rows7.append({"khoa": key(w), "tu_chinh": w, "lop": lab[w]["lop"], "opus": ov, "astra": ah,
-                      "trang_thai": tt, "quyet_dinh_chu": f"D-rtc-6: {qd[w]}" if w in qd else "-", "chu_ky_phieu": ky, "opus_v1": (o["opus_v1"] if o else "-") or "-", "astra_v1": a1,
+                      "trang_thai": tt, "quyet_dinh_chu": f"{qd_id[w]}: {qd[w]}" if w in qd else "-", "chu_ky_phieu": ky, "opus_v1": (o["opus_v1"] if o else "-") or "-", "astra_v1": a1,
                       "astra_cr1": acr, "nguon_opus": n_o, "nguon_astra": n_a, "ly_do_opus": sach(ly_o),
                       "ly_do_astra": sach(ly_a)})
     write_tsv(U / "ra-thay-chinh-h7.tsv", list(rows7[0].keys()), rows7)
@@ -325,7 +335,7 @@ def main():
     def trang_ra(w):
         s = {st7[w]} if w in st7 and st7[w] in ("DONG_THUAN_THAY", "TRANH_CHAP", "CHU_DU_AN_THAY") else set()
         if "CHU_DU_AN_THAY" in s:
-            return "QUYET_DINH_CHU_D-rtc-6"
+            return "QUYET_DINH_CHU_" + qd_id[w]
         s |= st5.get(w, set())
         if not s or s <= {"DONG_THUAN_THAY"}:
             return "DONG_THUAN"
@@ -358,6 +368,25 @@ def main():
         rows_t.append({"vai_tro": r["vai_tro"], "thu_tu": r["thu_tu"], "tu": r["tu"], "lop": r["lop"], "ngan": r["ngan"],
                        "ma": r["ma"], "trang_thai": "CAN_DOC" if r["can_doc"] not in ("-", "") else "SO_BO_DAT",
                        "hang_S4": r["hang_S4"], "tang": r["tang"], "can_soat": r["can_doc"] or "-"})
+    # Chu kỳ HM (D-rtc-8): đề xuất của Astra và phiếu duyệt của Opus; HM xếp sau toàn bộ dự phòng.
+    hm_a = list(rdn(A / "hm-chu-ky-1.tsv"))
+    hm_o = {r["tu"]: r for _, r in rdn(OUT / "hm-chu-ky-1-opus.tsv", mine=True)}
+    hm_k = {r["tu"]: r for r in rd(AT / "honorable-mentions.tsv")}
+    xh = {r["tu"]: r["hang"] for r in rd(U / "xep-hang.tsv")}
+    khoa_dung = {key(r["tu"]) for r in rows_t if r["vai_tro"] != "RA"} | {key(w) for w in main_words if w not in ra_set}
+    n_hm = 0
+    for i, r in hm_a:
+        o = hm_o[r["tu"]]
+        assert o["y_opus"] == "DONG_Y" and key(r["tu"]) not in khoa_dung, r["tu"]
+        k2 = r["ket_qua_H"] != "DAT_H_ASTRA"
+        if k2:
+            assert o["ky_opus"] == "Y", r["tu"]
+        n_hm += 1
+        rows_t.append({"vai_tro": "HM", "thu_tu": r["thu_tu"], "tu": r["tu"], "lop": r["lop"],
+                       "ngan": hm_k[r["tu"]]["ngan_du_kien"], "ma": "D-rtc-8",
+                       "trang_thai": "DONG_THUAN_HM_K2_DA_KY" if k2 else "DONG_THUAN_HM", "hang_S4": xh[r["tu"]],
+                       "tang": "HM", "can_soat": f"lịch sử {r['nhom_hm']}" + ("; K2 hai SA ký" if k2 else "")})
+    assert n_hm <= 25
     write_tsv(U / "ra-thay-chinh-thay-the.tsv", list(rows_t[0].keys()), rows_t)
     ct = collections.Counter(r["trang_thai"] for r in rows_t if r["vai_tro"] == "RA")
     moi = [r["tu"] for r in vao]
@@ -380,14 +409,14 @@ def main():
            f"H5: {len(rows5)} cặp; {dict(sorted(c5.items()))}",
            f"Thay: {len(ra)} từ ra ({dict(ct)}); {sum(r['vai_tro'] == 'VAO' for r in vao)} vào, "
            f"{sum(r['vai_tro'] == 'DU_BI' for r in vao)} dự bị, {sum(r['vai_tro'] == 'CON_LAI' for r in vao)} còn lại; "
-           f"khóa H7 còn tranh chấp (Q-rtc-O2): {len(s1)}",
+           f"khóa H7 còn tranh chấp (Q-rtc-O2): {len(s1)}; HM (D-rtc-8): {n_hm}",
            f"trung vị PPM sạch (opus-counts.tsv rồi l2/l2b/l2c/l3-ung-vien.tsv, như screen_core.load của Astra): "
            f"O{len(ra)} ra {trung_vi([r['tu'] for r in ra])}, vào {trung_vi(moi[:len(ra)])}",
            "Đồng thuận thay: " + ", ".join(r["tu"] for r in rows_t if r["trang_thai"] == "DONG_THUAN"),
            "Đo xong, chờ Astra xác nhận số: " + ", ".join(r["tu"] for r in rows_t if r["trang_thai"] == "DO_XONG_CHO_XAC_NHAN"),
            "Đồng thuận thay, nhãn CHO_LOAI: " + ", ".join(r["tu"] for r in rows_t if r["trang_thai"] == "DONG_THUAN_CHO_LOAI"),
            "Tranh chấp S2 (Opus thay): " + ", ".join(r["tu"] for r in rows_t if r["trang_thai"] == "TRANH_CHAP_S2"),
-           "Chủ dự án quyết (D-rtc-6): thay " + ", ".join(w for w, v in qd.items() if v == "K1") + "; giữ (K2) "
+           "Chủ dự án quyết (D-rtc-6, D-rtc-7): thay " + ", ".join(w for w, v in qd.items() if v == "K1") + "; giữ (K2) "
            + ", ".join(w for w, v in qd.items() if v == "K2"),
            "H7 chờ căn cứ (Astra CHO): " + ", ".join(r["tu_chinh"] for r in rows7 if r["trang_thai"] == "CHO_CAN_CU"),
            "H7 giữ theo chữ ký cũ: " + ", ".join(r["tu_chinh"] for r in rows7 if r["trang_thai"] == "GIU_CHU_KY_CU"),

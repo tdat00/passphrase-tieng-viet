@@ -115,10 +115,6 @@ RA	-	xù xì	H	OK_KHONG_F	H5	DONG_THUAN_CHO_LOAI	6831	-	-
 RA	-	thuần	H	OK_KHONG_F	K1	QUYET_DINH_CHU_D-rtc-6	4252	-	-
 RA	-	vòng	C	OK_KHONG_F	K1	QUYET_DINH_CHU_D-rtc-6	362	-	-
 RA	-	xuân	K	OK_KHONG_F	K1	QUYET_DINH_CHU_D-rtc-6	2613	-	-
-RA_NEU_CHU_DU_AN_THEO_ASTRA	-	bạn thân	C	OK_KHONG_F	K1 (Astra)	CHU_DU_AN_QUYET_Q-rtc-O2	-	-	ho-so/astra/ra-thay-chinh/khep-muc-mo-1.tsv:92
-RA_NEU_CHU_DU_AN_THEO_ASTRA	-	cần cù	H	OK_KHONG_F	K1 (Astra)	CHU_DU_AN_QUYET_Q-rtc-O2	-	-	ho-so/astra/ra-thay-chinh/khep-muc-mo-1.tsv:6
-RA_NEU_CHU_DU_AN_THEO_ASTRA	-	tiền lương	K	OK_KHONG_F	K1 (Astra)	CHU_DU_AN_QUYET_Q-rtc-O2	-	-	ho-so/astra/ra-thay-chinh/khep-muc-mo-1.tsv:41
-RA_NEU_CHU_DU_AN_THEO_ASTRA	-	triệu	K	OK_KHONG_F	K1 (Astra)	CHU_DU_AN_QUYET_Q-rtc-O2	-	-	ho-so/astra/ra-thay-chinh/khep-muc-mo-1.tsv:45
 VAO	1	mụ mị	H	OK_KHONG_F	D8_CHUA_CO	SO_BO_DAT	8096	A	-
 VAO	2	cờ vây	K	OK_KHONG_F	D8_CHUA_CO	SO_BO_DAT	8097	A	-
 VAO	3	đưa đò	H	OK_KHONG_F	D8_CHUA_CO	CAN_DOC	8098	A	còi H7: dưa đỏ 0.17
@@ -237,3 +233,28 @@ VAO	115	áng chừng	K	OK_KHONG_F	D8_CHUA_CO	SO_BO_DAT	8244	A	-
 VAO	116	tính nết	K	OK_KHONG_F	D8_CHUA_CO	SO_BO_DAT	8245	A	-
 DU_BI	117	cả nghĩ	K	OK_KHONG_F	H8_CHI_BE_MAT;D8_CHUA_CO	SO_BO_DAT	8246	C	-
 DU_BI	118	cửu chương	K	OK_KHONG_F	H8_YEU;D8_CHUA_CO	SO_BO_DAT	8248	C	-
+HM	1	ngân hàng	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	32	HM	lịch sử D6_CUOI
+HM	2	khách hàng	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	77	HM	lịch sử D6_CUOI
+HM	3	biển	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM_K2_DA_KY	207	HM	lịch sử D6_CUOI; K2 hai SA ký
+HM	4	côn trùng	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	279	HM	lịch sử D7_CUOI
+HM	5	cô giáo	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	319	HM	lịch sử D6_CUOI
+HM	6	thay thế	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	324	HM	lịch sử D6_CUOI
+HM	7	chỗ ngồi	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	423	HM	lịch sử D6_CUOI
+HM	8	một mình	K	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	581	HM	lịch sử D6_CUOI
+HM	9	bí mật	K	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM_K2_DA_KY	615	HM	lịch sử D6_CUOI; K2 hai SA ký
+HM	10	mùa đông	K	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	621	HM	lịch sử D7_CUOI
+HM	11	tàu điện	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	651	HM	lịch sử D6_CUOI
+HM	12	cụ thể	K	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	799	HM	lịch sử D6_CUOI
+HM	13	áp dụng	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	811	HM	lịch sử D6_CUOI
+HM	14	vận hành	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM_K2_DA_KY	824	HM	lịch sử D6_CUOI; K2 hai SA ký
+HM	15	việc làm	K	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	871	HM	lịch sử D7_CUOI
+HM	16	chế tạo	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	883	HM	lịch sử D6_CUOI
+HM	17	lực lượng	K	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	909	HM	lịch sử D6_CUOI
+HM	18	chia	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM_K2_DA_KY	1055	HM	lịch sử D6_CUOI; K2 hai SA ký
+HM	19	bánh ngọt	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	1164	HM	lịch sử D7_CUOI
+HM	20	đánh răng	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	1186	HM	lịch sử D6_CUOI
+HM	21	xe điện	C	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	1216	HM	lịch sử D7_CUOI
+HM	22	bày tỏ	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	1255	HM	lịch sử D6_CUOI
+HM	23	chuyển đổi	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	1344	HM	lịch sử D6_CUOI
+HM	24	ngắn gọn	H	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM_K2_DA_KY	1379	HM	lịch sử D6_CUOI; K2 hai SA ký
+HM	25	tương đương	K	OK_KHONG_F	D-rtc-8	DONG_THUAN_HM	1541	HM	lịch sử D6_CUOI

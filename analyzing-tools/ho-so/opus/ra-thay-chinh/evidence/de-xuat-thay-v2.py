@@ -44,6 +44,9 @@ D_RTC_6 = {  # quyết định của chủ dự án cho Q-rtc-O1 (D-rtc-6, commi
     "vòng": "K1", "thuần": "K1", "xuân": "K1",
     "lưới": "K2", "phòng ngủ": "K2", "tường": "K2", "thị trường": "K2", "khiến": "K2", "ngại": "K2", "trạm": "K2",
 }
+D_RTC_7 = {  # quyết định của chủ dự án cho Q-rtc-O2 (D-rtc-7, commit 2cc6aec): giữ cả bốn, K2, hai SA ký
+    "cần cù": "K2", "tiền lương": "K2", "triệu": "K2", "bạn thân": "K2",
+}
 KHEP_1 = {  # khép mục mở 1: Astra đề nghị thay, Opus đồng ý (khep-muc-mo-1.tsv của hai bên)
     "chậm": "K1", "cổng": "K1", "mặt nước": "K1", "thiếu": "K1", "trán": "K1", "niêu": "K0",
     "chun": "H5", "thun": "H5", "tép riu": "H5",
