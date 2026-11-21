@@ -9,8 +9,50 @@
   },
   "du_phong": {
     "so_tu": 205,
-    "trang_thai": "dự phòng, chưa phân tích",
-    "du_phong_txt_sha256": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b"
+    "trang_thai": "đã phân tích, chưa phát hành",
+    "du_phong_txt_sha256": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
+    "phan_loai_tsv": "du-phong-phan-loai.tsv",
+    "phan_loai_tsv_sha256": "0f1cf57455e1a368587a101f7b0183c5a47c91c6910d8749be2b802ca0364036",
+    "tang": {
+      "A": 148,
+      "B": 36,
+      "C": 15,
+      "D": 6
+    },
+    "giai_nghia_lich_su": {
+      "co_cau_dat": 168,
+      "chua_viet": 37,
+      "d8_du_phong": 0
+    },
+    "h8": {
+      "MANH": 198,
+      "YEU": 4,
+      "CHI_BE_MAT": 2,
+      "KHONG_LUOT": 1
+    }
+  },
+  "honorable_mentions": {
+    "so_tu": 237,
+    "trang_thai": "đề cử, chưa phát hành",
+    "tep": "honorable-mentions.tsv",
+    "sha256": "122ebc3b1c8a84f125d2a3f8924faab195834913c28454a592a47ba24603fa69",
+    "nhom": {
+      "D6_CUOI": 120,
+      "D7_CUOI": 10,
+      "R1": 107
+    },
+    "ghi_chu": "không phải dự phòng; trạng thái cổng và điều kiện nằm trong TSV"
+  },
+  "phan_tich_du_phong": {
+    "base_commit": "cefb99386d4845e40bc2d3eabc7d6898d078305d",
+    "quyet_dinh_commit": "1734b43",
+    "h8_tap_luat": "ho-so/unified/tap-luat-P2-v4.json",
+    "h8_tap_luat_sha256": "a7a489a6737045f33c3c8e342c944585f4137c964677bd9f872c14ac498a70c8",
+    "h8_tong_am_tiet": {
+      "sub_moi_dong": 34329387,
+      "sub_dong_khac": 27978808,
+      "web_dong_khac": 150070912
+    }
   },
   "nguon_du_lieu": [
     {
@@ -170,7 +212,7 @@
     }
   },
   "tep": {
-    "README.md": "06c0c9a63f2e31cd6c87beb2355be864a48b845224f1aedae8319334f819604c",
+    "README.md": "b878407e8fb092db0ea0d0f3869060a6b7e36fb881aa6e968e32db23092d17e2",
     "blocked_keys.tsv": "016996d5424cc1ad3cc23903c85ba9c2a6a141b6402549c168c3a4ab90bdc0e8",
     "build_wordlist.py": "616a231700827f0b67cde8a0c23005f1da7854930c0a4e14c7cc487901f6ea79",
     "check_wordlist.py": "583559076e46aa8b524999b8cc9aa0e442b85399786b2726b59f807abd6dcc2f",
@@ -178,7 +220,9 @@
     "d6-ho-chinh-ta.tsv": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
     "d6-kiem.py": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
     "d6-tham-chieu.json": "23a85060ac07f289b30bfa8fa4a0ad0e02fcfcf31b07921c8d1f47cc2a25e0e5",
+    "du-phong-phan-loai.tsv": "0f1cf57455e1a368587a101f7b0183c5a47c91c6910d8749be2b802ca0364036",
     "du-phong.txt": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
+    "honorable-mentions.tsv": "122ebc3b1c8a84f125d2a3f8924faab195834913c28454a592a47ba24603fa69",
     "huong-dan-giai-nghia.md": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
     "kiem-tra-giai-nghia.py": "3f143e967ce2084cb96f271750c72712015b0fdf3a826826232eadceb9d48581",
     "labels.tsv": "a5b882a82a4bff853fce938deed94cdb4efa5dc969ff05572a68835a7605369b",
@@ -191,7 +235,7 @@
   },
   "ho_so": {
     "thu_muc": "ho-so/",
-    "so_tep": 277,
+    "so_tep": 402,
     "readme_sha256": "8a276597559a408e8c6303f6488fb88566389e760854b39e30a3609481605c3f"
   }
 }

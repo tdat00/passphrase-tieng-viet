@@ -9,7 +9,9 @@ Thư mục này **không** chứa văn bản kho ngữ liệu, danh sách từ H
 | Tệp | Nội dung |
 |---|---|
 | [`wordlist.txt`](wordlist.txt) | **Nguồn chuẩn** của danh sách: 7.776 dòng `từ\|giải nghĩa`, UTF-8, LF, NFC, xếp theo thứ tự O1. Giải nghĩa được viết mới (MIT) |
-| [`du-phong.txt`](du-phong.txt) | 205 từ dự phòng, trạng thái **dự phòng, chưa phân tích**: không phát hành, chưa đủ điều kiện để thay vào danh sách chính (xem `WordListAnalyze.md` mục 11) |
+| [`du-phong.txt`](du-phong.txt) | Giữ nguyên 205 từ để đối chiếu lịch sử; đã có bảng phân loại riêng, chưa phát hành và không phải 205 gói thay thế đã được duyệt |
+| [`du-phong-phan-loai.tsv`](du-phong-phan-loai.tsv) | Một dòng cho mỗi từ dự phòng: tầng, ngăn, cảnh báo H, trạng thái nghĩa, mã H8, việc còn thiếu và nguồn chứng cứ |
+| [`honorable-mentions.tsv`](honorable-mentions.tsv) | 237 từ có thể cân nhắc đã chốt phạm vi đề cử; không phải dự phòng, không tự cấp quyền thay từ hoặc viết thêm nghĩa |
 | [`labels.tsv`](labels.tsv) | Nhãn của từng từ chính và dự phòng: khóa không dấu, nhãn (OK/R1), lớp (C người/vật, H hành động/tính chất, K trừu tượng, F hư từ), điểm thông dụng F, điểm cộng G, khoản trừ T, điểm xếp hạng, các ngoại lệ có đủ chữ ký hai bên (H3, H5, K2) |
 | [`nguon-goc-giai-nghia.tsv`](nguon-goc-giai-nghia.tsv) | Hồ sơ nguồn gốc giải nghĩa (D8), xem mục dưới |
 | [`blocked_keys.tsv`](blocked_keys.tsv) | Khóa không dấu bị chặn (K0: trùng khóa từ tục hoặc có nghĩa phụ tục; K1: đọc tự nhiên thành từ nhạy cảm; K2_CHUA_KY: mức vàng chưa đủ chữ ký). Chỉ ghi khóa ASCII, không ghi từ tục |
@@ -45,6 +47,20 @@ Cả năm lệnh phải báo 0 lỗi. [`check_wordlist.py`](check_wordlist.py) k
 - C6: mọi từ có nhãn OK/R1, R1 ≤ 388, lớp F ≤ 77;
 - C7 (một phần): giải nghĩa không trùng, ≤ 110 kí tự, chữ hoa đầu, dấu chấm cuối;
 - C8: khối `#wordlist` của `index.html`, `thong-tin.html` và mục 10 của `WordListAnalyze.md` khớp [`wordlist.txt`](wordlist.txt) từng dòng.
+
+## Dự phòng và từ có thể cân nhắc
+
+Đọc `du-phong-phan-loai.tsv` cùng `du-phong.txt`; không thay từ chỉ dựa vào thứ tự dòng hoặc tầng A. Tầng không thay nhãn OK/R1 và không sửa S4. Mục D hoặc cổng chưa khép không được dùng. R1 không tự thay ghế OK; lớp F không được vượt 77.
+
+Mã H8 lấy từ tập luật P2 v4.1 và kết quả hai bộ cổng đã đối chiếu, gồm cả CHI_BE_MAT. Điểm F, số đếm và mức H8 là ba dữ liệu khác nhau. Mẫu số P2 là 34.329.387/150.070.912 âm tiết phụ đề/web; không sửa ngược metadata nguồn lịch sử để làm chúng giống nhau.
+
+Khảo sát PPM gộp H7 trong hồ sơ này dùng mẫu số mục 0 của tiêu chí/manifest (34.314.528/149.860.716); nhãn H8 vẫn dùng P2. Các phép đo phải ghi rõ mẫu số, không trộn hai bộ.
+
+Từ có thể cân nhắc chỉ là đề cử; cột trạng thái nêu rõ hồ sơ nào chưa hoàn tất. Phân tích này không thay danh sách chính, không viết câu mới và không tự hoàn tất D8.
+
+### Kiểm trên checkout Windows
+
+Nguồn chuẩn trong Git dùng LF. Checkout CRLF có thể làm check_wordlist.py báo C1 và verify.mjs báo C1/C8; đó không phải native PASS. Kiểm đối chứng đúng nội dung LF hoặc trong môi trường giữ LF, đồng thời lưu kết quả kiểm byte của vùng được bảo vệ. Không sửa nguồn chính hoặc nới checker chỉ để làm mất lỗi nền trong tác vụ phân tích.
 
 ## Cập nhật danh sách
 
