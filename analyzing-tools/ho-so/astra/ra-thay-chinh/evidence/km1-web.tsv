@@ -1,0 +1,23 @@
+ma	url	nhan_kiem	sha256_http	trang_thai
+VDict:ăn bĩnh	https://vdict.com/%C4%83n%20b%C4%A9nh,3,0,0.html	CO_MUC_CO_BAC_KHONG_PHAI_CHAT_THAI	d8ddc7a7f3c9a07cc73ba8a35305b5b08e8f61cfd5f2d186380a5a16046be6b9	HTTP_200; BAM_PHAN_HOI
+VDict:niệu	https://vdict.com/ni%E1%BB%87u,3,0,0.html	DANH_TU_CHAT_THAI_VA_YEU_TO_GHEP	7255d69778a23c1bcb5f7c4c390b43f50a942e64eb06c6beaa58d4f43a7bf87c	HTTP_200; BAM_PHAN_HOI
+VDict:tinh tử	https://vdict.com/tinh%20t%E1%BB%AD,3,0,0.html	THUAT_NGU_SINH_HOC	924a946f44d98726bf674e50dd3096ecaa596409dab42f0bf2bac53c8472b90a	HTTP_200; BAM_PHAN_HOI
+VDict:tép diu	https://vdict.com/t%C3%A9p%20diu,3,0,0.html	DAN_TEP_RIU	5d9fddedbaefedd078ecfe710b503eb38b15442ed1b1c399167e5e8a87c6205f	HTTP_200; BAM_PHAN_HOI
+VDict:bản hiệu	https://vdict.com/b%E1%BA%A3n%20hi%E1%BB%87u,3,0,0.html	KHONG_TIM_THAY	daf49851af99d65ce8312d8a0c6358eb4088b3be7f3e74590a731b0c8f0a3b1c	HTTP_200; BAM_PHAN_HOI
+VDict:bội phát	https://vdict.com/b%E1%BB%99i%20ph%C3%A1t,3,0,0.html	THUAT_NGU_RIENG	e835b829b277d6c3348167ea6f11f4a118c032378cd32464add71b30f856a779	HTTP_200; BAM_PHAN_HOI
+VDict:lòng dòng	https://vdict.com/l%C3%B2ng%20d%C3%B2ng,3,0,0.html	KHONG_TIM_THAY	0754133dec5c05f4a1eb9f22d89bc4a0ec830c99c6045182323cf19a7cb38d0b	HTTP_200; BAM_PHAN_HOI
+VDict:ọt ẹt	https://vdict.com/%E1%BB%8Dt%20%E1%BA%B9t,3,0,0.html	TU_TUONG_THANH	6d1a1bba40941dfb667211870f1cd402b7ccb3ef0e28503faf444acfa378924d	HTTP_200; BAM_PHAN_HOI
+VDict:giu giú	https://vdict.com/giu%20gi%C3%BA,3,0,0.html	GAN_NGHIA_KHONG_GHI_BIEN_THE	1924310aafa85982352f21aa86f6aad5aadca12ecbae6afe75b7de7e9458ff18	HTTP_200; BAM_PHAN_HOI
+VDict:xành xạch	https://vdict.com/x%C3%A0nh%20x%E1%BA%A1ch,3,0,0.html	TU_TUONG_THANH	ed73e47a959dff01136b040944f61fa8ecadbdb23d08a93f4aead20de92bb12f	HTTP_200; BAM_PHAN_HOI
+SOHA:rỡn	http://tratu.soha.vn/dict/vn_vn/R%E1%BB%A1n	XEM_GION	df54bef61b23ee73cf585a30d14552df3e0dc60b1aebafa6b3a8f7ee8eb9408e	HTTP_200; BAM_PHAN_HOI
+SOHA:dướn	http://tratu.soha.vn/dict/vn_vn/D%C6%B0%E1%BB%9Bn	XEM_RUON	decdacfa72513a07cf2d40826241145e99165ba6e2d77ee546130bc552f02a28	HTTP_200; BAM_PHAN_HOI
+SOHA:thư giãn	http://tratu.soha.vn/dict/vn_vn/Th%C6%B0_gi%C3%A3n	XEM_THU_DAN	37aeb785001e054497d6f806c6c3dc26dbc59fcd40b42b3366ab5eed23737cc9	HTTP_200; BAM_PHAN_HOI
+ZIM	https://dictionary.zim.vn/viet-anh/xoan-xoat-tieng-anh-la-gi	CHI_MUC_TIM_KIEM_GHI_TU_TUONG_THANH; TRANG_TRUC_TIEP_CHAN_JS	-	KHONG_BAM_TRANG_CHAN
+BVNTL	https://benhviennamthanglong.vn/ghen-mat-la-gi/	DICH_TIET_MAT_BINH_THUONG_CUNG_CO_THE_DI_KEM_BENH	1a250921e95ff6ec27506c750d6a1b6a675a8d2eb8ef5281d78849a5016490ee	HTTP_200; BAM_PHAN_HOI
+Han:尿	https://hvdic.thivien.net/whv/%E5%B0%BF	DOI_CHIEU_HAN_VIET_KHONG_THAY_NGUON_NGUYEN_MUC_VIET	bfeb38eeab365318600c93561a247d8842dffa29d2beeb64ba9f7d85d170cbcd	HTTP_200; BAM_PHAN_HOI
+NUOT	https://nghiencuulichsu.com/2026/08/16/hien-tuong-luong-kha-trong-tieng-viet/	NGUON_PHU_QUAN_HE_CH_TR; KEM_HAI_MUC_TU_VV_30K	31995583a511196e999d19f1961019e5e4069112ea3e292828cc8179c2f27d99	HTTP_200; BAM_PHAN_HOI
+DIEM_NHAN	https://baolamdong.vn/net-dep-nghi-thuc-khai-quang-diem-nhan-lan-su-rong-dau-nam-424239.html	CO_DUNG_CUM_TRONG_NGHI_THUC	882d3f67714ac53dbda236bcb1c6714318117298955dfbdf522c31ee386b9e21	HTTP_200; BAM_PHAN_HOI
+ONG_THO	https://www.decathlon.vn/p/%E1%BB%91ng-th%E1%BB%9F-l%E1%BA%B7n-bi%E1%BB%83n-ng%C6%B0%E1%BB%9Di-l%E1%BB%9Bn-c%C3%B3-van-100-xanh-ng%E1%BB%8Dc-decathlon-9002855.html	DUNG_CU_LAN_KHONG_CHI_Y_TE	e4cb37923edae92c9a2168a106d1b212c1066a8f51e7fa8e7f94050a6ba6bc94	HTTP_200; BAM_PHAN_HOI
+KHUY	https://nghengu.vn/tieng-nghe-cua-toi/khuy-goi-hay-khuyu-goi-2079.html	DANG_KHUY_CHI_DONG_TAC	a25361995abc3991620764a4895267f29fee5d86f5b293c37204525b0aa12b43	HTTP_200; BAM_PHAN_HOI
+VDict:làm khổ	https://vdict.com/l%C3%A0m%20kh%E1%BB%95,3,0,0.html	PHAM_VI_RONG_HON_BAO_LUC	e0976dfe3e02b65eca1f20a8a17c95e1e052eced8d94f406b2ca5eaac24e8568	HTTP_200; BAM_PHAN_HOI
+VDict:thay lòng	https://vdict.com/thay%20l%C3%B2ng,3,0,0.html	THAY_DOI_TINH_CAM_Y_DINH	78fc035da00aa4a2dc1e306492e7c67d61191567bdf63b29ad689a39f4cc6e80	HTTP_200; BAM_PHAN_HOI

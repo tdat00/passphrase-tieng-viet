@@ -1,15 +1,14 @@
-H7: 349 khóa; {'CHO_CAN_CU': 46, 'DONG_THUAN_GIU': 2, 'DONG_THUAN_GIU_CAN_KY_K2': 198, 'DONG_THUAN_THAY': 83, 'GIU_CHU_KY_CU': 9, 'GIU_QUYET_DINH_CHU': 1, 'TRANH_CHAP': 10}
-H5: 65 cặp; {'CHO_CAN_CU': 27, 'DONG_THUAN_KHAC_TU': 6, 'DONG_THUAN_QUA': 11, 'DONG_THUAN_THAY': 14, 'DONG_THUAN_THAY_CHO_LOAI': 7}
-Thay: 104 từ ra ({'DONG_THUAN': 97, 'DONG_THUAN_CHO_LOAI': 7}); 104 vào, 16 dự bị, 0 còn lại; nhánh Q-rtc-O1: 10 khóa
-đuôi sau O87 + 25 dự bị của Astra (rd1-audit-summary.json, unprepared_tail) = vị trí 113–120 ở đây: True; từ vào thứ 88 = giông giống; vị trí 113 = năm kia
-trung vị PPM sạch (opus-counts.tsv rồi l2/l2b/l2c/l3-ung-vien.tsv, như screen_core.load của Astra): O87 ra 1.706275071 (n = 87/87), vào 0.076191870 (n = 87/87); O104 ra 1.741434349 (n = 104/104), vào 0.072855439 (n = 104/104)
-Đồng thuận thay: áo quần, ăn diện, bà chủ, bàn ăn, bảo hành, báo động, bền bỉ, bồ kết, bố mẹ, bộ ba, ca nhạc, cải xoong, cao giá, cắm đầu, choàng, chỏm, chòng chành, chồn, chữ nghĩa, cò trắng, cổ thụ, cộng sự, cuốc, dàn ý, dặn dò, dây chun, dây thun, di dời, diều, dò hỏi, đánh bại, đậm đà, đầu mùa, đích, đỏ thắm, đột phá, gầy gò, già dặn, giảm, giao, giấc, giận dỗi, gọng, hâm mộ, hoa mai, hỏi thăm, hóm hỉnh, hố ga, kiến, làng, lằng nhằng, lấn át, lề đường, măng, mê mẩn, mời mọc, nằm mơ, nắm vững, ngao, ngắt, ngoảnh, ngọc, ngụm, nguyên, ngựa, nhai, nhàu, nhồi, nhốt, phản bác, phân công, phấp phới, phí phạm, phong thư, rau dền, rầm rầm, sàng, sân ga, sông, tài hoa, thái, thảm, than, thể lực, thiên tài, thong dong, thôn, thớt, thư thái, tiệm, tiền công, tiếp viên, tính khí, trăng tròn, trời, xà bông, xà phòng
+H7: 349 khóa; {'CHU_DU_AN_GIU_DA_KY_PHIEU': 7, 'CHU_DU_AN_THAY': 3, 'DONG_THUAN_GIU': 10, 'DONG_THUAN_GIU_DA_KY_PHIEU': 226, 'DONG_THUAN_THAY': 89, 'GIU_CHU_KY_CU': 9, 'GIU_QUYET_DINH_CHU': 1, 'TRANH_CHAP': 4}
+H5: 65 cặp; {'DONG_THUAN_DA_RA': 2, 'DONG_THUAN_KHAC_TU': 23, 'DONG_THUAN_KHONG_CHO_VAO': 1, 'DONG_THUAN_QUA': 15, 'DONG_THUAN_THAY': 17, 'DONG_THUAN_THAY_CHO_LOAI': 7}
+Thay: 116 từ ra ({'DONG_THUAN': 106, 'DONG_THUAN_CHO_LOAI': 7, 'QUYET_DINH_CHU_D-rtc-6': 3}); 116 vào, 2 dự bị, 0 còn lại; khóa H7 còn tranh chấp (Q-rtc-O2): 4
+trung vị PPM sạch (opus-counts.tsv rồi l2/l2b/l2c/l3-ung-vien.tsv, như screen_core.load của Astra): O116 ra 1.914419299 (n = 116/116), vào 0.072855439 (n = 116/116)
+Đồng thuận thay: áo quần, ăn diện, bà chủ, bàn ăn, bảo hành, báo động, bền bỉ, bồ kết, bố mẹ, bộ ba, ca nhạc, cải xoong, cao giá, cắm đầu, chậm, choàng, chỏm, chòng chành, chồn, chun, chữ nghĩa, cò trắng, cổ thụ, cổng, cộng sự, cuốc, dàn ý, dặn dò, dây chun, dây thun, di dời, diều, dò hỏi, đánh bại, đậm đà, đầu mùa, đích, đỏ thắm, đột phá, gầy gò, già dặn, giảm, giao, giấc, giận dỗi, gọng, hâm mộ, hoa mai, hỏi thăm, hóm hỉnh, hố ga, kiến, làng, lằng nhằng, lấn át, lề đường, măng, mặt nước, mê mẩn, mời mọc, nằm mơ, nắm vững, ngao, ngắt, ngoảnh, ngọc, ngụm, nguyên, ngựa, nhai, nhàu, nhồi, nhốt, niêu, phản bác, phân công, phấp phới, phí phạm, phong thư, rau dền, rầm rầm, sàng, sân ga, sông, tài hoa, tép riu, thái, thảm, than, thể lực, thiên tài, thiếu, thong dong, thôn, thớt, thun, thư thái, tiệm, tiền công, tiếp viên, tính khí, trán, trăng tròn, trời, xà bông, xà phòng
 Đo xong, chờ Astra xác nhận số:
 Đồng thuận thay, nhãn CHO_LOAI: chơ vơ, co rúm, loay hoay, rầm rộ, su hào, xập xình, xù xì
 Tranh chấp S2 (Opus thay):
-Chủ dự án quyết, Q-rtc-O1 (Astra K1, Opus K2): khiến, lưới, ngại, phòng ngủ, thị trường, thuần, trạm, tường, vòng, xuân
-H7 chờ căn cứ (Astra CHO): áo ngủ, bảng, bề mặt, bể bơi, cần cù, chậm, chân đất, chậu, chung, cổ đông, công đoạn, cổng, cuống, điểm nhấn, điều hành, đinh, đồ bạc, đông đúc, ghen, họ hàng, hoang đảo, hoang sơ, khác, khuy, làm khó, lỗi thời, mặt nước, nắng, ngáp, nghèo, niêu, nóng, ong thợ, quyển, rãnh, rung động, thiếu, thính, tích, tiền lương, tình tứ, tổng, trán, triệu, trường, vất vả
+Chủ dự án quyết (D-rtc-6): thay vòng, thuần, xuân; giữ (K2) lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm
+H7 chờ căn cứ (Astra CHO):
 H7 giữ theo chữ ký cũ: bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng
-H5 chờ căn cứ: bảng hiệu/bản hiệu, bộc phát/bội phát, bộc phát/bột phát, chun/thun, cột mốc/cột mốt, dí dỏm/rí rỏm, giỡn/rỡn, giun/dun, hạt dẻ/hạt giẻ, hì hục/hì hụi, lăn tăn/lăm tăm, lằng nhằng/loằng nhoằng, lon ton/long tong, lòng vòng/lòng dòng, nuốt chửng/nuốt trửng, ọp ẹp/ọt ẹt, qua quýt/qua quít, rậm rạp/giậm giạp, ròng rã/ròn rã, ru rú/giu giú, sền sệt/sềnh sệch, tép riu/tép diu, theo dõi/theo rõi, thun/chun, thư giãn/thư dãn, xà bông/sà bông, xanh/sanh
+H5 chờ căn cứ:
 H5 tranh chấp khác:
 H5 cặp khớp họ đã đăng ký khi tách ' / ': bít tết/bíp tết (spelling_families.tsv:258)

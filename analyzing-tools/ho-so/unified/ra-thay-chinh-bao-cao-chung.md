@@ -1,6 +1,6 @@
 # Rà và thay danh sách chính — báo cáo chung vòng 1
 
-**Ngày:** 21/11/2026. **Gốc:** `1c3f504`, nhánh `analyze/ra-thay-chinh`. **Soạn:** SA-Opus. **Duyệt:** SA-Astra, lượt 1 và lượt 2 đều "changes requested" (`ho-so/astra/ra-thay-chinh/round-1-review-drafts.md`, mục "Lượt duyệt 2"). Bản này đã sửa theo cả hai lượt, rồi ghi kết quả thỏa thuận của hai SA theo D-rtc-5 (`ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`); nhật ký sửa ở `ho-so/opus/ra-thay-chinh/round-1-revision-1.md`.
+**Ngày:** 21/11/2026. **Gốc:** `1c3f504`, nhánh `analyze/ra-thay-chinh`. **Soạn:** SA-Opus. **Duyệt:** SA-Astra, lượt 1 và lượt 2 đều "changes requested" (`ho-so/astra/ra-thay-chinh/round-1-review-drafts.md`, mục "Lượt duyệt 2"). Bản này đã sửa theo cả hai lượt, rồi ghi kết quả thỏa thuận của hai SA theo D-rtc-5 (`ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`) và quyết định D-rtc-6 của chủ dự án (`0253bb0`); nhật ký sửa ở `ho-so/opus/ra-thay-chinh/round-1-revision-1.md`.
 
 **Nguồn:**
 
@@ -14,33 +14,35 @@
 
 ## 1. Tóm tắt
 
-1. **Hai bên đồng thuận thay 104 từ chính:**
-   - H7, 83 từ: 2 K0 (*phản bác, tính khí*) và 81 K1. Trong 81 K1 có *thái*, 13 khóa Opus nhận sau duyệt nháp (*bền bỉ, ca nhạc, cắm đầu, choàng, giao, lề đường, ngao, nguyên, nhồi, sàng, sông, thôn, tiệm*) và 3 khóa của thỏa thuận (*cò trắng, sân ga, trăng tròn*).
-   - H5, 21 từ:
+1. **Thay 116 từ chính:** 104 từ hai SA đồng thuận ở thỏa thuận S1–S3, 3 từ theo quyết định của chủ dự án (D-rtc-6) và 9 từ hai SA đồng ý thay khi khép mục mở (T-rtc-15, T-rtc-16).
+   - H7, 92 từ: 3 K0 (*phản bác, tính khí, niêu*) và 89 K1. Trong 89 K1 có *thái*, 13 khóa Opus nhận sau duyệt nháp (*bền bỉ, ca nhạc, cắm đầu, choàng, giao, lề đường, ngao, nguyên, nhồi, sàng, sông, thôn, tiệm*), 3 khóa của thỏa thuận (*cò trắng, sân ga, trăng tròn*) và 3 khóa chủ dự án quyết thay (*vòng, thuần, xuân*); thêm *chậm, cổng, mặt nước, thiếu, trán* khi khép mục mở.
+   - H5, 24 từ:
      - loại c: *chòng chành, bồ kết, rau dền, ngoảnh, phấp phới, già dặn, dây chun, dây thun, phí phạm, lấn át, rầm rầm*;
      - loại f: *cải xoong, xà bông, xà phòng*, đã cộng dạng phân cách, Astra xác nhận số (C9);
      - CHO_LOAI, không phát hành ở bản này: *co rúm, xù xì, rầm rộ, chơ vơ, xập xình, su hào, loay hoay*.
+     - khép mục mở: *chun, thun* (H5e rồi c), *tép riu* (c, thiếu dữ liệu).
 2. **Thỏa thuận theo D-rtc-5** (không dùng SA-Fable; `ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`):
    - S1: K1 cho *cò trắng, sân ga, trăng tròn*; K2 (giữ, hai SA ký) cho *húng, hững hờ, phù dâu, thắm thiết* (T-rtc-12);
    - S2: bảy từ CHO_LOAI, không phát hành (T-rtc-13);
    - S3: tính lại S2/S3 theo P6 trên tập ra cuối (T-rtc-14).
-3. **Câu hỏi cho chủ dự án: Q-rtc-O1**, 10 từ hai SA còn lệch: *khiến, lưới, ngại, phòng ngủ, thị trường, thuần, trạm, tường, vòng, xuân*. Astra muốn thay, Opus muốn giữ.
-   - Theo Opus cả 10: 104 từ thay, còn 16 dự bị.
-   - Theo Astra cả 10: 114 từ thay, còn 6 dự bị.
-4. **Còn chờ, hai SA khép theo kế hoạch mục 12.1:**
-   - 46 khóa H7 Astra chờ thêm căn cứ;
-   - 27 dòng H5: 14 quan hệ Opus xếp khác từ, 9 cặp từng bị ghép nhầm thành QUA, *chun*/*thun* (hai chiều), *hì hục*/*hì hụi*, *qua quýt*/*qua quít*;
-   - 8 trong 11 cờ của từ vào và dự bị (3 cờ đã đóng chung);
-   - chữ ký K2 mới cho 198 khóa.
+3. **Chủ dự án đã trả lời Q-rtc-O1** (D-rtc-6, `0253bb0`):
+   - thay *vòng, thuần, xuân* (K1, chặn khóa);
+   - giữ *lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm* (K2, hai SA ký kèm lý do).
+4. **Hai SA đã khép mục mở** (T-rtc-15 đến T-rtc-18; `ho-so/astra/ra-thay-chinh/khep-muc-mo-1.*`, `ho-so/opus/ra-thay-chinh/khep-muc-mo-1-opus.*`): 282 trong 286 dòng.
+   - 46 khóa H7 chờ: giữ 37 (29 K2 hai bên ký, 8 không đỏ); thay 6; 3 trình chủ dự án.
+   - 27 dòng H5: giữ 21; thay *chun, thun, tép riu*; khép 3 dòng đã ra hay không vào.
+   - 8 cờ từ vào: giữ 6; không nhận *làm cỗ*, *rướn*.
+   - Gói K2 205 khóa: hai bên ký 204; *bạn thân* trình chủ dự án. Tổng chữ ký chung: 234.
+   - **Còn lệch, trình chủ dự án (Q-rtc-O2):** *cần cù, tiền lương, triệu, bạn thân*.
 5. **Mặc định theo hợp đồng đã ký:** từ chính còn tranh chấp hay còn chờ mà không khép được thì không phát hành.
    - K2 chưa đủ hai chữ ký thì không vào bản 1 (TC:167, :202, :525).
    - Phản đối hợp lệ còn giữ sau một lần phản biện thì không phát hành (TC:190–191).
    - "Chờ" là chưa được nhận ở bản 1 (TC:12).
-6. **Từ vào** (mô phỏng theo hạng S4 đã khóa; thứ tự cuối tính lại theo T-rtc-14): 104 dự phòng đầu (99 tầng A, 5 tầng C; hạng 8.096–8.218). Còn 16 trong 120 nguồn không-F qua lọc sơ bộ. Hỏi Q-rtc-A2 ngay khi kiểm sức chứa trước Final cho thấy thiếu, hoặc khi trượt D6/D7 sau khi chủ dự án duyệt làm thiếu ghế.
+6. **Từ vào** (mô phỏng theo hạng S4 đã khóa; thứ tự cuối tính lại theo T-rtc-14): 118 dự phòng không-F dùng được (120, bỏ *làm cỗ*, *rướn*). Tập 116: 116 từ vào (106 tầng A, 10 tầng C; hạng 8.096–8.245), còn 2 dự bị. Nếu Q-rtc-O2 theo Astra cả 4 từ: 120 ra, thiếu 2 ghế. Tính lại theo T-rtc-14 không đổi sức chứa. Vì vậy hỏi Q-rtc-A2 ngay.
 7. **Báo tử:** không có từ chính nào mang khóa `baotu`; ghi `baotu` K1 (T-dpv2-7).
 8. **Chữ ký K2 cũ giữ nguyên (9):** *bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng*. *gián* giữ theo quyết định 5. OI-RTC-KY-CU đã rút.
 9. **D6:** năm nguồn ghim đều có bản đúng byte (C17). D6 chạy trong một vùng riêng ngoài worktree.
-10. **Câu hỏi:** Q-rtc-O1 gửi chủ dự án. Q-rtc-A2, A3 chưa kích hoạt (kế hoạch mục 12.2). A1 đã rút. Kế hoạch chưa Final.
+10. **Câu hỏi:** gửi chủ dự án Q-rtc-O2 (4 từ) và Q-rtc-A2 (lấp ghế). Q-rtc-O1 đã trả lời (D-rtc-6). Q-rtc-A3 chưa kích hoạt. A1 đã rút. Kế hoạch chưa Final.
 
 ## 2. Kết luận chung
 
@@ -73,56 +75,47 @@
 
 | Trạng thái | Số khóa | Ý nghĩa |
 |---|---:|---|
-| DONG_THUAN_THAY | 83 | Hai bên K0 hoặc K1: thay từ, chặn khóa |
-| TRANH_CHAP | 10 | Astra K1, Opus K2: *khiến, lưới, ngại, phòng ngủ, thị trường, thuần, trạm, tường, vòng, xuân* (Q-rtc-O1, chủ dự án quyết) |
-| CHO_CAN_CU | 46 | Opus K2 hoặc không đỏ; Astra chờ thêm căn cứ (OI-RTC-H7-CHO) |
-| GIU_CHU_KY_CU | 9 | K2 đã ký (C3) |
+| DONG_THUAN_THAY | 89 | Hai bên K0 hoặc K1: thay từ, chặn khóa (gồm 6 khóa của T-rtc-15) |
+| CHU_DU_AN_THAY | 3 | *vòng, thuần, xuân*: chủ dự án quyết thay (D-rtc-6) |
+| CHU_DU_AN_GIU_DA_KY_PHIEU | 7 | *lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm*: chủ dự án quyết giữ; hai SA đã ký K2 trong phiếu khép mục mở |
+| TRANH_CHAP | 4 | *cần cù, tiền lương, triệu, bạn thân*: Astra K1, Opus K2 (Q-rtc-O2) |
+| GIU_CHU_KY_CU | 9 | K2 đã ký từ trước (C3) |
 | GIU_QUYET_DINH_CHU | 1 | *gián* (C4) |
-| DONG_THUAN_GIU_CAN_KY_K2 | 198 | Hai bên giữ, gồm 4 khóa S1 của T-rtc-12; còn phải ký K2 mới đủ hai bên (OI-RTC-K2-KY) |
-| DONG_THUAN_GIU | 2 | *đồng ý*, *đuốc*: cách đọc không đỏ |
+| DONG_THUAN_GIU_DA_KY_PHIEU | 226 | Hai bên giữ, hai SA đã ký K2 trong phiếu khép mục mở (197 khóa của gói, 29 khóa H7 chờ) |
+| DONG_THUAN_GIU | 10 | Cách đọc không đỏ: *đồng ý*, *đuốc* và 8 khóa H7 chờ |
 
-**46 khóa chờ:** *áo ngủ, bảng, bề mặt, bể bơi, cần cù, chậm, chân đất, chậu, chung, cổ đông, công đoạn, cổng, cuống, điểm nhấn, điều hành, đinh, đồ bạc, đông đúc, ghen, họ hàng, hoang đảo, hoang sơ, khác, khuy, làm khó, lỗi thời, mặt nước, nắng, ngáp, nghèo, niêu, nóng, ong thợ, quyển, rãnh, rung động, thiếu, thính, tích, tiền lương, tình tứ, tổng, trán, triệu, trường, vất vả*.
+**46 khóa H7 chờ đã khép (T-rtc-15):** chi tiết ở `ra-thay-chinh-h7.tsv` (cột `nguon_astra`, `chu_ky_phieu`).
 
 ### 3.2. H5 theo cặp (`ra-thay-chinh-h5.tsv`, 65 cặp)
 
 | Trạng thái | Số cặp | Cặp |
 |---|---:|---|
-| DONG_THUAN_THAY | 14 | Như C10 (gồm *lấn át*) và ba cặp H5f ở C9: *cải xoong*/*cải soong*, *xà bông*/*xà phòng* (hai chiều) |
+| DONG_THUAN_THAY | 17 | Như C10, ba cặp H5f ở C9, *chun*/*thun* (hai chiều) và *tép riu* (T-rtc-16) |
 | DONG_THUAN_THAY_CHO_LOAI | 7 | *co rúm, xù xì, rầm rộ, chơ vơ, xập xình, su hào, loay hoay*: CHO_LOAI, không phát hành ở bản này (T-rtc-13) |
-| DONG_THUAN_QUA | 11 | Như C12 |
-| DONG_THUAN_KHAC_TU | 6 | Như C13 |
-| CHO_CAN_CU | 27 | Xem dưới bảng |
+| DONG_THUAN_QUA | 15 | Như C12, cộng 4 cặp đạt loại c theo số (T-rtc-16) |
+| DONG_THUAN_DA_RA | 2 | *lằng nhằng*/*loằng nhoằng*, *xà bông*/*sà bông*: từ đã ra vì cổng khác |
+| DONG_THUAN_KHONG_CHO_VAO | 1 | *qua quýt*/*qua quít*: mục dự phòng, không vào |
+| DONG_THUAN_KHAC_TU | 23 | Như C13, cộng 17 dòng khép mục mở (khác từ hay không lập họ, T-rtc-16) |
 
-27 cặp chờ căn cứ (OI-RTC-H5-QH, OI-RTC-H5E):
-
-- **Opus xếp QUA, Astra chờ xác nhận quan hệ (9):** *bảng hiệu, cột mốc, hạt dẻ, lằng nhằng*/*loằng nhoằng, lòng vòng, nuốt chửng, theo dõi, thư giãn, xà bông*/*sà bông*.
-- **Opus xếp khác từ, Astra chờ nguồn (14):** *bộc phát* (hai cặp), *dí dỏm, giỡn, giun, lăn tăn, lon ton, ọp ẹp, rậm rạp, ròng rã, ru rú, sền sệt, tép riu, xanh*/*sanh*.
-- **Còn lại (4):** *chun*/*thun* hai chiều (H5e), *hì hục*/*hì hụi* (T-dpv2-4 không kết luận cặp này), *qua quýt*/*qua quít* (dự phòng, họ c chờ).
-
-Ca chờ quan hệ không làm từ chính rời danh sách khi không có phản đối hợp lệ (C15). Riêng *chun*/*thun* là ca H5e có quan hệ thật, nên phải đọc mẫu.
+Các dòng H5 chờ đã khép hết (T-rtc-16).
 
 ### 3.3. Thay và vào (`ra-thay-chinh-thay-the.tsv`)
 
-Bảng có bốn vai trò: RA (104), RA_NEU_CHU_DU_AN_THEO_ASTRA (10), VAO (104), DU_BI (16). Từ vào không ghép đôi với từ ra theo dòng: tập vào là 104 mục đầu của thứ tự chọn.
+Bảng có bốn vai trò: RA (116), RA_NEU_CHU_DU_AN_THEO_ASTRA (4, Q-rtc-O2), VAO (116), DU_BI (2). Từ vào không ghép đôi với từ ra theo dòng: tập vào là 116 mục đầu của thứ tự chọn.
 
-- **Từ ra:** 104 đồng thuận, trong đó 7 từ mang nhãn CHO_LOAI; tất cả ở ngăn OK không-F.
+- **Từ ra:** 116: 106 đồng thuận, 7 đồng thuận với nhãn CHO_LOAI, 3 theo D-rtc-6; tất cả ở ngăn OK không-F.
 - **Từ vào:** mô phỏng theo hạng S4 đã khóa (`xep-hang.tsv`, cột `hang`); thứ tự cuối tính lại theo T-rtc-14. Bỏ qua:
   - mục F khi F đã đủ 77 (76 mục);
   - tầng D (6 mục);
   - hai cổng còn mở: *loằng ngoằng* (chờ H5), *ngoại trừ* (chờ H7);
-  - *qua quýt* (họ c đang chờ).
-- **Kết quả:** 104 từ vào (99 A, 5 C; hạng 8.096–8.218); còn 16 dự bị (hạng tới 8.248). Sau thay: 7.776 từ, 7.776 khóa, F = 77, R1 = 0.
+  - *qua quýt* (họ c trượt);
+  - *làm cỗ*, *rướn* (không nhận ở T-rtc-17).
+- **Kết quả:** 116 từ vào (106 A, 10 C; hạng 8.096–8.245); còn 2 dự bị. Sau thay: 7.776 từ, 7.776 khóa, F = 77, R1 = 0. Nếu Q-rtc-O2 theo Astra cả 4 từ: 120 ra, 118 vào, thiếu 2 ghế.
 - **Nhánh kiểm:**
-  - thêm *theo* (lớp F) vào tập ra: 105 ra, 105 vào, F = 77. Hạn mức được cập nhật mỗi lần nhận;
-  - Q-rtc-O1 theo Astra cả 10 từ: 114 ra, 114 vào, còn 6 dự bị.
+  - thêm *theo* (lớp F) vào tập ra: 117 ra, 117 vào, F = 77. Hạn mức được cập nhật mỗi lần nhận.
 - **Quan hệ với bản nháp trước:** 87 từ vào đầu trùng thứ tự bản nháp trước. 24 từ vào trong kịch bản cũ của Astra là tập con của 87 từ này; giao với 24 từ đầu là 23 (Astra có *nhá nhem*, 24 từ đầu có *làm cỗ*).
 
-**Cờ cần đọc** (cột `can_soat`), phải khép trước Final (OI-RTC-VAO):
-
-- từ vào (9): *đưa đò, làm cỗ, thay lông, mang máng* (cách đọc khác vượt mốc còi); *xoành xoạch, thụp, loáng thoáng, nặng cân, rướn* (đối chứng H5 trong bảng ứng viên của Astra);
-- dự bị (2): *xầm xì* (H5), *thẳng đơ* (cách đọc khác).
-- **Đã đóng chung 3 cờ** (Astra đề nghị ở `RD/rd2-de-xuat-dong-co.tsv:2–4`, Opus nhận): *đưa đò*/*dưa đỏ* không đỏ; *nặng cân*/*lặng câm* khác từ; *thẳng đơ*/*thang độ* không đỏ. Đóng riêng cờ không thay cho tái kiểm H1–H9 toàn từ.
-- **Còn 8 cờ.** *làm cỗ*/*làm cỏ* phải xét cả nghĩa bóng tàn sát của *làm cỏ*, không chỉ nghĩa làm vườn.
+**Cờ từ vào:** đã khép (T-rtc-10, T-rtc-17). Giữ *đưa đò, nặng cân, thẳng đơ, thay lông, xoành xoạch, thụp, loáng thoáng, mang máng, xầm xì*; không nhận *làm cỗ*, *rướn*. Đóng riêng cờ không thay cho tái kiểm H1–H9 toàn từ.
 
 ## 4. Thỏa thuận và điểm còn lệch
 
@@ -133,7 +126,7 @@ Bảng có bốn vai trò: RA (104), RA_NEU_CHU_DU_AN_THEO_ASTRA (10), VAO (104)
 - K1, thay: *cò trắng, sân ga, trăng tròn*. Opus nhận K1 của Astra.
 - K2, giữ, hai SA ký: *húng, hững hờ, phù dâu, thắm thiết*. Astra nhận K2 của Opus: dáng điệu mạnh, đòn chặn trước hay âm thanh gây thương cảm không tự là bạo lực, thao túng hay cảm xúc đỏ cực mạnh.
 
-**Còn lệch, chủ dự án quyết (Q-rtc-O1):** 10 khóa. Hai bên không ban hành ngưỡng số mới.
+**Chủ dự án đã quyết 10 khóa còn lệch (D-rtc-6, `0253bb0`):** thay *vòng, thuần, xuân*; giữ *lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm* (K2, hai SA ký). Hai lập trường trước quyết định ghi dưới đây. Không ban hành ngưỡng số mới.
 
 - **Opus:** giữ K2. Mỗi khóa dựa vào một tiêu chí K2 đã ký (TC:167) và tiền lệ có dòng:
   - cách đọc hiếm so với từ chính: *vòng* (r 0,017), *lưới* (0,025), *phòng ngủ* (0,031). Tiền lệ: *thầy*/*thây* r 0,016 được ký K2 vì cách đọc hiếm (`chu-ky.tsv:2152–2154`); K1 đã ký thấp nhất là *đường dẫn*/*đường đạn* 0,036 (TC:524);
@@ -144,7 +137,7 @@ Bảng có bốn vai trò: RA (104), RA_NEU_CHU_DU_AN_THEO_ASTRA (10), VAO (104)
   - xét nghĩa nguyên mục thuộc quân sự, quyền lực, tố tụng, tang linh hay lời chê người;
   - PPM cả chuỗi không phải tần suất của nghĩa đỏ, nhưng r thấp cũng không đủ chứng minh cách đọc hiếm;
   - một tiền lệ chức danh không miễn mọi chức danh; khác số khối không tự là tách ép khi cả cụm đã được chứng thực.
-- **Hệ quả:** theo Opus, 104 từ thay, còn 16 dự bị; theo Astra, 114 và 6. Chủ dự án chưa quyết thì 10 từ này không phát hành (TC:167, :190–191).
+- **Hệ quả của D-rtc-6:** 107 từ thay, còn 13 dự bị (sơ bộ). Bảy từ giữ chỉ phát hành khi đủ hai chữ ký K2 (TC:167).
 
 ### 4.2. H5: 7 từ của S2 — đã thỏa thuận (T-rtc-13)
 
@@ -194,10 +187,24 @@ Bảng có bốn vai trò: RA (104), RA_NEU_CHU_DU_AN_THEO_ASTRA (10), VAO (104)
 
 **Opus tự sửa:** lý do K2 trong bản nháp trước ghi tiền lệ "*đôn đốc*/*đô đốc*". Đúng là *độ dốc*/*đô đốc* (`canh-bao-khong-dau.tsv:89`).
 
+### 4.5. Khép mục mở: bốn từ còn lệch (Q-rtc-O2)
+
+- **Astra** (`ho-so/astra/ra-thay-chinh/khep-muc-mo-1.*`): thay cả bốn.
+  - *cần cù*/*căn cứ*: nghĩa quân sự còn dùng; r 49.
+  - *tiền lương*/*tiên lượng*: đánh giá y khoa.
+  - *triệu*/*triều*: triều đại thuộc nhóm 3.
+  - *bạn thân*/*bán thân*: Astra đọc 38 dòng phụ đề, thấy ít nhất 3 dòng nghĩa mại dâm; đề nghị K1, không K0.
+- **Opus** (`ho-so/opus/ra-thay-chinh/khep-muc-mo-1-opus.*`): giữ cả bốn với K2, đã ký.
+  - *căn cứ*: nghĩa chính là cơ sở; căn cứ quân sự cùng loại với các cách đọc quân sự chủ dự án đã cho giữ (D-rtc-6).
+  - *tiên lượng*: dự đoán, không phải tên bệnh hay thủ thuật.
+  - *triều*: từ hoàng gia như *ngai, trẫm* đã cho giữ.
+  - *bán thân*: nghĩa chính là nửa người; nghĩa mại dâm là nghĩa phụ; *bạn thân* là từ cốt lõi.
+- **Hệ quả:** theo Opus, 116 từ thay, còn 2 dự bị; theo Astra, 120 từ thay, thiếu 2 ghế. Chưa quyết thì không phát hành.
+
 ## 5. Câu hỏi và mục mở
 
 - Câu hỏi: `ra-thay-chinh-cau-hoi.md`.
-  - Gửi chủ dự án: Q-rtc-O1 (10 từ). Q-rtc-S1, S2, S3 đã khép bằng thỏa thuận (T-rtc-12 đến T-rtc-14); lập luận từng mục ở `ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`.
-  - Chưa kích hoạt: Q-rtc-A2, Q-rtc-A3 (kế hoạch mục 12.2).
+  - Gửi chủ dự án: Q-rtc-O2 (4 từ còn lệch sau khép mục mở) và Q-rtc-A2 (lấp ghế). Q-rtc-O1 đã trả lời (D-rtc-6; câu hỏi và câu trả lời ở `0253bb0`). Q-rtc-S1, S2, S3 đã khép bằng thỏa thuận (T-rtc-12 đến T-rtc-14); lập luận từng mục ở `ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`.
+  - Chưa kích hoạt: Q-rtc-A3 (kế hoạch mục 12.2).
 - Mục mở và quy trình hai SA khép chúng: `ra-thay-chinh-ke-hoach.md` mục 12.
 - Không còn K0 nào tranh chấp, nên không có câu hỏi K0 cho chủ dự án. Các cách đọc có thể là K0 trong 46 khóa chờ (*ghen*/*ghèn*, *tình tứ*, *trường*/*truồng*) phải xét nguồn trước; nếu hai SA còn tranh cãi một khóa K0 thì gửi chủ dự án (TC:164).

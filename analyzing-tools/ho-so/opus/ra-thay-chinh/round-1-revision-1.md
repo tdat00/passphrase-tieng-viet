@@ -200,3 +200,70 @@ python -X utf8 -B kiem-dau-ra.py
   - theo Astra ở Q-rtc-O1: 114 ra, 6 dự bị;
   - thêm *theo*: 105/105, F = 77.
 - Trung vị PPM sạch của tập 104: từ ra 1,741, từ vào 0,0729. Phép kiểm tập 87 vẫn khớp số của Astra.
+
+## 9. Sửa lần 5 (quyết định D-rtc-6 của chủ dự án)
+
+**Đầu vào:** câu trả lời Q-rtc-O1 của chủ dự án, commit `0253bb0`. Nguyên văn form: "thay A-1 và tất cả C, giữ các chữ còn lại". Nguyên văn Discord, 21/11/2026 21:01 +07:00: "Q-rtc-O1 C thay, 1 thay, giữ còn lại". Opus kiểm: rõ nghĩa, nhận.
+
+**Kế hoạch:**
+
+- mục 11: thêm D-rtc-6 (owner, `0253bb0`); D-rtc-5 và 14 dòng T-rtc-* trỏ tới `7fb17fb`;
+- mục 4, 5, 6, 12, 12.1, 12.2, 14, 15: thay *vòng, thuần, xuân*; giữ bảy khóa còn lại với K2 (gói chữ ký 205 khóa); bỏ OI-RTC-H7-S1;
+- giữ `Status: Draft (round 1)`.
+
+**Câu hỏi:** tệp ghi "Không còn câu hỏi mở". Q-rtc-O1 đầy đủ ở `0253bb0`; Q-rtc-A2, A3 chưa kích hoạt.
+
+**Báo cáo chung:** mục 1, 3.1, 3.3, 4.1 và 5 theo D-rtc-6.
+
+**Script:**
+
+- `de-xuat-thay-v2.py`: thêm `D_RTC_6`; bỏ nhánh "chủ dự án theo Astra".
+- `hop-nhat-rtc.py`:
+  - thêm cột `quyet_dinh_chu` và hai trạng thái CHU_DU_AN_THAY, CHU_DU_AN_GIU_CAN_KY_K2;
+  - từ ra theo chủ dự án mang trạng thái QUYET_DINH_CHU_D-rtc-6.
+- Chạy lại với HND tạm ngoài repo, đã xóa sau khi chạy.
+
+**Số sau sửa lần 5:**
+
+- H7: 83 đồng thuận thay, 3 chủ dự án thay, 7 chủ dự án giữ (K2), 46 chờ, 9 chữ ký cũ, 1 *gián*, 198 hai bên giữ (K2), 2 không đỏ.
+- Thay: 107 từ ra (97 đồng thuận, 7 CHO_LOAI, 3 theo D-rtc-6). 107 từ vào (101 A, 6 C; hạng đã khóa 8.096–8.223), 13 dự bị.
+- Nhánh thêm *theo*: 108/108, F = 77.
+- Trung vị PPM sạch tập 107: từ ra 1,804, từ vào 0,0729.
+- Cờ còn mở: 8, nay đều ở từ vào; *xầm xì* thành từ vào thứ 106.
+- Gói chữ ký K2: 205 khóa (194; 4 của T-rtc-12; 7 của D-rtc-6).
+
+## 10. Sửa lần 6 (khép mục mở 1)
+
+**Đầu vào:** `ho-so/astra/ra-thay-chinh/khep-muc-mo-1.tsv`, `khep-muc-mo-1.md` (Astra, gpt-6.2-astra theo Q-rtc-M1 b).
+
+**Phiếu của Opus:** `khep-muc-mo-1-opus.tsv`, `khep-muc-mo-1-opus.md`, sinh bằng `evidence/khep-muc-mo-1-opus.py`.
+
+- Đồng ý 282 trong 286 dòng.
+- Không đồng ý 4 dòng: *cần cù, tiền lương, triệu, bạn thân*; Opus giữ K2 và đã ký.
+- 238 chữ ký K2 của Opus; hai SA cùng ký 234.
+
+**Script:**
+
+- `de-xuat-thay-v2.py`:
+  - thêm KHEP_1 (9 từ ra) và KHONG_VAO_1 (*làm cỗ*, *rướn*);
+  - thêm nhánh Q-rtc-O2 theo Astra; đếm ghế thiếu.
+- `hop-nhat-rtc.py`:
+  - đọc hai phiếu khép mục mở;
+  - thêm cột `chu_ky_phieu` và trạng thái DONG_THUAN_GIU_DA_KY_PHIEU, CHU_DU_AN_GIU_DA_KY_PHIEU;
+  - bỏ hai phép kiểm hồi quy của tập 87 (đuôi hàng và trung vị). Hai phép này không còn áp dụng sau khi loại *làm cỗ*, *rướn*; chúng đã đạt ở sửa lần 1 đến lần 5.
+- Chạy lại với HND tạm ngoài repo, đã xóa sau khi chạy.
+
+**Số:**
+
+- H7: 89 đồng thuận thay, 3 chủ dự án thay, 4 tranh chấp, 226 giữ đã ký phiếu, 7 chủ dự án giữ đã ký phiếu, 10 không đỏ, 9 chữ ký cũ, 1 *gián*.
+- H5: 17 thay, 7 CHO_LOAI, 15 QUA, 23 khác từ, 2 đã ra, 1 không vào; không còn dòng chờ.
+- Thay: 116 từ ra (106 đồng thuận, 7 CHO_LOAI, 3 theo D-rtc-6). 118 dự phòng dùng được; 116 từ vào (106 A, 10 C; hạng đã khóa 8.096–8.245); 2 dự bị.
+- Nhánh Q-rtc-O2 theo Astra: 120 ra, 118 vào, thiếu 2 ghế. Tính lại S2/S3 (T-rtc-14) không đổi sức chứa.
+- Trung vị PPM sạch tập 116: từ ra 1,914, từ vào 0,0729.
+
+**Tài liệu chung:**
+
+- Kế hoạch: T-rtc-15 đến T-rtc-18 (commit chờ); mục 5, 6, 12 (bảng mục mở mới), 12.2, 14, 15 (còn khoảng 9–19 lượt).
+- Câu hỏi: Q-rtc-O2 (4 từ) và Q-rtc-A2 (lấp ghế; đề nghị hai SA là chu kỳ HM có giới hạn), dòng Answer trống.
+- Báo cáo chung: mục 1, 3, 4.5 mới, 5.
+- Giữ `Status: Draft (round 1)`.

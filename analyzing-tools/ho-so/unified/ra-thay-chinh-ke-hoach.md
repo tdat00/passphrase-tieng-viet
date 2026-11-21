@@ -66,10 +66,10 @@ Từ chính trượt luật đã ký được thay bằng từ dự phòng có g
 - Chữ ký K2 cũ giữ nguyên nếu không có chứng cứ mới.
 - Không chặn chỉ vì tên loài, bộ phận cơ thể thường ngày, danh tính.
 
-**S1 (17 khóa), sau thỏa thuận theo D-rtc-5:**
+**S1 (17 khóa), đã khép:**
 
-- Đã thỏa thuận 7 khóa (T-rtc-12): K1 cho *cò trắng, sân ga, trăng tròn*; K2 cho *húng, hững hờ, phù dâu, thắm thiết*.
-- 10 khóa còn lệch trình chủ dự án (Q-rtc-O1): *khiến, lưới, ngại, phòng ngủ, thị trường, thuần, trạm, tường, vòng, xuân*.
+- Hai SA thỏa thuận 7 khóa (T-rtc-12): K1 cho *cò trắng, sân ga, trăng tròn*; K2 cho *húng, hững hờ, phù dâu, thắm thiết*.
+- Chủ dự án quyết 10 khóa (D-rtc-6): K1, thay, cho *vòng, thuần, xuân*; K2, giữ, hai SA ký kèm lý do, cho *lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm*.
 - Không ban hành ngưỡng số: Opus chỉ dùng tỷ lệ r làm chứng cứ đối chiếu tiền lệ. Muốn dùng một ngưỡng số làm luật thì phải có chủ dự án xác nhận.
 
 ### 4.2. H5
@@ -89,36 +89,40 @@ Từ chính trượt luật đã ký được thay bằng từ dự phòng có g
 
 Danh sách đầy đủ: `ra-thay-chinh-thay-the.tsv` (vai trò RA, cột `trang_thai`).
 
-**Đồng thuận thay (104 từ):**
+**Thay (116 từ):** 104 từ hai SA đồng thuận ở thỏa thuận S1–S3, 3 từ theo D-rtc-6, và 9 từ hai SA đồng ý thay khi khép mục mở (T-rtc-15, T-rtc-16).
 
 - H7 K0 (2): *phản bác, tính khí*.
-- H7 K1 (81), gồm *cò trắng, sân ga, trăng tròn* của T-rtc-12:
+- H7 K0 thêm: *niêu* (T-rtc-15).
+- H7 K1 (89), gồm *cò trắng, sân ga, trăng tròn* (T-rtc-12), *vòng, thuần, xuân* (D-rtc-6) và *chậm, cổng, mặt nước, thiếu, trán* (T-rtc-15):
   - *áo quần, ăn diện, bà chủ, bàn ăn, bảo hành, báo động, bền bỉ, bố mẹ, bộ ba, ca nhạc, cao giá, cắm đầu, choàng, chỏm, chồn, chữ nghĩa, cổ thụ, cộng sự, cuốc, dàn ý*;
   - *dặn dò, di dời, diều, dò hỏi, đánh bại, đậm đà, đầu mùa, đích, đỏ thắm, đột phá, gầy gò, giảm, giao, giấc, giận dỗi, gọng, hâm mộ, hoa mai, hỏi thăm, hóm hỉnh*;
   - *hố ga, kiến, làng, lằng nhằng, lề đường, măng, mê mẩn, mời mọc, nằm mơ, nắm vững, ngao, ngắt, ngọc, ngụm, nguyên, ngựa, nhai, nhàu, nhồi, nhốt*;
   - *phân công, phong thư, sàng, sông, tài hoa, thái, thảm, than, thể lực, thiên tài, thong dong, thôn, thớt, thư thái, tiệm, tiền công, tiếp viên, trời*;
-  - *cò trắng, sân ga, trăng tròn*.
-- H5 (21):
+  - *cò trắng, sân ga, trăng tròn*;
+  - *vòng, thuần, xuân*;
+  - *chậm, cổng, mặt nước, thiếu, trán*.
+- H5 (24):
   - loại c, thiếu dữ liệu hay dưới ngưỡng: *chòng chành, bồ kết, rau dền, ngoảnh, phấp phới, già dặn, dây chun, dây thun, phí phạm, lấn át, rầm rầm*;
   - loại f, đã cộng dạng phân cách (`OE/dem-h5f.tsv`; Astra xác nhận ở `RD/rd2-H5-xac-nhan.tsv:2–4`): *cải xoong, xà bông, xà phòng*;
-  - CHO_LOAI, không phát hành ở bản này (T-rtc-13): *co rúm, xù xì, rầm rộ, chơ vơ, xập xình, su hào, loay hoay*.
+  - CHO_LOAI, không phát hành ở bản này (T-rtc-13): *co rúm, xù xì, rầm rộ, chơ vơ, xập xình, su hào, loay hoay*;
+  - khép mục mở (T-rtc-16): *chun, thun* (H5e rồi c, không dạng nào đạt 95% ở cả hai kho), *tép riu* (c, thiếu dữ liệu).
 
-**Chủ dự án quyết (Q-rtc-O1, 10 từ):** *khiến, lưới, ngại, phòng ngủ, thị trường, thuần, trạm, tường, vòng, xuân*.
+**Chủ dự án đã quyết (D-rtc-6, `0253bb0`):** thay *vòng, thuần, xuân*; giữ *lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm*. Bảy từ giữ là K2: hai SA ký "không tự động chặn" kèm lý do; chưa đủ chữ ký thì không phát hành.
 
-- Astra: K1, thay. Opus: K2, giữ, hai SA ký "không tự động chặn".
-- Chủ dự án chưa quyết thì không phát hành.
+**Khép mục mở (T-rtc-15 đến T-rtc-18):** 282 trong 286 dòng đã khép bằng một lượt đối đáp (`ho-so/astra/ra-thay-chinh/khep-muc-mo-1.*`, `ho-so/opus/ra-thay-chinh/khep-muc-mo-1-opus.*`).
 
-**Chờ thêm căn cứ (46 khóa H7):** danh sách ở báo cáo chung, mục 3.1. Opus giữ (K2 hoặc không đỏ); Astra chờ. Khép theo OI-RTC-H7-CHO.
+**Chủ dự án quyết (Q-rtc-O2, 4 từ):** *cần cù, tiền lương, triệu* (H7) và *bạn thân* (gói K2). Astra: K1, thay. Opus: K2, giữ; Opus đã ký. Chưa quyết thì không phát hành.
 
 **Giữ:**
 
-- 198 khóa hai bên giữ, cần chữ ký K2 mới đủ hai bên (OI-RTC-K2-KY): 194 khóa cũ và 4 khóa S1 của T-rtc-12 (*húng, hững hờ, phù dâu, thắm thiết*);
+- 233 khóa K2 hai SA đã ký trong phiếu khép mục mở (T-rtc-18): 204 khóa của gói (193 khóa cũ, 4 của T-rtc-12, 7 của D-rtc-6) và 29 khóa H7 chờ. Chữ ký được ghép vào `chu-ky.tsv` ở gói phát hành;
+- 8 khóa H7 chờ có cách đọc không đỏ (T-rtc-15);
 - *đồng ý, đuốc* (cách đọc không đỏ);
 - K2 đã ký (9): *bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng*;
 - *gián* (quyết định 5);
-- các cặp QUA và khác từ (báo cáo chung, C12, C13).
+- các cặp QUA và khác từ (báo cáo chung, C12, C13), gồm 21 dòng H5 chờ đã khép giữ (T-rtc-16).
 
-**Phạm vi số từ ra:** 104 đã đồng thuận. Có thể thêm tối đa 10 (Q-rtc-O1), 46 (khóa chờ) và 2 (*chun*, *thun*) tùy kết quả khép.
+**Phạm vi số từ ra:** 116 đã chốt; thêm tối đa 4 theo Q-rtc-O2.
 
 ## 6. Từ vào
 
@@ -148,29 +152,30 @@ Khi chọn thì bỏ qua:
 **Sức chứa.**
 
 - 120 dự phòng OK không-F qua lọc sơ bộ: 108 tầng A, 12 tầng C. Đây chỉ là nguồn sau lọc sơ bộ, chưa khép H1–H9 và nghĩa mới, không bảo đảm đủ 120 từ dùng được.
-- Số này được tính lại sau quyết định Q-rtc-O1, sau khi khép cờ từ vào và sau D6/D7. Không dùng 120 làm ngưỡng cố định của chủ dự án.
+- Số này được tính lại sau khi khép các mục mở (mục 12), sau khi khép cờ từ vào và sau D6/D7. Không dùng 120 làm ngưỡng cố định của chủ dự án.
 
 **Kết quả mô phỏng** (`OE/de-xuat-thay-v2.py`, `.tsv`, `.log`):
 
-- **104 từ ra đã đồng thuận** (cũng là phương án theo Opus ở Q-rtc-O1): 104 từ vào (99 A, 5 C; hạng đã khóa 8.096–8.218); còn 16 dự bị. Sau thay: 7.776 từ, 7.776 khóa, F = 77, R1 = 0.
-- **Theo Astra ở Q-rtc-O1:** 114 ra, 114 vào, còn 6 dự bị.
-- **Nhánh thêm *theo* (lớp F):** 105 ra, 105 vào, F = 77, 7.776 khóa. Chứng minh hạn mức F được cập nhật mỗi lần nhận.
-- **Trung vị PPM sạch:** tập 104, từ ra 1,741, từ vào 0,0729. Tập 87 của bản nháp đầu: 1,706 và 0,0762, khớp số của Astra (`OE/hop-nhat-rtc.log`).
+- **116 từ ra:** 118 dự phòng dùng được (120 nguồn, bỏ *làm cỗ*, *rướn* theo T-rtc-17). 116 từ vào (106 A, 10 C; hạng đã khóa 8.096–8.245); còn 2 dự bị. Sau thay: 7.776 từ, 7.776 khóa, F = 77, R1 = 0.
+- **Nếu Q-rtc-O2 theo Astra cả 4 từ:** 120 ra, 118 vào, thiếu 2 ghế (Q-rtc-A2).
+- **Tính lại S2/S3 (T-rtc-14)** chỉ đổi thứ tự trong cùng hàng đợi, không đổi sức chứa.
+- **Nhánh thêm *theo* (lớp F):** 117 ra, 117 vào, F = 77, 7.776 khóa. Chứng minh hạn mức F được cập nhật mỗi lần nhận.
+- **Trung vị PPM sạch:** tập 116, từ ra 1,914, từ vào 0,0729 (`OE/hop-nhat-rtc.log`).
 
-**Khép cờ từ vào trước Final (OI-RTC-VAO).** Cờ có thể làm đổi tập vào hay sức chứa, nên phải khép trước khi kế hoạch Final, không chỉ trước lượt viết. Có 11 cờ (cột `can_soat` của `ra-thay-chinh-thay-the.tsv`). Ba cờ đã đóng chung (T-rtc-10); đóng riêng cờ không thay cho tái kiểm H1–H9 toàn từ.
+**Cờ từ vào (đã khép, T-rtc-10 và T-rtc-17).** Cờ có thể làm đổi tập vào hay sức chứa, nên phải khép trước khi kế hoạch Final, không chỉ trước lượt viết. Có 11 cờ (cột `can_soat` của `ra-thay-chinh-thay-the.tsv`). Ba cờ đã đóng chung (T-rtc-10); đóng riêng cờ không thay cho tái kiểm H1–H9 toàn từ.
 
 | Từ | Vai trò | Cờ | Trạng thái |
 |---|---|---|---|
 | *đưa đò* | vào 3 | cách đọc *dưa đỏ* | Đã đóng chung: không đỏ (`RD/rd2-de-xuat-dong-co.tsv:2`) |
-| *làm cỗ* | vào 15 | *làm cỏ* | Mở. Xét cả nghĩa bóng tàn sát của *làm cỏ* (nhóm 1), không chỉ nghĩa làm vườn |
-| *thay lông* | vào 31 | *thay lòng* (0,31 PPM) | Mở. Nhóm 9 hay không: hai bên xét; K2 thì cần hai chữ ký |
-| *xoành xoạch* | vào 48 | H5: *xành xạch, xoàn xoạt* | Mở. Chưa rõ quan hệ; cần nguồn, có họ thì cần số |
-| *thụp* | vào 51 | H5: *chụp, thụt* | Mở. Opus: khác từ |
-| *loáng thoáng* | vào 59 | H5: *loáng choáng* | Mở. Opus: khác từ |
+| *làm cỗ* | vào 15 | *làm cỏ* | Không nhận (T-rtc-17): *làm cỏ* có nghĩa tàn sát; 4/6 mẫu phụ đề sạch rõ nghĩa bạo lực |
+| *thay lông* | vào 31 | *thay lòng* (0,31 PPM) | Giữ (T-rtc-17): K2, hai SA đã ký |
+| *xoành xoạch* | vào 48 | H5: *xành xạch, xoàn xoạt* | Giữ (T-rtc-17): khác từ |
+| *thụp* | vào 51 | H5: *chụp, thụt* | Giữ (T-rtc-17): khác từ |
+| *loáng thoáng* | vào 59 | H5: *loáng choáng* | Giữ (T-rtc-17): khác từ |
 | *nặng cân* | vào 65 | H5: *lặng câm* | Đã đóng chung: khác từ (`RD/rd2-de-xuat-dong-co.tsv:3`) |
-| *rướn* | vào 73 | H5: *dướn, rướm* | Mở. *dướn* có thể là biến thể; cần nguồn và số |
-| *mang máng* | vào 77 | *màng màng* | Mở. Opus: không đỏ |
-| *xầm xì* | dự bị 106 | H5: *sầm sì* | Mở. Có thể là họ c; cần nguồn và số |
+| *rướn* | vào 73 | H5: *dướn, rướm* | Không nhận (T-rtc-17): *dướn* dẫn về *rướn*, loại c; phụ đề 14 + 0, web 5 + 0, thiếu dữ liệu |
+| *mang máng* | vào 77 | *màng màng* | Giữ (T-rtc-17): không đỏ |
+| *xầm xì* | vào 106 | H5: *sầm sì* | Giữ (T-rtc-17): khác từ |
 | *thẳng đơ* | dự bị 108 | *thang độ* | Đã đóng chung: không đỏ (`RD/rd2-de-xuat-dong-co.tsv:4`) |
 
 **Tái soát mỗi từ vào trước khi viết:**
@@ -303,21 +308,26 @@ Lưu lệnh, mã thoát và log.
 | D-rtc-2 | Rà đầy đủ: họ chòng chành/tròng trành, báo tử, 632 cặp H5 và 1.177 cặp H7; thay từ chính nếu cần | owner | 2026-11-21 | `1c3f504` |
 | D-rtc-3 | Cho thay danh sách chính sau khi kế hoạch Final và chủ dự án duyệt, kèm giải nghĩa viết mới đạt D6/D7 | owner | 2026-11-21 | `1c3f504` |
 | D-rtc-4 | Không tạo thư mục tài liệu mới; hồ sơ chung ở `ho-so/unified/ra-thay-chinh-*`, kết quả cuối vào tài liệu có sẵn | owner | 2026-11-21 | `1c3f504` |
-| D-rtc-5 | Không dùng SA-Fable; hai SA thỏa thuận rồi trình chủ dự án quyết định | owner | 2026-11-21 | tin nhắn Discord 2026-11-21 16:58 +07:00; commit chờ |
-| T-rtc-1 | Ghi `baotu` K1 vào bảng chặn | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-2 | Giữ chín K2 đã ký (*bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng*); rút OI-RTC-KY-CU; giữ *gián* theo quyết định 5 | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-3 | Thay 80 khóa H7: K0 *phản bác*, *tính khí*; 78 K1, gồm *thái* và 13 khóa Opus nhận sau duyệt (`ra-thay-chinh-h7.tsv`, `DONG_THUAN_THAY`) | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-4 | Giữ hướng không chặn cho 29 khóa (Astra nhận); *chung cư*, *sắn dây* là K2; mọi khóa K2 giữ lại cần đủ hai chữ ký | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-5 | Thay 11 từ H5 (gồm *rầm rầm*). Qua: 8 họ H5b, *rong ruổi*, *trưng bày*, *bít tết*. Khác từ: *bóng láng*/*bóng loáng*, *thiện chí*/*thiện trí*, *buồn lòng*, *tâm trí*, *run run*; bỏ đối chứng tên riêng. *qua quýt* không thuộc H5b. *chun*/*thun* xử theo H5e | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-6 | Mặc định: K2 chưa đủ hai chữ ký không vào bản 1; phản đối hợp lệ còn giữ thì không phát hành; chữ CHO của bộ sinh không phải phản đối hợp lệ | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-7 | Từ vào có câu viết sạch mới; không bù dự phòng về 205 hay 300; mỗi lần chọn cập nhật F và R1, R1 không thay ghế OK; nghiệm thu F ≤ 77; 120 chỉ là nguồn sau lọc sơ bộ; không đổi trọng số S3 hay ưu tiên tầng, thứ tự chọn theo T-rtc-14 | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-8 | D6 chạy trong vùng riêng ngoài worktree, mỗi nguồn đúng byte ghim; không đổi pin; không đưa nguồn thô vào repo | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-9 | Thay *cải xoong*, *xà bông*, *xà phòng* theo H5f (f xử như c), đã cộng dạng cách, gạch nối, viết liền: *cải xoong* phụ đề 4 < 20 lượt; *xà phòng* 62,6% phụ đề, 92,4% web, dưới 95% ở cả hai kho. Đóng OI-RTC-H5F (`OE/dem-h5f.tsv`; `RD/rd2-H5-xac-nhan.tsv:2–4`) | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-10 | Đóng riêng ba cờ từ vào: *đưa đò*/*dưa đỏ* không đỏ; *nặng cân*/*lặng câm* khác từ; *thẳng đơ*/*thang độ* không đỏ. Không thay cho tái kiểm H1–H9 toàn từ (`RD/rd2-de-xuat-dong-co.tsv:2–4`) | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-11 | Hai SA khép mục mở theo quy trình ở mục 12.1; ca còn bất đồng cụ thể trình chủ dự án (D-rtc-5); K0 còn tranh cãi gửi chủ dự án (TC:164) | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-12 | S1, 7 trong 17 khóa: K1 (thay) cho *cò trắng, sân ga, trăng tròn*; K2 (giữ, hai SA ký) cho *húng, hững hờ, phù dâu, thắm thiết*. 10 khóa còn lại trình chủ dự án (Q-rtc-O1) | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-13 | S2: *co rúm, xù xì, rầm rộ, chơ vơ, xập xình, su hào, loay hoay* ghi CHO_LOAI, không phát hành ở bản này (thay). Không bắt buộc tra thêm; có căn cứ loại d về sau vẫn phải đạt hợp đồng đếm, chữ ký khi thiếu dữ liệu và luật CHO_SAT_NGUONG | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
-| T-rtc-14 | S3: tính lại S2/S3 một lần theo P6 trên tập ra cuối, rổ gồm mọi mục qua H1–H9 có nhãn, mục loại ở D6 bỏ lúc chọn; S4 mới khóa một lần trước khi viết nghĩa; dự bị là phần chưa dùng của cùng hàng đợi (tối đa 25 nếu đủ); giữ trọng số, ưu tiên tầng, luật hòa | SA-Opus + SA-Astra | 2026-11-21 | chờ commit vòng 1 |
+| D-rtc-5 | Không dùng SA-Fable; hai SA thỏa thuận rồi trình chủ dự án quyết định | owner | 2026-11-21 | tin nhắn Discord 2026-11-21 16:58 +07:00; ghi ở `7fb17fb` |
+| D-rtc-6 | Q-rtc-O1: thay *vòng, thuần, xuân* (K1, chặn khóa `vong`, `thuan`, `xuan`); giữ *lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm* (K2, hai SA ký "không tự động chặn" kèm lý do) | owner | 2026-11-21 | `0253bb0` |
+| T-rtc-1 | Ghi `baotu` K1 vào bảng chặn | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-2 | Giữ chín K2 đã ký (*bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng*); rút OI-RTC-KY-CU; giữ *gián* theo quyết định 5 | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-3 | Thay 80 khóa H7: K0 *phản bác*, *tính khí*; 78 K1, gồm *thái* và 13 khóa Opus nhận sau duyệt (`ra-thay-chinh-h7.tsv`, `DONG_THUAN_THAY`) | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-4 | Giữ hướng không chặn cho 29 khóa (Astra nhận); *chung cư*, *sắn dây* là K2; mọi khóa K2 giữ lại cần đủ hai chữ ký | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-5 | Thay 11 từ H5 (gồm *rầm rầm*). Qua: 8 họ H5b, *rong ruổi*, *trưng bày*, *bít tết*. Khác từ: *bóng láng*/*bóng loáng*, *thiện chí*/*thiện trí*, *buồn lòng*, *tâm trí*, *run run*; bỏ đối chứng tên riêng. *qua quýt* không thuộc H5b. *chun*/*thun* xử theo H5e | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-6 | Mặc định: K2 chưa đủ hai chữ ký không vào bản 1; phản đối hợp lệ còn giữ thì không phát hành; chữ CHO của bộ sinh không phải phản đối hợp lệ | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-7 | Từ vào có câu viết sạch mới; không bù dự phòng về 205 hay 300; mỗi lần chọn cập nhật F và R1, R1 không thay ghế OK; nghiệm thu F ≤ 77; 120 chỉ là nguồn sau lọc sơ bộ; không đổi trọng số S3 hay ưu tiên tầng, thứ tự chọn theo T-rtc-14 | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-8 | D6 chạy trong vùng riêng ngoài worktree, mỗi nguồn đúng byte ghim; không đổi pin; không đưa nguồn thô vào repo | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-9 | Thay *cải xoong*, *xà bông*, *xà phòng* theo H5f (f xử như c), đã cộng dạng cách, gạch nối, viết liền: *cải xoong* phụ đề 4 < 20 lượt; *xà phòng* 62,6% phụ đề, 92,4% web, dưới 95% ở cả hai kho. Đóng OI-RTC-H5F (`OE/dem-h5f.tsv`; `RD/rd2-H5-xac-nhan.tsv:2–4`) | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-10 | Đóng riêng ba cờ từ vào: *đưa đò*/*dưa đỏ* không đỏ; *nặng cân*/*lặng câm* khác từ; *thẳng đơ*/*thang độ* không đỏ. Không thay cho tái kiểm H1–H9 toàn từ (`RD/rd2-de-xuat-dong-co.tsv:2–4`) | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-11 | Hai SA khép mục mở theo quy trình ở mục 12.1; ca còn bất đồng cụ thể trình chủ dự án (D-rtc-5); K0 còn tranh cãi gửi chủ dự án (TC:164) | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-12 | S1, 7 trong 17 khóa: K1 (thay) cho *cò trắng, sân ga, trăng tròn*; K2 (giữ, hai SA ký) cho *húng, hững hờ, phù dâu, thắm thiết*. 10 khóa còn lại trình chủ dự án (Q-rtc-O1), đã quyết ở D-rtc-6 | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-13 | S2: *co rúm, xù xì, rầm rộ, chơ vơ, xập xình, su hào, loay hoay* ghi CHO_LOAI, không phát hành ở bản này (thay). Không bắt buộc tra thêm; có căn cứ loại d về sau vẫn phải đạt hợp đồng đếm, chữ ký khi thiếu dữ liệu và luật CHO_SAT_NGUONG | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-14 | S3: tính lại S2/S3 một lần theo P6 trên tập ra cuối, rổ gồm mọi mục qua H1–H9 có nhãn, mục loại ở D6 bỏ lúc chọn; S4 mới khóa một lần trước khi viết nghĩa; dự bị là phần chưa dùng của cùng hàng đợi (tối đa 25 nếu đủ); giữ trọng số, ưu tiên tầng, luật hòa | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
+| T-rtc-15 | 46 khóa H7 chờ: giữ 37 (29 K2 hai SA ký, 8 không đỏ); thay 6 (*chậm, cổng, mặt nước, thiếu, trán* K1; *niêu* K0); 3 khóa trình chủ dự án (Q-rtc-O2: *cần cù, tiền lương, triệu*) | SA-Opus + SA-Astra | 2026-11-21 | chờ commit |
+| T-rtc-16 | 27 dòng H5 chờ: giữ 21 (khác từ, không lập họ hay qua theo số); thay *chun, thun* (H5e rồi c) và *tép riu* (c, thiếu dữ liệu); khép 3 dòng đã ra hay không vào (*lằng nhằng, xà bông, qua quýt*) | SA-Opus + SA-Astra | 2026-11-21 | chờ commit |
+| T-rtc-17 | 8 cờ từ vào: giữ 6 (*thay lông* K2 hai SA ký; *xoành xoạch, thụp, loáng thoáng, xầm xì* khác từ; *mang máng* không đỏ); không nhận *làm cỗ* (K1) và *rướn* (c, thiếu dữ liệu) | SA-Opus + SA-Astra | 2026-11-21 | chờ commit |
+| T-rtc-18 | Gói K2: hai SA ký 204 trong 205 khóa (193 cũ, 4 của T-rtc-12, 7 của D-rtc-6); *bạn thân* trình chủ dự án (Q-rtc-O2). Cùng 29 khóa của T-rtc-15 và *thay lông*, hai SA có 234 chữ ký chung | SA-Opus + SA-Astra | 2026-11-21 | chờ commit |
 
 Các mục T-rtc-* là chỗ hai bên đã đồng ý qua rà chéo, hai lượt duyệt và hai vòng thỏa thuận (`ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`). SA-Astra xác nhận khi duyệt bản sửa này.
 
@@ -325,16 +335,14 @@ Các mục T-rtc-* là chỗ hai bên đã đồng ý qua rà chéo, hai lượt
 
 | ID | Nội dung | Đường xử lý | Chặn Final |
 |---|---|---|---|
-| OI-RTC-H7-S1 | 10 khóa: Astra K1, Opus K2 (7 khóa khác đã thỏa thuận, T-rtc-12) | Q-rtc-O1, chủ dự án quyết | Có |
+| OI-RTC-O2 | 4 từ còn lệch sau khép mục mở: *cần cù, tiền lương, triệu, bạn thân* | Q-rtc-O2, chủ dự án quyết | Có |
+| OI-RTC-A2 | Sức chứa: 2 dự bị nếu theo Opus ở Q-rtc-O2, thiếu 2 ghế nếu theo Astra; không có đệm cho D6/D7 | Q-rtc-A2, chủ dự án quyết | Có |
 | OI-RTC-P6 | Thứ tự chọn theo T-rtc-14 | Tính lại trên tập ra cuối bằng hai chương trình độc lập (T7) | Có |
-| OI-RTC-H7-CHO | 46 khóa Astra chờ căn cứ, Opus giữ | Mục 12.1 | Có |
-| OI-RTC-HND | Sửa nhãn CHUA_DO cho 238 cặp HND đã có số ở vai trò khác | Làm cùng OI-RTC-H7-CHO (tái ghép số mọi vai trò) | Có, qua OI-RTC-H7-CHO |
-| OI-RTC-H5-QH | 14 quan hệ Opus xếp khác từ, 9 cặp Opus xếp QUA, *hì hục*/*hì hụi*, *qua quýt*/*qua quít* | Mục 12.1 | Có |
-| OI-RTC-H5E | *chun*/*thun* (cả hai là từ chính) | Mục 12.1: tách nghĩa dây đàn hồi theo H5e rồi đo, trên bản kho tạm ngoài repo, xóa sau; chưa phân định thì chờ, tức là thay cả hai | Có |
-| OI-RTC-VAO | 8 cờ còn lại của từ vào và dự bị (mục 6) | Mục 12.1 | Có |
-| OI-RTC-K2-KY | Chữ ký K2 mới cho 198 khóa (194, cộng 4 khóa S1 của T-rtc-12); *nướng*, *phết* dùng lại chữ ký cũ; cộng các khóa chủ dự án cho giữ ở Q-rtc-O1 và khóa chờ cuối cùng được nhận K2 | Mục 12.1; kiểm gói chữ ký (mục 10) | Có |
+| OI-RTC-K2-KY | Ghép 234 chữ ký K2 chung của phiếu khép mục mở vào `chu-ky.tsv`, cộng các khóa chủ dự án cho giữ ở Q-rtc-O2 | Gói phát hành; kiểm gói chữ ký (mục 10) | Có |
 
-### 12.1. Quy trình hai SA khép mục mở
+**Đã khép:** OI-RTC-H7-S1 (T-rtc-12, D-rtc-6); OI-RTC-H5-LOAI (T-rtc-13); OI-RTC-H7-CHO và OI-RTC-HND (T-rtc-15; Astra tái ghép đủ 238/238 dòng); OI-RTC-H5-QH và OI-RTC-H5E (T-rtc-16); OI-RTC-VAO (T-rtc-10, T-rtc-17); OI-RTC-H5F (T-rtc-9).
+
+### 12.1. Quy trình hai SA khép mục mở (đã dùng ở khép mục mở 1)
 
 Theo đề nghị của Astra (`ho-so/astra/ra-thay-chinh/round-1-review-drafts.md`, Lượt duyệt 2, mục 2.6); Opus nhận (T-rtc-11).
 
@@ -342,7 +350,7 @@ Theo đề nghị của Astra (`ho-so/astra/ra-thay-chinh/round-1-review-drafts.
 
 - Hai SA làm chung. Một bên lập phiếu đề nghị trong thư mục của mình; bên kia đọc, rồi ký hay đối đáp độc lập trong thư mục của mình.
 - Không ký gộp chỉ vì đang có nhãn K2; không sinh chữ ký tự động từ chữ "giữ". Không cam kết trước rằng mọi khóa sẽ được giữ.
-- Có thể bắt đầu ngay, song song với việc chờ chủ dự án trả lời Q-rtc-O1. Không sửa dữ liệu chính, không viết nghĩa, không để dev tự quyết ca chưa chốt.
+- Bắt đầu ngay; S1, S2, S3 đã khép. Không sửa dữ liệu chính, không viết nghĩa, không để dev tự quyết ca chưa chốt.
 - Không Final khi còn mục nào ảnh hưởng danh sách, thứ tự, dự bị, sức chứa hay chữ ký.
 
 **Phiếu chung** (TSV, một dòng mỗi ca): `case_id, tu, khoa, doi_chung, nguon_va_revision_hash, dem_va_mau_so, ma_cong, ket_luan_de_nghi, ly_do, nguoi_duyet, ngay, phien_ban_ro`.
@@ -356,23 +364,25 @@ Theo đề nghị của Astra (`ho-so/astra/ra-thay-chinh/round-1-review-drafts.
 | 46 khóa H7 chờ | Tái ghép số mọi vai trò, gồm 238 dòng từng ghi CHUA_DO nhầm. Tra nguồn toàn mục. Tách nghĩa khi cần; đọc mẫu có seed, lưu ID, hash và nhãn (ví dụ *cần cù*/*căn cứ*, *chậu*/*chầu*, *đinh*/*đình*, *tiền lương*/*tiên lượng*). Các dòng báo thiếu số (*áo ngủ, điểm nhấn, khuy*) kiểm lại trước khi đo bù | Mỗi khóa thành không đỏ, K2 đủ lý do và hai chữ ký, hoặc phản đối đủ căn cứ rồi khép theo H9. CHUA_DO không phải 0 |
 | 27 dòng H5 chờ | 14 quan hệ khác từ; 9 cặp QUA về số nhưng chưa rõ quan hệ hay loại; *hì hục*/*hì hụi*; *qua quýt*/*qua quít*; *chun*/*thun* hai chiều. Áp nguyên tắc nguồn của phán quyết S2 khi phù hợp; quan hệ cùng từ kiểm riêng | Mỗi dòng có kết luận nhận, khác từ, loại hay chờ hợp lệ, kèm quyết định phát hành. Dòng có từ đã rời danh sách vì cổng khác thì khép bằng mã đó, không ghi QUA H5 giả |
 | 8 cờ từ vào, dự bị | Đọc nguồn và quan hệ. *làm cỗ*/*làm cỏ* xét cả nghĩa bóng. *rướn*/*dướn*, *xoành xoạch*, *xầm xì* cần căn cứ, và số nếu là họ | Từ trượt nhường chỗ cho ứng viên kế tiếp theo phương pháp chọn đã thống nhất; tính lại sức chứa |
-| Chữ ký K2 | Kiểm rồi dùng lại chữ ký cũ của *nướng*, *phết*. 198 khóa (194 khóa cũ và 4 khóa S1 của T-rtc-12): mỗi SA ghi lý do và ký từng khóa, dẫn mọi đối chứng đã xét. Cộng riêng các khóa chủ dự án cho giữ ở Q-rtc-O1 và khóa chờ được nhận K2 | Hai người ký khác nhau, hiệu lực rõ, không trùng dòng, phạm vi và nguồn khớp bảng H7 và `labels.tsv`. Chưa đủ ký thì không vào |
+| Chữ ký K2 | Kiểm rồi dùng lại chữ ký cũ của *nướng*, *phết*. 205 khóa (194 khóa cũ, 4 của T-rtc-12, 7 của D-rtc-6): mỗi SA ghi lý do và ký từng khóa, dẫn mọi đối chứng đã xét. Cộng riêng khóa chờ được nhận K2 | Hai người ký khác nhau, hiệu lực rõ, không trùng dòng, phạm vi và nguồn khớp bảng H7 và `labels.tsv`. Chưa đủ ký thì không vào |
 
 **Phân tuyến:**
 
-- **Không dùng SA-Fable (D-rtc-5).** S2, S3 và 7 khóa S1 đã thỏa thuận (T-rtc-12 đến T-rtc-14); 10 khóa S1 trình chủ dự án (Q-rtc-O1). Với mọi hàng đợi khác, hai SA thỏa thuận; ca còn lệch sau một lượt đối đáp trình chủ dự án thành lựa chọn ngắn: hai lập trường, hệ quả, đề nghị chung nếu có.
-- **Ca phụ thuộc kết quả S1** (ví dụ *đông đúc, nóng, thiếu, tích*; cờ *làm cỗ*, *thay lông*): hai SA áp nguyên tắc của T-rtc-12 và của quyết định Q-rtc-O1. Sau một lượt đối đáp mà vẫn còn phản đối hợp lệ thì trình chủ dự án đúng ca đó với hai lập trường, hoặc thống nhất không phát hành theo H9. Không trình cả 46 khóa.
+- **Không dùng SA-Fable (D-rtc-5).** S1, S2, S3 đã khép bằng thỏa thuận (T-rtc-12 đến T-rtc-14) và quyết định của chủ dự án (D-rtc-6). Với mọi hàng đợi khác, hai SA thỏa thuận; ca còn lệch sau một lượt đối đáp trình chủ dự án thành lựa chọn ngắn: hai lập trường, hệ quả, đề nghị chung nếu có.
+- **Ca phụ thuộc kết quả S1** (ví dụ *đông đúc, nóng, thiếu, tích*; cờ *làm cỗ*, *thay lông*): hai SA áp nguyên tắc của T-rtc-12 và D-rtc-6. Sau một lượt đối đáp mà vẫn còn phản đối hợp lệ thì trình chủ dự án đúng ca đó với hai lập trường, hoặc thống nhất không phát hành theo H9. Không trình cả 46 khóa.
 - **K0 tiềm tàng** (*ghen*/*ghèn*, *tình tứ*, *trường*/*truồng*): xét nguồn trước. Nếu hai SA còn tranh cãi một khóa K0 thì gửi chủ dự án (TC:164).
-- **Chủ dự án:** Q-rtc-O1; Q-rtc-A2, Q-rtc-A3 khi kích hoạt (mục 12.2); mọi đổi luật hay đổi quyết định của chủ dự án. *gián* không mở lại.
+- **Chủ dự án:** Q-rtc-A2, Q-rtc-A3 khi kích hoạt (mục 12.2); mọi đổi luật hay đổi quyết định của chủ dự án. *gián* không mở lại.
 
-### 12.2. Câu hỏi dự phòng cho chủ dự án (chưa kích hoạt)
+### 12.2. Câu hỏi dự phòng cho chủ dự án
+
+Q-rtc-A2 đã kích hoạt và nằm ở `ra-thay-chinh-cau-hoi.md` (khép mục mở 1 để lại 2 dự bị, hoặc thiếu 2 ghế). Q-rtc-A3 chưa kích hoạt.
 
 Khi điều kiện xảy ra, orchestrator chép câu hỏi vào `ra-thay-chinh-cau-hoi.md`, đủ mẫu (người nhận, quyết định cần, bối cảnh, chứng cứ, phương án, đề nghị, phần bị chặn, dòng Answer).
 
 **Q-rtc-A2 — mở lại từ có thể cân nhắc (HM) để lấp ghế.**
 
 - **Điều kiện:** gửi ngay khi một trong hai việc xảy ra:
-  - kiểm sức chứa sau Q-rtc-O1 và sau khi khép 46 khóa chờ và cờ từ vào, trước Final, cho thấy thiếu ghế;
+  - kiểm sức chứa sau khi khép 46 khóa chờ, 27 dòng H5 và cờ từ vào, trước Final, cho thấy thiếu ghế. Hiện còn 13 dự bị sơ bộ, nên thiếu khi phải thay thêm quá 13 từ;
   - trượt D6/D7 sau khi chủ dự án duyệt làm thiếu ghế.
 - **Cần quyết định:** có cho một chu kỳ viết sạch mới, có giới hạn, cho các HM nhãn OK cần dùng hay không. Nhiều HM đã bị loại ở P7 vì câu trượt D6 hai lần (TC:307), nên mở lại là đổi kết quả P7.
 - **Phương án:**
@@ -421,9 +431,8 @@ Khi điều kiện xảy ra, orchestrator chép câu hỏi vào `ra-thay-chinh-c
 
 | Rủi ro | Cách giảm |
 |---|---|
-| Từ vào ít gặp hơn nhiều: trung vị 0,0729 PPM so với 1,766 PPM của từ ra (tập 101) | S4 là luật đã ký; chủ dự án thấy đủ danh sách trước khi duyệt |
-| Q-rtc-O1 theo Astra cả 10 từ: 114 từ ra, chỉ còn 6 dự bị; 46 khóa chờ, cờ từ vào và trượt D6/D7 có thể làm thiếu ghế | Khép OI-RTC-H7-CHO và OI-RTC-VAO trước Final; tính lại sức chứa; thấy thiếu là hỏi Q-rtc-A2 ngay, kể cả trước Final |
-| Chủ dự án chưa quyết Q-rtc-O1 thì 10 từ không phát hành theo mặc định, làm tăng số thay | Gửi Q-rtc-O1 ngay, có hai lập trường, hệ quả và mặc định |
+| Từ vào ít gặp hơn nhiều: trung vị 0,0729 PPM so với 1,804 PPM của từ ra (tập 107) | S4 là luật đã ký; chủ dự án thấy đủ danh sách trước khi duyệt |
+| Sau khép mục mở chỉ còn 2 dự bị (hoặc thiếu 2 ghế nếu Q-rtc-O2 theo Astra); trượt D6/D7 sẽ làm thiếu ghế | Khép OI-RTC-H7-CHO và OI-RTC-VAO trước Final; tính lại sức chứa; thấy thiếu là hỏi Q-rtc-A2 ngay, kể cả trước Final |
 | Kaikki đổi bản trước khi chạy D6 | Giữ bản đã kiểm băm ngoài repo; chỉ hỏi Q-rtc-A3 nếu bản ghim mất |
 | Lỗi nền CRLF làm sai kết quả bộ kiểm hoặc D6 | Bộ kiểm chạy trên bản LF; D6 chạy trong vùng riêng đúng byte ghim; lưu log |
 | Bộ ghép phiếu đọc sai mã | Bảng ánh xạ đủ mã, mã lạ làm script dừng; cột tệp:dòng để soát |
@@ -434,12 +443,12 @@ Khi điều kiện xảy ra, orchestrator chép câu hỏi vào `ra-thay-chinh-c
 | Giai đoạn | Việc | Lượt agent |
 |---|---|---|
 | 1 | Astra duyệt bản sửa này (lượt 3); Opus sửa nếu cần | 1–2 lượt SA |
-| 2 | Đã xong: hai SA thỏa thuận S1, S2, S3 (`thoa-thuan-1`, `thoa-thuan-2`; T-rtc-12 đến T-rtc-14). Gửi Q-rtc-O1 (10 từ) cho chủ dự án | 1 lần hỏi chủ dự án |
-| 3a | Song song với giai đoạn 2: hai SA khép các hàng đợi theo mục 12.1 (46 khóa H7, 27 dòng H5, 8 cờ, phiếu chữ ký K2). Một bên lập phiếu đề nghị, bên kia ký hay đối đáp; một lượt phản biện | 4–6 lượt SA |
-| 3b | Áp quyết định Q-rtc-O1; khép các ca phụ thuộc kết quả S1; ký K2 (198 khóa, cộng khóa chủ dự án cho giữ và khóa chờ được nhận K2); tính lại S4 theo T-rtc-14; tính lại tập ra và sức chứa. Thiếu ghế thì hỏi Q-rtc-A2 ngay. Hai chương trình chọn (T7). Kế hoạch Final; chủ dự án duyệt | 2–4 lượt SA; 1 lần hỏi chủ dự án, thêm A2 nếu thiếu ghế |
+| 2 | Đã xong: hai SA thỏa thuận S1, S2, S3 (`thoa-thuan-1`, `thoa-thuan-2`; T-rtc-12 đến T-rtc-14); chủ dự án trả lời Q-rtc-O1 (D-rtc-6, `0253bb0`) | Xong |
+| 3a | Đã xong: hai SA khép mục mở (`khep-muc-mo-1` của hai bên; T-rtc-15 đến T-rtc-18). Gửi Q-rtc-O2 và Q-rtc-A2 cho chủ dự án | 1 lần hỏi chủ dự án |
+| 3b | Áp Q-rtc-O2 và Q-rtc-A2 (chu kỳ HM có giới hạn nếu được duyệt: chọn, kiểm H1–H9); tính lại S4 theo T-rtc-14; tính lại tập ra và sức chứa. Hai chương trình chọn (T7). Kế hoạch Final; chủ dự án duyệt | 2–4 lượt SA; 1 lần hỏi chủ dự án |
 | 4 | Viết `rtc-v1`, D2/D5/D6, D7, viết lại tối đa hai lượt. Trượt D6/D7 làm thiếu ghế thì hỏi Q-rtc-A2 | 1–3 lượt viết; 2–6 lượt SA |
 | 5 | Dev-Sonnet: (a) tác vụ chuẩn bị: gói chữ ký, đăng ký họ, khóa chặn, hai kiểm độc lập; (b) commit phát hành: dữ liệu, khối sinh, tài liệu, manifest; (c) soát toàn tập (T9) | 3–4 lượt dev; orchestrator kiểm và commit |
-| Tổng | | Khoảng 13–25 lượt |
+| Tổng | | Khoảng 9–19 lượt còn lại |
 
 ## 16. Tham chiếu
 

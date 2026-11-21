@@ -1,10 +1,10 @@
-RA: 104; mã: {'K1': 81, 'K0': 2, 'H5': 21}; lớp F trong RA: 0
-VAO: 104 (tầng {'A': 99, 'C': 5}), hạng S4 8096–8218; sau đó còn 16 mục đủ điều kiện (25 đầu là dự bị); bỏ qua: {'vuot_han_muc': 76, 'cong_mo_hoac_ho_cho': 3, 'tang_D': 6}
-sau thay: 7776 từ, 7776 khóa, F = 77, R1 = 0
-nguồn không-F đủ điều kiện sơ bộ (tầng A/C, trừ cổng mở và họ chờ): 120; còn sau 104 vào: 16
-nhánh giả định thêm 'theo' (lớp F) vào RA: 105 ra, 105 vào, sau thay 7776 từ, 7776 khóa, F = 77, R1 = 0
-nhánh Q-rtc-O1 theo Astra (thêm 10 khóa): 114 ra, 114 vào, còn 6, sau thay 7776 từ, 7776 khóa, F = 77, R1 = 0; hạng S4 vào cuối 8235
+RA: 116; mã: {'K1': 89, 'K0': 3, 'H5': 24}; lớp F trong RA: 0
+VAO: 116 (tầng {'A': 106, 'C': 10}), hạng S4 8096–8245; sau đó còn 2 mục đủ điều kiện (25 đầu là dự bị); bỏ qua: {'vuot_han_muc': 76, 'cong_mo_hoac_ho_cho': 3, 'khong_vao_khep_1': 2, 'tang_D': 6}
+sau thay: 7776 từ, 7776 khóa, F = 77, R1 = 0; thiếu ghế: 0
+nguồn không-F đủ điều kiện sơ bộ (tầng A/C, trừ cổng mở và họ chờ): 118; còn sau 116 vào: 2
+nhánh giả định thêm 'theo' (lớp F) vào RA: 117 ra, 117 vào, sau thay 7776 từ, 7776 khóa, F = 77, R1 = 0
+nhánh Q-rtc-O2 theo Astra (thêm 4 khóa): 120 ra, 118 vào, thiếu 2 ghế, còn 0 dự bị; sau thay 7774 từ, 7774 khóa
 cờ cần đọc trong VAO: 9
-VAO: mụ mị, cờ vây, đưa đò, buồn thiu, xuống cân, phất phơ, tấn tới, leo dây, cụt hứng, nín thinh, khó nghĩ, số âm, bâng quơ, lạ tai, làm cỗ, mỏi nhừ, oái oăm, mon men, chính cống, gợi chuyện, bụng dạ, mấp mé, rơm rớm, sáng trưng, nhá nhem, nhảy sào, chốc nữa, hay dở, đủng đỉnh, mong nhớ, thay lông, giở giọng, đon đả, ủn ỉn, xúng xính, ăn tiệm, bèo bọt, leo lét, đáp số, đỏ chót, ve vẩy, dài ngoằng, giở quẻ, lộp độp, tía lia, khuya khoắt, khúc khuỷu, xoành xoạch, học tủ, lạ đời, thụp, gặp thời, chung tình, ỉu xìu, ngắn ngủn, mệt lả, nằm ườn, đầy tháng, loáng thoáng, lộp bộp, tẻ ngắt, đầy tràn, hóng chuyện, ngượng nghịu, nặng cân, nặng trịch, mau mắn, mỏng dính, méo xệch, bí bách, ngụp, trẻ măng, rướn, lỗi hẹn, cười gượng, bịn rịn, mang máng, đời xưa, thẳng tính, nóng ruột, ăn trầu, tròn vo, ngả nghiêng, ăn bốc, đắc ý, thả sức, phép trừ, giông giống, xăng xái, chấp nhặt, sẩy chân, tối mù, tuổi ta, nắn nót, lỗ lãi, chễm chệ, dễ ợt, ngóng trông, ngay thật, chín nhừ, mỏng tanh, lu bù, sớm tối, no ấm
-DU_BI: tạnh ráo, xầm xì, nước nôi, thẳng đơ, cười mỉm, ăn nhịp, đầy năm, non choẹt, năm kia, lời lỗ, tuổi xanh, dịu hiền, áng chừng, tính nết, cả nghĩ, cửu chương
+VAO: mụ mị, cờ vây, đưa đò, buồn thiu, xuống cân, phất phơ, tấn tới, leo dây, cụt hứng, nín thinh, khó nghĩ, số âm, bâng quơ, lạ tai, mỏi nhừ, oái oăm, mon men, chính cống, gợi chuyện, bụng dạ, mấp mé, rơm rớm, sáng trưng, nhá nhem, nhảy sào, chốc nữa, hay dở, đủng đỉnh, mong nhớ, thay lông, giở giọng, đon đả, ủn ỉn, xúng xính, ăn tiệm, bèo bọt, leo lét, đáp số, đỏ chót, ve vẩy, dài ngoằng, giở quẻ, lộp độp, tía lia, khuya khoắt, khúc khuỷu, xoành xoạch, học tủ, lạ đời, thụp, gặp thời, chung tình, ỉu xìu, ngắn ngủn, mệt lả, nằm ườn, đầy tháng, loáng thoáng, lộp bộp, tẻ ngắt, đầy tràn, hóng chuyện, ngượng nghịu, nặng cân, nặng trịch, mau mắn, mỏng dính, méo xệch, bí bách, ngụp, trẻ măng, lỗi hẹn, cười gượng, bịn rịn, mang máng, đời xưa, thẳng tính, nóng ruột, ăn trầu, tròn vo, ngả nghiêng, ăn bốc, đắc ý, thả sức, phép trừ, giông giống, xăng xái, chấp nhặt, sẩy chân, tối mù, tuổi ta, nắn nót, lỗ lãi, chễm chệ, dễ ợt, ngóng trông, ngay thật, chín nhừ, mỏng tanh, lu bù, sớm tối, no ấm, tạnh ráo, xầm xì, nước nôi, thẳng đơ, cười mỉm, ăn nhịp, đầy năm, non choẹt, năm kia, lời lỗ, tuổi xanh, dịu hiền, áng chừng, tính nết
+DU_BI: cả nghĩ, cửu chương
 CON_LAI:
