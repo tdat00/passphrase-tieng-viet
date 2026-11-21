@@ -64,4 +64,4 @@ Tệp này chỉ ghi các câu hỏi còn mở. Mọi đường dẫn tính từ
 
 **Bị chặn:** tập ra cuối, gói chữ ký K2, sức chứa và điều kiện của Q-rtc-A2.
 
-**Answer (owner, ):**
+**Answer (owner, 2026-11-21):** thay 1 (*vòng*) và nhóm C (6 *thuần*, 7 *xuân*); giữ 2, 3, 4, 5, 8, 9, 10. Nguyên văn form `ask_user`: "thay A-1 và tất cả C, giữ các chữ còn lại"; nguyên văn Discord (21/11/2026 21:01 +07:00): "Q-rtc-O1 C thay, 1 thay, giữ còn lại".
