@@ -1,0 +1,44 @@
+chuan: 30 dòng dự phòng, 8 dòng HM
+== Hai bảng hồ sơ
+DAT | 4 | du-phong-v2-phan-loai.tsv: cùng số dòng/thứ tự từ, thêm đúng một cột ghi_chu
+DAT | 4 | du-phong-v2-phan-loai.tsv: cột cũ duy nhất bị đổi là bang_chung | ['bang_chung']
+DAT | 4 | du-phong-v2-phan-loai.tsv: 30 dòng có ghi_chu, còn lại '-' | 30 có / 175 '-'
+DAT | 4 | du-phong-v2-phan-loai.tsv: từng ô ghi_chu trùng nguyên văn Lượt duyệt 3 §D | sai 0, thừa []
+DAT | 4 | du-phong-v2-phan-loai.tsv: bang_chung chỉ được nối thêm (không xóa con trỏ cũ)
+   phần nối thêm (mẫu): [';analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md:503', ';analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md:504', ';analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md:505']
+DAT | T7 | du-phong-v2-phan-loai.tsv: CRLF đồng nhất, UTF-8 không BOM, có dòng cuối, không khoảng trắng cuối ô dòng
+DAT | 4 | du-phong-v2-honorable-mentions.tsv: cùng số dòng/thứ tự từ, thêm đúng một cột ghi_chu
+DAT | 4 | du-phong-v2-honorable-mentions.tsv: cột cũ duy nhất bị đổi là bang_chung | ['bang_chung']
+DAT | 4 | du-phong-v2-honorable-mentions.tsv: 8 dòng có ghi_chu, còn lại '-' | 8 có / 277 '-'
+DAT | 4 | du-phong-v2-honorable-mentions.tsv: từng ô ghi_chu trùng nguyên văn Lượt duyệt 3 §D | sai 0, thừa []
+DAT | 4 | du-phong-v2-honorable-mentions.tsv: bang_chung chỉ được nối thêm (không xóa con trỏ cũ)
+   phần nối thêm (mẫu): [';analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md:531', ';analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md:532', ';analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md:533']
+DAT | T7 | du-phong-v2-honorable-mentions.tsv: CRLF đồng nhất, UTF-8 không BOM, có dòng cuối, không khoảng trắng cuối ô dòng
+DAT | 4 | 21 dòng C/D đều có ghi_chu bắt đầu bằng tầng của dòng
+DAT | 4 | 8 ghi_chu HM đều thuộc 237 dòng được tính
+DAT | 4 | tầng và N không đổi
+== Phép chiếu công bố (T10)
+DAT | T10 | schema công bố 17/20 cột trong kế hoạch còn nguyên và có ghi_chu
+DAT | T10 | mọi cột công bố (trừ tang) có trong bảng hồ sơ
+DAT | T10 | phép chiếu: 30/175 và 8/229
+== Kế hoạch §4.2.1 và evidence của Astra
+DAT | 4 | bảng dự phòng ở §4.2.1 trùng nguyên văn | 30 dòng
+DAT | 4 | bảng HM ở §4.2.1 trùng nguyên văn | 8 dòng
+public-ghi-chu.tsv cột: ['pham_vi', 'tu', 'ghi_chu', 'nguon'] dòng: 38
+DAT | 4 | E/public-ghi-chu.tsv trùng nguyên văn (38 dòng)
+DAT | 4 | §5.2 BANG_CANH_BAO có cột Lý do = ghi_chu, 21 dòng
+DAT | 4 | §10 có T10
+DAT | 4 | kế hoạch không còn định nghĩa ghi_chu cũ
+== Số liệu thứ tự S4 được dẫn trong kế hoạch
+   diem lỗ lãi: 5.401989
+   diem lời lỗ: 2.900190
+   diem mỏng dính: 7.006689
+   diem mỏng tanh: 4.969709
+DAT | 4 | điểm S4 dẫn ở §4.2.1 khớp cột diem | {'lỗ lãi': '5.401989', 'lời lỗ': '2.900190', 'mỏng dính': '7.006689', 'mỏng tanh': '4.969709'}
+== Câu hỏi, vùng bảo vệ
+DAT | Q | tệp câu hỏi vẫn ghi không còn câu hỏi mở
+DAT | B1 | SHA byte index.html
+DAT | B1 | SHA byte thong-tin.html
+DAT | B1 | SHA byte analyzing-tools/wordlist.txt
+DAT | B1 | chỉ tệp hồ sơ bị sửa | 13
+Tổng: 0 mục chưa đạt.

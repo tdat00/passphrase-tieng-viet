@@ -1,0 +1,42 @@
+{
+  "python": "3.14.7",
+  "command": [
+    "python",
+    "-X",
+    "utf8",
+    "-B",
+    "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\cross-review.py"
+  ],
+  "protected_bytes_unchanged": true,
+  "protected_bytes": {
+    "index.html": "01b76617f8df57d80e59d0989001ced8f7714ae95e85828b351bce2a5517a423",
+    "thong-tin.html": "8ec3bbf763f2465994bde4239079a3795eb2eb3bf21f61fe29aa683cb8bf3ea7",
+    "analyzing-tools\\wordlist.txt": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4",
+    "WordListAnalyze.md section10 bytes": "4b91fac689e70ccb0715b92b49efe4305fbb19c3bc90dd449e72fba72889f6fa"
+  },
+  "read_only_inputs_hashes_still_match": 67,
+  "H5_extracted_original_function_checks": {
+    "trong_tranh_chong_chanh": "LOAI_THIEU_DU_LIEU",
+    "nhao_nhet_nhao_nhoet_gop_khoa": "LOAI_THIEU_DU_LIEU",
+    "piano_frozen_family": "QUA_RIENG_H5"
+  },
+  "R1_to_OK_original_subst_returns_none": true,
+  "forty_F_candidates_distinct_mapped_slots": 40,
+  "reference_pointers_checked": 1402,
+  "own_cross_review_artifacts_format_checked": [
+    "round-1-cross-review.md",
+    "evidence\\cross-review-counts.tsv",
+    "evidence\\cross-review-hnd-membership.tsv",
+    "evidence\\cross-review-hnd-sources.json",
+    "evidence\\cross-review-honorable-diff.tsv",
+    "evidence\\cross-review-inputs.json",
+    "evidence\\cross-review-metrics.json",
+    "evidence\\cross-review-reserve-diff.tsv",
+    "evidence\\cross-review-web-sources.tsv",
+    "evidence\\cross-review.py"
+  ],
+  "reserve_rows": 205,
+  "honorable_union_rows": 309,
+  "fresh_D6_run": false,
+  "note": "Không chạy main của module được trích hàm; không ghi đầu ra vào thư mục Opus."
+}

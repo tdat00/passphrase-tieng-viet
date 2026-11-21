@@ -1,0 +1,106 @@
+{
+  "analyzing-tools\\wordlist.txt": {
+    "sha256_bytes": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4",
+    "sha256_LF": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
+    "bytes": 685020,
+    "lines": 7776,
+    "CRLF": 7776,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\canh-bao-khong-dau.tsv": {
+    "sha256_bytes": "37d22f6cca7b8ca15109c7730fbe5c09001ff01f987712cc22a63f2c3f686110",
+    "sha256_LF": "a5148fa21c33fb50d4e418604e2847be7ee21dc0dbf06e3ad79e3811c541e5ea",
+    "bytes": 19682,
+    "lines": 228,
+    "CRLF": 228,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\opus-counts.tsv": {
+    "sha256_bytes": "4c250ddb19731ad21cc1a878671ef55637c7fc602105c402ef2b669031337036",
+    "sha256_LF": "38591846fb13efec4d2c2ae4a6e01e3414b2367611a8a5596cecd7c08fc550f1",
+    "bytes": 1570916,
+    "lines": 18221,
+    "CRLF": 18221,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\bien-the-chinh-tho.tsv": {
+    "sha256_bytes": "05269a02b29f9d199d8f53c1fbc7e9ea8adf3a1479d6c3142f91ecd2dac0ea40",
+    "sha256_LF": "a9cbc4b4959ff83c76251d01c10dd6c1a5c3ac7308377df210bab362e255dd93",
+    "bytes": 27746,
+    "lines": 633,
+    "CRLF": 633,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\pham-vi-hau-kiem-h7.tsv": {
+    "sha256_bytes": "61e56f78df6492a8afa478b0a19b43d8be81cd6a2487ef57151f0f0b09c4c595",
+    "sha256_LF": "163e5f9835872dddabb1ffb9d97f3325953db70b40bbb9c29f63eea93c10aef0",
+    "bytes": 51758,
+    "lines": 1178,
+    "CRLF": 1178,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\phieu-opus.tsv": {
+    "sha256_bytes": "04a85ef49127c3a7748c42de175321914c45818eb8070c106d9b67e195147e08",
+    "sha256_LF": "87d5eb143b650a62421e3f73f2951e3fc38bd0c84769927f79bcbbced096ceec",
+    "bytes": 1060862,
+    "lines": 12148,
+    "CRLF": 12148,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\phieu-astra.tsv": {
+    "sha256_bytes": "309fb5988a875a0571c5ef513f54c1e837b286e491f7b5e24985762455d4751c",
+    "sha256_LF": "6e6113f937ef273f8a66f0f9cadf1a4594961facfb72c36ca1bddb4d25abce57",
+    "bytes": 1635245,
+    "lines": 12148,
+    "CRLF": 12148,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\unified\\phan-bien.tsv": {
+    "sha256_bytes": "8702d0d47c938abc62487df33884d6f292d158f03782eb5f2419fa28de861ec3",
+    "sha256_LF": "d98cf9a7adfcb0c59256044641519401e3fb0027b6b0f8bd71d45e1364594d37",
+    "bytes": 184744,
+    "lines": 1121,
+    "CRLF": 1121,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\round-1-review-drafts.md": {
+    "sha256_bytes": "0f7527a2dd2ae719943979fcb11864d542ac3c410333e280fd0c459621f2d3c2",
+    "sha256_LF": "34ebaeafcb13fd8ec337d9efb15fc1d433459894bcda59a374126c297362b7f9",
+    "bytes": 40322,
+    "lines": 431,
+    "CRLF": 431,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\pham-vi-hau-kiem.py": {
+    "sha256_bytes": "7e410b9cef1f3ee0ae14528179266000bf139e6813fd9595674e76a23df8faf0",
+    "sha256_LF": "643665a1fcf21816b7363fa042bc27c550953592d2f6a1ac7232f3cdbd1232db",
+    "bytes": 4121,
+    "lines": 81,
+    "CRLF": 81,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\h7-quet-bo-sung.py": {
+    "sha256_bytes": "5507e1a7df4ecd90a73abaceb2a06f569897cc8df655031b47caee0356038b66",
+    "sha256_LF": "332b822bc67db3a4d3b5871ef10948c9ac61f6263c5c1f9a66c96a6745ad4d8d",
+    "bytes": 2970,
+    "lines": 55,
+    "CRLF": 55,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\revision-1-chu-ky-astra.tsv": {
+    "sha256_bytes": "8a1933e69006af5eb3b6145c42b99bbef8f0bb2293ba1b131dcef66b80a2d279",
+    "sha256_LF": "cc8a1d96d4d85c830d5fb4ff361fc8247d61df9547bb25ff9eba71139c441daa",
+    "bytes": 1548,
+    "lines": 3,
+    "CRLF": 3,
+    "BOM": false
+  },
+  "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\revision-1-h7-ngoaitru.tsv": {
+    "sha256_bytes": "4a958df261b8b86e6e0c88ecb82ff5c3f3c51ee9f6f1fd9802ab057c072e4668",
+    "sha256_LF": "ebc8e158d7cd31fed10d081005be3b810f2a6415189477fab810652695485125",
+    "bytes": 918,
+    "lines": 2,
+    "CRLF": 2,
+    "BOM": false
+  }
+}

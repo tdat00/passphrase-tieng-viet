@@ -1,0 +1,5 @@
+H5 cặp thô trên danh sách chính: 632 cặp, 474 từ chính
+H7 cách đọc khác cùng khóa từ chính, PPM gộp >= 0,3, không có trong canh-bao-khong-dau.tsv: 1177 cặp, 634 khóa; trong đó cách đọc khác >= PPM từ chính: 307
+canh-bao-khong-dau.tsv: 227 dòng, 117 khóa
+H8 HM có số đủ bốn kho: 239; khác kết quả giữa hai mẫu số: 0 []
+h8-chinh-thuc.tsv cột: tu,h8_chinh_thuc,nguon,opus_du_phong,astra_du_phong,opus_de_cu,astra_de_cu

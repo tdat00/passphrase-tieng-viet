@@ -1,0 +1,11 @@
+so_dong_du_phong_header: 1
+so_dong_toc_11: 1
+che_do: working tree CRLF, KHÔNG áp chỉnh sửa (nền)
+check_wordlist.py ma_thoat: 1
+  LỖI | C1: wordlist.txt phải dùng LF và có LF cuối
+  Tổng: 1 lỗi, 0 cảnh báo.
+verify.mjs ma_thoat: 1
+  LỖI | C8: mục 10 của WordListAnalyze.md không khớp wordlist.txt
+  Tổng: 3 lỗi.
+build_wordlist.py --check ma_thoat: 0
+  Ba khối khớp wordlist.txt.

@@ -1,0 +1,11 @@
+so_dong_du_phong_header: 1
+so_dong_toc_11: 1
+che_do: HEAD LF, KHÔNG áp chỉnh sửa (nền)
+check_wordlist.py ma_thoat: 0
+  Lớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776
+  Tổng: 0 lỗi, 0 cảnh báo.
+verify.mjs ma_thoat: 0
+  Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+  Tổng: 0 lỗi.
+build_wordlist.py --check ma_thoat: 1
+  ValueError: substring not found

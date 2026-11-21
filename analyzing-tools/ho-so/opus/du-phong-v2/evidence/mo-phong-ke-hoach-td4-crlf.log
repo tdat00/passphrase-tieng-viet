@@ -1,0 +1,15 @@
+so_dong_du_phong_header: 1
+so_dong_toc_11: 1
+token_da_dien: BANG_TANG, BANG_CANH_BAO, DU_PHONG_205, BANG_NHOM_HM, BANG_TU_HM
+che_do: working tree CRLF, đã áp chỉnh sửa
+muc10_giu_nguyen_byte: True
+so_lan_tieu_de_muc10: 1
+anchor_moi: #11-danh-sách-dự-phòng-đã-phân-tích-chưa-phát-hành, #12-từ-có-thể-cân-nhắc-honorable-mentions
+check_wordlist.py ma_thoat: 1
+  LỖI | C1: wordlist.txt phải dùng LF và có LF cuối
+  Tổng: 1 lỗi, 0 cảnh báo.
+verify.mjs ma_thoat: 1
+  LỖI | C8: mục 10 của WordListAnalyze.md không khớp wordlist.txt
+  Tổng: 3 lỗi.
+build_wordlist.py --check ma_thoat: 0
+  Ba khối khớp wordlist.txt.

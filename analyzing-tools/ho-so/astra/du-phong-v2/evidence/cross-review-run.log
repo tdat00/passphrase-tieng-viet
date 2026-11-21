@@ -1,0 +1,147 @@
+COMMAND python -X utf8 -B analyzing-tools\ho-so\astra\du-phong-v2\evidence\cross-review.py
+{
+  "commit": "cefb99386d4845e40bc2d3eabc7d6898d078305d",
+  "reserve_equal": 177,
+  "reserve_different": 28,
+  "tier_matrix": {
+    "A→A": 141,
+    "A→C": 11,
+    "C→A": 10,
+    "B→B": 36,
+    "A→D": 6,
+    "B→C": 1
+  },
+  "astra_tiers_after_review_proposal": {
+    "A": 149,
+    "C": 14,
+    "B": 36,
+    "D": 6
+  },
+  "reserve_h8_clean": {
+    "MANH": 198,
+    "ZERO": 1,
+    "YEU": 6
+  },
+  "H8_Astra_corrections": [
+    "cả nghĩ",
+    "tối mù"
+  ],
+  "HM_intersection": 153,
+  "HM_Astra_only": 47,
+  "HM_Opus_only": 109,
+  "HM_union": 309,
+  "HM_Opus_only_groups": {
+    "DC1": 5,
+    "DC2": 34,
+    "DC3": 46,
+    "DC4": 19,
+    "DC5": 5
+  },
+  "HM_after_review_states": {
+    "CO_THE_GOP_THEO_HO_SO": 231,
+    "BACKLOG_CHUA_DU_HO_SO_H": 69,
+    "CHO_H7_DE_NGHI_K1": 1,
+    "CHO_H5": 1,
+    "UU_TIEN_THAP_RA_H6": 5,
+    "CHO_H2": 1,
+    "CHO_KHEP_H7": 1
+  },
+  "HM_core_rechecked_source_gates": 231,
+  "HM_core_H8_clean": {
+    "MANH": 230,
+    "YEU": 1
+  },
+  "H8_Astra_HM_corrections": [
+    "vây cá"
+  ],
+  "Opus_DC2_60_original_votes_and_scores_verified": true,
+  "Opus_missing_class": 70,
+  "Opus_missing_four_corpus_measurements": [
+    "ánh nhìn",
+    "bánh gạo",
+    "bánh sinh nhật",
+    "bánh xếp",
+    "băng trôi",
+    "bắp rang",
+    "bò rừng",
+    "bông cải xanh",
+    "buồng tắm",
+    "bút chì màu",
+    "chợ đêm",
+    "cối xay gió",
+    "củ cải đỏ",
+    "diễn viên hài",
+    "đai an toàn",
+    "đĩa đơn",
+    "đĩa nhạc",
+    "giờ cao điểm",
+    "hương thảo",
+    "kẹp giấy",
+    "khuyên tai",
+    "lưỡi trai",
+    "máy chụp hình",
+    "máy rửa bát",
+    "mòng biển",
+    "nắng ấm",
+    "ngủ nướng",
+    "người hâm mộ",
+    "nhà tạo mẫu",
+    "nhấp chuột",
+    "nhóm nhạc",
+    "ớt đỏ",
+    "quả cầu tuyết",
+    "quần yếm",
+    "rừng mưa",
+    "sân bóng rổ",
+    "sữa tắm",
+    "tắc đường",
+    "tầng lửng",
+    "tên đệm",
+    "thợ xây",
+    "thú nhồi bông",
+    "trà đá",
+    "trang viên",
+    "vách núi",
+    "vỏ xe",
+    "cặp lồng",
+    "chè đỗ đen",
+    "sao hôm",
+    "sao mai",
+    "vịt bầu"
+  ],
+  "Opus_selected_L2D_h3_needs_two": [
+    "bánh củ cải",
+    "hoa mõm sói"
+  ],
+  "F_main_nonF_median": 42.186087,
+  "F_reserve_nonF_median": 4.4583265,
+  "F_main_exclusive_P1_P5": [
+    4.540514,
+    9.04356
+  ],
+  "F_main_inclusive_P1_P5": [
+    4.55179282,
+    9.0545184
+  ],
+  "reserve_below_exclusive_P1_P5": [
+    66,
+    112
+  ],
+  "max_reserve_F": 12.16939,
+  "max_reserve_rank_percent_of_main_nonF": 9.027146382647096,
+  "bao_tu_reading": {
+    "tu": "báo tử",
+    "khoa": "baotu",
+    "sub_be_mat": "36",
+    "sub_sach": 26,
+    "web_be_mat": "7",
+    "web_sach": 2,
+    "sub_dong_khac": "26",
+    "ppm_gop_mau_so_da_ky": "0.385521145",
+    "ppm_gop_cot_cu": "0.385348000",
+    "nguon_ref": "analyzing-tools\\ho-so\\unified\\opus-counts.tsv:13474"
+  },
+  "bao_tu_in_existing_alarm": false,
+  "gia_tri": "verified:số đo, đối chiếu; assumed:phán đoán ngôn ngữ và tầng sau review, chưa là kết luận chung"
+}
+VERIFY {"python": "3.14.7", "command": ["python", "-X", "utf8", "-B", "analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\cross-review.py"], "protected_bytes_unchanged": true, "protected_bytes": {"index.html": "01b76617f8df57d80e59d0989001ced8f7714ae95e85828b351bce2a5517a423", "thong-tin.html": "8ec3bbf763f2465994bde4239079a3795eb2eb3bf21f61fe29aa683cb8bf3ea7", "analyzing-tools\\wordlist.txt": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4", "WordListAnalyze.md section10 bytes": "4b91fac689e70ccb0715b92b49efe4305fbb19c3bc90dd449e72fba72889f6fa"}, "read_only_inputs_hashes_still_match": 67, "H5_extracted_original_function_checks": {"trong_tranh_chong_chanh": "LOAI_THIEU_DU_LIEU", "nhao_nhet_nhao_nhoet_gop_khoa": "LOAI_THIEU_DU_LIEU", "piano_frozen_family": "QUA_RIENG_H5"}, "R1_to_OK_original_subst_returns_none": true, "forty_F_candidates_distinct_mapped_slots": 40, "reference_pointers_checked": 1402, "own_cross_review_artifacts_format_checked": ["round-1-cross-review.md", "evidence\\cross-review-counts.tsv", "evidence\\cross-review-hnd-membership.tsv", "evidence\\cross-review-hnd-sources.json", "evidence\\cross-review-honorable-diff.tsv", "evidence\\cross-review-inputs.json", "evidence\\cross-review-metrics.json", "evidence\\cross-review-reserve-diff.tsv", "evidence\\cross-review-web-sources.tsv", "evidence\\cross-review.py"], "reserve_rows": 205, "honorable_union_rows": 309, "fresh_D6_run": false, "note": "Không chạy main của module được trích hàm; không ghi đầu ra vào thư mục Opus."}

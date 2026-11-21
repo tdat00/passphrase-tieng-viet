@@ -1,0 +1,145 @@
+{
+  "commit": "cefb99386d4845e40bc2d3eabc7d6898d078305d",
+  "reserve_equal": 177,
+  "reserve_different": 28,
+  "tier_matrix": {
+    "A→A": 141,
+    "A→C": 11,
+    "C→A": 10,
+    "B→B": 36,
+    "A→D": 6,
+    "B→C": 1
+  },
+  "astra_tiers_after_review_proposal": {
+    "A": 149,
+    "C": 14,
+    "B": 36,
+    "D": 6
+  },
+  "reserve_h8_clean": {
+    "MANH": 198,
+    "ZERO": 1,
+    "YEU": 6
+  },
+  "H8_Astra_corrections": [
+    "cả nghĩ",
+    "tối mù"
+  ],
+  "HM_intersection": 153,
+  "HM_Astra_only": 47,
+  "HM_Opus_only": 109,
+  "HM_union": 309,
+  "HM_Opus_only_groups": {
+    "DC1": 5,
+    "DC2": 34,
+    "DC3": 46,
+    "DC4": 19,
+    "DC5": 5
+  },
+  "HM_after_review_states": {
+    "CO_THE_GOP_THEO_HO_SO": 231,
+    "BACKLOG_CHUA_DU_HO_SO_H": 69,
+    "CHO_H7_DE_NGHI_K1": 1,
+    "CHO_H5": 1,
+    "UU_TIEN_THAP_RA_H6": 5,
+    "CHO_H2": 1,
+    "CHO_KHEP_H7": 1
+  },
+  "HM_core_rechecked_source_gates": 231,
+  "HM_core_H8_clean": {
+    "MANH": 230,
+    "YEU": 1
+  },
+  "H8_Astra_HM_corrections": [
+    "vây cá"
+  ],
+  "Opus_DC2_60_original_votes_and_scores_verified": true,
+  "Opus_missing_class": 70,
+  "Opus_missing_four_corpus_measurements": [
+    "ánh nhìn",
+    "bánh gạo",
+    "bánh sinh nhật",
+    "bánh xếp",
+    "băng trôi",
+    "bắp rang",
+    "bò rừng",
+    "bông cải xanh",
+    "buồng tắm",
+    "bút chì màu",
+    "chợ đêm",
+    "cối xay gió",
+    "củ cải đỏ",
+    "diễn viên hài",
+    "đai an toàn",
+    "đĩa đơn",
+    "đĩa nhạc",
+    "giờ cao điểm",
+    "hương thảo",
+    "kẹp giấy",
+    "khuyên tai",
+    "lưỡi trai",
+    "máy chụp hình",
+    "máy rửa bát",
+    "mòng biển",
+    "nắng ấm",
+    "ngủ nướng",
+    "người hâm mộ",
+    "nhà tạo mẫu",
+    "nhấp chuột",
+    "nhóm nhạc",
+    "ớt đỏ",
+    "quả cầu tuyết",
+    "quần yếm",
+    "rừng mưa",
+    "sân bóng rổ",
+    "sữa tắm",
+    "tắc đường",
+    "tầng lửng",
+    "tên đệm",
+    "thợ xây",
+    "thú nhồi bông",
+    "trà đá",
+    "trang viên",
+    "vách núi",
+    "vỏ xe",
+    "cặp lồng",
+    "chè đỗ đen",
+    "sao hôm",
+    "sao mai",
+    "vịt bầu"
+  ],
+  "Opus_selected_L2D_h3_needs_two": [
+    "bánh củ cải",
+    "hoa mõm sói"
+  ],
+  "F_main_nonF_median": 42.186087,
+  "F_reserve_nonF_median": 4.4583265,
+  "F_main_exclusive_P1_P5": [
+    4.540514,
+    9.04356
+  ],
+  "F_main_inclusive_P1_P5": [
+    4.55179282,
+    9.0545184
+  ],
+  "reserve_below_exclusive_P1_P5": [
+    66,
+    112
+  ],
+  "max_reserve_F": 12.16939,
+  "max_reserve_rank_percent_of_main_nonF": 9.027146382647096,
+  "bao_tu_reading": {
+    "tu": "báo tử",
+    "khoa": "baotu",
+    "sub_be_mat": "36",
+    "sub_sach": 26,
+    "web_be_mat": "7",
+    "web_sach": 2,
+    "sub_dong_khac": "26",
+    "ppm_gop_mau_so_da_ky": "0.385521145",
+    "ppm_gop_cot_cu": "0.385348000",
+    "nguon_ref": "analyzing-tools\\ho-so\\unified\\opus-counts.tsv:13474"
+  },
+  "bao_tu_in_existing_alarm": false,
+  "gia_tri": "verified:số đo, đối chiếu; assumed:phán đoán ngôn ngữ và tầng sau review, chưa là kết luận chung"
+}

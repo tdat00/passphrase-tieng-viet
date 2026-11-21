@@ -1,0 +1,109 @@
+{
+  "runs": [
+    {
+      "label": "NATIVE_PYTHON_BASELINE",
+      "command": "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe -X utf8 -B Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\check_wordlist.py",
+      "exit_code": 1,
+      "expected_baseline_exit": 1,
+      "as_expected": true,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit\nSố khối: 1: 480, 2: 7033, 3: 263\nĐộ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39\nLớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776\nLỖI | C1: wordlist.txt phải dùng LF và có LF cuối\nTổng: 1 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    },
+    {
+      "label": "NATIVE_NODE_BASELINE",
+      "command": "node Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\verify.mjs",
+      "exit_code": 1,
+      "expected_baseline_exit": 1,
+      "as_expected": true,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái\nLỖI | C1: wordlist.txt phải là UTF-8 không BOM, LF, có LF cuối\nLỖI | C8: thong-tin.html không khớp wordlist.txt\nLỖI | C8: mục 10 của WordListAnalyze.md không khớp wordlist.txt\nTổng: 3 lỗi.\n",
+      "stderr": ""
+    },
+    {
+      "label": "BUILD_CHECK_READONLY",
+      "command": "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe -X utf8 -B Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\build_wordlist.py --check",
+      "exit_code": 0,
+      "expected_baseline_exit": 0,
+      "as_expected": true,
+      "stdout": "Ba khối khớp wordlist.txt.\n",
+      "stderr": ""
+    },
+    {
+      "label": "ANALYSIS_NODE_INDEPENDENT",
+      "command": "node Q:\\tmp\\passphrase-tieng-viet\\analyzing-tools\\ho-so\\astra\\du-phong-v2\\evidence\\verify-analysis.mjs",
+      "exit_code": 0,
+      "expected_baseline_exit": 0,
+      "as_expected": true,
+      "stdout": "PASS: 205 dự phòng + 200 honorable mentions; H1/H2 số học/H4/khóa chặn độc lập, 8.181 khóa duy nhất kể cả chính.\n",
+      "stderr": ""
+    },
+    {
+      "label": "CANONICAL_GIT_LF_PYTHON",
+      "command": "C:\\Users\\ledat\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe -X utf8 -B -c \"\nimport pathlib, subprocess, runpy\nroot = pathlib.Path('Q:\\\\tmp\\\\passphrase-tieng-viet')\ntarget = root / 'analyzing-tools' / 'wordlist.txt'\ncanonical = subprocess.check_output(['git', 'show', 'cefb99386d4845e40bc2d3eabc7d6898d078305d:analyzing-tools/wordlist.txt'], cwd=root)\nnative = pathlib.Path.read_bytes\npathlib.Path.read_bytes = lambda p: canonical if p.resolve() == target.resolve() else native(p)\nrunpy.run_path(str(root / 'analyzing-tools' / 'check_wordlist.py'), run_name='__main__')\n\"",
+      "exit_code": 0,
+      "expected_baseline_exit": 0,
+      "as_expected": true,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit\nSố khối: 1: 480, 2: 7033, 3: 263\nĐộ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39\nLớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776\nTổng: 0 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    },
+    {
+      "label": "CANONICAL_GIT_LF_NODE",
+      "command": "node --input-type=module -e \"\nimport fs from 'node:fs';\nimport path from 'node:path';\nimport {execFileSync} from 'node:child_process';\nimport {pathToFileURL} from 'node:url';\nconst root = \\\"Q:\\\\tmp\\\\passphrase-tieng-viet\\\";\nconst target = path.join(root, 'analyzing-tools', 'wordlist.txt');\nconst canonical = execFileSync('git', ['show', \\\"cefb99386d4845e40bc2d3eabc7d6898d078305d:analyzing-tools/wordlist.txt\\\"], {cwd:root});\nconst native = fs.readFileSync;\nfs.readFileSync = function(p, options) {\n  if (typeof p === 'string' && path.resolve(p).toLowerCase() === target.toLowerCase()) {\n    const encoding = typeof options === 'string' ? options : options?.encoding;\n    return encoding ? canonical.toString(encoding) : Buffer.from(canonical);\n  }\n  return native.apply(this, arguments);\n};\nawait import(pathToFileURL(path.join(root, 'analyzing-tools', 'verify.mjs')).href);\n\"",
+      "exit_code": 0,
+      "expected_baseline_exit": 0,
+      "as_expected": true,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái\nTổng: 0 lỗi.\n",
+      "stderr": ""
+    },
+    {
+      "label": "D2_D5_EXISTING_7944_IN_MEMORY",
+      "command": "kiem-tra-giai-nghia.main --phat-hanh; read_raw cung cấp lô LF trong bộ nhớ từ 7.776+168 câu có sẵn",
+      "exit_code": 0,
+      "expected_baseline_exit": 0,
+      "as_expected": true,
+      "stdout": "Tổng: 7944 dòng, 0 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    }
+  ],
+  "all_outcomes_as_expected": true,
+  "native_release_checkers_pass": false,
+  "native_failure_reason": "verified:checkout CRLF trước thay đổi; Python 1 lỗi C1, Node C1 và 2 lỗi C8; không sửa vùng bảo vệ",
+  "canonical_is_exact_git_blob_and_equal_worktree_after_EOL_only": true,
+  "canonical_wordlist_sha256": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
+  "D6_historical_hash_matches": {
+    "v2": 35,
+    "v1": 123,
+    "v3": 10
+  },
+  "D6_fresh_run": "CHUA_KIEM:không có vi.jsonl.gz; không gọi đối chiếu hash lịch sử là chạy D6 mới",
+  "protected_bytes_unchanged": true,
+  "protected_bytes": {
+    "index.html": "01b76617f8df57d80e59d0989001ced8f7714ae95e85828b351bce2a5517a423",
+    "thong-tin.html": "8ec3bbf763f2465994bde4239079a3795eb2eb3bf21f61fe29aa683cb8bf3ea7",
+    "analyzing-tools\\wordlist.txt": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4",
+    "WordListAnalyze.md section10 bytes": "4b91fac689e70ccb0715b92b49efe4305fbb19c3bc90dd449e72fba72889f6fa"
+  },
+  "existing_files_diff": [],
+  "own_artifacts_utf8_no_BOM_CRLF_no_trailing_whitespace": [
+    "du-phong-phan-loai.tsv",
+    "evidence\\candidate-exclusions.tsv",
+    "evidence\\candidate-probe.tsv",
+    "evidence\\classification-inputs.json",
+    "evidence\\classification-summary.json",
+    "evidence\\classify.py",
+    "evidence\\honorable-r1-picks.tsv",
+    "evidence\\inputs.json",
+    "evidence\\inventory.json",
+    "evidence\\inventory.py",
+    "evidence\\reserve-judgements.tsv",
+    "evidence\\reserve-probe.tsv",
+    "evidence\\substitution-slots.tsv",
+    "evidence\\verification.json",
+    "evidence\\verification.log",
+    "evidence\\verify-analysis.mjs",
+    "evidence\\verify_analysis.py",
+    "honorable-mentions.tsv",
+    "round-1-analysis.md"
+  ],
+  "table_reference_pointers_checked": 2788,
+  "table_reference_source_files": 21
+}

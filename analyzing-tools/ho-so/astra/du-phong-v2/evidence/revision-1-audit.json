@@ -1,0 +1,31 @@
+{
+  "h5_raw_pairs": 632,
+  "h5_distinct_main_words": 474,
+  "h7_independent_match": {
+    "muc0": {
+      "pairs": 1177,
+      "keys": 634
+    },
+    "P2": {
+      "pairs": 1177,
+      "keys": 634
+    }
+  },
+  "alarm_rows": 227,
+  "alarm_keys": 117,
+  "h7_warning": "Chưa phân loại nghĩa đỏ của 1.177 cặp; không gọi đây là 1.177 lỗi hay còi bị bỏ sót.",
+  "six_word_historical_votes": {
+    "R1": 2,
+    "OK": 10
+  },
+  "six_word_objections_in_saved_P4_table": 0,
+  "K2_Astra_signatures": [
+    "tần số",
+    "vậy nên"
+  ],
+  "agreed_H7_hold": "ngoại trừ / ngoại trú: C/CHO_H7; Q-dpv2-7 đã đóng, chưa ký mức K trước khi đo",
+  "legacy_files_sha256_bytes": {
+    "WordListAnalyze-Opus.md": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+    "WordListAnalyze-Astra.md": "0f94b58c422cd88ac0a50c0f2eace9da9ba5aed3e7630f577af29901cc9b25df"
+  }
+}

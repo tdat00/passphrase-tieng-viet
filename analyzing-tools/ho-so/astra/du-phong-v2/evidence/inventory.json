@@ -1,0 +1,120 @@
+{
+  "base_commit": "cefb99386d4845e40bc2d3eabc7d6898d078305d",
+  "branch": "analyze/du-phong-v2",
+  "main_n": 7776,
+  "reserve_n": 205,
+  "main_classes": {
+    "C": 2915,
+    "H": 3169,
+    "K": 1615,
+    "F": 77
+  },
+  "reserve_classes": {
+    "K": 43,
+    "H": 85,
+    "F": 77
+  },
+  "reserve_labels": {
+    "OK": 205
+  },
+  "reserve_gloss_n": 168,
+  "reserve_gloss_matches": {
+    "PASS": 168,
+    "CHUA_VIET": 37
+  },
+  "reserve_h8": {
+    "MANH": 200,
+    "ZERO": 1,
+    "YEU": 4
+  },
+  "reserve_flags": {
+    "trung_khoa": [],
+    "blocked": [],
+    "h5a": [],
+    "h5_ho": [
+      "dễ ợt"
+    ]
+  },
+  "reserve_gloss_by_class": {
+    "K": 43,
+    "H": 85,
+    "F": 40
+  },
+  "reserve_no_gloss_by_class": {
+    "F": 37
+  },
+  "reserve_signed_types": {
+    "H8": 1,
+    "H3": 31,
+    "H5": 2,
+    "K2": 1
+  },
+  "reserve_d8_rows": 0,
+  "rank_current_rows": 10133,
+  "p6_components": {
+    "p6-dau-vao": 9552,
+    "l2-nhan": 321,
+    "l2b-nhan": 148,
+    "l2c-nhan": 51,
+    "l3-nhan": 111,
+    "p6-khau-tru-cuoi": 27,
+    "p7-khau-tru": 22,
+    "p7-khau-tru-v2": 1,
+    "p7-v3-khau-tru-132-theo-P0-astra": 132
+  },
+  "pool_after_p7_final": 10001,
+  "rank_current_labels_classes": {
+    "OK_C": 2981,
+    "OK_H": 3292,
+    "OK_K": 1681,
+    "OK_F": 318,
+    "R1_C": 576,
+    "R1_K": 697,
+    "R1_H": 566,
+    "R1_F": 22
+  },
+  "outside_main_reserve": 2152,
+  "outside_removal": {
+    "D6_CUOI": 122,
+    "D7_CUOI:KIEN_THUC": 6,
+    "D7_CUOI:HEP": 4,
+    "KHONG_LOAI": 2020
+  },
+  "d8_removed": 182,
+  "d8_removed_gates": {
+    "H5f:CHO_LOAI": 3,
+    "H5f:CANH_TRANH": 2,
+    "H5f:THIEU_DU_LIEU": 3,
+    "H6.9": 6,
+    "H6.6": 5,
+    "H6.4": 5,
+    "H6.1": 4,
+    "H6.5": 4,
+    "H6.3": 1,
+    "H6.2": 2,
+    "H6:CHU_DE_GIOI": 2,
+    "H5f": 2,
+    "H5e": 1,
+    "H6.6;K0": 1,
+    "H6.6;H9": 1,
+    "H6.6;H6.2": 1,
+    "H6.9;H6.2": 1,
+    "H6.7": 2,
+    "H6.5;H6.7": 1,
+    "H6.5;H6.2": 1,
+    "H6.3;H6.9": 1,
+    "H6.6;K0;H9": 1,
+    "D6_CUOI": 122,
+    "D7_CUOI:KIEN_THUC": 6,
+    "D7_CUOI:HEP": 4
+  },
+  "protected_bytes": {
+    "index.html": "01b76617f8df57d80e59d0989001ced8f7714ae95e85828b351bce2a5517a423",
+    "thong-tin.html": "8ec3bbf763f2465994bde4239079a3795eb2eb3bf21f61fe29aa683cb8bf3ea7",
+    "analyzing-tools\\wordlist.txt": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4",
+    "WordListAnalyze.md section10 bytes": "4b91fac689e70ccb0715b92b49efe4305fbb19c3bc90dd449e72fba72889f6fa"
+  },
+  "normalized_reserve_sha256": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
+  "normalized_main_word_sha256": "3609c88ff436708857ac323189f81b5bb9b31d31ea6f0a8924cc02bc61c0e713",
+  "d6_reference_available": false
+}

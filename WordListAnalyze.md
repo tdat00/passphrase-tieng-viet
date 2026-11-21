@@ -6,7 +6,8 @@
 >   - Cột từ có SHA-256 `3609c88ff436708857ac323189f81b5bb9b31d31ea6f0a8924cc02bc61c0e713` (kịch bản P0 trừ 132 mục ở [mục 9.1](#91-câu-hỏi-cho-chủ-dự-án-thiếu-dự-phòng-sau-lượt-viết-lại-cuối)).
 >   - Các cặp `từ|giải nghĩa` lấy từ [`p7-v4-chinh-7776-cho-duyet.tsv`](analyzing-tools/ho-so/unified/p7-v4-chinh-7776-cho-duyet.tsv) (SHA-256 `36493e4a70ad81d516ae1d88ecc0bdc8fd599cf10453ec34a64ca812452b86f5`). Bản lưu ở [mục 10](#10-danh-sách-7776-từ-phát-hành).
 > - **Giải nghĩa:** 7.776 câu viết mới qua ba lượt viết sạch chung (v1–v3) và một lượt riêng cho *ròng rọc* (v4). Mọi câu đều đạt D6 (kiểm nguồn gốc) và D7 (soát nội dung). `kiem-tra-giai-nghia.py --phat-hanh` trên toàn danh sách: 0 lỗi, 0 cảnh báo. 346 câu có hai nghĩa (`HAI_NGHIA`); không còn cờ nào khác.
-> - **Dự phòng:** 205 từ, trạng thái **dự phòng, chưa phân tích** ([mục 11](#11-danh-sách-dự-phòng-chưa-phân-tích); cũng ở [`analyzing-tools/du-phong.txt`](analyzing-tools/du-phong.txt)). Các từ này không được phát hành và chưa đủ điều kiện để thay vào danh sách chính.
+> - **Dự phòng:** giữ nguyên 205 từ để đối chiếu lịch sử, đã phân loại tại [mục 11](#11-danh-sách-dự-phòng-đã-phân-tích-chưa-phát-hành) và [bảng phân loại](analyzing-tools/du-phong-phan-loai.tsv). 168 mục có câu đạt D6/D7 trong hồ sơ, 37 mục chưa viết; trạng thái nghĩa không thay thế các cổng chọn từ. Tầng A/B/C/D không cấp quyền thay vào danh sách chính.
+> - **Từ có thể cân nhắc:** 237 từ, xem [mục 12](#12-từ-có-thể-cân-nhắc-honorable-mentions) và [honorable-mentions.tsv](analyzing-tools/honorable-mentions.tsv); đây không phải dự phòng hay danh sách phát hành.
 > - **Công cụ và hồ sơ:** thư mục [`analyzing-tools/`](analyzing-tools/) (thay cho `tools/` trong kế hoạch) chứa nguồn chuẩn [`wordlist.txt`](analyzing-tools/wordlist.txt), nhãn, khóa bị chặn, họ chính tả, hồ sơ nguồn gốc giải nghĩa D8 ([`nguon-goc-giai-nghia.tsv`](analyzing-tools/nguon-goc-giai-nghia.tsv)), manifest nguồn và hash, hai bộ kiểm ([`check_wordlist.py`](analyzing-tools/check_wordlist.py), [`verify.mjs`](analyzing-tools/verify.mjs)), script sinh khối và kiểm D6. Cả hai bộ kiểm báo 0 lỗi; chạy lại D6 trên danh sách phát hành: 7.776/7.776 PASS.
 >
 > Phần còn lại của tài liệu ghi lại quá trình P1–P7. Các đoạn viết lúc P7 đang dừng (mục 5.7, 9.1–9.3) được giữ nguyên làm hồ sơ.
@@ -32,7 +33,8 @@ Hai phân tích gốc được giữ làm hồ sơ để đối chiếu: [WordLi
 8. [Nguồn dữ liệu, giấy phép và tái lập](#8-nguồn-dữ-liệu-giấy-phép-và-tái-lập)
 9. [Câu hỏi mở và cách tiếp tục](#9-câu-hỏi-mở-và-cách-tiếp-tục)
 10. [Danh sách 7.776 từ phát hành](#10-danh-sách-7776-từ-phát-hành)
-11. [Danh sách dự phòng (chưa phân tích)](#11-danh-sách-dự-phòng-chưa-phân-tích)
+11. [Danh sách dự phòng (đã phân tích, chưa phát hành)](#11-danh-sách-dự-phòng-đã-phân-tích-chưa-phát-hành)
+12. [Từ có thể cân nhắc (honorable mentions)](#12-từ-có-thể-cân-nhắc-honorable-mentions)
 
 ## 1. Tiến độ
 
@@ -8644,15 +8646,69 @@ yếu xìu|Rất yếu, uể oải, không còn chút hơi sức nào.
 yoga|Môn rèn luyện gốc Ấn Độ, kết hợp tư thế, hơi thở và tĩnh tâm.
 ```
 
-## 11. Danh sách dự phòng (chưa phân tích)
+## 11. Danh sách dự phòng (đã phân tích, chưa phát hành)
 
-**Trạng thái: dự phòng, chưa phân tích.** 205 từ còn lại trong rổ dự phòng của kịch bản P0 sau khi thay 127 từ chính ở [mục 9.1](#91-câu-hỏi-cho-chủ-dự-án-thiếu-dự-phòng-sau-lượt-viết-lại-cuối) (SHA-256 cột từ `f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b`). Các từ này đã qua cổng tự động và chấm đôi P4, nhưng:
+<a id="11-danh-sách-dự-phòng-chưa-phân-tích"></a>
 
-- không được phát hành và không có trong `index.html` hay `thong-tin.html`;
-- chưa được phân tích lại theo quyết định 10: chưa xét ngăn hạn mức, chưa đủ 300 suất như C13 cũ;
-- chỉ 168 từ có câu giải nghĩa đạt D6/D7 ([`p7-v4-du-phong-168-co-nghia-cho-duyet.tsv`](analyzing-tools/ho-so/unified/p7-v4-du-phong-168-co-nghia-cho-duyet.tsv)), 37 từ chưa có giải nghĩa ([`p7-v3-c13-hoa-astra-tu-chua-viet.tsv`](analyzing-tools/ho-so/unified/p7-v3-c13-hoa-astra-tu-chua-viet.tsv)).
+### 11.1. Trạng thái và phạm vi
 
-Trước khi dùng một từ dự phòng để thay một từ chính, cần chạy lại các bước P6 (ngăn hạn mức), P7 (giải nghĩa sạch, D6, D7) và các kiểm ở mục 4.6.
+**Trạng thái: đã phân tích, chưa phát hành.** Tập đối chiếu vẫn gồm 205 từ; đây không phải 205 gói thay thế đã được duyệt. Quyết định 10 ghi trạng thái ban đầu; yêu cầu phân tích ngày 20/11/2026 của chủ (D-dpv2-1) là căn cứ cập nhật trạng thái hiện hành. Danh sách chính 7.776 từ không đổi. Danh sách và SHA cột từ dự phòng vẫn giữ nguyên: `f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b`.
+
+### 11.2. Các tầng và cảnh báo
+
+A: hồ sơ ưu tiên chuẩn bị thay. B: còn thiếu câu giải nghĩa. C: cần thận trọng hoặc còn việc kiểm riêng. D: không dùng theo kết luận cổng/H9 đã ghi. Đọc cả cột trạng thái cổng và việc còn thiếu; tầng không thay nhãn OK/R1, không sửa S4 và không tự cấp quyền thay từ.
+
+| Tầng | OK không-F | OK-F | Tổng |
+|---|---:|---:|---:|
+| A | 109 | 39 | 148 |
+| B | 0 | 36 | 36 |
+| C | 13 | 2 | 15 |
+| D | 6 | 0 | 6 |
+| **Tổng** | 128 | 77 | 205 |
+
+Chi tiết từng từ và căn cứ nằm trong [bảng phân loại](analyzing-tools/du-phong-phan-loai.tsv).
+
+Lý do ngữ nghĩa/độ quen là nhận định đã thống nhất của hai SA, không phải tỷ lệ gõ sai đã đo. Tổng chứng liệu là tổng lượt sạch phụ đề/web và số câu Leipzig/Tatoeba; đây là chỉ báo biên tập, không thay mã H8. Trong lý do H5, lượt sạch chỉ hai kho OPUS. Các cụm dùng từ nào trước phản ánh hạng S4 hiện tại, không tạo quy tắc ưu tiên mới.
+
+| Từ | Tầng | Lý do | Việc còn thiếu |
+|---|---|---|---|
+| ăn nhịp | C | C: chứng liệu yếu — tổng chứng liệu 0 ở bốn kho; H8 theo ngoại lệ hai chữ ký | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| cả nghĩ | C | C: H8 CHI_BE_MAT — chỉ đủ mức nhờ lượt bề mặt; tổng chứng liệu 2 ở bốn kho | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| chán phèo | D | D: H5c — cùng từ với chán phè; chán phèo không có lượt web nên không thể đạt ≥ 95% ở cả hai kho | Không dùng theo H5/H9; giữ dòng để đối chiếu lịch sử |
+| chễm chệ | C | C: chứng liệu yếu — tổng chứng liệu 3 ở bốn kho | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| chọc lét | D | D: H5c — cùng từ với chọc léc (như họ cù lét/cù léc); chọc lét không có lượt web nên không thể đạt ≥ 95% | Không dùng theo H5/H9; giữ dòng để đối chiếu lịch sử |
+| cửu chương | C | C: H8 YEU — tổng chứng liệu 6 ở bốn kho | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| hì hụi | D | D: H5c — cùng từ với hè hụi; hì hụi không có lượt sạch nào nên không thể đạt ≥ 95% (T-dpv2-4) | Không dùng theo H5/H9; giữ dòng để đối chiếu lịch sử |
+| loằng ngoằng | C | C: chờ H5 — dạng loằn ngoằn (khác khóa) chưa xác nhận cùng từ và chưa đếm | Khép H5; P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| lỗi hẹn | C | C: dễ lẫn với lỡ hẹn (danh sách chính) cả nghĩa lẫn âm | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| lời lỗ | C | C: H8 YEU; gần nghĩa lỗ lãi (dự phòng) — dùng lỗ lãi trước | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| mỏng tanh | C | C: gần nghĩa mỏng dính (dự phòng) — dùng mỏng dính trước | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| ngoại trừ | C | C: chờ H7 — ngoại trú có nghĩa điều trị (H6.5, tiền lệ nội trú), PPM gộp 1,215 ≥ 0,3; đo tỷ lệ nghĩa rồi hai SA ký mức K (T-dpv2-9) | Khép H7: đo tỷ lệ nghĩa điều trị của ngoại trú như tiền lệ nội trú, rồi hai SA ký K1/K2/không tự động; P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| nhão nhẹt | D | D: H5c — cùng từ với nhão nhoẹt; không dạng nào đạt ≥ 95% với ≥ 20 lượt (T-dpv2-4) | Không dùng theo H5/H9; giữ dòng để đối chiếu lịch sử |
+| nhão nhoẹt | D | D: H5c — cùng từ với nhão nhẹt; không dạng nào đạt ≥ 95% với ≥ 20 lượt (T-dpv2-4) | Không dùng theo H5/H9; giữ dòng để đối chiếu lịch sử |
+| tạnh ráo | C | C: H8 YEU — tổng chứng liệu 2 ở bốn kho | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| thẳng đơ | C | C: H8 YEU — tổng chứng liệu 1 ở bốn kho | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| thụp | C | C: từ đơn, thường cần cụm đi kèm để nhận ra | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| tối mù | C | C: H8 CHI_BE_MAT — chỉ đủ mức nhờ lượt bề mặt; tổng chứng liệu 2 ở bốn kho | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| tròng trành | D | D: H5c — cùng từ với chòng chành (danh sách chính); cả họ dưới 20 lượt mỗi kho; mục chính chuyển sang yêu cầu riêng (D-dpv2-5) | Không dùng theo H5/H9; giữ dòng để đối chiếu lịch sử |
+| trở lên | C | C: chỉ khác trở nên (danh sách chính) ở l/n, dễ gõ nhầm khóa; chưa có câu | Lượt viết sạch, D6, D7; P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+| tuổi xanh | C | C: sắc thái văn chương hơn giao tiếp thường | P6/H/Q và S4; D8; kiểm toàn tập thay; phê duyệt thay ở tác vụ khác |
+
+### 11.3. Ngăn hạn mức và quy tắc thay thế
+
+Danh sách chính có 7.699 OK không-F và 77 OK-F, không có R1. Khi Q3 đang đầy, OK-F chỉ thay ghế F. OK không-F có thể thay ghế C/H/K hoặc F mà không tăng Q3. Dự phòng R1 chỉ thay R1; trần Q2 không cho mượn ghế OK. Không tự suy số từ có câu hoặc số dòng dự phòng thành số ghế đã đủ mọi điều kiện.
+
+### 11.4. Giải nghĩa, chữ ký và việc còn thiếu
+
+Trong tập 205 ban đầu, 168 mục có câu đạt D6/D7 lịch sử (123 v1, 35 v2, 10 v3), 37 mục chưa có câu đều thuộc F. Chưa có dòng D8 cho các mục dự phòng. Không gọi kết quả đối chiếu hash lịch sử là lần chạy D6 mới.
+
+Mã H8 theo tập luật P2 v4.1: 198 MANH, 4 YEU, 2 CHI_BE_MAT, 1 KHONG_LUOT. Cả nghĩ và tối mù là CHI_BE_MAT; ăn nhịp có ngoại lệ không-lượt đã ký. Các mã cảnh báo của P2 phải đi cùng hồ sơ đọc kiểm/chữ ký P4, không tự chuyển thành PASS. Mẫu số P2 là 34.329.387 âm tiết phụ đề và 150.070.912 âm tiết web.
+
+Khảo sát PPM gộp H7 trong hồ sơ này dùng mẫu số mục 0 của tiêu chí/manifest (34.314.528/149.860.716); nhãn H8 vẫn dùng P2. Các phép đo phải ghi rõ mẫu số, không trộn hai bộ.
+
+Trước mỗi lần thay thật: kiểm lại H1–H9, ngăn và S4, câu sạch đúng lượt, D2/D5 trên toàn bộ tập thay, D6 với đủ tham chiếu, D7, D8 và các cổng phát hành. Không dùng mục D hoặc mục còn cổng chưa khép. Việc viết nghĩa mới và thay danh sách chính không thuộc lần phân tích này.
+
+### 11.5. Danh sách 205 từ
 
 ```text
 áng chừng
@@ -8861,3 +8917,269 @@ xúng xính
 xuống cân
 y như
 ```
+
+## 12. Từ có thể cân nhắc (honorable mentions)
+
+### 12.1. Ý nghĩa và giới hạn
+
+Đây là danh mục để xem xét, không phải dự phòng và không phải danh sách phát hành. Không tái sử dụng câu giải nghĩa đã bị loại, không tự nâng R1 thành OK, không coi đầu mục chưa thẩm định là đã qua luật cứng. Trạng thái của từng nhóm được ghi riêng.
+
+Danh mục này chỉ tính các đầu mục có hồ sơ thẩm định từ đã được chốt. Các nguồn chưa hoàn tất nằm ở hồ sơ nghiên cứu, không tính vào số HM.
+
+### 12.2. Danh mục và nguyên nhân chưa được chọn
+
+| Nhóm | Trạng thái | Số từ |
+|---|---|---:|
+| D6_CUOI | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | 120 |
+| D7_CUOI | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | 10 |
+| R1 | HO_SO_R1_LICH_SU | 106 |
+| R1 | HO_SO_R1_LICH_SU;H7_K2 | 1 |
+| **Tổng (N)** | | 237 |
+
+Số đo, lớp, nguồn và điều kiện theo từng từ nằm ở [honorable-mentions.tsv](analyzing-tools/honorable-mentions.tsv). F là điểm thông dụng lịch sử, khác với lớp F; dấu `-` là chưa có hoặc không áp dụng, không phải số 0.
+
+| Từ | Nhóm | Lớp | Trạng thái | Điều kiện còn lại |
+|---|---|---|---|---|
+| anh hai | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| áp dụng | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| áp phích | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ăn cưới | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ấn bản | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| bác học | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| bạch kim | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| bản ghi | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| bảng tuần hoàn | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| bánh ngọt | D7_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| bánh phồng | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| bảo hiểm | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| bảo trợ | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| bày tỏ | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| băng tải | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| bất động | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| bí mật | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| biên dịch | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| biên kịch | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| biên tập | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| biên tập viên | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| biển | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| biến áp | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| biểu cảm | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| bộ môn | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ca dao | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cá chuồn | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cầu vượt | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cha đẻ | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chăm chú | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chắn bùn | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chấm phẩy | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chân đế | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| chân không | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| châu lục | D7_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chế tạo | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chỉ số | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| chia | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chiều rộng | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chim én | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chỗ ngồi | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chồn hôi | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chợ phiên | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chủ nhiệm | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| chuyên ngành | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| chuyên viên | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| chuyển đổi | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| chữ hoa | D7_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| con dấu | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| con đẻ | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| con em | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| con lắc | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cô giáo | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cô ta | D6_CUOI | F | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cố vấn | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| côn trùng | D7_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| công ơn | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| công sức | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cộng hưởng | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| cột buồm | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cột sống | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cơ khí | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| cơ quan | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6; rà H6 trước khi dùng |
+| cởi mở | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| củ đậu | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cụ thể | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| cửa kính | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| dãy núi | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| dân ca | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| dâu tằm | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| dấu ngã | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| dây nịt | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| dịch giả | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| diễn giả | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| duyên hải | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| dự bị | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6; rà H6 trước khi dùng |
+| dưa leo | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| dương cầm | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| đại lục | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn; rà H6 trước khi dùng |
+| đánh răng | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| đẳng cấp | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| điện trở | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| đồ vật | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| đường tròn | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| êm ái | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ghế mây | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ghế phụ | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| giả thuyết | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| giá thành | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| giảng viên | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| giáo khoa | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| giấy ăn | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| giấy khen | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| gò má | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| hiệu suất | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| hình học | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| học giả | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| hồng ngoại | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| hợp chất | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| hợp đồng | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| hợp kim | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| hợp xướng | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| hương liệu | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| hữu cơ | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| khách hàng | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| khí cầu | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| khí quyển | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| khoanh tay | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| khởi nghiệp | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| khớp gối | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| kịch | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| kiểm chứng | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| kiến tạo | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| làm lơ | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| làm sao | D6_CUOI | F | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| làm vườn | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| lập trình | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| lật đật | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| lên chức | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6; rà H6 trước khi dùng |
+| lò nung | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| long trọng | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| lời giải | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| lớp phủ | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| luận án | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| luận văn | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| lục địa | D7_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| lục giác | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| luyện | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| lực lượng | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6; rà H6 trước khi dùng |
+| lửng lơ | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| mã nguồn | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| mạch nha | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| mai mối | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| mang cá | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| máy thu thanh | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| mặt khác | D6_CUOI | F | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6; log chỉ có v2/v3, chưa đủ để khẳng định đã hết hai lượt viết lại |
+| miên man | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| mình | D6_CUOI | F | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| mỏ neo | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| móng | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| một mình | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| mùa đông | D7_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nan hoa | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nàng tiên | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nắm tay | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ngắn gọn | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ngân hàng | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nghêu | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nghìn | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ngoại hình | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ngón | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nguồn sáng | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nguyên tố | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| nguyên tử | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| nhà kinh doanh | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| nhà sử học | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| nhà thầu | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| nhảy cao | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nháy mắt | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| nhật báo | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| nhịp nhàng | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| ông cụ | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| phân tử | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| phi cơ | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| phi hành đoàn | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| phòng ban | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| phu nhân | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| phương đông | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| piano | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| sinh học | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| sinh thái | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tài chính | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tàu điện | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tặng phẩm | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tâm sự | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tân sinh viên | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tần số | R1 | K | HO_SO_R1_LICH_SU;H7_K2 | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tập huấn | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| thay thế | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| thắng cảnh | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| thiên thể | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| thiên văn | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| thổ cẩm | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| thống kê | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| thợ may | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| thủ vai | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| thuật ngữ | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| thương gia | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| thường xuyên | D6_CUOI | F | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tích hợp | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tiền sảnh | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tiếp thị | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tiểu học | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tiểu luận | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tinh thể | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tỉnh thành | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| toán học | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tối ưu | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| trầm tích | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tri thức | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| trì hoãn | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| trích dẫn | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| trốn học | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| trợ giảng | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| trùng hợp | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| truy tìm | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6; rà H6 trước khi dùng |
+| truyền miệng | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tụ điện | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tuần hoàn | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tục ngữ | D7_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tuổi đời | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tự nhủ | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tự truyện | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| tương đương | D6_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| tường lửa | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| văn bằng | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| vận hành | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| vận tải | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| vây cá | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| vi sóng | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| vi tính | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| vĩ cầm | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| việc làm | D7_CUOI | K | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| viễn thông | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| vinh danh | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| vỏ sò | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| vòi hoa sen | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| vô tuyến | R1 | K | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| vỗ tay | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| vuông | D7_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| xà lách | D6_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| xe điện | D7_CUOI | C | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| xí nghiệp | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| xoa tay | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| xuất khẩu | R1 | H | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+| xuyên | D6_CUOI | H | HO_SO_TU_DAT_LICH_SU_NGHIA_BI_LOAI | Không dùng câu bị loại; kiểm lịch sử từng mục/quyền mở lượt sạch trước khôi phục; D6/D7/D8/P6 |
+| y phục | R1 | C | HO_SO_R1_LICH_SU | Không tự nâng R1; chỉ xét theo P6/Q của tác vụ được duyệt; viết sạch D6/D7/D8 nếu chọn |
+
+### 12.3. Các việc để sau
+
+L2D và các ý tưởng ngoài pool chưa đủ chứng cứ chỉ lưu ở hồ sơ, không tính là từ đã qua cổng. Không tính vào N: lô L3b (48 ứng viên đã chuẩn bị ở [l3b-de-cu-opus.tsv](analyzing-tools/ho-so/unified/l3b-de-cu-opus.tsv), chưa qua P2/P4/H9); *chạng vạng* (chờ xác nhận và đo họ H5 với *choạng vạng*); *bao tử* (K1: khóa `baotu` đọc thành *báo tử*).
+
+Nếu muốn khôi phục một mục từng bị loại ở P7, phải kiểm lịch sử lượt của đúng mục và quyền giao lượt sạch mới trước. Nếu muốn dùng một mục R1, phải tuân thủ P6/Q và quyết định cho danh sách tương ứng. Các bước đó không được mở tự động bởi việc đưa tên vào tài liệu.

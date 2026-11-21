@@ -1,0 +1,83 @@
+== Bất biến của hai TSV
+DAT | TSV-R | 205 dòng, 23 cột, đúng thứ tự du-phong.txt
+tang_chung {'A': 148, 'B': 36, 'C': 14, 'CHO_HOA': 1, 'D': 6}
+giai_nghia {'CO_PASS_LICH_SU': 168, 'CHUA_VIET': 37} h8 {'MANH': 198, 'KHONG_LUOT': 1, 'CHI_BE_MAT': 2, 'YEU': 4}
+DAT | TSV-H | 285 dòng, 27 cột, khóa duy nhất, không giao chính/dự phòng
+ket_luan_nhap {'CUNG_DE_CU_CHUA_PHAT_HANH': 237, 'NGOAI_HM_CHUA_THAM_DINH': 46, 'LOAI_K1': 1, 'NGOAI_HM_CHO_H5': 1}
+N theo nhom {'D6_CUOI': 120, 'R1': 107, 'D7_CUOI': 10} h8 cua N {'MANH': 236, 'CHI_BE_MAT': 1}
+DAT | TSV-H | N = 237 và không còn tranh chấp/câu hỏi trong HM
+DAT | T8 | không có câu giải nghĩa của danh sách chính trong hai TSV
+== Thay đổi bắt buộc 1–3 (TSV dự phòng)
+DAT | 1 | tám mục A/A, KHONG, '-', ý kiến Opus mới
+DAT | 1 | ăn trầu có câu không đưa nhận định y khoa
+DAT | 2 | ba mục D/D, KHONG, '-', KHONG_DUNG_H5_H9, con_thieu như D cũ, ý kiến Opus ký
+  y_kien_opus hì hụi: D (H5c): Opus ký họ hì hụi/hè hụi; hì hụi 0/0 lượt sạch không thể đạt 95%/20. Không suy hì hục cùng họ.
+  y_kien_opus nhão nhẹt: D (H5c): Opus ký nhão nhẹt/nhão nhoẹt là một từ, biến thể âm đệm; số sạch 9/0 và 6/1, nhão nhoét cùng khóa thêm 5/1.
+  y_kien_opus nhão nhoẹt: D (H5c): Opus ký nhão nhẹt/nhão nhoẹt là một từ, biến thể âm đệm; số sạch 9/0 và 6/1, nhão nhoét cùng khóa thêm 5/1.
+DAT | 3 | vậy nên: H7_K2, trạng thái lịch sử, '-', bỏ 'Khép H7', ý kiến K2
+== Thay đổi bắt buộc 4–6 (TSV HM)
+DAT | 4 | năm mục: ý kiến Opus là giữ có cờ; bang_chung trỏ lý do cụ thể của Astra
+DAT | 4 | đại lục: CO_DIEU_KIEN, ý kiến Opus đổi lập trường
+DAT | 4 | sáu mục được tính, KHONG, '-', điều kiện rà H6
+DAT | 5 | bao tử LOAI_K1, KHONG_DE_CU, H7_K1
+DAT | 5 | tần số được tính, H7_K2, hai chữ ký
+DAT | 6 | 46 L3b NGOAI_HM_CHUA_THAM_DINH, KHONG_TINH_HM, ý kiến Opus theo phương án 2
+DAT | 6 | giờ cao điểm: Opus nhận phản đối H2; cờ H2 ở dieu_kien
+DAT | 6 | ớt đỏ, nắng ấm: cờ X ở dieu_kien
+DAT | 6 | chạng vạng NGOAI_HM_CHO_H5
+== Thay đổi bắt buộc 7–8 (tệp câu hỏi)
+cac_cau_con_trong_tep ['Q-dpv2-1', 'Q-dpv2-7']
+DAT | 7 | chỉ còn câu mở; Q-dpv2-2..6 không còn trong tệp
+DAT | 8 | Q-dpv2-1 có trường **Addressee:** owner
+DAT | 8 | Q-dpv2-1 có trường **Decision needed:**
+DAT | 8 | Q-dpv2-1 có trường **Context:**
+DAT | 8 | Q-dpv2-1 có trường **Evidence:**
+DAT | 8 | Q-dpv2-1 có trường **Options:**
+DAT | 8 | Q-dpv2-1 có trường **The SAs' recommendation:**
+DAT | 8 | Q-dpv2-1 có trường **Blocked:**
+DAT | 8 | Q-dpv2-1 có số 632
+DAT | 8 | Q-dpv2-1 có số 474
+DAT | 8 | Q-dpv2-1 có số 1.177
+DAT | 8 | Q-dpv2-1 có số 634
+DAT | 8 | Q-dpv2-1 có số 227
+DAT | 8 | Q-dpv2-1 có số 117
+DAT | 8 | Q-dpv2-1 có số 1.809
+DAT | 8 | Q-dpv2-1 có số 4156
+DAT | 8 | Q-dpv2-1 câu hì hục đã sửa
+DAT | 8 | dòng Answer của mọi câu để trống
+DAT | 8 | đường dẫn bằng chứng tồn tại: AT\tieu-chi-thong-nhat.md:103–135
+DAT | 8 | đường dẫn bằng chứng tồn tại: U\opus-counts.tsv:1961
+DAT | 8 | đường dẫn bằng chứng tồn tại: OE\bien-the-chinh-tho.tsv
+DAT | 8 | đường dẫn bằng chứng tồn tại: OE\pham-vi-hau-kiem-h7.tsv
+DAT | 8 | đường dẫn bằng chứng tồn tại: OE\pham-vi-hau-kiem.py
+DAT | 8 | đường dẫn bằng chứng tồn tại: U\canh-bao-khong-dau.tsv
+DAT | 8 | đường dẫn bằng chứng tồn tại: U\cong-opus-v4.tsv:4156
+DAT | 8 | đường dẫn bằng chứng tồn tại: E\revision-1-audit.json
+DAT | 8 | đường dẫn bằng chứng tồn tại: E\revision-1-audit.py
+DAT | 8 | đường dẫn bằng chứng tồn tại: O\round-1-review-drafts.md
+DAT | 8 | đường dẫn bằng chứng tồn tại: A\round-1-revision-1.md
+== Thay đổi bắt buộc 9–10 (báo cáo chung)
+DAT | 9 | dòng trạng thái ghi Opus changes requested
+DAT | 9 | tóm tắt: mốc A149/B36/C14/D6, N=237, câu còn mở
+DAT | 10 | bảng tầng có hàng sau hòa và bản sửa
+DAT | 10 | bảng 11 điểm đã hòa
+DAT | 10 | bảng HM có cột Tính vào N
+DAT | 10 | §4.2–4.6 ghi đã đóng
+== Thay đổi bắt buộc 11–13 (kế hoạch)
+DAT | 11 | §3 tầng và N
+DAT | 11 | §4.1 phân biệt dòng tính/không tính
+DAT | 11 | §4.2 công thức N cố định
+DAT | 11 | §5.2 không còn nhánh HM có điều kiện
+DAT | 11 | §5.2 đoạn §12.3 đúng văn bản yêu cầu
+DAT | 11 | §9 có T-dpv2-4..8
+DAT | 11 | §11 bỏ rủi ro lệch thời điểm
+DAT | 11 | §13 ghi Q-dpv2-2..6 đã đóng, OI-SCAN có số
+DAT | 12 | §8.2 và T5 có build --check trên tài liệu đã sửa ở CRLF
+DAT | 13 | §2 ngoài phạm vi có hai tài liệu lưu trữ và quyết định 10
+DAT | 13 | §13 có OI-BANG-PHAT-HANH
+== Vùng bảo vệ và tệp đã theo dõi
+DAT | B1 | SHA byte index.html
+DAT | B1 | SHA byte thong-tin.html
+DAT | B1 | SHA byte analyzing-tools/wordlist.txt
+DAT | B1 | không tệp đã theo dõi nào bị sửa (kể cả hai tài liệu lưu trữ)
+Tổng: 0 yêu cầu chưa đạt.

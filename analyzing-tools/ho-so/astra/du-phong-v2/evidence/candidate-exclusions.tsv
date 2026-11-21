@@ -1,0 +1,61 @@
+tu	khoa	ly_do	nguon
+áo mưa	aomua	verified:khấu trừ cổng cứng H6.6;K0	analyzing-tools\nguon-goc-giai-nghia.tsv:7805
+ăn vụng	anvung	verified:khấu trừ cổng cứng H6.6	analyzing-tools\nguon-goc-giai-nghia.tsv:7806
+âu yếm	auyem	verified:khấu trừ cổng cứng H6.6;H9	analyzing-tools\nguon-goc-giai-nghia.tsv:7807
+bánh bèo	banhbeo	verified:khấu trừ cổng cứng H6.9	analyzing-tools\nguon-goc-giai-nghia.tsv:7786
+bóng	bong	verified:khấu trừ cổng cứng H6.9	analyzing-tools\nguon-goc-giai-nghia.tsv:7808
+bộ chuyển đổi	bochuyendoi	verified:chưa tìm đủ hai chữ ký H3 trong chu-ky.tsv thống nhất; assumed:để ngoài đợt đề cử, chưa kết luận thiếu trong mọi hồ sơ L2	analyzing-tools\ho-so\unified\l2-ung-vien.tsv:48
+bộ giải mã	bogiaima	verified:chưa tìm đủ hai chữ ký H3 trong chu-ky.tsv thống nhất; assumed:để ngoài đợt đề cử, chưa kết luận thiếu trong mọi hồ sơ L2	analyzing-tools\ho-so\unified\l2-ung-vien.tsv:52
+bôi trơn	boitron	verified:khấu trừ cổng cứng H6.6;H6.2	analyzing-tools\nguon-goc-giai-nghia.tsv:7809
+bù nhìn	bunhin	verified:khấu trừ cổng cứng H6.3;H6.9	analyzing-tools\nguon-goc-giai-nghia.tsv:7824
+buýt	buyt	verified:khấu trừ cổng cứng H5f:CHO_LOAI	analyzing-tools\nguon-goc-giai-nghia.tsv:7778
+cà phê	caphe	verified:khấu trừ cổng cứng H5f:CANH_TRANH	analyzing-tools\nguon-goc-giai-nghia.tsv:7779
+cà phê đen	capheden	verified:khấu trừ cổng cứng H5f:CANH_TRANH	analyzing-tools\nguon-goc-giai-nghia.tsv:7782
+cà phê sữa	caphesua	verified:khấu trừ cổng cứng H5f:THIEU_DU_LIEU	analyzing-tools\nguon-goc-giai-nghia.tsv:7780
+cà phê trứng	caphetrung	verified:khấu trừ cổng cứng H5f:THIEU_DU_LIEU	analyzing-tools\nguon-goc-giai-nghia.tsv:7781
+chinh phục	chinhphuc	verified:khấu trừ cổng cứng H6.1	analyzing-tools\nguon-goc-giai-nghia.tsv:7790
+chợ búa	chobua	verified:khấu trừ cổng cứng H6.9	analyzing-tools\nguon-goc-giai-nghia.tsv:7813
+con rối	conroi	verified:khấu trừ cổng cứng H6.9	analyzing-tools\nguon-goc-giai-nghia.tsv:7825
+cơ quan	coquan	assumed:để ngoài đợt đề cử vì cần rà riêng nghĩa cơ quan nhà nước; không kết luận loại cứng.	analyzing-tools\nguon-goc-giai-nghia.tsv:7830
+cục cằn	cuccan	verified:khấu trừ cổng cứng H6.9	analyzing-tools\nguon-goc-giai-nghia.tsv:7816
+cườm	cuom	verified:khấu trừ cổng cứng H6.5	analyzing-tools\nguon-goc-giai-nghia.tsv:7791
+dự bị	dubi	assumed:để ngoài vì cần phân định nghĩa quân sự với thể thao.	analyzing-tools\nguon-goc-giai-nghia.tsv:7896
+đi lại	dilai	verified:khấu trừ cổng cứng H6.6;K0;H9	analyzing-tools\nguon-goc-giai-nghia.tsv:7827
+gây sốt	gaysot	verified:khấu trừ cổng cứng H6.5	analyzing-tools\nguon-goc-giai-nghia.tsv:7792
+giám thị	giamthi	verified:khấu trừ cổng cứng H6.2	analyzing-tools\nguon-goc-giai-nghia.tsv:7817
+giáp	giap	verified:khấu trừ cổng cứng H6.1	analyzing-tools\nguon-goc-giai-nghia.tsv:7789
+hạ lưu	haluu	assumed:Astra không đề cử do nghĩa miệt thị người của đúng nguyên mục; không dùng nghĩa địa lý để làm sạch	analyzing-tools\ho-so\unified\xep-hang.tsv:8464
+hương	huong	verified:khấu trừ cổng cứng H6.4	analyzing-tools\nguon-goc-giai-nghia.tsv:7818
+khung gầm	khunggam	verified:chưa tìm đủ hai chữ ký H3 trong chu-ky.tsv thống nhất; assumed:để ngoài đợt đề cử, chưa kết luận thiếu trong mọi hồ sơ L2	analyzing-tools\ho-so\unified\l2b-ung-vien.tsv:141
+lên chức	lenchuc	assumed:để ngoài vì cần phân định công việc thông thường với quyền lực nhà nước.	analyzing-tools\nguon-goc-giai-nghia.tsv:7940
+lực lượng	lucluong	assumed:để ngoài vì có liên tưởng phổ biến quân sự; không chọn nghĩa lành để tự cho qua H6.	analyzing-tools\nguon-goc-giai-nghia.tsv:7845
+nam tính	namtinh	verified:khấu trừ cổng cứng H6:CHU_DE_GIOI	analyzing-tools\nguon-goc-giai-nghia.tsv:7800
+nghẹt	nghet	verified:khấu trừ cổng cứng H6.5	analyzing-tools\nguon-goc-giai-nghia.tsv:7799
+nhắm	nham	verified:khấu trừ cổng cứng H6.7	analyzing-tools\nguon-goc-giai-nghia.tsv:7819
+nóng bỏng	nongbong	verified:khấu trừ cổng cứng H6.6	analyzing-tools\nguon-goc-giai-nghia.tsv:7787
+nội trú	noitru	verified:khấu trừ cổng cứng H6.5	analyzing-tools\nguon-goc-giai-nghia.tsv:7822
+nôn nao	nonnao	verified:khấu trừ cổng cứng H6.5;H6.7	analyzing-tools\nguon-goc-giai-nghia.tsv:7820
+nữ tính	nutinh	verified:khấu trừ cổng cứng H6:CHU_DE_GIOI	analyzing-tools\nguon-goc-giai-nghia.tsv:7801
+ô tô buýt	otobuyt	verified:khấu trừ cổng cứng H5f:CHO_LOAI	analyzing-tools\nguon-goc-giai-nghia.tsv:7785
+quần soóc	quansooc	verified:khấu trừ cổng cứng H5f	analyzing-tools\nguon-goc-giai-nghia.tsv:7802
+rình	rinh	verified:khấu trừ cổng cứng H6.9	analyzing-tools\nguon-goc-giai-nghia.tsv:7815
+rình mò	rinhmo	verified:khấu trừ cổng cứng H6.9;H6.2	analyzing-tools\nguon-goc-giai-nghia.tsv:7814
+rình rập	rinhrap	verified:khấu trừ cổng cứng H6.2	analyzing-tools\nguon-goc-giai-nghia.tsv:7798
+tạ ơn	taon	verified:khấu trừ cổng cứng H6.4	analyzing-tools\nguon-goc-giai-nghia.tsv:7795
+tập dượt	tapduot	verified:khấu trừ cổng cứng H5e	analyzing-tools\nguon-goc-giai-nghia.tsv:7803
+thảm thực vật	thamthucvat	verified:chưa tìm đủ hai chữ ký H3 trong chu-ky.tsv thống nhất; assumed:để ngoài đợt đề cử, chưa kết luận thiếu trong mọi hồ sơ L2	analyzing-tools\ho-so\unified\l2b-ung-vien.tsv:118
+thanh toán	thanhtoan	verified:khấu trừ cổng cứng H6.1	analyzing-tools\nguon-goc-giai-nghia.tsv:7823
+thần tượng	thantuong	verified:khấu trừ cổng cứng H6.4	analyzing-tools\nguon-goc-giai-nghia.tsv:7794
+thèm muốn	themmuon	verified:khấu trừ cổng cứng H6.6	analyzing-tools\nguon-goc-giai-nghia.tsv:7796
+thìa cà phê	thiacaphe	verified:khấu trừ cổng cứng H5f:THIEU_DU_LIEU	analyzing-tools\nguon-goc-giai-nghia.tsv:7783
+thịt	thit	verified:khấu trừ cổng cứng H6.1	analyzing-tools\nguon-goc-giai-nghia.tsv:7810
+tiền sử	tiensu	verified:khấu trừ cổng cứng H6.5;H6.2	analyzing-tools\nguon-goc-giai-nghia.tsv:7821
+tin mừng	tinmung	verified:khấu trừ cổng cứng H6.4	analyzing-tools\nguon-goc-giai-nghia.tsv:7788
+trong trắng	trongtrang	verified:khấu trừ cổng cứng H6.6	analyzing-tools\nguon-goc-giai-nghia.tsv:7811
+trúng giải	trunggiai	verified:khấu trừ cổng cứng H6.7	analyzing-tools\nguon-goc-giai-nghia.tsv:7826
+truy tìm	truytim	assumed:để ngoài vì cần phân định ngữ cảnh tố tụng và tìm kiếm thường ngày.	analyzing-tools\nguon-goc-giai-nghia.tsv:7868
+tước	tuoc	verified:khấu trừ cổng cứng H6.3	analyzing-tools\nguon-goc-giai-nghia.tsv:7793
+vuốt ve	vuotve	verified:khấu trừ cổng cứng H6.6	analyzing-tools\nguon-goc-giai-nghia.tsv:7797
+xe buýt	xebuyt	verified:khấu trừ cổng cứng H5f:CHO_LOAI	analyzing-tools\nguon-goc-giai-nghia.tsv:7784
+xe goòng	xegoong	verified:khấu trừ cổng cứng H5f	analyzing-tools\nguon-goc-giai-nghia.tsv:7804
+yên giấc	yengiac	verified:khấu trừ cổng cứng H6.4	analyzing-tools\nguon-goc-giai-nghia.tsv:7812

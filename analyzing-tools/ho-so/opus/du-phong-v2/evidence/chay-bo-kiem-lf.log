@@ -1,0 +1,10 @@
+rev: HEAD
+check_wordlist.py ma_thoat: 0
+  Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+  Số khối: 1: 480, 2: 7033, 3: 263
+  Độ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39
+  Lớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776
+  Tổng: 0 lỗi, 0 cảnh báo.
+verify.mjs ma_thoat: 0
+  Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+  Tổng: 0 lỗi.
