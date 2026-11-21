@@ -1,12 +1,12 @@
 # Hồ sơ làm việc
 
-Bản lưu trong repo của hồ sơ làm việc mà hai tác tử Opus và Astra dùng khi xây danh sách thống nhất (276 tệp, khoảng 33 MB). Các tài liệu [`WordListAnalyze.md`](../../WordListAnalyze.md), [`WordListAnalyze-Opus.md`](../../WordListAnalyze-Opus.md), [`WordListAnalyze-Astra.md`](../../WordListAnalyze-Astra.md) và [`tieu-chi-thong-nhat.md`](../tieu-chi-thong-nhat.md) link tới các tệp ở đây.
+Bản lưu trong repo của hồ sơ làm việc mà hai tác tử Opus và Astra dùng khi xây danh sách thống nhất (401 tệp, khoảng 37 MB). Các tài liệu [`WordListAnalyze.md`](../../WordListAnalyze.md), [`WordListAnalyze-Opus.md`](../../WordListAnalyze-Opus.md), [`WordListAnalyze-Astra.md`](../../WordListAnalyze-Astra.md) và [`tieu-chi-thong-nhat.md`](../tieu-chi-thong-nhat.md) link tới các tệp ở đây.
 
 | Thư mục | Nội dung |
 |---|---|
 | [`discussion/`](discussion/) | Phản hồi, soát xét giữa hai bên; bảng khóa chung P1; bảng 84 cặp chính tả ban đầu |
-| [`unified/`](unified/) | Đầu ra P1–P7: kết quả cổng, phiếu chấm, chữ ký, phản biện, xếp hạng, danh sách, khấu trừ, log D6, phiếu soát nghĩa, bài nộp lượt riêng v4, kịch bản C13; tin nhắn giữa hai bên ở [`trao-doi/`](unified/trao-doi/) |
-| [`opus/`](opus/), [`astra/`](astra/) | Script và phiếu riêng của từng bên được nhắc tới trong tài liệu |
+| [`unified/`](unified/) | Đầu ra P1–P7: kết quả cổng, phiếu chấm, chữ ký, phản biện, xếp hạng, danh sách, khấu trừ, log D6, phiếu soát nghĩa, bài nộp lượt riêng v4, kịch bản C13; tin nhắn giữa hai bên ở [`trao-doi/`](unified/trao-doi/). Các tệp `du-phong-v2-*`: báo cáo chung, kế hoạch, câu hỏi và hai bảng nháp của đợt phân tích dự phòng v2 (WordListAnalyze.md mục 11–12) |
+| [`opus/`](opus/), [`astra/`](astra/) | Script và phiếu riêng của từng bên được nhắc tới trong tài liệu; thư mục con `du-phong-v2/` chứa phân tích, review chéo và chứng cứ của từng bên trong đợt dự phòng v2 |
 
 Trong tin nhắn và tài liệu lưu trữ, kí hiệu `U\` nghĩa là [`unified/`](unified/), `D\` nghĩa là [`discussion/`](discussion/), `files\opus\…`, `files\astra\…` nghĩa là [`opus/`](opus/), [`astra/`](astra/).
 

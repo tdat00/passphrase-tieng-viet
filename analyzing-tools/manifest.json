@@ -214,28 +214,29 @@
   "tep": {
     "README.md": "b878407e8fb092db0ea0d0f3869060a6b7e36fb881aa6e968e32db23092d17e2",
     "blocked_keys.tsv": "016996d5424cc1ad3cc23903c85ba9c2a6a141b6402549c168c3a4ab90bdc0e8",
-    "build_wordlist.py": "616a231700827f0b67cde8a0c23005f1da7854930c0a4e14c7cc487901f6ea79",
-    "check_wordlist.py": "583559076e46aa8b524999b8cc9aa0e442b85399786b2726b59f807abd6dcc2f",
-    "count_corpus.py": "5928bd556d3281c902d05dd5b74b678b42d6c014725d38942f1618811557b5a8",
+    "build_wordlist.py": "67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0",
+    "check_wordlist.py": "211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb",
+    "count_corpus.py": "882e958be0157acc2698b423187da0667c2aa5a16c5aa861337d4851d33395e8",
     "d6-ho-chinh-ta.tsv": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
-    "d6-kiem.py": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
+    "d6-kiem.py": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f",
     "d6-tham-chieu.json": "23a85060ac07f289b30bfa8fa4a0ad0e02fcfcf31b07921c8d1f47cc2a25e0e5",
     "du-phong-phan-loai.tsv": "0f1cf57455e1a368587a101f7b0183c5a47c91c6910d8749be2b802ca0364036",
     "du-phong.txt": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
     "honorable-mentions.tsv": "122ebc3b1c8a84f125d2a3f8924faab195834913c28454a592a47ba24603fa69",
-    "huong-dan-giai-nghia.md": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
-    "kiem-tra-giai-nghia.py": "3f143e967ce2084cb96f271750c72712015b0fdf3a826826232eadceb9d48581",
+    "huong-dan-giai-nghia.md": "40909787f3cad5ddbd438b7db1f31ad2b547cc303b666222ade108410a307439",
+    "kiem-tra-giai-nghia.py": "d536db8230e5a1c9d8801e79544b8e0fc2726bad40da3f6199fbba82f7f364c5",
     "labels.tsv": "a5b882a82a4bff853fce938deed94cdb4efa5dc969ff05572a68835a7605369b",
     "nguon-goc-giai-nghia.tsv": "197df30135d5ee8fa5a8e8ff1dc3a284fce89ad97b9a910b03a280ec2db24b33",
     "spelling_families.tsv": "56f0b31d2a84e9f41495937b49949d2e357368739f07ece0cd1187fe25407c98",
-    "tieu-chi-thong-nhat.md": "3d9e25b4d40a39816965479bc513613d4d8f06be1acf4241bfa01a74a2815106",
-    "verify.mjs": "f9cdbbbd3de34277fdb17da58c3336920ed685ab139b3d5b2032a551dafd6cac",
+    "tieu-chi-thong-nhat.md": "253544fbf08a20302702cfb21c8fee505da488ec8e1dcfd7f7aa4c16b0cda033",
+    "verify.mjs": "df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90",
     "wordlist.txt": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
-    ".gitignore": "f5c036f6d74c8df95f0cdd2cbfaaf86ac0f9325ec399eb887f918f2eda92cd85"
+    ".gitignore": "725a6fa9744c3129e7b817437f0f9e4c790ad1618b84d775432719f95c54a0a6"
   },
+  "tep_cach_bam": "SHA-256 của nội dung LF (đúng blob Git). d6.cac_luot.*.script_sha256 là hash byte của d6-kiem.py lúc chạy trên checkout Windows (CRLF), giữ nguyên làm hồ sơ lượt chạy.",
   "ho_so": {
     "thu_muc": "ho-so/",
     "so_tep": 402,
-    "readme_sha256": "8a276597559a408e8c6303f6488fb88566389e760854b39e30a3609481605c3f"
+    "readme_sha256": "8b20da6947168a895ae7788d906a4477290dd2dae92216750bc61ed274f6d1d2"
   }
 }
