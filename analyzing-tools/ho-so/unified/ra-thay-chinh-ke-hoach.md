@@ -372,6 +372,7 @@ Lưu lệnh, mã thoát và log.
 | D-rtc-6 | Q-rtc-O1: thay *vòng, thuần, xuân* (K1, chặn khóa `vong`, `thuan`, `xuan`); giữ *lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm* (K2, hai SA ký "không tự động chặn" kèm lý do) | owner | 2026-11-21 | `0253bb0` |
 | D-rtc-7 | Q-rtc-O2: giữ *cần cù, tiền lương, triệu, bạn thân* (K2, hai SA ký "không tự động chặn") | owner | 2026-11-21 | `2cc6aec` |
 | D-rtc-8 | Q-rtc-A2, phương án 1: mở một chu kỳ có giới hạn, tối đa 25 HM nhãn OK theo hạng; kiểm lại H1–H9; viết nghĩa sạch mới; D6/D7/D8 mới; không dùng lại câu cũ | owner | 2026-11-21 | `2cc6aec` |
+| D-rtc-9 | Q-rtc-D1: duyệt kế hoạch Final và cho bắt đầu thay danh sách chính; triển khai trực tiếp (không tách task pack), orchestrator điều phối lượt viết sạch và SA soát. Q-rtc-M1 (22:10): SA-Astra chạy trên gpt-6.2-astra | owner | 2026-11-22 | form `ask_user` và tin nhắn Discord; ghi ở commit này |
 | T-rtc-1 | Ghi `baotu` K1 vào bảng chặn | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
 | T-rtc-2 | Giữ chín K2 đã ký (*bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng*); rút OI-RTC-KY-CU; giữ *gián* theo quyết định 5 | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
 | T-rtc-3 | Thay 80 khóa H7: K0 *phản bác*, *tính khí*; 78 K1, gồm *thái* và 13 khóa Opus nhận sau duyệt (`ra-thay-chinh-h7.tsv`, `DONG_THUAN_THAY`) | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
