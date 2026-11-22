@@ -276,3 +276,40 @@ típ	tuýp	e	25	97	217	367	CHO_NGHIA	BO_SUNG
 tính từ	tĩnh từ	e	83	1	717	24	CHO_NGHIA	BO_SUNG
 tản mát	tản mác	e	1	7	2	2	CHO_LOAI	BO_SUNG
 ì ạch	ỳ ạch	c	8	0	8	0	LOAI_THIEU_DU_LIEU	BO_SUNG
+bồ kết	bồ kếp	c	1	0	11	0	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+chòng chành	tròng trành	c	3	2	6	1	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+rau dền	rau giền	c	0	0	45	0	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+ngoảnh	ngảnh	c	3	1	1	1	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+phấp phới	phất phới	c	7	1	10	1	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+già dặn	già giặn	c	36	1	4	1	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+dây chun	dây thun	c	7	9	26	271	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+phí phạm	phí phạn	c	159	0	13	1	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+lấn át	lấn áp	c	65	10	123	2	LOAI_CANH_TRANH	RA_THAY_CHINH
+rầm rầm	rần rần	c	6	5	2	5	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+tép riu	tép diu	c	28	1	0	0	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+chun	thun	c	536	101	515	5260	LOAI_CANH_TRANH	RA_THAY_CHINH
+cải xoong / cải-xoong / cảixoong	cải soong / cải-soong / cảisoong	f	4	0	42	0	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+xà bông / xà-bông / xàbông	xà phòng / xà-phòng / xàphòng	f	108	181	320	3895	LOAI_CANH_TRANH	RA_THAY_CHINH
+co rúm	co dúm	X	30	0	16	0	CHO_LOAI	RA_THAY_CHINH
+chơ vơ	trơ vơ	X	2	0	1	0	CHO_LOAI	RA_THAY_CHINH
+loay hoay	lay hoay	X	17	3	61	1	CHO_LOAI	RA_THAY_CHINH
+rầm rộ	rần rộ	X	6	0	55	0	CHO_LOAI	RA_THAY_CHINH
+su hào	xu hào	X	0	0	12	1	CHO_LOAI	RA_THAY_CHINH
+xập xình	sập sình	X	8	0	3	0	CHO_LOAI	RA_THAY_CHINH
+xù xì	sù sì	X	8	0	73	0	CHO_LOAI	RA_THAY_CHINH
+cao quý / cao-quý / caoquý	cao quí / cao-quí / caoquí	b	422	18	616	7	QUA_H5B	RA_THAY_CHINH
+công ty / công-ty / côngty	công ti / công-ti / côngti	b	3769	21	147327	37	QUA_H5B	RA_THAY_CHINH
+đá quý / đá-quý / đáquý	đá quí / đá-quí / đáquí	b	137	3	1740	14	QUA_H5B	RA_THAY_CHINH
+quy luật / quy-luật / quyluật	qui luật / qui-luật / quiluật	b	227	9	927	10	QUA_H5B	RA_THAY_CHINH
+quy mô / quy-mô / quymô	qui mô / qui-mô / quimô	b	183	8	12267	267	QUA_H5B	RA_THAY_CHINH
+quy tắc / quy-tắc / quytắc	qui tắc / qui-tắc / quitắc	b	737	32	10003	63	QUA_H5B	RA_THAY_CHINH
+quỹ đạo / quỹ-đạo / quỹđạo	quĩ đạo / quĩ-đạo / quĩđạo	b	390	6	1195	44	QUA_H5B	RA_THAY_CHINH
+quý phái / quý-phái / quýphái	quí phái / quí-phái / quíphái	b	84	3	236	10	QUA_H5B	RA_THAY_CHINH
+rong ruổi / rong-ruổi / rongruổi	giong ruổi / giong-ruổi / giongruổi	c	37	1	21	1	QUA_RIENG_H5	RA_THAY_CHINH
+trưng bày / trưng-bày / trưngbày	chưng bày / chưng-bày / chưngbày	c	223	1	8714	4	QUA_RIENG_H5	RA_THAY_CHINH
+giỡn	rỡn	c	1304	0	236	0	QUA_RIENG_H5	RA_THAY_CHINH
+nuốt chửng / nuốt-chửng / nuốtchửng	nuốt trửng / nuốt-trửng / nuốttrửng	c	131	0	113	0	QUA_RIENG_H5	RA_THAY_CHINH
+theo dõi / theo-dõi / theodõi	theo rõi / theo-rõi / theorõi	c	4127	1	30878	0	QUA_RIENG_H5	RA_THAY_CHINH
+thư giãn / thư-giãn / thưgiãn	thư dãn / thư-dãn / thưdãn	c	1549	1	8250	5	QUA_RIENG_H5	RA_THAY_CHINH
+buồn thiu	buồn thỉu	c	9	0	0	0	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH
+ỉu xìu	ỉu xịu	c	6	0	1	0	LOAI_THIEU_DU_LIEU	RA_THAY_CHINH

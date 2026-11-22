@@ -1,0 +1,20 @@
+{
+  "T12": true,
+  "cot_tu_sha256": "23cdad5082c1fe7fa51a3bbfd70ed04cd16b9629309cfcd81adebd4ae5894f43",
+  "T11": true,
+  "T2": true,
+  "T4": false,
+  "nhan_K2_them_thuc": 237,
+  "K2_chinh_hieu_luc": 260,
+  "T3_ho_da_chot": true,
+  "T6": true,
+  "D8_luot": {
+    "rtc-v1": 84,
+    "rtc-v3": 5,
+    "rtc-v2": 27
+  },
+  "T8": true,
+  "du_lieu_muc_13": true,
+  "muc_13_H7_chi_noi_K0_tuc": true,
+  "wordlist_sha256_LF": "8c21d035e1275560cb1253489e9bcf75a18a17f2b0e6d237873e6e98aa367ef4"
+}

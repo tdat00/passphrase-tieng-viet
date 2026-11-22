@@ -9,13 +9,13 @@ Thư mục này **không** chứa văn bản kho ngữ liệu, danh sách từ H
 | Tệp | Nội dung |
 |---|---|
 | [`wordlist.txt`](wordlist.txt) | **Nguồn chuẩn** của danh sách: 7.776 dòng `từ\|giải nghĩa`, UTF-8, LF, NFC, xếp theo thứ tự O1. Giải nghĩa được viết mới (MIT) |
-| [`du-phong.txt`](du-phong.txt) | Giữ nguyên 205 từ để đối chiếu lịch sử; đã có bảng phân loại riêng, chưa phát hành và không phải 205 gói thay thế đã được duyệt |
-| [`du-phong-phan-loai.tsv`](du-phong-phan-loai.tsv) | Một dòng cho mỗi từ dự phòng: tầng, ngăn, cảnh báo H, trạng thái nghĩa, mã H8, việc còn thiếu và nguồn chứng cứ |
-| [`honorable-mentions.tsv`](honorable-mentions.tsv) | 237 từ có thể cân nhắc đã chốt phạm vi đề cử; không phải dự phòng, không tự cấp quyền thay từ hoặc viết thêm nghĩa |
+| [`du-phong.txt`](du-phong.txt) | 90 từ dự phòng còn lại sau bản phát hành 2 (205 từ ban đầu trừ 115 từ đã vào danh sách chính, xem `WordListAnalyze.md` mục 13); giữ để đối chiếu lịch sử, đã có bảng phân loại riêng, chưa phát hành và không phải gói thay thế đã được duyệt |
+| [`du-phong-phan-loai.tsv`](du-phong-phan-loai.tsv) | Một dòng cho mỗi từ dự phòng còn lại: tầng, ngăn, cảnh báo H, trạng thái nghĩa, mã H8, việc còn thiếu và nguồn chứng cứ |
+| [`honorable-mentions.tsv`](honorable-mentions.tsv) | 233 từ có thể cân nhắc đã chốt phạm vi đề cử (237 trừ 4 HM đã vào danh sách chính ở bản phát hành 2); không phải dự phòng, không tự cấp quyền thay từ hoặc viết thêm nghĩa |
 | [`labels.tsv`](labels.tsv) | Nhãn của từng từ chính và dự phòng: khóa không dấu, nhãn (OK/R1), lớp (C người/vật, H hành động/tính chất, K trừu tượng, F hư từ), điểm thông dụng F, điểm cộng G, khoản trừ T, điểm xếp hạng, các ngoại lệ có đủ chữ ký hai bên (H3, H5, K2) |
 | [`nguon-goc-giai-nghia.tsv`](nguon-goc-giai-nghia.tsv) | Hồ sơ nguồn gốc giải nghĩa (D8), xem mục dưới |
-| [`blocked_keys.tsv`](blocked_keys.tsv) | Khóa không dấu bị chặn (K0: trùng khóa từ tục hoặc có nghĩa phụ tục; K1: đọc tự nhiên thành từ nhạy cảm; K2_CHUA_KY: mức vàng chưa đủ chữ ký). Chỉ ghi khóa ASCII, không ghi từ tục |
-| [`spelling_families.tsv`](spelling_families.tsv) | 277 cặp chính tả đã đo: số lượt mỗi dạng trong phụ đề (`sub_*`) và web (`web_*`), loại theo luật H5, kết luận |
+| [`blocked_keys.tsv`](blocked_keys.tsv) | 207 khóa không dấu bị chặn (K0: trùng khóa từ tục hoặc có nghĩa phụ tục; K1: đọc tự nhiên thành từ nhạy cảm; K2_CHUA_KY: mức vàng chưa đủ chữ ký). Chỉ ghi khóa ASCII, không ghi từ tục |
+| [`spelling_families.tsv`](spelling_families.tsv) | 314 cặp chính tả đã đo: số lượt mỗi dạng trong phụ đề (`sub_*`) và web (`web_*`), loại theo luật H5, kết luận |
 | [`ho-so/`](ho-so/) | Bản lưu hồ sơ làm việc của hai tác tử: phản hồi, phiếu chấm, bảng khóa, kết quả cổng, log D6, khấu trừ, tin nhắn. Xem [`ho-so/README.md`](ho-so/README.md) |
 | [`manifest.json`](manifest.json) | Nguồn dữ liệu (URL, giấy phép, SHA-256, số dòng, số âm tiết), hash tập luật, hash bốn lượt kiểm D6 và lần kiểm lại trên danh sách phát hành, hash mọi tệp trong thư mục |
 | [`tieu-chi-thong-nhat.md`](tieu-chi-thong-nhat.md) | Bộ tiêu chí và quy trình P1–P8 hai tác tử đã ký (các tệp hồ sơ được nhắc tới nằm trong [`ho-so/`](ho-so/)) |
@@ -37,7 +37,7 @@ python build_wordlist.py --lo lo-kiem
 python kiem-tra-giai-nghia.py --phat-hanh lo-kiem/lo-01.txt lo-kiem/lo-01.tsv
 ```
 
-Cả năm lệnh phải báo 0 lỗi. [`check_wordlist.py`](check_wordlist.py) kiểm:
+Cả năm lệnh phải báo 0 lỗi. Hai kiểm độc lập của đợt ra-thay-chinh, chạy từ `ho-so/unified/` (`python ra-thay-chinh-kiem-ho-h5.py`, `python ra-thay-chinh-kiem-chu-ky.py`), cũng phải báo 0 lỗi: họ H5 tách mọi dạng " / ", gói chữ ký K2 và khóa chặn so với bảng H7. [`check_wordlist.py`](check_wordlist.py) kiểm:
 
 - C1: UTF-8 không BOM, LF, NFC, đúng 7.776 dòng `từ|giải nghĩa`;
 - C2: chỉ chữ cái tiếng Việt viết thường, 4–12 chữ khi viết liền, 1–3 khối;
@@ -74,14 +74,14 @@ Từ mới (kể cả từ lấy từ [`du-phong.txt`](du-phong.txt)) phải qua
 
 ## Hồ sơ nguồn gốc giải nghĩa ([`nguon-goc-giai-nghia.tsv`](nguon-goc-giai-nghia.tsv))
 
-Mỗi dòng là một từ. `trang_thai = PHAT_HANH` cho 7.776 từ đang dùng; `LOAI` cho 182 từ đã bị loại ở P6 và P7 (cột `cong_loai`, `dot_loai` ghi luật và đợt loại).
+Mỗi dòng là một từ. `trang_thai = PHAT_HANH` cho 7.776 từ đang dùng; `LOAI` cho 297 từ đã bị loại: 178 từ ở P6 và P7, 119 từ ở đợt ra-thay-chinh (cột `cong_loai`, `dot_loai` ghi luật và đợt loại; `dot_loai = ra-thay-chinh` với `cong_loai` là `H7_K0`, `H7_K1`, `H5_c`, `H5_f` hoặc `H5_CHO_LOAI`).
 
 | Cột | Ý nghĩa |
 |---|---|
-| `luot_viet`, `lo` | Lượt viết sạch có câu được phát hành (`v1`: lượt đầu cho 8.076 từ; `v2`, `v3`: hai lượt viết lại; `v4-rieng`: lượt riêng cho *ròng rọc*) và lô trong lượt đó |
+| `luot_viet`, `lo` | Lượt viết sạch có câu được phát hành (`v1`: lượt đầu cho 8.076 từ; `v2`, `v3`: hai lượt viết lại; `v4-rieng`: lượt riêng cho *ròng rọc*; `rtc-v1`, `rtc-v2`, `rtc-v3`: ba lượt của đợt ra-thay-chinh cho 119 từ vào, lô `rtc-lo-01`; HM vào danh sách chính được đổi dòng `LOAI` thành `PHAT_HANH`) và lô trong lượt đó |
 | `sha256_giai_nghia` | SHA-256 của câu giải nghĩa (UTF-8, đúng như trong [`wordlist.txt`](wordlist.txt)) |
 | `d6_ket_qua` | Kết quả D6 của câu ở lượt đó. Hash script, tập tham chiếu và mã lần chạy của từng lượt ở [`manifest.json`](manifest.json) → `d6.cac_luot` |
-| `soat_noi_dung` | Người soát nội dung (D7) ở lượt đó: `CHINH` soát chính, `DOI` soát chéo, `MAU` thuộc mẫu đo đồng thuận |
+| `soat_noi_dung` | Người soát nội dung (D7) ở lượt đó: `CHINH` soát chính, `DOI` soát chéo, `MAU` thuộc mẫu đo đồng thuận. Với từ `rtc` thuộc mẫu hoặc soát chéo, phiếu D7 không ghi người soát chính nên cả hai người cùng mã (`astra:MAU;opus:MAU`) |
 | `co_khi_viet` | Cờ người viết gắn (`NGHI`, `TUC_PHU`, `NHAY_CAM`, `HAI_NGHIA`) |
 | `dong_co` | Kết luận của từng người soát khi đóng cờ (`DONG` giữ, `LOAI` loại; `LOAI>RUT` là phản đối đã rút sau phản biện) |
 | `co_phat_hanh` | Cờ còn lại trong bản phát hành (chỉ `HAI_NGHIA`) |
@@ -89,7 +89,7 @@ Mỗi dòng là một từ. `trang_thai = PHAT_HANH` cho 7.776 từ đang dùng;
 ## Tái lập
 
 - **Số đếm:** tải các kho trong [`manifest.json`](manifest.json) → `nguon_du_lieu`, kiểm SHA-256, rồi chạy [`count_corpus.py`](count_corpus.py) (thêm `--dedup` cho kho web CCAligned). Điểm F trong [`labels.tsv`](labels.tsv) là bách phân vị trung bình của số đếm trên bốn kho, tính trong hồ sơ làm việc với cùng ranh giới đếm.
-- **D6:** tải bản trích Kaikki viwiktionary (xem [`manifest.json`](manifest.json)), lưu thành `vi.jsonl.gz` trong thư mục này, kiểm SHA-256, rồi chạy `python d6-kiem.py --input <tệp tu/giai_nghia> --log d6-log.tsv --meta d6-run.json`. Lần chạy lại ngày 20/11/2026 trên [`wordlist.txt`](wordlist.txt) cho 7.776/7.776 PASS.
+- **D6:** tải bản trích Kaikki viwiktionary (xem [`manifest.json`](manifest.json)), lưu thành `vi.jsonl.gz` trong thư mục này, kiểm SHA-256, rồi chạy `python d6-kiem.py --input <tệp tu/giai_nghia> --log d6-log.tsv --meta d6-run.json`. Lần chạy lại ngày 20/11/2026 trên [`wordlist.txt`](wordlist.txt) (bản phát hành 1) cho 7.776/7.776 PASS. Đợt ra-thay-chinh chạy ba lượt `rtc-v1`..`rtc-v3` trên lô 143, 48 và 10 câu (`ho-so/unified/ra-thay-chinh-d6-run-*.json`, `ra-thay-chinh-d6-log-*.tsv`); lần chạy trên [`wordlist.txt`](wordlist.txt) cuối của bản phát hành 2, sau soát toàn tập T9 (22/11/2026, đủ năm nguồn ghim): 7.776/7.776 PASS, run_id `06024271e10fd70e69e46228a935b89e1a28e72f2180bcb00215ec11e2e5c39b` (`ho-so/unified/ra-thay-chinh-d6-run-ban-2.json`, `ra-thay-chinh-d6-log-ban-2.tsv`; `manifest.json` → `d6.kiem_lai_phat_hanh`). Lần chạy trước T9 (run_id `555017cb…`, 7.776 PASS) đã bị lần chạy này thay thế.
 
 ## Giấy phép
 

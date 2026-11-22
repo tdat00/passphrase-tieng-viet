@@ -1,0 +1,384 @@
+Kiểm phát hành bản 2 (đợt ra-thay-chinh), kế hoạch mục 10
+Ngày chạy: 2026-11-22 16:57 +0700
+Máy: Windows, checkout CRLF (core.autocrlf=true); lệnh LF chạy trên bản xuất LF của đúng các tệp dưới đây (SHA-256 nội dung LF):
+  index.html  4bf1389e8cf1a71c8d4caa6f62383804ce9bcd1dd504edacd479d67fb39b783b
+  thong-tin.html  6f997aa4d27dc477b6642a5b8044ee7f24ef13b97caef784d2908f2e33c5b00c
+  WordListAnalyze.md  3d57ccfdd77037a3ce1da3eb4cf5ed5eda304791c5a7d46a44912ccbe0cf0f17
+  analyzing-tools/check_wordlist.py  211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb
+  analyzing-tools/verify.mjs  df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90
+  analyzing-tools/build_wordlist.py  67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0
+  analyzing-tools/kiem-tra-giai-nghia.py  d536db8230e5a1c9d8801e79544b8e0fc2726bad40da3f6199fbba82f7f364c5
+  analyzing-tools/wordlist.txt  8c21d035e1275560cb1253489e9bcf75a18a17f2b0e6d237873e6e98aa367ef4
+  analyzing-tools/labels.tsv  4da4e60bd39770d6fb8a25511182ef60f68d93e6ddaa0fe2b53adeb8014bacdf
+  analyzing-tools/blocked_keys.tsv  b04f129dbd526baa70a097778876b102b6c4cd8b7d13c2ca44cbb2787eb5467f
+  analyzing-tools/spelling_families.tsv  5bbf363e554c70cf6379d306235ac0bb73d1d3b740d833d3f814b5faecb6da45
+
+## 1. check_wordlist.py trên bản xuất LF
+Lệnh: python check_wordlist.py   (thư mục: _scratch/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+  Số khối: 1: 439, 2: 7074, 3: 263
+  Độ dài (chữ): 4: 502, 5: 966, 6: 1896, 7: 2065, 8: 1339, 9: 620, 10: 264, 11: 85, 12: 39
+  Lớp: C: 2861, F: 77, H: 3197, K: 1641; nhãn: OK: 7776
+  Tổng: 0 lỗi, 0 cảnh báo.
+
+## 2. verify.mjs trên bản xuất LF
+Lệnh: node verify.mjs   (thư mục: _scratch/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+  Tổng: 0 lỗi.
+
+## 3. build_wordlist.py --check trên checkout CRLF
+Lệnh: python build_wordlist.py --check   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Ba khối khớp wordlist.txt.
+
+## 4a. build_wordlist.py --lo (xuất lô toàn danh sách)
+Lệnh: python build_wordlist.py --lo <repo>\_scratch\lo-kiem   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch\lo-kiem\lo-01.txt <repo>\_scratch\lo-kiem\lo-01.tsv
+
+## 4b. kiem-tra-giai-nghia.py --phat-hanh trên toàn danh sách
+Lệnh: python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch\lo-kiem\lo-01.txt <repo>\_scratch\lo-kiem\lo-01.tsv   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Tổng: 7776 dòng, 0 lỗi, 0 cảnh báo.
+
+## 5. ra-thay-chinh-kiem-ho-h5.py (kiểm họ H5 độc lập)
+Lệnh: python ra-thay-chinh-kiem-ho-h5.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  Từ chính: 7776; họ: 312 (mới 35: {'CHO_LOAI': 7, 'LOAI_CANH_TRANH': 3, 'LOAI_THIEU_DU_LIEU': 11, 'QUA_H5B': 8, 'QUA_RIENG_H5': 6})
+  Dòng H5 hợp nhất: DONG_THUAN_DA_RA 2, DONG_THUAN_KHAC_TU 23, DONG_THUAN_KHONG_CHO_VAO 1, DONG_THUAN_QUA 15, DONG_THUAN_THAY 17, DONG_THUAN_THAY_CHO_LOAI 7
+  Tổng: 0 lỗi.
+
+## 6. ra-thay-chinh-kiem-chu-ky.py (gói chữ ký K2 và khóa chặn độc lập)
+Lệnh: python ra-thay-chinh-kiem-chu-ky.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  K2: 268 khóa có chữ ký hiệu lực của cả hai người (gói rtc 243); labels K2 261; H7 K2 giữ lại 246
+  Chữ ký K2 cũ chỉ một người ký, ngoài tập giữ lại: 28 khóa (không xét)
+  Khóa chặn mới: 94 ({'K1': 91, 'K0': 3}); tổng 204
+  Nhãn: CHINH 7776, {'OK': 7776}, lớp {'C': 2861, 'F': 77, 'H': 3197, 'K': 1641}
+  Tổng: 0 lỗi.
+
+## 7. Đối chứng nền: check_wordlist.py trên checkout CRLF (chỉ C1 do EOL là lỗi nền, README mục "Kiểm trên checkout Windows")
+Lệnh: python check_wordlist.py   (thư mục: analyzing-tools)
+Mã thoát: 1
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+  Số khối: 1: 439, 2: 7074, 3: 263
+  Độ dài (chữ): 4: 502, 5: 966, 6: 1896, 7: 2065, 8: 1339, 9: 620, 10: 264, 11: 85, 12: 39
+  Lớp: C: 2861, F: 77, H: 3197, K: 1641; nhãn: OK: 7776
+  LỖI | C1: wordlist.txt phải dùng LF và có LF cuối
+  Tổng: 1 lỗi, 0 cảnh báo.
+
+## Chưa chạy trong lượt này
+  d6-kiem.py trên toàn danh sách bản 2: orchestrator đã chạy sau lượt này, xem phần "Lượt chạy lại" bên dưới.
+
+Tổng: 6 lệnh phải thoát 0 (mục 1–6, gồm 4a và 4b): ĐẠT
+
+========================================================================
+Lượt chạy lại sau khi điền D6 bản 2 (README, WordListAnalyze.md, manifest.json đã sửa)
+Ngày chạy: 2026-11-22 17:01 +0700
+D6 bản 2 (orchestrator, vùng ghim, đủ năm nguồn ghim): ra-thay-chinh-d6-run-ban-2.json
+  run_id 555017cbb6f3831dcbb94ccbb1a8cf83643ad682c5c968064dd771d9ce4ebe9a; rows 7776; status {'PASS': 7776}; log_sha256 d62262f3f4b4f1e3a4115d4e56803b903fb7016e3b605720bae083ed5693af1e
+Tệp xuất LF (SHA-256 nội dung LF):
+  index.html  4bf1389e8cf1a71c8d4caa6f62383804ce9bcd1dd504edacd479d67fb39b783b
+  thong-tin.html  6f997aa4d27dc477b6642a5b8044ee7f24ef13b97caef784d2908f2e33c5b00c
+  WordListAnalyze.md  14001b1866b08f0130fc22bb85f8d1fcf2f886f6fd55f6a562a4783f128c2527
+  analyzing-tools/check_wordlist.py  211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb
+  analyzing-tools/verify.mjs  df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90
+  analyzing-tools/build_wordlist.py  67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0
+  analyzing-tools/kiem-tra-giai-nghia.py  d536db8230e5a1c9d8801e79544b8e0fc2726bad40da3f6199fbba82f7f364c5
+  analyzing-tools/wordlist.txt  8c21d035e1275560cb1253489e9bcf75a18a17f2b0e6d237873e6e98aa367ef4
+  analyzing-tools/labels.tsv  4da4e60bd39770d6fb8a25511182ef60f68d93e6ddaa0fe2b53adeb8014bacdf
+  analyzing-tools/blocked_keys.tsv  b04f129dbd526baa70a097778876b102b6c4cd8b7d13c2ca44cbb2787eb5467f
+  analyzing-tools/spelling_families.tsv  5bbf363e554c70cf6379d306235ac0bb73d1d3b740d833d3f814b5faecb6da45
+
+## 1. check_wordlist.py trên bản xuất LF
+Lệnh: python check_wordlist.py   (thư mục: _scratch/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+  Số khối: 1: 439, 2: 7074, 3: 263
+  Độ dài (chữ): 4: 502, 5: 966, 6: 1896, 7: 2065, 8: 1339, 9: 620, 10: 264, 11: 85, 12: 39
+  Lớp: C: 2861, F: 77, H: 3197, K: 1641; nhãn: OK: 7776
+  Tổng: 0 lỗi, 0 cảnh báo.
+
+## 2. verify.mjs trên bản xuất LF
+Lệnh: node verify.mjs   (thư mục: _scratch/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+  Tổng: 0 lỗi.
+
+## 3. build_wordlist.py --check trên checkout CRLF
+Lệnh: python build_wordlist.py --check   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Ba khối khớp wordlist.txt.
+
+## 4a. build_wordlist.py --lo (xuất lô toàn danh sách)
+Lệnh: python build_wordlist.py --lo <repo>\_scratch\lo-kiem   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch\lo-kiem\lo-01.txt <repo>\_scratch\lo-kiem\lo-01.tsv
+
+## 4b. kiem-tra-giai-nghia.py --phat-hanh trên toàn danh sách
+Lệnh: python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch\lo-kiem\lo-01.txt <repo>\_scratch\lo-kiem\lo-01.tsv   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Tổng: 7776 dòng, 0 lỗi, 0 cảnh báo.
+
+## 5. ra-thay-chinh-kiem-ho-h5.py (kiểm họ H5 độc lập)
+Lệnh: python ra-thay-chinh-kiem-ho-h5.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  Từ chính: 7776; họ: 312 (mới 35: {'CHO_LOAI': 7, 'LOAI_CANH_TRANH': 3, 'LOAI_THIEU_DU_LIEU': 11, 'QUA_H5B': 8, 'QUA_RIENG_H5': 6})
+  Dòng H5 hợp nhất: DONG_THUAN_DA_RA 2, DONG_THUAN_KHAC_TU 23, DONG_THUAN_KHONG_CHO_VAO 1, DONG_THUAN_QUA 15, DONG_THUAN_THAY 17, DONG_THUAN_THAY_CHO_LOAI 7
+  Tổng: 0 lỗi.
+
+## 6. ra-thay-chinh-kiem-chu-ky.py (gói chữ ký K2 và khóa chặn độc lập)
+Lệnh: python ra-thay-chinh-kiem-chu-ky.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  K2: 268 khóa có chữ ký hiệu lực của cả hai người (gói rtc 243); labels K2 261; H7 K2 giữ lại 246
+  Chữ ký K2 cũ chỉ một người ký, ngoài tập giữ lại: 28 khóa (không xét)
+  Khóa chặn mới: 94 ({'K1': 91, 'K0': 3}); tổng 204
+  Nhãn: CHINH 7776, {'OK': 7776}, lớp {'C': 2861, 'F': 77, 'H': 3197, 'K': 1641}
+  Tổng: 0 lỗi.
+
+## 7. manifest.json khớp wordlist.txt (SHA-256 LF): KHỚP
+
+Tổng lượt này: mục 1–6 (gồm 4a, 4b) ĐẠT, mọi lệnh thoát 0
+
+========================================================================
+Lượt chạy sau soát toàn tập T9 (T-rtc-24, D-rtc-10, D-rtc-11): 119 từ ra, 119 từ vào
+Ngày chạy: 2026-11-22 20:25 +0700
+D6 trên danh sách cuối: TODO-D6 (orchestrator chạy lại); lần chạy ban-2 trước T9 không áp dụng cho danh sách này.
+Tệp xuất LF (SHA-256 nội dung LF):
+  index.html  27ce5e2bc5dd08c068b0c6f3be4b56fb70b964eb9911acbee0e126478c5368c6
+  thong-tin.html  c2f92d669b331d31658c3f8e858b0e46e96694d7e58509ad8ca92059bc539f01
+  WordListAnalyze.md  600747522caec0d056ef2ad34f86d8dfbb765d0744f157de1bb778d57c5a180b
+  analyzing-tools/check_wordlist.py  211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb
+  analyzing-tools/verify.mjs  df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90
+  analyzing-tools/build_wordlist.py  67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0
+  analyzing-tools/kiem-tra-giai-nghia.py  d536db8230e5a1c9d8801e79544b8e0fc2726bad40da3f6199fbba82f7f364c5
+  analyzing-tools/wordlist.txt  650d28fff36a8a0549e013482aaacf319777c3de9de4e08b45755f4d4d48534e
+  analyzing-tools/labels.tsv  cde92b10ac5a25406058e48d826a80f9dd187a9339787139f6b03e5138a9442f
+  analyzing-tools/blocked_keys.tsv  e24b65a8d0b5d4635dbb96696bc561751323c20f9c98729f228db8247bc802de
+  analyzing-tools/spelling_families.tsv  e8bbe5eb14de56b12d0a0a50131ec6ce723ea3709db8accca29b1e2d444f5863
+
+## 1. check_wordlist.py trên bản xuất LF
+Lệnh: python check_wordlist.py   (thư mục: _scratch2/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+  Số khối: 1: 439, 2: 7074, 3: 263
+  Độ dài (chữ): 4: 502, 5: 963, 6: 1897, 7: 2065, 8: 1340, 9: 621, 10: 264, 11: 85, 12: 39
+  Lớp: C: 2865, F: 77, H: 3192, K: 1642; nhãn: OK: 7776
+  Tổng: 0 lỗi, 0 cảnh báo.
+
+## 2. verify.mjs trên bản xuất LF
+Lệnh: node verify.mjs   (thư mục: _scratch2/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+  Tổng: 0 lỗi.
+
+## 3. build_wordlist.py --check trên checkout CRLF
+Lệnh: python build_wordlist.py --check   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Ba khối khớp wordlist.txt.
+
+## 4a. build_wordlist.py --lo (xuất lô toàn danh sách)
+Lệnh: python build_wordlist.py --lo <repo>\_scratch2\lo-kiem   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch2\lo-kiem\lo-01.txt <repo>\_scratch2\lo-kiem\lo-01.tsv
+
+## 4b. kiem-tra-giai-nghia.py --phat-hanh trên toàn danh sách
+Lệnh: python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch2\lo-kiem\lo-01.txt <repo>\_scratch2\lo-kiem\lo-01.tsv   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Tổng: 7776 dòng, 0 lỗi, 0 cảnh báo.
+
+## 5. ra-thay-chinh-kiem-ho-h5.py (kiểm họ H5 độc lập, đã mở rộng cho 2 họ T9)
+Lệnh: python ra-thay-chinh-kiem-ho-h5.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  Từ chính: 7776; họ: 314 (mới 37: {'CHO_LOAI': 7, 'LOAI_CANH_TRANH': 3, 'LOAI_THIEU_DU_LIEU': 13, 'QUA_H5B': 8, 'QUA_RIENG_H5': 6})
+  Dòng H5 hợp nhất: DONG_THUAN_DA_RA 2, DONG_THUAN_KHAC_TU 23, DONG_THUAN_KHONG_CHO_VAO 1, DONG_THUAN_QUA 15, DONG_THUAN_THAY 17, DONG_THUAN_THAY_CHO_LOAI 7
+  Tổng: 0 lỗi.
+
+## 6. ra-thay-chinh-kiem-chu-ky.py (gói chữ ký K2, khóa chặn 97, 61 khóa T9, một dòng/người)
+Lệnh: python ra-thay-chinh-kiem-chu-ky.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  K2: 316 khóa có chữ ký hiệu lực của cả hai người (gói rtc 293); labels K2 310; H7 K2 giữ lại 245
+  Chữ ký K2 cũ chỉ một người ký, ngoài tập giữ lại: 28 khóa (không xét)
+  Khóa chặn mới: 97 ({'K1': 93, 'K0': 4}); tổng 207
+  Nhãn: CHINH 7776, {'OK': 7776}, lớp {'C': 2865, 'F': 77, 'H': 3192, 'K': 1642}
+  Tổng: 0 lỗi.
+
+## 7. manifest.json khớp wordlist.txt (SHA-256 LF): KHỚP
+  d6.kiem_lai_phat_hanh: TODO-D6 (chưa chạy trên danh sách cuối)
+
+Tổng lượt này: mục 1–6 (gồm 4a, 4b) ĐẠT, mọi lệnh thoát 0
+
+========================================================================
+Lượt chạy sau khi điền D6 của danh sách cuối (README, WordListAnalyze.md, manifest.json)
+Ngày chạy: 2026-11-22 20:28 +0700
+D6 danh sách cuối (orchestrator, vùng ghim, đủ năm nguồn ghim): ra-thay-chinh-d6-run-ban-2.json
+  run_id 06024271e10fd70e69e46228a935b89e1a28e72f2180bcb00215ec11e2e5c39b; rows 7776; status {'PASS': 7776}; log_sha256 c54aa05b3d756279d10cf1c254029af7104adcaf459a95640f3303a0ebacb152
+  (thay lần chạy trước T9, run_id 555017cb…, 7.776 PASS; tệp hồ sơ cũ không giữ)
+Tệp xuất LF (SHA-256 nội dung LF):
+  index.html  27ce5e2bc5dd08c068b0c6f3be4b56fb70b964eb9911acbee0e126478c5368c6
+  thong-tin.html  c2f92d669b331d31658c3f8e858b0e46e96694d7e58509ad8ca92059bc539f01
+  WordListAnalyze.md  97313abbc8b9f2a2e29eb86c934a70b3d9c27fb7537906b305b9cb0beceabdf9
+  analyzing-tools/check_wordlist.py  211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb
+  analyzing-tools/verify.mjs  df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90
+  analyzing-tools/build_wordlist.py  67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0
+  analyzing-tools/kiem-tra-giai-nghia.py  d536db8230e5a1c9d8801e79544b8e0fc2726bad40da3f6199fbba82f7f364c5
+  analyzing-tools/wordlist.txt  650d28fff36a8a0549e013482aaacf319777c3de9de4e08b45755f4d4d48534e
+  analyzing-tools/labels.tsv  cde92b10ac5a25406058e48d826a80f9dd187a9339787139f6b03e5138a9442f
+  analyzing-tools/blocked_keys.tsv  e24b65a8d0b5d4635dbb96696bc561751323c20f9c98729f228db8247bc802de
+  analyzing-tools/spelling_families.tsv  e8bbe5eb14de56b12d0a0a50131ec6ce723ea3709db8accca29b1e2d444f5863
+
+## 1. check_wordlist.py trên bản xuất LF
+Lệnh: python check_wordlist.py   (thư mục: _scratch3/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+  Số khối: 1: 439, 2: 7074, 3: 263
+  Độ dài (chữ): 4: 502, 5: 963, 6: 1897, 7: 2065, 8: 1340, 9: 621, 10: 264, 11: 85, 12: 39
+  Lớp: C: 2865, F: 77, H: 3192, K: 1642; nhãn: OK: 7776
+  Tổng: 0 lỗi, 0 cảnh báo.
+
+## 2. verify.mjs trên bản xuất LF
+Lệnh: node verify.mjs   (thư mục: _scratch3/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+  Tổng: 0 lỗi.
+
+## 3. build_wordlist.py --check trên checkout CRLF
+Lệnh: python build_wordlist.py --check   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Ba khối khớp wordlist.txt.
+
+## 4a. build_wordlist.py --lo (xuất lô toàn danh sách)
+Lệnh: python build_wordlist.py --lo <repo>\_scratch3\lo-kiem   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch3\lo-kiem\lo-01.txt <repo>\_scratch3\lo-kiem\lo-01.tsv
+
+## 4b. kiem-tra-giai-nghia.py --phat-hanh trên toàn danh sách
+Lệnh: python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch3\lo-kiem\lo-01.txt <repo>\_scratch3\lo-kiem\lo-01.tsv   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Tổng: 7776 dòng, 0 lỗi, 0 cảnh báo.
+
+## 5. ra-thay-chinh-kiem-ho-h5.py (kiểm họ H5 độc lập)
+Lệnh: python ra-thay-chinh-kiem-ho-h5.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  Từ chính: 7776; họ: 314 (mới 37: {'CHO_LOAI': 7, 'LOAI_CANH_TRANH': 3, 'LOAI_THIEU_DU_LIEU': 13, 'QUA_H5B': 8, 'QUA_RIENG_H5': 6})
+  Dòng H5 hợp nhất: DONG_THUAN_DA_RA 2, DONG_THUAN_KHAC_TU 23, DONG_THUAN_KHONG_CHO_VAO 1, DONG_THUAN_QUA 15, DONG_THUAN_THAY 17, DONG_THUAN_THAY_CHO_LOAI 7
+  Tổng: 0 lỗi.
+
+## 6. ra-thay-chinh-kiem-chu-ky.py (gói chữ ký K2, khóa chặn 97, 61 khóa T9, một dòng/người)
+Lệnh: python ra-thay-chinh-kiem-chu-ky.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  K2: 316 khóa có chữ ký hiệu lực của cả hai người (gói rtc 293); labels K2 310; H7 K2 giữ lại 245
+  Chữ ký K2 cũ chỉ một người ký, ngoài tập giữ lại: 28 khóa (không xét)
+  Khóa chặn mới: 97 ({'K1': 93, 'K0': 4}); tổng 207
+  Nhãn: CHINH 7776, {'OK': 7776}, lớp {'C': 2865, 'F': 77, 'H': 3192, 'K': 1642}
+  Tổng: 0 lỗi.
+
+## 7. manifest.json khớp wordlist.txt (SHA-256 LF): KHỚP
+  d6.kiem_lai_phat_hanh: 7.776/7.776 PASS, run_id 06024271e10fd70e69e46228a935b89e1a28e72f2180bcb00215ec11e2e5c39b
+
+Tổng lượt này: mục 1–6 (gồm 4a, 4b) ĐẠT, mọi lệnh thoát 0
+
+========================================================================
+Lượt chạy sau sửa theo ý kiến cuối của SA-Astra (chòng chành, 119 từ, thứ tự HM, 3.856/3.854 cặp, chữ ký theo mặt chữ; so_tep đếm lại)
+Ngày chạy: 2026-11-22 20:40 +0700
+manifest ho_so.so_tep = 744 (git ls-files --cached --others --exclude-standard analyzing-tools/ho-so)
+Tệp xuất LF (SHA-256 nội dung LF):
+  index.html  27ce5e2bc5dd08c068b0c6f3be4b56fb70b964eb9911acbee0e126478c5368c6
+  thong-tin.html  c2f92d669b331d31658c3f8e858b0e46e96694d7e58509ad8ca92059bc539f01
+  WordListAnalyze.md  6d3b02dc9fdd95f5550e061ff11b869b18b35476fcd19a90a0ad5b12f9849e89
+  analyzing-tools/check_wordlist.py  211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb
+  analyzing-tools/verify.mjs  df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90
+  analyzing-tools/build_wordlist.py  67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0
+  analyzing-tools/kiem-tra-giai-nghia.py  d536db8230e5a1c9d8801e79544b8e0fc2726bad40da3f6199fbba82f7f364c5
+  analyzing-tools/wordlist.txt  650d28fff36a8a0549e013482aaacf319777c3de9de4e08b45755f4d4d48534e
+  analyzing-tools/labels.tsv  cde92b10ac5a25406058e48d826a80f9dd187a9339787139f6b03e5138a9442f
+  analyzing-tools/blocked_keys.tsv  e24b65a8d0b5d4635dbb96696bc561751323c20f9c98729f228db8247bc802de
+  analyzing-tools/spelling_families.tsv  e8bbe5eb14de56b12d0a0a50131ec6ce723ea3709db8accca29b1e2d444f5863
+
+## 1. check_wordlist.py trên bản xuất LF
+Lệnh: python check_wordlist.py   (thư mục: _scratch4/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+  Số khối: 1: 439, 2: 7074, 3: 263
+  Độ dài (chữ): 4: 502, 5: 963, 6: 1897, 7: 2065, 8: 1340, 9: 621, 10: 264, 11: 85, 12: 39
+  Lớp: C: 2865, F: 77, H: 3192, K: 1642; nhãn: OK: 7776
+  Tổng: 0 lỗi, 0 cảnh báo.
+
+## 2. verify.mjs trên bản xuất LF
+Lệnh: node verify.mjs   (thư mục: _scratch4/lf/analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+  Tổng: 0 lỗi.
+
+## 3. build_wordlist.py --check trên checkout CRLF
+Lệnh: python build_wordlist.py --check   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Ba khối khớp wordlist.txt.
+
+## 4a. build_wordlist.py --lo (xuất lô toàn danh sách)
+Lệnh: python build_wordlist.py --lo <repo>\_scratch4\lo-kiem   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch4\lo-kiem\lo-01.txt <repo>\_scratch4\lo-kiem\lo-01.tsv
+
+## 4b. kiem-tra-giai-nghia.py --phat-hanh trên toàn danh sách
+Lệnh: python kiem-tra-giai-nghia.py --phat-hanh <repo>\_scratch4\lo-kiem\lo-01.txt <repo>\_scratch4\lo-kiem\lo-01.tsv   (thư mục: analyzing-tools)
+Mã thoát: 0
+Kết quả:
+  Tổng: 7776 dòng, 0 lỗi, 0 cảnh báo.
+
+## 5. ra-thay-chinh-kiem-ho-h5.py
+Lệnh: python ra-thay-chinh-kiem-ho-h5.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  Từ chính: 7776; họ: 314 (mới 37: {'CHO_LOAI': 7, 'LOAI_CANH_TRANH': 3, 'LOAI_THIEU_DU_LIEU': 13, 'QUA_H5B': 8, 'QUA_RIENG_H5': 6})
+  Dòng H5 hợp nhất: DONG_THUAN_DA_RA 2, DONG_THUAN_KHAC_TU 23, DONG_THUAN_KHONG_CHO_VAO 1, DONG_THUAN_QUA 15, DONG_THUAN_THAY 17, DONG_THUAN_THAY_CHO_LOAI 7
+  Tổng: 0 lỗi.
+
+## 6. ra-thay-chinh-kiem-chu-ky.py
+Lệnh: python ra-thay-chinh-kiem-chu-ky.py   (thư mục: analyzing-tools/ho-so/unified)
+Mã thoát: 0
+Kết quả:
+  K2: 316 khóa có chữ ký hiệu lực của cả hai người (gói rtc 293); labels K2 310; H7 K2 giữ lại 245
+  Chữ ký K2 cũ chỉ một người ký, ngoài tập giữ lại: 28 khóa (không xét)
+  Khóa chặn mới: 97 ({'K1': 93, 'K0': 4}); tổng 207
+  Nhãn: CHINH 7776, {'OK': 7776}, lớp {'C': 2865, 'F': 77, 'H': 3192, 'K': 1642}
+  Tổng: 0 lỗi.
+
+## 7. manifest.json khớp wordlist.txt (SHA-256 LF): KHỚP
+
+Tổng lượt này: mục 1–6 (gồm 4a, 4b) ĐẠT, mọi lệnh thoát 0

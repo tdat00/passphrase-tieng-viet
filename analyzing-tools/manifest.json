@@ -1,47 +1,46 @@
 {
   "schema": 1,
-  "ngay": "2026-11-20",
+  "ngay": "2026-11-22",
+  "ban_phat_hanh": 2,
   "danh_sach": {
     "so_tu": 7776,
-    "wordlist_txt_sha256": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
-    "cot_tu_sha256": "3609c88ff436708857ac323189f81b5bb9b31d31ea6f0a8924cc02bc61c0e713",
+    "wordlist_txt_sha256": "650d28fff36a8a0549e013482aaacf319777c3de9de4e08b45755f4d4d48534e",
+    "cot_tu_sha256": "5e9b0a405b55cb11969c72abb29f1e5b787b99d5e041057c425c7629b609139e",
     "ghi_chu": "cot_tu_sha256 tính trên các từ, mỗi từ một dòng, UTF-8, LF, có LF cuối (giống khối danh sách của kịch bản P0)."
   },
   "du_phong": {
-    "so_tu": 205,
+    "so_tu": 90,
     "trang_thai": "đã phân tích, chưa phát hành",
-    "du_phong_txt_sha256": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
+    "du_phong_txt_sha256": "ee8c01ba704730a22ba3ac9bac7ecf8b004f32bdcc46b57b0caed2b446c9778c",
     "phan_loai_tsv": "du-phong-phan-loai.tsv",
-    "phan_loai_tsv_sha256": "0f1cf57455e1a368587a101f7b0183c5a47c91c6910d8749be2b802ca0364036",
+    "phan_loai_tsv_sha256": "4a3b9253ef7e1b24bbd7ee57311746a51528fe2d15f8d4fdce3ff11580ee93c3",
     "tang": {
-      "A": 148,
+      "A": 41,
       "B": 36,
-      "C": 15,
-      "D": 6
+      "C": 3,
+      "D": 10
     },
     "giai_nghia_lich_su": {
-      "co_cau_dat": 168,
+      "co_cau_dat": 53,
       "chua_viet": 37,
       "d8_du_phong": 0
     },
     "h8": {
-      "MANH": 198,
-      "YEU": 4,
-      "CHI_BE_MAT": 2,
-      "KHONG_LUOT": 1
-    }
+      "MANH": 90
+    },
+    "ghi_chu": "còn lại sau bản phát hành 2: 205 từ ban đầu trừ 115 từ đã vào danh sách chính (ra-thay-chinh); cột từ của bản 205 từ có SHA-256 f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b"
   },
   "honorable_mentions": {
-    "so_tu": 237,
+    "so_tu": 233,
     "trang_thai": "đề cử, chưa phát hành",
     "tep": "honorable-mentions.tsv",
-    "sha256": "122ebc3b1c8a84f125d2a3f8924faab195834913c28454a592a47ba24603fa69",
+    "sha256": "a7d6ef45f19e00a7e554bd0e03cb415b240545caef14c969ecfc97e459e3ef16",
     "nhom": {
-      "D6_CUOI": 120,
-      "D7_CUOI": 10,
-      "R1": 107
+      "D6_CUOI": 117,
+      "R1": 107,
+      "D7_CUOI": 9
     },
-    "ghi_chu": "không phải dự phòng; trạng thái cổng và điều kiện nằm trong TSV"
+    "ghi_chu": "không phải dự phòng; trạng thái cổng và điều kiện nằm trong TSV; chu kỳ HM của ra-thay-chinh (D-rtc-8) đưa 4 HM vào danh sách chính (ngân hàng, biển, côn trùng, cô giáo), 20 HM đã viết câu đạt chưa dùng"
   },
   "phan_tich_du_phong": {
     "base_commit": "cefb99386d4845e40bc2d3eabc7d6898d078305d",
@@ -199,9 +198,54 @@
         "status": {
           "PASS": 1
         }
+      },
+      "rtc-v1": {
+        "run_id": "eca734e223196a1188acd4f265bee56109416084a004e25a95558143da258da8",
+        "version": "D6-1.0",
+        "script_sha256": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f",
+        "reference_set_sha256": "54d8d3f3b6d24d909423846e23ede427c14bc78518ad41bdf10686954b344496",
+        "rows": 143,
+        "status": {
+          "PASS": 113,
+          "VIET_LAI": 30
+        },
+        "lo_sha256": "97651e9ae4f483f97224e5cb483b6c610cae2b5f4465052ade522addd7ddd705",
+        "log_sha256": "6f9c05b1fb0b19d8fe1afa81db704d269685668147a1dadb3d644acb5f59d1d7",
+        "meta": "ho-so/unified/ra-thay-chinh-d6-run-rtc-v1.json",
+        "log": "ho-so/unified/ra-thay-chinh-d6-log-rtc-v1.tsv"
+      },
+      "rtc-v2": {
+        "run_id": "bbc0e0f7eecb02632adbe3f3a036f4f7f8da59f8d75ffd5ff8da7efd2ae59d4c",
+        "version": "D6-1.0",
+        "script_sha256": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f",
+        "reference_set_sha256": "54d8d3f3b6d24d909423846e23ede427c14bc78518ad41bdf10686954b344496",
+        "rows": 48,
+        "status": {
+          "PASS": 45,
+          "VIET_LAI": 3
+        },
+        "lo_sha256": "df0aa5998414c3cdb7aba09ff0b9ef3f390f101c23af8d0f56673e6fe234c712",
+        "log_sha256": "f7d81645885c6b0e8a29c68e3328dea76d1e3920419039b462c3c4a418973807",
+        "meta": "ho-so/unified/ra-thay-chinh-d6-run-rtc-v2.json",
+        "log": "ho-so/unified/ra-thay-chinh-d6-log-rtc-v2.tsv"
+      },
+      "rtc-v3": {
+        "run_id": "b42c518a5e23fe2bf81d17de31518168c3820c2e85478ebf5f668395faa4555d",
+        "version": "D6-1.0",
+        "script_sha256": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f",
+        "reference_set_sha256": "54d8d3f3b6d24d909423846e23ede427c14bc78518ad41bdf10686954b344496",
+        "rows": 10,
+        "status": {
+          "PASS": 9,
+          "VIET_LAI": 1
+        },
+        "lo_sha256": "3868c8a4a79c05199c94bccf5d047ef437b2b783776232e10bcb75b91f8b72e0",
+        "log_sha256": "8ebe217bca16a30480654208752d2020396af2852bc733915478860075788c00",
+        "meta": "ho-so/unified/ra-thay-chinh-d6-run-rtc-v3.json",
+        "log": "ho-so/unified/ra-thay-chinh-d6-log-rtc-v3.tsv"
       }
     },
-    "kiem_lai_phat_hanh": {
+    "kiem_lai_phat_hanh_ban_1": {
       "ngay": "2026-11-20",
       "dau_vao": "wordlist.txt",
       "run_id": "6468432945cacf71d19ce8bad2d267bb60df68ca89959e8e8ffa25d947a6df8a",
@@ -209,34 +253,108 @@
       "status": {
         "PASS": 7776
       }
+    },
+    "kiem_lai_phat_hanh": {
+      "ngay": "2026-11-22",
+      "dau_vao": "wordlist.txt (bản phát hành 2, danh sách cuối sau T9)",
+      "wordlist_txt_sha256": "650d28fff36a8a0549e013482aaacf319777c3de9de4e08b45755f4d4d48534e",
+      "run_id": "06024271e10fd70e69e46228a935b89e1a28e72f2180bcb00215ec11e2e5c39b",
+      "version": "D6-1.0",
+      "script_sha256": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f",
+      "reference_set_sha256": "54d8d3f3b6d24d909423846e23ede427c14bc78518ad41bdf10686954b344496",
+      "rows": 7776,
+      "status": {
+        "PASS": 7776
+      },
+      "lo_sha256": "f4b3a650db1de51fe738d758bcbcd818aa6f9bbbc6080250dc798bcbb8cf77cf",
+      "log_sha256": "c54aa05b3d756279d10cf1c254029af7104adcaf459a95640f3303a0ebacb152",
+      "meta": "ho-so/unified/ra-thay-chinh-d6-run-ban-2.json",
+      "log": "ho-so/unified/ra-thay-chinh-d6-log-ban-2.tsv",
+      "ghi_chu": "đủ năm nguồn ghim (expected_sha256 = actual_sha256); chạy trong vùng ghim bởi orchestrator sau soát toàn tập T9"
+    },
+    "kiem_lai_phat_hanh_truoc_t9": {
+      "run_id": "555017cb…",
+      "rows": 7776,
+      "status": {
+        "PASS": 7776
+      },
+      "ghi_chu": "đã bị lần chạy trên danh sách cuối thay thế; không giữ tệp hồ sơ"
     }
   },
   "tep": {
-    "README.md": "b878407e8fb092db0ea0d0f3869060a6b7e36fb881aa6e968e32db23092d17e2",
-    "blocked_keys.tsv": "016996d5424cc1ad3cc23903c85ba9c2a6a141b6402549c168c3a4ab90bdc0e8",
+    "README.md": "d37e43e78227abf98643748b4d37c5023655d33efe3ac0c023d062e819282f73",
+    "blocked_keys.tsv": "e24b65a8d0b5d4635dbb96696bc561751323c20f9c98729f228db8247bc802de",
     "build_wordlist.py": "67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0",
     "check_wordlist.py": "211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb",
     "count_corpus.py": "882e958be0157acc2698b423187da0667c2aa5a16c5aa861337d4851d33395e8",
     "d6-ho-chinh-ta.tsv": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
     "d6-kiem.py": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f",
     "d6-tham-chieu.json": "23a85060ac07f289b30bfa8fa4a0ad0e02fcfcf31b07921c8d1f47cc2a25e0e5",
-    "du-phong-phan-loai.tsv": "0f1cf57455e1a368587a101f7b0183c5a47c91c6910d8749be2b802ca0364036",
-    "du-phong.txt": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b",
-    "honorable-mentions.tsv": "122ebc3b1c8a84f125d2a3f8924faab195834913c28454a592a47ba24603fa69",
+    "du-phong-phan-loai.tsv": "4a3b9253ef7e1b24bbd7ee57311746a51528fe2d15f8d4fdce3ff11580ee93c3",
+    "du-phong.txt": "ee8c01ba704730a22ba3ac9bac7ecf8b004f32bdcc46b57b0caed2b446c9778c",
+    "honorable-mentions.tsv": "a7d6ef45f19e00a7e554bd0e03cb415b240545caef14c969ecfc97e459e3ef16",
     "huong-dan-giai-nghia.md": "40909787f3cad5ddbd438b7db1f31ad2b547cc303b666222ade108410a307439",
     "kiem-tra-giai-nghia.py": "d536db8230e5a1c9d8801e79544b8e0fc2726bad40da3f6199fbba82f7f364c5",
-    "labels.tsv": "a5b882a82a4bff853fce938deed94cdb4efa5dc969ff05572a68835a7605369b",
-    "nguon-goc-giai-nghia.tsv": "197df30135d5ee8fa5a8e8ff1dc3a284fce89ad97b9a910b03a280ec2db24b33",
-    "spelling_families.tsv": "56f0b31d2a84e9f41495937b49949d2e357368739f07ece0cd1187fe25407c98",
+    "labels.tsv": "cde92b10ac5a25406058e48d826a80f9dd187a9339787139f6b03e5138a9442f",
+    "nguon-goc-giai-nghia.tsv": "9463b52013c89cd42c74d121c84fe12b34d26970dfe54ed2da400b820be6f37c",
+    "spelling_families.tsv": "e8bbe5eb14de56b12d0a0a50131ec6ce723ea3709db8accca29b1e2d444f5863",
     "tieu-chi-thong-nhat.md": "253544fbf08a20302702cfb21c8fee505da488ec8e1dcfd7f7aa4c16b0cda033",
     "verify.mjs": "df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90",
-    "wordlist.txt": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
+    "wordlist.txt": "650d28fff36a8a0549e013482aaacf319777c3de9de4e08b45755f4d4d48534e",
     ".gitignore": "725a6fa9744c3129e7b817437f0f9e4c790ad1618b84d775432719f95c54a0a6"
   },
   "tep_cach_bam": "SHA-256 của nội dung LF (đúng blob Git). d6.cac_luot.*.script_sha256 là hash byte của d6-kiem.py lúc chạy trên checkout Windows (CRLF), giữ nguyên làm hồ sơ lượt chạy.",
   "ho_so": {
     "thu_muc": "ho-so/",
-    "so_tep": 402,
+    "so_tep": 744,
     "readme_sha256": "8b20da6947168a895ae7788d906a4477290dd2dae92216750bc61ed274f6d1d2"
+  },
+  "ra_thay_chinh": {
+    "ke_hoach": "ho-so/unified/ra-thay-chinh-ke-hoach.md",
+    "ngay": "2026-11-22",
+    "tu_ra": 119,
+    "tu_vao": 119,
+    "tu_vao_theo_luot": {
+      "rtc-v1": 83,
+      "rtc-v2": 31,
+      "rtc-v3": 5
+    },
+    "du_bi_con_lai": [],
+    "khoa_chan_moi": 97,
+    "ho_chinh_ta_moi": 37,
+    "dong_d8": {
+      "PHAT_HANH": 7776,
+      "LOAI": 297
+    },
+    "hm": {
+      "da_chon": 25,
+      "viet_cau_dat_chua_dung": 20,
+      "vao_danh_sach_chinh": 4
+    },
+    "t9": {
+      "quyet_dinh": [
+        "T-rtc-24",
+        "D-rtc-10",
+        "D-rtc-11"
+      ],
+      "khoa_k2_moi": 61,
+      "tu_ra_them": [
+        "phết",
+        "cau có",
+        "tụ tập"
+      ],
+      "tu_vao_rut": [
+        "buồn thiu",
+        "ỉu xìu"
+      ],
+      "tu_vao_lap_ghe": [
+        "cửu chương",
+        "ngân hàng",
+        "biển",
+        "côn trùng",
+        "cô giáo"
+      ]
+    },
+    "ghi_chu": "ra-thay-chinh-thay-the.tsv và ra-thay-chinh-giai-nghia-dat.tsv là hồ sơ trước T9; danh sách cuối theo T-rtc-24, D-rtc-10, D-rtc-11"
   }
 }

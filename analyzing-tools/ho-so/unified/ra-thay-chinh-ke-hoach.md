@@ -373,6 +373,8 @@ Lưu lệnh, mã thoát và log.
 | D-rtc-7 | Q-rtc-O2: giữ *cần cù, tiền lương, triệu, bạn thân* (K2, hai SA ký "không tự động chặn") | owner | 2026-11-21 | `2cc6aec` |
 | D-rtc-8 | Q-rtc-A2, phương án 1: mở một chu kỳ có giới hạn, tối đa 25 HM nhãn OK theo hạng; kiểm lại H1–H9; viết nghĩa sạch mới; D6/D7/D8 mới; không dùng lại câu cũ | owner | 2026-11-21 | `2cc6aec` |
 | D-rtc-9 | Q-rtc-D1: duyệt kế hoạch Final và cho bắt đầu thay danh sách chính; triển khai trực tiếp (không tách task pack), orchestrator điều phối lượt viết sạch và SA soát. Q-rtc-M1 (22:10): SA-Astra chạy trên gpt-6.2-astra | owner | 2026-11-22 | form `ask_user` và tin nhắn Discord; ghi ở commit này |
+| D-rtc-10 | Q-rtc-O3: thay *tụ tập* (K1, khóa `tutap` đọc thành *tu tập*) bằng *cô giáo* (HM kế tiếp theo hàng đợi) | owner | 2026-11-22 | form `ask_user` "thay"; Discord 2026-11-22 18:16 +07:00 "Q-rtc-03 thay, q-rtc-b1 duyệt"; ghi ở commit này |
+| D-rtc-11 | Q-rtc-B1: duyệt danh sách ra/vào cuối trước commit phát hành (B1) | owner | 2026-11-22 | như D-rtc-10 |
 | T-rtc-1 | Ghi `baotu` K1 vào bảng chặn | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
 | T-rtc-2 | Giữ chín K2 đã ký (*bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng*); rút OI-RTC-KY-CU; giữ *gián* theo quyết định 5 | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
 | T-rtc-3 | Thay 80 khóa H7: K0 *phản bác*, *tính khí*; 78 K1, gồm *thái* và 13 khóa Opus nhận sau duyệt (`ra-thay-chinh-h7.tsv`, `DONG_THUAN_THAY`) | SA-Opus + SA-Astra | 2026-11-21 | `7fb17fb` |
@@ -396,7 +398,8 @@ Lưu lệnh, mã thoát và log.
 | T-rtc-21 | Tính lại S4 theo T-rtc-14: rổ 10.003 (bỏ thêm *bao tử*, *chạng vạng* theo T-dpv2-6, T-dpv2-7); hai chương trình độc lập khớp 143/143 dòng (T7); thứ tự này khóa làm nguồn chung | SA-Opus + SA-Astra | 2026-11-22 | fc97441 |
 
 | T-rtc-22 | D7 của lượt `rtc`: câu thuộc phần chồng chéo (hoặc có cờ) bị một SA đánh VIET_LAI thì viết lại | SA-Opus + SA-Astra (Opus nhận đề nghị của orchestrator, 2026-11-22) | 2026-11-22 | commit này |
-| T-rtc-23 | Kết quả viết nghĩa `rtc-v1..v3`: 141/143 câu đạt D2/D5/D6/D7 (`ho-so/unified/ra-thay-chinh-giai-nghia-dat.tsv`). *sớm tối* (từ vào 101) còn phản đối D7 của Astra sau `rtc-v3` nên nhường ghế theo T-rtc-6 và mục 6.1; dự bị *cả nghĩ* vào thế chỗ. *khách hàng* (HM) trượt D6 ba lần, rời chu kỳ HM. Còn 1 dự bị (*cửu chương*) và 24 HM đã có câu đạt, chưa dùng | orchestrator theo T-rtc-6, mục 6.1; hai SA đã soát | 2026-11-22 | commit này |
+| T-rtc-23 | Kết quả viết nghĩa `rtc-v1..v3`: 141/143 câu đạt D2/D5/D6/D7 (`ho-so/unified/ra-thay-chinh-giai-nghia-dat.tsv`). *sớm tối* (từ vào 101) còn phản đối D7 của Astra sau `rtc-v3` nên nhường ghế theo T-rtc-6 và mục 6.1; dự bị *cả nghĩ* vào thế chỗ. *khách hàng* (HM) trượt cả ba lượt (D6 ở `rtc-v1` và `rtc-v3`, D7 ở `rtc-v2`), rời chu kỳ HM. Còn 1 dự bị (*cửu chương*) và 24 HM đã có câu đạt, chưa dùng | orchestrator theo T-rtc-6, mục 6.1; hai SA đã soát | 2026-11-22 | commit này |
+| T-rtc-24 | T9 (soát toàn tập, một lượt đối đáp): hai SA ký K2 cho 61 khóa (65 dòng đối chứng, gồm *đuôi*/đượi, *tử tế*/tư tế); thay *phết* (K0, *phẹt*) và *cau có* (K1, *cầu cơ*); rút từ vào *buồn thiu*, *ỉu xìu* (H5c, thiếu dữ liệu); *công cộng*/công công không đỏ; giữ *dài ngoằng*, *lu bù* (khác từ); sửa chữ ký trùng của *thầy*, mở rộng chữ ký *bảng* cho *băng*, sửa WordListAnalyze.md §13. Ghế lấp theo hàng đợi: *cửu chương*, *ngân hàng*, *biển*, *côn trùng* (và *cô giáo* theo D-rtc-10). Hồ sơ: `ho-so/{opus,astra}/ra-thay-chinh/t9-*` | SA-Opus + SA-Astra | 2026-11-22 | commit này |
 Các mục T-rtc-* là chỗ hai bên đã đồng ý qua rà chéo, hai lượt duyệt và hai vòng thỏa thuận (`ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`). SA-Astra xác nhận khi duyệt bản sửa này.
 
 ## 12. Mục mở

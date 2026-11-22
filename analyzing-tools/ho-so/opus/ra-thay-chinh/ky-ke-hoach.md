@@ -38,3 +38,26 @@ Astra yêu cầu sửa (`ho-so/astra/ra-thay-chinh/ky-ke-hoach.md`). Opus nhận
 
 - OI-RTC-K2-KY: ghép chữ ký vào `chu-ky.tsv` ở gói phát hành;
 - Q-rtc-A3: chỉ hỏi khi bản Kaikki đã ghim bị mất.
+
+## Phát hành
+
+**phát hành: accept** — 22/11/2026, SA-Opus.
+
+Gói đã kiểm là working tree trên `d78e97a`, trước commit phát hành. Script `evidence/phat-hanh-kiem.py`; mọi phép kiểm ở `evidence/phat-hanh-kiem.log` đều đạt.
+
+- **Danh sách:** 7.776 từ, 7.776 khóa.
+  - Ra 119: 116 từ cũ, cộng *phết*, *cau có*, *tụ tập*.
+  - Vào 119: 115 từ VAO, bỏ *buồn thiu* và *ỉu xìu*; thêm *cả nghĩ*, *cửu chương* và bốn HM *ngân hàng, biển, côn trùng, cô giáo*.
+  - Kết quả này khớp T-rtc-24, D-rtc-10, D-rtc-11.
+- **Khóa chặn:** thêm 97 khóa, đúng khóa và mã (gồm `phet` K0, `cauco` K1, `tutap` K1). Không từ phát hành nào bị chặn.
+- **Họ chính tả:** thêm 37 họ, gồm hai họ loại c vì thiếu dữ liệu: *buồn thiu*/*buồn thỉu* và *ỉu xìu*/*ỉu xịu*. Không từ phát hành nào thuộc họ bị cấm.
+- **Chữ ký:** 310 từ phát hành có K2, mỗi từ đúng một dòng hiệu lực của Astra và một của Opus (*thầy* đã sửa). Phạm vi chữ ký của *bảng* gồm *băng*. `labels.tsv` khớp.
+- **Nhãn:** `labels.tsv` có 7.776 dòng CHINH, F = 77, R1 = 0. Bốn HM vào có nhãn và điểm lấy từ `xep-hang.tsv`.
+- **D8:** 7.776 dòng PHAT_HANH khớp câu (sha256), 297 dòng LOAI. Từ vào có lượt rtc-v1/v2/v3 và D6 PASS.
+- **Dự phòng và HM:**
+  - dự phòng 90 từ (41 A, 36 B, 3 C, 10 D);
+  - HM 233 mục; không HM nào nằm trong danh sách chính.
+- **Không còn phản đối:** không từ phát hành nào còn bị phiếu T9 của Opus hay Astra đề xuất thay, K0, K1 hay loại.
+- **Manifest:** băm khớp working tree.
+- **WordListAnalyze.md:** có D-rtc-10, D-rtc-11, T-rtc-24; mô tả K0 đủ ba loại nghĩa.
+- **Bản quyền:** không thấy lời Kaikki đã đọc trong các tệp thay đổi. Kho, HND và Kaikki-en chỉ để ngoài repo và đã xóa sau khi dùng.

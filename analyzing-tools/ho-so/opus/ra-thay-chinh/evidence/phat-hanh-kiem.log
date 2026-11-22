@@ -1,0 +1,24 @@
+ĐẠT Danh sách: 7.776 từ, 7.776 khóa, khóa ≥ 4 chữ
+ĐẠT Ra 119 = 116 + phết, cau có, tụ tập: thừa [], thiếu []
+ĐẠT Vào 119 = 115 VAO − buồn thiu, ỉu xìu + cả nghĩ, cửu chương + 4 HM: thừa [], thiếu []
+ĐẠT Khóa chặn: +97 đúng khóa và mã (gồm phet K0, cauco K1, tutap K1): 97 mới; lệch []
+ĐẠT Không từ phát hành nào có khóa bị chặn
+ĐẠT Họ: +37, gồm buồn thiu/buồn thỉu và ỉu xìu/ỉu xịu loại c thiếu dữ liệu: 37; {('buồn thiu', 'buồn thỉu'): 'LOAI_THIEU_DU_LIEU', ('ỉu xìu', 'ỉu xịu'): 'LOAI_THIEU_DU_LIEU'}
+ĐẠT Không từ phát hành nào thuộc họ bị cấm (C5): []
+ĐẠT Mọi từ phát hành có K2: đúng một dòng hiệu lực của Astra và một của Opus: 310 từ; sai []
+ĐẠT Khóa T9 tiêu biểu có hai chữ ký : []
+ĐẠT Chữ ký bảng có phạm vi băng: 2 dòng
+ĐẠT labels: 7.776 CHINH khớp danh sách, F = 77, R1 = 0
+ĐẠT labels: 4 HM vào có dòng CHINH, nhãn OK, điểm theo xep-hang.tsv
+ĐẠT labels: từ có K2 hai chữ ký đều mang K2 ở chu_ky_hai_ben: []
+ĐẠT D8: 7.776 PHAT_HANH khớp danh sách và sha256 câu; 297 LOAI: LOAI 297
+ĐẠT D8: từ vào có lượt rtc-v*, D6 PASS: Counter({'rtc-v1': 83, 'rtc-v2': 31, 'rtc-v3': 5})
+ĐẠT D8: 119 từ ra là LOAI: [('H7_K1', 91), ('H5_c', 14), ('H5_CHO_LOAI', 7), ('H7_K0', 4), ('H5_f', 3)]
+ĐẠT Dự phòng: 90 từ (thêm buồn thiu, ỉu xìu tầng D; bớt cửu chương), khớp phân loại và labels: 90; tầng Counter({'A': 41, 'B': 36, 'D': 10, 'C': 3})
+ĐẠT HM: bỏ 4 HM đã vào, không HM nào ở danh sách chính: 233 dòng
+ĐẠT Không từ phát hành nào bị phiếu T9 của Opus đề xuất thay, K0, K1, loại: []
+LỖI Không từ phát hành nào bị phiếu T9 của Astra đề xuất thay, K0, K1, loại: ['thầy']
+ĐẠT manifest: băm khớp byte (CRLF hoặc LF) của working tree: lệch []
+ĐẠT WordListAnalyze.md: có D-rtc-10, D-rtc-11, T-rtc-24, 119 từ ra
+ĐẠT WordListAnalyze.md: mô tả K0 đủ ba loại nghĩa
+ĐẠT Không chép lời Kaikki đã đọc vào tệp thay đổi; không tệp mới lớn bất thường: [] []
