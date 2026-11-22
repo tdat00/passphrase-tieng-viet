@@ -1,0 +1,350 @@
+khoa	tu_chinh	trong_chinh	opus_v1	astra_v1	ket_qua_v1	opus_v2	ket_qua_v2	hoa_v2	cap_lech	ly_do_opus_v2
+anbinh	an bình	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	ăn bĩnh[O:KHONG_DO;A:K2;r=0.000]	giữ lập trường vòng 1
+aongu	áo ngủ	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	áo ngự[O:KHONG_DO;A:CHO;r=-]	giữ lập trường vòng 1
+aoquan	áo quần	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+andien	ăn diện	CO	KHONG_DO	K1	GIU|THAY	K1	THAY|THAY	HOA	ân điển[O:KHONG_DO;A:K1;r=1.940]	đổi sang K1: ân điển G4, r 1,94
+andut	ăn đứt	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	ăn đút[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+anluong	ăn lương	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	ăn lường[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+anmay	ăn may	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+bachu	bà chủ	CO	KHONG_DO	K1	GIU|THAY	K1	THAY|THAY	HOA	bá chủ[O:KHONG_DO;A:K1;r=0.176]	đổi sang K1: bá chủ G3, r 0,18
+bavai	bả vai	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	bà vãi[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+baitap	bài tập	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	bãi tập[O:-;A:K2;r=0.002]	giữ lập trường vòng 1
+baithi	bài thi	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	bãi thị[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+banan	bàn ăn	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+bando	bản đồ	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	ban đỏ[O:K2;A:K1;r=0.018]; bán độ[O:-;A:K2;r=0.003]	r 0,018
+bandao	bán đảo	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	bần đạo[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+banthan	bạn thân	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	bán thân[O:K2;A:CHO;r=0.050]	giữ lập trường vòng 1
+bang	bảng	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	báng[O:KHONG_DO;A:CHO;r=0.003]	giữ lập trường vòng 1
+baohanh	bảo hành	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	bạo hành[O:K2;A:K1;r=0.050]	đổi sang K1: bạo hành G1, r 0,050
+baoquan	bảo quản	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	bạo quân[O:KHONG_DO;A:K2;r=0.000]	giữ lập trường vòng 1
+baotang	bảo tàng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	báo tang[O:KHONG_DO;A:K2;r=0.000]	giữ lập trường vòng 1
+baodong	báo động	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	bạo động[O:K2;A:K1;r=0.059]	đổi sang K1: bạo động G1, r 0,059
+battien	bất tiện	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	bát tiên[O:-;A:K2;r=0.005]	giữ lập trường vòng 1
+bauban	bầu bạn	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	bầu bán[O:-;A:K2;r=0.045]	giữ lập trường vòng 1
+bemat	bề mặt	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	bẽ mặt[O:KHONG_DO;A:CHO;r=0.020]	giữ lập trường vòng 1
+beboi	bể bơi	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	bê bối[O:KHONG_DO;A:CHO;r=0.135]	giữ lập trường vòng 1
+benbi	bền bỉ	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	bên bị[O:K2;A:K1;r=0.078]	M: bên bị là cụm pháp lý hẹp
+biquan	bi quan	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	bí quẫn[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+bian	bí ẩn	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	bị án[O:-;A:K2;r=0.006]	giữ lập trường vòng 1
+binh	bình	CO	K2_DA_KY	K1	GIU|THAY	K2_DA_KY	GIU|THAY	LECH	binh[O:K2_DA_KY;A:K1;r=0.427]; bịnh[O:K2_DA_KY;A:K1;r=0.017]	giữ K2 đã ký, không có chứng cứ mới: chu-ky.tsv:134–135 (binh, bĩnh)
+bome	bố mẹ	CO	K2	K0	KY_K2|THAY	K1	THAY|THAY	HOA	bỏ mẹ[O:K2;A:K0;r=0.070]	đổi sang K1: bỏ mẹ G9 (chửi), r 0,070
+boba	bộ ba	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	bỏ bà[O:K2;A:K1;r=0.168]; bỏ bả[O:-;A:K2;r=0.019]	đổi sang K1: bỏ bà G9 (chửi), r 0,17
+bodo	bộ đồ	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	bợ đỡ[O:K2;A:K1;r=0.015]	r 0,015
+bonphan	bổn phận	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	bón phân[O:KHONG_DO;A:K2;r=0.206]	giữ lập trường vòng 1
+bode	bờ đê	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	bồ đề[O:KHONG_DO;A:K2;r=4.281]	giữ lập trường vòng 1
+botuong	bờ tường	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	bộ tướng[O:-;A:K2;r=0.066]	giữ lập trường vòng 1
+canhac	ca nhạc	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	cà nhắc[O:K2;A:K1;r=0.259]	M: cà nhắc tả dáng đi
+caico	cãi cọ	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	cai cơ[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+camtinh	cảm tình	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cầm tinh[O:KHONG_DO;A:K2;r=0.008]	giữ lập trường vòng 1
+camdo	cám dỗ	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cầm đồ[O:KHONG_DO;A:K2;r=0.252]	giữ lập trường vòng 1
+canhquan	cảnh quan	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	cánh quân[O:-;A:K2;r=0.022]	giữ lập trường vòng 1
+caogia	cao giá	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	cáo già[O:K1_GIAP_RANH;A:K1;r=0.450]	giữ lập trường vòng 1
+caotang	cao tầng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cao tăng[O:-;A:K2;r=0.064]; cảo táng[O:-;A:K2;r=0.000]; cáo tang[O:KHONG_DO;A:K2;r=0.000]	giữ lập trường vòng 1
+caumay	cau mày	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cầu may[O:KHONG_DO;A:K2;r=0.907]	giữ lập trường vòng 1
+caukinh	cáu kỉnh	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	cầu kinh[O:-;A:K2;r=0.123]	giữ lập trường vòng 1
+camdau	cắm đầu	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	cầm đầu[O:K2;A:K1;r=4.311]	M: cầm đầu nghĩa chung là đứng đầu
+cancau	cần câu	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cắn cấu[O:KHONG_DO;A:K2;r=0.000]	giữ lập trường vòng 1
+cancu	cần cù	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	căn cứ[O:KHONG_DO;A:CHO;r=49.418]	giữ lập trường vòng 1
+canthan	cẩn thận	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	cận thần[O:-;A:K2;r=0.002]	giữ lập trường vòng 1
+caudao	cầu dao	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	cầu đảo[O:-;A:K2;r=0.011]	giữ lập trường vòng 1
+cauhon	cầu hôn	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	cầu hồn[O:-;A:K2;r=0.029]	giữ lập trường vòng 1
+chay	chạy	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	chay[O:KHONG_DO;A:K2;r=0.027]; cháy[O:KHONG_DO;A:K2;r=0.328]	giữ lập trường vòng 1
+cham	chậm	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	chàm[O:K2;A:CHO;r=0.058]	giữ lập trường vòng 1
+chan	chân	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	chẩn[O:KHONG_DO;A:K2;r=0.002]	giữ lập trường vòng 1
+chandat	chân đất	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	chăn dắt[O:KHONG_DO;A:CHO;r=4.727]	giữ lập trường vòng 1
+chau	chậu	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	chầu[O:KHONG_DO;A:CHO;r=0.234]	giữ lập trường vòng 1
+chiphoi	chi phối	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	chíp hôi[O:-;A:K2;r=0.011]	giữ lập trường vòng 1
+chien	chiên	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	chiến[O:K2;A:K1;r=1.931]	M: chiến đứng riêng là tiếng lóng (chiến quá); nghĩa chiến tranh cần từ ghép
+choang	choàng	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	choảng[O:-;A:K2;r=0.428]; choáng[O:KHONG_DO;A:K1;r=4.793]	M: choáng còn nghĩa choáng ngợp
+chom	chỏm	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	chôm[O:K2;A:K1;r=13.481]	đổi sang K1: chôm G2 (ăn cắp), r 13,5
+choi	chổi	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	chọi[O:KHONG_DO;A:K2;r=0.278]	giữ lập trường vòng 1
+chon	chồn	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	chôn[O:K2;A:K1;r=3.220]	đổi sang K1: chôn G4, r 3,2
+chong	chồng	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	chông[O:KHONG_DO;A:K1;r=0.005]	r 0,005
+chonglai	chống lại	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	chổng lái[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+chot	chốt	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	chột[O:K2;A:K1;r=0.019]	r 0,019
+chuy	chú ý	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	chuỳ[O:K2;A:K1;r=0.005]; chùy[O:K2;A:K1;r=0.005]	r 0,005
+chung	chung	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	chủng[O:KHONG_DO;A:CHO;r=0.097]; chứng[O:KHONG_DO;A:CHO;r=0.199]	giữ lập trường vòng 1
+chungcu	chung cư	CO	K1_GIAP_RANH	K2	THAY|KY_K2	K2	KY_K2|KY_K2	HOA	chứng cứ[O:K1_GIAP_RANH;A:K2;r=1.438]	sửa, nhận ý Astra: chứng cứ là bằng chứng nói chung, không riêng tố tụng như nhân chứng
+chuong	chuông	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	chưởng[O:KHONG_DO;A:K1;r=0.121]	M: chưởng (phim chưởng)
+chunghia	chữ nghĩa	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+chungnhan	chứng nhận	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+cotrang	cò trắng	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	cờ trắng[O:KHONG_DO;A:K1;r=18.943]	M: biểu tượng; tiền lệ đô đốc
+comat	có mặt	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	cơ mật[O:KHONG_DO;A:K1;r=0.008]	r 0,008
+codau	cô dâu	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cô đầu[O:KHONG_DO;A:K2;r=0.002]	giữ lập trường vòng 1
+codong	cổ đông	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	cô đồng[O:-;A:K2;r=0.016]; cơ động[O:KHONG_DO;A:CHO;r=0.217]	giữ lập trường vòng 1
+cothu	cổ thụ	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	cố thủ[O:K1_GIAP_RANH;A:K1;r=2.546]	giữ lập trường vòng 1
+covu	cổ vũ	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+codo	cố đô	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cô đỡ[O:-;A:K2;r=0.265]	giữ lập trường vòng 1
+congchung	công chúng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	công chứng[O:KHONG_DO;A:K2;r=0.221]	giữ lập trường vòng 1
+congcu	công cụ	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	công cử[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+congdoan	công đoạn	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	công đoàn[O:KHONG_DO;A:CHO;r=3.316]	giữ lập trường vòng 1
+cong	cổng	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	còng[O:K2;A:CHO;r=0.096]	giữ lập trường vòng 1
+congsu	cộng sự	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	công sứ[O:-;A:K2;r=0.014]; công sự[O:K2;A:K1;r=0.052]	đổi sang K1: công sự G1, r 0,052
+coso	cơ sở	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	có số[O:KHONG_DO;A:K2;r=0.058]	giữ lập trường vòng 1
+cungcap	cung cấp	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cúng cấp[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+cuoc	cuốc	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	cược[O:K2;A:K1;r=32.129]	đổi sang K1: cược G7, r 32
+cuong	cuống	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	cuồng[O:K2;A:CHO;r=1.464]; cưỡng[O:K2;A:CHO;r=1.933]	giữ lập trường vòng 1
+cuoi	cười	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	cuội[O:KHONG_DO;A:K2;r=0.004]	giữ lập trường vòng 1
+dade	da dẻ	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	dạ đề[O:-;A:K2;r=0.030]	giữ lập trường vòng 1
+daga	da gà	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	đá gà[O:-;A:K2;r=0.123]	giữ lập trường vòng 1
+daihan	dài hạn	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	đại hạn[O:-;A:K2;r=0.001]	giữ lập trường vòng 1
+dany	dàn ý	CO	KHONG_DO	K1	GIU|THAY	K1	THAY|THAY	HOA	dân y[O:KHONG_DO;A:K1;r=16.551]; dân ý[O:KHONG_DO;A:K1;r=5.733]	đổi sang K1: dân ý G3 (trưng cầu), r 5,7
+danmat	dán mắt	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	dằn mặt[O:-;A:K2;r=0.158]	giữ lập trường vòng 1
+danhba	danh bạ	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	đánh bả[O:KHONG_DO;A:K2;r=0.003]	giữ lập trường vòng 1
+dando	dặn dò	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+dancu	dân cư	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	dân cử[O:-;A:K2;r=0.007]	giữ lập trường vòng 1
+dehieu	dễ hiểu	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	đế hiệu[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+didoi	di dời	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	đi đời[O:K1_GIAP_RANH;A:K1;r=0.341]	giữ lập trường vòng 1
+didong	di động	CO	KHONG_DO	K0	GIU|THAY	K2_DA_KY	GIU|THAY	LECH	đi đong[O:-;A:K2;r=0.000]; đi đồng[O:-;A:K0;r=0.000]	giữ K2 đã ký, không có chứng cứ mới: chu-ky.tsv:786–787 (đi đồng); enwiktionary chỉ ghi dialectal, colloquial (rev 84662196)
+dieu	diều	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	điêu[O:KHONG_DO;A:K1;r=0.588]; điếu[O:K2;A:K1;r=1.920]	đổi sang K1: điếu G7 r 1,9; điêu G9 r 0,59
+dohoi	dò hỏi	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	dở hơi[O:K1_GIAP_RANH;A:K1;r=8.572]	giữ lập trường vòng 1
+danang	đa năng	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	đa nang[O:K2;A:K1;r=0.022]	r 0,022
+daidien	đại diện	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	đại điển[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+danhac	đàn hạc	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	đàn hặc[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+danhbai	đánh bại	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	đánh bài[O:K2;A:K1;r=0.052]	đổi sang K1: đánh bài G7, r 0,052
+danhhoi	đánh hơi	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	đánh hôi[O:KHONG_DO;A:K2;r=0.000]	giữ lập trường vòng 1
+daodien	đạo diễn	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	dao điện[O:KHONG_DO;A:K2;r=0.008]	giữ lập trường vòng 1
+damda	đậm đà	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+daumua	đầu mùa	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+dendo	đèn đỏ	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	đen đỏ[O:-;A:K2;r=0.078]	giữ lập trường vòng 1
+decu	đề cử	CO	-	K1	GIU|THAY	K2	KY_K2|THAY	LECH	dê cụ[O:-;A:K1;r=0.005]	dê cụ r 0,005, dưới 0,3
+didao	đi dạo	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	đi đạo[O:-;A:K2;r=0.001]	giữ lập trường vòng 1
+dich	đích	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	dịch[O:K2;A:CHO;r=5.670]; địch[O:K2;A:K1;r=0.833]	đổi sang K1: địch G1, r 0,83
+diemnhan	điểm nhấn	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	điểm nhãn[O:KHONG_DO;A:CHO;r=-]	giữ lập trường vòng 1
+dieuhanh	điều hành	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	diễu hành[O:KHONG_DO;A:CHO;r=0.085]	giữ lập trường vòng 1
+dinh	đinh	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	đình[O:KHONG_DO;A:CHO;r=0.545]	giữ lập trường vòng 1
+dinhhon	đính hôn	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	định hồn[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+dotham	đỏ thắm	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	dọ thám[O:-;A:K2;r=0.473]	giữ lập trường vòng 1
+dobac	đồ bạc	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	đổ bác[O:K2;A:CHO;r=-]	giữ lập trường vòng 1
+dongdao	đông đảo	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	đồng đạo[O:-;A:K2;r=0.055]	giữ lập trường vòng 1
+dongduc	đông đúc	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	động dục[O:K2;A:K1;r=0.080]; động đực[O:-;A:K1;r=0.024]	M: động dục, động đực; tiền lệ đồng tình/động tình KHONG_TU_DONG
+dongco	đồng cỏ	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	đồng cô[O:-;A:K2;r=0.015]	giữ lập trường vòng 1
+dongy	đồng ý	CO	KHONG_DO	K1	GIU|THAY	KHONG_DO	GIU|THAY	LECH	đông y[O:KHONG_DO;A:K1;r=0.004]	đông y là y học cổ truyền, không phải bệnh
+dongtu	động từ	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	đồng tử[O:KHONG_DO;A:K2;r=0.620]	giữ lập trường vòng 1
+dotpha	đột phá	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	đốt phá[O:K2;A:K1;r=0.087]	đổi sang K1: đốt phá G1/G2, r 0,087
+duoc	đuốc	CO	KHONG_DO	K1	GIU|THAY	KHONG_DO	GIU|THAY	LECH	dược[O:KHONG_DO;A:K1;r=13.677]	dược là thuốc, dược phẩm; hình vị, không phải bệnh
+dung	đứng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	đũng[O:KHONG_DO;A:K2;r=0.002]	giữ lập trường vòng 1
+gaygo	gầy gò	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	gây gổ[O:K1_GIAP_RANH;A:K1;r=0.923]	giữ lập trường vòng 1
+ghen	ghen	CO	-	CHO	GIU|CHO	-	GIU|CHO	LECH	ghèn[O:-;A:CHO;r=0.003]	giữ lập trường vòng 1
+giam	giảm	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	giam[O:K2;A:K1;r=0.099]	đổi sang K1: giam G2, r 0,099
+gian	gián	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	gian[O:KHONG_DO;A:K1;r=0.553]	M: nghĩa chính của gian là gian nhà, gian hàng; nghĩa dối trá chủ yếu trong từ ghép
+giang	giảng	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	giàng[O:KHONG_DO;A:K1;r=0.101]	M: giàng hiếm, vùng
+giao	giao	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	giảo[O:-;A:K2;r=0.001]; giáo[O:KHONG_DO;A:K1;r=0.117]	M: giáo đa nghĩa
+giaohuu	giao hữu	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	giáo hữu[O:-;A:K2;r=0.107]	giữ lập trường vòng 1
+giac	giấc	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	giặc[O:K2;A:K1;r=0.359]	đổi sang K1: giặc G1, r 0,36
+giandoi	giận dỗi	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+gioi	giỏi	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	giối[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+gioigiang	giỏi giang	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	giối giăng[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+giong	giọng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	giông[O:KHONG_DO;A:K2;r=0.053]	giữ lập trường vòng 1
+gong	gọng	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	gông[O:K2;A:K1;r=0.287]	đổi sang K1: gông G2, r 0,29
+haidao	hải đảo	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	hải đạo[O:-;A:K2;r=0.028]	giữ lập trường vòng 1
+hang	hang	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+hanhtoi	hành tỏi	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	hành tội[O:KHONG_DO;A:K2;r=0.281]	giữ lập trường vòng 1
+hatho	hát hò	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	hạ thọ[O:KHONG_DO;A:K2;r=0.000]; hạ thổ[O:KHONG_DO;A:K2;r=0.057]	giữ lập trường vòng 1
+hamho	hăm hở	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	ham hố[O:-;A:K2;r=0.531]	giữ lập trường vòng 1
+hammo	hâm mộ	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	hầm mộ[O:K2;A:K1;r=0.109]	đổi sang K1: hầm mộ G4, r 0,11
+hiem	hiếm	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	hiềm[O:-;A:K2;r=0.003]	giữ lập trường vòng 1
+hohen	hò hẹn	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	ho hen[O:-;A:K2;r=0.015]	giữ lập trường vòng 1
+hohang	họ hàng	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	ho hắng[O:-;A:K2;r=0.000]; hở hang[O:K2;A:CHO;r=0.050]	giữ lập trường vòng 1
+hoamai	hoa mai	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	hoả mai[O:K2;A:K1;r=1.367]	đổi sang K1: hoả mai G1 (súng), r 1,37
+hoatai	hoa tai	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	hoả tai[O:-;A:K2;r=0.002]	giữ lập trường vòng 1
+hoangdao	hoang đảo	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	hoàng đạo[O:K2;A:CHO;r=8.964]	giữ lập trường vòng 1
+hoangso	hoang sơ	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	hoảng sợ[O:KHONG_DO;A:CHO;r=3.736]	giữ lập trường vòng 1
+hoanghon	hoàng hôn	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	hoảng hồn[O:-;A:K2;r=0.024]	giữ lập trường vòng 1
+hoitham	hỏi thăm	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	hội thẩm[O:K2;A:K1;r=0.175]	đổi sang K1: hội thẩm G2, r 0,18
+homhinh	hóm hỉnh	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	hợm hĩnh[O:K1_GIAP_RANH;A:K1;r=2.367]	giữ lập trường vòng 1
+hongmat	hóng mát	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	hỏng mắt[O:-;A:K2;r=0.208]	giữ lập trường vòng 1
+hotieu	hồ tiêu	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	hố tiểu[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+homang	hổ mang	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	hộ mạng[O:KHONG_DO;A:K2;r=0.162]	giữ lập trường vòng 1
+hoga	hố ga	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+hung	húng	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	hung[O:K2;A:K1;r=10.788]	M: hung đa nghĩa (màu hung)
+hungho	hững hờ	CO	-	K1	GIU|THAY	K2	KY_K2|THAY	LECH	hùng hổ[O:-;A:K1;r=4.437]	M: hùng hổ tả dáng điệu (còi tương đối: 0,248 ≥ 0,056 PPM)
+keca	kể cả	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	kẻ cả[O:KHONG_DO;A:K1;r=0.010]	r 0,010
+ketoan	kế toán	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	kết oán[O:-;A:K2;r=0.003]	giữ lập trường vòng 1
+khac	khác	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	khạc[O:K2;A:CHO;r=0.001]	giữ lập trường vòng 1
+kham	khảm	CO	K2_DA_KY	K1	GIU|THAY	K2_DA_KY	GIU|THAY	LECH	khám[O:KHONG_DO;A:K1;r=2.702]; khắm[O:K2_DA_KY;A:K1;r=0.065]	giữ K2 đã ký, không có chứng cứ mới: chu-ky.tsv:1270–1271 (lý do có nêu nghĩa nhà tù của khám)
+khao	khao	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	khả ố[O:-;A:K2;r=0.016]	giữ lập trường vòng 1
+khan	khăn	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	khàn[O:KHONG_DO;A:K1;r=0.010]; khản[O:-;A:K2;r=0.002]; khấn[O:K2;A:K1;r=0.010]	r 0,010
+khia	khía	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	khịa[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+khien	khiến	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	khiên[O:K2;A:K1;r=0.052]	M: khiên là đồ che, không phải vũ khí sát thương
+khoa	khoa	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	khoả[O:KHONG_DO;A:K2;r=0.038]; khỏa[O:KHONG_DO;A:K2;r=0.038]	giữ lập trường vòng 1
+khom	khóm	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	khọm[O:-;A:K2;r=0.212]	giữ lập trường vòng 1
+khuan	khuân	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+khuy	khuy	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	khụy[O:KHONG_DO;A:CHO;r=-]; khuỵ[O:KHONG_DO;A:CHO;r=-]	giữ lập trường vòng 1
+khukhu	khư khư	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	khừ khừ[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+kien	kiến	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	kiện[O:K2;A:K1;r=0.432]	đổi sang K1: kiện G2, r 0,43
+kieu	kiểu	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	kiêu[O:KHONG_DO;A:K1;r=0.002]	r 0,002
+kinh	kính	CO	KHONG_DO	K1	GIU|THAY	K2_DA_KY	GIU|THAY	LECH	kinh[O:KHONG_DO;A:K1;r=0.326]	giữ K2 đã ký, không có chứng cứ mới: chu-ky.tsv:1338–1339
+lachau	lạc hậu	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	lạc hầu[O:-;A:K2;r=0.002]	giữ lập trường vòng 1
+lamkho	làm khó	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	làm khổ[O:KHONG_DO;A:CHO;r=0.279]	giữ lập trường vòng 1
+lammau	làm mẫu	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	làm màu[O:KHONG_DO;A:K1;r=0.244]	M: làm màu là lóng
+lang	làng	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	lăng[O:K2;A:K1;r=0.112]	đổi sang K1: lăng G4 (lăng mộ), r 0,11
+langnhang	lằng nhằng	CO	K1	K0	THAY|THAY	K1	THAY|THAY	HOA	lăng nhăng[O:K1;A:K0;r=1.271]	giữ lập trường vòng 1
+layco	lấy cớ	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	lảy cò[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+leduong	lề đường	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	lê dương[O:KHONG_DO;A:K1;r=0.131]; lễ đường[O:KHONG_DO;A:K2;r=0.158]	M: lê dương là tên lịch sử
+liem	liềm	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	liếm[O:K2;A:KHONG_DO;r=37.826]; liệm[O:-;A:K2;r=0.813]	giữ lập trường vòng 1
+lienquan	liên quan	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	liên quân[O:K2;A:K1;r=0.003]	r 0,003
+linhdong	linh động	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	lính dõng[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+lolang	lo lắng	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	lố lăng[O:KHONG_DO;A:K1;r=0.004]	r 0,004
+loithoi	lỗi thời	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	lôi thôi[O:KHONG_DO;A:CHO;r=0.139]	giữ lập trường vòng 1
+loloi	lỡ lời	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	lở lói[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+loithe	lợi thế	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	lời thề[O:KHONG_DO;A:K2;r=0.171]	giữ lập trường vòng 1
+luoi	lưới	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	lười[O:KHONG_DO;A:K1;r=0.025]	r 0,025
+luong	lương	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	lũ ống[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+manh	mạnh	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	mánh[O:KHONG_DO;A:K2;r=0.023]	giữ lập trường vòng 1
+mang	măng	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	mắng[O:K2;A:K1;r=1.399]	đổi sang K1: mắng G9, r 1,4
+matkinh	mắt kính	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	mất kinh[O:-;A:K2;r=0.024]	giữ lập trường vòng 1
+mathang	mặt hàng	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	mạt hạng[O:-;A:K2;r=0.011]	giữ lập trường vòng 1
+matnuoc	mặt nước	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	mất nước[O:K2;A:CHO;r=0.992]	giữ lập trường vòng 1
+mattrang	mặt trăng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	mất trắng[O:KHONG_DO;A:K2;r=0.019]	giữ lập trường vòng 1
+meomo	méo mó	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	mèo mỡ[O:-;A:K2;r=0.003]	giữ lập trường vòng 1
+meman	mê mẩn	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	mê man[O:K1_GIAP_RANH;A:K1;r=0.536]	giữ lập trường vòng 1
+momay	mở máy	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	mó máy[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+moimoc	mời mọc	CO	KHONG_DO	K1	GIU|THAY	K1	THAY|THAY	HOA	moi móc[O:KHONG_DO;A:K1;r=0.941]	đổi sang K1: moi móc G9, r 0,94
+mung	mừng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	mưng[O:-;A:K2;r=0.001]	giữ lập trường vòng 1
+nammo	nằm mơ	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	nam mô[O:K2;A:K1;r=0.150]	giữ lập trường vòng 1
+namvung	nắm vững	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	nằm vùng[O:K1_GIAP_RANH;A:K1;r=0.918]	giữ lập trường vòng 1
+nang	nắng	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	nang[O:KHONG_DO;A:CHO;r=0.839]	giữ lập trường vòng 1
+ngaingu	ngái ngủ	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	ngài ngự[O:-;A:K2;r=0.097]	giữ lập trường vòng 1
+ngai	ngại	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	ngai[O:KHONG_DO;A:K1;r=0.249]; ngải[O:K2;A:KHONG_DO;r=0.136]	M: ngai (ngai vàng) là biểu tượng
+ngao	ngao	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	ngáo[O:K2;A:K1;r=1.051]; ngạo[O:KHONG_DO;A:K1;r=0.767]	M: ngáo, ngạo là lóng/hình vị
+ngap	ngáp	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	ngập[O:K2;A:CHO;r=15.055]	M, nhận ý Astra: ngập còn nghĩa chìm, ngập việc; H6 chỉ ghi ngập úng
+ngat	ngắt	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	ngạt[O:K2;A:K1;r=0.053]; ngất[O:K2;A:K1;r=0.370]	đổi sang K1: ngất G5, r 0,37; ngạt 0,053
+ngheo	nghèo	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	nghẻo[O:K2;A:CHO;r=-]	giữ lập trường vòng 1
+nghe	nghệ	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	nghè[O:-;A:K2;r=0.018]; nghê[O:KHONG_DO;A:K2;r=0.075]	giữ lập trường vòng 1
+nghi	nghỉ	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	nghị[O:KHONG_DO;A:K2;r=0.030]	giữ lập trường vòng 1
+ngoc	ngọc	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	ngốc[O:K2;A:K1;r=1.498]	đổi sang K1: ngốc G9, r 1,5
+ngong	ngỗng	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	ngọng[O:-;A:K2;r=0.024]	giữ lập trường vòng 1
+nguy	ngụ ý	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	ngự y[O:-;A:K2;r=0.057]	giữ lập trường vòng 1
+ngum	ngụm	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	ngủm[O:K2;A:K1;r=0.345]	đổi sang K1: ngủm G4, r 0,35
+nguyen	nguyên	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	nguyền[O:K2;A:K1;r=0.314]	M: nguyền, nguyện là hình vị
+ngua	ngựa	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	ngứa[O:K2;A:K1;r=0.191]	đổi sang K1: ngứa G5 (H6 ngứa ngáy), r 0,19
+nhadam	nha đam	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	nhà đám[O:-;A:K2;r=0.009]	giữ lập trường vòng 1
+nhaga	nhà ga	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	nhà gá[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+nhai	nhai	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	nhãi[O:K2;A:K1;r=0.333]	đổi sang K1: nhãi G9, r 0,33
+nhau	nhàu	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	nhậu[O:K2;A:K1;r=12.532]	đổi sang K1: nhậu G7, r 12,5
+nhaynhot	nhảy nhót	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	nhây nhớt[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+nhat	nhặt	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	nhát[O:KHONG_DO;A:K2;r=0.511]	giữ lập trường vòng 1
+nhamnhi	nhâm nhi	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	nhảm nhí[O:KHONG_DO;A:K1;r=8.110]	M: nhảm nhí chê lời nói, không chê người; tiền lệ mất mặt K2
+nhanthuc	nhận thức	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	nhãn thức[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+nhoi	nhồi	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	nhói[O:KHONG_DO;A:K1;r=0.074]	M: nhói là cảm giác
+nhot	nhốt	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	nhọt[O:K2;A:K1;r=0.047]; nhột[O:KHONG_DO;A:K2;r=0.076]	đổi sang K1: nhọt G5, r 0,047
+nhodoi	nhớ đời	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	nhơ đời[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+nhung	nhung	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+nich	ních	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	nịch[O:KHONG_DO;A:K2;r=-]	giữ lập trường vòng 1
+nieu	niêu	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	niệu[O:K2;A:CHO;r=6.281]	giữ lập trường vòng 1
+noitham	nói thầm	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	nội thẩm[O:-;A:K2;r=0.009]	giữ lập trường vòng 1
+nong	nóng	CO	K2	KHONG_DO	KY_K2|GIU	K2	KY_K2|GIU	LECH	nòng[O:K2;A:KHONG_DO;r=0.011]	giữ lập trường vòng 1
+nonghoi	nóng hổi	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	nông hội[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+nuong	nướng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	nường[O:-;A:K2;r=0.001]	giữ lập trường vòng 1
+ongtho	ong thợ	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	ống thở[O:KHONG_DO;A:CHO;r=4.397]	giữ lập trường vòng 1
+onglao	ông lão	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	ống lao[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+phanbac	phản bác	CO	-	K0	GIU|THAY	K0	THAY|THAY	HOA	phân bắc[O:-;A:K0;r=0.000]	chấp nhận: phân bắc là chất thải người, có mục vi.wiktionary (rev 1892186)
+phandoi	phản đối	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	phân đội[O:-;A:K2;r=0.008]	giữ lập trường vòng 1
+phancong	phân công	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	phản công[O:K1_GIAP_RANH;A:K1;r=1.248]	giữ lập trường vòng 1
+phancung	phần cứng	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	phản cung[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+phebinh	phê bình	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	phế binh[O:-;A:K2;r=0.010]	giữ lập trường vòng 1
+phet	phết	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	phét[O:-;A:K2;r=0.041]	giữ lập trường vòng 1
+phia	phía	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	phịa[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+phien	phiên	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	phiện[O:-;A:K2;r=0.002]	giữ lập trường vòng 1
+phongbi	phong bì	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	phòng bị[O:KHONG_DO;A:K1;r=0.095]	M: phòng bị là đề phòng
+phongthu	phong thư	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	phòng thủ[O:K1_GIAP_RANH;A:K1;r=47.824]	giữ lập trường vòng 1
+phong	phòng	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	phỏng[O:KHONG_DO;A:K1;r=0.004]	r 0,004
+phongan	phòng ăn	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	phong ấn[O:KHONG_DO;A:K2;r=0.368]	giữ lập trường vòng 1
+phongngu	phòng ngủ	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	phòng ngự[O:K2;A:K1;r=0.031]	r 0,031
+phongthan	phòng thân	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	phong thần[O:-;A:K2;r=0.196]	giữ lập trường vòng 1
+phudau	phù dâu	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	phủ đầu[O:KHONG_DO;A:K1;r=0.255]	M: phủ đầu là dằn mặt
+phude	phụ đề	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	phủ đệ[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+phuc	phúc	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	phục[O:KHONG_DO;A:K2;r=0.989]	giữ lập trường vòng 1
+phuong	phượng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	phướng[O:-;A:K2;r=0.008]	giữ lập trường vòng 1
+quatang	quà tặng	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	quả tang[O:K2;A:K1;r=0.031]	r 0,031; quả tang chỉ trong bắt quả tang
+quai	quai	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+quanquan	quán quân	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	quan quân[O:KHONG_DO;A:K2;r=0.120]; quân quan[O:KHONG_DO;A:K2;r=0.020]; quân quản[O:-;A:K2;r=0.022]	giữ lập trường vòng 1
+quanxa	quán xá	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	quân xa[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+quanco	quân cờ	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	quản cơ[O:-;A:K2;r=0.057]; quân cơ[O:-;A:K2;r=0.121]	giữ lập trường vòng 1
+quandao	quần đảo	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	quản đạo[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+quen	quên	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	quèn[O:KHONG_DO;A:K1;r=0.007]	r 0,007
+quyen	quyển	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	quyền[O:K2;A:CHO;r=9.073]	giữ lập trường vòng 1
+quyet	quyết	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	quyệt[O:-;A:K2;r=0.007]	giữ lập trường vòng 1
+rach	rách	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+ranh	rãnh	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	ranh[O:KHONG_DO;A:CHO;r=0.208]	giữ lập trường vòng 1
+rungdong	rung động	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	rúng động[O:KHONG_DO;A:CHO;r=0.041]	giữ lập trường vòng 1
+sang	sàng	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	sảng[O:K2;A:K1;r=0.038]	M: sảng chủ yếu trong mê sảng; r 0,038
+sanday	sắn dây	CO	K1	K2	THAY|KY_K2	K2	KY_K2|KY_K2	HOA	sán dây[O:K1;A:K2;r=34.877]	sửa, nhận ý Astra: sán dây là tên loài; H6 nhóm 10 không loại tên con vật (bọ chét, chuột cống)
+sanga	sân ga	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	sa ngã[O:K2;A:K1;r=0.627]	M: sa ngã là thói xấu nói chung
+sautham	sâu thẳm	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	sầu thảm[O:-;A:K2;r=0.034]	giữ lập trường vòng 1
+song	sông	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	sòng[O:K2;A:K1;r=0.076]	M: sòng là hình vị (sòng bạc), cũng nghĩa sòng phẳng
+suco	sự cố	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	sư cô[O:-;A:K2;r=0.002]	giữ lập trường vòng 1
+suthuc	sự thực	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	sư thúc[O:-;A:K2;r=0.105]	giữ lập trường vòng 1
+suong	sương	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	sư ông[O:-;A:K2;r=0.002]; sướng[O:KHONG_DO;A:K2;r=1.867]	giữ lập trường vòng 1
+taihoa	tài hoa	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+taothanh	tạo thành	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	tảo thanh[O:-;A:K2;r=0.006]	giữ lập trường vòng 1
+tanggia	tăng giá	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	tang gia[O:KHONG_DO;A:K2;r=0.031]; tăng già[O:-;A:K2;r=0.007]	giữ lập trường vòng 1
+tangtoc	tăng tốc	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	tang tóc[O:KHONG_DO;A:K2;r=0.009]	giữ lập trường vòng 1
+tamdiem	tâm điểm	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	tam điểm[O:KHONG_DO;A:K2;r=0.320]	giữ lập trường vòng 1
+thai	thái	CO	K2	CHO	KY_K2|CHO	K1	THAY|CHO	LECH	thai[O:K2;A:CHO;r=1.555]; thải[O:K2;A:KHONG_DO;r=0.741]	đổi sang K1: thai G6, r 1,6
+tham	thảm	CO	KHONG_DO	K1	GIU|THAY	K1	THAY|THAY	HOA	tham[O:KHONG_DO;A:K1;r=0.237]	đổi sang K1: tham G9 (tham lam), r 0,24
+thamhiem	thám hiểm	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	thâm hiểm[O:-;A:K2;r=0.013]	giữ lập trường vòng 1
+than	than	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	thần[O:K2;A:K1;r=1.816]	đổi sang K1: thần G4, r 1,8
+thanphuc	thán phục	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	thần phục[O:-;A:K2;r=0.210]	giữ lập trường vòng 1
+thang	thang	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+thamthiet	thắm thiết	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	thảm thiết[O:KHONG_DO;A:K1;r=0.770]	M: thảm thiết tả tiếng khóc; tiền lệ đớn đau K2
+thanminh	thân mình	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	thần minh[O:-;A:K2;r=0.016]	giữ lập trường vòng 1
+thattinh	thật tình	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	thất tình[O:KHONG_DO;A:K2;r=0.156]	giữ lập trường vòng 1
+thay	thầy	CO	K2_DA_KY	K1	GIU|THAY	K2_DA_KY	GIU|THAY	LECH	thây[O:K2_DA_KY;A:K1;r=0.016]	giữ K2 đã ký, không có chứng cứ mới: chu-ky.tsv:2152–2154
+thayco	thầy cô	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	thầy cò[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+theo	theo	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	thẻo[O:KHONG_DO;A:CHO;r=0.000]; thẹo[O:K2;A:K1;r=0.001]	r 0,001
+theluc	thể lực	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	thế lực[O:K1_GIAP_RANH;A:K1;r=2.453]	giữ lập trường vòng 1
+thitruong	thị trường	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	thị trưởng[O:K2;A:K1;r=0.070]	M: thị trưởng là chức danh
+thientai	thiên tài	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+thiep	thiệp	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	thiếp[O:KHONG_DO;A:K2;r=2.102]	giữ lập trường vòng 1
+thieu	thiếu	CO	K2	KHONG_DO	KY_K2|GIU	K2	KY_K2|GIU	LECH	thiêu[O:K2;A:KHONG_DO;r=0.234]	giữ lập trường vòng 1
+thinh	thính	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	thỉnh[O:KHONG_DO;A:CHO;r=0.852]	giữ lập trường vòng 1
+thongdong	thong dong	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+thoi	thổi	CO	K2_DA_KY	K1	GIU|THAY	K2_DA_KY	GIU|THAY	LECH	thối[O:K2_DA_KY;A:K1;r=0.172]	giữ K2 đã ký, không có chứng cứ mới: chu-ky.tsv:2198–2199
+thon	thôn	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	thộn[O:KHONG_DO;A:K1;r=0.292]	M: thộn (ngây thộn), chê nhẹ
+thot	thớt	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	thọt[O:K2;A:K1;r=0.218]	đổi sang K1: thọt G5, r 0,22
+thuan	thuần	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	thụ án[O:K2;A:K1;r=0.081]; thuẫn[O:-;A:K2;r=0.038]	M: thụ án phải tách ép
+thue	thuê	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	thuế[O:KHONG_DO;A:K2;r=0.618]	giữ lập trường vòng 1
+thung	thùng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	thũng[O:-;A:K2;r=0.001]	giữ lập trường vòng 1
+thuthai	thư thái	CO	K1	K1	THAY|THAY	K1	THAY|THAY	HOA	-	giữ lập trường vòng 1
+thuhai	thứ hai	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	thụ hại[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+thutu	thứ tư	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	thủ từ[O:KHONG_DO;A:K2;r=0.002]	giữ lập trường vòng 1
+tich	tích	CO	K2	KHONG_DO	KY_K2|GIU	K2	KY_K2|GIU	LECH	tịch[O:K2;A:KHONG_DO;r=0.162]	giữ lập trường vòng 1
+tiem	tiệm	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	tiêm[O:K2;A:K1;r=2.579]	M: tiêm là việc y tế thường ngày (như đánh răng, kính cận ở H6), không phải y khoa chuyên biệt
+tiennu	tiên nữ	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	tiện nữ[O:-;A:K2;r=0.300]	giữ lập trường vòng 1
+tien	tiền	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	tiên[O:KHONG_DO;A:K2;r=0.058]	giữ lập trường vòng 1
+tiencong	tiền công	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	tiến công[O:K1_GIAP_RANH;A:K1;r=0.930]; tiến cống[O:-;A:K2;r=0.014]	giữ lập trường vòng 1
+tienluong	tiền lương	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	tiên lượng[O:KHONG_DO;A:CHO;r=0.167]	giữ lập trường vòng 1
+tiepvien	tiếp viên	CO	K1_GIAP_RANH	K1	THAY|THAY	K1	THAY|THAY	HOA	tiếp viện[O:K1_GIAP_RANH;A:K1;r=0.831]	giữ lập trường vòng 1
+tinhtu	tình tứ	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	tinh tử[O:KHONG_DO;A:CHO;r=0.000]	giữ lập trường vòng 1
+tinhbo	tỉnh bơ	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	tỉnh bộ[O:-;A:K2;r=0.056]	giữ lập trường vòng 1
+tinhkhi	tính khí	CO	KHONG_DO	K0	GIU|THAY	K0	THAY|THAY	HOA	tinh khí[O:KHONG_DO;A:K0;r=0.025]	chấp nhận: vi.wiktionary tinh khí trỏ tới tinh dịch (rev 1930782); tinhdich là K0_TU_DIEN
+toida	tối đa	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	tối dạ[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+toitan	tối tân	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	tồi tàn[O:KHONG_DO;A:K2;r=0.805]	giữ lập trường vòng 1
+tong	tổng	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	tong[O:KHONG_DO;A:K2;r=0.039]; tông[O:KHONG_DO;A:CHO;r=0.177]; tống[O:KHONG_DO;A:K2;r=0.103]	giữ lập trường vòng 1
+tram	trạm	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	trảm[O:K2;A:K1;r=0.008]; trẫm[O:K2;A:K1;r=0.036]	M: trẫm là xưng hô cổ, r 0,036 sát mốc; trảm r 0,008
+tran	trán	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	trần[O:KHONG_DO;A:K2;r=11.961]; trận[O:K2;A:CHO;r=16.438]	giữ lập trường vòng 1
+trangtron	trăng tròn	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	trắng trợn[O:KHONG_DO;A:K1;r=0.476]	M: trắng trợn là trạng từ chê
+treo	treo	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	trẹo[O:KHONG_DO;A:K1;r=0.005]	r 0,005
+trieu	triệu	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	triều[O:K2;A:CHO;r=0.092]	giữ lập trường vòng 1
+trinhdien	trình diễn	CO	KHONG_DO	K1	GIU|THAY	K2	KY_K2|THAY	LECH	trình diện[O:KHONG_DO;A:K1;r=0.159]	M: trình diện
+tron	tròn	CO	K2	K2	KY_K2|KY_K2	K2	KY_K2|KY_K2	HOA	-	giữ lập trường vòng 1
+troi	trời	CO	K2	K1	KY_K2|THAY	K1	THAY|THAY	HOA	trói[O:K2;A:K1;r=0.158]; trối[O:K2;A:K1;r=0.009]	đổi sang K1: trói G2, r 0,16
+trungbinh	trung bình	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	trưng binh[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+trungthu	trung thu	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	trúng thử[O:-;A:K2;r=0.000]; trưng thu[O:-;A:K2;r=0.021]	giữ lập trường vòng 1
+trungthuc	trung thực	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	trúng thực[O:-;A:K2;r=0.001]	giữ lập trường vòng 1
+trung	trứng	CO	K2_DA_KY	K2	GIU|KY_K2	K2_DA_KY	GIU|KY_K2	LECH	trùng[O:KHONG_DO;A:K2;r=0.502]; trừng[O:K2_DA_KY;A:K2;r=0.015]	giữ lập trường vòng 1
+truong	trường	CO	K2	CHO	KY_K2|CHO	K2	KY_K2|CHO	LECH	truồng[O:K2;A:CHO;r=0.001]; trượng[O:KHONG_DO;A:CHO;r=0.016]	giữ lập trường vòng 1
+tung	tung	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	tụng[O:K2;A:K1;r=0.014]	r 0,014
+tuai	tự ái	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	tự ải[O:KHONG_DO;A:K2;r=0.000]	giữ lập trường vòng 1
+tudo	tự do	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	tư đồ[O:-;A:K2;r=0.002]	giữ lập trường vòng 1
+tutien	tự tiện	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	tu tiên[O:-;A:K2;r=0.015]	giữ lập trường vòng 1
+tuong	tường	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	tướng[O:K2;A:K1;r=0.093]	M: tướng đa nghĩa; tiền lệ đô đốc
+vatva	vất vả	CO	KHONG_DO	CHO	GIU|CHO	KHONG_DO	GIU|CHO	LECH	vật vã[O:KHONG_DO;A:CHO;r=0.055]	giữ lập trường vòng 1
+vong	vòng	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	vong[O:K2;A:K1;r=0.017]	r 0,017
+vongcung	vòng cung	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	vọng cung[O:-;A:K2;r=0.000]	giữ lập trường vòng 1
+votu	vô tư	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	vô tự[O:KHONG_DO;A:K2;r=0.000]	giữ lập trường vòng 1
+vuhoi	vũ hội	CO	-	K2	GIU|KY_K2	-	GIU|KY_K2	LECH	vu hồi[O:-;A:K2;r=0.004]	giữ lập trường vòng 1
+xeng	xẻng	CO	KHONG_DO	K2	GIU|KY_K2	KHONG_DO	GIU|KY_K2	LECH	xèng[O:KHONG_DO;A:K2;r=0.224]	giữ lập trường vòng 1
+xuan	xuân	CO	K2	K1	KY_K2|THAY	K2	KY_K2|THAY	LECH	xử án[O:K2;A:K1;r=0.064]	M: xử án phải tách ép

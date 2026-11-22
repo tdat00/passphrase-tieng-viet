@@ -51,8 +51,8 @@ banco	bàn cờ	K2	Opus	bàn cờ: không thấy cách đọc đỏ tự nhiên 
 banda	bàn đá	H3	Opus	đọc ở P4 (O00084): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 banda	bàn đá	K2	Opus	bàn đá: không thấy cách đọc đỏ tự nhiên cho khóa banda (O00084)	2026-11-19	chu-ky-opus.tsv	CO
 bandan	bán dẫn	K2	Opus	khóa bandan ↔ bắn đạn chỉ là tổ hợp tự do, không phải mục từ (A00073)	2026-11-19	chu-ky-opus.tsv	CO
-bang	bảng	K2	Astra	Bảng có cách đọc báng (bộ phận súng) nhưng thường cần báng súng để người ta nhận nghĩa đó; băng cũng thường cần thêm đạn. Tên bảng đứng riêng phổ biến áp đảo, tôi ký không chặn K2.	2026-11-19	chu-ky-astra.tsv	CO
-bang	bảng	K2	Opus	bảng: khóa bang có nhiều cách đọc lành (băng, bằng, bang); nghĩa băng đảng chỉ là một nghĩa phụ của băng (C00101)	2026-11-19	chu-ky-opus.tsv	CO
+bang	bảng	K2	Astra	Bảng có cách đọc báng (bộ phận súng) nhưng thường cần báng súng để người ta nhận nghĩa đó; băng cũng thường cần thêm đạn. Tên bảng đứng riêng phổ biến áp đảo, tôi ký không chặn K2.	2026-11-19	chu-ky-astra.tsv	THAY_THE
+bang	bảng	K2	Opus	bảng: khóa bang có nhiều cách đọc lành (băng, bằng, bang); nghĩa băng đảng chỉ là một nghĩa phụ của băng (C00101)	2026-11-19	chu-ky-opus.tsv	THAY_THE
 bangia	bạn già	H3	Astra	bạn ở tuổi già hoặc bạn lâu năm	2026-11-19	chu-ky-astra.tsv	CO
 bangia	bạn già	H3	Opus	đọc ở P4 (O00087): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 bangmau	bảng màu	K2	Astra	Bảng màu được nhận là dụng cụ/mẫu dùng phối màu; bằng máu là cụm giới từ phụ thuộc vào động từ, thường thuộc cả một thành ngữ khác. Tôi ký không tự chặn K2 vì không có biểu thức người lớn/bạo lực cố định của riêng hai tiếng này.	2026-11-19	chu-ky-astra.tsv	CO
@@ -360,8 +360,8 @@ chaythi	chạy thi	H3	Astra	thi đua về tốc độ chạy	2026-11-19	chu-ky-a
 chaythi	chạy thi	H3	Opus	đọc ở P4 (O00437): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 chayxiet	chảy xiết	H3	Astra	Mô tả dòng nước chảy mạnh, nhanh; có cách dùng về nước sông. Đề nghị đối chiếu chảy siết nếu đăng ký đủ bằng chứng.	2026-11-19	chu-ky-astra.tsv	CO
 chayxiet	chảy xiết	H3	Opus	đọc ở P4 (B00126): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
-chia	chia	K2	Astra	Chia là thao tác chia phần, chĩa thường cần thêm vật được giơ hoặc nhắm tới và dùng được cho ngón tay/đồ vô hại. Tôi ký không tự khóa K2 cho cách đọc này.	2026-11-19	chu-ky-astra.tsv	CO
-chia	chia	K2	Opus	chia: cách đọc chĩa không thuộc nhóm đỏ tự thân; đọc tự nhiên là chia (C00645)	2026-11-19	chu-ky-opus.tsv	CO
+chia	chia	K2	Astra	Chia là thao tác chia phần, chĩa thường cần thêm vật được giơ hoặc nhắm tới và dùng được cho ngón tay/đồ vô hại. Tôi ký không tự khóa K2 cho cách đọc này.	2026-11-19	chu-ky-astra.tsv	THAY_THE
+chia	chia	K2	Opus	chia: cách đọc chĩa không thuộc nhóm đỏ tự thân; đọc tự nhiên là chia (C00645)	2026-11-19	chu-ky-opus.tsv	THAY_THE
 chianho	chia nhỏ	H3	Astra	chia một khối thành nhiều phần bé hơn	2026-11-19	chu-ky-astra.tsv	CO
 chiaphan	chia phần	H3	Astra	phân chia phần được hưởng	2026-11-19	chu-ky-astra.tsv	CO
 chiaphan	chia phần	H3	Opus	đọc ở P4 (O00445): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
@@ -1355,8 +1355,8 @@ lambai	làm bài	H3	Astra	thực hiện bài tập hoặc bài kiểm tra	2026-1
 lambai	làm bài	H3	Opus	đọc ở P4 (O01533): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 lambep	làm bếp	H3	Astra	nấu nướng trong bếp	2026-11-19	chu-ky-astra.tsv	CO
 lambep	làm bếp	H3	Opus	đọc ở P4 (O01534): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
-lamco	làm cỗ	K2	Astra	Làm cỗ là nấu một bữa tiệc lớn; làm cỏ là làm sạch cỏ, nhưng có nghĩa phụ giết sạch. Cách đọc làm cỏ phổ biến chủ yếu nghĩa làm vườn và nghĩa bạo lực phụ chưa xác nhận trội. Tôi ký không tự chặn K2, vẫn cần phiếu thứ hai.	2026-11-19	chu-ky-astra.tsv	CO
-lamco	làm cỗ	K2	Opus	Cách đọc làm cỏ chủ yếu là việc làm vườn; nghĩa bóng giết sạch hiếm, không phải cách đọc trực giác của khóa.	2026-11-19	chu-ky-bo-sung-opus.tsv	CO
+lamco	làm cỗ	K2	Astra	Làm cỗ là nấu một bữa tiệc lớn; làm cỏ là làm sạch cỏ, nhưng có nghĩa phụ giết sạch. Cách đọc làm cỏ phổ biến chủ yếu nghĩa làm vườn và nghĩa bạo lực phụ chưa xác nhận trội. Tôi ký không tự chặn K2, vẫn cần phiếu thứ hai.	2026-11-19	chu-ky-astra.tsv	THAY_THE
+lamco	làm cỗ	K2	Opus	Cách đọc làm cỏ chủ yếu là việc làm vườn; nghĩa bóng giết sạch hiếm, không phải cách đọc trực giác của khóa.	2026-11-19	chu-ky-bo-sung-opus.tsv	THAY_THE
 lamcom	làm cơm	H3	Astra	chuẩn bị bữa ăn	2026-11-19	chu-ky-astra.tsv	CO
 lamcom	làm cơm	H3	Opus	đọc ở P4 (O01538): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 lamdong	làm đồng	H3	Astra	làm việc trên ruộng	2026-11-19	chu-ky-astra.tsv	CO
@@ -1869,8 +1869,8 @@ phattai	phát tài	H3	Astra	trở nên giàu có	2026-11-19	chu-ky-astra.tsv	CO
 phattai	phát tài	H3	Opus	đọc ở P4 (O02269): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 phepdo	phép đo	H3	Astra	việc đo và kết quả theo một phương pháp	2026-11-19	chu-ky-astra.tsv	CO
 phepdo	phép đo	H3	Opus	đọc ở P4 (O02273): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
-phet	phết	K2	Astra	Mục phét có ghi nghĩa cũ/chiếu sang giao hợp, nhưng cách hiểu phổ thông là nói phét; không có bằng chứng nghĩa tình dục của trọn từ đứng riêng hiện phổ biến. Tôi ký không chặn K2 cho phết.	2026-11-19	chu-ky-astra.tsv	CO
-phet	phết	K2	Opus	phết: cách đọc khác (phét, phệt) không phải từ đỏ nặng (C02869)	2026-11-19	chu-ky-opus.tsv	CO
+phet	phết	K2	Astra	Mục phét có ghi nghĩa cũ/chiếu sang giao hợp, nhưng cách hiểu phổ thông là nói phét; không có bằng chứng nghĩa tình dục của trọn từ đứng riêng hiện phổ biến. Tôi ký không chặn K2 cho phết.	2026-11-19	chu-ky-astra.tsv	THAY_THE
+phet	phết	K2	Opus	phết: cách đọc khác (phét, phệt) không phải từ đỏ nặng (C02869)	2026-11-19	chu-ky-opus.tsv	THAY_THE
 phicua	phí của	H3	Astra	tiêu phí của cải không cần thiết	2026-11-19	chu-ky-astra.tsv	CO
 phicua	phí của	H3	Opus	đọc ở P4 (O02278): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 phoi	phơi	K2	Astra	Phối đứng riêng thường là phối hợp, phối màu; nghĩa giao phối động vật không tự thân là nghĩa tình dục người lớn phổ biến. Tôi ký không chặn.	2026-11-19	chu-ky-astra.tsv	CO
@@ -2151,7 +2151,7 @@ thay	thấy	K2	Opus	thây chỉ 96/47 dòng sạch so với thấy 70.761/45.614
 thay	thấy	K2	Opus	Thây hiếm (96/47 lượt sạch) so với thay, thấy, thầy; cách đọc trực giác của khóa là thay.	2026-11-19	chu-ky-bo-sung-opus.tsv	CO
 thay	thầy	K2	Astra	K2 theo đúng các số của khóa thay: thây chỉ 96/47 lượt sạch so với 6.336/2.202 cho thầy và vượt trội của thấy/thay. Tôi không coi thích thầy là được miễn tỷ lệ S1 mười lần.	2026-11-19	p4-chu-ky-bo-sung-astra-2.tsv	CO
 thay	thầy	K2	Opus	thây chỉ 96/47 dòng sạch so với thầy 6.336/2.202, thấy 70.761/45.614: cách đọc hiếm (≈0,1%), thấp hơn 5 lần K1 một âm tiết thấp nhất đã ký (D00279)	2026-11-19	chu-ky-opus.tsv	CO
-thay	thầy	K2	Opus	Cùng khóa thay; thây hiếm, cách đọc trực giác của khóa là thay.	2026-11-19	chu-ky-bo-sung-opus.tsv	CO
+thay	thầy	K2	Opus	Cùng khóa thay; thây hiếm, cách đọc trực giác của khóa là thay.	2026-11-19	chu-ky-bo-sung-opus.tsv	THAY_THE
 thayco	thầy cô	H3	Astra	cách gọi chung những người dạy học	2026-11-19	chu-ky-astra.tsv	CO
 thayco	thầy cô	H3	Opus	đọc ở P4 (O02644): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 thaylong	thay lông	H3	Astra	cơ thể vật thay lớp lông đã cũ	2026-11-19	chu-ky-astra.tsv	CO
@@ -2195,8 +2195,8 @@ thoangthoang	thoang thoảng	H3	Astra	mùi hương hoặc gió nhẹ từng lúc
 thoangthoang	thoang thoảng	H3	Opus	đọc ở P4 (O02690): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 thohan	thợ hàn	H3	Astra	người làm nghề hàn kim loại	2026-11-19	chu-ky-astra.tsv	CO
 thohan	thợ hàn	H3	Opus	đọc ở P4 (O02693): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
-thoi	thổi	K2	Astra	Thối có nghĩa mùi phân/hủy hoại nhưng chỉ là tính chất (và có cả nghĩa giá hàng, tỉnh trạng vỡ nợ), không phải tên chất thải. Nghĩa bom đạn không nổ là ngữ cảnh rất hẹp, không lý do tự khóa thổi; tôi ký không chặn K2.	2026-11-19	chu-ky-astra.tsv	CO
-thoi	thổi	K2	Opus	thổi: đọc tự nhiên của khóa thoi là thôi; cách đọc thối chỉ là lời chê mùi, không đỏ nặng (C03506)	2026-11-19	chu-ky-opus.tsv	CO
+thoi	thổi	K2	Astra	Thối có nghĩa mùi phân/hủy hoại nhưng chỉ là tính chất (và có cả nghĩa giá hàng, tỉnh trạng vỡ nợ), không phải tên chất thải. Nghĩa bom đạn không nổ là ngữ cảnh rất hẹp, không lý do tự khóa thổi; tôi ký không chặn K2.	2026-11-19	chu-ky-astra.tsv	THAY_THE
+thoi	thổi	K2	Opus	thổi: đọc tự nhiên của khóa thoi là thôi; cách đọc thối chỉ là lời chê mùi, không đỏ nặng (C03506)	2026-11-19	chu-ky-opus.tsv	THAY_THE
 thoithi	thôi thì	H3	Astra	khung tình thái chấp nhận giải pháp	2026-11-19	chu-ky-astra.tsv	CO
 thoithi	thôi thì	H3	Opus	đọc ở P4 (O02701): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 thomo	thợ mỏ	H3	Astra	người khai thác quặng hay than	2026-11-19	chu-ky-astra.tsv	CO
@@ -2546,3 +2546,611 @@ yoga	yoga	H3	Astra	hình thức tập luyện tư thế và hơi thở được 
 yoga	yoga	H3	Opus	đọc ở P4 (O03169): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
 ythich	ý thích	H3	Astra	điều một người ưa thích	2026-11-19	chu-ky-astra.tsv	CO
 ythich	ý thích	H3	Opus	đọc ở P4 (O03170): nghĩa thông dụng, nhãn OK	2026-11-19	chu-ky-opus.tsv	CO
+bang	bảng	K2	Astra	Báng có nghĩa bộ phận súng/bệnh, cũng chỉ cây và tay cầm; mẫu web gặp tay cầm dụng cụ, mẫu phụ đề thường cần súng. Theo phép so khiên, không miễn mọi bộ phận vũ khí.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+bang	bảng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+bemat	bề mặt	K2	Astra	Bẽ mặt là mất thể diện, không phải lời miệt thị người tự thân. So mất mặt ở TC §9.1 chỉ để phân loại, không nhận vơ hai chữ ký cũ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+bemat	bề mặt	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chandat	chân đất	K2	Astra	Chăn dắt có cách dùng bóc lột người thật, cũng dùng cho vật nuôi/dẫn dắt. Ngữ cảnh phân biệt đối tượng; nguyên cụm đứng riêng không mặc nhiên là môi giới mại dâm.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chandat	chân đất	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chau	chậu	K2	Astra	Chầu có nghĩa triều đình/hành lễ; mẫu cũng gặp nhiều lượt nói một buổi/lần đãi. Không dùng lượt của chầu trời/chầu thánh làm tỷ lệ nghĩa đỏ của riêng chầu.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chau	chậu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chung	chung	K2	Astra	Chủng có cách đọc tiêm chủng nhưng cũng chỉ chủng loại; chứng có nghĩa bệnh, xác chứng và nhiều tổ hợp. Hai đối chứng đáng xét nhưng không quy toàn số vào y khoa/tố tụng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chung	chung	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+codong	cổ đông	K2	Astra	Cô đồng là cách đọc tín ngưỡng có thật nhưng thưa; cơ động chỉ khả năng di chuyển/ứng biến, không chỉ lực lượng quân sự.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+codong	cổ đông	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+cuong	cuống	K2	Astra	Cuồng có nghĩa bệnh/điên, nhưng mẫu dùng phổ biến cho say mê; cưỡng có nghĩa ép/chống và nghĩa tên chim, không tự là hành vi tình dục khi đứng một mình.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+cuong	cuống	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+diemnhan	điểm nhấn	K2	Astra	Điểm nhãn có thể thuộc nghi thức hoặc hội họa; năm lượt bề mặt web nhưng 0 sạch, không mượn tần suất của nghi thức dài hơn để chặn.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+diemnhan	điểm nhấn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dinh	đinh	K2	Astra	Đình là không gian làng có cả việc chung lẫn thờ tự. Mẫu sạch còn nhiều tên người/địa danh; không lấy PPM mặt chữ làm PPM nghĩa nghi lễ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dinh	đinh	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dobac	đồ bạc	K2	Astra	Đổ bác thuộc cờ bạc có chứng thực nhưng là lối Hán Việt cũ, đo bù chỉ 1 lượt sạch phụ đề, 0 web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dobac	đồ bạc	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dongduc	đông đúc	K2	Astra	Động dục/động đực là cách đọc sinh sản động vật; đã xét cả dưới 0,3. Không phải tình dục người lớn/K0, đối chiếu đồng tình/động tình; cả hai dạng chuyên biệt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dongduc	đông đúc	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ghen	ghen	K2	Astra	Ghèn là chất tiết mắt thường ngày, không đồng nhất với phân/nước tiểu; có thể đi kèm bệnh nhưng không phải bệnh tự thân. Xét K0 theo nguồn trước khi xét 1/0.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ghen	ghen	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hohang	họ hàng	K2	Astra	Hở hang có thể chỉ trang phục/thiếu kín đáo hoặc để hở sơ hở, không tự là tình dục người lớn; ho hắng 0/1, không coi mọi lần ho là bệnh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hohang	họ hàng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hoangdao	hoang đảo	K2	Astra	Hoàng đạo là thuật ngữ thiên văn; trong ngày/cung hoàng đạo có thể gợi tín ngưỡng. Không biến toàn bộ tần suất của cụm thành hoạt động bói toán.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hoangdao	hoang đảo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hoangso	hoang sơ	K2	Astra	Hoảng sợ có mức mạnh nhưng cũng tả phản ứng thoáng qua trước việc bất ngờ; sát ranh H6.9, không buộc cùng mức với căm thù.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hoangso	hoang sơ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+loithoi	lỗi thời	K2	Astra	Lôi thôi còn tả đồ đạc/văn phong, không chỉ chê người. Còi bật nhưng không tự biến mọi nhận xét thiếu gọn gàng thành miệt thị.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+loithoi	lỗi thời	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nang	nắng	K2	Astra	Nang có cách dùng y khoa, nhưng còn dùng cho cấu tạo sinh học/túi và trong thuật ngữ dài; nạng là dụng cụ hỗ trợ như kính cận, không tự là bệnh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nang	nắng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ngap	ngáp	K2	Astra	Ngập có thể là lũ lụt, nhưng độ ngập/mức chất lỏng không tự nói thảm họa. Không thay toàn khóa bằng ngập úng của H6.8.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ngap	ngáp	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ngheo	nghèo	K2	Astra	Nghẻo đúng là cách nói thông tục về chết nhưng thưa (đo bù 8/0, phụ đề bỏ trùng 6). Khác vong ở D-rtc-6; không suy thông tục thành tục/K0.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ngheo	nghèo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nong	nóng	K2	Astra	Nòng có nghĩa bộ phận súng thật, xuất hiện cả ở mẫu. Nhưng còn nghĩa kỹ thuật/lõi và bóng đá; cách đọc phụ hẹp hơn nóng, đối chiếu quyết định giữ khiến/khiên, không dùng ngưỡng r.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nong	nóng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ongtho	ong thợ	K2	Astra	Ống thở có thể dùng trong điều trị hoặc khi lặn/sinh hoạt; tên dụng cụ không tự đồng nghĩa với can thiệp y khoa chuyên biệt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ongtho	ong thợ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+quyen	quyển	K2	Astra	Quyền vừa chỉ điều được phép hưởng/được làm, vừa có nghĩa quyền lực và võ; không đồng nhất mọi quyền cá nhân với quyền lực nhà nước hay bạo lực.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+quyen	quyển	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ranh	rãnh	K2	Astra	Ranh có nghĩa dân gian về trẻ chết hoặc sắc thái chê, nhưng còn nói ranh giới, lanh trí; không gán số mặt chữ cho nghĩa mê tín/miệt thị.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ranh	rãnh	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thinh	thính	K2	Astra	Thỉnh có nghĩa tôn giáo và cả lời mời trang trọng; không đếm mọi lượt thỉnh như lễ, cũng không lấy số của thỉnh thoảng thay cho nguyên mục.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thinh	thính	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tich	tích	K2	Astra	Tịch có nghĩa nhà tu hành chết và nói tắt tịch thu. Mẫu sạch nặng về tên riêng, tổ hợp khác; hai cách dùng đỏ hẹp, không gán mọi lượt cho chúng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tich	tích	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tinhtu	tình tứ	K2	Astra	Tinh tử là thuật ngữ tế bào/sinh sản, không phải tinh dịch hay tên hoạt động tình dục người lớn; xét K0 trước, 0/0 chỉ hỗ trợ độ hiếm, không phải miễn K0.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tinhtu	tình tứ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tong	tổng	K2	Astra	Tong thường chỉ mất, tông có nghĩa dòng họ/âm nhạc hoặc va chạm, tống có cả nghĩa đuổi lẫn đấm; không thêm đối tượng để mặc nhiên xem cả ba là bạo lực.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tong	tổng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+truong	trường	K2	Astra	Truồng chỉ tình trạng không mặc, không mặc nhiên là tình dục; mẫu có tắm/ở truồng. Trượng còn là đơn vị hoặc gậy cổ; không lấy số cả mặt chữ làm số hình phạt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+truong	trường	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+vatva	vất vả	K2	Astra	Vật vã có thể tả cơn đau nặng nhưng cũng là động tác, hay nói bóng về nỗ lực; không đủ để gán nguyên mục cho một bệnh, tự hại hoặc cảm xúc cực đoan.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+vatva	vất vả	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thaylong	thay lông	K2	Astra	Thay lòng có thể mang ý phản bội nhưng nguyên cụm cũng chỉ sự đổi tình cảm/ý định; không tất yếu là thao túng hay lời miệt thị. Đã đọc còi 0,31; cần chữ ký K2 thứ hai.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thaylong	thay lông	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho cờ này	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+anbinh	an bình	K2	Astra	Ăn bĩnh gợi quỵt bạc/nợ, không phải tên chất thải; nguyên cụm không có lượt sạch ở hai kho.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+anbinh	an bình	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+andut	ăn đứt	K2	Astra	Ăn đút có thể gợi hối lộ nhưng cách nói thông thường cần thêm của/tiền; không thấy lượt sạch của chính cụm.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+andut	ăn đứt	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+anluong	ăn lương	K2	Astra	Ăn lường gợi lừa lấy của, là cách nói ít dùng; không đồng nhất với thành ngữ dài hơn có lường gạt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+anluong	ăn lương	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+anmay	ăn may	K2	Astra	Ăn mày tự nó mô tả hoàn cảnh xã hội; phải dùng để nhục mạ ai mới thành lời chửi.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+anmay	ăn may	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+bavai	bả vai	K2	Astra	Bà vãi có nghĩa gắn việc lễ chùa, cũng có nghĩa thân tộc địa phương; cách gọi này vắng cả hai kho.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+bavai	bả vai	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+baitap	bài tập	K2	Astra	Bãi tập không chỉ dùng cho quân đội; không thêm bắn hay quân sự vào tên địa điểm.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+baitap	bài tập	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+baithi	bài thi	K2	Astra	Bãi thị có nghĩa đình chỉ buôn bán để phản đối; lối nói lịch sử không có lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+baithi	bài thi	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+bando	bản đồ	K2	Astra	Ban đỏ là cách đọc y khoa chuyên biệt; bán độ thuộc cá cược nhưng cách đọc phụ hiếm hơn nữa. Không bỏ đối chứng thứ hai.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+bando	bản đồ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+bandao	bán đảo	K2	Astra	Bần đạo thuộc lối xưng hô tôn giáo/cổ trang; không có lượt sạch, không đánh đồng với tần suất của đạo.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+bandao	bán đảo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+baoquan	bảo quản	K2	Astra	Bạo quân thuộc quyền lực và bạo lực, nhưng là danh xưng văn sử hiếm của khóa này, chỉ ba lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+baoquan	bảo quản	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+baotang	bảo tàng	K2	Astra	Báo tang là cách đọc báo tin chết có thật; khác báo tử ở chứng liệu toàn cụm: không lượt sạch ở cả hai kho.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+baotang	bảo tàng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+battien	bất tiện	K2	Astra	Bát tiên chủ yếu là điển tích/nhân vật truyện; năm lượt không chứng minh cách đọc nghi lễ thông dụng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+battien	bất tiện	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+bauban	bầu bạn	K2	Astra	Bầu bán có thể thuộc bầu cử, nhưng cũng là việc chọn người trong một nhóm; chỉ ba lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+bauban	bầu bạn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+biquan	bi quan	K2	Astra	Bí quẫn gợi bế tắc trong hoàn cảnh, không tự đồng nghĩa với tự hại; nguyên cụm không có lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+biquan	bi quan	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+bian	bí ẩn	K2	Astra	Bị án là lối nói pháp lý hiếm; đã xét đúng cụm, không lấy tần suất bị kết án thay cho nó.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+bian	bí ẩn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+bodo	bộ đồ	K2	Astra	Bợ đỡ có ý chê nhưng chỉ thấy thưa ở phụ đề và một lượt web; không coi đây là cách đọc tự nhiên đầu tiên của khóa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+bodo	bộ đồ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+bonphan	bổn phận	K2	Astra	Bón phân là công việc canh tác, không phải tên chất thải; phân ở trong cụm không đủ K0.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+bonphan	bổn phận	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+bode	bờ đê	K2	Astra	Bồ đề vừa là tên cây vừa có nghĩa nhà Phật; không gán toàn bộ lượt của tên cây cho thuật ngữ đạo.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+bode	bờ đê	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+botuong	bờ tường	K2	Astra	Bộ tướng thuộc văn sử quân sự; chỉ hai lượt phụ đề, không có chứng liệu web sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+botuong	bờ tường	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+caico	cãi cọ	K2	Astra	Cai cơ là chức võ quan xưa; sắc thái lịch sử và 0/0 không ủng hộ cách đọc thông dụng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+caico	cãi cọ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+camtinh	cảm tình	K2	Astra	Cầm tinh có liên hệ tín ngưỡng tuổi con giáp, nhưng chỉ một lượt mỗi kho; không mặc định mọi nói về tuổi là bói toán.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+camtinh	cảm tình	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+camdo	cám dỗ	K2	Astra	Cầm đồ là dịch vụ tài chính; chỉ thành cờ bạc hay tội phạm khi thêm hoàn cảnh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+camdo	cám dỗ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+canhquan	cảnh quan	K2	Astra	Cánh quân là đơn vị quân sự thật, đã xét cả dưới còi; cách gọi chuyên biệt, 20/1 và ít tự nhiên ở khóa cảnh quan.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+canhquan	cảnh quan	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+caotang	cao tầng	K2	Astra	Cao tăng là danh xưng đạo, cáo tang/cảo táng liên quan tang lễ. Hai cụm sau vắng cả hai kho; chức danh cao tăng là cách đọc phụ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+caotang	cao tầng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+caumay	cau mày	K2	Astra	Cầu may có thể chỉ mong điều thuận lợi, không nhất thiết cầu khấn hay đánh cược.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+caumay	cau mày	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+caukinh	cáu kỉnh	K2	Astra	Cầu kinh thuộc nghi lễ thật nhưng ít chứng liệu nguyên cụm; không phủ nhận nghĩa đạo, chỉ ký cho khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+caukinh	cáu kỉnh	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+cancau	cần câu	K2	Astra	Cắn cấu là hành vi gây đau, đã xét dù dưới còi; hai kho không có lượt sạch, không đồng nhất với cào cấu.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+cancau	cần câu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+canthan	cẩn thận	K2	Astra	Cận thần liên quan triều đình nhưng là vai lịch sử, tần suất cả cụm thấp; không miễn chung cho chức danh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+canthan	cẩn thận	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+caudao	cầu dao	K2	Astra	Cầu đảo có nghĩa nghi lễ; cách nói cổ và chỉ bốn lượt web, không lấy chữ cầu làm lý do chặn.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+caudao	cầu dao	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+cauhon	cầu hôn	K2	Astra	Cầu hồn thuộc nghi lễ nhưng đọc ít gặp; có 16/1 lượt chứ không phải vắng đầu mục.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+cauhon	cầu hôn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chay	chạy	K2	Astra	Chay còn dùng về chế độ ăn; cháy còn chỉ biến đổi của vật, đồ ăn. Không phải hễ có chay là nghi lễ, có cháy là thảm họa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chay	chạy	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chan	chân	K2	Astra	Chẩn có nghĩa chẩn bệnh và cứu trợ; cách đứng riêng hẹp, không gộp mọi lượt của chẩn đoán vào khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chan	chân	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chiphoi	chi phối	K2	Astra	Chíp hôi là lời coi nhẹ tuổi tác nhưng lối gọi hiếm, ba lượt phụ đề và một lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chiphoi	chi phối	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chien	chiên	K2	Astra	Chiến thường bị ràng buộc trong tổ hợp, có cả cách dùng khẩu ngữ không quân sự; số cả mặt chữ không phải số nghĩa chiến tranh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chien	chiên	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+choi	chổi	K2	Astra	Chọi có thể là ném, đối chọi hoặc trò chơi; không phải mọi lần dùng đều chỉ đánh nhau hay đá gà.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+choi	chổi	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chong	chồng	K2	Astra	Chông là vật có thể dùng làm vũ khí; cách đọc chuyên biệt ít gặp của khóa này, không miễn vì chỉ một âm tiết.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chong	chồng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chonglai	chống lại	K2	Astra	Chổng lái có khả năng gợi tư thế nhưng chưa có nguồn cho nghĩa người lớn của toàn cụm; không lượt sạch ở cả hai kho.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chonglai	chống lại	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chot	chốt	K2	Astra	Chột có nghĩa liên quan thị lực và nghĩa phụ thuộc tổ hợp; chưa có bằng chứng đọc thường xuyên theo nghĩa bệnh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chot	chốt	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chuy	chú ý	K2	Astra	Chùy/chuỳ là tên vũ khí cổ/chuyên biệt; hai vị trí dấu cùng một phép đếm, không cộng đôi.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chuy	chú ý	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chungcu	chung cư	K2	Astra	Chứng cứ dùng cả trong nghiên cứu và lập luận thông thường; không đồng nhất mọi lượt với vật chứng tố tụng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chungcu	chung cư	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chuong	chuông	K2	Astra	Chưởng ngoài cách dùng võ thuật còn thường gặp trong truyện; không suy mọi lượt là hành vi bạo lực thực.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chuong	chuông	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+chungnhan	chứng nhận	K2	Astra	Chứng nhân có thể là người chứng kiến trong văn chương, lịch sử; không chỉ nhân chứng tại tòa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+chungnhan	chứng nhận	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+comat	có mặt	K2	Astra	Cơ mật nói thông tin kín nói chung chứ không chỉ bí mật nhà nước; cách đọc chuyên biệt, ít gặp hơn mục chính.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+comat	có mặt	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+codau	cô dâu	K2	Astra	Cô đầu là tên người hát trong sinh hoạt văn hóa cũ; không mặc định nghề này là mại dâm. Chỉ hai lượt mỗi kho.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+codau	cô dâu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+covu	cổ vũ	K2	Astra	Có vú là đặc điểm sinh học, thường trong tên lớp động vật; không tự là tình dục của đúng cụm.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+covu	cổ vũ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+codo	cố đô	K2	Astra	Cô đỡ gắn nghề hỗ trợ sinh nở, không phải thủ thuật hay hành vi người lớn; cách đọc hiếm ở khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+codo	cố đô	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+congchung	công chúng	K2	Astra	Công chứng là dịch vụ xác nhận giấy tờ, khác với điều tra, xét xử hay hình phạt; không gộp mọi nghiệp vụ giấy tờ vào H6.2.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+congchung	công chúng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+congcu	công cụ	K2	Astra	Công cử gợi việc lựa chọn/bầu ra nhưng là từ văn viết ít dùng, không lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+congcu	công cụ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+coso	cơ sở	K2	Astra	Có số có cách dùng chỉ số lượng, việc được đánh số; nghĩa vận mệnh cần ngữ cảnh, không dùng PPM cả chuỗi thay nghĩa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+coso	cơ sở	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+cungcap	cung cấp	K2	Astra	Cúng cấp có nghĩa hành lễ thật, nhưng dạng này chỉ xuất hiện bốn lần ở web và không có lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+cungcap	cung cấp	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+cuoi	cười	K2	Astra	Cuội còn chỉ đá, tên nhân vật dân gian; lời chê gian dối cần cách nói cụ thể, không chặn theo tên riêng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+cuoi	cười	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dade	da dẻ	K2	Astra	Dạ đề là thuật ngữ cũ liên quan trẻ nhỏ, chỉ hai lượt web; không phải cách đọc bệnh thường gặp của khóa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dade	da dẻ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+daga	da gà	K2	Astra	Đá gà là hoạt động có thể gắn bạo lực/cá cược, đã xét cả dưới còi; chỉ 8/13 lượt và không phải mọi lượt chỉ một cuộc cá cược.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+daga	da gà	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+daihan	dài hạn	K2	Astra	Đại hạn có thể chỉ đại nạn hoặc hạn vận, nhưng trường nghĩa cổ/chiêm đoán và chỉ một lượt sạch phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+daihan	dài hạn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+danmat	dán mắt	K2	Astra	Dằn mặt có nghĩa đe dọa, không bỏ qua vì dưới còi; cách đọc phụ có 11/4, không tự chặn khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+danmat	dán mắt	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+danhba	danh bạ	K2	Astra	Đánh bả gợi hành vi đầu độc; đã xét H6.1 dưới còi, một lượt sạch phụ đề, không lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+danhba	danh bạ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dancu	dân cư	K2	Astra	Dân cử có nghĩa bầu người đại diện; là cách nói chuyên biệt, hầu như vắng ở phụ đề, không miễn mọi từ bầu cử.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dancu	dân cư	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dehieu	dễ hiểu	K2	Astra	Đế hiệu thuộc tước hiệu hoàng đế trong văn sử; nguyên cụm không có lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dehieu	dễ hiểu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+danang	đa năng	K2	Astra	Đa nang chủ yếu xuất hiện trong tên bệnh dài hơn; không lấy toàn bộ lượt web làm nghĩa bệnh đứng độc lập.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+danang	đa năng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+daidien	đại diện	K2	Astra	Đại điển có thể gợi lễ lớn/tên sách, là biểu thức văn viết cổ và chỉ một lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+daidien	đại diện	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+danhac	đàn hạc	K2	Astra	Đàn hặc thuộc việc luận tội thời xưa; cách đọc lịch sử không có lượt sạch, khác với một tố tụng thông dụng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+danhac	đàn hạc	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+danhhoi	đánh hơi	K2	Astra	Đánh hôi có thể chỉ tham gia đánh người, đã xét bạo lực dưới còi; không lượt sạch, không thay bằng đánh hội đồng để tính.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+danhhoi	đánh hơi	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+daodien	đạo diễn	K2	Astra	Dao điện là dụng cụ chuyên môn; không phải hễ có dao là vũ khí tấn công, chứng liệu nguyên cụm ít.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+daodien	đạo diễn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dendo	đèn đỏ	K2	Astra	Đen đỏ có nghĩa cờ bạc, nhưng còn dùng cho màu/được mất; cả cụm hiếm ở phụ đề, không ký cho cụm cờ bạc dài hơn.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dendo	đèn đỏ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+decu	đề cử	K2	Astra	Dê cụ là cách chê tính háo sắc, không phải tên hành vi tình dục hay nhãn tục của toàn cụm; chỉ 2/0 lượt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+decu	đề cử	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+didao	đi dạo	K2	Astra	Đi đạo nói việc theo đạo nhưng là cách diễn đạt rất ít xuất hiện; một lượt mỗi kho.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+didao	đi dạo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dinhhon	đính hôn	K2	Astra	Định hồn có thể liên hệ tín ngưỡng hoặc hoàn hồn; không lượt sạch, không coi chữ hồn một mình là căn cứ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dinhhon	đính hôn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dongdao	đông đảo	K2	Astra	Đồng đạo gợi người cùng đạo nhưng cũng có nghĩa người chung đường hướng; lối gọi thưa, không chỉ số của đạo.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dongdao	đông đảo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dongco	đồng cỏ	K2	Astra	Đồng cô là vai trong thực hành tín ngưỡng; đã xét nghĩa toàn cụm, chỉ 5/1 lượt, ít tự nhiên hơn mục chính.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dongco	đồng cỏ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dongtu	động từ	K2	Astra	Đồng tử là tên bộ phận mắt, cũng có cách gọi cổ; tên cấu tạo bình thường không mặc nhiên là bệnh hay nghi lễ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dongtu	động từ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+dung	đứng	K2	Astra	Đũng dùng về bộ phận quần áo; vị trí che cơ thể không làm tên bộ phận trang phục thành từ tình dục.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+dung	đứng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+giang	giảng	K2	Astra	Giàng có cách hiểu phương ngữ, tên thần và nghĩa khác; chưa thể xem cả số đếm của mặt chữ là nghĩa tín ngưỡng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+giang	giảng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+giaohuu	giao hữu	K2	Astra	Giáo hữu là tên người theo đạo, thuộc cách gọi hẹp chứ không phải nghi lễ thường được đọc từ khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+giaohuu	giao hữu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+gioi	giỏi	K2	Astra	Giòi là tên loài, không mặc nhiên ghê tởm; giối có cách đọc về lời cuối nhưng chỉ ba lượt phụ đề, không cộng từ ghép.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+gioi	giỏi	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+gioigiang	giỏi giang	K2	Astra	Giối giăng được dẫn về lời trối, thuộc cách dùng phương ngữ/cũ; hai kho đều không có lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+gioigiang	giỏi giang	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+giong	giọng	K2	Astra	Giông là hiện tượng thời tiết; không đồng nhất mọi cơn giông với thảm họa xảy ra.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+giong	giọng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+haidao	hải đảo	K2	Astra	Hải đạo dễ gợi cướp biển nhưng là cách gọi cũ, hẹp; không lượt phụ đề, ba lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+haidao	hải đảo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hang	hang	K2	Astra	Háng là bộ phận cơ thể trong sinh hoạt; không có căn cứ biến tên vị trí cơ thể thành hành vi người lớn.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hang	hang	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hanhtoi	hành tỏi	K2	Astra	Hành tội nói làm khổ/hành hạ, đã xét cả nghĩa gây hại; có hai lượt phụ đề, không lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hanhtoi	hành tỏi	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hatho	hát hò	K2	Astra	Hạ thọ gợi văn cảnh tang thọ nhưng không có lượt; hạ thổ còn có cách dùng đặt vật xuống đất, không phải mọi lượt là mai táng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hatho	hát hò	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hamho	hăm hở	K2	Astra	Ham hố có thể chê thái độ quá mức nhưng không phải mọi cách dùng đều miệt thị người; chỉ 14/5 lượt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hamho	hăm hở	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hiem	hiếm	K2	Astra	Hiềm có nghĩa dè chừng/khúc mắc hoặc thành tố văn viết; không đồng nhất với căm thù cực mạnh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hiem	hiếm	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hohen	hò hẹn	K2	Astra	Ho hen nói triệu chứng nhưng là cách đọc phụ rất ít gặp của khóa này, chỉ hai lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hohen	hò hẹn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hoatai	hoa tai	K2	Astra	Hoả tai là cách gọi văn viết cho tai nạn lửa, đã xét H6.8; một lượt web, không lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hoatai	hoa tai	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hoanghon	hoàng hôn	K2	Astra	Hoảng hồn tả phản ứng giật mình/sợ, chưa mặc nhiên là cảm xúc cực đoan của H6.9; chứng liệu nguyên cụm thưa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hoanghon	hoàng hôn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hongmat	hóng mát	K2	Astra	Hỏng mắt có thể là thương tổn nhưng là cụm ít gặp, 2/0; không gán nghĩa bệnh cho mọi trường hợp hỏng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hongmat	hóng mát	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hotieu	hồ tiêu	K2	Astra	Hố tiểu chỉ địa điểm/vật chứa, không phải tên chất bài tiết; không có lượt sạch, không chặn chuỗi con tiểu.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hotieu	hồ tiêu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+homang	hổ mang	K2	Astra	Hộ mạng có thể là niềm tin tâm linh, cũng là nói bảo vệ mạng sống; nguyên cụm thưa, không tự là bạo lực.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+homang	hổ mang	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hung	húng	K2	Astra	Hung có thể tả mạnh/dữ mà chưa chỉ hành vi bạo lực hay lời chê người; số cả mặt chữ không phải số nghĩa đỏ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hung	húng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+hungho	hững hờ	K2	Astra	Hùng hổ mới tả dáng điệu; không tự khẳng định đã tấn công hay có cảm xúc đỏ cực mạnh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+hungho	hững hờ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+keca	kể cả	K2	Astra	Kẻ cả có thể nói vị thế người trên hoặc nhận xét thái độ; chưa chắc là lời miệt thị của chính nguyên mục.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+keca	kể cả	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ketoan	kế toán	K2	Astra	Kết oán có thể chỉ bất hòa lâu dài, không tự suy thành căm thù mãnh liệt; bốn lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ketoan	kế toán	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+khao	khao	K2	Astra	Khả ố chê người/vật nhưng là cách nói văn viết ít gặp; không kết luận tách ép chỉ vì khóa đổi số âm tiết.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+khao	khao	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+khan	khăn	K2	Astra	Khàn/khản còn tả đặc điểm giọng; khấn có nghĩa nghi lễ thật nhưng ít tự nhiên ở khóa khăn. Cả ba đã được xét.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+khan	khăn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+khia	khía	K2	Astra	Khịa có thể là chọc ghẹo, chưa tự là lời rủa/miệt thị mạnh; không mượn tần suất của cà khịa thay cho khịa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+khia	khía	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+khien	khiến	K2	Astra	Khiên là khí cụ phòng thủ, không phủ nhận H6.1; ký giữ khóa động từ quen thuộc theo quyết định riêng, không đặt ngưỡng tỷ lệ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+khien	khiến	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+khoa	khoa	K2	Astra	Khỏa/khoả có thể gợi khỏa thân nhưng là hai vị trí dấu của cùng dạng; không kéo thêm thân để lập K0.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+khoa	khoa	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+khom	khóm	K2	Astra	Khọm có thể chê tuổi tác, song là cách gọi ít gặp và thường gắn tổ hợp; chỉ sáu lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+khom	khóm	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+khuan	khuân	K2	Astra	Khuẩn dùng như thành tố rất rộng, không phải mọi vi khuẩn là bệnh; không cộng cầu/vi hay tên bệnh vào khóa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+khuan	khuân	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+khukhu	khư khư	K2	Astra	Khừ khừ có thể tả âm thanh lúc ốm, nhưng tiếng tượng thanh không tự là bệnh; không lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+khukhu	khư khư	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+kieu	kiểu	K2	Astra	Kiêu có nét chê nhưng cách đọc độc lập và độ chê tùy ngữ cảnh; không quy mọi lượt thành đánh giá người.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+kieu	kiểu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+lachau	lạc hậu	K2	Astra	Lạc hầu là chức danh trong văn sử cổ; đối chứng cực ít gặp, một lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+lachau	lạc hậu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+lammau	làm mẫu	K2	Astra	Làm màu dùng cả trong canh tác và để nhận xét sự phô trương; không gán toàn bộ số lượt cho thao túng hay chê người.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+lammau	làm mẫu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+layco	lấy cớ	K2	Astra	Lảy cò có thể là thao tác với vũ khí, đã xét dù không có lượt sạch; không mượn tần suất của bóp cò.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+layco	lấy cớ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+liem	liềm	K2	Astra	Liếm không tự là tình dục nếu không thêm đối tượng; liệm có nghĩa tang lễ thật nhưng là lối nói ít dùng của khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+liem	liềm	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+lienquan	liên quan	K2	Astra	Liên quân có nghĩa quân sự nhưng là cách đọc chuyên biệt/ít tự nhiên hơn mục chính; không miễn mọi thuật ngữ có tỷ lệ nhỏ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+lienquan	liên quan	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+linhdong	linh động	K2	Astra	Lính dõng chỉ quân lính trong bối cảnh lịch sử, nguồn hai kho không có lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+linhdong	linh động	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+lolang	lo lắng	K2	Astra	Lố lăng có thể chê cách trang trí, cách thể hiện chứ không nhất thiết miệt thị người; không dùng tỷ lệ làm luật.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+lolang	lo lắng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+loloi	lỡ lời	K2	Astra	Lở lói gợi tổn thương nhưng là dạng ít dùng, hai kho không có lượt; không cộng tần suất của lở loét.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+loloi	lỡ lời	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+loithe	lợi thế	K2	Astra	Lời thề có cả trong cam kết thông thường; phải thêm nghi thức cụ thể mới thành một hoạt động tôn giáo.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+loithe	lợi thế	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+luoi	lưới	K2	Astra	Lười có thể chê thật nhưng cũng tả trạng thái/hành xử tùy tình huống; ký theo quyết định riêng, không suy mọi lời chê là nhẹ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+luoi	lưới	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+luong	lương	K2	Astra	Lũ ống là hiện tượng nguy hiểm; ba lượt web, không lượt phụ đề, dạng hai khối rất ít gặp của khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+luong	lương	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+manh	mạnh	K2	Astra	Mánh có thể là mẹo thông thường; chỉ khi nhắm lừa người khác mới ra thao túng, không quy cả mặt chữ về gian lận.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+manh	mạnh	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+matkinh	mắt kính	K2	Astra	Mất kinh có thể là triệu chứng, nhưng sinh lý không tự là tục; nguyên cụm ít gặp, không chặn theo riêng chữ kinh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+matkinh	mắt kính	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+mathang	mặt hàng	K2	Astra	Mạt hạng là lời chê nặng nhưng cách nói thưa, chỉ 20 lượt phụ đề và vắng web; không coi nhẹ nghĩa miệt thị.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+mathang	mặt hàng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+mattrang	mặt trăng	K2	Astra	Mất trắng có thể nói một tổn thất thường ngày; không chỉ cờ bạc hay thảm họa và không tự là lời chửi.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+mattrang	mặt trăng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+meomo	méo mó	K2	Astra	Mèo mỡ có thể gợi quan hệ lén lút; không có nguồn đã tra chứng thực nghĩa tục/tình dục của nguyên mục, 0/1 lượt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+meomo	méo mó	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+momay	mở máy	K2	Astra	Mó máy có thể chỉ nghịch đồ vật; phải thêm đối tượng/ngữ cảnh mới suy ra động chạm tình dục. Không thấy lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+momay	mở máy	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+mung	mừng	K2	Astra	Mưng thường cần thành tố đi kèm mới thành triệu chứng cụ thể; 5/2 lượt, không thêm mủ để tạo khóa đỏ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+mung	mừng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ngaingu	ngái ngủ	K2	Astra	Ngài ngự là lối tôn xưng văn sử; chín lượt web, không thấy dùng trong phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ngaingu	ngái ngủ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ngai	ngại	K2	Astra	Ngai gắn ngôi vua/vật thờ; ngải còn là tên cây, không mặc nhiên là bùa ngải. Ký cả hai đối chứng theo quyết định riêng của chủ dự án.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ngai	ngại	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nghe	nghệ	K2	Astra	Nghè có thể gợi chức danh cũ, nghê có thể là linh vật/trang trí; không gán mọi lượt hai từ cho quyền lực hay thờ cúng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+nghe	nghệ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+nghi	nghỉ	K2	Astra	Nghị không tự là nghị quyết, nghị sĩ hay hoạt động chính trị; còn là thành tố, tên riêng, có cách dùng bàn bạc.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nghi	nghỉ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+ngong	ngỗng	K2	Astra	Ngọng có thể mô tả phát âm, không nhất thiết là bệnh hay lời chê; cách đọc phụ 8/2 lượt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+ngong	ngỗng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nguy	ngụ ý	K2	Astra	Ngụy/nguỵ là hai cách đặt dấu, có nghĩa giả và cách dùng lịch sử; ngự y là chức danh cổ hiếm. Không cộng hai mặt chữ trùng số.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nguy	ngụ ý	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nhadam	nha đam	K2	Astra	Nhà đám có thể nói gia đình tổ chức tiệc/lễ, không mọi đám đều là tang; chỉ một lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nhadam	nha đam	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nhaga	nhà ga	K2	Astra	Nhà gá có thể gợi tổ chức cờ bạc nhưng lối gọi cũ không có lượt sạch; không thêm bạc vào khóa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nhaga	nhà ga	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nhaynhot	nhảy nhót	K2	Astra	Nhây nhớt có thể dùng để chê cách xử sự, không phải tên chất thải; nguyên cụm vắng cả hai kho.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nhaynhot	nhảy nhót	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nhat	nhặt	K2	Astra	Nhát có thể chỉ tính rụt rè hoặc đơn vị đếm; phải thêm hành vi gây hại mới mặc định là bạo lực.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nhat	nhặt	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nhamnhi	nhâm nhi	K2	Astra	Nhảm nhí có thể phê bình nội dung/chuyện kể, không nhất thiết nhục mạ người; không lấy nhãn thô của bản dịch làm K0.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nhamnhi	nhâm nhi	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nhanthuc	nhận thức	K2	Astra	Nhãn thức là thuật ngữ hẹp có liên hệ Phật học, không có lượt sạch; không phải cách đọc thông dụng của khóa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nhanthuc	nhận thức	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nhodoi	nhớ đời	K2	Astra	Nhơ đời là cách nói chê nặng nhưng thuộc lối văn hiếm/vắng cả hai kho; không đồng nhất với mọi lần dùng nhơ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nhodoi	nhớ đời	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nhung	nhung	K2	Astra	Nhũng hay đi cùng hình vị khác; không thêm tham để biến nguyên mục thành từ mặc nhiên về tội phạm.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nhung	nhung	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nich	ních	K2	Astra	Nịch có thể chỉ dây nịt hay đi kèm trong các cụm tả hình thể; không đồng nhất chữ Hán chỉ chết đuối với nghĩa thông dụng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nich	ních	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+noitham	nói thầm	K2	Astra	Nội thẩm có thể gợi việc xét xử nhưng là cách nói hẹp, không có phụ đề và một lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+noitham	nói thầm	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+nonghoi	nóng hổi	K2	Astra	Nông hội có bối cảnh tổ chức chính trị/lịch sử, không lượt sạch; đây không phải miễn mọi tổ chức.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+nonghoi	nóng hổi	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+onglao	ông lão	K2	Astra	Ống lao có thể gợi dụng cụ liên quan vũ khí nhưng nguyên cụm không có lượt sạch; không xét riêng tiếng lao.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+onglao	ông lão	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phandoi	phản đối	K2	Astra	Phân đội có cách dùng chỉ đơn vị quân sự thật; cách đọc chuyên biệt, 8/11 lượt, không coi mọi việc chia đội là quân sự.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phandoi	phản đối	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phancung	phần cứng	K2	Astra	Phản cung thuộc tố tụng, nhưng lối nói hiếm và không lượt sạch; không gán số của lời khai cho đối chứng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phancung	phần cứng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phebinh	phê bình	K2	Astra	Phế binh có nghĩa quân sự/thương tích nhưng là danh xưng cũ/hẹp, chỉ bốn lượt ở hai kho cộng lại.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phebinh	phê bình	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phia	phía	K2	Astra	Phịa có thể nói bịa một chuyện, không tự là tội phạm hay lời chửi; cách dùng độc lập rất thưa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phia	phía	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phien	phiên	K2	Astra	Phiện có thể nói thuốc phiện; đã xét H6.7 của nguyên mục, 4/1 lượt, không cộng lượt của cụm dài hơn.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phien	phiên	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phongbi	phong bì	K2	Astra	Phòng bị là sự chuẩn bị để ứng phó nói chung, không chỉ chỉ huy tác chiến hay sử dụng vũ khí.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phongbi	phong bì	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phong	phòng	K2	Astra	Phỏng có cả nghĩa ước lượng, hỏi, bắt chước và nghĩa tổn thương; không dùng số cả mặt chữ để gọi nghĩa thương tích là phổ biến ở khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phong	phòng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phongan	phòng ăn	K2	Astra	Phong ấn còn thuộc chất liệu truyện/trò chơi hoặc việc niêm kín; không mặc định phép hư cấu là nghi lễ có thật.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phongan	phòng ăn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phongngu	phòng ngủ	K2	Astra	Phòng ngự có cả nghĩa thể thao lẫn quân sự; không xóa nghĩa quân sự, ký giữ riêng khóa này theo chủ dự án.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phongngu	phòng ngủ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phongthan	phòng thân	K2	Astra	Phong thần có nghĩa thần thoại/tín ngưỡng, nhưng gặp thưa và còn là điển tích truyện; không tự chặn do chữ thần.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phongthan	phòng thân	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phudau	phù dâu	K2	Astra	Phủ đầu có cả cách dùng trong lời nói và thể thao; ngăn trước không tất yếu là thao túng hay đánh người.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phudau	phù dâu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phude	phụ đề	K2	Astra	Phủ đệ là tên dinh nhà quyền quý trong văn sử, không phải hành vi thực thi quyền lực; vắng hai kho.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phude	phụ đề	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phuc	phúc	K2	Astra	Phục có nhiều nghĩa về nể, làm việc lại, nằm chờ; không lấy số cả mặt chữ làm số của phục kích hay quy phục.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phuc	phúc	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+phuong	phượng	K2	Astra	Phướng có cách hiểu đồ vật, cũng có thể gợi cờ trong nghi lễ; cách đọc hiếm, không mượn nghĩa của cả cụm cờ phướn.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+phuong	phượng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+quatang	quà tặng	K2	Astra	Quả tang còn dùng cho việc bị bắt gặp lúc làm điều không nên, không luôn là tội phạm hay tiến trình tố tụng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+quatang	quà tặng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+quai	quai	K2	Astra	Quái dùng để tả cái lạ, trong truyện hoặc cảm thán; tần suất cao không chứng minh phần lớn lượt là chửi rủa/thần linh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+quai	quai	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+quanquan	quán quân	K2	Astra	Quan quân, quân quan và quân quản đều gợi quân sự/chính quyền, nhưng là các cách gọi hẹp, mỗi dạng rất ít lượt; không bỏ sót quân quản.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+quanquan	quán quân	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+quanxa	quán xá	K2	Astra	Quân xa là cách gọi xe quân sự bằng từ Hán Việt, không thấy lượt sạch, ít tự nhiên ở khóa này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+quanxa	quán xá	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+quanco	quân cờ	K2	Astra	Quản cơ là chức võ cổ, quân cơ là chuyện quân sự văn viết; xét cả hai, không lấy chữ quân làm còi duy nhất.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+quanco	quân cờ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+quandao	quần đảo	K2	Astra	Quản đạo gợi chức vụ/địa hạt cũ; không có lượt sạch của chính cụm, không gán mọi chữ đạo cho tôn giáo.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+quandao	quần đảo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+quen	quên	K2	Astra	Quèn cũng dùng tự hạ mình/tả địa vị, không phải mọi lần dùng đều miệt thị; không dùng tỷ lệ làm ngưỡng cứng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+quen	quên	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+quyet	quyết	K2	Astra	Quyệt thường đi trong tổ hợp phê phán mưu mẹo; 3/1 lượt của dạng đứng riêng không chứng minh một cách đọc chê người phổ biến.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+quyet	quyết	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+rach	rách	K2	Astra	Rạch còn là địa hình hay động tác cắt; không tự thêm đối tượng cơ thể để biến nguyên mục thành tự hại.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+rach	rách	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+sanday	sắn dây	K2	Astra	Sán dây là tên sinh vật; bệnh do nó gây ra không là nghĩa của chính tên loài, không coi mọi ký sinh trùng là từ ghê tởm.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+sanday	sắn dây	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+sautham	sâu thẳm	K2	Astra	Sầu thảm nói buồn sâu sắc, sát H6.9 nhưng cách dùng văn chương thưa; không định danh mọi nỗi buồn là cực đoan.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+sautham	sâu thẳm	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+suco	sự cố	K2	Astra	Sư cô là cách gọi người tu, không chỉ hành vi nghi lễ; lối đọc phụ không thấy ở phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+suco	sự cố	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+suthuc	sự thực	K2	Astra	Sư thúc có cả cách dùng xưng vai trong truyện môn phái; không tự đồng nghĩa với chức sắc tôn giáo, 17/0 lượt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+suthuc	sự thực	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+suong	sương	K2	Astra	Sư ông là danh xưng đạo cực ít gặp; sướng tự nó chỉ trạng thái dễ chịu và không đủ căn cứ cho nghĩa tình dục của nguyên mục.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+suong	sương	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+taothanh	tạo thành	K2	Astra	Tảo thanh là cách nói quân sự cũ; đã xét nghĩa bạo lực dưới còi, chỉ 12 lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+taothanh	tạo thành	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tanggia	tăng giá	K2	Astra	Tang gia thuộc tang lễ, tăng già thuộc Phật giáo; cả hai là cách đọc phụ hiếm, không lấy số của tang/tăng riêng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tanggia	tăng giá	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tangtoc	tăng tốc	K2	Astra	Tang tóc liên hệ cái chết/mất mát, nhưng là cách đọc phụ có ít chứng liệu ở cả hai kho; không phủ nhận nghĩa đỏ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tangtoc	tăng tốc	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tamdiem	tâm điểm	K2	Astra	Tam điểm có thể gợi tên hội nhưng cũng là cách ghi ba điểm; không thấy căn cứ biến cả cụm thành chính trị/nghi lễ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tamdiem	tâm điểm	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thamhiem	thám hiểm	K2	Astra	Thâm hiểm có nghĩa chê hiểm độc thật; chỉ 7/2 lượt sạch, nên không tự chặn ở khóa này, không nới chung H6.9.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thamhiem	thám hiểm	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thanphuc	thán phục	K2	Astra	Thần phục có thể gợi quyền lực/lịch sử, cũng tả sự khuất phục nói chung; nguyên cụm văn viết thưa.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thanphuc	thán phục	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thang	thang	K2	Astra	Thằng là đại từ/danh từ xưng gọi thân mật hoặc coi thường tùy ngữ cảnh; không mặc định là từ tục vì tần suất.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thang	thang	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thamthiet	thắm thiết	K2	Astra	Thảm thiết còn tả âm thanh hay việc gây thương cảm; không tự vượt ngoại lệ buồn/khóc để vào H6.9.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thamthiet	thắm thiết	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thanminh	thân mình	K2	Astra	Thần minh có nghĩa thần linh, nhưng là cách nói văn chương cực ít gặp; hai lượt phụ đề, vắng web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thanminh	thân mình	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thattinh	thật tình	K2	Astra	Thất tình chỉ tình cảnh sau quan hệ tình cảm; không tự đồng nghĩa với cảm xúc tiêu cực cực mạnh hay tự hại.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thattinh	thật tình	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thayco	thầy cô	K2	Astra	Thầy cò gợi người làm trung gian, có thể liên hệ giấy tờ kiện tụng xưa; nguyên cụm không có lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thayco	thầy cô	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+theo	theo	K2	Astra	Thẻo không mặc nhiên chỉ cắt người; thẹo là cách gọi phương ngữ cho đặc điểm cơ thể. Không suy mọi lần đọc thành bạo lực/chấn thương.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+theo	theo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thitruong	thị trường	K2	Astra	Thị trưởng là chức vụ nhà nước có thật; nhận quyết định giữ riêng khóa có cách đọc kinh tế rất quen thuộc, không miễn mọi chức danh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thitruong	thị trường	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thiep	thiệp	K2	Astra	Thiếp có nghĩa giấy mời, xưng hô xưa hay tình trạng ngủ; ý gắn hôn nhân cổ không tự là nội dung người lớn.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thiep	thiệp	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thue	thuê	K2	Astra	Thuế gắn nghĩa vụ tài chính nhưng không đồng nhất mọi lần đọc với tranh chấp chính trị, bầu cử hay hình phạt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thue	thuê	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thung	thùng	K2	Astra	Thũng có thể chỉ biểu hiện sưng, thường trong thuật ngữ; ba lượt phụ đề, cách đọc độc lập ít gặp.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thung	thùng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thuhai	thứ hai	K2	Astra	Thụ hại chỉ phía chịu hại, thiên văn viết; không lượt sạch, không mượn tần suất của bị hại.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thuhai	thứ hai	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+thutu	thứ tư	K2	Astra	Thủ từ là người trông nom nơi thờ tự, cách gọi hẹp với 1/8 lượt, không phải mọi đọc của khóa đều gợi nghi lễ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+thutu	thứ tư	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tiennu	tiên nữ	K2	Astra	Tiện nữ còn là khiêm xưng trong lời cổ, không mặc nhiên chửi một người; chỉ mười lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tiennu	tiên nữ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tien	tiền	K2	Astra	Tiên thường là nhân vật truyện hay thành tố chỉ trước; sự có mặt của nghĩa thần tiên không biến mọi lượt thành tín ngưỡng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tien	tiền	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tinhbo	tỉnh bơ	K2	Astra	Tỉnh bộ liên quan tổ chức chính trị, nhưng thuộc thuật ngữ văn sử, chỉ hai lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tinhbo	tỉnh bơ	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+toida	tối đa	K2	Astra	Tối dạ có thể chê trí tuệ, song cách gọi hiếm ở khóa này, chỉ năm lượt phụ đề.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+toida	tối đa	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+toitan	tối tân	K2	Astra	Tồi tàn thường đánh giá tình trạng đồ vật/nơi ở; không phải mọi nhận xét xuống cấp đều là lời chê người hay ghê tởm rõ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+toitan	tối tân	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tram	trạm	K2	Astra	Trẫm là đại từ xưng hô cổ, trảm là lối nói hành hình lịch sử; đã xét riêng cả hai, ký giữ theo chủ dự án, không phủ nhận nghĩa đỏ của trảm.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tram	trạm	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+treo	treo	K2	Astra	Trẹo là cách đọc ít gặp và thường cần đối tượng/tổ hợp; không coi toàn bộ số đếm là triệu chứng chuyên biệt.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+treo	treo	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+trinhdien	trình diễn	K2	Astra	Trình diện có cả nghĩa đến báo có mặt/ra mắt; không mặc định mọi tình huống đều là công an/tố tụng.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+trinhdien	trình diễn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tron	tròn	K2	Astra	Trôn có nghĩa bộ phận cơ thể ngoài nghĩa đáy vật; nguồn ghi thông tục, không ghi tục/tình dục cho nguyên mục. Không lấy nhãn của cụm dài hơn.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tron	tròn	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+trungbinh	trung bình	K2	Astra	Trưng binh thuộc quân sự nhưng là từ văn viết/ít dùng; hai kho không có lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+trungbinh	trung bình	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+trungthu	trung thu	K2	Astra	Trúng thử chỉ tình trạng y khoa trong lối gọi cũ, 0/0; trưng thu gắn quyền nhà nước nhưng là cách đọc phụ ít gặp.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+trungthu	trung thu	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+trungthuc	trung thực	K2	Astra	Trúng thực là cách gọi phương ngữ cho rối loạn sau ăn; có một lượt phụ đề, không bỏ qua nghĩa bệnh chỉ vì hiếm.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+trungthuc	trung thực	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tung	tung	K2	Astra	Tụng có nghĩa nghi lễ thật nhưng còn làm thành tố nhiều từ; cách đọc này ít tự nhiên ở khóa tung, không ký cho cụm tụng kinh.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+tung	tung	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+tuai	tự ái	K2	Astra	Tự ải đúng là tự hại, đã xét không kể ngưỡng; từ điển in ghi cũ, ít dùng và 0/0 lượt sạch. Không gọi đây là cách đọc không đỏ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tuai	tự ái	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tudo	tự do	K2	Astra	Tư đồ là chức quan cổ và có thể là họ, chỉ thấy ở phụ đề; không suy quyền lực hiện hành từ danh xưng lịch sử này.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	THAY_THE
+tudo	tự do	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+tutien	tự tiện	K2	Astra	Tu tiên có thể thuộc tín ngưỡng hoặc chất liệu truyện, cả cụm ít dùng; không đồng nhất mọi trường hợp với hành lễ.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tutien	tự tiện	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tuong	tường	K2	Astra	Tướng vừa là cấp/chức quân sự vừa chỉ dáng/vẻ; số mặt chữ không phải số nghĩa quân hàm. Ký đúng lựa chọn của chủ dự án.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+tuong	tường	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+vongcung	vòng cung	K2	Astra	Vọng cung gợi nơi/nghi lễ hướng về cung vua, là thuật ngữ lịch sử; không có lượt sạch.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+vongcung	vòng cung	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+votu	vô tư	K2	Astra	Vô tự có thể gợi không con nối dõi hoặc không có chữ; không tất yếu là chẩn đoán vô sinh, cả cụm 0/0.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+votu	vô tư	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+vuhoi	vũ hội	K2	Astra	Vu hồi là từ chuyên môn quân sự; đã xét cả dưới còi, chỉ một lượt phụ đề, không lượt web.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+vuhoi	vũ hội	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+xeng	xẻng	K2	Astra	Xèng còn nói đồng xu/đồ chơi hoặc âm thanh; không gán mọi lần đọc cho máy đánh bạc.	2026-11-21	astra/ra-thay-chinh/khep-muc-mo-1.tsv	CO
+xeng	xẻng	K2	Opus	Đồng ý giữ. Opus ký K2 không tự động chặn cho khóa này, cùng phạm vi đối chứng ghi ở phiếu Astra	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+cancu	cần cù	K2	Astra	SA-Astra ký “không tự động chặn” theo Q-rtc-O2/D-rtc-7. Căn cứ còn có nghĩa quân sự thật; cả khóa cũng có cách đọc về cơ sở để lập luận. Giữ theo quyết định riêng, không dùng tỷ lệ làm luật.	2026-11-22	astra/ra-thay-chinh/khep-muc-mo-2.tsv	CO
+cancu	cần cù	K2	Opus	Nghĩa chính của căn cứ là cơ sở, chỗ dựa (căn cứ vào); căn cứ quân sự là nơi đóng quân, cùng loại với các cách đọc quân sự chủ dự án đã cho giữ (tướng, phòng ngự, khiên). Opus ký K2	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+tienluong	tiền lương	K2	Astra	SA-Astra ký “không tự động chặn” theo Q-rtc-O2/D-rtc-7. Tiên lượng dùng được cho dự đoán ngoài y khoa; không phủ nhận ngữ cảnh lâm sàng đã kiểm.	2026-11-22	astra/ra-thay-chinh/khep-muc-mo-2.tsv	CO
+tienluong	tiền lương	K2	Opus	Tiên lượng là dự đoán, kể cả trong y khoa; không phải tên bệnh, triệu chứng hay thủ thuật như các ví dụ nhóm 5; r 0,167. Opus ký K2	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+trieu	triệu	K2	Astra	SA-Astra ký “không tự động chặn” theo Q-rtc-O2/D-rtc-7. Triều vừa gợi chính quyền lịch sử vừa gợi nước triều; ký đúng khóa này, không miễn mọi từ chỉ triều đại.	2026-11-22	astra/ra-thay-chinh/khep-muc-mo-2.tsv	CO
+trieu	triệu	K2	Opus	Triều (triều đình, triều đại; cũng là thủy triều) là từ hoàng gia như ngai, trẫm mà chủ dự án đã cho giữ; r 0,092. Opus ký K2	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	CO
+banthan	bạn thân	K2	Astra	SA-Astra ký “không tự động chặn” theo Q-rtc-O2/D-rtc-7. Bán thân có nghĩa nửa người và có ngữ cảnh mại dâm đúng như báo cáo trước; chủ dự án giữ sau khi đã xét cả hai, không xóa bằng chứng cũ.	2026-11-22	astra/ra-thay-chinh/khep-muc-mo-2.tsv	THAY_THE
+banthan	bạn thân	K2	Opus	Nghĩa chính của bán thân là nửa người (tượng bán thân); nghĩa mại dâm là nghĩa phụ, Astra thấy ít nhất 3 trong 38 dòng phụ đề đọc. Cả chuỗi bán thân chỉ bằng 0,050 lần bạn thân; chưa có nguồn từ điển cho nghĩa tình dục nên không thuộc K0 (TC:162–163). Bạn thân là từ cốt lõi. Opus ký K2	2026-11-21	opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv	THAY_THE
+bien	biển	K2	Astra	Không tự động chặn: biến có cả lời đuổi bất lịch sự lẫn thay đổi/biến mất; không lấy PPM cả từ làm số lần mắng. Biên có nghĩa biên giới/ghi, biện có thể có văn cảnh lễ, biền là địa hình; không chứng thực K0. Đã kiểm biễn riêng ở H5.	2026-11-22	astra/ra-thay-chinh/hm-chu-ky-1.tsv	CO
+bien	biển	K2	Opus	Ký K2. Nghĩa chính của biến là đổi khác hay mất đi; lời đuổi 'biến đi' là cách dùng phụ, nhẹ. Biến nhiều hơn biển (phụ đề 10.287/3.923) nhưng nghĩa chính không đỏ nên không phải K1. Biên, biện, biền không đỏ.	2026-11-22	opus/ra-thay-chinh/hm-chu-ky-1-opus.tsv	CO
+bimat	bí mật	K2	Astra	Không tự động chặn: nguyên mục bí mật không tự chỉ tội phạm. Bỉ mặt có nghĩa miệt thị thật, nhưng chỉ 0/1 lượt sạch và hẹp hơn hẳn cách đọc chính; không hạ nhãn chỉ vì dưới còi.	2026-11-22	astra/ra-thay-chinh/hm-chu-ky-1.tsv	CO
+bimat	bí mật	K2	Opus	Ký K2. Bỉ mặt (khinh, coi thường) chỉ 0/1 lượt sạch; nghĩa chê nhẹ, hiếm hơn hẳn cách đọc chính.	2026-11-22	opus/ra-thay-chinh/hm-chu-ky-1-opus.tsv	CO
+vanhanh	vận hành	K2	Astra	Không tự động chặn: vạn hạnh có cả nghĩa lành và thuật ngữ Phật học hiếm, Vạn Hạnh còn là tên riêng. Các lượt web hạ chữ không đo riêng nghĩa đạo; không bỏ qua nghĩa đạo cũng không đếm đôi hai dạng viết hoa/thường.	2026-11-22	astra/ra-thay-chinh/hm-chu-ky-1.tsv	CO
+vanhanh	vận hành	K2	Opus	Ký K2. Vạn hạnh là thuật ngữ Phật học và tên riêng; 0 lượt phụ đề, 95 lượt web (0,4% so với vận hành). Nhóm 4 chỉ ở nghĩa đạo, hiếm.	2026-11-22	opus/ra-thay-chinh/hm-chu-ky-1-opus.tsv	CO
+chia	chia	K2	Astra	Không tự động chặn: chĩa có hai chữ ký cũ; chỉa là dạng khác của chĩa, có dùng cho đồ vật vô hại. Chìa, chía, chị ả không chứng thực K0/K1; thia là tên cá, không phải cách viết của chia. Ký cả phạm vi mới; không gán ý mới cho Opus.	2026-11-22	astra/ra-thay-chinh/hm-chu-ky-1.tsv	CO
+chia	chia	K2	Opus	Ký K2, mở rộng chữ ký cũ của khóa chia (hai bên, 19/11/2026) sang chỉa, chía, chị ả. Chĩa không đỏ tự thân (chữ ký cũ); chỉa cùng đánh giá (Kaikki ghi nghĩa khác, phụ đề dùng như chĩa); chía (17/29) không đỏ; chị ả (0/0) chê nhẹ, hiếm.	2026-11-22	opus/ra-thay-chinh/hm-chu-ky-1-opus.tsv	CO
+ngangon	ngắn gọn	K2	Astra	Không tự động chặn: ngả ngớn có sắc thái chê/không đứng đắn nhưng không phải từ tục hay chỉ hành vi tình dục; ngả ngốn thiên về tư thế/bừa bộn, ngá ngởn thiên về thiếu để ý. Cả ba cách đọc hiếm, không gộp thành một nghĩa đỏ.	2026-11-22	astra/ra-thay-chinh/hm-chu-ky-1.tsv	CO
+ngangon	ngắn gọn	K2	Opus	Ký K2. Ngả ngớn (0/0) nghĩa là không đứng đắn; Kaikki và HND không ghi nghĩa tục hay tình dục người lớn, nên không K0 (TC:161). Hiếm. Ngả ngốn (1/0) là bừa bộn.	2026-11-22	opus/ra-thay-chinh/hm-chu-ky-1-opus.tsv	CO
+bandoc	bạn đọc	K2	Astra	bàn độc: Cách gọi đồ thờ cũ, 0/0; không dùng riêng tiếng độc làm còi. THONG_TIN của P2 không phải cặp chữ ký.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+bandoc	bạn đọc	K2	Opus	bàn độc: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+bang	bảng	K2	Astra	băng: Thay hai phiếu hiệu lực chứ không ghi bốn phiếu: phạm vi cho bảng phải chứa cả báng và băng, gồm ngữ cảnh đạn/băng đảng đã xét ở hai dòng cũ. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv, chu-ky-astra.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+bang	bảng	K2	Opus	băng: Đồng ý Astra: hai dòng hiệu lực mới của bảng phải giữ phạm vi băng của hai dòng cũ đã THAY_THE [K2, phạm vi gồm băng (đạn, đảng) và báng] [mở rộng phạm vi chữ ký cũ của khóa này: chu-ky-opus.tsv, opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+bangdo	băng đô	K2	Astra	bang đỏ: Thuật ngữ bầu cử của Hoa Kỳ, 0/0 ở hai kho đã ghim, cách đọc phụ thuộc ngữ cảnh nước ngoài.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+bangdo	băng đô	K2	Opus	bang đỏ: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+banthan	bạn thân	K2	Astra	bán thần: Hai SA ký bổ sung cho bán thần, có cả nghĩa nhân vật truyện; không thay hoặc thu hẹp phạm vi bán thân theo D-rtc-7. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-2.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+banthan	bạn thân	K2	Opus	bán thần: Hai bên cùng đề xuất K2: Á thần trong truyện; tỉ lệ 0,016; mở rộng chữ ký K2 sẵn có của khóa banthan (D-rtc-7) [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+binhdi	bình dị	K2	Astra	binh di: Cách gọi dẹp giặc đã xét dù không có lượt; nghĩa quân sự cổ khác với tên riêng và với mặt chính.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+binhdi	bình dị	K2	Opus	binh di: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+bodo	bộ đồ	K2	Astra	bò đỏ: VI/EN ghi riêng nghĩa chính trị miệt thị, ngoài tên giống bò. Cách đọc phụ ít xuất hiện; chữ ký bộ đồ cho bợ đỡ không bao quát. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+bodo	bộ đồ	K2	Opus	bò đỏ: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+caico	cãi cọ	K2	Astra	cai cò: Đối chứng chỉ chức cảnh sát cũ, 0/0; khác cai cơ đã ký cho cãi cọ. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+caico	cãi cọ	K2	Opus	cai cò: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+chanh	chanh	K2	Astra	chảnh: Có lời chê làm cao nhưng cũng có cách trêu nhẹ, không tách nghĩa từ tần suất cả mặt chữ. Đối chứng đã bật còi.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+chanh	chanh	K2	Opus	chảnh: Hai bên cùng đề xuất K2: Lời chê nhẹ (làm cao), khóa một âm tiết; tiền lệ ngốc, nhãi (K2)	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+chapnhat	chấp nhặt	K2	Astra	chấp nhất: Có thể tả sự cố chấp; sắc thái phê bình phụ thuộc ngữ cảnh, không tự là lời rủa. Còi tương đối 6/0 so với mục 5/0 đủ để đọc, không phải K1; hai SA đã ký K2.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+chapnhat	chấp nhặt	K2	Opus	chấp nhất: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+chinhdang	chính đáng	K2	Astra	chính đảng: Nguyên cụm liên quan chính trị rõ, nhưng cách đọc phụ có 6/48 và dưới hai mốc. Không gọi THONG_TIN cũ là hai chữ ký K2. | chỉnh đảng: Thuật ngữ chính trị chuyên biệt, 0/0; ký theo đúng cả cụm, không cấm tiếng đảng riêng.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+chinhdang	chính đáng	K2	Opus	chính đảng: Đồng ý Astra: chính trị, 6/48, dưới hai mốc | chỉnh đảng: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+chungchi	chứng chỉ	K2	Astra	chung chi: Nguồn có nghĩa hối lộ, trong hai kho cả cụm vẫn thưa; không quy mọi lượt đứng liền thành đưa hối lộ.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+chungchi	chứng chỉ	K2	Opus	chung chi: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+chungtu	chứng từ	K2	Astra	chủng tử: Có nghĩa triết học nhà Phật bên cạnh nghĩa hạt giống; không đánh đồng mọi lượt thành tôn giáo. Ghi K2 có đủ hai chữ ký thay vì buộc loại hoặc bỏ sót đối chứng.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+chungtu	chứng từ	K2	Opus	chủng tử: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+congdoan	công đoạn	K2	Astra	cộng đoàn: Có nghĩa cộng đoàn Công giáo; còi bật. Không đồng nhất một cộng đồng tín hữu với bản thân nghi lễ; đây không phải công đoàn đã xét ở T-rtc-15.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+congdoan	công đoạn	K2	Opus	cộng đoàn: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+cuong	cuống	K2	Astra	cương: Astra không phủ nhận nghĩa sinh lý dùng độc lập (phụ đề 3570902); EN:15144 không đánh dấu tục. Một lượt đúng nghĩa và số của các tổ hợp dài hơn chưa chứng minh nghĩa phụ người lớn còn phổ biến như trường hợp chim/bướm. Ký mở rộng cho cương bên cạnh cuồng/cưỡng. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+cuong	cuống	K2	Opus	cương: EN:15144 chỉ ghi 'erect' với nhãn trang trọng, không nhãn tục; cương đứng riêng phần lớn là dây cương, cương quyết, đề cương, kim cương. Không phải nghĩa phụ tục phổ biến kiểu bướm, chim (TC:162) [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+dadang	đa dạng	K2	Astra	đa đảng: Toàn cụm thuộc chính trị, 0/30 ở kho ghim; cách đọc phụ dưới hai mốc, không suy nhãn THONG_TIN thành chữ ký phát hành.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+dadang	đa dạng	K2	Opus	đa đảng: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+daihan	dài hạn	K2	Astra	Đại hãn: Tước hiệu lịch sử là nghĩa thật nhưng có phạm vi hẹp; không dùng tần suất hạ chữ làm số nghĩa chức tước. Giữ cả đối chứng đại hạn cũ trong phiếu mới. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+daihan	dài hạn	K2	Opus	Đại hãn: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+dangtri	đãng trí	K2	Astra	đảng trị: Thuật ngữ thể chế thuần chính trị nhưng nguyên cụm văn viết hiếm, 0/0.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+dangtri	đãng trí	K2	Opus	đảng trị: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+daude	đầu đề	K2	Astra	đau đẻ: Cách đọc tình trạng sinh nở có thật và có còi tương đối; không đồng nhất với hành vi tình dục hoặc mọi bệnh lý. Mã thông tin cũ không đại diện chữ ký.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+daude	đầu đề	K2	Opus	đau đẻ: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+donda	đon đả	K2	Astra	đòn đá: H6.1: tên đòn võ, hai lượt sạch đều đúng ngữ cảnh; có còi tương đối dù PPM thấp. Astra ký K2 vì tổng chỉ hai lượt; cần Opus đối đáp, không tự cho đon đả qua.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+donda	đon đả	K2	Opus	đòn đá: Hai bên cùng đề xuất K2: Đòn đá là tên đòn võ, cụm ghép từ hai tiếng, không có ở HND; 1+1 lượt, từ chính 1+0 lượt nên tỉ lệ vô nghĩa. Khác đấm đá (đánh nhau, từ ghép thông dụng, K1)	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+dongdu	đông đủ	K2	Astra	Đông Du: Phong trào lịch sử, cũng là tên trong địa danh; không gán toàn bộ tần suất hạ chữ cho chính trị, nhưng không bỏ qua chỉ vì viết hoa. | đông du: Đi về phương đông cũng là văn sử; cùng số với Đông Du, không cộng đôi. Cần phân biệt nghĩa của nguyên cụm.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+dongdu	đông đủ	K2	Opus	Đông Du: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng | đông du: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+giave	giá vẽ	K2	Astra	Gia-vê: Tên riêng chỉ thần linh, không bỏ qua theo quy tắc tên người/địa danh; hình thức cụ thể này hiếm.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+giave	giá vẽ	K2	Opus	Gia-vê: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+hinhthu	hình thù	K2	Astra	Hình thư: Nhan đề bộ luật trong lịch sử; không gọi mọi lượt một tên sách cổ là tố tụng hiện hành.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+hinhthu	hình thù	K2	Opus	Hình thư: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+hongchuyen	hóng chuyện	K2	Astra	hồng chuyên: Thuật ngữ chính trị lịch sử 0/2, dưới hai mốc, đã đọc và Opus ký cùng Astra. Không mặc định mọi thuật ngữ dưới còi đều phải trình chủ.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+hongchuyen	hóng chuyện	K2	Opus	hồng chuyên: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+huongduong	hướng dương	K2	Astra	hưởng dương: Uyển ngữ tang lễ chỉ tuổi người mất, không phải tên cây hướng dương; chỉ một lượt web, không lấy vong làm ngưỡng.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+huongduong	hướng dương	K2	Opus	hưởng dương: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+khao	khao	K2	Astra	khảo: Có nghĩa thẩm vấn có thể dùng vũ lực ngoài nghĩa khảo sát/nghiên cứu; toàn mặt chữ bật còi. Chữ ký khao cho khả ố không ký luôn khảo. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+khao	khao	K2	Opus	khảo: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+khau	khâu	K2	Astra	khấu: Có nghĩa giặc/cướp kiểu Hán Việt, thường cần tổ hợp; còn các cách dùng trung tính. Không gán cả mặt chữ cho tội phạm.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+khau	khâu	K2	Opus	khấu: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+kinhngac	kinh ngạc	K2	Astra	kình ngạc: Có cách dùng văn sử về giặc ngoài nghĩa hai con vật, 0/0; đã xét bạo lực dưới còi.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+kinhngac	kinh ngạc	K2	Opus	kình ngạc: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+linhduong	linh dương	K2	Astra	linh đường: Nguồn hiện hành xác nhận nơi tang lễ của nguyên cụm, nhưng chỉ 1/1 lượt sạch.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+linhduong	linh dương	K2	Opus	linh đường: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+long	lông	K2	Astra	lồng: EN:25441 xác nhận có cách viết lóng theo phát âm; không coi đó là không có nguồn. Mẫu phụ đề sạch chủ yếu nói vật đựng/động tác, chưa chứng minh nghĩa phụ tục phổ biến của đúng lồng; không dùng số gộp của các nghĩa lành.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+long	lông	K2	Opus	lồng: EN:25441 ghi lồng là cách viết theo giọng Nam của một từ tục, nhãn lóng; không phải nghĩa của từ lồng trong từ điển. Người đọc khóa long thấy lông, lồng (cái lồng), lòng, lỏng. Không phổ biến như bướm, chim (TC:162)	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+maso	mã số	K2	Astra	ma sơ: Danh xưng người tu nữ, không phải hành vi nghi lễ; cách đọc mượn ít gặp của khóa mã số, không mặc nhiên chặn.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+maso	mã số	K2	Opus	ma sơ: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+munoi	mũ nồi	K2	Astra	mụ nội: Từ điển ghi lối chửi thề, không đủ nhãn tục của toàn mục để áp K0; chỉ một lượt phụ đề.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+munoi	mũ nồi	K2	Opus	mụ nội: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+nangcan	nặng cân	K2	Astra	nặng căn: Nguồn ghi cách nói về thói xấu khó sửa, 0/2; có thể gợi tín ngưỡng theo ngữ cảnh, không gán toàn bộ lượt cho nghĩa đó. Không nhầm với cờ H5 lặng câm đã đóng.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+nangcan	nặng cân	K2	Opus	nặng căn: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+nghe	nghệ	K2	Astra	nghề: Mục tính từ có nhãn thô tục ở Kaikki VI, trong khi Việt–Việt 30K viết tắt và nghĩa nghề nghiệp thông thường rất rộng. Chưa đủ căn cứ cho nghĩa phụ tục phổ biến, không tự K0. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+nghe	nghệ	K2	Opus	nghề: Nghĩa phụ 'thông thạo' mang nhãn thô tục ở VI:36995 nhưng nghĩa không tục hay tình dục; nghề nghiệp áp đảo [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+nhabao	nhà báo	K2	Astra	nha bào: Thuật ngữ vi sinh chuyên biệt nhưng chưa có lượt sạch; không phải mọi sinh vật là bệnh.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+nhabao	nhà báo	K2	Opus	nha bào: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+nhantai	nhân tài	K2	Astra	nhân tai: Nguyên cụm có nghĩa tai họa do người gây ra; một lượt web, không mặc định là cách đọc phổ biến của nhân tài.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+nhantai	nhân tài	K2	Opus	nhân tai: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+phatsong	phát sóng	K2	Astra	phật sống: Đối chứng về tôn giáo rõ nhưng cách gọi này rất thưa (1/1); không gán mọi cụm có phật là đỏ.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+phatsong	phát sóng	K2	Opus	phật sống: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+quai	quai	K2	Astra	quại: Động từ chỉ đánh mạnh đã xét dưới còi, 3/0; chữ ký quai với quái không bao trùm đối chứng này. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+quai	quai	K2	Opus	quại: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+quanbo	quần bò	K2	Astra	quân bộ: Nguồn dẫn về binh chủng; H6.1 đã xét dưới mốc, 0/0.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+quanbo	quần bò	K2	Opus	quân bộ: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+sanhan	sành ăn	K2	Astra	sân hận: Có nghĩa thù ghét và thuật ngữ Phật học; đủ căn cứ đọc toàn cụm, thưa hơn đáng kể so với mục chính.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+sanhan	sành ăn	K2	Opus	sân hận: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+sotruong	sở trường	K2	Astra	sở trưởng: Chức vụ trong cơ quan ở bối cảnh nước ngoài, còi bật nhưng phạm vi hẹp; đối chiếu quyết định giữ thị trưởng, không suy ra miễn mọi chức danh.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+sotruong	sở trường	K2	Opus	sở trưởng: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+tamchan	tấm chắn	K2	Astra	tâm chấn: Tâm động đất là khái niệm địa chấn; không mặc định mọi hiện tượng địa chất là thảm họa dù còi bật.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+tamchan	tấm chắn	K2	Opus	tâm chấn: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+tantinh	tận tình	K2	Astra	tán tỉnh: Dùng cả cho việc làm quen và cho việc dụ bằng lời; việc tìm hiểu tình cảm không tự là tình dục hay thao túng. Còi tuyệt đối và tương đối đều bật.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+tantinh	tận tình	K2	Opus	tán tỉnh: Tán tỉnh là làm quen, không phải tình dục hay thao túng; không thuộc nhóm đỏ nặng dù số cao	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thamthu	thăm thú	K2	Astra	thâm thù: Nghĩa thù hận mạnh nhưng lối nói văn viết thưa, 17/0, chưa chạm hai mốc; không gán phán quyết ý nghĩa chỉ từ chữ thù.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thamthu	thăm thú	K2	Opus	thâm thù: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thanhqua	thành quả	K2	Astra	thánh quả: Thuật ngữ Phật học chuyên biệt; hai kho không có lượt sạch.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thanhqua	thành quả	K2	Opus	thánh quả: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thanhthat	thành thật	K2	Astra	thánh thất: Nơi thờ tự có thật, 0/7; chưa phải cách đọc thông dụng của thành thật ở hai kho ghim.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thanhthat	thành thật	K2	Opus	thánh thất: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thanhthi	thành thị	K2	Astra	thánh thi: Cụm chỉ tác phẩm tôn giáo; chỉ 1/14, ký theo đúng đối chứng này.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thanhthi	thành thị	K2	Opus	thánh thi: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thoai	thoải	K2	Astra	thoái: Có danh từ thuật ngữ cho đòn võ nhưng còn nhiều nghĩa lành và tổ hợp dài. Đã đọc cả xét bạo lực, ủng hộ giữ K2.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thoai	thoải	K2	Opus	thoái: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thoi	thổi	K2	Astra	thoi: Có động từ đánh mạnh ngoài công cụ dệt; đã đọc cả dưới mốc vì bạo lực, thực tế còn có còi. Phiếu thổi hiện nói về thối chứ chưa nói về thoi. [mở rộng phạm vi chữ ký cũ của khóa này: chu-ky-astra.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thoi	thổi	K2	Opus	thoi: Đồng ý Astra: đánh mạnh là nghĩa phụ; thoi chủ yếu là con thoi [K2, mở rộng chữ ký sẵn có của thổi] [mở rộng phạm vi chữ ký cũ của khóa này: chu-ky-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thudu	thú dữ	K2	Astra	thứ dữ: Có cách dùng về người bạo lực, cũng có sắc thái khẩu ngữ chỉ người sành sỏi; đã xét cả H6.1, không gán toàn tần suất cho nghĩa gây hại.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thudu	thú dữ	K2	Opus	thứ dữ: Hai bên cùng đề xuất K2: Cách nói người khó chơi, không phải hành vi bạo lực; số bị thổi phồng bởi thứ dữ liệu, thứ dữ dội	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thuocdo	thước đo	K2	Astra	thuốc đỏ: Sản phẩm dùng sát trùng, cách đọc phụ thưa, 5/6; không tự chặn theo riêng chữ thuốc.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thuocdo	thước đo	K2	Opus	thuốc đỏ: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+thuong	thưởng	K2	Astra	thượng: Nghĩa động từ có ghi sắc thái thô tục ở một nguồn nhưng nguồn khác ghi khẩu ngữ, còn nhiều nghĩa lành. Chưa chứng minh nghĩa phụ tục phổ biến.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+thuong	thưởng	K2	Opus	thượng: Nghĩa phụ thô tục ở VI:38436 hiếm so với thượng (cao nhất, thượng hạng); không phổ biến như chim, bướm (TC:162)	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+tienle	tiền lẻ	K2	Astra	Tiền Lê: Tên triều đại xác định trong sử Việt; không xem là tên riêng vô can, cũng không gán mọi lượt hạ chữ cho chế độ chính trị. | tiền Lê: Cùng cách đọc lịch sử với Tiền Lê, không cộng đôi số hạ chữ.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+tienle	tiền lẻ	K2	Opus	Tiền Lê: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng | tiền Lê: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+tivi	tivi	K2	Astra	tì vị: Khái niệm cơ quan trong đông y, không chỉ bệnh; đúng nguyên cụm dùng hiếm (0/2).	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+tivi	tivi	K2	Opus	tì vị: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+tudo	tự do	K2	Astra	tù đồ: Lối gọi tù nhân cũ, 1/0; đã xét nghĩa tố tụng, không lấy tần suất tù đứng riêng. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+tudo	tự do	K2	Opus	tù đồ: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+tuot	tuột	K2	Astra	tướt: Cách dùng chỉ chứng bệnh trẻ nhỏ, không phải tên chất thải hay từ tục; hiếm, 3/0.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+tuot	tuột	K2	Opus	tướt: Chứng bệnh trẻ nhỏ, 3/0; không phải từ tục hay tên chất thải; như tiền lệ bĩnh	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+tute	tử tế	K2	Astra	tư tế: Astra nhận K2: nghĩa tôn giáo là thật nhưng đây là danh xưng chuyên biệt. Nhiều mẫu phụ đề là tước vị trong phim dịch; mẫu web gắn với kinh sách, chức vụ và cổ sử. Cùng lý do về phạm vi như ma sơ; không suy tỷ lệ nghĩa từ 110/34 lượt. Gộp cả tư tế và tứ tế vào phạm vi ký cho tute. | tứ tế: Cách dùng văn sử cổ khác tư tế; toàn cụm rất hiếm. Ký cả hai đối chứng của tute, không tạo hai cặp chữ ký đang hiệu lực cho cùng khóa.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+tute	tử tế	K2	Opus	tư tế: Chức sắc tôn giáo, nghĩa nhẹ; tỉ lệ 0,073; Astra ký K2 cho ma sơ là danh xưng người tu cùng loại | tứ tế: Đồng ý Astra: cách đọc hiếm hoặc nghĩa đỏ nhẹ, không chắc; ký đúng đối chứng	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+duoi	đuôi	K2	Astra	đượi: VI:273441 (viwiki rev 2010218) ghi dạng nói chệch dùng chê người, không gắn nhãn tục hay xác định người bán dâm; tiêu đề Tục ngữ không phải nhãn tục. 5/7 dòng phụ đề sạch khác nhau là lời xúc phạm, nên rút nhận định không đỏ nhưng không đồng ý gọi phần lớn lượt là lỗi gõ. Chấp nhận K2, không đề nghị K0.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+duoi	đuôi	K2	Opus	đượi: Nói lái của đĩ, không mang nhãn tục; theo tiền lệ bình/bĩnh. Khác phẹt (động từ thô tục có trong từ điển)	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+songngu	song ngữ	K2	Astra	song ngư: Song Ngư là tên chòm sao/cung hoàng đạo; thiên văn không tự là bói toán nhưng cách dùng chiêm tinh có thật. Ký đúng cả dạng viết hoa và thường.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+songngu	song ngữ	K2	Opus	song ngư: Cung hoàng đạo; tiền lệ hoàng đạo	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+tung	tung	K2	Astra	tửng: Có thể là lời trêu về hành vi khác thường, không tự là bệnh; nhiều lượt của tổ hợp tưng tửng. Nhận K2 cho cách đọc này và mở rộng phạm vi chữ ký sẵn có của tung. [mở rộng phạm vi chữ ký cũ của khóa này: astra/ra-thay-chinh/khep-muc-mo-1.tsv]	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+tung	tung	K2	Opus	tửng: Phần lớn số là tưng tửng [mở rộng phạm vi chữ ký cũ của khóa này: opus/ra-thay-chinh/khep-muc-mo-1-opus.tsv]	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+manman	mằn mặn	K2	Astra	man man: Mục Việt có sắc thái khẩu ngữ về trạng thái hơi bất thường; lượt mặt chữ lẫn tiếng Anh. Còi tương đối buộc đọc, không xác lập tỷ lệ nghĩa đỏ.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+manman	mằn mặn	K2	Opus	man man: Số web phần lớn là chữ tiếng Anh	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO
+lieu	liễu	K2	Astra	liêu: Liêu còn là tên/dòng họ, có trong nhiều tổ hợp không nêu triều đại. Ký vì tách được trường hợp lịch sử nhưng không coi mọi lượt liêu là nghĩa H6.3.	2026-11-22	astra/ra-thay-chinh/t9-doi-dap.tsv	CO
+lieu	liễu	K2	Opus	liêu: Số gồm quan liêu, liêu xiêu, họ Liêu	2026-11-22	opus/ra-thay-chinh/t9-doi-dap.tsv	CO

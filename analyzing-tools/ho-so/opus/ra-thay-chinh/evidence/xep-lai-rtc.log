@@ -1,0 +1,6 @@
+tái lập xep-hang.tsv: 10133 mục, thứ tự và F khớp
+bỏ khỏi rổ chấm: 116 từ ra; 0 mục LOAI vì cổng H ([]); 14 mục không qua H1–H9 ở đợt này (['bao tử', 'chán phèo', 'chạng vạng', 'chọc lét', 'cơ quan', 'hì hụi', 'loằng ngoằng', 'làm cỗ', 'ngoại trừ', 'nhão nhoẹt', 'nhão nhẹt', 'qua quýt', 'rướn', 'tròng trành'])
+T-rtc-14: rổ 10003 mục; tập vào giống bản sơ bộ (vào thêm [], ra khỏi tập vào []); 28/118 vị trí đổi; dự bị ['cả nghĩ', 'cửu chương']; thứ tự HM đổi 0/25
+PHU_BO_MOI_LOAI_CU: rổ 9874 mục; tập vào giống bản sơ bộ (vào thêm [], ra khỏi tập vào []); 24/118 vị trí đổi; dự bị ['cả nghĩ', 'cửu chương']; thứ tự HM đổi (HM không ở rổ chấm)
+25 HM OK không-F đứng đầu theo S4 mới (bỏ mục không qua H1–H9): trùng danh sách đã thống nhất; mục 26: giảng viên
+hai chế độ cho cùng tập vào: True

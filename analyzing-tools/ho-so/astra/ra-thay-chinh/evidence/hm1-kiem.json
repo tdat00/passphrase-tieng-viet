@@ -1,0 +1,56 @@
+{
+  "nguon_quyet_dinh": "2cc6aec",
+  "hm": 237,
+  "ok": 130,
+  "r1": 107,
+  "ok_khong_F": 125,
+  "soat_den_hang": 1541,
+  "so_da_soat": 27,
+  "nhan": {
+    "DAT_H_ASTRA": 20,
+    "BO_H6_3": 1,
+    "K2_ASTRA_CHO_OPUS": 4,
+    "K2_ASTRA_BO_SUNG_CHO_OPUS": 1,
+    "BO_Q3_F": 1
+  },
+  "de_xuat": 25,
+  "K2": [
+    "biển",
+    "bí mật",
+    "chia",
+    "ngắn gọn",
+    "vận hành"
+  ],
+  "H1_H9_can_Opus": true,
+  "moi_D6_D7_D8": "CHUA_CHAY",
+  "loi_cu": {
+    "D6_CUOI": 20,
+    "D7_CUOI": 5
+  },
+  "lop": {
+    "C": 9,
+    "H": 9,
+    "K": 7
+  },
+  "F_sau": 77,
+  "R1_sau": 0,
+  "khoa_chan_cu": 110,
+  "khoa_chan_moi_kiem": 94,
+  "giao_2_bang_chan": [],
+  "chinh": 7776,
+  "du_phong": 205,
+  "ra": 116,
+  "nguon_du_phong": 118,
+  "du_bi_truoc_HM": 2,
+  "thu_tu_chinh_thuc": "CHO_T7_T_RTC_14",
+  "sha256": {
+    "honorable-mentions.tsv": "f5280e73ce322f9ce631cb92bb1ab215254149b58f4350fb6e0c9056ad691392",
+    "labels.tsv": "75fcdf0a466f696c47307650113252652f3545ffc8728d0d10a0c1ccbf0bde4e",
+    "du-phong-phan-loai.tsv": "8cc77162092d173a5ce83c102eee642f75d206254fada3de0ea2d36795055bab",
+    "blocked_keys.tsv": "f65526bc5bb62c2f4b70400df2862a44d69783347b03eb6b8ce8d5e1e1dbec20",
+    "spelling_families.tsv": "565fee9d502f62aab4f987cb712d680505c48d51d297393f55225cd4fec792e6",
+    "xep-hang.tsv": "5be03ce6000dd8591c9d8974b93710995c33124fdd19c773b5862b919d0a0215",
+    "hm1-phieu-H.tsv": "1932f8c83d3a597c76457bcbb28080aadc12d56b98a9d146fd1f7e9fef80d36c",
+    "hm-chu-ky-1.tsv": "4e18bdbff4c8bcde4bf1e7109c102140565233f85d2a4b9b2abef207a6a557f5"
+  }
+}

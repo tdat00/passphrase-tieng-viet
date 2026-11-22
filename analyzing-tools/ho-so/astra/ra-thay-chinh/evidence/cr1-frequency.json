@@ -1,0 +1,18 @@
+{
+  "RA": {
+    "n": 38,
+    "median_ppm": 0.7039439480294416,
+    "median_surface_ppm": 0.7839151033595988,
+    "min_ppm": 0.030027882690751323,
+    "max_ppm": 18.754034992324545
+  },
+  "VAO": {
+    "n": 38,
+    "median_ppm": 0.06996186109990676,
+    "median_surface_ppm": 0.07619187036585172,
+    "min_ppm": 0.0033364314100834806,
+    "max_ppm": 0.28938382556881875
+  },
+  "median_ratio_RA_VAO": 10.061824213398173,
+  "note": "verified: số sạch/bề mặt tách riêng, mẫu số mục 0; không phải hệ số độ quen của con người"
+}

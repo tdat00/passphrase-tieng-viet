@@ -1,0 +1,14 @@
+H7: 349 khóa; {'CHU_DU_AN_GIU_DA_KY_PHIEU': 11, 'CHU_DU_AN_THAY': 3, 'DONG_THUAN_GIU': 10, 'DONG_THUAN_GIU_DA_KY_PHIEU': 226, 'DONG_THUAN_THAY': 89, 'GIU_CHU_KY_CU': 9, 'GIU_QUYET_DINH_CHU': 1}
+H5: 65 cặp; {'DONG_THUAN_DA_RA': 2, 'DONG_THUAN_KHAC_TU': 23, 'DONG_THUAN_KHONG_CHO_VAO': 1, 'DONG_THUAN_QUA': 15, 'DONG_THUAN_THAY': 17, 'DONG_THUAN_THAY_CHO_LOAI': 7}
+Thay: 116 từ ra ({'DONG_THUAN': 106, 'DONG_THUAN_CHO_LOAI': 7, 'QUYET_DINH_CHU_D-rtc-6': 3}); 116 vào, 2 dự bị, 0 còn lại; khóa H7 còn tranh chấp (Q-rtc-O2): 0; HM (D-rtc-8): 25
+trung vị PPM sạch (opus-counts.tsv rồi l2/l2b/l2c/l3-ung-vien.tsv, như screen_core.load của Astra): O116 ra 1.914419299 (n = 116/116), vào 0.072855439 (n = 116/116)
+Đồng thuận thay: áo quần, ăn diện, bà chủ, bàn ăn, bảo hành, báo động, bền bỉ, bồ kết, bố mẹ, bộ ba, ca nhạc, cải xoong, cao giá, cắm đầu, chậm, choàng, chỏm, chòng chành, chồn, chun, chữ nghĩa, cò trắng, cổ thụ, cổng, cộng sự, cuốc, dàn ý, dặn dò, dây chun, dây thun, di dời, diều, dò hỏi, đánh bại, đậm đà, đầu mùa, đích, đỏ thắm, đột phá, gầy gò, già dặn, giảm, giao, giấc, giận dỗi, gọng, hâm mộ, hoa mai, hỏi thăm, hóm hỉnh, hố ga, kiến, làng, lằng nhằng, lấn át, lề đường, măng, mặt nước, mê mẩn, mời mọc, nằm mơ, nắm vững, ngao, ngắt, ngoảnh, ngọc, ngụm, nguyên, ngựa, nhai, nhàu, nhồi, nhốt, niêu, phản bác, phân công, phấp phới, phí phạm, phong thư, rau dền, rầm rầm, sàng, sân ga, sông, tài hoa, tép riu, thái, thảm, than, thể lực, thiên tài, thiếu, thong dong, thôn, thớt, thun, thư thái, tiệm, tiền công, tiếp viên, tính khí, trán, trăng tròn, trời, xà bông, xà phòng
+Đo xong, chờ Astra xác nhận số:
+Đồng thuận thay, nhãn CHO_LOAI: chơ vơ, co rúm, loay hoay, rầm rộ, su hào, xập xình, xù xì
+Tranh chấp S2 (Opus thay):
+Chủ dự án quyết (D-rtc-6, D-rtc-7): thay vòng, thuần, xuân; giữ (K2) lưới, phòng ngủ, tường, thị trường, khiến, ngại, trạm, cần cù, tiền lương, triệu, bạn thân
+H7 chờ căn cứ (Astra CHO):
+H7 giữ theo chữ ký cũ: bình, di động, khảm, kính, nướng, phết, thầy, thổi, trứng
+H5 chờ căn cứ:
+H5 tranh chấp khác:
+H5 cặp khớp họ đã đăng ký khi tách ' / ': bít tết/bíp tết (spelling_families.tsv:258)

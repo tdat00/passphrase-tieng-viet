@@ -1,0 +1,12 @@
+H7: khóa có ít nhất một cặp lệch hoặc kết quả khác: 349
+H7 v1 (opus|astra): {'GIU|KY_K2': 155, 'GIU|CHO': 26, 'THAY|THAY': 28, 'GIU|THAY': 42, 'KY_K2|KY_K2': 13, 'KY_K2|THAY': 62, 'KY_K2|CHO': 18, 'THAY|KY_K2': 2, 'KY_K2|GIU': 3}
+H7 v2 (opus|astra): {'GIU|KY_K2': 155, 'GIU|CHO': 26, 'THAY|THAY': 66, 'KY_K2|KY_K2': 15, 'KY_K2|THAY': 58, 'KY_K2|CHO': 17, 'GIU|THAY': 8, 'KY_K2|GIU': 3, 'THAY|CHO': 1}
+H7 v2 hòa/lệch: {'LECH': 268, 'HOA': 81}
+H5: cặp khác kết luận/hành động: 60
+H5 v1 (opus|astra): {'CUNG_TU_QUA|CHO': 15, 'KHONG|CHO': 25, 'THAY|CHO': 2, 'CUNG_TU_QUA|KHONG': 9, 'DIEU_KIEN|CHO': 4, 'KHONG|THAY': 3, 'THAY|KHONG': 1, 'KHONG_CHO_VAO|KHONG': 1}
+H5 v2 hòa/lệch: {'LECH': 48, 'HOA': 12}
+RA: Opus 38 (+4 điều kiện), Astra 141 (+87 chờ); chung 33
+RA (opus, astra): {('GIU', 'CHO'): 81, ('RA', 'RA'): 33, ('GIU', 'RA'): 108, ('RA', 'CHO'): 2, ('DIEU_KIEN', 'CHO'): 4, ('RA', 'GIU'): 3}
+VAO: Opus 38, Astra 141; chung 24
+RA v2: Opus 87, chung với Astra 74, chỉ Opus ['cải xoong', 'chơ vơ', 'co rúm', 'già dặn', 'lấn át', 'loay hoay', 'rầm rộ', 'su hào', 'thái', 'xà bông', 'xà phòng', 'xập xình', 'xù xì'], chỉ Astra 67
+VAO v2: Opus 87, chung với Astra 24

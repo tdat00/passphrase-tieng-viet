@@ -1,0 +1,61 @@
+tu	bien_the	opus_ket_luan_cap	opus_loai	opus_ket_luan_H5	opus_v1	astra_ket_qua	astra_loai	astra_v1	astra_HND_chi_viet_hoa	opus_v2	hoa_v2	ly_do_opus_v2
+bảng hiệu	bản hiệu	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+bít tết	bíp tết	DA_DANG_KY	f	QUA_RIENG_H5	CUNG_TU_QUA	CUNG_TU_CHO_DO	f	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+bóng láng	bóng loáng	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+bóng loáng	bóng láng	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+bộc phát	bội phát	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+bộc phát	bột phát	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+buồn lòng	buồm lòng	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+cải xoong	cải soong	CUNG_TU	f	LOAI_THIEU_DU_LIEU	THAY	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	giữ: f theo tiền lệ soong/xoong (LOAI_CANH_TRANH); phụ đề 4 + 0 < 20
+cao quý	cao quí	CUNG_TU	b	QUA_RIENG_H5	CUNG_TU_QUA	-	-	KHONG	-	CUNG_TU_QUA	HOA	giữ lập trường vòng 1
+chơ vơ	trơ vơ	CUNG_TU	d	CAN_HAI_CHU_KY	DIEU_KIEN	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	sửa: dạng kia có trong HND (chữ thường) nên theo tiền lệ là c (spelling_families: 34 c so với 3 d khi dạng kia chỉ ở HND 39K/74K); c thiếu dữ liệu (phụ đề 2)
+chun	thun	KHAC_TU	-	-	KHONG	CUNG_TU_CHO_DO	c/e	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+co rúm	co dúm	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	sửa: dạng kia có trong HND (chữ thường) nên theo tiền lệ là c (spelling_families: 34 c so với 3 d khi dạng kia chỉ ở HND 39K/74K); c thiếu dữ liệu (web 16)
+công ty	công ti	CUNG_TU	b	QUA_RIENG_H5	CUNG_TU_QUA	-	-	KHONG	-	CUNG_TU_QUA	HOA	giữ lập trường vòng 1
+cột mốc	cột mốt	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+dây chun	dây thun	KHAC_TU	-	-	KHONG	DE_NGHI_LOAI_H5C	c	THAY	False	THAY	HOA	chấp nhận: vi.wiktionary chun 'nghĩa như thun' (rev 2034319), cùng dạng chứng cứ với ngảnh, phất phới, chòng chành; c, phụ đề 7 + 9 < 20
+dây thun	dây chun	KHAC_TU	-	-	KHONG	DE_NGHI_LOAI_H5C	c	THAY	False	THAY	HOA	như dây chun/dây thun
+dí dỏm	rí rỏm	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+đá quý	đá quí	CUNG_TU	b	QUA_RIENG_H5	CUNG_TU_QUA	-	-	KHONG	-	CUNG_TU_QUA	HOA	giữ lập trường vòng 1
+già dặn	già giặn	CUNG_TU	c	LOAI_THIEU_DU_LIEU	THAY	KHAC_TU	-	KHONG	False	THAY	LECH	vòng chung: enwiktionary già dặn rev 80169171 ghi alternative form of già giặn; c, web 4 + 1 < 20 (Astra và Opus cùng kết luận)
+giỡn	rỡn	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+giun	dun	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+hạt dẻ	hạt giẻ	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+hì hục	hì hụi	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+lăn tăn	lăm tăm	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+lằng nhằng	loằng nhoằng	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+lấn át	lấn áp	CUNG_TU	d	LOAI_LOI	THAY	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	giữ: lấn áp 10/75 phụ đề (13,3%), độ nhạy 9/64; c hay d đều loại; ngữ cảnh cùng nghĩa
+loay hoay	lay hoay	CUNG_TU	d	CHO_SAT_NGUONG	DIEU_KIEN	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	sửa: c theo tiền lệ; lay hoay 3/20 phụ đề = 15%, dưới 95% → LOAI_CANH_TRANH
+lon ton	long tong	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+lòng vòng	lòng dòng	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+nuốt chửng	nuốt trửng	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+ọp ẹp	ọt ẹt	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+phí phạm	phí phạn	KHAC_TU	-	-	KHONG	DE_NGHI_LOAI_H5C	c	THAY	False	THAY	HOA	chấp nhận: vi.wiktionary phí phạn like-entry phí phạm (rev 1314795); c thiếu dữ liệu
+qua quýt	qua quít	CUNG_TU	b	LOAI_THIEU_DU_LIEU	KHONG_CHO_VAO	-	-	KHONG	-	KHONG_CHO_VAO	LECH	giữ lập trường vòng 1
+quy luật	qui luật	CUNG_TU	b	QUA_RIENG_H5	CUNG_TU_QUA	-	-	KHONG	-	CUNG_TU_QUA	HOA	giữ lập trường vòng 1
+quy mô	qui mô	CUNG_TU	b	QUA_RIENG_H5	CUNG_TU_QUA	-	-	KHONG	-	CUNG_TU_QUA	HOA	giữ lập trường vòng 1
+quy tắc	qui tắc	CUNG_TU	b	QUA_RIENG_H5	CUNG_TU_QUA	-	-	KHONG	-	CUNG_TU_QUA	HOA	giữ lập trường vòng 1
+quỹ đạo	quĩ đạo	CUNG_TU	b	QUA_RIENG_H5	CUNG_TU_QUA	-	-	KHONG	-	CUNG_TU_QUA	HOA	giữ lập trường vòng 1
+quý phái	quí phái	CUNG_TU	b	QUA_RIENG_H5	CUNG_TU_QUA	-	-	KHONG	-	CUNG_TU_QUA	HOA	giữ lập trường vòng 1
+rầm rầm	rần rần	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+rầm rộ	rần rộ	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	sửa: dạng kia có trong HND (chữ thường) nên theo tiền lệ là c (spelling_families: 34 c so với 3 d khi dạng kia chỉ ở HND 39K/74K); c thiếu dữ liệu (phụ đề 6)
+rậm rạp	giậm giạp	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+rong ruổi	giong ruổi	CUNG_TU	c	QUA_RIENG_H5	CUNG_TU_QUA	CUNG_TU_CHO_DO	c	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+ròng rã	ròn rã	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+ru rú	giu giú	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+run run	rung rung	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+sền sệt	sềnh sệch	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+su hào	xu hào	CUNG_TU	d	CAN_HAI_CHU_KY	DIEU_KIEN	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	sửa: dạng kia có trong HND (chữ thường) nên theo tiền lệ là c (spelling_families: 34 c so với 3 d khi dạng kia chỉ ở HND 39K/74K); c thiếu dữ liệu (phụ đề 0)
+tâm trí	tâm chí	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+tép riu	tép diu	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+theo dõi	theo rõi	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+thiện chí	thiện trí	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	TEN_RIENG_BI_HA_CHU	-	KHONG	True	KHONG	HOA	sửa: thiện trí chỉ có dạng viết hoa trong HND (tên riêng); bỏ đăng ký QUA
+thun	chun	KHAC_TU	-	-	KHONG	CUNG_TU_CHO_DO	c/e	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+thư giãn	thư dãn	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+trưng bày	chưng bày	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CUNG_TU_CHO_DO	c	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+xà bông	sà bông	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	CUNG_TU_QUA	LECH	giữ lập trường vòng 1
+xà bông	xà phòng	-	-	-	KHONG	CUNG_TU_CHO_DO	f	CHO	False	THAY	LECH	nhận phát hiện của Astra: f (savon); phụ đề xà phòng 181/232 = 78% < 95% → loại cả hai
+xà phòng	xà bông	-	-	-	KHONG	CUNG_TU_CHO_DO	f	CHO	False	THAY	LECH	như xà bông/xà phòng
+xanh	sanh	KHAC_TU	-	-	KHONG	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	KHONG	LECH	giữ lập trường vòng 1
+xập xình	sập sình	CUNG_TU	d	CAN_HAI_CHU_KY	DIEU_KIEN	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	sửa: dạng kia có trong HND (chữ thường) nên theo tiền lệ là c (spelling_families: 34 c so với 3 d khi dạng kia chỉ ở HND 39K/74K); c thiếu dữ liệu (phụ đề 8)
+xù xì	sù sì	CUNG_TU	d	QUA_RIENG_H5	CUNG_TU_QUA	CHO_XAC_NHAN_QUAN_HE	-	CHO	False	THAY	LECH	sửa: dạng kia có trong HND (chữ thường) nên theo tiền lệ là c (spelling_families: 34 c so với 3 d khi dạng kia chỉ ở HND 39K/74K); c thiếu dữ liệu (phụ đề 8)

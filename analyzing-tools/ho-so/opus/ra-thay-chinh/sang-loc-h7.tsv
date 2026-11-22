@@ -1,0 +1,1690 @@
+khoa	tu_chinh	doc_khac	nguon_cap	ppm_gop_tu_chinh	ppm_gop_doc_khac	ti_le_r	nhom_H6	de_xuat	ly_do
+amhieu	am hiểu	ám hiệu	PHAM_VI	3.507	0.954	0.272	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+annhan	an nhàn	ân nhân	PHAM_VI	0.407	0.791	1.942	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+aoquan	áo quần	áo quan	PHAM_VI	0.994	0.324	0.326	G4	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 0.326
+anco	ăn cỏ	ăn có	PHAM_VI	1.386	0.385	0.278	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+andien	ăn diện	ân điển	PHAM_VI	0.717	1.391	1.940	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+anmay	ăn may	ăn mày	PHAM_VI	0.936	1.880	2.009	G9	K2_DE_XUAT	nghĩa đỏ không chắc: chỉ người hành khất, chỉ là lời chê khi dùng mắng
+bachi	ba chỉ	bà chị	PHAM_VI	0.573	1.779	3.103	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+balo	ba lô	balô	PHAM_VI	15.031	0.702	0.047	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bachu	bà chủ	bá chủ	PHAM_VI	4.729	0.834	0.176	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banan	bàn ăn	bản án	PHAM_VI	5.521	4.064	0.736	G2	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 0.736
+bando	bản đồ	ban đỏ	PHAM_VI	75.098	1.342	0.018	G5	K2_DE_XUAT	r = 0.018 < 0,2
+banle	bản lề	bán lẻ	PHAM_VI	7.923	34.139	4.309	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banthao	bản thảo	bán tháo	PHAM_VI	3.156	0.388	0.123	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banthan	bạn thân	bán thân	PHAM_VI	20.269	1.013	0.050	G6	K2_DE_XUAT	nghĩa đỏ không chắc: thường là tượng bán thân
+bang	bảng	bang	PHAM_VI	279.263	84.378	0.302	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bang	bảng	bàng	PHAM_VI	279.263	3.160	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bang	bảng	báng	PHAM_VI	279.263	0.878	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bang	bảng	băng	PHAM_VI	279.263	162.828	0.583	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bang	bảng	bằng	PHAM_VI	279.263	1164.283	4.169	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banh	bánh	banh	PHAM_VI	153.877	13.986	0.091	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banh	bánh	bành	PHAM_VI	153.877	0.712	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banh	bánh	bảnh	PHAM_VI	153.877	3.519	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banhbao	bánh bao	bảnh bao	PHAM_VI	4.258	1.766	0.415	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banhda	bánh đa	bánh đà	PHAM_VI	0.107	1.168	10.934	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+banhtrai	bánh trái	bảnh trai	PHAM_VI	0.223	0.863	3.873	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+baohanh	bảo hành	bạo hành	PHAM_VI	50.541	2.512	0.050	G1,G2	K2_DE_XUAT	r = 0.050 < 0,2
+baodong	báo động	bao đồng	PHAM_VI	43.004	0.415	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+baodong	báo động	bạo động	PHAM_VI	43.004	2.554	0.059	G1	K2_DE_XUAT	r = 0.059 < 0,2
+baynhay	bay nhảy	bầy nhầy	PHAM_VI	0.445	0.458	1.031	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bapbenh	bập bênh	bấp bênh	PHAM_VI	0.986	0.624	0.633	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+batcan	bất cẩn	bất cần	PHAM_VI	2.994	0.478	0.160	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+batlua	bật lửa	bắt lửa	PHAM_VI	3.174	1.824	0.575	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+baygio	bây giờ	bấy giờ	PHAM_VI	613.467	2.328	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bebe	be bé	be be	PHAM_VI	0.323	0.333	1.031	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+begay	bẻ gãy	bẻ gẫy	PHAM_VI	3.490	0.353	0.101	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bebet	bê bết	be bét	PHAM_VI	0.193	0.423	2.192	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+betong	bê tông	bêtông	PHAM_VI	64.088	1.038	0.016	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bemat	bề mặt	bẽ mặt	PHAM_VI	139.631	2.808	0.020	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+beboi	bể bơi	bê bối	PHAM_VI	19.879	2.686	0.135	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+benbi	bền bỉ	bên bị	PHAM_VI	6.048	0.470	0.078	G2	K2_DE_XUAT	cụm ghép tình cờ, ít dùng
+biendang	biến dạng	biên dạng	PHAM_VI	14.382	0.334	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+biet	biết	biệt	PHAM_VI	2837.650	9.575	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bieu	biếu	biểu	PHAM_VI	1.156	10.490	9.073	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+binh	bình	binh	PHAM_VI	86.807	37.034	0.427	G1	K2_DA_KY	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết; đã có hai chữ ký K2 cho khóa: chu-ky.tsv:134,135
+binh	bình	bính	PHAM_VI	86.807	0.953	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+binh	bình	bĩnh	PHAM_VI	86.807	1.074	0.012	G5	K2_DA_KY	Opus định đề xuất K0 (Wiktionary: bĩnh là đại tiện) nhưng rút lại: P1 xếp COI_H7, hai bên đã ký K2 với đúng lý do này (chu-ky.tsv:134,135); không có chứng cứ mới
+binh	bình	bịnh	PHAM_VI	86.807	1.433	0.017	G5	K2_DA_KY	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết; đã có hai chữ ký K2 cho khóa: chu-ky.tsv:134,135
+binhtinh	bình tĩnh	bình tình	PHAM_VI	110.111	0.761	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bosua	bò sữa	bơ sữa	PHAM_VI	1.510	0.491	0.325	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bongbong	bong bóng	bòng bong	PHAM_VI	19.519	0.443	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bongbay	bóng bay	bóng bẩy	PHAM_VI	2.214	0.812	0.367	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bongda	bóng đá	bong da	PHAM_VI	32.863	0.440	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+boduong	bổ dưỡng	bố dượng	PHAM_VI	2.702	1.135	0.420	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bome	bố mẹ	bỏ mẹ	PHAM_VI	55.616	3.887	0.070	G9	K2_DE_XUAT	r = 0.070 < 0,2
+bovo	bố vợ	bơ vơ	PHAM_VI	0.574	0.454	0.790	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+boba	bộ ba	bỏ bà	PHAM_VI	2.346	0.393	0.168	G9	K2_DE_XUAT	tiếng cảm thán, phải ghép với chết
+bodo	bộ đồ	bỏ dở	PHAM_VI	23.237	0.798	0.034	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bodo	bộ đồ	bợ đỡ	PHAM_VI	23.237	0.339	0.015	G9	K2_DE_XUAT	r = 0.015 < 0,2
+bomat	bộ mặt	bỏ mất	PHAM_VI	5.235	0.308	0.059	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bonho	bộ nhớ	bọn họ	PHAM_VI	28.760	53.278	1.853	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bonphan	bổn phận	bón phân	PHAM_VI	5.001	1.028	0.206	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bode	bờ đê	bố đẻ	PHAM_VI	0.227	0.612	2.691	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bode	bờ đê	bồ đề	PHAM_VI	0.227	0.973	4.280	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bung	bụng	bung	PHAM_VI	32.578	2.907	0.089	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bung	bụng	bùng	PHAM_VI	32.578	5.215	0.160	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bung	bụng	búng	PHAM_VI	32.578	1.211	0.037	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bung	bụng	bưng	PHAM_VI	32.578	0.901	0.028	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+bung	bụng	bừng	PHAM_VI	32.578	2.129	0.065	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+buon	buồn	buôn	PHAM_VI	52.014	14.041	0.270	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+buongtha	buông tha	buông thả	PHAM_VI	1.279	0.710	0.555	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+buong	buồng	buông	PHAM_VI	28.009	18.517	0.661	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+buot	buốt	buột	PHAM_VI	0.645	0.319	0.494	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+buoc	bước	buộc	PHAM_VI	138.266	52.283	0.378	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+canhac	ca nhạc	cà nhắc	PHAM_VI	1.378	0.356	0.259	G5	K2_DE_XUAT	nghĩa đỏ không chắc: tả dáng đi, không phải tên bệnh
+cakho	cá kho	cá khô	PHAM_VI	0.120	0.398	3.311	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+caro	cá rô	ca rô	PHAM_VI	0.644	0.429	0.666	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+caro	cá rô	carô	PHAM_VI	0.644	0.657	1.021	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+camdoan	cam đoan	cấm đoán	PHAM_VI	4.275	0.742	0.174	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+camtinh	cảm tình	cảm tính	PHAM_VI	2.127	0.948	0.446	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+camdo	cám dỗ	cầm đồ	PHAM_VI	6.082	1.532	0.252	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cang	cảng	càng	PHAM_VI	45.729	156.512	3.423	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cang	cảng	cáng	PHAM_VI	45.729	1.907	0.042	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cang	cảng	căng	PHAM_VI	45.729	27.329	0.598	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cang	cảng	cẳng	PHAM_VI	45.729	0.645	0.014	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+canh	cánh	cành	PHAM_VI	58.938	7.601	0.129	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+canh	cánh	cạnh	PHAM_VI	58.938	59.658	1.012	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+canh	cánh	cảnh	PHAM_VI	58.938	71.253	1.209	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+caogia	cao giá	cáo già	PHAM_VI	1.706	0.768	0.450	G9	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 0.450
+capdien	cáp điện	cấp điện	PHAM_VI	14.318	2.383	0.166	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+caumay	cau mày	cầu may	PHAM_VI	0.367	0.333	0.908	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+camdau	cắm đầu	cầm đầu	PHAM_VI	1.015	4.376	4.311	G2	K2_DE_XUAT	nghĩa đỏ không chắc: cầm đầu nghĩa chung là đứng đầu
+cancau	cần câu	cần cẩu	PHAM_VI	3.611	35.253	9.763	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cancau	cần câu	cắn câu	PHAM_VI	3.611	1.394	0.386	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cancu	cần cù	căn cứ	PHAM_VI	0.594	29.345	49.419	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+canke	cận kề	cặn kẽ	PHAM_VI	1.810	0.686	0.379	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cautruc	cấu trúc	cầu trục	PHAM_VI	109.684	5.271	0.048	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cayco	cây cỏ	cây cọ	PHAM_VI	1.514	1.381	0.912	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chala	chà là	chả là	PHAM_VI	0.493	2.724	5.520	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chaca	chả cá	cha cả	PHAM_VI	0.245	0.497	2.032	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chai	chai	chài	PHAM_VI	128.451	1.523	0.012	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chai	chai	chái	PHAM_VI	128.451	0.447	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chai	chai	chải	PHAM_VI	128.451	14.646	0.114	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chang	chàng	chang	PHAM_VI	54.624	13.201	0.242	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chang	chàng	chăng	PHAM_VI	54.624	13.075	0.239	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chang	chàng	chằng	PHAM_VI	54.624	1.247	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chang	chàng	chẳng	PHAM_VI	54.624	343.183	6.283	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chanh	chanh	chánh	PHAM_VI	14.110	6.434	0.456	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chao	chảo	chao	PHAM_VI	9.497	3.959	0.417	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chao	chảo	chào	PHAM_VI	9.497	562.115	59.186	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chao	chảo	cháo	PHAM_VI	9.497	5.323	0.561	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chay	chạy	chay	PHAM_VI	320.302	8.554	0.027	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chay	chạy	chày	PHAM_VI	320.302	14.932	0.047	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chay	chạy	cháy	PHAM_VI	320.302	105.031	0.328	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chay	chạy	chảy	PHAM_VI	320.302	44.323	0.138	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chay	chạy	chấy	PHAM_VI	320.302	13.784	0.043	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chamcham	chằm chằm	chăm chăm	PHAM_VI	5.509	0.554	0.101	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chamcham	chằm chằm	chậm chậm	PHAM_VI	5.509	0.365	0.066	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chat	chặt	chát	PHAM_VI	48.195	1.035	0.021	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chat	chặt	chất	PHAM_VI	48.195	254.378	5.278	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chat	chặt	chắt	PHAM_VI	48.195	0.603	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cham	chậm	chàm	PHAM_VI	57.990	3.388	0.058	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+cham	chậm	châm	PHAM_VI	57.990	6.653	0.115	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cham	chậm	chăm	PHAM_VI	57.990	4.026	0.069	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cham	chậm	chạm	PHAM_VI	57.990	58.389	1.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cham	chậm	chẩm	PHAM_VI	57.990	0.375	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chan	PHAM_VI	203.720	14.477	0.071	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chán	PHAM_VI	203.720	33.313	0.164	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chăn	PHAM_VI	203.720	23.304	0.114	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chấn	PHAM_VI	203.720	2.489	0.012	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chần	PHAM_VI	203.720	0.737	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chẩn	PHAM_VI	203.720	0.311	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chận	PHAM_VI	203.720	1.704	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chắn	PHAM_VI	203.720	18.175	0.089	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chằn	PHAM_VI	203.720	0.654	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chẵn	PHAM_VI	203.720	1.618	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chan	chân	chặn	PHAM_VI	203.720	56.106	0.275	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chandung	chân dung	chặn đứng	PHAM_VI	7.101	1.982	0.279	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chandat	chân đất	chăn dắt	PHAM_VI	0.105	0.496	4.727	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chantinh	chân tình	chằn tinh	PHAM_VI	0.693	0.961	1.386	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chap	chấp	chập	PHAM_VI	2.984	1.190	0.399	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chau	chậu	chau	PHAM_VI	11.541	15.543	1.347	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chau	chậu	cháu	PHAM_VI	11.541	667.640	57.850	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chau	chậu	châu	PHAM_VI	11.541	627.496	54.371	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chau	chậu	chấu	PHAM_VI	11.541	0.796	0.069	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chau	chậu	chầu	PHAM_VI	11.541	2.706	0.234	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chen	chén	chen	PHAM_VI	20.532	12.128	0.591	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chen	chén	chèn	PHAM_VI	20.532	43.207	2.104	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chen	chén	chẹn	PHAM_VI	20.532	1.393	0.068	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cheo	chèo	chéo	PHAM_VI	11.263	17.919	1.591	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chibao	chỉ bảo	chỉ báo	PHAM_VI	2.097	8.166	3.894	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chiem	chị em	chiêm	PHAM_VI	14.934	0.340	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chiem	chị em	chiếm	PHAM_VI	14.934	50.552	3.385	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chien	chiên	chiến	PHAM_VI	20.389	39.373	1.931	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+chieudai	chiều dài	chiêu đãi	PHAM_VI	80.070	1.819	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chieu	chiếu	chiêu	PHAM_VI	35.239	12.520	0.355	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chieu	chiếu	chiểu	PHAM_VI	35.239	1.188	0.034	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chinh	chỉnh	chình	PHAM_VI	305.867	0.421	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chiukho	chịu khó	chịu khổ	PHAM_VI	1.478	1.394	0.943	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+choang	choàng	choáng	PHAM_VI	0.646	3.099	4.794	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chom	chỏm	chòm	PHAM_VI	0.436	0.789	1.807	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chom	chỏm	chôm	PHAM_VI	0.436	5.884	13.480	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+chom	chỏm	chồm	PHAM_VI	0.436	0.341	0.780	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chom	chỏm	chớm	PHAM_VI	0.436	0.320	0.733	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+choi	chổi	chòi	PHAM_VI	12.594	1.707	0.136	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+choi	chổi	chói	PHAM_VI	12.594	3.038	0.241	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+choi	chổi	chơi	PHAM_VI	12.594	422.909	33.580	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+choi	chổi	chọi	PHAM_VI	12.594	3.500	0.278	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+choi	chổi	chối	PHAM_VI	12.594	2.656	0.211	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+choi	chổi	chồi	PHAM_VI	12.594	3.810	0.303	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chon	chồn	chôn	PHAM_VI	7.252	23.348	3.220	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+chon	chồn	chơn	PHAM_VI	7.252	0.887	0.122	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chon	chồn	chọn	PHAM_VI	7.252	471.259	64.988	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chon	chồn	chốn	PHAM_VI	7.252	10.270	1.416	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chong	chồng	chong	PHAM_VI	109.534	6.470	0.059	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chong	chồng	chòng	PHAM_VI	109.534	2.615	0.024	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chong	chồng	chóng	PHAM_VI	109.534	1.514	0.014	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chong	chồng	chông	PHAM_VI	109.534	0.563	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chong	chồng	chống	PHAM_VI	109.534	422.060	3.853	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chong	chồng	chổng	PHAM_VI	109.534	0.308	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chot	chốt	chót	PHAM_VI	20.547	5.258	0.256	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chot	chốt	chột	PHAM_VI	20.547	0.392	0.019	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+chot	chốt	chợt	PHAM_VI	20.547	3.890	0.189	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chop	chớp	chóp	PHAM_VI	7.889	1.414	0.179	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chop	chớp	chộp	PHAM_VI	7.889	2.590	0.328	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chopmat	chớp mắt	chợp mắt	PHAM_VI	3.156	2.247	0.712	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chudao	chu đáo	chủ đạo	PHAM_VI	9.911	2.350	0.237	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chunhat	chủ nhật	chữ nhật	PHAM_VI	25.098	14.395	0.574	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuquan	chủ quán	chủ quản	PHAM_VI	1.529	0.922	0.603	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chutam	chú tâm	chủ tâm	PHAM_VI	2.105	0.446	0.212	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuy	chú ý	chuỳ	PHAM_VI	110.542	0.507	0.005	G1	K2_DE_XUAT	r = 0.005 < 0,2
+chuy	chú ý	chùy	PHAM_VI	110.542	0.507	0.005	G1	K2_DE_XUAT	đọc khóa hai âm tiết thành một âm tiết: phải tách ép
+chuy	chú ý	chủ ý	PHAM_VI	110.542	2.481	0.022	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuc	chúc	chức	PHAM_VI	90.541	9.640	0.106	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuc	chúc	chực	PHAM_VI	90.541	0.532	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chum	chùm	chum	PHAM_VI	13.547	1.667	0.123	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chum	chùm	chụm	PHAM_VI	13.547	0.524	0.039	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chun	chun	chùn	PHAM_VI	9.340	0.383	0.041	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chung	chung	chùng	PHAM_VI	149.125	1.177	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chung	chung	chúng	PHAM_VI	149.125	1100.483	7.380	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chung	chung	chưng	PHAM_VI	149.125	0.787	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chung	chung	chủng	PHAM_VI	149.125	14.452	0.097	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chung	chung	chứng	PHAM_VI	149.125	29.698	0.199	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chung	chung	chừng	PHAM_VI	149.125	13.651	0.092	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chung	chung	chững	PHAM_VI	149.125	0.309	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chungcu	chung cư	chứng cứ	PHAM_VI	8.284	11.909	1.438	G2	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 1.438
+chuong	chuông	chuồng	PHAM_VI	31.131	15.408	0.495	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuong	chuông	chuộng	PHAM_VI	31.131	0.536	0.017	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuong	chuông	chương	PHAM_VI	31.131	20.559	0.660	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuong	chuông	chướng	PHAM_VI	31.131	0.338	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuong	chuông	chường	PHAM_VI	31.131	0.510	0.016	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuong	chuông	chưởng	PHAM_VI	31.131	3.774	0.121	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuot	chuột	chuốt	PHAM_VI	54.618	1.240	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuyen	chuyển	chuyên	PHAM_VI	217.668	63.229	0.290	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuyen	chuyển	chuyến	PHAM_VI	217.668	109.993	0.505	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chuyen	chuyển	chuyện	PHAM_VI	217.668	1104.113	5.072	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chunghia	chữ nghĩa	chủ nghĩa	PHAM_VI	0.307	11.144	36.311	G3	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 36.311
+chungminh	chứng minh	chúng mình	PHAM_VI	68.009	8.891	0.131	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+chungnhan	chứng nhận	chứng nhân	PHAM_VI	111.258	0.418	0.004	G2	K2_DE_XUAT	dạng hiếm của nhân chứng
+chungto	chứng tỏ	chúng tớ	PHAM_VI	16.098	10.917	0.678	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cotrang	cò trắng	cờ trắng	PHAM_VI	0.017	0.316	18.922	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cohau	có hậu	cô hầu	PHAM_VI	1.860	1.187	0.638	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cohieu	có hiếu	cờ hiệu	PHAM_VI	0.159	0.444	2.788	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+coloi	có lợi	có lỗi	PHAM_VI	22.035	10.629	0.482	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+comat	có mặt	cơ mật	PHAM_VI	53.270	0.417	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+concon	cỏn con	con con	PHAM_VI	0.698	1.508	2.160	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+codau	cô dâu	có đâu	PHAM_VI	14.330	7.139	0.498	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cochan	cổ chân	có chân	PHAM_VI	0.582	1.591	2.736	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+codien	cổ điển	cơ điện	PHAM_VI	58.022	3.393	0.058	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+codong	cổ đông	cô đọng	PHAM_VI	9.875	0.422	0.043	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+codong	cổ đông	cơ động	PHAM_VI	9.875	2.147	0.217	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cothu	cổ thụ	cố thủ	PHAM_VI	0.552	1.406	2.546	G1	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 2.546
+covu	cổ vũ	có vú	PHAM_VI	8.036	2.555	0.318	G6	K2_DE_XUAT	cụm tách ép; chủ yếu là động vật có vú
+cotinh	cố tình	có tình	PHAM_VI	8.090	0.506	0.063	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+congchung	công chúng	công chứng	PHAM_VI	12.199	2.692	0.221	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+congcong	công cộng	cong cong	PHAM_VI	48.172	0.524	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+congdoan	công đoạn	công đoàn	PHAM_VI	2.413	8.001	3.316	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+congnhan	công nhân	công nhận	PHAM_VI	21.905	32.650	1.491	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+congtac	công tắc	cộng tác	PHAM_VI	23.524	10.530	0.448	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cong	cổng	cong	PHAM_VI	143.799	27.544	0.192	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cong	cổng	còng	PHAM_VI	143.799	13.852	0.096	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+cong	cổng	cóng	PHAM_VI	143.799	1.371	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cong	cổng	công	PHAM_VI	143.799	47.570	0.331	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cong	cổng	cõng	PHAM_VI	143.799	1.892	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cong	cổng	cọng	PHAM_VI	143.799	1.397	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cong	cổng	cống	PHAM_VI	143.799	11.879	0.083	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cong	cổng	cộng	PHAM_VI	143.799	39.667	0.276	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+congsu	cộng sự	công sự	PHAM_VI	18.695	0.972	0.052	G1	K2_DE_XUAT	r = 0.052 < 0,2
+coso	cơ sở	có số	PHAM_VI	174.759	10.136	0.058	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cothe	cơ thể	có thế	PHAM_VI	180.001	7.966	0.044	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cothe	cơ thể	có thể	PHAM_VI	180.001	3847.498	21.375	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cothe	cơ thể	cô thế	PHAM_VI	180.001	1.125	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+coibo	cởi bỏ	coi bộ	PHAM_VI	0.953	2.251	2.362	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuabien	cua biển	cửa biển	PHAM_VI	0.050	0.590	11.806	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cungcap	cung cấp	cứng cáp	PHAM_VI	1156.671	1.258	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuoc	cuốc	cuộc	PHAM_VI	1.529	328.768	214.965	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuoc	cuốc	cước	PHAM_VI	1.529	6.643	4.343	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuoc	cuốc	cược	PHAM_VI	1.529	49.137	32.128	G7	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+cuon	cuộn	cuốn	PHAM_VI	198.977	98.450	0.495	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuon	cuộn	cuồn	PHAM_VI	198.977	0.374	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuong	cuống	cuồng	PHAM_VI	2.982	4.367	1.464	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+cuong	cuống	cương	PHAM_VI	2.982	12.079	4.050	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuong	cuống	cường	PHAM_VI	2.982	4.964	1.664	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuong	cuống	cưỡng	PHAM_VI	2.982	5.765	1.933	G2,G6	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+cuaquay	cựa quậy	cửa quay	PHAM_VI	0.578	5.281	9.131	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuoi	cười	cuối	PHAM_VI	74.216	159.072	2.143	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuoi	cười	cuội	PHAM_VI	74.216	0.332	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuoi	cười	cưới	PHAM_VI	74.216	66.528	0.896	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+cuoi	cười	cưỡi	PHAM_VI	74.216	24.677	0.333	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dadau	da đầu	da dầu	PHAM_VI	4.037	1.023	0.253	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daihan	dài hạn	đại hàn	PHAM_VI	13.826	1.080	0.078	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dany	dàn ý	dân y	PHAM_VI	0.061	1.014	16.546	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dany	dàn ý	dân ý	PHAM_VI	0.061	0.351	5.731	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daydo	dạy dỗ	đây đó	PHAM_VI	4.892	2.441	0.499	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dando	dặn dò	dẫn độ	PHAM_VI	0.475	1.764	3.716	G2	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 3.716
+dando	dặn dò	đắn đo	PHAM_VI	0.475	0.660	1.390	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dautay	dâu tây	dấu tay	PHAM_VI	4.648	3.085	0.664	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dautay	dâu tây	đầu tay	PHAM_VI	4.648	1.014	0.218	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dauan	dầu ăn	dấu ấn	PHAM_VI	3.625	6.848	1.889	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daucau	dấu câu	đầu cầu	PHAM_VI	0.254	0.369	1.457	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daunang	dấu nặng	dầu nặng	PHAM_VI	0.031	0.764	24.409	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daydan	dây dẫn	dày dạn	PHAM_VI	13.571	1.865	0.137	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daydan	dây dẫn	dày dặn	PHAM_VI	13.571	1.173	0.086	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daydan	dây dẫn	đầy đặn	PHAM_VI	13.571	1.149	0.085	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daykem	dây kẽm	dạy kèm	PHAM_VI	1.094	2.090	1.911	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+didoi	di dời	đi đời	PHAM_VI	2.583	0.881	0.341	G4	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 0.341
+dientich	diện tích	điện tích	PHAM_VI	46.279	0.871	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dieu	diều	diễu	PHAM_VI	2.844	0.514	0.181	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dieu	diều	diệu	PHAM_VI	2.844	3.142	1.105	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dieu	diều	điêu	PHAM_VI	2.844	1.671	0.588	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dieu	diều	điếu	PHAM_VI	2.844	5.461	1.920	G4,G7	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+dieu	diều	điều	PHAM_VI	2.844	1291.209	453.980	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dieu	diều	điệu	PHAM_VI	2.844	12.038	4.232	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dohoi	dò hỏi	dở hơi	PHAM_VI	0.660	5.657	8.572	G9	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 8.572
+dulieu	dữ liệu	dự liệu	PHAM_VI	268.406	0.646	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dutru	dự trữ	dự trù	PHAM_VI	27.682	0.532	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+danang	đa năng	đa nang	PHAM_VI	22.445	0.490	0.022	G5	K2_DE_XUAT	r = 0.022 < 0,2
+danhbai	đánh bại	đánh bài	PHAM_VI	34.311	1.779	0.052	G7	K2_DE_XUAT	r = 0.052 < 0,2
+danhbat	đánh bắt	đánh bật	PHAM_VI	2.042	0.791	0.387	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+danhdau	đánh dấu	đánh đầu	PHAM_VI	51.205	0.341	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+danhdo	đánh đố	đánh đổ	PHAM_VI	0.321	0.881	2.742	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+danhdong	đánh đồng	đánh động	PHAM_VI	0.410	0.836	2.039	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+danhgia	đánh giá	danh giá	PHAM_VI	200.107	2.657	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+datdo	đắt đỏ	đất đỏ	PHAM_VI	2.108	0.329	0.156	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+datgia	đắt giá	đặt giá	PHAM_VI	1.200	1.199	0.999	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dattien	đắt tiền	đặt tiền	PHAM_VI	10.121	1.288	0.127	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+damda	đậm đà	đấm đá	PHAM_VI	2.155	0.451	0.209	G1	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 0.209
+daumay	đầu máy	dầu máy	PHAM_VI	3.132	2.082	0.665	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daumua	đầu mùa	đậu mùa	PHAM_VI	0.805	1.077	1.338	G5	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 1.338
+dautu	đầu tư	đầu từ	PHAM_VI	170.743	0.611	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dauden	đậu đen	đầu đen	PHAM_VI	1.701	1.097	0.645	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+daudo	đậu đỏ	đâu đó	PHAM_VI	1.560	34.006	21.793	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+demat	để mắt	để mất	PHAM_VI	9.862	13.756	1.395	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+detam	để tâm	đệ tam	PHAM_VI	4.032	0.812	0.201	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+divang	đi vắng	đi văng	PHAM_VI	2.577	3.267	1.268	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dich	đích	dịch	PHAM_VI	14.397	81.630	5.670	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+dich	đích	địch	PHAM_VI	14.397	11.989	0.833	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+dientu	điện tử	điện từ	PHAM_VI	146.860	18.546	0.126	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dieuhanh	điều hành	diễu hành	PHAM_VI	94.899	8.073	0.085	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dinh	đinh	dinh	PHAM_VI	18.965	17.083	0.901	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dinh	đinh	dính	PHAM_VI	18.965	75.219	3.966	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dinh	đinh	đình	PHAM_VI	18.965	10.332	0.545	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dinh	đinh	đính	PHAM_VI	18.965	19.502	1.028	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dinh	đinh	đỉnh	PHAM_VI	18.965	40.927	2.158	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dinh	đinh	định	PHAM_VI	18.965	198.808	10.483	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dinhdang	định dạng	dính dáng	PHAM_VI	42.437	5.808	0.137	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dinhhuong	định hướng	đinh hương	PHAM_VI	23.080	1.518	0.066	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doluong	đo lường	độ lượng	PHAM_VI	21.830	0.333	0.015	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dotham	đỏ thắm	do thám	PHAM_VI	0.223	5.111	22.939	G1,G2	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 22.939
+doan	đồ ăn	doan	PHAM_VI	27.165	2.703	0.099	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doan	đồ ăn	doãn	PHAM_VI	27.165	0.618	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doan	đồ ăn	đoan	PHAM_VI	27.165	0.461	0.017	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doan	đồ ăn	đoàn	PHAM_VI	27.165	46.487	1.711	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doan	đồ ăn	đoạn	PHAM_VI	27.165	66.507	2.448	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doan	đồ ăn	đồ án	PHAM_VI	27.165	0.520	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doda	đồ da	đồ đá	PHAM_VI	1.006	1.135	1.128	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dodac	đồ đạc	đo đạc	PHAM_VI	17.715	2.333	0.132	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dothua	đồ thừa	đổ thừa	PHAM_VI	0.560	0.669	1.194	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doimoi	đổi mới	đồi mồi	PHAM_VI	27.297	0.446	0.016	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doimoi	đổi mới	đời mới	PHAM_VI	27.297	0.845	0.031	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doitien	đổi tiền	đòi tiền	PHAM_VI	1.347	1.913	1.420	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doichieu	đối chiếu	đổi chiều	PHAM_VI	2.846	0.513	0.180	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+doipho	đối phó	đội phó	PHAM_VI	25.079	0.766	0.031	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongbac	đông bắc	đồng bạc	PHAM_VI	5.828	1.158	0.199	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongdu	đông đủ	đông du	PHAM_VI	0.799	0.437	0.547	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	dong	PHAM_VI	197.827	38.678	0.196	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	dòng	PHAM_VI	197.827	175.643	0.888	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	dông	PHAM_VI	197.827	0.668	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	dộng	PHAM_VI	197.827	0.829	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	đong	PHAM_VI	197.827	2.021	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	đóng	PHAM_VI	197.827	125.026	0.632	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	đông	PHAM_VI	197.827	211.331	1.068	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	đọng	PHAM_VI	197.827	1.556	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	đống	PHAM_VI	197.827	57.457	0.290	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	đổng	PHAM_VI	197.827	0.553	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dong	đồng	động	PHAM_VI	197.827	57.161	0.289	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongbang	đồng bằng	đồng bảng	PHAM_VI	15.815	0.990	0.063	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongbo	đồng bộ	đóng bộ	PHAM_VI	22.610	0.303	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongco	đồng cỏ	động cơ	PHAM_VI	5.127	218.014	42.524	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongdoi	đồng đội	dòng dõi	PHAM_VI	8.539	3.963	0.464	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongho	đồng hồ	dòng họ	PHAM_VI	100.988	3.460	0.034	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongluong	đồng lương	động lượng	PHAM_VI	0.433	0.498	1.150	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongy	đồng ý	đông y	PHAM_VI	124.844	0.559	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+donglong	động lòng	đồng lòng	PHAM_VI	0.766	1.033	1.348	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongtu	động từ	đồng từ	PHAM_VI	2.660	0.417	0.157	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dongtu	động từ	đồng tử	PHAM_VI	2.660	1.650	0.620	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dotpha	đột phá	đốt phá	PHAM_VI	8.248	0.716	0.087	G1	K2_DE_XUAT	r = 0.087 < 0,2
+duoc	đuốc	dược	PHAM_VI	2.238	30.613	13.677	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duoc	đuốc	đước	PHAM_VI	2.238	0.418	0.187	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duoc	đuốc	được	PHAM_VI	2.238	8087.297	3613.304	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duoi	đuôi	duỗi	PHAM_VI	29.266	2.721	0.093	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duoi	đuôi	dưới	PHAM_VI	29.266	368.571	12.594	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duoi	đuôi	đuối	PHAM_VI	29.266	0.815	0.028	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duoi	đuôi	đuổi	PHAM_VI	29.266	40.169	1.373	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dung	PHAM_VI	150.447	12.684	0.084	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dùng	PHAM_VI	150.447	592.311	3.937	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dúng	PHAM_VI	150.447	1.006	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dũng	PHAM_VI	150.447	2.775	0.018	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dưng	PHAM_VI	150.447	0.550	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dụng	PHAM_VI	150.447	15.784	0.105	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dứng	PHAM_VI	150.447	0.303	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dừng	PHAM_VI	150.447	90.641	0.602	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	dựng	PHAM_VI	150.447	24.468	0.163	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	đùng	PHAM_VI	150.447	1.538	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	đúng	PHAM_VI	150.447	1042.621	6.930	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	đũng	PHAM_VI	150.447	0.335	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	đưng	PHAM_VI	150.447	1.045	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	đụng	PHAM_VI	150.447	30.696	0.204	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	đừng	PHAM_VI	150.447	831.235	5.525	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dung	đứng	đựng	PHAM_VI	150.447	40.285	0.268	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+dungdau	đứng đầu	đụng đầu	PHAM_VI	18.650	0.512	0.027	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duong	đường	dương	PHAM_VI	390.157	49.355	0.127	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duong	đường	dường	PHAM_VI	390.157	1.088	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duong	đường	dưỡng	PHAM_VI	390.157	36.764	0.094	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duong	đường	dượng	PHAM_VI	390.157	2.864	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duong	đường	đương	PHAM_VI	390.157	3.050	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duongbang	đường băng	đường bằng	PHAM_VI	4.856	0.353	0.073	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+duongbien	đường biển	đường biên	PHAM_VI	13.512	0.611	0.045	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ganh	gánh	ganh	PHAM_VI	5.377	1.320	0.245	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gara	gara	ga ra	PHAM_VI	4.449	0.612	0.137	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gang	găng	gắng	PHAM_VI	2.591	3.428	1.323	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gaygo	gầy gò	gây gổ	PHAM_VI	0.589	0.543	0.923	G1,G9	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 0.923
+ghim	ghim	ghìm	PHAM_VI	6.784	0.512	0.075	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giadinh	gia đình	gia đinh	PHAM_VI	326.476	0.989	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giadinh	gia đình	giả định	PHAM_VI	326.476	7.028	0.022	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giatoc	gia tộc	gia tốc	PHAM_VI	9.296	5.487	0.590	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giaca	giá cả	già cả	PHAM_VI	64.252	0.334	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giave	giá vẽ	giá vé	PHAM_VI	0.194	10.406	53.587	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giai	giải	giai	PHAM_VI	78.448	5.796	0.074	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giam	giảm	giam	PHAM_VI	250.568	24.775	0.099	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+giam	giảm	giám	PHAM_VI	250.568	3.786	0.015	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giam	giảm	giăm	PHAM_VI	250.568	0.723	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giam	giảm	giẫm	PHAM_VI	250.568	1.641	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gian	gián	gian	PHAM_VI	19.543	10.807	0.553	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gian	gián	giãn	PHAM_VI	19.543	9.358	0.479	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gian	gián	giản	PHAM_VI	19.543	3.379	0.173	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gian	gián	giận	PHAM_VI	19.543	29.847	1.527	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giang	giảng	giang	PHAM_VI	6.046	32.981	5.455	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giang	giảng	giàng	PHAM_VI	6.046	0.612	0.101	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giang	giảng	giáng	PHAM_VI	6.046	3.640	0.602	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giang	giảng	giăng	PHAM_VI	6.046	3.747	0.620	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giang	giảng	giằng	PHAM_VI	6.046	0.726	0.120	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giao	giao	giáo	PHAM_VI	170.578	19.882	0.117	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giau	giàu	giấu	PHAM_VI	44.544	48.815	1.096	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giau	giàu	giầu	PHAM_VI	44.544	0.311	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giat	giặt	giật	PHAM_VI	32.459	12.560	0.387	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giac	giấc	giác	PHAM_VI	2.913	3.207	1.101	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giac	giấc	giắc	PHAM_VI	2.913	2.909	0.998	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giac	giấc	giặc	PHAM_VI	2.913	1.047	0.359	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+giandoi	giận dỗi	gian dối	PHAM_VI	0.515	1.336	2.593	G9	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 2.593
+giay	giấy	giày	PHAM_VI	267.449	92.177	0.345	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giay	giấy	giây	PHAM_VI	267.449	98.171	0.367	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giay	giấy	giãy	PHAM_VI	267.449	0.339	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giay	giấy	giầy	PHAM_VI	267.449	7.256	0.027	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gioi	giỏi	gioi	PHAM_VI	127.984	1.161	0.009	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gioi	giỏi	giòi	PHAM_VI	127.984	1.875	0.015	G10	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+gioi	giỏi	giới	PHAM_VI	127.984	32.787	0.256	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gioi	giỏi	giời	PHAM_VI	127.984	6.407	0.050	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giong	giọng	gióng	PHAM_VI	30.503	0.506	0.017	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giong	giọng	giông	PHAM_VI	30.503	1.622	0.053	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giong	giọng	giống	PHAM_VI	30.503	201.746	6.614	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giua	giữa	giũa	PHAM_VI	311.312	0.362	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+giuong	giường	giương	PHAM_VI	148.903	1.604	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+gong	gọng	gông	PHAM_VI	1.551	0.446	0.287	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+gong	gọng	gồng	PHAM_VI	1.551	0.371	0.239	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+guong	gương	guồng	PHAM_VI	28.869	0.897	0.031	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hang	hang	hàng	PHAM_VI	32.925	425.769	12.932	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hang	hang	háng	PHAM_VI	32.925	2.509	0.076	G6	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+hang	hang	hãng	PHAM_VI	32.925	55.747	1.693	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hang	hang	hăng	PHAM_VI	32.925	1.326	0.040	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hang	hang	hạng	PHAM_VI	32.925	31.948	0.970	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hang	hang	hẫng	PHAM_VI	32.925	0.583	0.018	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hang	hang	hằng	PHAM_VI	32.925	10.148	0.308	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hang	hang	hẵng	PHAM_VI	32.925	1.715	0.052	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hangdong	hang động	hàng đống	PHAM_VI	7.155	1.876	0.262	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hangan	hàng ăn	hàn gắn	PHAM_VI	0.417	2.694	6.461	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hanh	hành	hanh	PHAM_VI	21.310	5.213	0.245	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hanh	hành	hạnh	PHAM_VI	21.310	3.757	0.176	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+haohung	hào hứng	hào hùng	PHAM_VI	5.756	0.448	0.078	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hammo	hâm mộ	hầm mỏ	PHAM_VI	24.307	2.611	0.107	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hammo	hâm mộ	hầm mộ	PHAM_VI	24.307	2.639	0.109	G4	K2_DE_XUAT	r = 0.109 < 0,2
+hiem	hiếm	hiểm	PHAM_VI	29.844	1.349	0.045	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hien	hiên	hiến	PHAM_VI	5.888	12.375	2.102	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hien	hiên	hiện	PHAM_VI	5.888	72.984	12.396	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hieu	hiểu	hiếu	PHAM_VI	559.396	1.841	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hieu	hiểu	hiệu	PHAM_VI	559.396	192.638	0.344	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hinh	hình	hỉnh	PHAM_VI	210.695	0.303	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hinhdang	hình dạng	hình dáng	PHAM_VI	59.030	6.465	0.110	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hohang	họ hàng	hở hang	PHAM_VI	8.521	0.426	0.050	G6	K2_DE_XUAT	r = 0.050 < 0,2
+hoamai	hoa mai	hoả mai	PHAM_VI	0.314	0.429	1.367	G1	K2_DE_XUAT	vũ khí cổ, hiếm
+hoasu	hoa sứ	hoạ sư	PHAM_VI	0.047	0.339	7.248	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hoang	hoang	hoàng	PHAM_VI	37.888	22.698	0.599	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hoang	hoang	hoảng	PHAM_VI	37.888	5.305	0.140	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hoangdao	hoang đảo	hoàng đạo	PHAM_VI	0.216	1.937	8.964	G4	K2_DE_XUAT	nghĩa đỏ không chắc: chiêm tinh
+hoangduong	hoang đường	hoàng dương	PHAM_VI	1.808	0.303	0.167	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hoangso	hoang sơ	hoảng sợ	PHAM_VI	2.219	8.288	3.736	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hoac	hoặc	hoắc	PHAM_VI	1520.304	3.590	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hocvien	học viên	học viện	PHAM_VI	24.661	15.609	0.633	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hoihan	hỏi han	hối hận	PHAM_VI	1.063	12.852	12.087	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hoitham	hỏi thăm	hội thẩm	PHAM_VI	5.745	1.003	0.175	G2	K2_DE_XUAT	r = 0.175 < 0,2
+homhinh	hóm hỉnh	hợm hĩnh	PHAM_VI	0.414	0.980	2.367	G9	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 2.367
+hoga	hố ga	ho gà	PHAM_VI	0.422	0.515	1.222	G5	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 1.222
+hoithao	hội thảo	hội thao	PHAM_VI	39.540	0.375	0.009	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hoitruong	hội trường	hội trưởng	PHAM_VI	6.090	0.408	0.067	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+homnay	hôm nay	hôm này	PHAM_VI	268.620	1.511	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hong	hồng	hong	PHAM_VI	73.877	31.650	0.428	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hong	hồng	hòng	PHAM_VI	73.877	1.129	0.015	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hong	hồng	hóng	PHAM_VI	73.877	0.912	0.012	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hong	hồng	hông	PHAM_VI	73.877	12.477	0.169	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hong	hồng	họng	PHAM_VI	73.877	11.345	0.154	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hong	hồng	hỏng	PHAM_VI	73.877	35.210	0.477	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hong	hồng	hổng	PHAM_VI	73.877	1.421	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hopso	hộp số	hộp sọ	PHAM_VI	22.119	3.808	0.172	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hung	húng	hung	PHAM_VI	2.307	24.885	10.788	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+hung	húng	hùng	PHAM_VI	2.307	8.430	3.655	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hung	húng	hưng	PHAM_VI	2.307	11.615	5.035	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hung	húng	hứng	PHAM_VI	2.307	5.988	2.596	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+hung	húng	hừng	PHAM_VI	2.307	0.635	0.275	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+huyen	huyện	huyền	PHAM_VI	15.297	4.511	0.295	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+keng	kẻng	keng	PHAM_VI	0.054	0.759	14.138	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+keca	kể cả	kẻ cả	PHAM_VI	39.650	0.415	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+keula	kêu la	kêu là	PHAM_VI	0.731	0.439	0.601	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khac	khác	khạc	PHAM_VI	1257.592	0.798	0.001	G10	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+khac	khác	khấc	PHAM_VI	1257.592	0.324	0.000	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kham	khảm	kham	PHAM_VI	7.621	3.668	0.481	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kham	khảm	khám	PHAM_VI	7.621	20.595	2.702	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kham	khảm	khâm	PHAM_VI	7.621	0.486	0.064	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kham	khảm	khắm	PHAM_VI	7.621	0.499	0.065	G10	K2_DA_KY	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết; đã có hai chữ ký K2 cho khóa: chu-ky.tsv:1270,1271
+khao	khao	khảo	PHAM_VI	6.126	0.632	0.103	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khan	khăn	khan	PHAM_VI	53.514	7.125	0.133	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khan	khăn	khàn	PHAM_VI	53.514	0.540	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khan	khăn	khán	PHAM_VI	53.514	0.421	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khan	khăn	khấn	PHAM_VI	53.514	0.520	0.010	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+khan	khăn	khẩn	PHAM_VI	53.514	4.632	0.087	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khan	khăn	khắn	PHAM_VI	53.514	0.603	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khau	khâu	khau	PHAM_VI	21.835	0.562	0.026	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khau	khâu	kháu	PHAM_VI	21.835	0.379	0.017	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khau	khâu	khấu	PHAM_VI	21.835	1.495	0.068	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khau	khâu	khẩu	PHAM_VI	21.835	49.492	2.267	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kheo	khéo	kheo	PHAM_VI	2.270	0.508	0.224	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khien	khiến	khiên	PHAM_VI	199.261	10.266	0.052	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+khien	khiến	khiển	PHAM_VI	199.261	1.857	0.009	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khit	khít	khịt	PHAM_VI	2.798	0.319	0.114	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khokhan	khó khăn	khô khan	PHAM_VI	107.853	0.726	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoa	khoa	khoá	PHAM_VI	27.754	217.506	7.837	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoa	khoa	khoả	PHAM_VI	27.754	1.044	0.038	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoa	khoa	khóa	PHAM_VI	27.754	217.506	7.837	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoa	khoa	khỏa	PHAM_VI	27.754	1.044	0.038	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoahoc	khoa học	khóa học	PHAM_VI	107.487	50.617	0.471	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoan	khoan	khoán	PHAM_VI	126.364	0.363	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoan	khoan	khoản	PHAM_VI	126.364	95.673	0.757	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoang	khoang	khoáng	PHAM_VI	29.852	7.494	0.251	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoang	khoang	khoảng	PHAM_VI	29.852	206.995	6.934	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoang	khoang	khoắng	PHAM_VI	29.852	0.309	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoanh	khoanh	khoảnh	PHAM_VI	0.673	0.700	1.040	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoe	khoe	khoé	PHAM_VI	7.094	0.476	0.067	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoe	khoe	khoẻ	PHAM_VI	7.094	95.283	13.431	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoe	khoe	khóe	PHAM_VI	7.094	0.476	0.067	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoe	khoe	khỏe	PHAM_VI	7.094	95.283	13.431	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoi	khói	khoi	PHAM_VI	32.623	2.573	0.079	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoi	khói	khôi	PHAM_VI	32.623	0.743	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoi	khói	khơi	PHAM_VI	32.623	1.313	0.040	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoi	khói	khỏi	PHAM_VI	32.623	445.851	13.667	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoi	khói	khối	PHAM_VI	32.623	71.188	2.182	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khoi	khói	khởi	PHAM_VI	32.623	13.123	0.402	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khom	khóm	khom	PHAM_VI	0.413	0.587	1.420	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khocan	khô cằn	khô cạn	PHAM_VI	1.218	0.532	0.437	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khong	không	khống	PHAM_VI	11903.936	1.135	0.000	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khonghe	không hề	khó nghe	PHAM_VI	87.713	1.091	0.012	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+khuan	khuân	khuẩn	PHAM_VI	0.643	2.339	3.639	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+khuyen	khuyên	khuyển	PHAM_VI	41.748	0.756	0.018	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kien	kiến	kiên	PHAM_VI	41.688	3.167	0.076	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kien	kiến	kiện	PHAM_VI	41.688	18.025	0.432	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+kieng	kiêng	kiếng	PHAM_VI	1.149	2.256	1.963	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kieng	kiêng	kiểng	PHAM_VI	1.149	0.409	0.356	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kieu	kiểu	kiêu	PHAM_VI	208.626	0.513	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kieu	kiểu	kiếu	PHAM_VI	208.626	0.386	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kieu	kiểu	kiều	PHAM_VI	208.626	3.083	0.015	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kieu	kiểu	kiệu	PHAM_VI	208.626	1.155	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kinh	kính	kinh	PHAM_VI	123.770	40.404	0.326	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kinh	kính	kình	PHAM_VI	123.770	0.504	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+kinhcan	kính cận	kính cẩn	PHAM_VI	0.165	0.530	3.222	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lala	là lạ	là là	PHAM_VI	1.816	2.414	1.329	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lamkho	làm khó	làm khổ	PHAM_VI	3.255	0.908	0.279	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lammau	làm mẫu	làm màu	PHAM_VI	2.714	0.662	0.244	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lammoi	làm mối	làm mồi	PHAM_VI	0.205	2.372	11.574	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lang	làng	lang	PHAM_VI	43.040	12.646	0.294	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lang	làng	láng	PHAM_VI	43.040	2.200	0.051	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lang	làng	lãng	PHAM_VI	43.040	2.443	0.057	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lang	làng	lăng	PHAM_VI	43.040	4.801	0.112	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+lang	làng	lạng	PHAM_VI	43.040	2.573	0.060	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lang	làng	lắng	PHAM_VI	43.040	3.817	0.089	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lang	làng	lằng	PHAM_VI	43.040	0.468	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lang	làng	lặng	PHAM_VI	43.040	3.028	0.070	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lanh	lạnh	lanh	PHAM_VI	112.671	12.086	0.107	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lanh	lạnh	lành	PHAM_VI	112.671	23.383	0.208	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lanh	lạnh	lánh	PHAM_VI	112.671	0.855	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lanh	lạnh	lãnh	PHAM_VI	112.671	9.782	0.087	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+langnhang	lằng nhằng	lăng nhăng	PHAM_VI	1.188	1.509	1.271	G6	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 1.271
+langnghe	lắng nghe	làng nghề	PHAM_VI	28.065	1.031	0.037	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lambam	lẩm bẩm	lầm bầm	PHAM_VI	1.037	0.945	0.911	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+laudai	lâu đài	lâu dài	PHAM_VI	26.439	45.858	1.734	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+layloi	lầy lội	lấy lời	PHAM_VI	0.249	0.656	2.636	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+leloi	lẻ loi	le lói	PHAM_VI	0.461	0.384	0.835	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+leduong	lề đường	lê dương	PHAM_VI	2.339	0.307	0.131	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+leduong	lề đường	lễ đường	PHAM_VI	2.339	0.369	0.158	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lenh	lệnh	lềnh	PHAM_VI	110.864	0.513	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+liem	liềm	liêm	PHAM_VI	0.322	2.499	7.756	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+liem	liềm	liếm	PHAM_VI	0.322	12.188	37.826	G6	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+lienhoan	liên hoan	liên hoàn	PHAM_VI	5.548	2.923	0.527	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lienquan	liên quan	liên quân	PHAM_VI	283.950	0.888	0.003	G1	K2_DE_XUAT	r = 0.003 < 0,2
+lieu	liễu	liều	PHAM_VI	2.651	63.149	23.820	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lieu	liễu	liệu	PHAM_VI	2.651	84.018	31.692	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lolang	lo lắng	lố lăng	PHAM_VI	97.130	0.386	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lolieu	lo liệu	lộ liễu	PHAM_VI	6.389	1.076	0.168	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+loang	loãng	loang	PHAM_VI	4.372	0.380	0.087	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+loithoi	lỗi thời	lôi thôi	PHAM_VI	5.399	0.750	0.139	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+long	lông	long	PHAM_VI	76.751	100.270	1.306	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+long	lông	lòng	PHAM_VI	76.751	71.827	0.936	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+long	lông	lóng	PHAM_VI	76.751	0.691	0.009	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+long	lông	lõng	PHAM_VI	76.751	0.495	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+long	lông	lỏng	PHAM_VI	76.751	35.682	0.465	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+long	lông	lồng	PHAM_VI	76.751	31.736	0.413	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+loithe	lợi thế	lời thề	PHAM_VI	39.956	6.822	0.171	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lunglay	lung lay	lừng lẫy	PHAM_VI	3.785	0.706	0.187	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lung	lưng	lung	PHAM_VI	31.939	3.644	0.114	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lung	lưng	lùng	PHAM_VI	31.939	2.656	0.083	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lung	lưng	lủng	PHAM_VI	31.939	1.022	0.032	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+lung	lưng	lửng	PHAM_VI	31.939	3.337	0.104	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luoi	lưới	lười	PHAM_VI	150.251	3.764	0.025	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luoi	lưới	lưỡi	PHAM_VI	150.251	59.084	0.393	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luon	lươn	luôn	PHAM_VI	1.179	472.919	400.949	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luon	lươn	luồn	PHAM_VI	1.179	2.708	2.296	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luon	lươn	lượn	PHAM_VI	1.179	7.877	6.679	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luong	lương	luồng	PHAM_VI	31.816	18.274	0.574	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luong	lương	lường	PHAM_VI	31.816	5.306	0.167	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luong	lương	lưỡng	PHAM_VI	31.816	3.224	0.101	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luong	lương	lượng	PHAM_VI	31.816	81.516	2.562	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luot	lướt	lượt	PHAM_VI	14.292	162.722	11.386	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+luutru	lưu trữ	lưu trú	PHAM_VI	164.268	10.196	0.062	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+manh	mạnh	manh	PHAM_VI	136.830	3.294	0.024	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+manh	mạnh	mánh	PHAM_VI	136.830	3.117	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+manh	mạnh	mãnh	PHAM_VI	136.830	1.051	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+manh	mạnh	mảnh	PHAM_VI	136.830	51.700	0.378	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+maychu	máy chủ	máy chữ	PHAM_VI	78.712	0.315	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+maydo	máy dò	may đo	PHAM_VI	19.274	0.674	0.035	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+maymay	máy may	mảy may	PHAM_VI	6.758	0.478	0.071	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mang	măng	mang	PHAM_VI	1.766	404.469	229.070	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mang	măng	màng	PHAM_VI	1.766	74.642	42.273	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mang	măng	máng	PHAM_VI	1.766	7.287	4.127	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mang	măng	mạng	PHAM_VI	1.766	208.610	118.146	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mang	măng	mảng	PHAM_VI	1.766	16.604	9.404	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mang	măng	mắng	PHAM_VI	1.766	2.470	1.399	G9	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+matkinh	mắt kính	mặt kính	PHAM_VI	2.119	0.688	0.324	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+matnuoc	mặt nước	mất nước	PHAM_VI	6.472	6.419	0.992	G3,G5	K2_DE_XUAT	nghĩa đỏ không chắc: mất nước thường là thiếu nước
+mattrang	mặt trăng	mất trắng	PHAM_VI	17.964	0.342	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mapmo	mấp mô	mập mờ	PHAM_VI	0.067	0.653	9.730	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+meman	mê mẩn	mê man	PHAM_VI	1.117	0.600	0.536	G5	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 0.536
+mega	mề gà	mega	PHAM_VI	0.030	5.639	187.960	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mimat	mi mắt	mí mắt	PHAM_VI	0.418	3.535	8.458	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mien	miến	miền	PHAM_VI	2.037	73.899	36.273	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mien	miến	miễn	PHAM_VI	2.037	14.314	7.026	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mien	miến	miện	PHAM_VI	2.037	0.494	0.242	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+miengan	miếng ăn	miệng ăn	PHAM_VI	0.502	0.398	0.792	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mieng	miệng	miếng	PHAM_VI	78.503	83.612	1.065	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+moimoc	mời mọc	moi móc	PHAM_VI	0.356	0.335	0.941	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+moiday	mới đây	mới đấy	PHAM_VI	5.805	1.781	0.307	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+moitinh	mới tinh	mối tình	PHAM_VI	1.029	1.450	1.410	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mummim	mũm mĩm	mủm mỉm	PHAM_VI	6.042	0.604	0.100	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muoi	muối	muôi	PHAM_VI	38.433	0.339	0.009	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muoi	muối	muỗi	PHAM_VI	38.433	18.825	0.490	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muoi	muối	muội	PHAM_VI	38.433	27.636	0.719	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muoi	muối	mươi	PHAM_VI	38.433	1.137	0.030	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muoi	muối	mười	PHAM_VI	38.433	46.995	1.223	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+mung	mừng	mùng	PHAM_VI	55.858	2.643	0.047	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muon	mượn	muôn	PHAM_VI	24.084	4.287	0.178	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muon	mượn	muốn	PHAM_VI	24.084	2326.093	96.583	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muon	mượn	muộn	PHAM_VI	24.084	57.674	2.395	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muon	mượn	mướn	PHAM_VI	24.084	2.532	0.105	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muong	mương	muông	PHAM_VI	2.945	0.341	0.116	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muong	mương	muỗng	PHAM_VI	2.945	12.572	4.268	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muong	mương	mường	PHAM_VI	2.945	1.783	0.605	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+muot	mượt	mướt	PHAM_VI	4.338	0.373	0.086	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nammo	nằm mơ	nam mô	PHAM_VI	3.077	0.461	0.150	G4	K2_DE_XUAT	đi kèm K1 nấm mồ của cùng khóa
+nammo	nằm mơ	nấm mồ	PHAM_VI	3.077	1.389	0.452	G4	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 0.452
+namvung	nắm vững	nằm vùng	PHAM_VI	1.832	1.681	0.918	G1,G3	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 0.918
+nang	nắng	nang	PHAM_VI	21.832	18.317	0.839	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nang	nắng	nàng	PHAM_VI	21.832	88.895	4.072	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nang	nắng	nâng	PHAM_VI	21.832	113.384	5.193	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nang	nắng	năng	PHAM_VI	21.832	7.447	0.341	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nang	nắng	nạng	PHAM_VI	21.832	1.095	0.050	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nang	nắng	nẫng	PHAM_VI	21.832	0.458	0.021	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nang	nắng	nặng	PHAM_VI	21.832	103.531	4.742	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngach	ngách	ngạch	PHAM_VI	0.793	0.560	0.706	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngai	ngại	ngai	PHAM_VI	12.942	3.226	0.249	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngai	ngại	ngài	PHAM_VI	12.942	628.659	48.574	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngai	ngại	ngãi	PHAM_VI	12.942	1.635	0.126	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngai	ngại	ngải	PHAM_VI	12.942	1.757	0.136	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ngang	ngang	ngáng	PHAM_VI	61.114	1.994	0.033	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngang	ngang	ngẩng	PHAM_VI	61.114	1.416	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngao	ngao	ngáo	PHAM_VI	0.616	0.648	1.051	G7,G9	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ngao	ngao	ngạo	PHAM_VI	0.616	0.473	0.767	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngap	ngáp	ngập	PHAM_VI	0.758	11.416	15.055	G8	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ngay	ngày	ngay	PHAM_VI	1006.190	722.045	0.718	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngay	ngày	ngáy	PHAM_VI	1006.190	2.967	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngay	ngày	ngây	PHAM_VI	1006.190	0.515	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngay	ngày	ngấy	PHAM_VI	1006.190	0.483	0.000	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngaynay	ngày nay	ngày này	PHAM_VI	36.965	10.698	0.289	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngaythang	ngày tháng	ngay thẳng	PHAM_VI	5.543	1.972	0.356	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngam	ngắm	ngàm	PHAM_VI	33.147	0.357	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngam	ngắm	ngâm	PHAM_VI	33.147	19.534	0.589	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngam	ngắm	ngăm	PHAM_VI	33.147	3.791	0.114	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngam	ngắm	ngấm	PHAM_VI	33.147	1.989	0.060	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngam	ngắm	ngầm	PHAM_VI	33.147	30.587	0.923	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngam	ngắm	ngẫm	PHAM_VI	33.147	0.640	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngam	ngắm	ngậm	PHAM_VI	33.147	4.751	0.143	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngan	ngăn	ngan	PHAM_VI	72.069	10.810	0.150	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngan	ngăn	ngàn	PHAM_VI	72.069	58.845	0.817	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngan	ngăn	ngán	PHAM_VI	72.069	1.761	0.024	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngan	ngăn	ngân	PHAM_VI	72.069	4.186	0.058	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngan	ngăn	ngần	PHAM_VI	72.069	3.065	0.043	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nganchan	ngăn chặn	ngăn chận	PHAM_VI	65.895	0.413	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngat	ngắt	ngạt	PHAM_VI	18.748	1.002	0.053	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ngat	ngắt	ngất	PHAM_VI	18.748	6.944	0.370	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nghe	nghệ	nghe	PHAM_VI	9.273	752.074	81.105	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nghe	nghệ	nghé	PHAM_VI	9.273	1.681	0.181	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nghe	nghệ	nghê	PHAM_VI	9.273	0.691	0.075	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nghe	nghệ	nghề	PHAM_VI	9.273	41.616	4.488	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nghi	nghỉ	nghì	PHAM_VI	127.047	0.819	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nghi	nghỉ	nghĩ	PHAM_VI	127.047	1330.932	10.476	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nghi	nghỉ	nghị	PHAM_VI	127.047	3.790	0.030	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nghingoi	nghỉ ngơi	nghĩ ngợi	PHAM_VI	41.017	1.254	0.031	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nghiem	nghiêm	nghiệm	PHAM_VI	6.760	4.106	0.607	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoai	ngoài	ngoái	PHAM_VI	442.603	0.535	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoai	ngoài	ngoại	PHAM_VI	442.603	13.218	0.030	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoaile	ngoại lệ	ngoài lề	PHAM_VI	10.312	0.756	0.073	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoc	ngọc	ngốc	PHAM_VI	31.105	46.591	1.498	G9	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ngoi	ngói	ngoi	PHAM_VI	14.000	1.290	0.092	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoi	ngói	ngòi	PHAM_VI	14.000	2.338	0.167	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoi	ngói	ngôi	PHAM_VI	14.000	33.614	2.401	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoi	ngói	ngơi	PHAM_VI	14.000	1.686	0.120	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoi	ngói	ngồi	PHAM_VI	14.000	237.362	16.954	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngoi	ngói	ngời	PHAM_VI	14.000	1.343	0.096	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngot	ngọt	ngót	PHAM_VI	23.342	2.428	0.104	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nguy	ngụ ý	nguy	PHAM_VI	4.665	8.984	1.926	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nguy	ngụ ý	nguỵ	PHAM_VI	4.665	3.556	0.762	G3	K2_DE_XUAT	như ngụy, cách đặt dấu cũ
+nguy	ngụ ý	ngụy	PHAM_VI	4.665	3.556	0.762	G3	K2_DE_XUAT	đọc khóa hai âm tiết thành một âm tiết; ngụy đứng riêng chủ yếu đi trong từ ghép
+ngum	ngụm	ngủm	PHAM_VI	3.308	1.140	0.345	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nguyen	nguyên	nguyền	PHAM_VI	36.608	11.479	0.314	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nguyen	nguyên	nguyện	PHAM_VI	36.608	11.373	0.311	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ngua	ngựa	ngứa	PHAM_VI	76.089	14.529	0.191	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ngua	ngựa	ngừa	PHAM_VI	76.089	4.029	0.053	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ngung	ngừng	ngưng	PHAM_VI	65.938	21.884	0.332	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nguoi	người	nguôi	PHAM_VI	4524.160	0.939	0.000	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nguoi	người	nguội	PHAM_VI	4524.160	25.415	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nguoi	người	ngươi	PHAM_VI	4524.160	567.106	0.125	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nguoingoai	người ngoài	nguôi ngoai	PHAM_VI	17.006	0.509	0.030	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhao	nhà ở	nhão	PHAM_VI	39.472	0.868	0.022	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhao	nhà ở	nhạo	PHAM_VI	39.472	2.478	0.063	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhac	nhạc	nhấc	PHAM_VI	88.233	12.737	0.144	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhac	nhạc	nhắc	PHAM_VI	88.233	51.683	0.586	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhai	nhai	nhái	PHAM_VI	10.228	2.056	0.201	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhai	nhai	nhãi	PHAM_VI	10.228	3.410	0.333	G9	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nhai	nhai	nhại	PHAM_VI	10.228	2.540	0.248	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhan	nhãn	nhàn	PHAM_VI	76.707	0.448	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhan	nhãn	nhân	PHAM_VI	76.707	40.818	0.532	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhan	nhãn	nhăn	PHAM_VI	76.707	5.054	0.066	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhan	nhãn	nhạn	PHAM_VI	76.707	1.582	0.021	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhan	nhãn	nhấn	PHAM_VI	76.707	59.573	0.777	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhan	nhãn	nhận	PHAM_VI	76.707	435.931	5.683	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhan	nhãn	nhắn	PHAM_VI	76.707	100.158	1.306	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhan	nhãn	nhẵn	PHAM_VI	76.707	4.161	0.054	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhanh	nhanh	nhành	PHAM_VI	603.138	0.653	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhau	nhàu	nhậu	PHAM_VI	0.228	2.852	12.530	G7	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nhat	nhặt	nhát	PHAM_VI	14.787	7.560	0.511	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhat	nhặt	nhạt	PHAM_VI	14.787	13.305	0.900	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhat	nhặt	nhất	PHAM_VI	14.787	1291.313	87.327	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhat	nhặt	nhật	PHAM_VI	14.787	254.532	17.213	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhamnhi	nhâm nhi	nhảm nhí	PHAM_VI	1.364	11.064	8.110	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhandang	nhận dạng	nhân dạng	PHAM_VI	22.841	2.263	0.099	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhanloi	nhận lời	nhận lỗi	PHAM_VI	3.348	0.809	0.242	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhap	nhập	nháp	PHAM_VI	121.117	0.568	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nheo	nheo	nhéo	PHAM_VI	0.375	0.478	1.274	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nheo	nheo	nhẽo	PHAM_VI	0.375	0.378	1.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhieu	nhiều	nhiêu	PHAM_VI	1620.443	5.593	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhieu	nhiều	nhiễu	PHAM_VI	1620.443	8.614	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhin	nhìn	nhịn	PHAM_VI	589.131	3.774	0.006	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhip	nhịp	nhíp	PHAM_VI	37.935	1.661	0.044	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhoc	nhóc	nhọc	PHAM_VI	122.496	0.502	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhon	nhọn	nhơn	PHAM_VI	7.150	3.936	0.550	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhon	nhọn	nhộn	PHAM_VI	7.150	0.722	0.101	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhon	nhọn	nhờn	PHAM_VI	7.150	4.621	0.646	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhoi	nhồi	nhói	PHAM_VI	11.441	0.843	0.074	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhom	nhôm	nhom	PHAM_VI	228.874	0.449	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhong	nhộng	nhông	PHAM_VI	2.397	0.544	0.227	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhot	nhốt	nhọt	PHAM_VI	23.140	1.089	0.047	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nhot	nhốt	nhột	PHAM_VI	23.140	1.770	0.076	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhot	nhốt	nhớt	PHAM_VI	23.140	13.851	0.599	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhung	nhung	nhũng	PHAM_VI	9.798	1.072	0.109	G2,G3	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nhung	nhung	nhưng	PHAM_VI	9.798	2335.172	238.336	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhung	nhung	những	PHAM_VI	9.798	3482.164	355.403	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhuom	nhuộm	nhuốm	PHAM_VI	35.192	1.175	0.033	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhuthe	như thế	như thể	PHAM_VI	229.906	23.941	0.104	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhuy	như ý	nhuỵ	PHAM_VI	2.334	0.303	0.130	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhuy	như ý	nhụy	PHAM_VI	2.334	0.303	0.130	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nhuong	nhường	nhượng	PHAM_VI	5.335	4.781	0.896	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nieu	niêu	niệu	PHAM_VI	0.259	1.623	6.280	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+noilen	nói lên	nổi lên	PHAM_VI	6.677	6.126	0.917	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nong	nóng	nong	PHAM_VI	299.742	4.654	0.016	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nong	nóng	nòng	PHAM_VI	299.742	3.419	0.011	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+nong	nóng	nông	PHAM_VI	299.742	5.577	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nong	nóng	nồng	PHAM_VI	299.742	1.331	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+noithat	nội thất	nói thật	PHAM_VI	92.874	28.628	0.308	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+noilong	nới lỏng	nỗi lòng	PHAM_VI	3.266	0.338	0.104	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nuot	nuốt	nuột	PHAM_VI	17.323	0.502	0.029	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nuocda	nước đá	nước da	PHAM_VI	2.825	0.596	0.211	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+nuong	nướng	nương	PHAM_VI	49.889	1.194	0.024	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ongtho	ong thợ	ống thở	PHAM_VI	0.254	1.115	4.397	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+onganh	óng ánh	ông anh	PHAM_VI	0.504	5.438	10.783	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+oliu	ô liu	ôliu	PHAM_VI	4.502	1.193	0.265	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ongxa	ông xã	ống xả	PHAM_VI	1.876	5.563	2.965	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phale	pha lê	phá lệ	PHAM_VI	10.934	0.441	0.040	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phai	phai	phái	PHAM_VI	5.378	15.721	2.923	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phanung	phản ứng	phần ứng	PHAM_VI	86.652	2.532	0.029	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phandoan	phán đoán	phân đoạn	PHAM_VI	3.606	8.782	2.435	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phancong	phân công	phản công	PHAM_VI	2.578	3.217	1.248	G1	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 1.248
+phanloai	phân loại	phân loài	PHAM_VI	32.346	0.344	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phankhoi	phấn khởi	phân khối	PHAM_VI	2.194	0.401	0.183	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phay	phẩy	phay	PHAM_VI	0.766	13.832	18.065	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phicong	phi công	phí công	PHAM_VI	17.805	0.590	0.033	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phien	phiên	phiến	PHAM_VI	25.164	5.701	0.227	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phinh	phình	phỉnh	PHAM_VI	2.536	0.524	0.207	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phongbi	phong bì	phòng bị	PHAM_VI	11.516	1.098	0.095	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phongthu	phong thư	phòng thủ	PHAM_VI	0.297	14.197	47.819	G1	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 47.819
+phong	phòng	phong	PHAM_VI	658.422	33.933	0.052	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phong	phòng	phóng	PHAM_VI	658.422	33.854	0.051	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phong	phòng	phông	PHAM_VI	658.422	1.674	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phong	phòng	phỏng	PHAM_VI	658.422	2.617	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phong	phòng	phồng	PHAM_VI	658.422	5.060	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phongan	phòng ăn	phong ấn	PHAM_VI	4.848	1.786	0.368	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phongngu	phòng ngủ	phòng ngự	PHAM_VI	47.466	1.478	0.031	G1	K2_DE_XUAT	r = 0.031 < 0,2
+phoi	phổi	phoi	PHAM_VI	27.101	0.435	0.016	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phoi	phổi	phôi	PHAM_VI	27.101	12.914	0.477	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phoi	phổi	phối	PHAM_VI	27.101	2.485	0.092	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phudau	phù dâu	phủ đầu	PHAM_VI	1.957	0.498	0.255	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phuc	phúc	phục	PHAM_VI	9.512	9.411	0.989	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phuc	phúc	phức	PHAM_VI	9.512	0.775	0.081	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phun	phun	phún	PHAM_VI	158.925	1.479	0.009	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phut	phút	phụt	PHAM_VI	311.673	0.301	0.001	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phuong	phượng	phương	PHAM_VI	4.691	34.775	7.413	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+phuong	phượng	phường	PHAM_VI	4.691	20.587	4.388	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quatang	quà tặng	quả tang	PHAM_VI	54.959	1.685	0.031	G2	K2_DE_XUAT	chỉ dùng trong bắt quả tang
+quacau	quả cầu	qua cầu	PHAM_VI	10.413	1.070	0.103	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quakho	quả khô	quá khổ	PHAM_VI	0.732	2.513	3.433	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quata	quả tạ	quá ta	PHAM_VI	0.374	0.517	1.380	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quai	quai	quái	PHAM_VI	3.107	124.252	39.994	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+quang	quăng	quang	PHAM_VI	8.573	80.794	9.425	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quang	quăng	quàng	PHAM_VI	8.573	0.785	0.092	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quang	quăng	quãng	PHAM_VI	8.573	11.110	1.296	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quang	quăng	quầng	PHAM_VI	8.573	1.437	0.168	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quang	quăng	quẳng	PHAM_VI	8.573	3.937	0.459	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quang	quăng	quặng	PHAM_VI	8.573	9.748	1.137	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quay	quầy	quay	PHAM_VI	27.552	249.896	9.070	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quay	quầy	quày	PHAM_VI	27.552	1.361	0.049	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quay	quầy	quây	PHAM_VI	27.552	2.355	0.085	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quay	quầy	quấy	PHAM_VI	27.552	0.773	0.028	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quay	quầy	quẩy	PHAM_VI	27.552	2.750	0.100	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quay	quầy	quẫy	PHAM_VI	27.552	0.446	0.016	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quay	quầy	quậy	PHAM_VI	27.552	6.407	0.233	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quet	quét	quẹt	PHAM_VI	44.699	1.673	0.037	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quen	quên	quen	PHAM_VI	186.175	57.209	0.307	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quen	quên	quèn	PHAM_VI	186.175	1.253	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quyen	quyển	quyên	PHAM_VI	23.720	2.277	0.096	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quyen	quyển	quyến	PHAM_VI	23.720	15.383	0.649	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+quyen	quyển	quyền	PHAM_VI	23.720	215.201	9.073	G3	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ramat	ra mắt	ra mặt	PHAM_VI	24.584	3.106	0.126	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rach	rách	rạch	PHAM_VI	11.359	10.213	0.899	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ranh	rãnh	ranh	PHAM_VI	29.169	6.072	0.208	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ranh	rãnh	rảnh	PHAM_VI	29.169	10.538	0.361	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rang	răng	rang	PHAM_VI	70.895	8.995	0.127	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rang	răng	ràng	PHAM_VI	70.895	1.734	0.024	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rang	răng	ráng	PHAM_VI	70.895	7.268	0.103	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rang	răng	rạng	PHAM_VI	70.895	1.243	0.018	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rang	răng	rằng	PHAM_VI	70.895	909.937	12.835	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rang	răng	rặng	PHAM_VI	70.895	1.941	0.027	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rangcua	răng cửa	răng cưa	PHAM_VI	0.630	2.144	3.406	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rong	rồng	rong	PHAM_VI	53.000	10.940	0.206	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rong	rồng	ròng	PHAM_VI	53.000	4.426	0.084	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rong	rồng	rông	PHAM_VI	53.000	0.728	0.014	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rong	rồng	rống	PHAM_VI	53.000	0.791	0.015	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rong	rồng	rỗng	PHAM_VI	53.000	22.374	0.422	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rong	rồng	rộng	PHAM_VI	53.000	91.023	1.717	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rungdong	rung động	rúng động	PHAM_VI	11.076	0.453	0.041	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ruoi	ruồi	rưới	PHAM_VI	10.668	0.388	0.036	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ruoi	ruồi	rưỡi	PHAM_VI	10.668	13.793	1.293	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ruong	ruộng	rương	PHAM_VI	2.084	4.377	2.100	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+ruot	ruột	rượt	PHAM_VI	25.027	2.388	0.095	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rung	rừng	rung	PHAM_VI	70.967	49.805	0.702	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+rung	rừng	rụng	PHAM_VI	70.967	10.700	0.151	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+sach	sách	sạch	PHAM_VI	152.162	170.188	1.118	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+sang	sàng	sang	PHAM_VI	14.036	166.048	11.830	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+sang	sàng	sảng	PHAM_VI	14.036	0.534	0.038	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+sanh	sảnh	sanh	PHAM_VI	15.494	6.482	0.418	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+sanh	sảnh	sánh	PHAM_VI	15.494	3.807	0.246	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+saphang	sạp hàng	sắp hàng	PHAM_VI	0.060	0.872	14.434	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+sanday	sắn dây	sán dây	PHAM_VI	0.030	1.047	34.910	G5,G10	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 34.910
+sanga	sân ga	sa ngã	PHAM_VI	1.697	1.063	0.627	G6,G9	K2_DE_XUAT	nghĩa đỏ không chắc: sa ngã là sa vào thói xấu nói chung
+sinh	sinh	sình	PHAM_VI	82.549	0.420	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+sole	so le	số lẻ	PHAM_VI	0.266	0.366	1.374	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+soda	soda	sô đa	PHAM_VI	9.232	0.348	0.038	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+song	sông	song	PHAM_VI	62.825	30.961	0.493	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+song	sông	sòng	PHAM_VI	62.825	4.748	0.076	G7	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+song	sông	sóng	PHAM_VI	62.825	62.050	0.988	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+song	sông	sống	PHAM_VI	62.825	530.077	8.437	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+song	sông	sổng	PHAM_VI	62.825	0.513	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+soso	sờ sờ	sơ sơ	PHAM_VI	0.429	0.494	1.151	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+suoi	suối	sưởi	PHAM_VI	14.899	37.575	2.522	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+suachua	sữa chua	sửa chữa	PHAM_VI	5.855	75.265	12.855	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+sungso	sững sờ	sừng sỏ	PHAM_VI	0.557	0.366	0.658	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+suong	sương	suông	PHAM_VI	8.817	0.932	0.106	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+suong	sương	sướng	PHAM_VI	8.817	16.461	1.867	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tainghe	tai nghe	tài nghệ	PHAM_VI	18.868	0.552	0.029	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+taihoa	tài hoa	tai hoạ	PHAM_VI	0.748	4.418	5.906	G8	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 5.906
+taihoa	tài hoa	tai họa	PHAM_VI	0.748	4.418	5.906	G8	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 5.906
+tanh	tạnh	tanh	PHAM_VI	0.641	1.925	3.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tanh	tạnh	tánh	PHAM_VI	0.641	1.794	2.799	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tamdiem	tâm điểm	tam điểm	PHAM_VI	2.033	0.651	0.320	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tamtinh	tâm tình	tâm tính	PHAM_VI	0.745	0.312	0.419	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tantinh	tận tình	tân tinh	PHAM_VI	3.281	0.327	0.100	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thach	thạch	thách	PHAM_VI	10.545	6.145	0.583	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thai	thái	thai	PHAM_VI	55.650	86.542	1.555	G6	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+thai	thái	thải	PHAM_VI	55.650	41.231	0.741	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+tham	thảm	tham	PHAM_VI	32.520	7.719	0.237	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thám	PHAM_VI	32.520	2.850	0.088	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thâm	PHAM_VI	32.520	18.500	0.569	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thăm	PHAM_VI	32.520	85.908	2.642	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thấm	PHAM_VI	32.520	107.331	3.301	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thầm	PHAM_VI	32.520	1.622	0.050	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thẩm	PHAM_VI	32.520	6.722	0.207	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thẫm	PHAM_VI	32.520	1.165	0.036	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thậm	PHAM_VI	32.520	1.456	0.045	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thắm	PHAM_VI	32.520	0.641	0.020	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tham	thảm	thẳm	PHAM_VI	32.520	0.621	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+than	than	thân	PHAM_VI	71.549	64.146	0.897	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+than	than	thăn	PHAM_VI	71.549	0.830	0.012	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+than	than	thần	PHAM_VI	71.549	129.929	1.816	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+than	than	thận	PHAM_VI	71.549	27.546	0.385	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thang	thang	tháng	PHAM_VI	42.527	504.847	11.871	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thang	thang	thăng	PHAM_VI	42.527	6.697	0.157	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thang	thang	thắng	PHAM_VI	42.527	109.928	2.585	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thang	thang	thằng	PHAM_VI	42.527	338.012	7.948	G9	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+thang	thang	thẳng	PHAM_VI	42.527	78.474	1.845	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thao	tháo	thao	PHAM_VI	30.326	11.613	0.383	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thao	tháo	thạo	PHAM_VI	30.326	1.305	0.043	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thao	tháo	thảo	PHAM_VI	30.326	27.782	0.916	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thap	tháp	thấp	PHAM_VI	69.047	319.463	4.627	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thap	tháp	thập	PHAM_VI	69.047	5.794	0.084	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thau	thau	thâu	PHAM_VI	1.429	1.907	1.335	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thau	thau	thấu	PHAM_VI	1.429	2.585	1.809	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thau	thau	thầu	PHAM_VI	1.429	7.063	4.944	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thamthiet	thắm thiết	thảm thiết	PHAM_VI	0.435	0.335	0.770	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thanthe	thân thể	thân thế	PHAM_VI	9.848	0.516	0.052	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+that	thật	thất	PHAM_VI	940.085	7.817	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thattinh	thật tình	thất tình	PHAM_VI	5.216	0.815	0.156	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thay	thầy	thay	PHAM_VI	99.669	83.888	0.842	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thay	thầy	thày	PHAM_VI	99.669	1.324	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thay	thầy	thây	PHAM_VI	99.669	1.556	0.016	G4	K2_DA_KY	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết; đã có hai chữ ký K2 cho khóa: chu-ky.tsv:2152,2153,2154
+thay	thầy	thảy	PHAM_VI	99.669	4.024	0.040	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+theo	theo	thẹo	PHAM_VI	971.076	1.095	0.001	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+theo	theo	thẻo	PHAM_VI	971.076	0.327	0.000	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+theoduoi	theo đuổi	theo đuôi	PHAM_VI	21.906	2.346	0.107	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+theluc	thể lực	thế lực	PHAM_VI	1.986	4.871	2.453	G3	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 2.453
+thenao	thế nào	thể nào	PHAM_VI	474.654	4.695	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+them	thềm	thêm	PHAM_VI	1.528	593.632	388.503	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thitham	thì thầm	thịt hầm	PHAM_VI	5.704	1.080	0.189	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thitruong	thị trường	thị trưởng	PHAM_VI	239.128	16.656	0.070	G3	K2_DE_XUAT	nghĩa đỏ không chắc: chức danh hành chính
+thia	thìa	thia	PHAM_VI	5.209	0.505	0.097	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thientai	thiên tài	thiên tai	PHAM_VI	18.754	4.770	0.254	G8	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 0.254
+thiep	thiệp	thiếp	PHAM_VI	8.229	17.294	2.102	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thiet	thiệt	thiết	PHAM_VI	28.736	20.099	0.699	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thieu	thiếu	thiêu	PHAM_VI	102.670	24.072	0.234	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+thieu	thiếu	thiểu	PHAM_VI	102.670	0.865	0.008	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thinh	thính	thinh	PHAM_VI	1.142	3.735	3.271	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thinh	thính	thỉnh	PHAM_VI	1.142	0.973	0.852	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thinh	thính	thịnh	PHAM_VI	1.142	3.586	3.140	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoa	thoa	thoả	PHAM_VI	4.885	3.144	0.644	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoa	thoa	thỏa	PHAM_VI	4.885	3.144	0.644	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoat	thoát	thoạt	PHAM_VI	80.216	1.044	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoc	thóc	thọc	PHAM_VI	2.409	2.805	1.164	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thongdong	thong dong	thông đồng	PHAM_VI	0.210	1.441	6.863	G2	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 6.863
+thoi	thổi	thoi	PHAM_VI	64.624	9.506	0.147	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoi	thổi	thói	PHAM_VI	64.624	2.728	0.042	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoi	thổi	thôi	PHAM_VI	64.624	1317.352	20.385	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoi	thổi	thơi	PHAM_VI	64.624	0.432	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoi	thổi	thỏi	PHAM_VI	64.624	3.771	0.058	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thoi	thổi	thối	PHAM_VI	64.624	11.122	0.172	G10	K2_DA_KY	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết; đã có hai chữ ký K2 cho khóa: chu-ky.tsv:2198,2199
+thoi	thổi	thời	PHAM_VI	64.624	46.566	0.721	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thon	thôn	thon	PHAM_VI	3.645	3.825	1.049	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thon	thôn	thốn	PHAM_VI	3.645	0.803	0.220	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thon	thôn	thộn	PHAM_VI	3.645	1.064	0.292	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thong	thông	thống	PHAM_VI	47.739	6.531	0.137	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thot	thớt	thọt	PHAM_VI	1.717	0.374	0.218	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+thot	thớt	thốt	PHAM_VI	1.717	2.249	1.310	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuhoi	thu hồi	thử hỏi	PHAM_VI	13.584	0.698	0.051	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thua	thua	thừa	PHAM_VI	50.590	17.772	0.351	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thua	thua	thửa	PHAM_VI	50.590	0.507	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuan	thuần	thụ án	PHAM_VI	5.133	0.415	0.081	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+thue	thuê	thuế	PHAM_VI	90.963	56.209	0.618	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thung	thùng	thung	PHAM_VI	98.063	1.724	0.018	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thung	thùng	thủng	PHAM_VI	98.063	7.286	0.074	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thung	thùng	thừng	PHAM_VI	98.063	11.082	0.113	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuyen	thuyền	thuyên	PHAM_VI	90.304	0.983	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuthai	thư thái	thụ thai	PHAM_VI	1.843	2.666	1.446	G6	K1_DE_XUAT	nghĩa chính thuộc nhóm đỏ; r = 1.446
+thuloi	thứ lỗi	thu lôi	PHAM_VI	25.387	0.328	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thutu	thứ tư	thư từ	PHAM_VI	21.115	4.705	0.223	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuc	thức	thúc	PHAM_VI	44.573	5.189	0.116	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuc	thức	thục	PHAM_VI	44.573	0.602	0.014	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuc	thức	thực	PHAM_VI	44.573	58.154	1.305	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thucday	thức dậy	thúc đẩy	PHAM_VI	20.523	46.008	2.242	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuong	thưởng	thường	PHAM_VI	38.680	269.670	6.972	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+thuong	thưởng	thượng	PHAM_VI	38.680	42.102	1.088	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tich	tích	tịch	PHAM_VI	8.034	1.301	0.162	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+tiec	tiệc	tiếc	PHAM_VI	66.865	80.212	1.200	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tieman	tiềm ẩn	tiệm ăn	PHAM_VI	6.040	0.558	0.092	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tiem	tiệm	tiêm	PHAM_VI	25.843	66.655	2.579	G5	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+tiem	tiệm	tiềm	PHAM_VI	25.843	0.454	0.018	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tienphong	tiên phong	tiền phong	PHAM_VI	11.621	0.306	0.026	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tienphong	tiên phong	tiền phòng	PHAM_VI	11.621	1.367	0.118	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tien	tiền	tiên	PHAM_VI	578.040	33.787	0.058	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tien	tiền	tiến	PHAM_VI	578.040	81.327	0.141	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tien	tiền	tiễn	PHAM_VI	578.040	7.269	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tien	tiền	tiện	PHAM_VI	578.040	15.252	0.026	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tiencong	tiền công	tiến công	PHAM_VI	1.497	1.392	0.930	G1	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 0.930
+tienle	tiền lẻ	tiền lệ	PHAM_VI	2.247	1.748	0.778	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tienluong	tiền lương	tiên lượng	PHAM_VI	6.880	1.148	0.167	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tiendo	tiến độ	tiền đồ	PHAM_VI	9.336	0.386	0.041	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tiep	tiếp	tiệp	PHAM_VI	101.830	1.092	0.011	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tiepvien	tiếp viên	tiếp viện	PHAM_VI	4.351	3.618	0.831	G1	K1_GIAP_RANH	nhóm đỏ theo cách đọc chặt bảng ví dụ H6; r = 0.831
+tiet	tiết	tiệt	PHAM_VI	13.502	1.182	0.088	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tieude	tiêu đề	tiểu đệ	PHAM_VI	20.032	0.408	0.020	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tieuthu	tiêu thụ	tiểu thư	PHAM_VI	48.649	16.696	0.343	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tinhtinh	tinh tinh	tính tình	PHAM_VI	2.797	0.835	0.299	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tinhtu	tình tứ	tinh tú	PHAM_VI	0.187	0.400	2.138	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tinhchat	tính chất	tinh chất	PHAM_VI	26.785	3.542	0.132	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tivi	tivi	ti vi	PHAM_VI	8.621	2.097	0.243	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tove	tỏ vẻ	tô vẽ	PHAM_VI	1.832	0.386	0.211	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+toan	toán	toan	PHAM_VI	12.463	4.420	0.355	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+toan	toán	toàn	PHAM_VI	12.463	189.580	15.212	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+toang	toang	toáng	PHAM_VI	0.217	0.542	2.497	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+toitan	tối tân	tồi tàn	PHAM_VI	2.257	1.817	0.805	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tong	tổng	tong	PHAM_VI	120.605	4.677	0.039	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tong	tổng	tòng	PHAM_VI	120.605	0.438	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tong	tổng	tông	PHAM_VI	120.605	21.313	0.177	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tong	tổng	tọng	PHAM_VI	120.605	0.509	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tong	tổng	tống	PHAM_VI	120.605	12.376	0.103	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tralai	trả lại	trả lãi	PHAM_VI	37.218	0.468	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trai	trái	trai	PHAM_VI	101.898	64.204	0.630	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trai	trái	trãi	PHAM_VI	101.898	1.924	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trai	trái	trại	PHAM_VI	101.898	39.369	0.386	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trai	trái	trải	PHAM_VI	101.898	23.806	0.234	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tram	trạm	tram	PHAM_VI	82.832	6.875	0.083	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tram	trạm	tràm	PHAM_VI	82.832	2.309	0.028	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tram	trạm	trám	PHAM_VI	82.832	2.970	0.036	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tram	trạm	trăm	PHAM_VI	82.832	44.629	0.539	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tram	trạm	trảm	PHAM_VI	82.832	0.640	0.008	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+tram	trạm	trầm	PHAM_VI	82.832	3.501	0.042	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tram	trạm	trẫm	PHAM_VI	82.832	2.972	0.036	G3	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+tran	trán	tran	PHAM_VI	6.392	22.424	3.508	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tran	trán	tràn	PHAM_VI	6.392	19.397	3.034	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tran	trán	trân	PHAM_VI	6.392	3.061	0.479	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tran	trán	trăn	PHAM_VI	6.392	2.324	0.364	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tran	trán	trấn	PHAM_VI	6.392	4.864	0.761	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tran	trán	trần	PHAM_VI	6.392	76.456	11.961	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tran	trán	trận	PHAM_VI	6.392	105.077	16.438	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+trangtrai	trang trại	trang trải	PHAM_VI	22.463	2.808	0.125	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trangtrong	trang trọng	trắng trong	PHAM_VI	2.556	1.395	0.546	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tranh	tranh	tránh	PHAM_VI	30.339	212.141	6.992	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trao	trao	trào	PHAM_VI	42.413	3.878	0.091	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trao	trao	tráo	PHAM_VI	42.413	1.353	0.032	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trang	trăng	trang	PHAM_VI	10.027	635.097	63.342	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trang	trăng	tràng	PHAM_VI	10.027	3.999	0.399	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trang	trăng	tráng	PHAM_VI	10.027	29.820	2.974	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trang	trăng	trạng	PHAM_VI	10.027	0.975	0.097	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trang	trăng	trảng	PHAM_VI	10.027	0.470	0.047	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trang	trăng	trắng	PHAM_VI	10.027	257.794	25.711	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trangtron	trăng tròn	trắng trợn	PHAM_VI	2.258	1.076	0.476	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trau	trâu	trau	PHAM_VI	5.278	0.344	0.065	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trau	trâu	trấu	PHAM_VI	5.278	3.067	0.581	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+treo	treo	trèo	PHAM_VI	82.825	11.908	0.144	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+treo	treo	trẹo	PHAM_VI	82.825	0.454	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trieu	triệu	triêu	PHAM_VI	148.964	0.449	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trieu	triệu	triều	PHAM_VI	148.964	13.767	0.092	G3	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+trinhdien	trình diễn	trình diện	PHAM_VI	18.333	2.914	0.159	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tron	tròn	tron	PHAM_VI	60.016	4.678	0.078	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tron	tròn	trôn	PHAM_VI	60.016	0.328	0.005	G6	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+tron	tròn	trơn	PHAM_VI	60.016	14.120	0.235	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tron	tròn	trọn	PHAM_VI	60.016	6.973	0.116	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tron	tròn	trốn	PHAM_VI	60.016	61.134	1.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tron	tròn	trộn	PHAM_VI	60.016	96.912	1.615	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tron	tròn	trợn	PHAM_VI	60.016	0.423	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trongtai	trọng tài	trọng tải	PHAM_VI	33.251	2.727	0.082	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trong	trống	trong	PHAM_VI	60.095	5114.051	85.100	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trong	trống	tròng	PHAM_VI	60.095	4.797	0.080	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trong	trống	trông	PHAM_VI	60.095	218.175	3.631	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trong	trống	trọng	PHAM_VI	60.095	11.387	0.189	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trong	trống	trỏng	PHAM_VI	60.095	0.423	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trong	trống	trồng	PHAM_VI	60.095	39.734	0.661	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+troi	trời	troi	PHAM_VI	131.643	1.585	0.012	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+troi	trời	trói	PHAM_VI	131.643	20.761	0.158	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+troi	trời	trôi	PHAM_VI	131.643	12.046	0.092	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+troi	trời	trối	PHAM_VI	131.643	1.228	0.009	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+troi	trời	trồi	PHAM_VI	131.643	1.259	0.010	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+troi	trời	trỗi	PHAM_VI	131.643	0.504	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+troi	trời	trội	PHAM_VI	131.643	19.129	0.145	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+troidat	trời đất	trôi dạt	PHAM_VI	13.012	2.035	0.156	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+truc	trúc	trục	PHAM_VI	12.948	114.231	8.822	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+truc	trúc	trực	PHAM_VI	12.948	9.636	0.744	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trui	trụi	trui	PHAM_VI	2.537	0.488	0.192	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trung	trứng	trung	PHAM_VI	59.499	912.462	15.336	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trung	trứng	trùng	PHAM_VI	59.499	29.880	0.502	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trung	trứng	trúng	PHAM_VI	59.499	32.081	0.539	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trung	trứng	trũng	PHAM_VI	59.499	1.169	0.020	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trung	trứng	trưng	PHAM_VI	59.499	2.964	0.050	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+trung	trứng	trừng	PHAM_VI	59.499	0.878	0.015	G2	K2_DA_KY	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết; đã có hai chữ ký K2 cho khóa: chu-ky.tsv:2332,2333
+truong	trường	truồng	PHAM_VI	247.842	0.364	0.001	G6	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+truong	trường	trương	PHAM_VI	247.842	10.537	0.043	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+truong	trường	trướng	PHAM_VI	247.842	0.471	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+truong	trường	trưởng	PHAM_VI	247.842	65.833	0.266	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+truong	trường	trượng	PHAM_VI	247.842	4.012	0.016	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+truongthanh	trưởng thành	trường thành	PHAM_VI	65.224	1.238	0.019	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuan	tuần	tuân	PHAM_VI	212.456	19.668	0.093	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuan	tuần	tuấn	PHAM_VI	212.456	4.931	0.023	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuantu	tuần tự	tuấn tú	PHAM_VI	1.246	0.324	0.260	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tung	tung	tùng	PHAM_VI	29.415	8.367	0.284	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tung	tung	tưng	PHAM_VI	29.415	1.304	0.044	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tung	tung	tụng	PHAM_VI	29.415	0.424	0.014	G2,G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+tung	tung	từng	PHAM_VI	29.415	412.069	14.009	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuoitho	tuổi thơ	tuổi thọ	PHAM_VI	3.707	44.837	12.094	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuoitre	tuổi trẻ	tươi trẻ	PHAM_VI	7.290	1.259	0.173	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuon	tuôn	tuồn	PHAM_VI	3.645	1.190	0.327	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuot	tuột	tuốt	PHAM_VI	4.091	2.682	0.656	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuyen	tuyển	tuyên	PHAM_VI	14.536	3.943	0.271	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuyen	tuyển	tuyền	PHAM_VI	14.536	2.309	0.159	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuyet	tuyết	tuyệt	PHAM_VI	39.868	240.754	6.039	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tugia	từ giã	tư gia	PHAM_VI	0.469	0.656	1.397	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuton	từ tốn	tự tôn	PHAM_VI	0.420	0.601	1.431	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tudo	tự do	từ đó	PHAM_VI	118.506	34.036	0.287	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuhoi	tự hỏi	tụ hội	PHAM_VI	35.215	0.326	0.009	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuoi	tươi	tuổi	PHAM_VI	49.314	226.818	4.599	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuongtu	tương tự	tương tư	PHAM_VI	92.028	0.326	0.004	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuong	tường	tuồng	PHAM_VI	206.268	0.385	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuong	tường	tương	PHAM_VI	206.268	8.378	0.041	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuong	tường	tướng	PHAM_VI	206.268	19.094	0.093	G1	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+tuong	tường	tưởng	PHAM_VI	206.268	114.669	0.556	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+tuong	tường	tượng	PHAM_VI	206.268	21.636	0.105	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+uong	uống	uổng	PHAM_VI	225.590	0.644	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+uong	uống	ương	PHAM_VI	225.590	0.619	0.003	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vantho	vạn thọ	vần thơ	PHAM_VI	0.846	0.467	0.552	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vang	vàng	vang	PHAM_VI	267.354	12.507	0.047	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vang	vàng	váng	PHAM_VI	267.354	0.511	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vang	vàng	vâng	PHAM_VI	267.354	450.519	1.685	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vang	vàng	vãng	PHAM_VI	267.354	0.441	0.002	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vang	vàng	văng	PHAM_VI	267.354	5.380	0.020	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vang	vàng	vầng	PHAM_VI	267.354	1.258	0.005	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vang	vàng	vắng	PHAM_VI	267.354	3.344	0.013	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vatva	vất vả	vật vã	PHAM_VI	11.030	0.607	0.055	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vien	viền	viên	PHAM_VI	8.963	261.392	29.163	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vien	viền	viễn	PHAM_VI	8.963	2.728	0.304	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vien	viền	viện	PHAM_VI	8.963	49.603	5.534	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vinh	vịnh	vinh	PHAM_VI	24.868	22.274	0.896	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vong	vòng	vong	PHAM_VI	164.543	2.861	0.017	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+vong	vòng	vọng	PHAM_VI	164.543	2.521	0.015	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vobo	vô bổ	vô bờ	PHAM_VI	0.514	0.355	0.691	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+voco	vô cớ	vô cơ	PHAM_VI	1.423	4.289	3.014	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vove	vỗ về	vo ve	PHAM_VI	0.405	0.615	1.519	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vove	vỗ về	vò vẽ	PHAM_VI	0.405	0.989	2.442	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vungvay	vùng vẫy	vung vẩy	PHAM_VI	0.801	0.452	0.564	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vung	vũng	vùng	PHAM_VI	3.147	121.249	38.527	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vung	vũng	vụng	PHAM_VI	3.147	4.052	1.287	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vung	vũng	vừng	PHAM_VI	3.147	1.769	0.562	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vung	vũng	vững	PHAM_VI	3.147	4.823	1.533	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vuon	vườn	vươn	PHAM_VI	65.520	6.379	0.097	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vuon	vườn	vượn	PHAM_VI	65.520	1.195	0.018	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vuot	vượt	vuốt	PHAM_VI	50.897	7.978	0.157	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vuot	vượt	vuột	PHAM_VI	50.897	1.432	0.028	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+vuotqua	vượt qua	vượt quá	PHAM_VI	78.453	23.812	0.304	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xaxi	xa xỉ	xá xị	PHAM_VI	2.786	0.310	0.111	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xahoi	xã hội	xả hơi	PHAM_VI	121.043	1.502	0.012	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xeng	xẻng	xèng	PHAM_VI	4.264	0.953	0.224	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xephang	xếp hàng	xếp hạng	PHAM_VI	8.294	37.279	4.494	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xoay	xoay	xoáy	PHAM_VI	54.322	13.674	0.252	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xong	xong	xông	PHAM_VI	189.230	20.692	0.109	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xong	xong	xổng	PHAM_VI	189.230	1.263	0.007	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xuan	xuân	xử án	PHAM_VI	20.641	1.317	0.064	G2	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+xung	xứng	xung	PHAM_VI	6.576	29.409	4.472	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xung	xứng	xưng	PHAM_VI	6.576	1.882	0.286	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xuong	xương	xuống	PHAM_VI	56.373	525.336	9.319	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+xuong	xương	xưởng	PHAM_VI	56.373	24.746	0.439	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6
+binhtinh	bình tĩnh	binh tình	DUOI_NGUONG	110.111	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+bandao	bán đảo	bàn dao	DUOI_NGUONG	3.158	0.050	0.016	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+baoquan	bảo quản	bào quan	DUOI_NGUONG	26.958	0.057	0.002	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+baubinh	bầu bĩnh	bàu bĩnh	DUOI_NGUONG	0.007	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+baotang	bảo tàng	báo tang	DUOI_NGUONG	31.713	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+baoquan	bảo quản	bạo quân	DUOI_NGUONG	26.958	0.010	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+baotay	bao tay	bạo tay	DUOI_NGUONG	1.815	0.029	0.016	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+bantay	bàn tay	bắn tẩy	DUOI_NGUONG	37.537	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+bodi	bỏ đi	bố đĩ	DUOI_NGUONG	52.122	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+boduong	bổ dưỡng	bổ dương	DUOI_NGUONG	2.702	0.182	0.067	G6	KHONG_CONI	thuốc bổ, không phải tình dục rõ; dưới mốc 0,3: không còi
+chayban	chạy bàn	chạy bắn	DUOI_NGUONG	0.197	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+chatcung	chật cứng	chặt cứng	DUOI_NGUONG	0.326	0.047	0.144	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+chuho	chú họ	chủ hộ	DUOI_NGUONG	0.083	0.208	2.505	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cothu	cổ thụ	co thủ	DUOI_NGUONG	0.552	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cacuong	cà cuống	cà cưỡng	DUOI_NGUONG	0.003	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cathu	cá thu	cá thủ	DUOI_NGUONG	0.809	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+caotang	cao tầng	cáo tang	DUOI_NGUONG	4.337	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+codau	cô dâu	cô đầu	DUOI_NGUONG	14.330	0.036	0.002	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cauchi	cầu chì	cấu chí	DUOI_NGUONG	7.937	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+camtinh	cảm tình	cầm tinh	DUOI_NGUONG	2.127	0.018	0.008	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cancau	cần câu	cắn cấu	DUOI_NGUONG	3.611	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+catcanh	cất cánh	cắt canh	DUOI_NGUONG	12.990	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cole	cờ lê	cổ lệ	DUOI_NGUONG	2.571	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+coso	cơ sở	cổ sơ	DUOI_NGUONG	174.759	0.003	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cothu	cổ thụ	cổ thư	DUOI_NGUONG	0.552	0.047	0.085	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cotuong	cờ tướng	cổ tượng	DUOI_NGUONG	1.467	0.003	0.002	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+codo	cố đô	cổ độ	DUOI_NGUONG	0.715	0.007	0.009	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+cungco	củng cố	cứng cổ	DUOI_NGUONG	10.915	0.300	0.027	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+daotien	đào tiên	dao tiện	DUOI_NGUONG	0.207	0.190	0.917	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+daodien	đạo diễn	dao điện	DUOI_NGUONG	9.176	0.075	0.008	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+diemtinh	điềm tĩnh	diễm tình	DUOI_NGUONG	1.210	0.044	0.036	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+giaovien	giáo viên	giao viễn	DUOI_NGUONG	48.252	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+giaodien	giao diện	giao điện	DUOI_NGUONG	54.557	0.037	0.001	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hientai	hiện tại	hiền tài	DUOI_NGUONG	118.481	0.134	0.001	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hanhnhan	hạnh nhân	hành nhân	DUOI_NGUONG	4.251	0.015	0.003	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hanhtrang	hành trang	hành trạng	DUOI_NGUONG	1.087	0.003	0.003	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hanhtoi	hành tỏi	hành tội	DUOI_NGUONG	0.104	0.029	0.281	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+honloan	hỗn loạn	hôn loạn	DUOI_NGUONG	11.928	0.015	0.001	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hama	hà mã	hạ mã	DUOI_NGUONG	1.578	0.025	0.016	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hatho	hát hò	hạ thọ	DUOI_NGUONG	0.626	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hatho	hát hò	hạ thổ	DUOI_NGUONG	0.626	0.036	0.057	G4	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ: không còi
+hatang	hạ tầng	hạ tằng	DUOI_NGUONG	18.473	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+homang	hổ mang	hộ mạng	DUOI_NGUONG	0.941	0.152	0.162	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hopbao	họp báo	hợp bào	DUOI_NGUONG	3.836	0.052	0.014	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hople	hợp lệ	hợp lẽ	DUOI_NGUONG	15.965	0.062	0.004	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+hopso	hộp số	hợp số	DUOI_NGUONG	22.119	0.020	0.001	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+lambam	lẩm bẩm	làm bàm	DUOI_NGUONG	1.037	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+lamban	làm bạn	làm bàn	DUOI_NGUONG	14.737	0.191	0.013	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+lete	lẻ tẻ	lè tè	DUOI_NGUONG	0.377	0.003	0.009	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+ngoaico	ngoại cỡ	ngoái cổ	DUOI_NGUONG	0.923	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+nhiettinh	nhiệt tình	nhiêt tình	DUOI_NGUONG	12.033	0.007	0.001	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+nhantu	nhân từ	nhân tử	DUOI_NGUONG	4.049	0.021	0.005	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+nangdau	nàng dâu	nặng đầu	DUOI_NGUONG	0.239	0.141	0.590	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+quanquan	quán quân	quan quân	DUOI_NGUONG	1.455	0.175	0.120	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+quantat	quần tất	quan tắt	DUOI_NGUONG	0.844	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+quanquan	quán quân	quân quan	DUOI_NGUONG	1.455	0.029	0.020	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+quequan	quê quán	quế quan	DUOI_NGUONG	0.323	0.003	0.010	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+satcanh	sát cánh	sát cạnh	DUOI_NGUONG	4.064	0.217	0.053	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tanggia	tăng giá	tang gia	DUOI_NGUONG	2.931	0.090	0.031	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tangtoc	tăng tốc	tang tóc	DUOI_NGUONG	16.783	0.154	0.009	G4	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ: không còi
+thucthu	thực thụ	thúc thủ	DUOI_NGUONG	5.224	0.044	0.008	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thattinh	thật tình	thất tinh	DUOI_NGUONG	5.216	0.236	0.045	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thuba	thứ ba	thủ bạ	DUOI_NGUONG	74.398	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thuchi	thu chi	thủ chỉ	DUOI_NGUONG	0.291	0.021	0.073	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thuphap	thư pháp	thủ pháp	DUOI_NGUONG	1.300	0.168	0.129	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thutuc	thủ tục	thủ túc	DUOI_NGUONG	55.066	0.058	0.001	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thutu	thứ tư	thủ từ	DUOI_NGUONG	21.115	0.041	0.002	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thutu	thứ tư	thủ tự	DUOI_NGUONG	21.115	0.003	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thutu	thứ tư	thứ tử	DUOI_NGUONG	21.115	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+thuctai	thực tại	thực tài	DUOI_NGUONG	4.147	0.036	0.009	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhkhi	tính khí	tinh khí	DUOI_NGUONG	2.344	0.058	0.025	G6	KHONG_CONI	nghĩa đông y; dưới mốc 0,3: không còi
+tinhnghia	tình nghĩa	tinh nghĩa	DUOI_NGUONG	0.518	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhtinh	tinh tinh	tinh tỉnh	DUOI_NGUONG	2.797	0.003	0.001	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhtu	tình tứ	tinh tử	DUOI_NGUONG	0.187	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tienhanh	tiến hành	tiễn hành	DUOI_NGUONG	61.292	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+trangtreo	trắng trẻo	trăng treo	DUOI_NGUONG	0.198	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+trantinh	trấn tĩnh	trần tình	DUOI_NGUONG	0.632	0.032	0.051	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+taihoa	tài hoa	tài hoá	DUOI_NGUONG	0.748	0.007	0.009	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+taihoa	tài hoa	tài hóa	DUOI_NGUONG	0.748	0.007	0.009	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tete	tê tê	tè tè	DUOI_NGUONG	0.589	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhlang	tĩnh lặng	tình lang	DUOI_NGUONG	2.934	0.029	0.010	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhthan	tinh thần	tình thân	DUOI_NGUONG	47.464	0.196	0.004	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhtu	tình tứ	tình tự	DUOI_NGUONG	0.187	0.076	0.408	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhy	tinh ý	tình ý	DUOI_NGUONG	0.310	0.058	0.188	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhdau	tinh dầu	tình đầu	DUOI_NGUONG	8.742	0.224	0.026	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tinhtu	tình tứ	tính tự	DUOI_NGUONG	0.187	0.114	0.610	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tudong	tự động	tù đọng	DUOI_NGUONG	400.598	0.090	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tudo	tự do	tù đồ	DUOI_NGUONG	118.506	0.015	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+totinh	tỏ tình	tơ tình	DUOI_NGUONG	0.961	0.015	0.015	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tugiac	tự giác	tử giác	DUOI_NGUONG	0.720	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tungu	từ ngữ	tử ngữ	DUOI_NGUONG	5.836	0.044	0.007	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tuton	từ tốn	tử tôn	DUOI_NGUONG	0.420	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tutuc	tự túc	tử tức	DUOI_NGUONG	1.094	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tuthe	tư thế	tự thế	DUOI_NGUONG	9.543	0.018	0.002	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tutin	tự tin	tự tín	DUOI_NGUONG	29.381	0.003	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tuvung	từ vựng	tự vựng	DUOI_NGUONG	5.130	0.013	0.003	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+tuai	tự ái	tự ải	DUOI_NGUONG	1.174	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+votu	vô tư	vô tự	DUOI_NGUONG	2.365	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+vanvat	vạn vật	văn vật	DUOI_NGUONG	2.035	0.229	0.113	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+vanvat	vạn vật	vần vật	DUOI_NGUONG	2.035	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+vongco	vòng cổ	vọng cổ	DUOI_NGUONG	13.084	0.010	0.001	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+xaoxac	xào xạc	xao xác	DUOI_NGUONG	0.220	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+xaoxac	xào xạc	xáo xác	DUOI_NGUONG	0.220	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+amcung	ấm cúng	âm cung	DUOI_NGUONG	7.562	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+amhieu	am hiểu	âm hiệu	DUOI_NGUONG	3.507	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+amam	ầm ầm	âm âm	DUOI_NGUONG	0.835	0.017	0.020	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+amam	ầm ầm	âm ấm	DUOI_NGUONG	0.835	0.042	0.051	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+amam	ầm ầm	âm ẩm	DUOI_NGUONG	0.835	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+anbinh	an bình	ăn bĩnh	DUOI_NGUONG	1.496	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+daikho	dại khờ	đái khó	DUOI_NGUONG	0.256	0.000	0.000	G5	KHONG_CONI	cụm chỉ triệu chứng tiểu tiện, PPM 0; theo tiền lệ bình/bĩnh (chu-ky.tsv:134–135) hoạt động bài tiết không xếp K0; G5 dưới mốc: không còi
+daiduong	đại dương	đái đường	DUOI_NGUONG	70.587	0.206	0.003	G5	KHONG_CONI	tên bệnh (tiểu đường), không phải chất thải; dưới mốc 0,3: không còi
+danhbat	đánh bắt	đánh bạt	DUOI_NGUONG	2.042	0.060	0.029	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhba	danh bạ	đánh bả	DUOI_NGUONG	5.062	0.015	0.003	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhbong	đánh bóng	đánh bồng	DUOI_NGUONG	44.880	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhdan	đánh đàn	đánh dạn	DUOI_NGUONG	0.440	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhdoi	đánh đổi	đánh dồi	DUOI_NGUONG	3.602	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhhoi	đánh hơi	đánh hôi	DUOI_NGUONG	3.911	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhlong	đành lòng	đánh lông	DUOI_NGUONG	0.235	0.003	0.014	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhlong	đành lòng	đánh lộng	DUOI_NGUONG	0.235	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhtieng	danh tiếng	đánh tiếng	DUOI_NGUONG	18.498	0.162	0.009	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhvong	danh vọng	đánh vòng	DUOI_NGUONG	1.390	0.047	0.034	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhvong	danh vọng	đánh võng	DUOI_NGUONG	1.390	0.105	0.076	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhvong	danh vọng	đánh vồng	DUOI_NGUONG	1.390	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhdu	danh dự	đánh đu	DUOI_NGUONG	23.265	0.231	0.010	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhdoi	đánh đổi	đánh đôi	DUOI_NGUONG	3.602	0.042	0.012	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhdo	đánh đố	đánh đọ	DUOI_NGUONG	0.321	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+danhdong	đánh đồng	đánh đống	DUOI_NGUONG	0.410	0.007	0.016	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+detinh	dễ tính	đè tình	DUOI_NGUONG	0.876	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+dauhoi	dấu hỏi	đầu hồi	DUOI_NGUONG	0.671	0.220	0.328	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+dautau	đầu tàu	đầu tầu	DUOI_NGUONG	0.367	0.018	0.049	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+dauxanh	đậu xanh	đầu xanh	DUOI_NGUONG	2.872	0.082	0.028	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+daudua	dầu dừa	đầu đũa	DUOI_NGUONG	1.959	0.030	0.015	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+daplai	đáp lại	đập lại	DUOI_NGUONG	7.462	0.211	0.028	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+dodau	đỡ đầu	đổ đầu	DUOI_NGUONG	2.710	0.137	0.051	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+dongdao	đông đảo	động dao	DUOI_NGUONG	3.017	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+dongduc	đông đúc	động dục	DUOI_NGUONG	3.655	0.291	0.080	G6	K2_DE_XUAT	tình dục (thú vật động dục), xét dưới mốc theo H7; nghĩa kỹ thuật chăn nuôi, r nhỏ
+dongtinh	đồng tình	động tình	DUOI_NGUONG	3.707	0.015	0.004	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+dongtu	động từ	động tử	DUOI_NGUONG	2.660	0.000	0.000	-	KHONG_CONI	dưới mốc 0,3; không phải tự hại, bạo lực, tình dục rõ hay chất thải: không còi
+aongu	áo ngủ	áo ngự	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+anco	ăn cỏ	ăn cỗ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+andien	ăn diện	an điền	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+anhoi	ăn hỏi	an hội	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+anluong	ăn lương	an lương	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+annoi	ăn nói	an nội	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+antuong	ấn tượng	an tường	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+antuong	ấn tượng	ân tường	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+baxa	bà xã	ba xa	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bacbo	bác bỏ	bắc bộ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bacha	bạc hà	bắc hà	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bacmau	bạc màu	bạc mầu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bancong	ban công	bản công	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bancai	bàn cãi	bản cái	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+banlang	bản làng	bản lang	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bantin	bản tin	bắn tin	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+banhang	bán hàng	bạn hàng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bangia	bạn già	bản già	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+banthan	bạn thân	bản thân	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+banhkep	bánh kếp	bánh kẹp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+baohieu	báo hiệu	bảo hiệu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+banggia	băng giá	bằng giã	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+banglang	bằng lăng	bằng lang	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+batan	bất an	bát ăn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+biendong	biến động	biển động	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+biet	biết	biêt	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+binhan	bình an	bình ân	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+binhlang	bình lặng	bình lãng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+binhlang	bình lặng	bình lăng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+binhthan	bình thản	bình than	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+binhtinh	bình tĩnh	bình tịnh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bodi	bỏ đi	bổ di	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bohoa	bó hoa	bỏ hoá	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+bohoa	bó hoa	bỏ hóa	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cacao	ca cao	cacao	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+catu	ca từ	ca tu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cavat	cà vạt	ca vát	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cavat	cà vạt	cavat	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cactong	các tông	cactông	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+camdong	cảm động	cẩm đông	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+camhung	cảm hứng	cẩm hưng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+camnhan	cảm nhận	cẩm nhân	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+camphuc	cảm phục	cẩm phúc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+canh	cánh	canh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+canhhoa	cánh hoa	cảnh hoá	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+canho	căn hộ	cán hồ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+camlong	cầm lòng	cẩm long	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+camtay	cầm tay	cẩm tây	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cancau	cần câu	cán cầu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+captoc	cấp tốc	cặp tóc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cattru	cất trữ	cát trù	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+caucan	cầu cạn	cáu cặn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+caunoi	cầu nối	câu nói	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chammat	chạm mặt	chăm mát	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chang	chàng	chặng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chamcham	chằm chằm	chầm chậm	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chat	chặt	chật	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cham	chậm	chấm	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chancho	chần chờ	chân chó	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chap	chấp	chắp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chauhoa	chậu hoa	châu hoà	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chauhoa	chậu hoa	châu hoá	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chech	chếch	chệch	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chitieu	chi tiêu	chỉ tiêu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chieu	chiếu	chiều	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chinh	chỉnh	chính	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+choan	choán	cho ăn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chom	chỏm	chom	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chuvi	chu vi	chư vị	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chuquan	chủ quán	chủ quan	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chuan	chuẩn	chu an	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chuc	chúc	chục	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chuyen	chuyển	chuyền	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+chuachay	chữa cháy	chữa chạy	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+codai	cỏ dại	cổ đại	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+connguoi	con người	con ngươi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+conang	cô nàng	cơ năng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+coao	cổ áo	cỗ áo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+codong	cổ đông	cổ động	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cocong	cố công	có công	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+congtac	công tắc	công tác	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+conghien	cống hiến	cộng hiền	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cole	cờ lê	có lẽ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cole	cờ lê	cổ lễ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cuhanh	củ hành	cử hành	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cuong	cuống	cụ ông	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cupduoi	cụp đuôi	cúp đuôi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cuchi	cử chỉ	củ chi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cudong	cử động	cự đồng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+cuatay	cưa tay	cửa tay	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+daday	dạ dày	da dày	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dandung	dàn dựng	dân dụng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+danxep	dàn xếp	đàn xếp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dangdi	dáng đi	đẳng dị	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+daogot	dao gọt	dạo gót	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+danda	dân dã	đàn đá	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+daudua	dầu dừa	đậu đũa	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+daumo	dầu mỡ	dầu mỏ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+daydan	dây dẫn	dây đàn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+didoi	di dời	đi đôi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+didong	di động	dị đồng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+disan	di sản	dị sản	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dithuong	dị thường	dĩ thượng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dola	dò la	đô la	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dola	dò la	đôla	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dukien	dự kiến	dữ kiện	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dunglai	dừng lại	đứng lại	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dungdung	dựng đứng	dửng dưng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+danang	đa năng	đà nẵng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+daithu	đại thụ	đại thử	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+daotien	đào tiên	dao tiền	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dactrung	đặc trưng	đắc trung	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dauga	đậu gà	đầu gà	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+daulang	đậu lăng	dấu lặng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+divang	đi vắng	dĩ vãng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+divong	đi vòng	dị vòng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+diemnhan	điểm nhấn	điểm nhãn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dinhvi	định vị	đình vi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dothi	đô thị	đồ thị	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+doan	đồ ăn	đoán	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dobac	đồ bạc	đổ bác	HND_THIEU	-	CHUA_DO	-	G7	K2_DE_XUAT	từ Hán Việt cũ chỉ cờ bạc, rất hiếm; chưa đo
+dohang	đồ hàng	dỡ hàng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+donghe	đồ nghề	đồ nghệ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+doidoi	đổi đời	đời đời	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dongdao	đông đảo	đồng dao	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dongbang	đồng bằng	đóng băng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dondoc	đơn độc	đôn đốc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+dungmuc	đúng mực	đúng mức	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+duongray	đường ray	đường rầy	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gacxep	gác xép	gác xếp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gamnham	gặm nhấm	gậm nhấm	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ganbo	gắn bó	gân bò	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gang	găng	gang	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gaygo	gầy gò	gay go	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+giasu	gia sư	giả sử	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+giam	giảm	giấm	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gian	gián	giàn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gianh	giành	gianh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gianh	giành	giảnh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+giay	giấy	giáy	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+giaykinh	giấy kính	giày kinh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+giongnoi	giọng nói	giống nòi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gion	giỡn	giòn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gion	giỡn	gión	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gion	giỡn	giôn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+gion	giỡn	giờn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+hanghai	hăng hái	hàng hải	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+hien	hiên	hiền	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+hinhthu	hình thù	hình thư	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+hoihop	hội họp	hồi hộp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+imlim	im lìm	im lịm	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ketu	kể từ	kế tự	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+khac	khác	khắc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+khidot	khí đốt	khỉ đột	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+khoqua	khổ qua	khổ quá	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+khuy	khuy	khủy	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+khuy	khuy	khụy	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+khuy	khuy	khuỵ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+khuyu	khuỷu	khuỵu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+kieng	kiêng	kiềng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+kinhdo	kinh đô	kinh độ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+kinhmat	kính mắt	kính mát	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lamat	lạ mặt	lạ mắt	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lach	lạch	lách	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lamlanh	làm lạnh	làm lành	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lancan	lan can	lân cận	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lapxuong	lạp xưởng	lạp xường	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+laubau	làu bàu	lảu bảu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+laubau	làu bàu	lạu bạu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+laubau	làu bàu	lầu bầu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+laubau	làu bàu	lẩu bẩu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+layon	lay ơn	layơn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+langxang	lăng xăng	lắng xắng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lapbap	lắp bắp	lặp bặp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lapbap	lắp bắp	lập bập	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+latleo	lắt léo	lạt lẽo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+latleo	lắt léo	lắt lẻo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+latleo	lắt léo	lặt lẹo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+latleo	lắt léo	lật lẹo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lanlon	lẫn lộn	lăn lộn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+laplo	lấp ló	lập lờ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+leloi	lẻ loi	lề lối	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lichsu	lịch sự	lịch sử	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+linhtinh	linh tinh	linh tính	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+loco	lò cò	lỡ cơ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+loai	loại	loài	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lotlong	lọt lòng	lót lòng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lodo	lờ đờ	lò dò	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+luclac	lục lạc	lúc lắc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+lungtung	lung tung	lúng túng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+luoc	lược	luộc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+luong	lương	luống	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+mach	mạch	mách	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+machnuoc	mạch nước	mách nước	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+manh	mạnh	mành	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+mausac	màu sắc	mầu sắc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+matlong	mất lòng	mát lòng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+mien	miến	miên	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+moto	mô tô	mô tơ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+moto	mô tô	môtô	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+moto	mô tô	môtơ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+momang	mở mang	mơ màng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nayno	nảy nở	này nọ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngan	ngăn	ngắn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngau	ngầu	ngàu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngau	ngầu	ngâu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngau	ngầu	ngẫu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngau	ngầu	ngấu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngau	ngầu	ngậu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngheo	nghèo	nghẻo	HND_THIEU	-	CHUA_DO	-	G4	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết
+ngheo	nghèo	nghẽo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngheo	nghèo	nghẹo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nghi	nghỉ	nghi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngoac	ngoặc	ngoác	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngoac	ngoặc	ngoạc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngoac	ngoặc	ngoắc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngonngot	ngon ngọt	ngòn ngọt	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngungon	ngụ ngôn	ngủ ngon	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nguechngoac	nguệch ngoạc	nguếch ngoác	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ngua	ngựa	ngửa	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nguoc	ngược	ngước	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nguoidung	người dùng	người dưng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nguoithuong	người thương	người thường	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nguong	ngượng	ngưỡng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhamay	nhà máy	nhà may	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhao	nhà ở	nhào	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhatrai	nhà trai	nhà  trai	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhanroi	nhàn rỗi	nhàn  rỗi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhan	nhãn	nhẫn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhanh	nhanh	nhánh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhau	nhàu	nhau	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhamnhap	nhấm nháp	nham nháp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhamnhap	nhấm nháp	nhăm nhắp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhamnhap	nhấm nháp	nhắm nháp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhamnhap	nhấm nháp	nhâm nhấp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhannhuong	nhân nhượng	nhân  nhượng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhap	nhập	nhấp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhech	nhếch	nhệch	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhom	nhôm	nhóm	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhonhung	nhớ nhung	nhơn hưng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nhung	nhung	nhúng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nich	ních	nịch	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+nonglong	nóng lòng	nong long	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+oach	oách	oạch	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+phai	phai	phải	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+phamvi	phạm vi	phẩm vị	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+phien	phiên	phiền	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+phim	phim	phím	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+phoi	phổi	phơi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+phuongvi	phượng vĩ	phương vị	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+quanco	quân cờ	quận cồ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+quancoc	quần cộc	quán cóc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+queo	quẹo	queo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+queo	quẹo	quèo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+queo	quẹo	quéo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+rairac	rải rác	rải rắc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ranh	rãnh	rành	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ramrap	rậm rạp	răm rắp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+rieng	riềng	riêng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+romra	rơm rạ	rôm rả	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+sang	sàng	sáng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+sanh	sảnh	sành	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+sammau	sậm màu	sặm màu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+sanco	sân cỏ	sẵn có	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+songbang	sông băng	sông bằng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+sodo	sơ đồ	số đo	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+somi	sơ mi	sơmi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+suplo	súp lơ	sụp lở	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+suplo	súp lơ	suplơ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tachai	tác hại	tà chải	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tambo	tạm bợ	tam bố	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tambo	tạm bợ	tẩm bổ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tanthanh	tán thành	tân thanh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tanthanh	tán thành	tân thành	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tanthanh	tán thành	tân thạnh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tanggia	tăng giá	tăng gia	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tanhuong	tận hưởng	tân hương	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tantay	tận tay	tân tây	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tantinh	tận tình	tán tỉnh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+taytrang	tẩy trang	tay trắng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thaido	thái độ	thái đô	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thanhbinh	thanh bình	thạnh bình	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thanhlong	thanh long	thành long	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thanhnien	thanh niên	thành niên	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thanhxuan	thanh xuân	thạnh xuân	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thap	tháp	thắp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thamdo	thăm dò	thảm đỏ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+that	thật	thắt	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thay	thầy	thấy	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+then	then	thẹn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+them	thềm	thèm	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thienha	thiên hà	thiên hạ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thoai	thoải	thoái	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thoai	thoải	thoại	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thoang	thoảng	thoáng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thoclua	thóc lúa	thóc  lúa	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thovan	thơ văn	thọ văn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thodien	thợ điện	thọ diên	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thoson	thợ sơn	thọ sơn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thoson	thợ sơn	thổ sơn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thunhan	thú nhận	thu nhận	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thuvi	thú vị	thứ vị	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thua	thua	thưa	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thuan	thuần	thuận	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thutu	thứ tư	thứ tự	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thuong	thưởng	thương	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+thuongthuc	thưởng thức	thường thức	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tienle	tiền lẻ	tiền lê	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tienluong	tiền lương	tiên lương	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tiennong	tiền nong	tiến nông	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tiendung	tiện dụng	tiến dũng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tienloi	tiện lợi	tiến lợi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tinhtrang	tình trạng	tính trạng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tinhtu	tình tứ	tính từ	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tivi	tivi	tì vị	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tomau	tô màu	tô mậu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+traon	trả ơn	trà ôn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+traidat	trái đất	trại đất	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tram	trạm	trâm	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tret	trệt	trét	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tret	trệt	trẹt	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tret	trệt	trết	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+troc	trọc	tróc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+trongvong	trong vòng	trọng vọng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+trongluc	trọng lực	trong lúc	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+trotroi	trơ trọi	trở trời	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+troi	trời	trới	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+truyen	truyền	truyện	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+truyenthong	truyền thông	truyền thống	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tructhang	trực thăng	trực thắng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+truocmat	trước mặt	trước mắt	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+truongphong	trưởng phòng	trưởng  phòng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+truongthanh	trưởng thành	trường thạnh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuda	tủ đá	tử đà	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tudung	tủ đứng	tự dưng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuhop	tụ họp	tụ hợp	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuan	tuần	tú an	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuan	tuần	tự an	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuyen	tuyển	tuyến	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuyen	tuyển	tứ yên	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuyenduong	tuyến đường	tuyên dương	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuche	tự chế	tủ chè	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuti	tự ti	tù tì	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+tuoi	tươi	tưới	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vach	vách	vạch	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vali	vali	va li	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vanghoe	vàng hoe	vắng hoe	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vanban	văn bản	văn bàn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vanphong	văn phòng	văn phong	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vanphong	văn phòng	vân phong	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vesau	ve sầu	về sau	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vidu	ví dụ	ví dù	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vithe	vị thế	vi thể	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vithe	vị thế	vì thế	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+viet	viết	việt	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+viethoa	viết hoa	việt hoà	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+viethoa	viết hoa	việt hoá	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vinhhanh	vinh hạnh	vĩnh hanh	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vinhquang	vinh quang	vĩnh quang	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vong	vòng	võng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vovi	vô vị	vô vi	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vung	vũng	vung	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+vuongvan	vuông vắn	vương vấn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+xaxua	xa xưa	xá xúa	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+xapxe	xập xệ	xập xè	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+xoan	xoắn	xoăn	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+xocxech	xộc xệch	xốc xếch	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+xuatxu	xuất xứ	xuất xử	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+xuoc	xước	xược	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+xuong	xương	xuồng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+xuongxau	xương xẩu	xương xảu	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+ynguyen	y nguyên	ý nguyện	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+yenlang	yên lặng	yên lãng	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)
+yenthan	yên thân	yên than	HND_THIEU	-	CHUA_DO	-	-	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6 (chưa đo; không cần đo)

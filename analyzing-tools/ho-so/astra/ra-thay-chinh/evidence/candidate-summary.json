@@ -1,0 +1,48 @@
+{
+  "candidate_rows": 329,
+  "held_candidates": [
+    "cơ quan",
+    "vận hành",
+    "lực lượng",
+    "ngắn gọn",
+    "truy tìm",
+    "kịch",
+    "ngoại trừ",
+    "dự bị",
+    "vuông",
+    "lên chức",
+    "làm cỗ",
+    "xoành xoạch",
+    "loáng thoáng",
+    "rướn",
+    "loằng ngoằng"
+  ],
+  "reserve_eligible_before_final_signatures": {
+    "OK_F": 76,
+    "OK_KHONG_F": 117
+  },
+  "HM_eligible_before_owner_and_signatures": {
+    "OK_KHONG_F": 116,
+    "OK_F": 5
+  },
+  "nonF_slots": 138,
+  "current_reserve_nonF_shortfall": 21,
+  "slots_if_HM_permission": 140,
+  "nominal_new_words_by_source": {
+    "HM_D6_CUOI": 107,
+    "HM_D7_CUOI": 9,
+    "DU_PHONG_A": 24
+  },
+  "nominal_main_classes": {
+    "C": 2915,
+    "H": 3159,
+    "K": 1625,
+    "F": 77
+  },
+  "nominal_F": 77,
+  "nominal_R1": 0,
+  "nominal_H1_H2_numeric_H4": true,
+  "new_P6_S2_S3_computed": false,
+  "new_glosses_written": 0,
+  "D6_D7_D8_new": "CHUA_KIEM"
+}

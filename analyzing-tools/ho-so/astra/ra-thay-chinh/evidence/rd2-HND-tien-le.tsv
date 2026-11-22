@@ -1,0 +1,38 @@
+chuan	bien_the	loai	ket_luan	nguon	exact_cell_only_large_HND	any_alias_only_large_HND	Viet11K_any_alias	Viet22K_any_alias	Viet39K_any_alias	Viet74K_any_alias
+khuyến mãi	khuyến mại	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:11	True	True	False	False	False	True
+hy vọng	hi vọng	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:12	True	True	False	False	True	True
+kỷ niệm	kỉ niệm	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:16	True	True	False	False	True	True
+đậu hũ	đậu hủ	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:17	True	True	False	False	False	True
+lý do	lí do	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:20	True	True	False	False	True	True
+bánh quy	bánh qui	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:25	True	True	False	False	False	True
+phản ánh	phản ảnh	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:30	True	True	False	False	True	True
+từ điển	tự điển	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:33	True	True	False	False	True	True
+đậu phộng	đậu phụng	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:35	True	True	False	False	True	True
+trau dồi	trau giồi	c	LOAI_THIEU_DU_LIEU	analyzing-tools\spelling_families.tsv:36	True	True	False	False	True	True
+hoa màu	hoa mầu	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:39	True	True	False	False	False	True
+giàu có	giầu có	c	QUA_RIENG_H5	analyzing-tools\spelling_families.tsv:42	True	True	False	False	False	True
+đường ray	đường rầy	c	QUA_RIENG_H5	analyzing-tools\spelling_families.tsv:53	True	True	False	False	False	True
+màu sắc	mầu sắc	c	QUA_RIENG_H5	analyzing-tools\spelling_families.tsv:68	True	True	False	False	False	True
+ngùn ngụt	ngun ngút	c	LOAI_THIEU_DU_LIEU	analyzing-tools\spelling_families.tsv:72	True	True	False	False	False	True
+gãy gọn	gẫy gọn	c	LOAI_THIEU_DU_LIEU	analyzing-tools\spelling_families.tsv:73	True	True	False	False	False	True
+thầy	thày	c	QUA_RIENG_H5	analyzing-tools\spelling_families.tsv:77	True	True	False	False	False	True
+trân châu	chân châu	d	TRU_DIEM	analyzing-tools\spelling_families.tsv:102	True	True	False	False	False	True
+chệch	trệch	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:105	True	True	False	False	True	True
+co giãn	co dãn	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:113	True	True	False	False	False	True
+cơn giông	cơn dông	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:115	True	True	False	False	False	True
+cù lét	cù léc	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:116	True	True	False	False	False	True
+dây dợ	dây rợ	c	LOAI_THIEU_DU_LIEU	analyzing-tools\spelling_families.tsv:127	True	True	False	False	False	True
+rỉ tai	dỉ tai	d	CHO_THIEU_DU_LIEU	analyzing-tools\spelling_families.tsv:129	True	True	False	False	False	True
+gạo lứt	gạo lức	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:135	True	True	False	False	False	True
+dùm	giùm	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:150	True	True	False	False	True	True
+kếch xù	kếch sù	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:156	True	True	False	False	False	True
+khúc mắc	khúc mắt	d	TRU_DIEM	analyzing-tools\spelling_families.tsv:161	True	True	False	False	True	True
+loang lổ	loang lỗ	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:167	True	True	False	False	True	True
+mài giũa	mài dũa	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:171	True	True	False	False	False	True
+ngâm dấm	ngâm giấm	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:188	True	True	False	False	False	True
+xỉ vả	sỉ vả	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:213	True	True	False	False	False	True
+suy ngẫm	suy gẫm	c	LOAI_CANH_TRANH	analyzing-tools\spelling_families.tsv:223	True	True	False	False	False	True
+suýt nữa	xuýt nữa	c	LOAI_THIEU_DU_LIEU	analyzing-tools\spelling_families.tsv:251	True	True	False	False	True	True
+bít tết / bít-tết / bíttết	bíp tết / bíp-tết / bíptết	c	QUA_RIENG_H5	analyzing-tools\spelling_families.tsv:258	False	True	False	False	False	True
+cuống quýt	cuống quít	c	LOAI_THIEU_DU_LIEU	analyzing-tools\spelling_families.tsv:263	True	True	False	False	False	True
+dập dềnh	rập rềnh	c	LOAI_THIEU_DU_LIEU	analyzing-tools\spelling_families.tsv:264	True	True	False	False	False	True

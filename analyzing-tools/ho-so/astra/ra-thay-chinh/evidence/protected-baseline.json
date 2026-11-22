@@ -1,0 +1,98 @@
+{
+  "index.html": {
+    "sha256_bytes": "01b76617f8df57d80e59d0989001ced8f7714ae95e85828b351bce2a5517a423",
+    "sha256_LF": "8a051bb8cef08ea43f025ae001f019a1019bf374a08e22f0a069be07d3af66aa"
+  },
+  "thong-tin.html": {
+    "sha256_bytes": "8ec3bbf763f2465994bde4239079a3795eb2eb3bf21f61fe29aa683cb8bf3ea7",
+    "sha256_LF": "ae64ea3f452420219894715ef0f4b45cdfa0788476a5f8b81150b7635f6adcc8"
+  },
+  "WordListAnalyze.md": {
+    "sha256_bytes": "222b54156ee434b2f0bfae389da53c3f356988cd939883cec11449b443d0f9f3",
+    "sha256_LF": "035ea08cc10ddce910ca159c9dc11133a11a3f4fceb9dcf56b467ea9fe4cd72c"
+  },
+  "README.md": {
+    "sha256_bytes": "d0093d2b4f0bca8a4465d5589aa8209b08d237f55228c6e52f803344d2714b09",
+    "sha256_LF": "dfb43cc1a9f456a081faf59d6fda6b288fa1d2cfe208e99bf9c80712872a49b9"
+  },
+  "analyzing-tools\\wordlist.txt": {
+    "sha256_bytes": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4",
+    "sha256_LF": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581"
+  },
+  "analyzing-tools\\du-phong.txt": {
+    "sha256_bytes": "02bc37051b008e5b538113f5710280c5570cbd890049e2635d86fcbefb5221a7",
+    "sha256_LF": "f015e718d03bc8cae4bcb0ab0014c813a02e918c1386075aff796e94189e098b"
+  },
+  "analyzing-tools\\labels.tsv": {
+    "sha256_bytes": "75fcdf0a466f696c47307650113252652f3545ffc8728d0d10a0c1ccbf0bde4e",
+    "sha256_LF": "a5b882a82a4bff853fce938deed94cdb4efa5dc969ff05572a68835a7605369b"
+  },
+  "analyzing-tools\\nguon-goc-giai-nghia.tsv": {
+    "sha256_bytes": "5a730565c19657239acaeced34b8185503d9490fb12e112942ed3e95b84edeab",
+    "sha256_LF": "197df30135d5ee8fa5a8e8ff1dc3a284fce89ad97b9a910b03a280ec2db24b33"
+  },
+  "analyzing-tools\\spelling_families.tsv": {
+    "sha256_bytes": "565fee9d502f62aab4f987cb712d680505c48d51d297393f55225cd4fec792e6",
+    "sha256_LF": "56f0b31d2a84e9f41495937b49949d2e357368739f07ece0cd1187fe25407c98"
+  },
+  "analyzing-tools\\blocked_keys.tsv": {
+    "sha256_bytes": "f65526bc5bb62c2f4b70400df2862a44d69783347b03eb6b8ce8d5e1e1dbec20",
+    "sha256_LF": "016996d5424cc1ad3cc23903c85ba9c2a6a141b6402549c168c3a4ab90bdc0e8"
+  },
+  "analyzing-tools\\manifest.json": {
+    "sha256_bytes": "9c5b1f5d6ebfbfa09f3b1f46e052923a064b1b56a71a11c505b277b3feb9a744",
+    "sha256_LF": "e8b33c7209be6c9df02e3179a475141ad4073797cf2bb71c7cb28bc0caa5d2f8"
+  },
+  "analyzing-tools\\du-phong-phan-loai.tsv": {
+    "sha256_bytes": "8cc77162092d173a5ce83c102eee642f75d206254fada3de0ea2d36795055bab",
+    "sha256_LF": "0f1cf57455e1a368587a101f7b0183c5a47c91c6910d8749be2b802ca0364036"
+  },
+  "analyzing-tools\\honorable-mentions.tsv": {
+    "sha256_bytes": "f5280e73ce322f9ce631cb92bb1ab215254149b58f4350fb6e0c9056ad691392",
+    "sha256_LF": "122ebc3b1c8a84f125d2a3f8924faab195834913c28454a592a47ba24603fa69"
+  },
+  "analyzing-tools\\README.md": {
+    "sha256_bytes": "9da2ff65d3b9d331b5c7a99fcfd6be6e72196b6fafc0419bcdd5a501194bfe00",
+    "sha256_LF": "b878407e8fb092db0ea0d0f3869060a6b7e36fb881aa6e968e32db23092d17e2"
+  },
+  "analyzing-tools\\check_wordlist.py": {
+    "sha256_bytes": "583559076e46aa8b524999b8cc9aa0e442b85399786b2726b59f807abd6dcc2f",
+    "sha256_LF": "211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb"
+  },
+  "analyzing-tools\\verify.mjs": {
+    "sha256_bytes": "f9cdbbbd3de34277fdb17da58c3336920ed685ab139b3d5b2032a551dafd6cac",
+    "sha256_LF": "df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90"
+  },
+  "analyzing-tools\\build_wordlist.py": {
+    "sha256_bytes": "616a231700827f0b67cde8a0c23005f1da7854930c0a4e14c7cc487901f6ea79",
+    "sha256_LF": "67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0"
+  },
+  "analyzing-tools\\d6-kiem.py": {
+    "sha256_bytes": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
+    "sha256_LF": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f"
+  },
+  "analyzing-tools\\d6-ho-chinh-ta.tsv": {
+    "sha256_bytes": "df32c84df96a4ef46ce847e5e055e77f28caed2ff47991756f3d68ddb4523913",
+    "sha256_LF": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63"
+  },
+  "analyzing-tools\\d6-tham-chieu.json": {
+    "sha256_bytes": "465227edafd33ade26414a6a53dab356189c2de1ed70733ecd471437b3fdb50c",
+    "sha256_LF": "23a85060ac07f289b30bfa8fa4a0ad0e02fcfcf31b07921c8d1f47cc2a25e0e5"
+  },
+  "analyzing-tools\\huong-dan-giai-nghia.md": {
+    "sha256_bytes": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+    "sha256_LF": "40909787f3cad5ddbd438b7db1f31ad2b547cc303b666222ade108410a307439"
+  },
+  "analyzing-tools\\tieu-chi-thong-nhat.md": {
+    "sha256_bytes": "3d9e25b4d40a39816965479bc513613d4d8f06be1acf4241bfa01a74a2815106",
+    "sha256_LF": "253544fbf08a20302702cfb21c8fee505da488ec8e1dcfd7f7aa4c16b0cda033"
+  },
+  "WordListAnalyze-Opus.md": {
+    "sha256_bytes": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+    "sha256_LF": "3017463f6442d728890af00d9ced36b23e1b401e3de8a29c59f2d0fa7d21def6"
+  },
+  "WordListAnalyze-Astra.md": {
+    "sha256_bytes": "0f94b58c422cd88ac0a50c0f2eace9da9ba5aed3e7630f577af29901cc9b25df",
+    "sha256_LF": "6d25230a14d75c208306c12d7acea52d2be0ebb1b47629c98c4d84954afd2067"
+  }
+}

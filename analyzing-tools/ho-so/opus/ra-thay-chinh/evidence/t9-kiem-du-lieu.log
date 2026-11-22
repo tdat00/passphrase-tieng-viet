@@ -1,0 +1,20 @@
+ĐẠT T12 tập ra = 116 dòng RA
+ĐẠT T12 tập vào = 115 VAO (trừ sớm tối) + cả nghĩ
+ĐẠT T12 7.776 từ, 7.776 khóa, không khóa dưới 4 chữ: khóa ngắn nhất 4
+ĐẠT T2 94 khóa mới, đúng mã từng khóa: thiếu [], thừa [], lệch mã []
+ĐẠT T2 K0 mới đúng ba khóa
+ĐẠT T2 không khóa phát hành nào bị chặn
+ĐẠT T3 mọi cặp H5 đã chốt (thay, chờ loại, qua) có họ đúng kết luận: 35 họ mới; thiếu/lệch []
+ĐẠT T3 không từ phát hành nào thuộc họ bị cấm (luật C5): []
+ĐẠT T3 họ thiếu dữ liệu có từ phát hành đều có hai chữ ký H5: []
+ĐẠT T4 labels: 7.776 CHINH khớp danh sách, F ≤ 77, R1 = 0: F = 77
+ĐẠT T4 mọi khóa K2 giữ lại có hai người ký hiệu lực: 246 khóa; thiếu []
+ĐẠT T4 khóa chia: đúng hai dòng hiệu lực: [('Astra', 'THAY_THE', '2026-11-19'), ('Opus', 'THAY_THE', '2026-11-19'), ('Astra', 'CO', '2026-11-22'), ('Opus', 'CO', '2026-11-22')]
+ĐẠT T4 từ vào: nhãn và điểm giữ theo xep-hang.tsv: 116 dòng
+ĐẠT T6 7.776 dòng PHAT_HANH khớp danh sách
+ĐẠT T6 sha256 giải nghĩa khớp wordlist: lệch []
+ĐẠT T6 từ vào có lượt rtc-v*: {'rtc-v3': 5, 'rtc-v1': 84, 'rtc-v2': 27}
+ĐẠT T6 từ ra là LOAI, đợt ra-thay-chinh: [('H7_K1', 89), ('H5_c', 14), ('H5_CHO_LOAI', 7), ('H5_f', 3), ('H7_K0', 3)]
+ĐẠT T8 dự phòng: 89 dòng, khớp bảng phân loại và labels DU_PHONG
+ĐẠT T11 HM: không HM nào vào chính; số dòng: 237 → 237; khách hàng: ['D6_CUOI/rtc: không có câu đạt sau rtc-v3 (rtc-v1 và rtc-v3 trượt D6,']
+ĐẠT T8 manifest: băm tệp có đường dẫn khớp byte working tree: lệch []

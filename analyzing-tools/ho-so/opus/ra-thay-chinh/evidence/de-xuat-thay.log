@@ -1,0 +1,10 @@
+RA: 38 ({'OK_N': 38}); DIEU_KIEN: 4 ({'OK_N': 4}); F chính 77, chỗ trống F sau khi ra 0
+mã RA: {'K1': 16, 'K1_GIAP_RANH': 14, 'LOAI_THIEU_DU_LIEU': 7, 'LOAI_LOI': 1}
+bỏ qua khi lấp: {'F_day': 76, 'cong_mo': 1, 'tang_D': 3, 'loai_H5b': 1}
+VAO: 38; tầng: {'A': 38}
+dự phòng còn lại nếu không bù: 167 (thêm 4 nếu các ca điều kiện đều phải thay)
+RA: áo quần, bàn ăn, cao giá, chung cư, chữ nghĩa, cổ thụ, dặn dò, di dời, dò hỏi, đậm đà, đầu mùa, đỏ thắm, gầy gò, giận dỗi, hóm hỉnh, hố ga, lằng nhằng, mê mẩn, nằm mơ, nắm vững, phân công, phong thư, sắn dây, tài hoa, thể lực, thiên tài, thong dong, thư thái, tiền công, tiếp viên, bồ kết, cải xoong, chòng chành, già dặn, lấn át, ngoảnh, phấp phới, rau dền
+DIEU_KIEN: chơ vơ, loay hoay, su hào, xập xình
+VAO: mụ mị, cờ vây, đưa đò, buồn thiu, xuống cân, phất phơ, tấn tới, leo dây, cụt hứng, nín thinh, khó nghĩ, số âm, bâng quơ, lạ tai, làm cỗ, mỏi nhừ, oái oăm, mon men, chính cống, gợi chuyện, bụng dạ, mấp mé, rơm rớm, sáng trưng, nhá nhem, nhảy sào, chốc nữa, hay dở, đủng đỉnh, mong nhớ, thay lông, giở giọng, đon đả, ủn ỉn, xúng xính, ăn tiệm, bèo bọt, leo lét
+VAO_NEU_DIEU_KIEN: đáp số, đỏ chót, ve vẩy, dài ngoằng
+DU_BI: giở quẻ, lộp độp, tía lia, khuya khoắt, khúc khuỷu, xoành xoạch, học tủ, lạ đời, thụp, gặp thời, chung tình, ỉu xìu

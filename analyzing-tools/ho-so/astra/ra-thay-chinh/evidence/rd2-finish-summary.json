@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-21T16:48:01.284390+07:00",
+  "review_only_appended": true,
+  "protected_files_unchanged": 24,
+  "draft_and_Opus_inputs_unchanged": 13,
+  "rd1_artifacts_unchanged_except_appended_review": 21,
+  "confirmed_H5f_exclusions": 3,
+  "H7_disputed": 17,
+  "H5_disputed": 7,
+  "preexisting_K2_to_reuse": 2,
+  "new_K2_signature_queue": 194,
+  "flag_closure_proposals": 3,
+  "source_text_saved": false,
+  "new_glosses_written": 0,
+  "new_release_signatures_written": 0,
+  "format": "UTF-8 without BOM; CRLF; no trailing whitespace; final newline",
+  "report_sha256_bytes": "6f27560e9d9317053bb4b72bd31db9f6876c4f513b1a755cc03ef9933b0e5ec1",
+  "verdict": "changes requested",
+  "status": "PASS_REVIEW_ARTIFACTS_NOT_RELEASE"
+}

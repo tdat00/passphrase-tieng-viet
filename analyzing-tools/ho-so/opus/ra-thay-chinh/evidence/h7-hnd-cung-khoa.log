@@ -1,0 +1,7 @@
+Viet11K: sha256 401752a95c8c97638ecf4df8445ded60d9db87a8f1bbca2e7fc3b6d00eb1132e KHOP_MANIFEST
+Viet22K: sha256 fdb37a1f21cb44898894390fb87d137830ed1507316c2729bad2d804db81033d KHOP_MANIFEST
+Viet39K: sha256 5c139a85964bf8980c6659418007e2ba5e3e5cc0098fe16c08f1bf5a6dd91ec5 KHOP_MANIFEST
+Viet74K: sha256 b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90 KHOP_MANIFEST
+từ chính: 7776; không có trong opus-counts (lô L2/L3): 323
+cặp cùng khóa trong HND: 3426; của từ có đếm OPUS mà thiếu trong DOC_KHAC: 335
+cặp của từ lô L2/L3: 39 trên 25 từ

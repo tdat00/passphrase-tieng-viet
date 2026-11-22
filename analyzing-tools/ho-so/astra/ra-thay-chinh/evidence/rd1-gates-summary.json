@@ -1,0 +1,55 @@
+{
+  "results": [
+    {
+      "case": "native-python",
+      "exit": 1,
+      "expected_exit": 1,
+      "errors": 1,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit\nSố khối: 1: 480, 2: 7033, 3: 263\nĐộ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39\nLớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776\nLỖI | C1: wordlist.txt phải dùng LF và có LF cuối\nTổng: 1 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    },
+    {
+      "case": "native-js",
+      "exit": 1,
+      "expected_exit": 1,
+      "errors": 3,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái\nLỖI | C1: wordlist.txt phải là UTF-8 không BOM, LF, có LF cuối\nLỖI | C8: thong-tin.html không khớp wordlist.txt\nLỖI | C8: mục 10 của WordListAnalyze.md không khớp wordlist.txt\nTổng: 3 lỗi.\n",
+      "stderr": ""
+    },
+    {
+      "case": "native-build-check",
+      "exit": 0,
+      "expected_exit": 0,
+      "errors": null,
+      "stdout": "Ba khối khớp wordlist.txt.\n",
+      "stderr": ""
+    },
+    {
+      "case": "canonical-python-added-section13",
+      "exit": 0,
+      "expected_exit": 0,
+      "errors": 0,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit\nSố khối: 1: 480, 2: 7033, 3: 263\nĐộ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39\nLớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776\nTổng: 0 lỗi, 0 cảnh báo.\n",
+      "stderr": ""
+    },
+    {
+      "case": "canonical-js-added-section13",
+      "exit": 0,
+      "expected_exit": 0,
+      "errors": 0,
+      "stdout": "Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái\nTổng: 0 lỗi.\n",
+      "stderr": ""
+    },
+    {
+      "case": "CRLF-build-added-section13",
+      "exit": 0,
+      "expected_exit": 0,
+      "errors": null,
+      "stdout": "Ba khối khớp wordlist.txt.\n",
+      "stderr": ""
+    }
+  ],
+  "new_glosses_written": 0,
+  "fresh_D6_run": false,
+  "limits": "Kiểm baseline và marker mục 13 ở RAM; không chứng nhận gói thay 87 hoặc nghĩa mới."
+}

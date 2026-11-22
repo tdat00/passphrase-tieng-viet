@@ -1,0 +1,7 @@
+tu	doc_khac	khoa_trung_toan_bo	khoi_chinh	khoi_doc_khac	r	ket_qua_ham_O	ly_do_ham_O	ghi_chu
+nhàu	nhậu	True	1	1	12.532194766	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết	Tái chạy đúng hàm thuần của O; không gọi đây là đánh giá ngữ nghĩa được Astra chấp nhận.
+ngọc	ngốc	True	1	1	1.497829738	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết	Tái chạy đúng hàm thuần của O; không gọi đây là đánh giá ngữ nghĩa được Astra chấp nhận.
+thuần	thụ án	True	1	2	0.080949374	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết	Tái chạy đúng hàm thuần của O; không gọi đây là đánh giá ngữ nghĩa được Astra chấp nhận.
+xuân	xử án	True	1	2	0.063827292	K2_DE_XUAT	khóa một âm tiết: cách đọc mặc định khác, chỉ khớp một âm tiết	Tái chạy đúng hàm thuần của O; không gọi đây là đánh giá ngữ nghĩa được Astra chấp nhận.
+bảo hành	bạo hành	True	2	2	0.049697486	K2_DE_XUAT	r = 0.050 < 0,2	Tái chạy đúng hàm thuần của O; không gọi đây là đánh giá ngữ nghĩa được Astra chấp nhận.
+tính khí	tinh khí	True	2	2	0.024868374	KHONG_DO	cách đọc khác không thuộc nhóm đỏ H6	Tái chạy đúng hàm thuần của O; không gọi đây là đánh giá ngữ nghĩa được Astra chấp nhận.

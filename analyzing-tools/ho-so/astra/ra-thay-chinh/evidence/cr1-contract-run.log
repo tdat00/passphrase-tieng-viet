@@ -1,0 +1,21 @@
+{
+  "H5b_actual_new_main_pairs": 8,
+  "H5b_surface_and_dedup_pass": true,
+  "qua_quyt_signed_variants": [],
+  "qua_quyt_Opus_variants": [
+    "qua quít"
+  ],
+  "bip_tet_in_D6_but_not_public_H5": true,
+  "multi_syllable_rule_is_extra": true,
+  "Opus_K0_map_empty": true,
+  "conditional_F_counterexample": {
+    "case": "thêm theo (F) vào tập ra nếu K2 không được ký",
+    "out": 39,
+    "slack_initial": 1,
+    "taken_F_by_existing_loop": 39,
+    "resulting_main_F": 115,
+    "actual_O38_has_this_failure": false,
+    "cause": "de-xuat-thay.py không giảm slack_f khi thêm F và n_n chỉ tính ngăn không-F"
+  },
+  "protected_data_changed": false
+}

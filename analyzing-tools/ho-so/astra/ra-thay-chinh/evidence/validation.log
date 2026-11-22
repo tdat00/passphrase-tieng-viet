@@ -1,0 +1,31 @@
+[native-python] exit=1
+Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+Số khối: 1: 480, 2: 7033, 3: 263
+Độ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39
+Lớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776
+LỖI | C1: wordlist.txt phải dùng LF và có LF cuối
+Tổng: 1 lỗi, 0 cảnh báo.
+
+[native-js] exit=1
+Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+LỖI | C1: wordlist.txt phải là UTF-8 không BOM, LF, có LF cuối
+LỖI | C8: thong-tin.html không khớp wordlist.txt
+LỖI | C8: mục 10 của WordListAnalyze.md không khớp wordlist.txt
+Tổng: 3 lỗi.
+
+[native-build-check] exit=0
+Ba khối khớp wordlist.txt.
+
+[canonical-python] exit=0
+Số từ: 7776; 12.92 bit/từ; 6 từ: 77.5 bit
+Số khối: 1: 480, 2: 7033, 3: 263
+Độ dài (chữ): 4: 536, 5: 970, 6: 1886, 7: 2059, 8: 1330, 9: 614, 10: 259, 11: 83, 12: 39
+Lớp: C: 2915, F: 77, H: 3169, K: 1615; nhãn: OK: 7776
+Tổng: 0 lỗi, 0 cảnh báo.
+
+[canonical-js] exit=0
+Số từ: 7776; 12.92 bit/từ; 22 nhóm chữ cái
+Tổng: 0 lỗi.
+
+[D6-self-test] exit=0
+D6-1.0: 20 ca tổng hợp đạt.

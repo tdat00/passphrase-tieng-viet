@@ -1,0 +1,41 @@
+{
+  "predicate": "loai c/d; dạng kia có ở Viet39K hoặc Viet74K chữ thường và không ở Viet11K/Viet22K; không suy không có ở Wiktionary",
+  "counts": {
+    "exact_cell": {
+      "c": 33,
+      "d": 3
+    },
+    "expanded_aliases_any": {
+      "c": 34,
+      "d": 3
+    }
+  },
+  "sources": [
+    {
+      "source": "Viet11K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet11K.txt",
+      "sha256": "401752a95c8c97638ecf4df8445ded60d9db87a8f1bbca2e7fc3b6d00eb1132e",
+      "raw_saved": false
+    },
+    {
+      "source": "Viet22K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet22K.txt",
+      "sha256": "fdb37a1f21cb44898894390fb87d137830ed1507316c2729bad2d804db81033d",
+      "raw_saved": false
+    },
+    {
+      "source": "Viet39K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet39K.txt",
+      "sha256": "5c139a85964bf8980c6659418007e2ba5e3e5cc0098fe16c08f1bf5a6dd91ec5",
+      "raw_saved": false
+    },
+    {
+      "source": "Viet74K",
+      "url": "https://raw.githubusercontent.com/duyet/vietnamese-wordlist/688b0953c8cdb21ee090ce80b83cefdb052fe2cd/Viet74K.txt",
+      "sha256": "b83d49308336f12ca46d06287d8db6e2cdc7a725d9a9dac56930051775fafb90",
+      "raw_saved": false
+    }
+  ],
+  "raw_source_saved": false,
+  "limit": "Phép đếm tiền lệ không tự chứng minh quan hệ cùng từ hay tính chuẩn của một cặp mới."
+}

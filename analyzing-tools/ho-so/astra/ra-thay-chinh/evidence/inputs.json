@@ -1,0 +1,187 @@
+{
+  "analyzing-tools\\wordlist.txt": {
+    "sha256_bytes": "8945fd4a732b210b4e027f6660b4f42d53b2344088028f967e01a30af7bbc6b4",
+    "sha256_LF": "1d4fc3e803c4cb40ee39f3abe25fccd7815f1e750198b4b1fc1166753233f581",
+    "lines": 7776
+  },
+  "analyzing-tools\\labels.tsv": {
+    "sha256_bytes": "75fcdf0a466f696c47307650113252652f3545ffc8728d0d10a0c1ccbf0bde4e",
+    "sha256_LF": "a5b882a82a4bff853fce938deed94cdb4efa5dc969ff05572a68835a7605369b",
+    "lines": 7982
+  },
+  "analyzing-tools\\du-phong-phan-loai.tsv": {
+    "sha256_bytes": "8cc77162092d173a5ce83c102eee642f75d206254fada3de0ea2d36795055bab",
+    "sha256_LF": "0f1cf57455e1a368587a101f7b0183c5a47c91c6910d8749be2b802ca0364036",
+    "lines": 206
+  },
+  "analyzing-tools\\honorable-mentions.tsv": {
+    "sha256_bytes": "f5280e73ce322f9ce631cb92bb1ab215254149b58f4350fb6e0c9056ad691392",
+    "sha256_LF": "122ebc3b1c8a84f125d2a3f8924faab195834913c28454a592a47ba24603fa69",
+    "lines": 238
+  },
+  "analyzing-tools\\blocked_keys.tsv": {
+    "sha256_bytes": "f65526bc5bb62c2f4b70400df2862a44d69783347b03eb6b8ce8d5e1e1dbec20",
+    "sha256_LF": "016996d5424cc1ad3cc23903c85ba9c2a6a141b6402549c168c3a4ab90bdc0e8",
+    "lines": 111
+  },
+  "analyzing-tools\\spelling_families.tsv": {
+    "sha256_bytes": "565fee9d502f62aab4f987cb712d680505c48d51d297393f55225cd4fec792e6",
+    "sha256_LF": "56f0b31d2a84e9f41495937b49949d2e357368739f07ece0cd1187fe25407c98",
+    "lines": 278
+  },
+  "analyzing-tools\\nguon-goc-giai-nghia.tsv": {
+    "sha256_bytes": "5a730565c19657239acaeced34b8185503d9490fb12e112942ed3e95b84edeab",
+    "sha256_LF": "197df30135d5ee8fa5a8e8ff1dc3a284fce89ad97b9a910b03a280ec2db24b33",
+    "lines": 7959
+  },
+  "analyzing-tools\\d6-ho-chinh-ta.tsv": {
+    "sha256_bytes": "df32c84df96a4ef46ce847e5e055e77f28caed2ff47991756f3d68ddb4523913",
+    "sha256_LF": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+    "lines": 1063
+  },
+  "analyzing-tools\\ho-so\\unified\\opus-counts.tsv": {
+    "sha256_bytes": "4c250ddb19731ad21cc1a878671ef55637c7fc602105c402ef2b669031337036",
+    "sha256_LF": "38591846fb13efec4d2c2ae4a6e01e3414b2367611a8a5596cecd7c08fc550f1",
+    "lines": 18221
+  },
+  "analyzing-tools\\ho-so\\unified\\canh-bao-khong-dau.tsv": {
+    "sha256_bytes": "37d22f6cca7b8ca15109c7730fbe5c09001ff01f987712cc22a63f2c3f686110",
+    "sha256_LF": "a5148fa21c33fb50d4e418604e2847be7ee21dc0dbf06e3ad79e3811c541e5ea",
+    "lines": 228
+  },
+  "analyzing-tools\\ho-so\\unified\\xep-hang.tsv": {
+    "sha256_bytes": "5be03ce6000dd8591c9d8974b93710995c33124fdd19c773b5862b919d0a0215",
+    "sha256_LF": "74191a1f1ef4ce01158478219d41fa1c94622e13d95646b475b49ce9ef14168c",
+    "lines": 10134
+  },
+  "analyzing-tools\\ho-so\\unified\\phieu-astra.tsv": {
+    "sha256_bytes": "309fb5988a875a0571c5ef513f54c1e837b286e491f7b5e24985762455d4751c",
+    "sha256_LF": "6e6113f937ef273f8a66f0f9cadf1a4594961facfb72c36ca1bddb4d25abce57",
+    "lines": 12148
+  },
+  "analyzing-tools\\ho-so\\unified\\phieu-opus.tsv": {
+    "sha256_bytes": "04a85ef49127c3a7748c42de175321914c45818eb8070c106d9b67e195147e08",
+    "sha256_LF": "87d5eb143b650a62421e3f73f2951e3fc38bd0c84769927f79bcbbced096ceec",
+    "lines": 12148
+  },
+  "analyzing-tools\\ho-so\\unified\\chu-ky.tsv": {
+    "sha256_bytes": "84dcf3e79dc0690c41118c0fd1ca9d6e568217479a402bdaa8fa48b34655baa6",
+    "sha256_LF": "23715db2b49c5c696f9d6fc128f8895ec80323a08a88b85aac45d8e5f51330d2",
+    "lines": 2548
+  },
+  "analyzing-tools\\ho-so\\unified\\phan-bien.tsv": {
+    "sha256_bytes": "8702d0d47c938abc62487df33884d6f292d158f03782eb5f2419fa28de861ec3",
+    "sha256_LF": "d98cf9a7adfcb0c59256044641519401e3fb0027b6b0f8bd71d45e1364594d37",
+    "lines": 1121
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\bien-the-chinh-tho.tsv": {
+    "sha256_bytes": "05269a02b29f9d199d8f53c1fbc7e9ea8adf3a1479d6c3142f91ecd2dac0ea40",
+    "sha256_LF": "a9cbc4b4959ff83c76251d01c10dd6c1a5c3ac7308377df210bab362e255dd93",
+    "lines": 633
+  },
+  "analyzing-tools\\ho-so\\opus\\du-phong-v2\\evidence\\pham-vi-hau-kiem-h7.tsv": {
+    "sha256_bytes": "61e56f78df6492a8afa478b0a19b43d8be81cd6a2487ef57151f0f0b09c4c595",
+    "sha256_LF": "163e5f9835872dddabb1ffb9d97f3325953db70b40bbb9c29f63eea93c10aef0",
+    "lines": 1178
+  },
+  "analyzing-tools\\ho-so\\unified\\l2-ung-vien.tsv": {
+    "sha256_bytes": "da09cae9215a15b39bfbd17e306dab09e68c3a3c7bc07375b8e20eb0ecbdcfb8",
+    "sha256_LF": "c211cafe719c7a4bc42c182f38b9998bd4f7829e60db68119f3874b11f67ac73",
+    "lines": 401
+  },
+  "analyzing-tools\\ho-so\\unified\\l2b-ung-vien.tsv": {
+    "sha256_bytes": "3eb1a0a6245cd41f70b25754f29524b7c6abd97f75c0c21c2e06035280b35d63",
+    "sha256_LF": "e2513ef312b1644789a0617c562b2c5090990caae79e1eed2e86eaf0585bb3fa",
+    "lines": 201
+  },
+  "analyzing-tools\\ho-so\\unified\\l2c-ung-vien.tsv": {
+    "sha256_bytes": "24034ed5e7fce541326d63114ecd092b78f25c4e1533085bfb4cdf17d80538c6",
+    "sha256_LF": "96a5b2178d82a6623ca140a1f496b00b9aade3d9e7e0f9d32f31a602d382de29",
+    "lines": 99
+  },
+  "analyzing-tools\\ho-so\\unified\\l3-ung-vien.tsv": {
+    "sha256_bytes": "9338fda3450d2a4f5e20b444b24ab5c5fa483694b68d97d9862f815c6db7ac0a",
+    "sha256_LF": "692528b7cba732f40be0cd0f14af7466bf1a5d15d2ba867285ee1ab3dd9dc058",
+    "lines": 127
+  },
+  "analyzing-tools\\tieu-chi-thong-nhat.md": {
+    "sha256_bytes": "3d9e25b4d40a39816965479bc513613d4d8f06be1acf4241bfa01a74a2815106",
+    "sha256_LF": "253544fbf08a20302702cfb21c8fee505da488ec8e1dcfd7f7aa4c16b0cda033",
+    "lines": 633
+  },
+  "analyzing-tools\\huong-dan-giai-nghia.md": {
+    "sha256_bytes": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+    "sha256_LF": "40909787f3cad5ddbd438b7db1f31ad2b547cc303b666222ade108410a307439",
+    "lines": 185
+  },
+  "analyzing-tools\\README.md": {
+    "sha256_bytes": "9da2ff65d3b9d331b5c7a99fcfd6be6e72196b6fafc0419bcdd5a501194bfe00",
+    "sha256_LF": "b878407e8fb092db0ea0d0f3869060a6b7e36fb881aa6e968e32db23092d17e2",
+    "lines": 96
+  },
+  "analyzing-tools\\manifest.json": {
+    "sha256_bytes": "9c5b1f5d6ebfbfa09f3b1f46e052923a064b1b56a71a11c505b277b3feb9a744",
+    "sha256_LF": "e8b33c7209be6c9df02e3179a475141ad4073797cf2bb71c7cb28bc0caa5d2f8",
+    "lines": 242
+  },
+  "analyzing-tools\\check_wordlist.py": {
+    "sha256_bytes": "583559076e46aa8b524999b8cc9aa0e442b85399786b2726b59f807abd6dcc2f",
+    "sha256_LF": "211a6cdc96bbfa88b1ae686595f9fe4bc9a560217ff0bb1714007ed3b32bf5bb",
+    "lines": 191
+  },
+  "analyzing-tools\\verify.mjs": {
+    "sha256_bytes": "f9cdbbbd3de34277fdb17da58c3336920ed685ab139b3d5b2032a551dafd6cac",
+    "sha256_LF": "df2ad0081e59b891ad2b83e1c34a46f396a161454e6420e32358468867be2a90",
+    "lines": 85
+  },
+  "analyzing-tools\\build_wordlist.py": {
+    "sha256_bytes": "616a231700827f0b67cde8a0c23005f1da7854930c0a4e14c7cc487901f6ea79",
+    "sha256_LF": "67c4c43998b22a11c6ef3484cac473d0722e557f5b15cc3aee8b4169ac1c0af0",
+    "lines": 82
+  },
+  "analyzing-tools\\kiem-tra-giai-nghia.py": {
+    "sha256_bytes": "3f143e967ce2084cb96f271750c72712015b0fdf3a826826232eadceb9d48581",
+    "sha256_LF": "d536db8230e5a1c9d8801e79544b8e0fc2726bad40da3f6199fbba82f7f364c5",
+    "lines": 241
+  },
+  "analyzing-tools\\d6-kiem.py": {
+    "sha256_bytes": "4ce00d3d4735c56001fb48e76f44089970b545c4176cc5b55f0d0a911d29e1a7",
+    "sha256_LF": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f",
+    "lines": 579
+  },
+  "analyzing-tools\\d6-tham-chieu.json": {
+    "sha256_bytes": "465227edafd33ade26414a6a53dab356189c2de1ed70733ecd471437b3fdb50c",
+    "sha256_LF": "23a85060ac07f289b30bfa8fa4a0ad0e02fcfcf31b07921c8d1f47cc2a25e0e5",
+    "lines": 34
+  },
+  "analyzing-tools\\ho-so\\unified\\ra-thay-chinh-yeu-cau.md": {
+    "sha256_bytes": "0580abcd9115d2d390cdb0b08ed51214a9478c3e696a11740de5d8eaa483f8e6",
+    "sha256_LF": "970bbf532e4e0332a013755f2cc824f5e9384e49b860b454e1694b592af35a17",
+    "lines": 23
+  },
+  "analyzing-tools\\ho-so\\astra\\ra-thay-chinh\\h5-sang-loc-632.tsv": {
+    "sha256_bytes": "90cf4cf49acf087e97643d7c02ff422f6cc8b138083491a9e3c7621a63d30f4c",
+    "sha256_LF": "690c36692e612c72e5377a1181e5c2567f1af5e8512a6dc64f08f80fcacc2b00",
+    "lines": 633
+  },
+  "analyzing-tools\\ho-so\\astra\\ra-thay-chinh\\h7-sang-loc-1177.tsv": {
+    "sha256_bytes": "894f7082737a46e83dd5097e5a7c559fbbce024d6fb036c120e75250de64f014",
+    "sha256_LF": "88e3dc5bf1cb155e954f5b06c456bcf4e875baa08e599279dcfa3a06def14157",
+    "lines": 1178
+  },
+  "analyzing-tools\\ho-so\\astra\\ra-thay-chinh\\h7-sang-loc-bo-sung.tsv": {
+    "sha256_bytes": "58adc788d95f5ba43fbb6eab45621837118cea6f5e5564396bd15f5eab7489dc",
+    "sha256_LF": "b58f74ffd1b401504c89f656c5d6f329dc2e8ed7918e56f595357c9e18e198d6",
+    "lines": 1943
+  },
+  "analyzing-tools\\ho-so\\astra\\ra-thay-chinh\\h5-sang-loc-bo-sung.tsv": {
+    "sha256_bytes": "36d551cbe54b01f7462f50595b5ecccd8e7042c5ff925dfcf12094b6cf0b6545",
+    "sha256_LF": "57a6b9635615f36d0ad4d9149f865abed5df338d5a199362805a8bacc59418a0",
+    "lines": 3
+  },
+  "analyzing-tools\\ho-so\\astra\\ra-thay-chinh\\de-xuat-thay-the-S4.tsv": {
+    "sha256_bytes": "542775bcbaab93857b938bc608163dbd2f7880e987aa999e6f7e5a54d56b71be",
+    "sha256_LF": "64e2302e11d50ef8b6df778156fb3524462997a75bda899a7451bd22a31ae51e",
+    "lines": 142
+  }
+}

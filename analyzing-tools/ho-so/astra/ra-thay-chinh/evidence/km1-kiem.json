@@ -1,0 +1,79 @@
+{
+  "base": "0253bb0",
+  "inputs_sha256": {
+    "ra-thay-chinh-h7.tsv": "025d0eba557b1437bee88d0417e164fb081291594f25d1ead85ab63f38aa4a64",
+    "ra-thay-chinh-h5.tsv": "3c77a332e1530f9f7bb4a3efaeccd93378695d90472dc7cc3b8581f177a86b48",
+    "ra-thay-chinh-thay-the.tsv": "b27aa457210989544552cb3996aa4e7a99c8f45cf5cd05a20d21539dd8209eff"
+  },
+  "seed": "rtc-astra-km1-20261121",
+  "sub_web_token_bases": [
+    34314528,
+    149860716
+  ],
+  "phan_quyet": {
+    "H7_CHO": {
+      "GIU_KHONG_DO": 8,
+      "GIU_K2": 29,
+      "THAY_K1": 8,
+      "THAY_K0": 1
+    },
+    "H5_CHO": {
+      "GIU_KHONG_LAP_HO": 9,
+      "GIU_KHAC_TU": 8,
+      "THAY_H5e_c": 2,
+      "GIU_DAT_H5c": 4,
+      "DA_RA_H7_K1": 1,
+      "KHONG_VAO_H5c": 1,
+      "THAY_H5c": 1,
+      "DA_RA_H5f": 1
+    },
+    "CO_TU_VAO": {
+      "KHONG_VAO_K1": 1,
+      "GIU_K2": 1,
+      "GIU_KHAC_TU": 4,
+      "KHONG_VAO_H5c": 1,
+      "GIU_KHONG_DO": 1
+    },
+    "K2": {
+      "GIU_K2": 204,
+      "THAY_K1": 1
+    }
+  },
+  "doi_chung": 323,
+  "hnd_ghep_thanh_cong": 238,
+  "K2_cu_hai_nguoi": [
+    "bình",
+    "di động",
+    "khảm",
+    "kính",
+    "nướng",
+    "phết",
+    "thầy",
+    "thổi",
+    "trứng"
+  ],
+  "them_ra": [
+    "bạn thân",
+    "chun",
+    "chậm",
+    "cần cù",
+    "cổng",
+    "mặt nước",
+    "niêu",
+    "thiếu",
+    "thun",
+    "tiền lương",
+    "triệu",
+    "trán",
+    "tép riu"
+  ],
+  "bo_ung_vien": [
+    "làm cỗ",
+    "rướn"
+  ],
+  "ra": 120,
+  "vao_toi_da": 118,
+  "thieu": 2,
+  "du_bi": 0,
+  "T7_chay": false
+}

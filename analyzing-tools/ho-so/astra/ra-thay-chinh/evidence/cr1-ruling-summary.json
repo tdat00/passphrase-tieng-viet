@@ -1,0 +1,14 @@
+{
+  "H7_corrections": 14,
+  "H5_positions": 17,
+  "K2_keys": 96,
+  "K2_response_counts": {
+    "DONG_Y_HUONG_KHONG_TU_DONG_THEO_NGHIA": 14,
+    "CHUA_DONG_Y_KY_K2": 61,
+    "CAN_PHAN_XU_THEO_BAN_SUA_A": 5,
+    "CAN_THEM_CAN_CU_TRUOC_KY": 15,
+    "DONG_Y_CACH_DOC_NAY_CHUA_DONG_TOAN_KHOA": 1
+  },
+  "new_release_signatures_written": 0,
+  "original_files_rewritten": false
+}
