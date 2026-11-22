@@ -395,6 +395,8 @@ Lưu lệnh, mã thoát và log.
 | T-rtc-20 | Gói K2 đủ hai chữ ký: Astra ký 4 khóa của D-rtc-7 (`khep-muc-mo-2.tsv`). Tổng 238 khóa (233 khóa chính của T-rtc-18, *thay lông*, 4 khóa của D-rtc-7) và 5 khóa HM của T-rtc-19 | SA-Opus + SA-Astra | 2026-11-22 | `91d8ee9` |
 | T-rtc-21 | Tính lại S4 theo T-rtc-14: rổ 10.003 (bỏ thêm *bao tử*, *chạng vạng* theo T-dpv2-6, T-dpv2-7); hai chương trình độc lập khớp 143/143 dòng (T7); thứ tự này khóa làm nguồn chung | SA-Opus + SA-Astra | 2026-11-22 | fc97441 |
 
+| T-rtc-22 | D7 của lượt `rtc`: câu thuộc phần chồng chéo (hoặc có cờ) bị một SA đánh VIET_LAI thì viết lại | SA-Opus + SA-Astra (Opus nhận đề nghị của orchestrator, 2026-11-22) | 2026-11-22 | commit này |
+| T-rtc-23 | Kết quả viết nghĩa `rtc-v1..v3`: 141/143 câu đạt D2/D5/D6/D7 (`ho-so/unified/ra-thay-chinh-giai-nghia-dat.tsv`). *sớm tối* (từ vào 101) còn phản đối D7 của Astra sau `rtc-v3` nên nhường ghế theo T-rtc-6 và mục 6.1; dự bị *cả nghĩ* vào thế chỗ. *khách hàng* (HM) trượt D6 ba lần, rời chu kỳ HM. Còn 1 dự bị (*cửu chương*) và 24 HM đã có câu đạt, chưa dùng | orchestrator theo T-rtc-6, mục 6.1; hai SA đã soát | 2026-11-22 | commit này |
 Các mục T-rtc-* là chỗ hai bên đã đồng ý qua rà chéo, hai lượt duyệt và hai vòng thỏa thuận (`ho-so/{opus,astra}/ra-thay-chinh/thoa-thuan-*`). SA-Astra xác nhận khi duyệt bản sửa này.
 
 ## 12. Mục mở

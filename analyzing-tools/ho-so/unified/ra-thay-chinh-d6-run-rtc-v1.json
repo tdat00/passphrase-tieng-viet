@@ -1,0 +1,66 @@
+{
+  "version": "D6-1.0",
+  "script_sha256": "8c28cc270d30392ca9e5cb890ee984cafea79da4e769ec3fdd2f36083b82132f",
+  "started_utc": "2026-11-22T09:13:23.267983+00:00",
+  "python": "3.14.7",
+  "unicode": "16.0.0",
+  "manifest_sha256": "23a85060ac07f289b30bfa8fa4a0ad0e02fcfcf31b07921c8d1f47cc2a25e0e5",
+  "run_id": "eca734e223196a1188acd4f265bee56109416084a004e25a95558143da258da8",
+  "sources": {
+    "OPUS": {
+      "expected_sha256": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+      "actual_sha256": "78c18387a5a7450dcae09b388af555fe4cd0770884f32f344d3ed3e9677233f9",
+      "body_sha256": "97d0b2fba487118029a83cd4aebd1c45248c3a1a3a5282cf5bb3ef506e56da0d",
+      "units": 7776,
+      "units_with_letters": 7776,
+      "canonical_sha256": "633c27118ab0a5e53a3d08d40afa5582afe7cf3220fc8d01b0b3f309d991a25c"
+    },
+    "ASTRA": {
+      "expected_sha256": "6d25230a14d75c208306c12d7acea52d2be0ebb1b47629c98c4d84954afd2067",
+      "actual_sha256": "6d25230a14d75c208306c12d7acea52d2be0ebb1b47629c98c4d84954afd2067",
+      "body_sha256": "dfd74f433bb77faf2d9033800c58dccdb54adcb5be8a1580ed90cb63c8744f8e",
+      "units": 7776,
+      "units_with_letters": 7776,
+      "canonical_sha256": "bd2a0459145b5b84e448629fbb1de5f37b2bf4d466b9f18338d20e6333a9bcba"
+    },
+    "WIKT_VI": {
+      "expected_sha256": "1f0abd21982660b5fc2eff5eb3fbacbed2d9fe8f476af794dbed0d927ffb8187",
+      "actual_sha256": "1f0abd21982660b5fc2eff5eb3fbacbed2d9fe8f476af794dbed0d927ffb8187",
+      "vi_entries": 44871,
+      "units": 57017,
+      "units_with_letters": 56874,
+      "canonical_sha256": "a6e59d6801a6fc9b2ffc284a9d2ee1bde4232c98ae585384b363e34db5a8ed2c"
+    },
+    "GUIDE": {
+      "expected_sha256": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+      "actual_sha256": "9eddcf71042f3c9efefdc90b0b2b3d28756809b8b5c428fda4f94a26a5a5da8f",
+      "units": 206,
+      "units_with_letters": 206,
+      "canonical_sha256": "af48e7e157af47a44fbea7e2671dcf87e14c7cede26daec045c6eca8189cfb63"
+    },
+    "FAMILIES": {
+      "expected_sha256": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+      "actual_sha256": "cf10fb22b2722abd487377a14e90bf99aaf8844feafe14cb8095ae337b190d63",
+      "pairs": 1062
+    }
+  },
+  "input": [
+    {
+      "file": "lo-01.tsv",
+      "sha256": "97651e9ae4f483f97224e5cb483b6c610cae2b5f4465052ade522addd7ddd705"
+    }
+  ],
+  "reference_set_sha256": "54d8d3f3b6d24d909423846e23ede427c14bc78518ad41bdf10686954b344496",
+  "rows": 143,
+  "status": {
+    "PASS": 113,
+    "VIET_LAI": 30
+  },
+  "codes": {
+    "D6B": 28,
+    "D6C": 15
+  },
+  "issues": [],
+  "log_sha256": "6f9c05b1fb0b19d8fe1afa81db704d269685668147a1dadb3d644acb5f59d1d7",
+  "finished_utc": "2026-11-22T09:13:31.723803+00:00"
+}
